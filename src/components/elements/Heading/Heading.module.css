@@ -1,0 +1,72 @@
+/* @import 'styles/variables/index';
+@import 'styles/mixins/index'; */
+
+.base {
+  /* @extend %title-typography; */
+}
+
+.noTopMargin {
+  margin-top: '0';
+}
+
+
+
+
+
+
+
+
+.noMargin {
+  margin: 0
+}
+
+.serifFont {
+  /* font-family: var(--font-family-zapf-serif);
+  font-weight: var(--font-weight-light); */
+}
+
+.xSmall {
+  font-size: 1rem;
+}
+
+.small {
+  font-size: 1.1rem;
+
+  /* @media (--viewport-md) {
+    font-size: 1.2rem;
+  } */
+}
+
+.medium {
+  font-size: 1.3rem;
+
+  /* @media (--viewport-md) {
+    font-size: 1.4rem;
+  } */
+}
+
+.large {
+  font-size: 1.45rem;
+
+  line-height: 1.5;
+
+  /* @media (--viewport-md) {
+    font-size: 1.55rem;
+  }
+
+  @media (--viewport-lg) {
+    font-size: 1.65rem;
+  } */
+}
+
+.xLarge {
+  font-size: 1.6rem;
+
+  /* @media (--viewport-md) {
+    font-size: 1.7rem;
+  }
+
+  @media (--viewport-lg) {
+    font-size: 1.9rem;
+  } */
+}

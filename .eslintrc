@@ -1,0 +1,140 @@
+{
+  "parser": "babel-eslint",
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "jest": true
+  },
+  "plugins": ["react", "react-hooks", "jsx-a11y"],
+  "extends": [
+    "airbnb",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "arrowFunctions": true,
+      "blockBindings": true,
+      "classes": true,
+      "defaultParams": true,
+      "destructuring": true,
+      "forOf": true,
+      "generators": false,
+      "jsx": true,
+      "modules": true,
+      "objectLiteralComputedProperties": true,
+      "objectLiteralDuplicateProperties": true,
+      "objectLiteralShorthandMethods": true,
+      "objectLiteralShorthandProperties": true,
+      "spread": true,
+      "superInFunctions": true,
+      "templateStrings": true
+    }
+  },
+  "rules": {
+    "block-scoped-var": 2,
+    "brace-style": [2, "1tbs", { "allowSingleLine": true }],
+    "camelcase": 2,
+    "comma-dangle": [2, "always-multiline"],
+    "comma-spacing": [2, { "before": false, "after": true }],
+    "comma-style": [2, "last"],
+    "import/no-unresolved": "off",
+    "import/prefer-default-export": "off",
+    "indent": [2, 2],
+    "init-declarations": [2, "always"],
+    "jsx-a11y/media-has-caption": 0,
+    "jsx-a11y/label-has-associated-control": [
+      2,
+      {
+        "components": ["Label"],
+        "required": {
+          "every": ["id"]
+        },
+        "allowChildren": false
+      }
+    ],
+    "new-cap": 0,
+    "no-alert": 2,
+    "no-console": 1,
+    "no-debugger": 2,
+    "no-dupe-keys": 2,
+    "no-empty": 2,
+    "no-extra-semi": 2,
+    "no-inline-comments": 0,
+    "no-irregular-whitespace": 2,
+    "no-lonely-if": 0,
+    "no-mixed-spaces-and-tabs": 2,
+    "no-multiple-empty-lines": 2,
+    "no-new": 1,
+    "no-self-compare": 2,
+    "no-shadow": 0,
+    "no-trailing-spaces": 2,
+    "no-undef": 2,
+    "no-underscore-dangle": 0,
+    "no-unused-expressions": [1],
+    "no-unused-vars": [1, { "vars": "local", "args": "after-used" }],
+    "no-var": 2,
+    "object-curly-spacing": [2, "always"],
+    "one-var": [2, "never"],
+    "padded-blocks": [2, "never"],
+    "prefer-const": 2,
+    "radix": 2,
+    "react/display-name": 0,
+    "react/jsx-boolean-value": [2, "always"],
+    "react/jsx-closing-bracket-location": 2,
+    "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".jsx"] }],
+    "react/jsx-no-duplicate-props": [2],
+    "react/jsx-no-undef": 2,
+    "react/jsx-sort-props": [
+      "error",
+      {
+        "callbacksLast": false,
+        "ignoreCase": true,
+        "noSortAlphabetically": false,
+        "reservedFirst": false,
+        "shorthandFirst": false
+      }
+    ],
+    "react/jsx-uses-react": 2,
+    "react/jsx-uses-vars": 2,
+    "react/jsx-wrap-multilines": ["error", { "arrow": true, "return": true, "declaration": true }],
+    "react/no-did-mount-set-state": 2,
+    "react/no-did-update-set-state": 0,
+    "react/no-multi-comp": 0,
+    "react/no-string-refs": 2,
+    "react/no-unescaped-entities": ["error", { "forbid": [">", "}"] }],
+    "react/no-unknown-property": 2,
+    "react/prop-types": "off", // Disable prop-types as we use TypeScript for type checking
+    "react/react-in-jsx-scope": 2,
+    "react/require-render-return": 2,
+    "react/self-closing-comp": 2,
+    "react/sort-comp": [2, { "order": ["lifecycle", "render", "everything-else"] }],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "semi": [2, "always"],
+    "space-before-blocks": [2, "always"],
+    "space-before-function-paren": [
+      2,
+      {
+        "anonymous": "never",
+        "named": "never",
+        "asyncArrow": "always"
+      }
+    ],
+    "space-in-brackets": 0,
+    "space-in-parens": [2, "never"],
+    "space-infix-ops": 2,
+    "spaced-comment": [2, "always"],
+    "strict": [2, "never"],
+    "vars-on-top": 2
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "name": "aesop-gel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --config ./webpack.config.js --mode development",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "eslint './**/*.{js,jsx,ts,tsx}' --ignore-path .eslintignore --config .eslintrc",
+    "stylelint": "stylelint './src/**/**.css' --config .stylelintrc --quiet"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aesop/aesop-gel.git"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aesop/aesop-gel/issues"
+  },
+  "homepage": "https://github.com/aesop/aesop-gel#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-react": "^7.7.4",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.4.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-import-resolver-webpack": "^0.12.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "react-hot-loader": "^4.12.18",
+    "source-map-loader": "^0.2.4",
+    "style-loader": "^1.1.1",
+    "stylelint": "^12.0.0",
+    "stylelint-config-idiomatic-order": "^8.1.0",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.4",
+    "webpack": "^4.41.4",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}

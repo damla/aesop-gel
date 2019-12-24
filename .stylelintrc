@@ -1,0 +1,30 @@
+{
+  "parser": "css",
+  "extends": [
+    "stylelint-config-idiomatic-order",
+    # "./node_modules/prettier-stylelint/config.js"
+  ],
+  "rules": {
+    "at-rule-empty-line-before": [ "always", {
+      except: ["blockless-after-blockless", "first-nested"],
+      ignore: ["after-comment", "inside-block"],
+    } ],
+    "block-closing-brace-newline-after": [ "always", {
+      ignoreAtRules: ["if", "else", "else if"],
+    } ],
+    "no-extra-semicolons": true,
+    "block-no-empty": null,
+    "color-hex-case": "upper",
+    "comment-empty-line-before": [ "always", {
+      except: ["first-nested"],
+      ignore: ["after-comment", "stylelint-commands"],
+    } ],
+    "declaration-colon-newline-after": null,
+    "function-url-quotes": "always",
+    "rule-empty-line-before": [ "always-multi-line", {
+      except: ["first-nested"],
+      ignore: ["after-comment"],
+    } ],
+    "string-quotes": "single",
+  }
+}

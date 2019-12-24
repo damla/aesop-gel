@@ -1,0 +1,10 @@
+{
+  "compact": true,
+  "comments": false,
+  "env": {
+    "test": {
+      "sourceMaps": "both"
+    }
+  },
+  "presets": ["@babel/preset-env", "@babel/preset-react"]
+}

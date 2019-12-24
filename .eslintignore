@@ -1,0 +1,13 @@
+.pnp.js
+/.cache
+/.git
+/.githooks
+/.pnp
+/.storybook
+/storybook-static
+/build
+/coverage
+/node_modules
+/public
+/static
+/config/componentBoilerplate
