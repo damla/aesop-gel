@@ -13,10 +13,10 @@
   },
   "plugins": ["react", "react-hooks", "jsx-a11y"],
   "extends": [
-    "airbnb",
     "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:jsx-a11y/recommended"
+    "plugin:jsx-a11y/recommended",
+    "plugin:prettier/recommended"
   ],
   "parserOptions": {
     "ecmaVersion": 2018,
@@ -32,7 +32,7 @@
       "jsx": true,
       "modules": true,
       "objectLiteralComputedProperties": true,
-      "objectLiteralDuplicateProperties": true,
+      "objectLiteralDuplicateProperties": false,
       "objectLiteralShorthandMethods": true,
       "objectLiteralShorthandProperties": true,
       "spread": true,
@@ -106,18 +106,24 @@
     ],
     "react/jsx-uses-react": 2,
     "react/jsx-uses-vars": 2,
-    "react/jsx-wrap-multilines": ["error", { "arrow": true, "return": true, "declaration": true }],
+    "react/jsx-wrap-multilines": [
+      "error",
+      { "arrow": true, "return": true, "declaration": true }
+    ],
     "react/no-did-mount-set-state": 2,
     "react/no-did-update-set-state": 0,
     "react/no-multi-comp": 0,
     "react/no-string-refs": 2,
     "react/no-unescaped-entities": ["error", { "forbid": [">", "}"] }],
     "react/no-unknown-property": 2,
-    "react/prop-types": "off", // Disable prop-types as we use TypeScript for type checking
+    "react/prop-types": 2,
     "react/react-in-jsx-scope": 2,
     "react/require-render-return": 2,
     "react/self-closing-comp": 2,
-    "react/sort-comp": [2, { "order": ["lifecycle", "render", "everything-else"] }],
+    "react/sort-comp": [
+      2,
+      { "order": ["lifecycle", "render", "everything-else"] }
+    ],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "semi": [2, "always"],
@@ -136,5 +142,5 @@
     "spaced-comment": [2, "always"],
     "strict": [2, "never"],
     "vars-on-top": 2
-  }
+  },
 }

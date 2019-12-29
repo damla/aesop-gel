@@ -1,0 +1,10 @@
+:root {
+  --font-base-size: 16px;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+  --font-family-sans-serif-regular: 'Suisse Regular', sans-serif;
+  --font-family-sans-serif-medium: 'Suisse Medium', sans-serif;
+  --font-family-zapf-serif: 'Zapf Humanist', serif;
+}

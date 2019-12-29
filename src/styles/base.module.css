@@ -1,0 +1,114 @@
+@import './variables/index.css';
+@import './key-frame.css';
+@import './font-face.css';
+
+/**
+ * Box-sizing for all
+ * css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+html {
+  box-sizing: border-box;
+  background-color: var(--color-light-bg);
+}
+
+* {
+  &,
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
+}
+
+body {
+  color: var(--color-body-copy);
+  font-family: var(--font-family-sans-serif-regular);
+  font-size: var(--font-base-size);
+  -webkit-font-smoothing: antialiased;
+  font-weight: var(--font-weight-normal);
+}
+
+p,
+blockquote,
+cite {
+  padding: 0;
+  margin: 0;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--color-grey-20);
+  font-weight: var(--font-weight-normal);
+
+  &:hover,
+  &:focus {
+    color: var(--color-grey-10);
+  }
+}
+
+[tabindex]:focus,
+button:focus,
+a:focus {
+  outline-color: var(--color-grey-rgba-20);
+  outline-offset: 5px;
+  outline-style: solid;
+  outline-width: 1px;
+  transition: outline-offset 200ms var(--easing-ease-in-out-cubic);
+}
+
+img {
+  width: 100%;
+}
+
+input {
+  &::-ms-clear {
+    /* css-lint:disable-line no-vendor-prefixes; */
+    display: none;
+  }
+
+  &::placeholder {
+    opacity: 0.5;
+    transition: opacity 0.15s ease;
+  }
+
+  &:focus {
+    &::placeholder {
+      opacity: 0.3;
+    }
+  }
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+pre {
+  padding: rem(12px);
+  border: 1px solid #efefef;
+  background-color: #fff;
+  border-radius: 3px;
+  color: #aaa;
+  font-family:
+    Consolas,
+    'Andale Mono WT',
+    'Andale Mono',
+    'Lucida Console',
+    'Lucida Sans Typewriter',
+    'DejaVu Sans Mono',
+    'Bitstream Vera Sans Mono',
+    'Liberation Mono',
+    'Nimbus Mono L',
+    Monaco,
+    'Courier New',
+    Courier,
+    monospace;
+  font-size: rem(14px);
+  line-height: 1.4;
+  overflow-x: auto;
+  text-align: justify;
+  word-wrap: break-word;
+}
+
+figure {
+  margin: 0;
+}

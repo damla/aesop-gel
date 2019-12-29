@@ -1,0 +1,8 @@
+@custom-media --viewport-sm-only (width < 640px);
+@custom-media --viewport-md (width >= 640px);
+@custom-media --viewport-md-only (width >= 640px) and (width < 1025px);
+@custom-media --viewport-sm-md-only (width < 1025px);
+@custom-media --viewport-lg (width >= 1025px);
+@custom-media --viewport-lg-only (width >= 1025px) and (width < 1220px);
+@custom-media --viewport-xl (width >= 1220px);
+@custom-media --viewport-vertical (height > 1080px) and (orientation: portrait);

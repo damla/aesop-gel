@@ -1,0 +1,21 @@
+:root {
+  --layout-lg-spacing: 40px;
+  --layout-md-spacing: 34px;
+  --layout-sm-spacing: 16px;
+  --layout-logo-offset-sm: 60px;
+  --layout-logo-offset-md: 95px;
+  --layout-logo-offset-lg: 120px;
+  --layout-menu-height: 80px;
+}
+
+%layout-full-bleed-negative-margin {
+  margin-top: -120px;
+
+  @media (--viewport-md) {
+    margin-top: -130px;
+  }
+
+  @media (--viewport-lg) {
+    margin-top: -155px;
+  }
+}

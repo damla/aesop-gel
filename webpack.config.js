@@ -1,32 +1,32 @@
-const webpack = require("webpack");
-const path = require("path");
+const webpack = require('webpack');
+const path = require('path');
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: './src/index.js',
   output: {
     path: `${__dirname}/dist`,
-    publicPath: "/",
-    filename: "bundle.js",
+    publicPath: '/',
+    filename: 'bundle.js',
   },
   devServer: {
-    contentBase: "./dist",
+    contentBase: './dist',
     hot: true,
   },
-  devtool: "source-map",
+  devtool: 'source-map',
   module: {
     rules: [
-      { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
+      { enforce: 'pre', test: /\.js$/, loader: 'source-map-loader' },
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: ["babel-loader"],
+        use: ['babel-loader'],
       },
       {
         test: /\.ts(x?)$/,
         exclude: /node_modules/,
         use: [
           {
-            loader: "ts-loader",
+            loader: 'ts-loader',
           },
         ],
       },
@@ -34,25 +34,25 @@ module.exports = {
         test: /\.css$/i,
         exclude: /node_modules/,
         use: [
-          "style-loader",
+          'style-loader',
           {
-            loader: "css-loader",
+            loader: 'css-loader',
             options: {
+              importLoaders: 1,
               modules: true,
             },
           },
+          'postcss-loader',
         ],
       },
     ],
   },
   resolve: {
     alias: {
-      "~": path.resolve(__dirname, "src"),
+      '~': path.resolve(__dirname, 'src'),
     },
-    modules: ["node_modules"],
-    extensions: [".js", ".jsx", ".ts", ".tsx", ".css"],
+    modules: ['node_modules'],
+    extensions: ['.js', '.jsx', '.css'],
   },
   plugins: [new webpack.HotModuleReplacementPlugin()],
 };
-
-console.log("path.resolve(__dirname,)", path.resolve(__dirname, "src"));
