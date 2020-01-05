@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FormRow /> renders base component correctly 1`] = `
+<div
+  className="base"
+>
+  <input
+    name="password"
+    type="password"
+  />
+</div>
+`;

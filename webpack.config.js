@@ -17,18 +17,9 @@ module.exports = {
     rules: [
       { enforce: 'pre', test: /\.js$/, loader: 'source-map-loader' },
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(js)$/,
         exclude: /node_modules/,
         use: ['babel-loader'],
-      },
-      {
-        test: /\.ts(x?)$/,
-        exclude: /node_modules/,
-        use: [
-          {
-            loader: 'ts-loader',
-          },
-        ],
       },
       {
         test: /\.css$/i,
@@ -52,7 +43,7 @@ module.exports = {
       '~': path.resolve(__dirname, 'src'),
     },
     modules: ['node_modules'],
-    extensions: ['.js', '.jsx', '.css'],
+    extensions: ['.js', '.css'],
   },
   plugins: [new webpack.HotModuleReplacementPlugin()],
 };

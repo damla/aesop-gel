@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PDPDetailsHeader /> renders base component correctly 1`] = `
+<header
+  className="base"
+>
+  <h1
+    className="base xLarge productTitle"
+  >
+    Parsley Seed Facial Cleanser
+  </h1>
+  <div
+    className="productDesc"
+  >
+    <p>
+      A clarifying formulation that removes surface impurities and offers mild exfoliation from Lactic Acid. Ideal for maintaining immaculately clean skin in polluted urban environments.
+    </p>
+    
+
+  </div>
+</header>
+`;

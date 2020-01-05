@@ -1,0 +1,88 @@
+@import 'styles/variables/index';
+@import 'styles/mixins/index';
+
+.base {
+  position: relative;
+  background-color: var(--color-white-dark);
+
+  @media (--viewport-lg) {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: row;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    flex: 1 0 auto;
+    object-fit: cover;
+    transform: none;
+  }
+
+  picture {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.reverse {
+  @media (--viewport-lg) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+.container,
+.figure {
+  @media (--viewport-lg) {
+    display: flex;
+    width: 50%;
+    flex-basis: auto;
+  }
+}
+
+.container {
+  padding: 76px 20px;
+
+  @media (--viewport-md) {
+    display: flex;
+    flex-basis: auto;
+    padding: 110px 34px;
+  }
+
+  @media (--viewport-lg) {
+    display: block;
+    width: 33.33%;
+    padding: 115px 0;
+    margin: auto;
+  }
+
+  header {
+    @media (--viewport-md-only) {
+      width: 50%;
+      flex-basis: auto;
+      margin-right: 20px;
+    }
+  }
+
+  dl,
+  ul {
+    @media (--viewport-md-only) {
+      width: 50%;
+      flex-basis: auto;
+      margin-left: 20px;
+    }
+  }
+}
+
+.description {
+  font-size: rem(16px);
+
+  @media (--viewport-lg) {
+    font-size: rem(14px);
+  }
+
+  &:last-of-type {
+    margin-bottom: 26px;
+  }
+}

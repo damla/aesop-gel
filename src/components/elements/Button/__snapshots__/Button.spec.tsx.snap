@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> renders alternate variation correctly 1`] = `
+<button
+  className="base alternate block action"
+  disabled={false}
+  onClick={[MockFunction]}
+  title="Aēsop"
+  type="button"
+>
+  Alternate Button
+</button>
+`;
+
+exports[`<Button /> renders base component correct with \`type\` prop 1`] = `
+<button
+  className="base block aesop action"
+  disabled={false}
+  title="Aēsop"
+  type="submit"
+>
+  Submit
+</button>
+`;
+
+exports[`<Button /> renders base component correctly with \`href\` prop 1`] = `
+<a
+  className="base block external"
+  href="https://aesop.com"
+  target="_self"
+  title="Aēsop"
+>
+  Button
+</a>
+`;
+
+exports[`<Button /> renders base component correctly with \`onClick\` prop 1`] = `
+<button
+  className="base block aesop action"
+  disabled={false}
+  onClick={[MockFunction]}
+  title="Aēsop"
+  type="button"
+>
+  Button
+</button>
+`;
+
+exports[`<Button /> renders base component correctly with \`to\` prop 1`] = `
+<a
+  className="base block internal"
+  href="about"
+  target="_self"
+  title="Aēsop"
+>
+  Button
+</a>
+`;
+
+exports[`<Button /> renders component with icon correctly 1`] = `
+<a
+  className="base block hasIcon internal"
+  href="about"
+  target="_self"
+  title="Aēsop"
+>
+  Button
+  <i
+    aria-hidden="true"
+    className="icon"
+  >
+    <svg
+      className="base rightArrow"
+      focusable="false"
+      height={12}
+      role="img"
+      tabIndex={-1}
+      viewBox="0 0 50 50"
+      width={12}
+    >
+      <g>
+        <path
+          className="undefined"
+          d="M30.1,5.3L50,25.1L30.1,45h-6.6l18-17.6H0v-4.8h41.5l-18-17.6h6.6V5.3z"
+        />
+      </g>
+    </svg>
+  </i>
+</a>
+`;
+
+exports[`<Button /> renders disabled variation correctly 1`] = `
+<button
+  className="base block disabled action"
+  disabled={true}
+  onClick={[MockFunction]}
+  title="Aēsop"
+  type="button"
+>
+  Disabled Button
+</button>
+`;

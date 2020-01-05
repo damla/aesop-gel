@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Figure /> renders base component correctly 1`] = `
+<figure
+  className="base"
+  id="about"
+>
+  <picture
+    className="picture base"
+  >
+    <source
+      media="(min-width: 1025px)"
+      srcSet="https://release.aesop-web-ui.aesopdigital.io/images/products/Skin_Perfect_Facial_Hydrating_Cream_60mL_large.png"
+    />
+    <img
+      alt="Image Alt Text"
+    />
+  </picture>
+  <figcaption
+    className="captionWrapper"
+  >
+    <div
+      className="caption"
+    >
+      <p>
+        About Aesop
+      </p>
+      
+
+    </div>
+  </figcaption>
+</figure>
+`;

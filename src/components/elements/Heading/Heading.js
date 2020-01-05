@@ -24,7 +24,7 @@ const Heading = ({
   size = 'large',
   useSerifFont = false,
 }) => {
-  const classNames = cx(
+  const classSets = cx(
     styles.base,
     { [styles.noTopMargin]: noTopMargin },
     { [styles.noMargin]: noMargin },

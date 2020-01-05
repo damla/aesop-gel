@@ -1,0 +1,174 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FooterView /> renders base component correctly 1`] = `
+<footer
+  className="base"
+>
+  <div
+    className="block"
+  >
+    <div
+      className="subscription"
+    >
+      <div
+        className="base base"
+      >
+        <form
+          onReset={[Function]}
+          onSubmit={[Function]}
+        >
+          <div
+            className="description"
+          >
+            I would like to receive communications about Aesop products, services, stores, events and matters of cultural interest.
+          </div>
+          <div
+            className="inputWrapper subscriptionForm"
+          >
+            <div
+              className="base input"
+            >
+              <label
+                className="label"
+                htmlFor="emailAddress"
+              >
+                Email address
+              </label>
+              <input
+                className="input"
+                data-test-ref="emailAddress"
+                id="emailAddress"
+                name="emailAddress"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                placeholder=""
+                type="text"
+                value=""
+              />
+              <div
+                className="errorMessage"
+                data-test-ref="emailAddress_ERROR"
+              >
+                
+              </div>
+            </div>
+            
+          </div>
+        </form>
+      </div>
+    </div>
+    <nav
+      className="base siteNavigation"
+    >
+      <h5
+        className="base noMargin small title siteNavigationTitle"
+      >
+        Contact Us
+      </h5>
+      <ul
+        className="base"
+      >
+        <li
+          className="item"
+        >
+          <a
+            className="base external inline base itemList"
+            href="https://www.aesop.com/au/r/contact-us"
+            target="_self"
+            title="Link to https://www.aesop.com/au/r/contact-us"
+          >
+            Contact us
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <nav
+      className="base siteNavigation"
+    >
+      <h5
+        className="base noMargin small title siteNavigationTitle"
+      >
+        About
+      </h5>
+      <ul
+        className="base"
+      >
+        <li
+          className="item"
+        >
+          <a
+            className="base external inline base itemList"
+            href="http://www.aesop.com/au/r/about"
+            target="_self"
+            title="Link to http://www.aesop.com/au/r/about"
+          >
+            Our story
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <nav
+      className="base siteNavigation"
+    >
+      <h5
+        className="base noMargin small title siteNavigationTitle"
+      >
+        Social
+      </h5>
+      <ul
+        className="base"
+      >
+        <li
+          className="item"
+        >
+          <a
+            className="base external hasIcon inline base itemList"
+            href="https://www.instagram.com/aesopskincare/"
+            target="_self"
+            title="Link to https://www.instagram.com/aesopskincare/"
+          >
+            Instagram
+            <i
+              aria-hidden="true"
+              className="icon"
+            >
+              <svg
+                className="base rightUpArrow"
+                focusable="false"
+                height={12}
+                role="img"
+                tabIndex={-1}
+                viewBox="0 0 50 50"
+                width={12}
+              >
+                <g>
+                  <path
+                    className="undefined"
+                    d="M21.8,0.2l28.1-0.1v28.1l-4.5,0l0.1-20.5L16.2,37.1l-3.4-3.4L42.1,4.4L21.8,4.4L21.8,0.2L21.8,0.2z"
+                  />
+                </g>
+              </svg>
+            </i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div
+    className="sock"
+  >
+    <span
+      className="copyright"
+    >
+      ©
+      Aesop
+    </span>
+    <div
+      className="base"
+    >
+      Region Selector
+    </div>
+  </div>
+</footer>
+`;

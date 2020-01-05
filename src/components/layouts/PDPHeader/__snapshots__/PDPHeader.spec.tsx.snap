@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PDPHeader /> renders base component correctly 1`] = `
+<form
+  className="base"
+>
+  <div
+    className="productWrapper"
+  >
+    <div
+      className="productImageWrapper"
+    >
+      <div
+        className="base"
+        id="product-SK45"
+      >
+        <picture
+          className="picture base image"
+        >
+          <source
+            media="(min-width: 1025px)"
+            srcSet="https://acceptance.aesop.com/images/products/Skin_Amazing_Face_Cleanser_100mL_large.png 2x"
+          />
+          <source
+            media="(min-width: 640px)"
+            srcSet="https://acceptance.aesop.com/images/products/Skin_Amazing_Face_Cleanser_100mL_medium.png 2x"
+          />
+          <source
+            media="(min-width: 0px)"
+            srcSet="https://acceptance.aesop.com/images/products/Skin_Amazing_Face_Cleanser_100mL_small.png 2x"
+          />
+          <img
+            alt="here is a descriptive alt tag"
+          />
+        </picture>
+        <div
+          className="singleVariantLabel"
+        >
+          100 mL
+        </div>
+      </div>
+    </div>
+    <div
+      className="productDetailsWrapper"
+    >
+      <header
+        className="base"
+      >
+        <h1
+          className="base xLarge productTitle"
+        >
+          Parsley Seed Facial Cleanser
+        </h1>
+        <div
+          className="productDesc"
+        >
+          <p>
+            A clarifying formulation that removes surface impurities and offers mild exfoliation from Lactic Acid. Ideal for maintaining immaculately clean skin in polluted urban environments.
+          </p>
+          
+
+        </div>
+      </header>
+      <div
+        className="base"
+      >
+        <div
+          className="large xLarge hidden"
+        >
+          <button
+            className="base alternate block base action"
+            data-test-ref="ADD_TO_CART_SMALL_CTA"
+            disabled={false}
+            onClick={[Function]}
+            title="Add to cart button"
+            type="button"
+          >
+            <span
+              className="label"
+            >
+              <span>
+                Added to your cart
+              </span>
+              <span>
+                Add to your cart — $43.00
+              </span>
+            </span>
+          </button>
+        </div>
+        <dl
+          className="base"
+        >
+          <dt
+            className="term"
+          >
+            Suited to
+          </dt>
+          <dd
+            className="description"
+          >
+            Normal, combination and troubled skin
+          </dd>
+          <dt
+            className="term"
+          >
+            Skin feel
+          </dt>
+          <dd
+            className="description"
+          >
+            Clarified, smooth and gently cleansed
+          </dd>
+          <dt
+            className="term"
+          >
+            <span>
+              Key ingredients
+            </span>
+          </dt>
+          <dd
+            className="description"
+          >
+            Licorice Root, Lactic Acid, Blackcurrant Seed
+          </dd>
+        </dl>
+        <div
+          className="small medium hidden"
+        >
+          <button
+            className="base alternate block base action"
+            data-test-ref="ADD_TO_CART_LARGE_CTA"
+            disabled={false}
+            onClick={[Function]}
+            title="Add to cart button"
+            type="button"
+          >
+            <span
+              className="label"
+            >
+              <span>
+                Added to your cart
+              </span>
+              <span>
+                Add to your cart — $43.00
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+`;

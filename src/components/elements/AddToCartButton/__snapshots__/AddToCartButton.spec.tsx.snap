@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AddToCartButton /> should render the base component correctly 1`] = `
+<button
+  className="base alternate block base action"
+  data-test-ref="ADD_TO_CART_SMALL_CTA"
+  disabled={false}
+  onClick={[MockFunction]}
+  title="Add to cart button"
+  type="button"
+>
+  <span
+    className="label"
+  >
+    <span>
+      Added to your cart
+    </span>
+    <span>
+      Add to your cart — $625.00
+    </span>
+  </span>
+</button>
+`;

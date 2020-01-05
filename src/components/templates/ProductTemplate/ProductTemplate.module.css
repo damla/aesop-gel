@@ -1,0 +1,16 @@
+@import 'styles/variables/index';
+@import 'styles/mixins/index';
+
+.base {
+  margin: 0;
+}
+
+.asideProducts {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @media (--viewport-lg) {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}

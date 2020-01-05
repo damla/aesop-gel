@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PDPDetailsImage /> renders base component correctly 1`] = `
+<div
+  className="base"
+  id="product-PDPDetailsImage"
+>
+  <picture
+    className="picture base image"
+  >
+    <source
+      media="(min-width: 1025px)"
+      srcSet="https://acceptance.aesop.com/images/products/Skin_Amazing_Face_Cleanser_100mL_large.png 2x"
+    />
+    <source
+      media="(min-width: 640px)"
+      srcSet="https://acceptance.aesop.com/images/products/Skin_Amazing_Face_Cleanser_100mL_medium.png 2x"
+    />
+    <source
+      media="(min-width: 0px)"
+      srcSet="https://acceptance.aesop.com/images/products/Skin_Amazing_Face_Cleanser_100mL_small.png 2x"
+    />
+    <img
+      alt="here is a descriptive alt tag"
+    />
+  </picture>
+  <div
+    className="singleVariantLabel"
+  >
+    100ml
+  </div>
+</div>
+`;

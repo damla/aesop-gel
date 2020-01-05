@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Input /> renders base component correctly 1`] = `
+<div
+  className="base hasFocus hasError"
+>
+  <label
+    className="label"
+    htmlFor="inputName"
+  >
+    Input label
+  </label>
+  <input
+    className="input"
+    data-test-ref="input"
+    id="inputName"
+    name="inputName"
+    onBlur={[Function]}
+    onChange={[MockFunction]}
+    onFocus={[Function]}
+    placeholder=""
+    type="text"
+    value="input"
+  />
+  <div
+    className="errorMessage"
+    data-test-ref="input_ERROR"
+  >
+    This is an error message
+  </div>
+</div>
+`;

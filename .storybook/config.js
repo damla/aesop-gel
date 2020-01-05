@@ -8,4 +8,4 @@ addParameters({
   },
 });
 
-configure(require.context('../src', true, /\.stories\.jsx$/), module);
+configure(require.context('../src', true, /\.stories\.js$/), module);
