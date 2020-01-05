@@ -4,16 +4,16 @@ import { LABELS } from '~/constants';
 import SubscriptionFormView from '~/components/views/SubscriptionFormView';
 import SubNav from '~/components/layouts/SubNav';
 import RegionSelector from '~/components/layouts/RegionSelector';
-import Props from './FooterView.types';
+import PROP_TYPES from './FooterView.prop-types';
 import styles from './FooterView.module.css';
 
-const FooterView: React.FunctionComponent<Props> = ({
+const FooterView = ({
   className,
   siteNavigationPrimary,
   siteNavigationSecondary,
   siteNavigationTernary,
 }) => {
-  const classSet: string = cx(styles.base, className);
+  const classSet = cx(styles.base, className);
 
   const siteNavigationSharedProps = {
     classSet: styles.siteNavigation,
@@ -25,8 +25,6 @@ const FooterView: React.FunctionComponent<Props> = ({
       <div className={styles.block}>
         <div className={styles.subscription}>
           {/* @TODO Figure out how we are injecting translated copy from graphQL */}
-          {/*
-            // @ts-ignore */}
           <SubscriptionFormView
             className={styles.subscriptionForm}
             copy={{
@@ -50,5 +48,7 @@ const FooterView: React.FunctionComponent<Props> = ({
     </footer>
   );
 };
+
+FooterView.propTypes = PROP_TYPES;
 
 export default FooterView;
