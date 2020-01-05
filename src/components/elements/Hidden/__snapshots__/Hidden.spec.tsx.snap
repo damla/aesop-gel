@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Hidden /> renders returned component correctly 1`] = `
+<div
+  className="small hidden"
+>
+  <span>
+    Hidden content
+  </span>
+</div>
+`;

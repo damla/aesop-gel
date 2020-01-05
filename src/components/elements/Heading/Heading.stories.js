@@ -3,7 +3,6 @@ import { storiesOf } from '@storybook/react';
 import { text, boolean, select } from '@storybook/addon-knobs';
 import 'normalize.css';
 import '~/styles/base.module.css';
-import '~/styles/storybook.module.css';
 import Heading from './Heading';
 
 const levelOptions = ['1', '2', '3', '4', '5', '6'];

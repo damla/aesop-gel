@@ -1,0 +1,40 @@
+@import 'styles/variables/index';
+@import 'styles/mixins/index';
+
+.base {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  background-color: var(--color-white);
+  color: var(--color-grey-10);
+  transform: translateZ(0);
+
+  @media (--viewport-md) {
+    padding: 50px;
+  }
+
+  &.isVisible {
+    pointer-events: auto;
+  }
+}
+
+.closeIcon {
+  fill: var(--color-grey-10);
+}
+
+.closeButton {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 30px;
+  height: 30px;
+
+  @media (--viewport-md) {
+    top: 42px;
+    right: 42px;
+  }
+
+  &:focus {
+    outline-color: var(--color-grey-20);
+  }
+}

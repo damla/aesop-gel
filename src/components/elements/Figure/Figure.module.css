@@ -1,0 +1,45 @@
+@import 'styles/variables/index';
+
+.base {
+}
+
+.caption {
+  margin: 0;
+  color: var(--color-grey-30);
+  font-family: var(--font-family-sans-serif-regular);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.captionWrapper {
+  padding: 25px 25px 25px 0;
+  border-bottom: 1px solid var(--color-grey-60);
+
+  @nest .fullBleedImage & {
+    width: 100%;
+    padding: 0 var(--layout-sm-spacing);
+    margin-top: 25px;
+    border: none;
+
+    @media (--viewport-md) {
+      width: calc(100% - (100% / 6));
+      padding: 0 var(--layout-md-spacing) 25px 0;
+      margin-left: calc(100% * 1 / 6);
+      border-bottom: 1px solid var(--color-grey-60);
+    }
+
+    @media (--viewport-lg) {
+      width: calc(100% - (100% * 5 / 12) + 40px);
+      padding: 0 80px 25px 0;
+      margin-left: calc(100% * 5 / 12 - 40px);
+    }
+  }
+
+  @media (--viewport-md) {
+    padding: 25px 25px 25px var(--layout-md-spacing);
+  }
+
+  @media (--viewport-lg) {
+    padding: 25px 25px 25px 20px;
+  }
+}

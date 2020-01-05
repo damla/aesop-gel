@@ -91,7 +91,7 @@
     "react/display-name": 0,
     "react/jsx-boolean-value": [2, "always"],
     "react/jsx-closing-bracket-location": 2,
-    "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".jsx"] }],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/jsx-no-duplicate-props": [2],
     "react/jsx-no-undef": 2,
     "react/jsx-sort-props": [
@@ -142,5 +142,5 @@
     "spaced-comment": [2, "always"],
     "strict": [2, "never"],
     "vars-on-top": 2
-  },
+  }
 }

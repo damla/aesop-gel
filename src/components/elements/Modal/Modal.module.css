@@ -1,0 +1,28 @@
+@import 'styles/variables/index';
+@import 'styles/mixins/index';
+
+.base {
+  position: fixed;
+  z-index: var(--z-index-modal);
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.inner {
+  position: relative;
+  z-index: var(--z-index-modal-inner);
+  display: flex;
+  min-width: 320px;
+  align-items: flex-start;
+  justify-content: center;
+
+  @media (--viewport-md) {
+    max-width: 550px;
+    margin: 50px auto 0;
+  }
+
+  @media (--viewport-md) {
+    align-items: center;
+  }
+}

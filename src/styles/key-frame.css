@@ -1,4 +1,4 @@
-@import '~/styles/variables/index.css';
+@import './variables/index.css';
 
 @keyframes fadeInOut {
   0% {

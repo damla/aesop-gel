@@ -25,6 +25,7 @@ const Heading = ({
   useSerifFont = false,
 }) => {
   const classNames = cx(
+    styles,
     styles.base,
     { [styles.noTopMargin]: noTopMargin },
     { [styles.noMargin]: noMargin },

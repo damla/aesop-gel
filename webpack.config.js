@@ -1,6 +1,11 @@
 const webpack = require('webpack');
 const path = require('path');
 
+console.log(
+  'path.resolve(__dirname',
+  path.resolve(__dirname, './postcss.config.js'),
+);
+
 module.exports = {
   entry: './src/index.js',
   output: {
@@ -22,16 +27,7 @@ module.exports = {
         use: ['babel-loader'],
       },
       {
-        test: /\.ts(x?)$/,
-        exclude: /node_modules/,
-        use: [
-          {
-            loader: 'ts-loader',
-          },
-        ],
-      },
-      {
-        test: /\.css$/i,
+        test: /\.css$/,
         exclude: /node_modules/,
         use: [
           'style-loader',
@@ -42,8 +38,14 @@ module.exports = {
               modules: true,
             },
           },
-          'postcss-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
         ],
+        include: path.resolve(__dirname, '../'),
       },
     ],
   },

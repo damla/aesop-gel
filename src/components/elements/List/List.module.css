@@ -1,0 +1,14 @@
+@import 'styles/variables/index';
+
+.base {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.item {
+  &:not(:last-child) {
+    margin-bottom: var(--layout-sm-spacing);
+  }
+}
