@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CartDiscountForm /> renders base component correctly 1`] = `
+<form
+  data-test-ref="CART_DISCOUNT_FORM"
+  onSubmit={[Function]}
+>
+  <div
+    className="base"
+  >
+    <div
+      className="base input"
+    >
+      <label
+        className="label"
+        htmlFor="promoCode"
+      >
+        Promotional code
+      </label>
+      <input
+        className="input"
+        data-test-ref="CART_DISCOUNT_FORM_PROMO_CODE"
+        id="promoCode"
+        name="promoCode"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        placeholder=""
+        type="text"
+        value=""
+      />
+      <div
+        className="errorMessage"
+        data-test-ref="CART_DISCOUNT_FORM_PROMO_CODE_ERROR"
+      >
+        
+      </div>
+    </div>
+  </div>
+  <button
+    className="base alternate block disabled submitButton action"
+    data-test-ref="CART_DISCOUNT_FORM_SUBMIT_BUTTON"
+    disabled={true}
+    title="submitButton"
+    type="submit"
+  >
+    <span>
+      Apply
+    </span>
+  </button>
+</form>
+`;

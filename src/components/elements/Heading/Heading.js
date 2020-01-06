@@ -1,22 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
+import PROP_TYPES from './Heading.prop-types';
 import styles from './Heading.module.css';
-
-const propTypes = {
-  children: PropTypes.string.isRequired,
-  id: PropTypes.string,
-  level: PropTypes.oneOf(['1', '2', '3', '4', '5', '6']).isRequired,
-  noMargin: PropTypes.bool,
-  noTopMargin: PropTypes.bool,
-  size: PropTypes.oneOf(['xSmall', 'small', 'medium', 'large', 'xLarge']),
-  useSerifFont: PropTypes.bool,
-  className: PropTypes.string,
-};
 
 const Heading = ({
   children,
-  className = '',
+  className,
   id = '',
   level,
   noMargin = false,
@@ -24,8 +13,7 @@ const Heading = ({
   size = 'large',
   useSerifFont = false,
 }) => {
-  const classNames = cx(
-    styles,
+  const classSet = cx(
     styles.base,
     { [styles.noTopMargin]: noTopMargin },
     { [styles.noMargin]: noMargin },
@@ -36,11 +24,11 @@ const Heading = ({
 
   return React.createElement(
     `h${level}`,
-    { className: classNames, id },
+    { className: classSet, id },
     children,
   );
 };
 
-Heading.propTypes = propTypes;
+Heading.propTypes = PROP_TYPES;
 
 export default Heading;

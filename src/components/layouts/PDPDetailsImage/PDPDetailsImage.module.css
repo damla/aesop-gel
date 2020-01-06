@@ -1,0 +1,36 @@
+@import 'styles/variables/index';
+
+.base {
+  min-width: 50%;
+  max-width: 100%;
+  padding: 25px 0 28px;
+
+  @media (--viewport-md) {
+    padding: 25px 0 73px;
+  }
+
+  @media (--viewport-lg) {
+    position: relative;
+    flex: 0;
+    padding: 0;
+  }
+}
+
+.image {
+  display: block;
+  padding: 0;
+}
+
+.variants {
+  li:first-child {
+    margin-left: 15px;
+  }
+}
+
+.singleVariantLabel {
+  color: var(--color-grey-10);
+  font-family: var(--font-family-sans-serif-medium);
+  font-size: rem(14px);
+  line-height: 1.5;
+  text-align: center;
+}

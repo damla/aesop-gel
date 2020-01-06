@@ -1,11 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
 
-console.log(
-  'path.resolve(__dirname',
-  path.resolve(__dirname, './postcss.config.js'),
-);
-
 module.exports = {
   entry: './src/index.js',
   output: {
@@ -22,7 +17,7 @@ module.exports = {
     rules: [
       { enforce: 'pre', test: /\.js$/, loader: 'source-map-loader' },
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(js)$/,
         exclude: /node_modules/,
         use: ['babel-loader'],
       },
@@ -54,7 +49,7 @@ module.exports = {
       '~': path.resolve(__dirname, 'src'),
     },
     modules: ['node_modules'],
-    extensions: ['.js', '.jsx', '.css'],
+    extensions: ['.js', '.css'],
   },
   plugins: [new webpack.HotModuleReplacementPlugin()],
 };

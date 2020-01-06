@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<QuantitySelect /> renders base component correctly 1`] = `
+<div
+  className="base"
+>
+  <select
+    className="input"
+    data-test-ref="select"
+    disabled={false}
+    name="selectName"
+    onBlur={[Function]}
+    onChange={[Function]}
+    value="select"
+  >
+    <option
+      value="fabulist"
+    >
+      Fabulist
+    </option>
+    <option
+      value="ledger"
+    >
+      Ledger
+    </option>
+  </select>
+  <svg
+    className="base downArrow icon"
+    focusable="false"
+    height={10}
+    role="img"
+    tabIndex={-1}
+    viewBox="0 0 50 50"
+    width={10}
+  >
+    <g>
+      <polygon
+        className="arrow"
+        points="25,31.3 4.2,10.5 0.1,14.6 25,39.5 50,14.6 45.9,10.5"
+      />
+    </g>
+  </svg>
+</div>
+`;

@@ -1,0 +1,1033 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProductTemplate /> renders base component correctly 1`] = `
+<div
+  className="base"
+>
+  <header
+    className="base"
+  >
+    <div
+      className="wrapper"
+    >
+      <aside
+        className="base base"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="button"
+        tabIndex={0}
+      />
+      <div
+        className="aesopLogoWrapper"
+      >
+        <a
+          className="base inline internal homeLink"
+          data-test-ref="NAV_LOGO"
+          href="/"
+          target="_self"
+          title="Link to homepage"
+        >
+          <svg
+            className="base aesop aesopLogo"
+            focusable="false"
+            height={12}
+            role="img"
+            tabIndex={-1}
+            viewBox="0 0 489.7 154.3"
+            width={12}
+          >
+            <g>
+              <path
+                className="undefined"
+                d="M48.6,22.5L31.8,62.2h34.2L48.6,22.5z M28.6,70.3c-3.2,7.4-9.6,21.7-14.9,42c-1.9-0.3-3.5-0.9-6.6-0.9c-3.1,0-5,0.6-7.1,0.9C14.3,81.2,38,28.9,49.4,0c1.3,0.2,2.3,0.5,4,0.5c1.4,0,2.3-0.2,3.5-0.5c12.3,33.7,47.8,111.7,48.1,112.3c-2.7-0.5-5.5-0.9-9.5-0.9c-4.2,0-7.2,0.5-10.3,0.9c-5.6-19.2-12.2-33.2-16.2-42H28.6z"
+              />
+              <path
+                className="undefined"
+                d="M172.4,66.6c0-5.3,0-26.6-19.2-26.6c-14,0-20.7,10.6-22.2,26.6H172.4z M130.9,73.3c0,4.5,0,13.6,4.3,21c7.4,12.1,17.8,12.5,22.5,12.5c15.7,0,23.1-9.6,25.5-13l1.9,0.4c-1,4.5-1,7.1-1.1,9.6c-7.1,6.7-16.8,10.5-29.8,10.5c-24.4,0-39.3-15.4-39.3-40.1c0-22.1,12.2-40.7,38.5-40.7c35.8,0,35.3,31.1,35.1,39.8H130.9z"
+              />
+              <path
+                className="undefined"
+                d="M249.6,52.1c-0.6-2.4-1.6-6.4-6.2-9.6c-3.4-2.4-7.8-2.7-10.4-2.7c-9.8,0-14.9,5.1-14.9,12c0,9.3,9.5,12.7,15.1,14.1c14.3,3.7,25.8,6.7,25.8,22.8c0,12.2-8.5,25.8-30.8,25.8c-13,0-22-5.5-23.7-6.7c2.1-3.9,3.4-10.7,3.7-12.8l1.9-0.5c1.1,2.7,2.7,7.1,8.7,10.6c4,2.4,8.2,3,11.7,3c8.4,0,16.2-4,16.2-13.2c0-9.1-5.5-10.9-22.3-16.4c-6.9-2.3-18.3-7.2-18.3-21.3c0-9.1,5.6-23.9,27.8-23.9c11.1,0,17.5,3.4,21.2,5.3c-1.6,4.2-2.7,8-3.2,13.5H249.6z"
+              />
+              <path
+                className="undefined"
+                d="M291.5,73.5c0,22.3,9.8,34.6,24.5,34.6c15.4,0,25.5-13.3,25.5-34.5c0-12.5-3.9-33.8-24.7-33.8C291.5,39.8,291.5,68.6,291.5,73.5 M357.9,73c0,25.5-17.6,41.5-42,41.5c-17,0-40.8-7.7-40.8-40.6c0-25,16.7-40.6,40.8-40.6 C346.3,33.4,357.9,53.4,357.9,73"
+              />
+              <path
+                className="undefined"
+                d="M399.4,49.6c-3.2,4-6.6,9.8-6.6,25.7c0,14.1,3.2,19.4,6.6,23.4c4.1,5,9.6,7.9,17,7.9 c22.9,0,22.9-27.1,22.9-32.3c0-24.2-11.6-33-22-33C408.7,41.2,403.1,44.9,399.4,49.6 M419.3,114.7c-15.1,0-23.6-8.3-26.2-14.9 c0,25.2-0.2,39.8,0.8,54.5c-2.4-0.6-4.5-0.9-8.4-0.9c-4,0-6.1,0.3-8.6,0.9c1.3-20.8,1.8-41.9,1.8-62.7c0-14.6-0.3-34.3-0.8-57.6 c2.2,0.5,4.8,0.9,7.9,0.9c2.9,0,5.6-0.5,7.9-0.9c-0.6,8.8-0.6,11.2-0.6,14.6c2.6-4.2,9.5-15.4,27.3-15.4c16,0,35.6,11.7,35.6,40.3 C455.9,98.8,440.3,114.7,419.3,114.7"
+              />
+              <rect
+                className="undefined"
+                height="5"
+                width="44.3"
+                x="131.8"
+                y="13.5"
+              />
+              <path
+                className="undefined"
+                d="M477.2,98.1c0,1.6,0,3,0,4.4c1.3,0,4.3,0,4.3-2.3C481.5,98.1,479.2,98.1,477.2,98.1 M484.9,109.1 c-0.4,0-0.7-0.1-1.2-0.1c-0.4,0-0.8,0.1-1.5,0.1c-2-2.9-3.6-4.5-4.7-5.8h-0.4c0,1.8,0,3.2,0.2,5.8c-0.5,0-0.7-0.1-1.3-0.1 c-0.6,0-0.8,0.1-1.1,0.1c0.1-1.3,0.2-2.7,0.2-6.2c0-3-0.1-4.4-0.1-5.7c0.9,0,1.5,0,2.9,0c2.9,0,5.9,0,5.9,2.8c0,2.5-2.7,2.9-3.9,3 c0.8,1.1,4.4,5.1,5.1,5.9L484.9,109.1z M479.2,94.8c-4.8,0-8.5,3.8-8.5,8.6c0,4.9,3.6,8.6,8.5,8.6c4.9,0,8.5-3.7,8.5-8.6 C487.8,98.7,484.3,94.8,479.2,94.8 M479.2,92.9c5.9,0,10.5,4.7,10.5,10.5c0,5.9-4.7,10.5-10.5,10.5c-5.8,0-10.5-4.6-10.5-10.5 C468.8,97.5,473.5,92.9,479.2,92.9"
+              />
+            </g>
+          </svg>
+        </a>
+      </div>
+      <div
+        className="small hidden mainNavigationWrapper"
+      >
+        <nav
+          className="base"
+        >
+          <ul
+            className="base list"
+          >
+            <li
+              className="item"
+            >
+              <a
+                className="base external inline link"
+                href="https://acceptance.aesop.com/au/shop"
+                tabIndex={0}
+                target="_self"
+                title="Shop"
+              >
+                Shop
+              </a>
+            </li>
+            <li
+              className="item"
+            >
+              <a
+                className="base external inline link"
+                href="https://acceptance.aesop.com/au/read"
+                tabIndex={0}
+                target="_self"
+                title="Read"
+              >
+                Read
+              </a>
+            </li>
+            <li
+              className="item"
+            >
+              <a
+                className="base external inline link"
+                href="https://acceptance.aesop.com/au/visit"
+                tabIndex={0}
+                target="_self"
+                title="Visit"
+              >
+                Visit
+              </a>
+            </li>
+            <li
+              className="item"
+            >
+              <a
+                className="base external inline link"
+                href="https://acceptance.aesop.com/au/search"
+                tabIndex={0}
+                target="_self"
+                title="Search"
+              >
+                Search
+              </a>
+            </li>
+          </ul>
+          <button
+            className="base inline closeButton action"
+            disabled={false}
+            onClick={[Function]}
+            tabIndex={0}
+            title="Close"
+            type="button"
+          >
+            <svg
+              className="base close"
+              focusable="false"
+              height={12}
+              role="img"
+              tabIndex={-1}
+              viewBox="0 0 50 50"
+              width={12}
+            >
+              <g>
+                <polygon
+                  className="close"
+                  points="50,5 45,0 25,20 5,0 0,5 20,25 0,45 5,50 25,30 45,50 50,45 30,25"
+                />
+              </g>
+            </svg>
+          </button>
+        </nav>
+      </div>
+      <div
+        className="base userSessionWrapper"
+      >
+        <ul
+          className="base list"
+        >
+          <li
+            className="item"
+          >
+            <button
+              className="base inline link loginLink action"
+              data-test-ref="NAV_LINK"
+              disabled={false}
+              onClick={[Function]}
+              tabIndex={0}
+              title="Login"
+              type="button"
+            >
+              Login
+            </button>
+          </li>
+          <li
+            className="item"
+          >
+            <button
+              className="base inline cart action"
+              data-test-ref="NAV_CART"
+              disabled={false}
+              onClick={[Function]}
+              tabIndex={0}
+              title="Cart"
+              type="button"
+            >
+              0
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <form
+    className="base"
+  >
+    <div
+      className="productWrapper"
+    >
+      <div
+        className="productImageWrapper"
+      >
+        <div
+          className="base"
+          id="product-ASK21"
+        >
+          <picture
+            className="picture base image"
+          >
+            <source
+              media="(min-width: 1025px)"
+              srcSet="https://acceptance.aesop.com/medias/Aesop-Skin-Parsley-Seed-Anti-Oxidant-Eye-Cream-10mL-large.png?context=bWFzdGVyfGltYWdlc3wzNTgyOTR8aW1hZ2UvcG5nfGltYWdlcy9oNDUvaGQ2Lzg3OTc0Mzg0MTA3ODIucG5nfDEwYzZiMjhmZjM5MWJhNzI0ZjA2NTE4YzU5YmQ3NWMxZmY0OWFjNjE1NjE5NDVkNmViMjYzNzBiNjA2NzdmMmY 2x"
+            />
+            <source
+              media="(min-width: 640px)"
+              srcSet="https://acceptance.aesop.com/medias/Aesop-Skin-Parsley-Seed-Anti-Oxidant-Eye-Cream-10mL-medium.png?context=bWFzdGVyfGltYWdlc3wyMjc3MTF8aW1hZ2UvcG5nfGltYWdlcy9oNzUvaDY4Lzg3OTc0NDIwODA3OTgucG5nfGU5MzEyY2ZmNmEyYzRkNTgyMGU2ODA0MmRhNzU3N2EzYzQzZTAxMmUwNzZmYjAzZDQzYWVkMWNhZTYzOTBkZTc 2x"
+            />
+            <source
+              media="(min-width: 0px)"
+              srcSet="https://acceptance.aesop.com/medias/Aesop-Skin-Parsley-Seed-Anti-Oxidant-Eye-Cream-10mL-small.png?context=bWFzdGVyfGltYWdlc3wxMTE0Njl8aW1hZ2UvcG5nfGltYWdlcy9oN2UvaDM3Lzg3OTc0NDU4MTYzNTAucG5nfDY2OWY1MTc2ZGE3MDk5YWMxZGU5NjgwYTEzYzJhYzFmZDgzNTk2NWJlNmQ0YzRjYzdlOTc4OTNiNWUxOTFlOTM 2x"
+            />
+            <img
+              alt="Parsley Seed Anti-Oxidant Eye Cream in amber glass jar "
+            />
+          </picture>
+          <div
+            className="singleVariantLabel"
+          >
+            10 mL 
+          </div>
+        </div>
+      </div>
+      <div
+        className="productDetailsWrapper"
+      >
+        <header
+          className="base"
+        >
+          <h1
+            className="base xLarge productTitle"
+          >
+            Parsley Seed Anti-Oxidant Eye Cream
+          </h1>
+          <div
+            className="productDesc"
+          >
+            <p>
+              A potent anti-oxidant blend formulated with generous doses of Vitamins C and E to gently nourish and protect the delicate skin surrounding the eyes.
+            </p>
+            
+
+          </div>
+        </header>
+        <div
+          className="base"
+        >
+          <div
+            className="large xLarge hidden"
+          >
+            <button
+              className="base alternate block base action"
+              data-test-ref="ADD_TO_CART_SMALL_CTA"
+              disabled={false}
+              onClick={[Function]}
+              title="Add to cart button"
+              type="button"
+            >
+              <span
+                className="label"
+              >
+                <span>
+                  Added to your cart
+                </span>
+                <span>
+                  Add to your cart — $625.00
+                </span>
+              </span>
+            </button>
+          </div>
+          <dl
+            className="base"
+          >
+            <dt
+              className="term"
+            >
+              Suited to
+            </dt>
+            <dd
+              className="description"
+            >
+              Most skin types, particularly dry
+            </dd>
+            <dt
+              className="term"
+            >
+              Skin feel
+            </dt>
+            <dd
+              className="description"
+            >
+              Nourished and hydrated with smooth finish
+            </dd>
+            <dt
+              className="term"
+            >
+              <span>
+                Key ingredients
+              </span>
+            </dt>
+            <dd
+              className="description"
+            >
+              Sodium Ascorbyl Phosphate, Tocopherol, Sodium Lactate
+            </dd>
+          </dl>
+          <div
+            className="small medium hidden"
+          >
+            <button
+              className="base alternate block base action"
+              data-test-ref="ADD_TO_CART_LARGE_CTA"
+              disabled={false}
+              onClick={[Function]}
+              title="Add to cart button"
+              type="button"
+            >
+              <span
+                className="label"
+              >
+                <span>
+                  Added to your cart
+                </span>
+                <span>
+                  Add to your cart — $625.00
+                </span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  <section
+    className="base"
+  >
+    <picture
+      className="picture base figure"
+    >
+      <source
+        media="(min-width: 1025px)"
+        srcSet="https://www.aesop.com/medias/Aesop-Skin-Classic-Purifying-Facial-Exfoliant-Paste-Texture-50-50-Mobile-640x640px.jpg?context=bWFzdGVyfGltYWdlc3wyNDg1OHxpbWFnZS9qcGVnfGltYWdlcy9oMjIvaDBkLzkxMTYyMjg1MTc5MTguanBnfDJjZDUzMjI4N2EzZDgyYzE1ZTk3MTM4OWFjODU5N2Q2NjQ4YTAxNzcwZmE4YjBlZDQ2YTJmYTRhOTI5ZWQyY2I"
+      />
+      <source
+        media="(min-width: 640px)"
+        srcSet="https://www.aesop.com/medias/Aesop-Skin-Classic-Purifying-Facial-Exfoliant-Paste-Texture-50-50-Mobile-640x640px.jpg?context=bWFzdGVyfGltYWdlc3wyNDg1OHxpbWFnZS9qcGVnfGltYWdlcy9oMjIvaDBkLzkxMTYyMjg1MTc5MTguanBnfDJjZDUzMjI4N2EzZDgyYzE1ZTk3MTM4OWFjODU5N2Q2NjQ4YTAxNzcwZmE4YjBlZDQ2YTJmYTRhOTI5ZWQyY2I"
+      />
+      <source
+        media="(min-width: 0px)"
+        srcSet="https://www.aesop.com/medias/Aesop-Skin-Classic-Purifying-Facial-Exfoliant-Paste-Texture-50-50-Mobile-640x640px.jpg?context=bWFzdGVyfGltYWdlc3wyNDg1OHxpbWFnZS9qcGVnfGltYWdlcy9oMjIvaDBkLzkxMTYyMjg1MTc5MTguanBnfDJjZDUzMjI4N2EzZDgyYzE1ZTk3MTM4OWFjODU5N2Q2NjQ4YTAxNzcwZmE4YjBlZDQ2YTJmYTRhOTI5ZWQyY2I"
+      />
+      <img
+        alt="alt image"
+      />
+    </picture>
+    <div
+      className="container"
+    >
+      <header>
+        <h2
+          className="base noMargin xSmall"
+        >
+          How to use
+        </h2>
+        <h3
+          className="base serifFont xLarge"
+        >
+          Dispense into palm then massage gently over face, neck and lips, applying minimal pressure. Avoid eye area. Rinse thoroughly with warm water.
+        </h3>
+      </header>
+      <dl
+        className="base"
+      >
+        <dt
+          className="term"
+        >
+          Dosage
+        </dt>
+        <dd
+          className="description"
+        >
+          Desired amount
+        </dd>
+        <dt
+          className="term"
+        >
+          Texture
+        </dt>
+        <dd
+          className="description"
+        >
+          Water-soluble cream with fine grain
+        </dd>
+        <dt
+          className="term"
+        >
+          Aroma
+        </dt>
+        <dd
+          className="description"
+        >
+          Herbaceous, floral, earthy
+        </dd>
+      </dl>
+    </div>
+  </section>
+  <div
+    className="base"
+  >
+    <div
+      className="wrapper"
+    >
+      <blockquote
+        className="blockquote"
+      >
+        <p>
+          ‘Do not wish to be anything but what you are, and try to be that perfectly’
+        </p>
+      </blockquote>
+      <cite
+        className="author"
+      >
+        Diana Ramirez
+      </cite>
+    </div>
+  </div>
+  <section
+    className="base"
+  >
+    <picture
+      className="picture base figure"
+    >
+      <source
+        media="(min-width: 1025px)"
+        srcSet="https://www.aesop.com/medias/Aesop-Kit-PSAO-Extended-PDP-2nd-Asset-Desktop-1440x1800px.png?context=bWFzdGVyfGltYWdlc3wyNjIzNDh8aW1hZ2UvcG5nfGltYWdlcy9oYjIvaDlhLzg5NjQ1MzAwNDQ5NTgucG5nfDIxMWM1ZTIzOGNjNTU3YWQxMTNiMTIyZmQxNmE2NTQ5NjVhZWVkNDQzNzM0YThlMjg2ZmZiNzAzZTYyODdlZGM"
+      />
+      <source
+        media="(min-width: 640px)"
+        srcSet="https://www.aesop.com/medias/Aesop-Kit-PSAO-Extended-PDP-2nd-Asset-Tablet-1536x864px.png?context=bWFzdGVyfGltYWdlc3wxOTkxNDV8aW1hZ2UvcG5nfGltYWdlcy9oOTgvaGYyLzg5NjQ1MzAyMDg3OTgucG5nfDY0NGMwZWE4OWI5NjU0NDEwMDA5ZTc2YzIxMGZiNGQ4NmViZWQ4NjQ4NDM4NDA5OWZmMTcxNjRjNzAwNjM1NGU"
+      />
+      <source
+        media="(min-width: 0px)"
+        srcSet="https://www.aesop.com/medias/Aesop-Kit-PSAO-Extended-PDP-2nd-Asset-Mobile-640x640px.png?context=bWFzdGVyfGltYWdlc3w2NjIzMXxpbWFnZS9wbmd8aW1hZ2VzL2hmZi9oMmQvODk2NDUzMDI3NDMzNC5wbmd8MTdiZTljZjAxMTQ2YjBjMTE5MjA2NTJkNDA2MDhiMTA1ZDcyMjE4MTQ1NjI1ZDZlOTkzMTBmZTkyMTc5YTM3OQ"
+      />
+      <img
+        alt="alt image"
+      />
+    </picture>
+    <div
+      className="container"
+    >
+      <header>
+        <h2
+          className="base noMargin xSmall"
+        >
+          How to use
+        </h2>
+        <h3
+          className="base serifFont xLarge"
+        >
+          A comprehensive skin care regimen, ideal in urban environments.
+        </h3>
+        <p
+          className="base description"
+        >
+          Morning and evening, use Parsley Seed Facial Cleansing Oil, Facial Toner, Anti-Oxidant Serum, and Eye Cream. Twice weekly, apply Masque after cleansing; follow with Facial Treatment.
+        </p>
+      </header>
+      <ul
+        className="base base"
+      >
+        <li
+          className="item item"
+        >
+          Parsley Seed Facial Cleansing Oil, 200 mL
+        </li>
+        <li
+          className="item item"
+        >
+          Parsley Seed Anti-Oxidant Facial Toner, 100 mL
+        </li>
+        <li
+          className="item item"
+        >
+          Parsley Seed Anti-Oxidant Serum, 100 mL
+        </li>
+        <li
+          className="item item"
+        >
+          Parsley Seed Anti-Oxidant Eye Cream, 10 mL
+        </li>
+      </ul>
+    </div>
+  </section>
+  <div
+    className="slick-slider base base asideProducts slick-initialized"
+  >
+    
+    <div
+      className="slick-list"
+    >
+      <div
+        className="slick-track"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseOver={[Function]}
+        style={
+          Object {
+            "WebkitTransform": "translate3d(0px, 0px, 0px)",
+            "WebkitTransition": "",
+            "msTransform": "translateX(0px)",
+            "opacity": 1,
+            "transform": "translate3d(0px, 0px, 0px)",
+            "transition": "",
+          }
+        }
+      >
+        <div
+          aria-hidden={false}
+          className="slick-slide slick-active slick-current"
+          data-index={0}
+          onClick={[Function]}
+          style={
+            Object {
+              "outline": "none",
+              "width": 0,
+            }
+          }
+          tabIndex="-1"
+        >
+          <div>
+            <header
+              className="introduction"
+            >
+              <h4
+                className="base serifFont large introductionHeading"
+              >
+                Accompany with
+              </h4>
+              <p
+                className="base introductionDescription"
+              >
+                Richly foaming Parsley Seed Facial Cleanser offers mild exfoliation from Lactic Acid to clarify and soften skin; complement twice weekly with Parsley Seed Cleansing Masque to extract impurities and purify pores. For intensive fortification and hydration, blend Hydrator with Parsley Seed Anti-Oxidant Facial Treatment.
+              </p>
+            </header>
+          </div>
+        </div>
+        <div
+          aria-hidden={false}
+          className="slick-slide slick-active"
+          data-index={1}
+          onClick={[Function]}
+          style={
+            Object {
+              "outline": "none",
+              "width": 0,
+            }
+          }
+          tabIndex="-1"
+        >
+          <div>
+            <div
+              style={
+                Object {
+                  "display": "inline-block",
+                  "width": "100%",
+                }
+              }
+              tabIndex={-1}
+            >
+              <a
+                className="base item link"
+                href="/"
+                title="Link to Parsley Seed Facial Cleanser"
+              >
+                <div>
+                  <h5
+                    className="base xSmall title"
+                  >
+                    Parsley Seed Facial Cleanser
+                  </h5>
+                  
+                </div>
+                <div
+                  className="imageContainer"
+                >
+                  <picture
+                    className="picture base image"
+                  >
+                    <source
+                      media="(min-width: 1025px)"
+                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                    />
+                    <source
+                      media="(min-width: 640px)"
+                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                    />
+                    <source
+                      media="(min-width: 0px)"
+                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                    />
+                    <img
+                      alt="Image of Parsley Seed Facial Cleanser"
+                    />
+                  </picture>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden={false}
+          className="slick-slide slick-active"
+          data-index={2}
+          onClick={[Function]}
+          style={
+            Object {
+              "outline": "none",
+              "width": 0,
+            }
+          }
+          tabIndex="-1"
+        >
+          <div>
+            <div
+              style={
+                Object {
+                  "display": "inline-block",
+                  "width": "100%",
+                }
+              }
+              tabIndex={-1}
+            >
+              <a
+                className="base item link"
+                href="/"
+                title="Link to Parsley Seed Cleansing Masque"
+              >
+                <div>
+                  <h5
+                    className="base xSmall title"
+                  >
+                    Parsley Seed Cleansing Masque
+                  </h5>
+                  
+                </div>
+                <div
+                  className="imageContainer"
+                >
+                  <picture
+                    className="picture base image"
+                  >
+                    <source
+                      media="(min-width: 1025px)"
+                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                    />
+                    <source
+                      media="(min-width: 640px)"
+                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                    />
+                    <source
+                      media="(min-width: 0px)"
+                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                    />
+                    <img
+                      alt="Image Parsley Seed Cleansing Masque"
+                    />
+                  </picture>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden={false}
+          className="slick-slide slick-active"
+          data-index={3}
+          onClick={[Function]}
+          style={
+            Object {
+              "outline": "none",
+              "width": 0,
+            }
+          }
+          tabIndex="-1"
+        >
+          <div>
+            <div
+              style={
+                Object {
+                  "display": "inline-block",
+                  "width": "100%",
+                }
+              }
+              tabIndex={-1}
+            >
+              <a
+                className="base item link"
+                href="/"
+                title="Link to Parsley Seed Anti-Oxidant Facial Treatment"
+              >
+                <div>
+                  <h5
+                    className="base xSmall title"
+                  >
+                    Parsley Seed Anti-Oxidant Facial Treatment
+                  </h5>
+                  
+                </div>
+                <div
+                  className="imageContainer"
+                >
+                  <picture
+                    className="picture base image"
+                  >
+                    <source
+                      media="(min-width: 1025px)"
+                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                    />
+                    <source
+                      media="(min-width: 640px)"
+                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                    />
+                    <source
+                      media="(min-width: 0px)"
+                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                    />
+                    <img
+                      alt="Image Parsley Seed Anti-Oxidant Facial Treatment"
+                    />
+                  </picture>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+  </div>
+  <section
+    className="base reverse"
+  >
+    <picture
+      className="picture base figure"
+    >
+      <source
+        media="(min-width: 1025px)"
+        srcSet="https://www.aesop.com/medias/Aesop-Room-Sprays-Hybris-Cythera-Pattern-Desktop-1440x1600.jpg?context=bWFzdGVyfGltYWdlc3w0MTU4Mjl8aW1hZ2UvanBlZ3xpbWFnZXMvaGIyL2g0MS84ODEzNzIxNTUwODc4LmpwZ3wxODAxZWQ5YTdlNzMxNDYxZWZhMThiNzQ1YTJhZTRmMjE3ZWU3YzEzZDJmOGZjZWU0M2Y4ZWJlNjg2YjE1NjQ2"
+      />
+      <source
+        media="(min-width: 640px)"
+        srcSet="https://www.aesop.com/medias/Aesop-Room-Sprays-Hybris-Cythera-Pattern-Desktop-1440x1600.jpg?context=bWFzdGVyfGltYWdlc3w0MTU4Mjl8aW1hZ2UvanBlZ3xpbWFnZXMvaGIyL2g0MS84ODEzNzIxNTUwODc4LmpwZ3wxODAxZWQ5YTdlNzMxNDYxZWZhMThiNzQ1YTJhZTRmMjE3ZWU3YzEzZDJmOGZjZWU0M2Y4ZWJlNjg2YjE1NjQ2"
+      />
+      <source
+        media="(min-width: 0px)"
+        srcSet="https://www.aesop.com/medias/Aesop-Room-Sprays-Hybris-Cythera-Pattern-Desktop-1440x1600.jpg?context=bWFzdGVyfGltYWdlc3w0MTU4Mjl8aW1hZ2UvanBlZ3xpbWFnZXMvaGIyL2g0MS84ODEzNzIxNTUwODc4LmpwZ3wxODAxZWQ5YTdlNzMxNDYxZWZhMThiNzQ1YTJhZTRmMjE3ZWU3YzEzZDJmOGZjZWU0M2Y4ZWJlNjg2YjE1NjQ2"
+      />
+      <img
+        alt="alt image"
+      />
+    </picture>
+    <div
+      className="container"
+    >
+      <header>
+        <h2
+          className="base noMargin xSmall"
+        >
+          Cythera Aromatique Room Spray
+        </h2>
+        <h3
+          className="base serifFont xLarge"
+        >
+          The spirit stirred
+        </h3>
+        <p
+          className="base description"
+        >
+          Cythera conjures a moonlit garden as vespertine flowers relax their petals and nocturnal animals emerge from sleep. Drawing us into the present, an atmosphere of reverence is stirred as darkness returns. The air in this space holds a delicate aroma woven with the memory of the day, and the promise of the evening ahead.
+        </p>
+      </header>
+    </div>
+  </section>
+  <footer
+    className="base"
+  >
+    <div
+      className="block"
+    >
+      <div
+        className="subscription"
+      >
+        <div
+          className="base base"
+        >
+          <form
+            onReset={[Function]}
+            onSubmit={[Function]}
+          >
+            <div
+              className="description"
+            >
+              I would like to receive communications about Aesop products, services, stores, events and matters of cultural interest.
+            </div>
+            <div
+              className="inputWrapper subscriptionForm"
+            >
+              <div
+                className="base input"
+              >
+                <label
+                  className="label"
+                  htmlFor="emailAddress"
+                >
+                  Email address
+                </label>
+                <input
+                  className="input"
+                  data-test-ref="emailAddress"
+                  id="emailAddress"
+                  name="emailAddress"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  placeholder=""
+                  type="text"
+                  value=""
+                />
+                <div
+                  className="errorMessage"
+                  data-test-ref="emailAddress_ERROR"
+                >
+                  
+                </div>
+              </div>
+              
+            </div>
+          </form>
+        </div>
+      </div>
+      <nav
+        className="base siteNavigation"
+      >
+        <h5
+          className="base noMargin small title siteNavigationTitle"
+        >
+          Contact Us
+        </h5>
+        <ul
+          className="base"
+        >
+          <li
+            className="item"
+          >
+            <a
+              className="base external inline base itemList"
+              href="https://www.aesop.com/au/r/contact-us"
+              target="_self"
+              title="Link to https://www.aesop.com/au/r/contact-us"
+            >
+              Contact us
+            </a>
+          </li>
+          <li
+            className="item"
+          >
+            <a
+              className="base external inline base itemList"
+              href="https://www.aesop.com/au/r/shipping/"
+              target="_self"
+              title="Link to https://www.aesop.com/au/r/shipping/"
+            >
+              Delivery and returns
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <nav
+        className="base siteNavigation"
+      >
+        <h5
+          className="base noMargin small title siteNavigationTitle"
+        >
+          About
+        </h5>
+        <ul
+          className="base"
+        >
+          <li
+            className="item"
+          >
+            <a
+              className="base external inline base itemList"
+              href="http://www.aesop.com/au/r/about"
+              target="_self"
+              title="Link to http://www.aesop.com/au/r/about"
+            >
+              Our story
+            </a>
+          </li>
+          <li
+            className="item"
+          >
+            <a
+              className="base external inline base itemList"
+              href="https://www.aesop.com/au/r/careers"
+              target="_self"
+              title="Link to https://www.aesop.com/au/r/careers"
+            >
+              Careers
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <nav
+        className="base siteNavigation"
+      >
+        <h5
+          className="base noMargin small title siteNavigationTitle"
+        >
+          Social
+        </h5>
+        <ul
+          className="base"
+        >
+          <li
+            className="item"
+          >
+            <a
+              className="base external hasIcon inline base itemList"
+              href="https://www.instagram.com/aesopskincare/"
+              target="_self"
+              title="Link to https://www.instagram.com/aesopskincare/"
+            >
+              Instagram
+              <i
+                aria-hidden="true"
+                className="icon"
+              >
+                <svg
+                  className="base rightUpArrow"
+                  focusable="false"
+                  height={12}
+                  role="img"
+                  tabIndex={-1}
+                  viewBox="0 0 50 50"
+                  width={12}
+                >
+                  <g>
+                    <path
+                      className="undefined"
+                      d="M21.8,0.2l28.1-0.1v28.1l-4.5,0l0.1-20.5L16.2,37.1l-3.4-3.4L42.1,4.4L21.8,4.4L21.8,0.2L21.8,0.2z"
+                    />
+                  </g>
+                </svg>
+              </i>
+            </a>
+          </li>
+          <li
+            className="item"
+          >
+            <a
+              className="base external hasIcon inline base itemList"
+              href="https://twitter.com/aesopskincare"
+              target="_self"
+              title="Link to https://twitter.com/aesopskincare"
+            >
+              Twitter
+              <i
+                aria-hidden="true"
+                className="icon"
+              >
+                <svg
+                  className="base rightUpArrow"
+                  focusable="false"
+                  height={12}
+                  role="img"
+                  tabIndex={-1}
+                  viewBox="0 0 50 50"
+                  width={12}
+                >
+                  <g>
+                    <path
+                      className="undefined"
+                      d="M21.8,0.2l28.1-0.1v28.1l-4.5,0l0.1-20.5L16.2,37.1l-3.4-3.4L42.1,4.4L21.8,4.4L21.8,0.2L21.8,0.2z"
+                    />
+                  </g>
+                </svg>
+              </i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div
+      className="sock"
+    >
+      <span
+        className="copyright"
+      >
+        ©
+        Aesop
+      </span>
+      <div
+        className="base"
+      >
+        Region Selector
+      </div>
+    </div>
+  </footer>
+</div>
+`;

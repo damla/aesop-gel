@@ -8,7 +8,12 @@ const {
   NO_ICON_LINK,
 } = HYPERLINK_STYLE_TYPES;
 
-export const checkIsInlineFromStyle = (style: string | undefined): boolean => {
+/**
+ * checkIsInlineFromStyle
+ * @param style string
+ * @return boolean
+ */
+export const checkIsInlineFromStyle = style => {
   const styleRepresentsInline =
     style === EXTERNAL_TEXT_LINK ||
     style === INTERNAL_TEXT_LINK ||
@@ -18,10 +23,13 @@ export const checkIsInlineFromStyle = (style: string | undefined): boolean => {
   return styleRepresentsInline ? true : false;
 };
 
-export const getButtonPropsFromStyle = (
-  style: string | undefined,
-  url: string | undefined,
-): object => {
+/**
+ * getButtonPropsFromStyle
+ * @param style string
+ * @param url string
+ * @return object
+ */
+export const getButtonPropsFromStyle = (style, url) => {
   const styleRepresentsAbsoluteLink =
     style === EXTERNAL_BUTTON_LINK ||
     style === EXTERNAL_TEXT_LINK ||
@@ -34,10 +42,20 @@ export const getButtonPropsFromStyle = (
   };
 };
 
-export const hasIconFromStyle = (style: string | undefined): boolean =>
+/**
+ * hasIconFromStyle
+ * @param style string
+ * @return boolean
+ */
+export const hasIconFromStyle = style =>
   style === NO_ICON_LINK || style === EXTERNAL_NO_ICON_LINK ? false : true;
 
-export const getTargetType = (openInANewWindow: boolean | undefined): string =>
+/**
+ * getTargetType
+ * @param openInANewWindow boolean
+ * @return string
+ */
+export const getTargetType = openInANewWindow =>
   openInANewWindow ? '_blank' : '_self';
 
 export default {

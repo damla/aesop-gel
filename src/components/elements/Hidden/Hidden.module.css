@@ -15,9 +15,6 @@
   clip: rect(1px, 1px, 1px, 1px);
 }
 
-.base {
-}
-
 .small {
   @media (--viewport-sm-only) {
     &.hidden {

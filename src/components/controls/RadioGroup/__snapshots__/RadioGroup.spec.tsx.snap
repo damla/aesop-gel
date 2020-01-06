@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RadioGroup /> renders base component correctly 1`] = `
+<ul
+  className="base hasError"
+>
+  <li
+    className="radio"
+  >
+    <label
+      className="label"
+      htmlFor="option-fabulist"
+    >
+      <input
+        aria-checked={true}
+        checked={true}
+        className="input"
+        data-test-ref="radio"
+        id="option-fabulist"
+        name="radio"
+        onChange={[MockFunction]}
+        tabIndex={0}
+        type="radio"
+        value="fabulist"
+      />
+      <span
+        className="pot"
+      />
+      <span
+        className="labelContent"
+      >
+        Fabulist
+      </span>
+    </label>
+  </li>
+  <li
+    className="radio"
+  >
+    <label
+      className="label"
+      htmlFor="option-ledger"
+    >
+      <input
+        aria-checked={false}
+        checked={false}
+        className="input"
+        data-test-ref="radio"
+        id="option-ledger"
+        name="radio"
+        onChange={[MockFunction]}
+        tabIndex={0}
+        type="radio"
+        value="ledger"
+      />
+      <span
+        className="pot"
+      />
+      <span
+        className="labelContent"
+      >
+        Ledger
+      </span>
+    </label>
+  </li>
+  <div
+    className="errorMessage"
+  >
+    This is an error message
+  </div>
+</ul>
+`;

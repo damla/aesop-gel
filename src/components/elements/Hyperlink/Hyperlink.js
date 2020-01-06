@@ -2,7 +2,7 @@ import React from 'react';
 import cx from 'classnames';
 import { HYPERLINK_STYLE_TYPES } from '~/constants';
 import Button from '~/components/elements/Button';
-import Props from './Hyperlink.types';
+import PROP_TYPES from './Hyperlink.prop-types';
 import {
   checkIsInlineFromStyle,
   getButtonPropsFromStyle,
@@ -13,21 +13,21 @@ import styles from './Hyperlink.module.css';
 
 const { NO_ICON_LINK } = HYPERLINK_STYLE_TYPES;
 
-const Hyperlink: React.FunctionComponent<Props> = ({
+const Hyperlink = ({
   children,
-  classSet,
+  className,
   dataTestRef,
-  openInANewWindow,
-  style,
+  openInANewWindow = false,
+  style = NO_ICON_LINK,
   text,
   title,
   url,
 }) => {
-  const className: string = cx(styles.base, classSet);
+  const classSet = cx(styles.base, className);
 
   if (!text) {
     return (
-      <a className={className} href={url} title={title || `Link to ${url}`}>
+      <a className={classSet} href={url} title={title || `Link to ${url}`}>
         {children}
       </a>
     );
@@ -40,7 +40,7 @@ const Hyperlink: React.FunctionComponent<Props> = ({
 
   return (
     <Button
-      classSet={className}
+      className={className}
       dataTestRef={dataTestRef}
       icon={hasIcon}
       inline={inline}
@@ -53,9 +53,6 @@ const Hyperlink: React.FunctionComponent<Props> = ({
   );
 };
 
-Hyperlink.defaultProps = {
-  openInANewWindow: false,
-  style: NO_ICON_LINK,
-};
+Hyperlink.propTypes = PROP_TYPES;
 
 export default Hyperlink;

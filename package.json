@@ -6,7 +6,6 @@
   "scripts": {
     "eslint": "eslint './**/*.{js,jsx,ts,tsx}' --ignore-path .eslintignore --config .eslintrc",
     "lint": "npm run eslint && npm run stylelint",
-    "prepublish": "rm -rf ./dist && npm run build",
     "pretty": "npm run prettier-eslint && npm run prettier-stylelint",
     "prettier-eslint": "prettier --write \"./**/*.{js,jsx,ts,tsx}\"",
     "prettier-stylelint": "prettier-stylelint  --write './src/**/*.css' --config .stylelintrc --quiet",

@@ -1,24 +1,23 @@
 import React from 'react';
 import cx from 'classnames';
-import Props from './Paragraph.types';
+import PROP_TYPES, { PARAGRAPH_SET_PROP_TYPES } from './Paragraph.prop-types';
 import styles from './Paragraph.module.css';
 
-const Paragraph: React.FunctionComponent<Props> = ({ children, classSet }) => {
-  const className: string = cx(styles.base, classSet);
+const Paragraph = ({ children, className }) => {
+  const classSet = cx(styles.base, className);
 
-  return <p className={className}>{children}</p>;
+  return <p className={classSet}>{children}</p>;
 };
 
-const ParagraphSet: React.FunctionComponent<Props> = ({
-  children,
-  classSet,
-}) => {
-  const className: string = cx(styles.set, classSet);
+Paragraph.propTypes = PROP_TYPES;
 
-  return <div className={className}>{children}</div>;
+const ParagraphSet = ({ children, className }) => {
+  const classSet = cx(styles.set, className);
+
+  return <div className={classSet}>{children}</div>;
 };
 
-Paragraph.defaultProps = {};
+ParagraphSet.propTypes = PARAGRAPH_SET_PROP_TYPES;
 
 export { Paragraph as P };
 export { ParagraphSet };

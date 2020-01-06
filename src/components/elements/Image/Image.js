@@ -3,30 +3,22 @@ import cx from 'classnames';
 import get from 'lodash/get';
 import { constraintsByViewport } from '~/utils/viewports/viewports';
 import Hyperlink from '~/components/elements/Hyperlink';
-import { ImageType as Props } from '~/types/';
+import PROP_TYPES from './Image.prop-types';
 import styles from './Image.module.css';
 
-const Image: React.FunctionComponent<Props> = ({
-  altText,
-  classSet,
-  cta,
-  large,
-  medium,
-  small,
-  type,
-}) => {
+const Image = ({ altText, className, cta, large, medium, small, type }) => {
   const fullBleedImage = type === 'componentFullBleedImage';
   const isRightAligned = type === 'componentSquareImage';
 
-  const className: string = cx(
+  const classSet = cx(
     styles.base,
     { [styles.fullBleedImage]: fullBleedImage },
     { [styles.isRightAligned]: isRightAligned },
-    classSet,
+    className,
   );
 
   const picture = (
-    <picture className={cx(styles.picture, className)}>
+    <picture className={cx(styles.picture, classSet)}>
       {large && (
         <source
           media={`(min-width: ${get(
@@ -69,5 +61,7 @@ const Image: React.FunctionComponent<Props> = ({
     picture
   );
 };
+
+Image.propTypes = PROP_TYPES;
 
 export default Image;

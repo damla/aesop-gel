@@ -1,21 +1,17 @@
 import React from 'react';
 import cx from 'classnames';
-import Props from './Overlay.types';
 import { KEYBOARD_CODES } from '~/constants';
 import Transition from '~/components/elements/Transition';
+import PROP_TYPES from './Overlay.prop-types';
 import styles from './Overlay.module.css';
 
-const Overlay: React.FunctionComponent<Props> = ({
-  classSet,
-  handleClose,
-  isVisible,
-}) => {
-  const className: string = cx(
+const Overlay = ({ className, handleClose, isVisible = false }) => {
+  const classSet = cx(
     styles.base,
     {
       [styles.isVisible]: isVisible,
     },
-    classSet,
+    className,
   );
 
   return (
@@ -26,11 +22,10 @@ const Overlay: React.FunctionComponent<Props> = ({
       unmountOnExit={true}
     >
       <div
-        className={className}
+        className={classSet}
         onClick={handleClose}
         onKeyPress={event => {
           if (event.keyCode === KEYBOARD_CODES.ESCAPE) {
-            // @ts-ignore
             handleClose(event);
           }
         }}
@@ -41,8 +36,6 @@ const Overlay: React.FunctionComponent<Props> = ({
   );
 };
 
-Overlay.defaultProps = {
-  isVisible: false,
-};
+Overlay.propTypes = PROP_TYPES;
 
 export default Overlay;

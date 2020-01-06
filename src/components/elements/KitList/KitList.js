@@ -1,21 +1,21 @@
-import React, { FunctionComponent } from 'react';
+import React from 'react';
 import cx from 'classnames';
 import List from '~/components/elements/List';
-import Props from './KitList.types';
+import PROP_TYPES from './KitList.prop-types';
 import styles from './KitList.module.css';
 
-const KitList: FunctionComponent<Props> = ({ items, classSet }) => {
-  const className: string = cx(styles.base, classSet);
+const KitList = ({ items, className }) => {
+  const classSet = cx(styles.base, className);
 
   return (
     <List
-      classSet={className}
+      className={classSet}
       items={items.map((item: string) => ({ content: item }))}
-      listItemClassSet={styles.item}
+      listItemClassName={styles.item}
     />
   );
 };
 
-KitList.defaultProps = {};
+KitList.propTypes = PROP_TYPES;
 
 export default KitList;

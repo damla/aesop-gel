@@ -1,13 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
 import Transition from '~/components/elements/Transition';
+import PROP_TYPES from './AuxOpenCartButton.prop-types';
 import styles from './AuxOpenCartButton.module.css';
-
-const propTypes = {
-  classSet: PropTypes.string,
-  handleShow: PropTypes.func,
-};
 
 const AuxOpenCartButton = ({ classSet, handleShow }) => {
   const className = cx(styles.base, classSet);
@@ -25,6 +20,6 @@ const AuxOpenCartButton = ({ classSet, handleShow }) => {
   );
 };
 
-AuxOpenCartButton.propTypes = propTypes;
+AuxOpenCartButton.propTypes = PROP_TYPES;
 
 export default AuxOpenCartButton;

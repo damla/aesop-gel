@@ -1,17 +1,17 @@
 import React from 'react';
-import PropTypes from 'prop-types'
 import cx from 'classnames';
-import Props from './DefinitionList.types';
+import PROP_TYPES from './DefinitionList.prop-types';
 import styles from './DefinitionList.module.css';
 
-const DefinitionList: React.FunctionComponent<Props> = ({
-  classSet,
-  items,
-}) => {
-  const className: string = cx(styles.base, classSet);
+const DefinitionList = ({ className, items = [] }) => {
+  const classSet = cx(styles.base, className);
+
+  if (items.length === 0) {
+    return null;
+  }
 
   return (
-    <dl className={className}>
+    <dl className={classSet}>
       {items
         .filter(({ description, term }) => description && term)
         .map(({ description, term }, index) => (
@@ -24,8 +24,6 @@ const DefinitionList: React.FunctionComponent<Props> = ({
   );
 };
 
-DefinitionList.defaultProps = {
-  items: [],
-};
+DefinitionList.propTypes = PROP_TYPES;
 
 export default DefinitionList;

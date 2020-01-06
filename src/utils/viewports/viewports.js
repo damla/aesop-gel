@@ -1,5 +1,10 @@
 import { BREAKPOINTS } from '~/constants';
 
+export const IS_MOBILE_OR_TABLET = `(max-width: ${BREAKPOINTS.LARGE.MIN_WIDTH}px)`;
+export const BREAKPOINT_CONDITIONS = {
+  IS_MOBILE_OR_TABLET,
+};
+
 const { LARGE, MEDIUM, SMALL } = BREAKPOINTS;
 const CONSTRAINT_KEYS = {
   MIN_WIDTH: 'minWidth',
@@ -27,6 +32,7 @@ constraints.forEach(constraint => {
 });
 
 /**
+ * getViewportForWidth
  * @param width: number
  * @return string
  */
@@ -37,6 +43,16 @@ const getViewportForWidth = width => {
   }
   return constraints[i].viewport;
 };
+
+/**
+ * ascertainIsMobileOrTablet
+ * @param none
+ * @return boolean
+ */
+export const ascertainIsMobileOrTablet = () =>
+  typeof window !== 'undefined'
+    ? window.matchMedia(IS_MOBILE_OR_TABLET).matches
+    : false;
 
 export {
   CONSTRAINT_KEYS,

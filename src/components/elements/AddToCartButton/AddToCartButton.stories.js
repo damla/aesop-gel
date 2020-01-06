@@ -18,6 +18,7 @@ storiesOf('Elements.AddToCartButton', module).add('Base component', () => (
     <AddToCartButton
       dataTestRef={store.get('dataTestRef')}
       disabled={store.get('disabled')}
+      handleOnClick={() => {}}
       price={store.get('price')}
       sku={store.get('sku')}
     />

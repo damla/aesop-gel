@@ -1,26 +1,21 @@
 import React from 'react';
 import cx from 'classnames';
-import Props from './Loading.types';
+import PROP_TYPES from './Loading.prop-types';
 import styles from './Loading.module.css';
 
-const Loading: React.FunctionComponent<Props> = ({
-  classSet,
-  isLight,
-  isLoading,
-  small,
-}) => {
-  const className: string = cx(
+const Loading = ({ className, isLight = false, isLoading, small = false }) => {
+  const classSet = cx(
     styles.base,
     {
       [styles.light]: isLight,
       [styles.isLoading]: isLoading,
       [styles.small]: small,
     },
-    classSet,
+    className,
   );
 
   return (
-    <span className={className}>
+    <span className={classSet}>
       <span className={styles.dot} />
       <span className={styles.dot} />
       <span className={styles.dot} />
@@ -28,9 +23,6 @@ const Loading: React.FunctionComponent<Props> = ({
   );
 };
 
-Loading.defaultProps = {
-  isLight: false,
-  small: false,
-};
+Loading.propTypes = PROP_TYPES;
 
 export default Loading;

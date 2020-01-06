@@ -1,22 +1,17 @@
 import React from 'react';
 import cx from 'classnames';
-import Props from './Quote.types';
+import PROP_TYPES from './Quote.prop-types';
 import styles from './Quote.module.css'; // @TODO Address this
 
-const Quote: React.FunctionComponent<Props> = ({
-  author,
-  children,
-  classSet,
-  noTopPadding,
-}) => {
-  const className: string = cx(
+const Quote = ({ author, children, className, noTopPadding = false }) => {
+  const classSet = cx(
     styles.base,
     { [styles.noTopPadding]: noTopPadding },
-    classSet,
+    className,
   );
 
   return (
-    <div className={className}>
+    <div className={classSet}>
       <div className={styles.wrapper}>
         <blockquote className={styles.blockquote}>
           <p>{children}</p>
@@ -27,8 +22,6 @@ const Quote: React.FunctionComponent<Props> = ({
   );
 };
 
-Quote.defaultProps = {
-  noTopPadding: false,
-};
+Quote.propTypes = PROP_TYPES;
 
 export default Quote;

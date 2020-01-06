@@ -8,7 +8,7 @@ import Loading from './Loading';
 
 storiesOf('Elements.Loading', module).add('Base component', () => (
   <Loading
-    classSet={text('classSet', '')}
+    className={text('className', '')}
     isLight={boolean('isLight', false)}
     isLoading={boolean('isLoading', true)}
     small={boolean('isSmall', false)}

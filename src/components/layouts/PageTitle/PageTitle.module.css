@@ -1,0 +1,25 @@
+@import 'styles/variables/index';
+
+.base {
+  position: relative;
+  padding-top: 1.8rem;
+  padding-bottom: 1.8rem;
+}
+
+.title {
+  margin: 0 0 20px;
+}
+
+.eyebrow {
+  color: var(--color-body-copy);
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.subcopy {
+  margin-bottom: 0;
+  color: var(--color-body-copy);
+  font-family: var(--font-family-sans-serif-medium);
+  line-height: 1.7;
+}

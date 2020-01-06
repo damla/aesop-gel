@@ -1,27 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { CSSTransition } from 'react-transition-group';
 import useHasMounted from '~/hooks/useHasMounted';
+import PROP_TYPES from './Transition.prop-types';
 import data from './Transition.data';
-
-const transitionPropTypeOptions = [
-  'fade',
-  'shiftInDown',
-  'shiftInLeft',
-  'slideDown',
-  'slideRight',
-  'slowFade',
-  'zoom',
-];
-
-const propTypes = {
-  active: PropTypes.boolean,
-  activeOnMount: PropTypes.boolean,
-  children: PropTypes.node.isRequired,
-  mountOnEnter: PropTypes.boolean,
-  type: PropTypes.oneOf(transitionPropTypeOptions).isRequired,
-  unmountOnExit: PropTypes.boolean,
-};
 
 const Transition = ({
   active = true,
@@ -46,6 +27,6 @@ const Transition = ({
   );
 };
 
-Transition.propTypes = propTypes;
+Transition.propTypes = PROP_TYPES;
 
 export default Transition;

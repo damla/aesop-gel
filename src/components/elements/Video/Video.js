@@ -1,66 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
 import Button from '~/components/elements/Button';
 import Image from '~/components/elements/Image';
+import PROP_TYPES from './Video.prop-types';
 import styles from './Video.module.css';
-
-const PROP_TYPE_OPTIONS = {
-  HYPERLINK_TARGET_TYPE: PropTypes.oneOf(['Relative', 'Absolute']),
-  HYPERLINK_STYLE_TYPE: PropTypes.oneOf([
-    'External Button Link',
-    'External Text Link',
-    'Internal Button Link',
-    'Internal Text Link',
-    'External No Icon Link',
-    'No Icon Link',
-  ]),
-};
-
-const HYPERLINK = PropTypes.exact({
-  id: PropTypes.string,
-  dataTestRef: PropTypes.string,
-  openInANewWindow: PROP_TYPE_OPTIONS.HYPERLINK_STYLE_TYPE,
-  style: PropTypes.CtaStylesType,
-  title: PropTypes.string,
-  text: PropTypes.string,
-  type: PROP_TYPE_OPTIONS.HYPERLINK_TARGET_TYPE,
-  url: PropTypes.string.isRequired,
-});
-
-const IMAGE = PropTypes.exact({
-  className: PropTypes.string,
-  altText: PropTypes.string.isRequired,
-  cta: HYPERLINK,
-  fullBleedImage: PropTypes.boolean,
-  id: PropTypes.boolean,
-  large: PropTypes.string,
-  medium: PropTypes.string,
-  small: PropTypes.string,
-  type: PropTypes.string,
-});
-
-export const PROP_TYPE_SHAPES = {
-  HYPERLINK,
-  IMAGE,
-};
-
-const propTypes = {
-  autoplay: PropTypes.boolean.isReuired,
-  classSet: PropTypes.string,
-  fallbackImage: PROP_TYPE_SHAPES.IMAGE,
-  id: PropTypes.string.isRquired,
-  large: PropTypes.string,
-  loop: PropTypes.boolean.isRequired,
-  medium: PropTypes.string,
-  poster: PROP_TYPE_SHAPES.IMAGE,
-  small: PropTypes.string,
-  playInFullScreen: PropTypes.boolean,
-};
 
 export const Video = ({
   autoplay,
-  classSet = '',
+  className = '',
   fallbackImage,
   id,
   large,
@@ -78,7 +25,7 @@ export const Video = ({
 
   const hanldeOnPosterClick = () => setIsPlaying(true);
   const hasVideo = large || medium || small;
-  const className = cx(styles.base, classSet);
+  const classSet = cx(styles.base, className);
   const videoClassName = cx(
     styles.video,
     {
@@ -94,10 +41,10 @@ export const Video = ({
   });
 
   return (
-    <figure className={className} id={id} role="group">
+    <figure className={classSet} id={id} role="group">
       {poster && hasVideo && (
         <Button
-          classSet={posterClassName}
+          className={posterClassName}
           inline={true}
           onClick={hanldeOnPosterClick}
           title="play video"
@@ -144,6 +91,6 @@ export const Video = ({
   );
 };
 
-Video.propTypes = propTypes;
+Video.propTypes = PROP_TYPES;
 
 export default Video;

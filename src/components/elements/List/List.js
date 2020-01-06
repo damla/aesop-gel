@@ -1,25 +1,23 @@
 import React from 'react';
 import cx from 'classnames';
 import uuidv4 from 'uuid/v4';
-import Props from './List.types';
+import PROP_TYPES from './List.prop-types';
 import styles from './List.module.css';
 
-const List: React.FunctionComponent<Props> = ({
-  classSet,
-  items,
-  listItemClassSet,
-}) => {
-  const className: string = cx(styles.base, classSet);
+const List = ({ className, items, listItemClassName }) => {
+  const classSet = cx(styles.base, className);
 
   return (
-    <ul className={className}>
+    <ul className={classSet}>
       {items.map(({ content, id = uuidv4() }) => (
-        <li className={cx(styles.item, listItemClassSet)} key={id}>
+        <li className={cx(styles.item, listItemClassName)} key={id}>
           {content}
         </li>
       ))}
     </ul>
   );
 };
+
+List.propTypes = PROP_TYPES;
 
 export default List;

@@ -1,25 +1,14 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
 import uuidv4 from 'uuid/v4';
 import find from 'lodash/find';
+import PROP_TYPES from './Icon.prop-types';
 import svgs from './Icon.data';
 import { generateSvgBlueprint } from './Icon.utils';
 import styles from './Icon.module.css';
 
-const propTypes = {
-  classSet: PropTypes.string,
-  dataRef: PropTypes.string,
-  height: PropTypes.number,
-  isActive: PropTypes.boolean,
-  name: PropTypes.string.isRequired,
-  tabIndex: PropTypes.number,
-  title: PropTypes.string,
-  width: PropTypes.number,
-};
-
 const Icon: React = ({
-  classSet = '',
+  className = '',
   dataRef = '',
   height = 12,
   isActive = false,
@@ -39,14 +28,14 @@ const Icon: React = ({
   const uuidKey = uuidv4();
   const uuidariaLabellBy = `${name}-${uuidKey}`;
   const svgBlueprint = generateSvgBlueprint(svg, uuidKey);
-  const className = cx(styles.base, styles[name], classSet, {
+  const classSet = cx(styles.base, styles[name], className, {
     [styles.isActive]: isActive,
   });
 
   return (
     <svg
       aria-labelledby={title ? uuidariaLabellBy : undefined}
-      className={className}
+      className={classSet}
       data-ref={dataRef}
       focusable="false"
       height={height}
@@ -61,6 +50,6 @@ const Icon: React = ({
   );
 };
 
-Icon.propTypes = propTypes;
+Icon.propTypes = PROP_TYPES;
 
 export default Icon;

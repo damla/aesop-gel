@@ -7,29 +7,24 @@ import ModalBody from './components/ModalBody';
 import ModalBodyFixture from './components/ModalBody/ModalBody.fixture';
 import Overlay from '~/components/elements/Overlay';
 import Transition from '~/components/elements/Transition';
-import Props from './Modal.types';
+import PROP_TYPES from './Modal.prop-types';
 import styles from './Modal.module.css';
 
-const Modal: React.FunctionComponent<Props> = ({
-  children,
-  classSet,
-  handleClose,
-  isVisible,
-}) => {
+const Modal = ({ children, className, handleClose, isVisible }) => {
   useEscapeKeyListener(handleClose);
   useOverflowHidden(isVisible);
 
-  const className: string = cx(styles.base, classSet);
-  const modalRootElement: HTMLElement | null = document.querySelector('#modal');
+  const classSet = cx(styles.base, className);
+  const modalRootElement = document.querySelector('#modal');
 
   if (!modalRootElement) {
     return null;
   }
 
   return (
-    <React.Fragment>
+    <>
       {ReactDOM.createPortal(
-        <aside aria-hidden={!isVisible} className={className}>
+        <aside aria-hidden={!isVisible} className={classSet}>
           <Overlay handleClose={handleClose} isVisible={isVisible} />
           <Transition
             active={isVisible}
@@ -50,8 +45,10 @@ const Modal: React.FunctionComponent<Props> = ({
         </aside>,
         modalRootElement,
       )}
-    </React.Fragment>
+    </>
   );
 };
+
+Modal.propTypes = PROP_TYPES;
 
 export default Modal;

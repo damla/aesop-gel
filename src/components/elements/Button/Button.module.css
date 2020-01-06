@@ -1,0 +1,179 @@
+@import 'styles/variables/index';
+
+.base {
+  position: relative;
+  appearance: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: var(--font-family-sans-serif-medium);
+
+  &,
+  &:link,
+  &:visited {
+    text-decoration: none;
+  }
+}
+
+.block {
+  display: inline-block;
+  min-width: 210px;
+  padding: 23px;
+
+  border: 1px solid var(--color-grey-rgba-20);
+
+  &.hasIcon {
+    padding-right: 55px;
+
+    &:hover,
+    &:focus {
+      svg {
+        path {
+          fill: var(--color-white);
+        }
+      }
+    }
+  }
+
+  &.internal {
+    .icon {
+      top: 24px;
+    }
+  }
+
+  &.external {
+    .icon {
+      top: 26px;
+    }
+  }
+
+  .icon {
+    position: absolute;
+    right: 23px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--color-body-copy);
+    color: var(--color-white);
+  }
+}
+
+.disabled {
+  border-color: var(--color-white-disabled);
+  color: var(--color-white-disabled);
+  cursor: default;
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    color: var(--color-white-disabled);
+  }
+}
+
+.action {
+  padding-right: 23px;
+}
+
+.inline {
+  display: inline;
+  padding: 0;
+  border: 0;
+  font-size: 1rem;
+
+  &.hasIcon {
+    padding-right: 8px;
+
+    .icon {
+      display: inline-block;
+    }
+
+    &.internal {
+      .icon {
+        transform: translate(8px, 0);
+      }
+    }
+
+    &.external {
+      .icon {
+        transform: translate(8px, 3px);
+      }
+    }
+  }
+
+  svg {
+    path {
+      fill: var(--color-body-copy);
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--color-body-copy);
+
+    svg {
+      path {
+        fill: var(--color-body-copy);
+      }
+    }
+  }
+}
+
+.internal,
+.external {
+  .icon {
+    display: inline-block;
+  }
+}
+
+.icon {
+  display: inline;
+
+  svg {
+    width: 1rem;
+    max-height: 1rem;
+
+    path {
+      transition: fill 150ms var(--easing-ease-in-out-cubic);
+    }
+  }
+}
+
+.alternate {
+  background-color: var(--color-body-copy);
+
+  &,
+  &:link,
+  &:visited {
+    color: var(--color-white);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--color-body-copy);
+
+    &.disabled {
+      color: var(--color-white-disabled);
+    }
+  }
+
+  svg {
+    path {
+      fill: var(--color-white);
+    }
+  }
+
+  &.disabled {
+    border-color: var(--color-grey-50);
+    background-color: var(--color-grey-50);
+    color: var(--color-white-disabled);
+  }
+}
+
+.hasLightText {
+  color: var(--color-white);
+
+  &:focus,
+  &:hover {
+    color: var(--color-grey-65);
+  }
+}

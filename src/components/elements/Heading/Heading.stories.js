@@ -1,21 +1,25 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { text, boolean, select } from '@storybook/addon-knobs';
+import { getPropTypeOptionValues } from '~/utils/propTypes/propTypes';
 import 'normalize.css';
 import '~/styles/base.module.css';
 import Heading from './Heading';
+import {
+  LEVEL_PROP_TYPE_OPTIONS,
+  SIZE_PROP_TYPE_OPTIONS,
+} from './Heading.prop-types';
 
-const levelOptions = ['1', '2', '3', '4', '5', '6'];
-const sizeOptions = ['xSmall', 'small', 'medium', 'large', 'xLarge'];
-
+const levelOptions = getPropTypeOptionValues(LEVEL_PROP_TYPE_OPTIONS);
+const sizeOptions = getPropTypeOptionValues(SIZE_PROP_TYPE_OPTIONS);
 const base = storiesOf('Elements.Heading', module);
 
 base.add('Base component', () => (
   <Heading
-    level={select('level', levelOptions, '1')}
+    level={select('level', levelOptions, LEVEL_PROP_TYPE_OPTIONS.ONE)}
     noMargin={boolean('noMargin', false)}
     noTopMargin={boolean('noTopMargin', false)}
-    size={select('size', sizeOptions, 'large')}
+    size={select('size', sizeOptions, SIZE_PROP_TYPE_OPTIONS.LARGE)}
   >
     {text('children', 'Fortification of the highest order')}
   </Heading>

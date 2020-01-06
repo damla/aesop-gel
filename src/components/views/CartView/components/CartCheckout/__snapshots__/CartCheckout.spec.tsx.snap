@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CartCheckout /> renders base component correctly 1`] = `
+<div
+  className="base"
+>
+  <div
+    className="subTotalContainer"
+  >
+    <div
+      className="subTotalLabel"
+    >
+      Subtotal (Tax Incl.)
+    </div>
+    <div
+      className="subTotalPrice"
+    >
+      $140.00
+    </div>
+  </div>
+  <a
+    className="base block internal checkoutButton"
+    href="/checkout/"
+    target="_self"
+    title="Go to Checkout"
+  >
+    Checkout
+  </a>
+</div>
+`;

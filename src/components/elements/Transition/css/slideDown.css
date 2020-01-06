@@ -7,7 +7,8 @@
 
 .slideDownEnterActive {
   transform: translate3d(0, 0, 0);
-  transition: transform 500ms var(--easing-ease-out-cubic),
+  transition:
+    transform 500ms var(--easing-ease-out-cubic),
     visibility 500ms var(--easing-ease-out-cubic);
   visibility: visible;
 }
@@ -19,7 +20,8 @@
 
 .slideDownExitActive {
   transform: translate3d(0, -100%, 0);
-  transition: transform 500ms var(--easing-ease-out-cubic),
+  transition:
+    transform 500ms var(--easing-ease-out-cubic),
     visibility 500ms var(--easing-ease-out-cubic);
   visibility: hidden;
 }

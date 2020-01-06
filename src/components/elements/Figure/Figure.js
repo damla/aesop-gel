@@ -2,19 +2,14 @@ import React from 'react';
 import cx from 'classnames';
 import parse from 'html-react-parser';
 import marked from 'marked';
-import Props from '~/types/Figure.types';
+import PROP_TYPES from './Figure.prop-types';
 import styles from './Figure.module.css';
 
-const Figure: React.FunctionComponent<Props> = ({
-  caption,
-  children,
-  classSet,
-  id,
-}) => {
-  const className: string = cx(styles.base, classSet);
+const Figure = ({ caption, children, className, id }) => {
+  const classSet = cx(styles.base, className);
 
   return (
-    <figure className={className} id={id}>
+    <figure className={classSet} id={id}>
       {children}
       {caption && (
         <figcaption className={styles.captionWrapper}>
@@ -24,5 +19,7 @@ const Figure: React.FunctionComponent<Props> = ({
     </figure>
   );
 };
+
+Figure.propTypes = PROP_TYPES;
 
 export default Figure;
