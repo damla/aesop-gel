@@ -2,24 +2,35 @@ const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.js',
+  mode: 'development',
+  entry: ['./src/index.js'],
   output: {
     path: `${__dirname}/dist`,
     publicPath: '/',
     filename: 'bundle.js',
   },
-  devServer: {
-    contentBase: './dist',
-    hot: true,
-  },
-  devtool: 'source-map',
   module: {
     rules: [
-      { enforce: 'pre', test: /\.js$/, loader: 'source-map-loader' },
       {
-        test: /\.(js)$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
-        use: ['babel-loader'],
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              ['@babel/preset-env', { modules: 'commonjs' }],
+              '@babel/preset-react',
+            ],
+            plugins: [
+              [
+                'module-resolver',
+                {
+                  root: ['./src'],
+                },
+              ],
+            ],
+          },
+        },
       },
       {
         test: /\.css$/,
@@ -40,7 +51,6 @@ module.exports = {
             },
           },
         ],
-        include: path.resolve(__dirname, '../'),
       },
     ],
   },
@@ -49,7 +59,11 @@ module.exports = {
       '~': path.resolve(__dirname, 'src'),
     },
     modules: ['node_modules'],
-    extensions: ['.js', '.css'],
+    extensions: ['*', '.js', '.jsx', '.css'],
   },
   plugins: [new webpack.HotModuleReplacementPlugin()],
+  devServer: {
+    contentBase: `${__dirname}/dist`,
+    hot: true,
+  },
 };

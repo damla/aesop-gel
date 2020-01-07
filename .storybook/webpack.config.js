@@ -28,7 +28,7 @@ module.exports = async ({ config, mode }) => {
         loader: 'postcss-loader',
         options: {
           config: {
-            path: path.resolve(__dirname, './postcss.config.js'),
+            path: path.resolve(__dirname, '../postcss.config.js'),
           },
           sourceMap: true,
         },
