@@ -9,7 +9,7 @@ import { Locale } from '~/types/Locale';
 import HeaderView from './HeaderView';
 
 describe('<HeaderView />', () => {
-  let locale: Locale;
+  let locale;
 
   beforeEach(() => {
     locale = LocaleContextFixture;
@@ -23,9 +23,7 @@ describe('<HeaderView />', () => {
     const component = renderer.create(
       <LocaleContext.Provider value={locale}>
         <MockedProvider resolvers={resolvers}>
-          <HeaderView />
-        </MockedProvider>
-      </LocaleContext.Provider>,
+          <HeaderView />,
     );
 
     await act(async () => {

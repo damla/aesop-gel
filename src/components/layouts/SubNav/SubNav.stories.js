@@ -5,8 +5,5 @@ import SubNav from './SubNav';
 import SubNavFixture from './SubNav.fixture';
 
 storiesOf('Layouts.SubNav', module).add('Base component', () => (
-  <SubNav
-    links={object('links', SubNavFixture.items)}
-    title={SubNavFixture.title}
-  />
+  <SubNav links={SubNavFixture.links} title={SubNavFixture.title} />
 ));

@@ -40,15 +40,15 @@ storiesOf('Layouts.TextOverHeroImage', module).add('Base component', () => (
         ),
         large: text(
           'video.fallbackImage.large',
-          'https://release.aesop-web-ui.aesopdigital.io/images/full-bleed/large/mc-image-header-2.jpg 2x',
+          'https://acceptance.aesop.com/medias/marketing-full-bleed-1.jpg?context=bWFzdGVyfGltYWdlc3wyNDU0NzR8aW1hZ2UvanBlZ3xpbWFnZXMvaDI4L2g2Yy84OTQ0MzcyMzgzNzc0LmpwZ3wyMWQxMmJiNDM4M2Y3NDI5YjU0MDFiODVjYWJjMDJmY2Y3YTA0ZWMxODEzMjU3YTMyMzk1NzQ2YWNiZTk4MDUx 2x',
         ),
         medium: text(
           'video.fallbackImage.medium',
-          'https://release.aesop-web-ui.aesopdigital.io/images/full-bleed/medium/mc-image-header-2.jpg 2x',
+          'https://acceptance.aesop.com/medias/marketing-full-bleed-1.jpg?context=bWFzdGVyfGltYWdlc3wyNDU0NzR8aW1hZ2UvanBlZ3xpbWFnZXMvaDI4L2g2Yy84OTQ0MzcyMzgzNzc0LmpwZ3wyMWQxMmJiNDM4M2Y3NDI5YjU0MDFiODVjYWJjMDJmY2Y3YTA0ZWMxODEzMjU3YTMyMzk1NzQ2YWNiZTk4MDUx 2x',
         ),
         small: text(
           'video.fallbackImage.small',
-          'https://release.aesop-web-ui.aesopdigital.io/images/full-bleed/small/mc-image-header-2.jpg 2x',
+          'https://acceptance.aesop.com/medias/marketing-full-bleed-1.jpg?context=bWFzdGVyfGltYWdlc3wyNDU0NzR8aW1hZ2UvanBlZ3xpbWFnZXMvaDI4L2g2Yy84OTQ0MzcyMzgzNzc0LmpwZ3wyMWQxMmJiNDM4M2Y3NDI5YjU0MDFiODVjYWJjMDJmY2Y3YTA0ZWMxODEzMjU3YTMyMzk1NzQ2YWNiZTk4MDUx 2x',
         ),
         type: text('type', 'componentFullBleedImage'),
       },

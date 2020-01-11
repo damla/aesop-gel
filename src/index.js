@@ -8,7 +8,7 @@ import styles from './styles.module.css';
 // import CarouselFixture from '~/components/layouts/Carousel/Carousel.fixture';
 // import Carousel from '~/components/layouts/Carousel';
 
-import List from '~/components/elements/List';
+import ProductTemplate from '~/components/templates/ProductTemplate';
 
 const foo = [{ content: 'Fragrance', id: 'fragrance' }, { content: 'Gifts' }];
 
@@ -18,11 +18,7 @@ const title = 'React with Webpack';
 
 ReactDOM.render(
   <div className={styles.base}>
-    {title}
-
-    <List
-      items={[{ content: 'Fragrance', id: 'fragrance' }, { content: 'Gifts' }]}
-    />
+    <ProductTemplate />
   </div>,
 
   document.getElementById('app'),
