@@ -11,14 +11,28 @@ const store = new Store({
   disabled: false,
   price: '$625.00',
   sku: 'AFR21',
+  isFetching: false,
 });
+
+const mockAddProductAction = () => {
+  store.set({
+    isFetching: true,
+  });
+
+  window.setTimeout(function mockNetworkRequest() {
+    store.set({
+      isFetching: false,
+    });
+  }, 2000);
+};
 
 storiesOf('Elements.AddToCartButton', module).add('Base component', () => (
   <State store={store}>
     <AddToCartButton
       dataTestRef={store.get('dataTestRef')}
       disabled={store.get('disabled')}
-      handleOnClick={() => {}}
+      handleOnClick={mockAddProductAction}
+      loading={store.get('isFetching')}
       price={store.get('price')}
       sku={store.get('sku')}
     />

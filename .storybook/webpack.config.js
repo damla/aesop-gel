@@ -37,8 +37,6 @@ module.exports = async ({ config, mode }) => {
     include: path.resolve(__dirname, '../'),
   });
 
-  console.log('config', config.module.rules)
-
   // Return the altered config
   return config;
 };

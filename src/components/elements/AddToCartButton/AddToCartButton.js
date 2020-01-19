@@ -8,11 +8,13 @@ import styles from './AddToCartButton.module.css';
 const AddToCartButton = ({
   className,
   dataTestRef,
-  disabled = false,
   handleOnClick,
+  isDisabled = false,
+  isLoading = false,
   name,
   price,
   sku,
+  loading,
 }) => {
   const classSet = cx(styles.base, className);
 
@@ -25,7 +27,6 @@ const AddToCartButton = ({
   const createCartEntry = () => {};
   const data = {};
   const error = {};
-  const loading = false;
 
   const updateSuccessful = !loading && data && data.createCartEntry;
   const labelClassName = cx(styles.label, {
@@ -37,11 +38,11 @@ const AddToCartButton = ({
       alternate={true}
       className={classSet}
       dataTestRef={dataTestRef}
-      disabled={loading || disabled}
+      disabled={loading || isDisabled}
       onClick={handleOnClick}
       title="Add to cart button"
     >
-      {loading ? (
+      {isLoading ? (
         <Loading
           className={styles.loading}
           data-test-ref={`${dataTestRef}_UPDATING`}

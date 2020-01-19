@@ -1,7 +1,5 @@
-import { OptionType } from '~/types/Control.types';
-
-export const getQuantityOptions = (maxQuantity: number): OptionType[] => {
-  const options: OptionType[] = [];
+export const getQuantityOptions = maxQuantity => {
+  const options = [];
 
   for (let i = 1; i <= maxQuantity; i++) {
     const quantity = String(i);

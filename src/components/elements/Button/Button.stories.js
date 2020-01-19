@@ -1,23 +1,35 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
-import { text, boolean } from '@storybook/addon-knobs';
+import { text, boolean, select } from '@storybook/addon-knobs';
 import 'normalize.css';
 import '~/styles/base.module.css';
 import '~/styles/storybook.module.css';
+import { getPropTypeOptionValues } from '~/utils/propTypes';
 import Button from './Button';
+import { BUTTON_TYPE_PROP_TYPE_OPTIONS } from './Button.prop-types';
 
 const base = storiesOf('Elements.Button', module);
 
 base.add('Base component', () => (
   <Button
     alternate={boolean('alternate', false)}
-    href={text('href', '')}
+    className={text('className', '')}
+    dataTestRef={text('dataTestRef', 'dataTestRef')}
+    disabled={boolean('disabled', false)}
+    hasLightText={boolean('hasLightText', false)}
+    href={text('href', 'http://aesop.com')}
     icon={boolean('icon', false)}
+    id={text('id', '')}
     inline={boolean('inline', false)}
     target={text('target', '_self')}
     title={text('title', 'Aēsop')}
     to={text('to', 'about')}
+    type={select(
+      'type',
+      getPropTypeOptionValues(BUTTON_TYPE_PROP_TYPE_OPTIONS),
+      'button',
+    )}
   >
     {text('children', 'Button')}
   </Button>

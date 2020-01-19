@@ -13,11 +13,9 @@ import {
   getPrice,
   getSku,
 } from './PDPHeader.utils';
-import { ProductContext } from '~/components/contexts/ProductContext/ProductContext';
 import styles from './PDPHeader.module.css';
 
-const PDPHeader = ({ className }) => {
-  const product = React.useContext(ProductContext);
+const PDPHeader = ({ className, product = {} }) => {
   const {
     field1Description,
     field1Label,

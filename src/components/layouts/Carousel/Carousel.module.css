@@ -1,41 +1,16 @@
 @import 'styles/variables/index';
 @import 'styles/mixins/index';
 
+.foo {
+  background-color: pink !important;
+}
+
 .base {
   position: relative;
   overflow: hidden;
 
   picture {
     padding: 0;
-  }
-
-  .item {
-    display: flex;
-    height: 100%;
-    flex-direction: column-reverse;
-    text-align: center;
-    transition:
-      background-color 700ms var(--easing-ease-out-cubic),
-      color 700ms var(--easing-ease-out-cubic);
-
-    a:active,
-    a:hover,
-    a:focus {
-      background-color: var(--color-white-dark);
-    }
-  }
-
-  .link {
-    text-decoration: none;
-
-    &:hover,
-    &:focus {
-      color: var(--color-black);
-    }
-  }
-
-  &:hover .directionButton {
-    transform: translate3d(0, 0, 0);
   }
 
   p {
@@ -69,6 +44,31 @@
   }
 }
 
+.item {
+  display: flex;
+  height: 100%;
+  flex-direction: column-reverse;
+  text-align: center;
+  transition:
+    background-color 700ms var(--easing-ease-out-cubic),
+    color 700ms var(--easing-ease-out-cubic);
+
+  a:active,
+  a:hover,
+  a:focus {
+    background-color: var(--color-white-dark);
+  }
+}
+
+.link {
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: var(--color-black);
+  }
+}
+
 .directionButton {
   position: absolute;
   z-index: var(--z-index-carousel-navigation);
@@ -81,6 +81,10 @@
   background-color: var(--color-secondary);
   transform: translate3d(80px, 0, 0);
   transition: transform 500ms var(--easing-ease-out-cubic);
+
+  .base:hover & {
+    transform: translate3d(0, 0, 0);
+  }
 
   @media (--viewport-md) {
     display: flex;
@@ -134,7 +138,7 @@
   }
 }
 
-.mobileCarouselIntroductionWrapper {
+.mobileCarouselIntroduction {
   margin: 50px 20px 40px;
 
   @media (--viewport-md) {

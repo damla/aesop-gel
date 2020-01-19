@@ -17,7 +17,7 @@ import { useQueryGetCart } from '~/hooks/api/useQueryGetCart';
 import Props, { ProductEntry } from './CartView.types';
 import styles from './CartView.module.css';
 
-const CartView: React.FunctionComponent<Props> = ({
+const CartView = ({
   className,
   copy,
   handleOnClose,

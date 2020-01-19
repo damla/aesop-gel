@@ -46,7 +46,7 @@ export const PROP_TYPES = {
   autoplay: PropTypes.bool.isRequired,
   className: PropTypes.string,
   fallbackImage: IMAGE_PROP_TYPE_SHAPE,
-  id: PropTypes.string.isRquired,
+  id: PropTypes.string.isRequired,
   large: PropTypes.string,
   loop: PropTypes.bool.isRequired,
   medium: PropTypes.string,

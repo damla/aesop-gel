@@ -1,13 +1,11 @@
 import React from 'react';
-import { ApolloProvider } from '@apollo/react-hooks';
 import { storiesOf } from '@storybook/react';
 import { text } from '@storybook/addon-knobs';
 import 'normalize.css';
-import { client } from '~/lib/apollo/client';
 import '~/styles/base.module.css';
 import '~/styles/storybook.module.css';
 import PDPHeader from './PDPHeader';
-import { ProductContext } from '~/components/contexts/ProductContext/ProductContext';
+// import { ProductContext } from '~/components/contexts/ProductContext/ProductContext';
 
 const product = {
   name: text('name', 'Parsley Seed Facial Cleanser'),
@@ -37,17 +35,17 @@ const product = {
           {
             viewport: 'LARGE',
             src:
-              '/images/products/Skin_Amazing_Face_Cleanser_100mL_large.png 2x',
+              'https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ 2x',
           },
           {
             viewport: 'MEDIUM',
             src:
-              '/images/products/Skin_Amazing_Face_Cleanser_100mL_medium.png 2x',
+              'https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ 2x',
           },
           {
             viewport: 'SMALL',
             src:
-              '/images/products/Skin_Amazing_Face_Cleanser_100mL_small.png 2x',
+              'https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ 2x',
           },
         ],
       },
@@ -64,9 +62,5 @@ const product = {
 };
 
 storiesOf('Layouts.PDPHeader', module).add('Base component', () => (
-  <ApolloProvider client={client}>
-    <ProductContext.Provider value={product}>
-      <PDPHeader />
-    </ProductContext.Provider>
-  </ApolloProvider>
+  <PDPHeader product={product} />
 ));

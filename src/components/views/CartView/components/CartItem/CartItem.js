@@ -1,14 +1,13 @@
 import React from 'react';
-import { useMutation } from '@apollo/react-hooks';
 import cx from 'classnames';
 import Button from '~/components/elements/Button';
 import QuantitySelect from '~/components/controls/QuantitySelect';
-import { useMutationUpdateCartEntry } from '~/hooks/api/useMutationUpdateCartEntry';
-import Props from './CartItem.types';
+// import { useMutationUpdateCartEntry } from '~/hooks/api/useMutationUpdateCartEntry';
+// import PROP_TYPES from './CartItem.prop-types';
 import { getQuantityOptions } from './CartItem.utils';
 import styles from './CartItem.module.css';
 
-const CartItem: React.FunctionComponent<Props> = ({
+const CartItem = ({
   className,
   copy,
   entryNumber,
@@ -42,7 +41,7 @@ const CartItem: React.FunctionComponent<Props> = ({
         <QuantitySelect
           disabled={loading}
           name={String(entryNumber)}
-          onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
+          onChange={e => {
             updateCartEntry(Number.parseInt(e.target.value, 10));
           }}
           options={getQuantityOptions(maxQuantity)}

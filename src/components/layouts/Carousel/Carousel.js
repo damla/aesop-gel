@@ -81,13 +81,13 @@ const Carousel = ({ className = '', introduction, slides = [] }) => {
 
   const isMobileOrTablet = ascertainIsMobileOrTablet();
   const classSet = cx(styles.base, className);
-  const settings = getCarouselSettings(
-    classSet,
-    styles,
+
+  const settings = getCarouselSettings({
+    className: classSet,
     Pagination,
     NextButton,
     PreviousButton,
-  );
+  });
 
   return (
     <>

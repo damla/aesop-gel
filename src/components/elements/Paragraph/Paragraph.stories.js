@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import 'normalize.css';
 import '~/styles/base.module.css';
 import '~/styles/storybook.module.css';
-import Paragraph from './Paragraph';
+import Paragraph, { P, ParagraphSet } from './Paragraph';
 
 storiesOf('Elements.Paragraph', module).add('Base component', () => (
   <Paragraph>
@@ -12,3 +12,16 @@ storiesOf('Elements.Paragraph', module).add('Base component', () => (
     conditioning ingredients.
   </Paragraph>
 ));
+
+storiesOf('Elements.Paragraph.ParagraphSet', module).add(
+  'Level 1, Size xLarge',
+  () => (
+    <ParagraphSet>
+      <P>A lightweight, vitamin C-rich layering serum that soothes</P>
+      <P>
+        Replenishes and balances skin with its complex blend of anti-oxidant,
+        hydrating and conditioning ingredients.
+      </P>
+    </ParagraphSet>
+  ),
+);

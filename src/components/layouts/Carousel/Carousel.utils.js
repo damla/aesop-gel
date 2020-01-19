@@ -1,17 +1,15 @@
 import React from 'react';
-import cx from 'classnames';
 import { BREAKPOINTS } from '~/constants';
 
-export const getCarouselSettings = (
-  styles,
-  classSet,
+export const getCarouselSettings = ({
+  className,
   Pagination,
   NextButton,
   PreviousButton,
-) => ({
+}) => ({
   appendDots: dots => <Pagination dots={dots} />,
   centerMode: false,
-  className: cx(styles.base, classSet),
+  className,
   customPaging: () => <div />,
   dots: true,
   infinite: false,

@@ -6,7 +6,7 @@ import '~/styles/storybook.module.css';
 import CarouselFixture from '../../Carousel.fixture';
 import Slide from './Slide';
 
-storiesOf('Elements.Slide', module).add('Base component', () => (
+storiesOf('Layouts.Carousel.Slide', module).add('Base component', () => (
   <Slide
     description={CarouselFixture.slides[0].description}
     heading={CarouselFixture.slides[0].heading}

@@ -14,3 +14,5 @@ export const PROP_TYPES = {
   leftColumn: PropTypes.arrayOf(LIST_PROP_TYPE_SHAPE).isRequired,
   rightColumn: PropTypes.arrayOf(LIST_PROP_TYPE_SHAPE).isRequired,
 };
+
+export default PROP_TYPES;

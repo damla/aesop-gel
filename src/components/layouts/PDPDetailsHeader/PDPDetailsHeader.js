@@ -4,7 +4,7 @@ import marked from 'marked';
 import parse from 'html-react-parser';
 import Heading from '~/components/elements/Heading/Heading';
 import Transition from '~/components/elements/Transition';
-import PROP_TYPES from './PDPDetailsHeader.types';
+import PROP_TYPES from './PDPDetailsHeader.prop-types';
 import styles from './PDPDetailsHeader.module.css';
 
 const PDPDetailsHeader = ({ className, description, productName }) => {

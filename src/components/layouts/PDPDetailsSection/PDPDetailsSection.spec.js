@@ -1,5 +1,4 @@
 import React from 'react';
-import { MockedProvider } from '@apollo/react-testing';
 import renderer, { act } from 'react-test-renderer';
 import waitForExpect from 'wait-for-expect';
 import PDPDetailsSection from './PDPDetailsSection';
@@ -17,19 +16,17 @@ describe('<PDPDetailsSection />', () => {
 
   it('renders base component correctly', async () => {
     const component = renderer.create(
-      <MockedProvider mocks={[]}>
-        <PDPDetailsSection
-          copy={PDPDetailsSectionFixture.copy}
-          field1Description="Normal, combination and troubled skin"
-          field1Label="Suited to"
-          field2Description="Clarified, smooth and gently cleanse"
-          field2Label="Skin feel"
-          ingredientText="Licorice Root, Lactic Acid, Blackcurrant Seed"
-          keyIngredient="Licorice Root, Lactic Acid, Blackcurrant Seed"
-          price="$625.00"
-          sku="AHR21"
-        />
-      </MockedProvider>,
+      <PDPDetailsSection
+        copy={PDPDetailsSectionFixture.copy}
+        field1Description="Normal, combination and troubled skin"
+        field1Label="Suited to"
+        field2Description="Clarified, smooth and gently cleanse"
+        field2Label="Skin feel"
+        ingredientText="Licorice Root, Lactic Acid, Blackcurrant Seed"
+        keyIngredient="Licorice Root, Lactic Acid, Blackcurrant Seed"
+        price="$625.00"
+        sku="AHR21"
+      />,
     );
 
     await act(async () => {

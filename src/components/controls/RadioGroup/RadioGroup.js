@@ -1,10 +1,8 @@
 import React from 'react';
 import cx from 'classnames';
-import { RadioGroupType } from '~/types/Control.types';
-// @ts-ignore
 import styles from './RadioGroup.module.css';
 
-const RadioGroup: React.FunctionComponent<RadioGroupType> = ({
+const RadioGroup = ({
   className,
   errorMessage,
   name,
