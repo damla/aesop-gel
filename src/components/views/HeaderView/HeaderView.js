@@ -6,7 +6,7 @@ import CartViewFixture from '~/components/views/CartView/CartView.fixture';
 import MainNavigation from './components/MainNavigation';
 import NotificationBanner from '~/components/layouts/NotificationBanner';
 import UserSession from './components/UserSession';
-import PROP_TYPES from './HeaderView.types';
+import PROP_TYPES from './HeaderView.prop-types';
 import styles from './HeaderView.module.css';
 
 const HeaderView = ({ className }) => {

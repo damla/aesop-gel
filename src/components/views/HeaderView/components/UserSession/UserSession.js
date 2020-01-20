@@ -4,15 +4,16 @@ import cx from 'classnames';
 import { useQueryGetUserSession } from '~/hooks/api/useQueryGetUserSession';
 import Button from '~/components/elements/Button';
 import List from '~/components/elements/List';
-import Props from './UserSession.types';
+// import Props from './UserSession.types';
 import styles from './UserSession.module.css';
 
-const UserSession: React.FunctionComponent<Props> = ({
+const UserSession = ({
   className,
   handleOnCartClick,
 }) => {
   const classSet = cx(styles.base, className);
-  const { data } = useQueryGetUserSession();
+  // const { data } = useQueryGetUserSession();
+  const data = {};
 
   const sessionItems = () => {
     const cartCount = get(data, 'getUserSession.qtyInMiniCart', 0);
@@ -34,7 +35,7 @@ const UserSession: React.FunctionComponent<Props> = ({
             {...headerLinkSharedProps}
             className={cx(styles.link, styles.loginLink)}
             dataTestRef="NAV_LINK"
-            onClick={(event: React.SyntheticEvent) =>
+            onClick={(event) =>
               console.log('HeaderView userSession event', event)
             }
             title={userLabel}

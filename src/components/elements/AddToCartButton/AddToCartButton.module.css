@@ -11,6 +11,12 @@
   height: rem(27px);
 }
 
+.showSuccessMessage {
+  span {
+    animation: slide-up 2000ms var(--easing-ease-in-out-cubic) forwards;
+  }
+}
+
 .label {
   display: inline-block;
   overflow: hidden;
@@ -29,12 +35,6 @@
     &:last-of-type {
       transform: translateY(rem(-20px));
     }
-  }
-}
-
-.showSuccessMessage {
-  span {
-    animation: slide-up 2000ms var(--easing-ease-in-out-cubic) forwards;
   }
 }
 

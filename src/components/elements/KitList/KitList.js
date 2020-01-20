@@ -10,7 +10,7 @@ const KitList = ({ items, className }) => {
   return (
     <List
       className={classSet}
-      items={items.map((item: string) => ({ content: item }))}
+      items={items.map(item => ({ content: item }))}
       listItemClassName={styles.item}
     />
   );

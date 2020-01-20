@@ -29,20 +29,14 @@ const Button = ({
 
   if (onClick && icon) {
     console.error('<Button /> Event Buttons cannot have an icon');
-
-    return null;
   }
 
   if ((to || external) && disabled) {
     console.error('<Button /> Do not disable anchors');
-
-    return null;
   }
 
   if (inline && alternate) {
     console.error('<Button /> No such support for alternate inline links');
-
-    return null;
   }
 
   const classSet = cx(
@@ -94,8 +88,6 @@ const Button = ({
         console.error(
           '<Button /> Make sure the value of href contains http:// or https://',
         );
-
-        return null;
       }
       Element = HTML.A;
       iconName = 'rightUpArrow';
@@ -105,8 +97,6 @@ const Button = ({
         console.error(
           '<Button /> Make sure the value of href contains http:// or https://',
         );
-
-        return null;
       }
       Element = HTML.A;
       iconName = 'rightUpArrow';
@@ -130,6 +120,10 @@ const Button = ({
       </Element>
     );
   } else {
+    console.error(
+      '<Button /> Make sure you pass a prop to make this work, href, to or onClick',
+    );
+
     return null;
   }
 };

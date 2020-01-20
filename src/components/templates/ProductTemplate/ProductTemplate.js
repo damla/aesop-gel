@@ -15,12 +15,11 @@ import ProductTemplateFixture from './ProductTemplate.fixture';
 import PROP_TYPES from './ProductTemplate.prop-types';
 import styles from './ProductTemplate.module.css';
 
-const ProductTemplate = ({ className, data: {} }) => {
+const ProductTemplate = ({ className, data }) => {
   const classSet = cx(styles.base, className);
 
   return (
     <div className={classSet}>
-      <HeaderView />
       <PDPHeader />
       <ImageWithHeaderAndContent
         content={
@@ -49,7 +48,6 @@ const ProductTemplate = ({ className, data: {} }) => {
         image={ImageWithHeaderAndContentFixture.imageExpectations}
         reverse={true}
       />
-      <FooterView {...FooterViewFixture} />
     </div>
   );
 };

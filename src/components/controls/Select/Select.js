@@ -1,15 +1,13 @@
 import React from 'react';
 import cx from 'classnames';
-import { SelectType as Props } from '~/types/Control.types';
-import { State } from './Select.types';
 import styles from './Select.module.css';
 
-class Select extends React.Component<Props, State> {
+class Select extends React.Component {
   static defaultProps = {
     errorMessage: '',
   };
 
-  state: State = {
+  state = {
     hasFocus: false,
   };
 
@@ -62,7 +60,7 @@ class Select extends React.Component<Props, State> {
     );
   }
 
-  handleFocus = (event: React.ChangeEvent<HTMLSelectElement>) => {
+  handleFocus = (event) => {
     const { onFocus } = this.props;
 
     if (onFocus) {
@@ -74,7 +72,7 @@ class Select extends React.Component<Props, State> {
     }));
   };
 
-  handleBlur = (event: React.ChangeEvent<HTMLSelectElement>) => {
+  handleBlur = (event) => {
     const { onBlur } = this.props;
 
     if (onBlur) {

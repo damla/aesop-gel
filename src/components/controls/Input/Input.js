@@ -1,17 +1,15 @@
 import React from 'react';
 import cx from 'classnames';
-import { InputType as Props } from '~/types/Control.types';
-import { State } from './Input.types';
 import styles from './Input.module.css';
 
-class Input extends React.Component<Props, State> {
+class Input extends React.Component {
   static defaultProps = {
     errorMessage: '',
     placeholder: '',
     type: 'text',
   };
 
-  state: State = {
+  state = {
     hasFocus: false,
   };
 
@@ -74,7 +72,7 @@ class Input extends React.Component<Props, State> {
     );
   }
 
-  handleFocus = (event: React.ChangeEvent<HTMLInputElement>) => {
+  handleFocus = (event) => {
     const { onFocus } = this.props;
 
     if (onFocus) {
@@ -86,7 +84,7 @@ class Input extends React.Component<Props, State> {
     }));
   };
 
-  handleBlur = (event: React.ChangeEvent<HTMLInputElement>) => {
+  handleBlur = (event) => {
     const { onBlur } = this.props;
 
     if (onBlur) {

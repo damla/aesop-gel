@@ -2,10 +2,10 @@ import React from 'react';
 import cx from 'classnames';
 import Button from '~/components/elements/Button';
 import Icon from '~/components/elements/Icon';
-import Props from './CartHeader.types';
+// import Props from './CartHeader.types';
 import styles from './CartHeader.module.css';
 
-const CartHeader: React.FunctionComponent<Props> = ({
+const CartHeader = ({
   className,
   copy,
   dataTestRef,

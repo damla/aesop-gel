@@ -44,7 +44,7 @@ const FlyinPanel = ({
       >
         <div className={styles.content}>
           <Button
-            className={cx(styles.closeButton)}
+            className={styles.closeButton}
             inline={true}
             onClick={handleClose}
             tabIndex={0}

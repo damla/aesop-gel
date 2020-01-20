@@ -7,7 +7,7 @@ import svgs from './Icon.data';
 import { generateSvgBlueprint } from './Icon.utils';
 import styles from './Icon.module.css';
 
-const Icon: React = ({
+const Icon = ({
   className = '',
   dataRef = '',
   height = 12,

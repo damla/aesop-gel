@@ -14,15 +14,10 @@ import CartItem from './components/CartItem';
 import Overlay from '~/components/elements/Overlay';
 import Transition from '~/components/elements/Transition';
 import { useQueryGetCart } from '~/hooks/api/useQueryGetCart';
-import Props, { ProductEntry } from './CartView.types';
+import PROP_TYPES from './CartView.prop-types';
 import styles from './CartView.module.css';
 
-const CartView = ({
-  className,
-  copy,
-  handleOnClose,
-  isVisible,
-}) => {
+const CartView = ({ className, copy, handleOnClose, isVisible = false }) => {
   const classSet = cx(styles.base, className);
 
   useOverflowHidden(isVisible);
@@ -35,7 +30,7 @@ const CartView = ({
   }
 
   if (error) {
-    console.error('CartView error', error);
+    console.error('<CartView /> Error:', error);
   }
 
   return (
@@ -54,7 +49,7 @@ const CartView = ({
             handleOnClose={handleOnClose}
           />
           <ul className={styles.list}>
-            {data.getCart.entries.map((entry: ProductEntry) => (
+            {data.getCart.entries.map(entry => (
               <CartItem
                 copy={CartItemFixture.copy}
                 entryNumber={entry.entryNumber}
@@ -91,8 +86,6 @@ const CartView = ({
   );
 };
 
-CartView.defaultProps = {
-  isVisible: false,
-};
+CartView.propTypes = PROP_TYPES;
 
 export default CartView;

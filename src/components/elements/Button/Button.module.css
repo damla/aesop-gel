@@ -18,8 +18,8 @@
   display: inline-block;
   min-width: 210px;
   padding: 23px;
-
   border: 1px solid var(--color-grey-rgba-20);
+  transition: background-color 400ms;
 
   &.hasIcon {
     padding-right: 55px;

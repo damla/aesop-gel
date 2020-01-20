@@ -1,11 +1,11 @@
 import React from 'react';
 import cx from 'classnames';
 import { useMutationDeleteCartPromotion } from '~/hooks/api/useMutationDeleteCartPromotion';
-import Props from './CartDiscountItem.types';
+// import Props from './CartDiscountItem.types';
 import Button from '~/components/elements/Button';
 import styles from './CartDiscountItem.module.css';
 
-const CartDiscountItem: React.FunctionComponent<Props> = ({
+const CartDiscountItem = ({
   copy,
   className,
   promotion,

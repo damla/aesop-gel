@@ -7,16 +7,16 @@ import Hidden from '~/components/elements/Hidden';
 import Icon from '~/components/elements/Icon';
 import List from '~/components/elements/List';
 import Transition from '~/components/elements/Transition';
-import Props from './MainNavigation.types';
+// import Props from './MainNavigation.types';
 import styles from './MainNavigation.module.css';
 
-const MainNavigation: React.FunctionComponent<Props> = ({ classSet }) => {
+const MainNavigation = ({ className }) => {
   const classSet = cx(styles.base, className);
   const locale = React.useContext(LocaleContext);
   const prefix = `${process.env.GATSBY_MEDIA}/${getUrlPrefix(locale)}`;
 
   const headerLinkSharedProps = {
-    classSet: styles.link,
+    className: styles.link,
     inline: true,
     tabIndex: 0,
   };

@@ -1,19 +1,18 @@
 import React from 'react';
-import { useMutation } from '@apollo/react-hooks';
 import Button from '~/components/elements/Button';
 import FormRow from '~/components/elements/FormRow';
 import { Input } from '~/components/controls';
 import Loading from '~/components/elements/Loading';
 import { useFormValues } from '~/hooks/useFormValues';
 import { useMutationCreateCartPromotion } from '~/hooks/api/useMutationCreateCartPromotion';
-import Props from './CartDiscountForm.types';
+// import Props from './CartDiscountForm.types';
 import styles from './CartDiscountForm.module.css';
 
 const initialFormValues = {
   promoCode: '',
 };
 
-const CartDiscountForm: React.FunctionComponent<Props> = ({
+const CartDiscountForm = ({
   copy,
   onCompleted,
 }) => {

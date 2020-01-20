@@ -1,10 +1,9 @@
 import React from 'react';
 import cx from 'classnames';
 import Icon from '~/components/elements/Icon';
-import { QuantitySelectType as Props } from '~/types/Control.types';
 import styles from './QuantitySelect.module.css';
 
-const QuantitySelect: React.FunctionComponent<Props> = ({
+const QuantitySelect = ({
   className,
   disabled,
   name,

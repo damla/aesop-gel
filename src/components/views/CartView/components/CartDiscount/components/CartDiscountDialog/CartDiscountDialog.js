@@ -3,10 +3,10 @@ import Heading from '~/components/elements/Heading';
 import Modal from '~/components/elements/Modal';
 import CartDiscountForm from './components/CartDiscountForm';
 import CartDiscountFormFixture from './components/CartDiscountForm/CartDiscountForm.fixture';
-import Props from './CartDiscountDialog.types';
+// import Props from './CartDiscountDialog.types';
 import styles from './CartDiscountDialog.module.css';
 
-const CartDiscountDialog: React.FunctionComponent<Props> = ({
+const CartDiscountDialog = ({
   copy,
   handleClose,
   isVisible,
@@ -18,10 +18,12 @@ const CartDiscountDialog: React.FunctionComponent<Props> = ({
           {copy.heading}
         </Heading>
       </div>
-      <CartDiscountForm
-        copy={CartDiscountFormFixture.copy}
-        onCompleted={handleClose}
-      />
+      {
+        // <CartDiscountForm
+        //   copy={CartDiscountFormFixture.copy}
+        //   onCompleted={handleClose}
+        // />
+      }
     </Modal>
   );
 };

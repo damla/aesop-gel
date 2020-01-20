@@ -6,10 +6,10 @@ import CartDiscountDialog from './components/CartDiscountDialog';
 import CartDiscountDialogFixture from './components/CartDiscountDialog/CartDiscountDialog.fixture';
 import CartDiscountItem from './components/CartDiscountItem';
 import CartDiscountItemFixture from './components/CartDiscountItem/CartDiscountItem.fixture';
-import Props from './CartDiscount.types';
+// import Props from './CartDiscount.types';
 import styles from './CartDiscount.module.css';
 
-const CartDiscount: React.FunctionComponent<Props> = ({
+const CartDiscount = ({
   copy,
   className,
   promotions,

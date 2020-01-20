@@ -14,7 +14,6 @@ const AddToCartButton = ({
   name,
   price,
   sku,
-  loading,
 }) => {
   const classSet = cx(styles.base, className);
 
@@ -28,9 +27,9 @@ const AddToCartButton = ({
   const data = {};
   const error = {};
 
-  const updateSuccessful = !loading && data && data.createCartEntry;
+  const updateSuccessful = !isLoading && data && data.createCartEntry;
   const labelClassName = cx(styles.label, {
-    [styles.showSuccessMessage]: updateSuccessful,
+    [styles.showSuccessMessage]: !isLoading,
   });
 
   return (
@@ -38,7 +37,7 @@ const AddToCartButton = ({
       alternate={true}
       className={classSet}
       dataTestRef={dataTestRef}
-      disabled={loading || isDisabled}
+      disabled={isLoading || isDisabled}
       onClick={handleOnClick}
       title="Add to cart button"
     >

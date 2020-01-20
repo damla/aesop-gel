@@ -19,10 +19,14 @@ const CartItem = ({
   url,
 }) => {
   const classSet = cx(styles.base, className);
-  const [
-    updateCartEntry,
-    { data, error, loading },
-  ] = useMutationUpdateCartEntry(entryNumber);
+  // const [
+  //   updateCartEntry,
+  //   { data, error, loading },
+  // ] = useMutationUpdateCartEntry(entryNumber);
+  const updateCartEntry = () => {};
+  const data = {};
+  const error = {};
+  const loading = true;
 
   return (
     <li className={classSet} data-test-ref={`CART_ENTRY_${entryNumber}`}>

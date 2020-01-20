@@ -1,10 +1,10 @@
 import React from 'react';
 import cx from 'classnames';
 import Button from '~/components/elements/Button';
-import Props from './CartCheckout.types';
+// import Props from './CartCheckout.types';
 import styles from './CartCheckout.module.css';
 
-const CartCheckout: React.FunctionComponent<Props> = ({
+const CartCheckout = ({
   copy,
   className,
   subTotalPrice,

@@ -28,6 +28,7 @@ const PDPDetailsSection = ({
 }) => {
   const classSet = cx(styles.base, className);
   const [isVisible, setIsVisible] = React.useState(false);
+  const onAddToCartClick = () => {};
 
   const definitionListItems = [
     {
@@ -50,7 +51,7 @@ const PDPDetailsSection = ({
               })}
               inline={true}
               onClick={() => setIsVisible(true)}
-              title="open Flyin"
+              title="See ingredients"
             >
               <Icon height={22} name="plusAndCloseWithCircle" width={22} />
             </Button>
@@ -68,6 +69,7 @@ const PDPDetailsSection = ({
           <AddToCartButton
             dataTestRef="ADD_TO_CART_SMALL_CTA"
             disabled={!price || !sku}
+            handleOnClick={onAddToCartClick}
             name={name}
             price={price}
             sku={sku}
@@ -84,6 +86,7 @@ const PDPDetailsSection = ({
           <AddToCartButton
             dataTestRef="ADD_TO_CART_LARGE_CTA"
             disabled={!price || !sku}
+            handleOnClick={onAddToCartClick}
             name={name}
             price={price}
             sku={sku}

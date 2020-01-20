@@ -3,25 +3,30 @@ import ReactDOM from 'react-dom';
 import styles from './styles.module.css';
 // import '~/styles/base.module.css';
 
-// import AuxOpenCartButton from '~/components/elements/AuxOpenCartButton';
-//
-// import CarouselFixture from '~/components/layouts/Carousel/Carousel.fixture';
-// import Carousel from '~/components/layouts/Carousel';
+import AddToCartButtonFixture from '~/components/elements/AddToCartButton/AddToCartButton.fixture';
+import AddToCartButton from '~/components/elements/AddToCartButton';
 
+import ProductTemplateFixture from '~/components/templates/ProductTemplate/ProductTemplate.fixture';
 import ProductTemplate from '~/components/templates/ProductTemplate';
 
-const foo = [{ content: 'Fragrance', id: 'fragrance' }, { content: 'Gifts' }];
+const App = () => {
+  const [isLoading, setIsLoading] = React.useState(false);
 
-console.log('foo', foo, foo.map);
+  const handleOnClick = () => {
+    setIsLoading(true);
 
-const title = 'React with Webpack';
+    window.setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  };
 
-ReactDOM.render(
-  <div className={styles.base}>
-    <ProductTemplate />
-  </div>,
+  return (
+    <div className={styles.base}>
+      <ProductTemplate data={ProductTemplateFixture.data} />
+    </div>
+  );
+};
 
-  document.getElementById('app'),
-);
+ReactDOM.render(<App />, document.getElementById('app'));
 
 module.hot.accept();

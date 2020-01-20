@@ -1,17 +1,15 @@
 import React from 'react';
 import cx from 'classnames';
-import { CheckboxType as Props } from '~/types/Control.types';
-import { State } from './Checkbox.types';
 import styles from './Checkbox.module.css';
 
-class Checkbox extends React.Component<Props, State> {
+class Checkbox extends React.Component {
   static defaultProps = {
     checked: false,
     errorMessage: '',
     type: 'text',
   };
 
-  state: State = {
+  state = {
     hasFocus: false,
   };
 
@@ -58,7 +56,7 @@ class Checkbox extends React.Component<Props, State> {
     );
   }
 
-  handleFocus = (event: React.ChangeEvent<HTMLInputElement>) => {
+  handleFocus = (event) => {
     const { onFocus } = this.props;
 
     if (onFocus) {
@@ -70,7 +68,7 @@ class Checkbox extends React.Component<Props, State> {
     }));
   };
 
-  handleBlur = (event: React.ChangeEvent<HTMLInputElement>) => {
+  handleBlur = (event) => {
     const { onBlur } = this.props;
 
     if (onBlur) {
