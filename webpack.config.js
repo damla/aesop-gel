@@ -41,7 +41,12 @@ module.exports = {
             loader: 'css-loader',
             options: {
               importLoaders: 1,
-              modules: true,
+              modules: {
+                mode: 'local',
+                localIdentName:
+                  'aesop-gel-[path][name]__[local]--[hash:base64:5]',
+                hashPrefix: 'aesop-gel',
+              },
             },
           },
           {

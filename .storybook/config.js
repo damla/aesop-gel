@@ -6,13 +6,13 @@ import { State } from '@sambego/storybook-state';
 import { withA11y } from '@storybook/addon-a11y';
 import { withInfo } from '@storybook/addon-info';
 import { withKnobs } from '@storybook/addon-knobs';
-import storybookInfoStyles from '~/styles/storybook.info';
+import storybookInfoStyles from './storybook.info';
 
 // Option defaults.
 addParameters({
-  options: {
-    theme: themes.dark,
-  },
+  // options: {
+  //   theme: themes.dark,
+  // },
 });
 
 addDecorator(

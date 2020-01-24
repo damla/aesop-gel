@@ -6,6 +6,7 @@ module.exports = async ({ config, mode }) => {
   // 'PRODUCTION' is used when building the static version of storybook.
   config.resolve.alias = {
     '~': path.resolve(__dirname, '../src'),
+    '~.storybook': path.resolve(__dirname, './'),
   };
 
   // Remove the existing css rule
@@ -21,7 +22,11 @@ module.exports = async ({ config, mode }) => {
       {
         loader: 'css-loader',
         options: {
-          modules: true,
+          importLoaders: 1,
+          modules: {
+            mode: 'local',
+            localIdentName: 'aesop-gel-[path][name]__[local]--[hash:base64:5]',
+          },
         },
       },
       {

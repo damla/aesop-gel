@@ -1,28 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import styles from './styles.module.css';
-// import '~/styles/base.module.css';
+import '~/styles/base.module.css';
 
-import AddToCartButtonFixture from '~/components/elements/AddToCartButton/AddToCartButton.fixture';
-import AddToCartButton from '~/components/elements/AddToCartButton';
+import ProductDetailFixture from '~/components/ProductDetail/ProductDetail.fixture';
+import ProductDetail from '~/components/ProductDetail';
 
-import ProductTemplateFixture from '~/components/templates/ProductTemplate/ProductTemplate.fixture';
-import ProductTemplate from '~/components/templates/ProductTemplate';
+/**
+ * Set up context, export these from host files (`/context/`)
+ */
+export const ThemeContext = React.createContext(null);
+
+export const EventHandlersContext = React.createContext({});
 
 const App = () => {
-  const [isLoading, setIsLoading] = React.useState(false);
-
-  const handleOnClick = () => {
-    setIsLoading(true);
-
-    window.setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-  };
-
   return (
-    <div className={styles.base}>
-      <ProductTemplate data={ProductTemplateFixture.data} />
+    <div>
+      <ProductDetail data={ProductDetailFixture.data} />
     </div>
   );
 };
