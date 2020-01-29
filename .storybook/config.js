@@ -17,14 +17,16 @@ addParameters({
 
 addDecorator(
   withInfo({
-    header: true,
+    header: false,
     inline: true,
     maxPropObjectKeys: 10,
-    maxPropsIntoLine: 3,
+    maxPropsIntoLine: 10,
     propTablesExclude: [State],
     styles: stylesheet => storybookInfoStyles(stylesheet),
   }),
 );
+
+
 
 addDecorator(withA11y);
 addDecorator(withKnobs);
