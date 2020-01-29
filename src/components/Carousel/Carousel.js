@@ -4,17 +4,15 @@ import Slider from 'react-slick';
 import useWindowHasResized from '~/hooks/useWindowHasResized';
 import { ascertainIsMobileOrTablet } from '~/utils/viewports';
 import Button from '~/components/Button';
-import Icon from '~/components/Icon';
-import Heading from '~/components/Heading';
 import Hyperlink from '~/components/Hyperlink';
-import { P } from '~/components/Paragraph';
+import Icon from '~/components/Icon';
 import PROP_TYPES, {
-  CAROUSEL_INTRODUCTION_PROP_TYPES,
   NEXT_BUTTON_PROP_TYPES,
   PREVIOUS_BUTTON_PROP_TYPES,
   PAGINATION_PROP_TYPES,
 } from './Carousel.prop-types';
 import { getCarouselSettings } from './Carousel.utils';
+import CarouselIntroduction from './components/CarouselIntroduction';
 import Slide from './components/Slide';
 import styles from './Carousel.module.css';
 
@@ -22,22 +20,6 @@ import styles from './Carousel.module.css';
  * The onClick callback for the NextButton and PreviousButton
  * components are provided through react-slick
  */
-const CarouselIntroduction = ({ heading, description }) => (
-  <header className={styles.introduction}>
-    <Heading
-      className={styles.introductionHeading}
-      level="4"
-      size="large"
-      useSerifFont={true}
-    >
-      {heading}
-    </Heading>
-    <P className={styles.introductionDescription}>{description}</P>
-  </header>
-);
-
-CarouselIntroduction.propTypes = CAROUSEL_INTRODUCTION_PROP_TYPES;
-
 const NextButton = ({ onClick }) => (
   <Button
     className={cx(styles.directionButton, styles.next)}
