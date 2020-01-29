@@ -29,4 +29,4 @@ addDecorator(
 addDecorator(withA11y);
 addDecorator(withKnobs);
 
-configure(require.context('../src', true, /\.stories\.js$/), module);
+configure(require.context('../src/components/', true, /\.stories\.js$/), module);

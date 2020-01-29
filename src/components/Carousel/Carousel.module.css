@@ -113,32 +113,7 @@
   }
 }
 
-.introduction {
-  display: block;
-
-  @media (--viewport-md-only) {
-    display: flex;
-  }
-}
-
-.introductionHeading {
-  margin-top: 0;
-
-  @media (--viewport-md-only) {
-    width: 50%;
-  }
-}
-
-.introductionDescription {
-  max-width: 85%;
-
-  @media (--viewport-md-only) {
-    width: 50%;
-    max-width: 100%;
-  }
-}
-
-.mobileCarouselIntroduction {
+.mobileCarouselIntroductionWrapper {
   margin: 50px 20px 40px;
 
   @media (--viewport-md) {
