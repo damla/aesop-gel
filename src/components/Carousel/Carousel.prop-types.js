@@ -16,23 +16,6 @@ export const INTRODUCTION_PROP_TYPE_SHAPE = PropTypes.exact({
   heading: PropTypes.string.isRequired,
 });
 
-export const CAROUSEL_INTRODUCTION_PROP_TYPES = {
-  description: PropTypes.string.isRequired,
-  heading: PropTypes.string.isRequired,
-};
-
-export const NEXT_BUTTON_PROP_TYPES = {
-  onClick: PropTypes.func,
-};
-
-export const PREVIOUS_BUTTON_PROP_TYPES = {
-  onClick: PropTypes.func,
-};
-
-export const PAGINATION_PROP_TYPES = {
-  dots: PropTypes.array,
-};
-
 export const PROP_TYPES = {
   className: PropTypes.string,
   introduction: INTRODUCTION_PROP_TYPE_SHAPE,

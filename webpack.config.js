@@ -62,6 +62,7 @@ module.exports = {
   resolve: {
     alias: {
       '~': path.resolve(__dirname, 'src'),
+      '~.storybook': path.resolve(__dirname, '.storybook'),
     },
     modules: ['node_modules'],
     extensions: ['*', '.js', '.jsx', '.css'],

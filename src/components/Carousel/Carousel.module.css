@@ -1,10 +1,6 @@
 @import 'styles/variables/index';
 @import 'styles/mixins/index';
 
-.foo {
-  background-color: pink !important;
-}
-
 .base {
   position: relative;
   overflow: hidden;
@@ -69,50 +65,6 @@
   }
 }
 
-.directionButton {
-  position: absolute;
-  z-index: var(--z-index-carousel-navigation);
-  top: calc(50% - 80px);
-  display: none;
-  width: 80px;
-  height: 80px;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--color-secondary);
-  transform: translate3d(80px, 0, 0);
-  transition: transform 500ms var(--easing-ease-out-cubic);
-
-  .base:hover & {
-    transform: translate3d(0, 0, 0);
-  }
-
-  @media (--viewport-md) {
-    display: flex;
-  }
-
-  svg {
-    fill: var(--color-white);
-  }
-}
-
-.next {
-  right: 0;
-  transform: translate3d(80px, 0, 0);
-
-  svg {
-    transform: rotate(-90deg);
-  }
-}
-
-.previous {
-  left: 0;
-  transform: translate3d(-80px, 0, 0);
-
-  svg {
-    transform: rotate(90deg);
-  }
-}
-
 .mobileCarouselIntroductionWrapper {
   margin: 50px 20px 40px;
 
@@ -127,31 +79,5 @@
   p {
     max-width: 100%;
     font-size: rem(14px);
-  }
-}
-
-.pagination {
-  position: relative;
-  display: flex;
-  height: 2px;
-  padding: 0;
-  margin: 0 20px 40px;
-  background-color: var(--color-grey-60);
-  list-style-type: none;
-
-  @media (--viewport-md) {
-    margin: 0 100px 40px;
-  }
-
-  :global {
-    .slick-active {
-      background-color: var(--color-secondary);
-    }
-  }
-
-  li {
-    flex-grow: 1;
-    margin: 0;
-    transition: background-color 700ms var(--easing-ease-out-cubic);
   }
 }
