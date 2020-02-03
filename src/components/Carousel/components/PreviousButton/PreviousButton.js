@@ -11,8 +11,8 @@ import styles from './PreviousButton.module.css';
 const PreviousButton = ({ onClick }) => (
   <Button
     className={styles.base}
+    handleClick={onClick}
     inline={true}
-    onClick={onClick}
     title="next slide"
   >
     <Icon height={18} name="chevron" width={18} />

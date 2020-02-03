@@ -1,4 +1,5 @@
 module.exports = {
+  setupFilesAfterEnv: ['<rootDir>/setupTests.js'],
   roots: ['src'],
   moduleDirectories: ['node_modules', 'src'],
   unmockedModulePathPatterns: ['react'],
@@ -12,11 +13,18 @@ module.exports = {
       statements: 100,
     },
   },
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+  testPathIgnorePatterns: [`<rootDir>/(dist|docs|node_modules|.cache)/`],
   globals: {
     __TEST__: true,
+  },
+  moduleNameMapper: {
+    '.+\\.(css|styl|less|sass|scss)$': `identity-obj-proxy`,
+    '.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': `<rootDir>/__mocks__/file-mock.js`,
+    'src/(.*)': '<rootDir>/src/$1',
+    '^~(.*)$': '<rootDir>/src$1',
   },
   transform: {
     '^.+\\.js?$': 'babel-jest',
   },
-  testPathIgnorePatterns: ['<rootDir>/(dist|docs|node_modules)/'],
 };

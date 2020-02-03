@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Carousel.CarouselIntroduction /> renders base component correctly 1`] = `
+<header
+  className="base"
+>
+  <h4
+    className="base serifFont large heading"
+    id=""
+  >
+    Accompany with
+  </h4>
+  <p
+    className="base description"
+  >
+    Richly foaming Parsley Seed Facial Cleanser offers mild exfoliation from Lactic Acid to clarify and soften skin; complement twice weekly with Parsley Seed Cleansing Masque to extract impurities and purify pores. For intensive fortification and hydration, blend Hydrator with Parsley Seed Anti-Oxidant Facial Treatment.
+  </p>
+</header>
+`;

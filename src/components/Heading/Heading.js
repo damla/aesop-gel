@@ -10,7 +10,7 @@ const Heading = ({
   level,
   noMargin = false,
   noTopMargin = false,
-  size = 'large',
+  size,
   useSerifFont = false,
 }) => {
   const classSet = cx(

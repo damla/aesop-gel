@@ -26,7 +26,8 @@ export const HEADING_PROP_TYPES = {
     .isRequired,
   noMargin: PropTypes.bool,
   noTopMargin: PropTypes.bool,
-  size: PropTypes.oneOf(getPropTypeOptionValues(SIZE_PROP_TYPE_OPTIONS)),
+  size: PropTypes.oneOf(getPropTypeOptionValues(SIZE_PROP_TYPE_OPTIONS))
+    .isRequired,
   useSerifFont: PropTypes.bool,
 };
 

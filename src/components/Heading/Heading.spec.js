@@ -12,7 +12,13 @@ describe('<Heading />', () => {
   });
 
   it('renders base component correctly', () => {
-    const tree = renderer.create(<Heading level="1">Heading</Heading>).toJSON();
+    const tree = renderer
+      .create(
+        <Heading level="1" size="large">
+          Heading
+        </Heading>,
+      )
+      .toJSON();
 
     expect(tree).toMatchSnapshot();
   });
@@ -21,6 +27,18 @@ describe('<Heading />', () => {
     const tree = renderer
       .create(
         <Heading level="2" size="medium">
+          Heading
+        </Heading>,
+      )
+      .toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders level 4 size small variation correctly', () => {
+    const tree = renderer
+      .create(
+        <Heading level="4" size="small">
           Heading
         </Heading>,
       )

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Hyperlink /> renders base component correctly 1`] = `
+<a
+  className="base inline internal"
+  target="_self"
+  title="Link to http://aesop.com"
+>
+  Aesop
+</a>
+`;

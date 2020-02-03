@@ -18,16 +18,12 @@ export const PROP_TYPES = {
   className: PropTypes.string,
   dataTestRef: PropTypes.string,
   disabled: PropTypes.bool,
+  handleClick: PropTypes.func,
   hasLightText: PropTypes.bool,
-  href: PropTypes.string,
-  icon: PropTypes.bool,
   inline: PropTypes.bool,
   id: PropTypes.string,
-  onClick: PropTypes.func,
   tabIndex: PropTypes.number,
-  target: PropTypes.string,
   title: PropTypes.string.isRequired,
-  to: PropTypes.string,
   type: PropTypes.oneOf(getPropTypeOptionValues(BUTTON_TYPE_PROP_TYPE_OPTIONS)),
 };
 

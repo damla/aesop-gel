@@ -21,14 +21,14 @@
     }
 
     .slick-list {
-      margin: 0 20px 40px;
+      margin: 10px 20px 40px;
 
       @media (--viewport-md) {
-        margin: 0 60px 40px;
+        margin: 10px 60px 40px;
       }
 
       @media (--viewport-lg) {
-        margin: 0 100px 40px;
+        margin: 10px 100px 40px;
       }
     }
 

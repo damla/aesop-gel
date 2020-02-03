@@ -1,5 +1,5 @@
 import React from 'react';
-import { configure } from 'enzyme';
+import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import renderer from 'react-test-renderer';
 import CarouselFixture from './Carousel.fixture';
@@ -23,5 +23,36 @@ describe('<Carousel />', () => {
       .toJSON();
 
     expect(tree).toMatchSnapshot();
+  });
+
+  it('renders component correctly if no `introduction` prop is provided', () => {
+    const tree = renderer
+      .create(<Carousel slides={CarouselFixture.slides} />)
+      .toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders component correctly if no `url` member is provided on the `slides` prop', () => {
+    const tree = renderer
+      .create(
+        <Carousel
+          slides={[
+            {
+              description: CarouselFixture.slides[0].description,
+              heading: CarouselFixture.slides[0].heading,
+              image: CarouselFixture.slides[0].image,
+            },
+          ]}
+        />,
+      )
+      .toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('should return `null` if the length of the `slides` prop is 0', () => {
+    const component = shallow(<Carousel slides={[]} />);
+    expect(component.type()).toEqual(null);
   });
 });

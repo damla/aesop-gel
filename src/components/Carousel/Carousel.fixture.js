@@ -7,7 +7,7 @@ export default {
   slides: [
     {
       url: '/',
-      description: '',
+      description: 'Example description',
       heading: 'Parsley Seed Facial Cleanser',
       image: {
         altText: 'Image of Parsley Seed Facial Cleanser',
@@ -34,9 +34,8 @@ export default {
       },
     },
     {
-      url: '/',
       description: '',
-      heading: 'Parsley Seed Anti-Oxidant Facial Treatment',
+      heading: 'Parsley Seed Anti-Oxidant Facial Treatment with No URL',
       image: {
         altText: 'Image Parsley Seed Anti-Oxidant Facial Treatment',
         small:

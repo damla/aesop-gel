@@ -24,8 +24,9 @@ describe('<Paragraph />', () => {
 
     expect(tree).toMatchSnapshot();
   });
+});
 
-  // @TODO figure out with typescript how to only accept tag type of `p` 🤔
+describe('<ParagraphSet />', () => {
   it('renders a given collection of `p` tags', () => {
     const tree = renderer
       .create(

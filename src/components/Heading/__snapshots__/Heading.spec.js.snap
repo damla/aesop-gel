@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Heading /> renders base component correctly 1`] = `
+<h1
+  className="base large"
+  id=""
+>
+  Heading
+</h1>
+`;
+
+exports[`<Heading /> renders level 2 size medium variation correctly 1`] = `
+<h2
+  className="base medium"
+  id=""
+>
+  Heading
+</h2>
+`;
+
+exports[`<Heading /> renders level 4 size small variation correctly 1`] = `
+<h4
+  className="base small"
+  id=""
+>
+  Heading
+</h4>
+`;
