@@ -25,6 +25,9 @@
     "url": "https://github.com/aesop/aesop-gel/issues"
   },
   "homepage": "https://github.com/aesop/aesop-gel#readme",
+  "peerDependencies": {
+    "react": ">=16.12.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.7.4",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
@@ -85,6 +88,10 @@
     "react-is": "^16.12.0",
     "react-slick": "^0.25.2",
     "react-test-renderer": "^16.12.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-replace": "^2.2.0",
     "slick-carousel": "^1.8.1",
     "source-map-loader": "^0.2.4",
     "storybook": "^5.1.11",
