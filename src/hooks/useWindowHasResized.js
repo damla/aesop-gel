@@ -15,7 +15,7 @@ export const useWindowHasResized = () => {
         height: windowIsDefined ? window.innerHeight : 0,
         width: windowIsDefined ? window.innerWidth : 0,
       });
-    }, 600);
+    }, 400);
 
     if (windowIsDefined) {
       window.addEventListener('resize', handleResize);

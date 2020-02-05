@@ -1,7 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import 'normalize.css';
+import { boolean } from '@storybook/addon-knobs';
 
+import 'normalize.css';
 import '~/styles/base.module.css';
 import '~.storybook/storybook.module.css';
 import DefinitionList from '~/components/DefinitionList';
@@ -15,5 +16,6 @@ storiesOf('ImageWithHeaderAndContent', module).add('Base component', () => (
     }
     copy={ImageWithHeaderAndContentFixture.copy}
     image={ImageWithHeaderAndContentFixture.image}
+    reverse={boolean('reverse', false)}
   />
 ));
