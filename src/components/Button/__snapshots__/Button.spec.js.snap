@@ -2,7 +2,7 @@
 
 exports[`<Button /> renders alternate variation correctly 1`] = `
 <button
-  className="base alternate block action"
+  className="base alternate block external action"
   disabled={false}
   onClick={[MockFunction]}
   title="Aēsop"
@@ -14,7 +14,7 @@ exports[`<Button /> renders alternate variation correctly 1`] = `
 
 exports[`<Button /> renders base component correct with \`type\` prop 1`] = `
 <button
-  className="base block aesop action"
+  className="base block external aesop action"
   disabled={false}
   title="Aēsop"
   type="submit"
@@ -23,20 +23,9 @@ exports[`<Button /> renders base component correct with \`type\` prop 1`] = `
 </button>
 `;
 
-exports[`<Button /> renders base component correctly with \`href\` prop 1`] = `
-<a
-  className="base block external"
-  href="https://aesop.com"
-  target="_self"
-  title="Aēsop"
->
-  Button
-</a>
-`;
-
-exports[`<Button /> renders base component correctly with \`onClick\` prop 1`] = `
+exports[`<Button /> renders base component correctly with \`handleClick\` prop 1`] = `
 <button
-  className="base block aesop action"
+  className="base block external aesop action"
   disabled={false}
   onClick={[MockFunction]}
   title="Aēsop"
@@ -46,51 +35,42 @@ exports[`<Button /> renders base component correctly with \`onClick\` prop 1`] =
 </button>
 `;
 
-exports[`<Button /> renders base component correctly with \`to\` prop 1`] = `
-<a
-  className="base block internal"
-  target="_self"
+exports[`<Button /> renders base component correctly with \`href\` prop 1`] = `
+<button
+  className="base block external action"
+  disabled={false}
   title="Aēsop"
+  type="button"
 >
   Button
-</a>
+</button>
+`;
+
+exports[`<Button /> renders base component correctly with \`to\` prop 1`] = `
+<button
+  className="base block external action"
+  disabled={false}
+  title="Aēsop"
+  type="button"
+>
+  Button
+</button>
 `;
 
 exports[`<Button /> renders component with icon correctly 1`] = `
-<a
-  className="base block hasIcon internal"
-  target="_self"
+<button
+  className="base block external action"
+  disabled={false}
   title="Aēsop"
+  type="button"
 >
   Button
-  <i
-    aria-hidden="true"
-    className="icon"
-  >
-    <svg
-      className="base rightUpArrow"
-      data-ref=""
-      focusable="false"
-      height={12}
-      role="img"
-      tabIndex={-1}
-      viewBox="0 0 50 50"
-      width={12}
-    >
-      <g>
-        <path
-          className="undefined"
-          d="M21.8,0.2l28.1-0.1v28.1l-4.5,0l0.1-20.5L16.2,37.1l-3.4-3.4L42.1,4.4L21.8,4.4L21.8,0.2L21.8,0.2z"
-        />
-      </g>
-    </svg>
-  </i>
-</a>
+</button>
 `;
 
 exports[`<Button /> renders disabled variation correctly 1`] = `
 <button
-  className="base block disabled action"
+  className="base block disabled external action"
   disabled={true}
   onClick={[MockFunction]}
   title="Aēsop"

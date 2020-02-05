@@ -2,7 +2,7 @@
 
 exports[`<Carousel.NextButton /> renders base component correctly 1`] = `
 <button
-  className="base inline base action"
+  className="base external inline base action"
   disabled={false}
   onClick={[Function]}
   title="next slide"

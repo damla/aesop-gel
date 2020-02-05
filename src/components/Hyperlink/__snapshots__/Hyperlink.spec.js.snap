@@ -1,11 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Hyperlink /> renders base component correctly 1`] = `
-<a
-  className="base inline internal"
-  target="_self"
+<button
+  className="base external inline action"
+  disabled={false}
   title="Link to http://aesop.com"
+  type="button"
 >
   Aesop
-</a>
+</button>
 `;
