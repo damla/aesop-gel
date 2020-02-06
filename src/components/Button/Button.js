@@ -1,30 +1,31 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
-import PROP_TYPES from './Button.prop-types';
+import { getPropTypeOptionValues } from '~/utils/propTypes';
 import styles from './Button.module.css';
 
 const Button = ({
-  alternate = false,
   children,
   className,
   dataTestRef,
-  disabled = false,
+  handleClick,
   hasLightText,
   id,
-  inline = false,
-  handleClick,
-  tabIndex,
-  title,
+  isAlternate = false,
+  isEnabled = true,
+  isInline = false,
+  tabIndex = undefined,
+  title = undefined,
   type = 'button',
 }) => {
   const classSet = cx(
     styles.base,
-    { [styles.alternate]: alternate },
-    { [styles.block]: !inline },
-    { [styles.disabled]: disabled },
+    { [styles.alternate]: isAlternate },
+    { [styles.block]: !isInline },
+    { [styles.disabled]: !isEnabled },
     { [styles.external]: external },
-    { [styles.hasLightText]: hasLightText },
-    { [styles.inline]: inline },
+    { [styles.lightText]: hasLightText },
+    { [styles.inline]: isInline },
     className,
   );
 
@@ -32,7 +33,7 @@ const Button = ({
     <button
       className={cx(classSet, styles.action)}
       data-test-ref={dataTestRef}
-      disabled={disabled}
+      disabled={!isEnabled}
       id={id}
       onClick={handleClick}
       tabIndex={tabIndex}
@@ -44,6 +45,34 @@ const Button = ({
   );
 };
 
-Button.propTypes = PROP_TYPES;
+Button.defaultProps = {
+  children: undefined,
+  className: undefined,
+  dataTestRef: undefined,
+  handleClick: undefined,
+  hasLightText: undefined,
+  id: undefined,
+  isAlternate: false,
+  isEnabled: true,
+  isInline: false,
+  tabIndex: undefined,
+  title: undefined,
+  type: 'button',
+};
+
+Button.propTypes = {
+  children: PropTypes.any.isRequired,
+  className: PropTypes.string,
+  dataTestRef: PropTypes.string,
+  handleClick: PropTypes.func,
+  hasLightText: PropTypes.bool,
+  id: PropTypes.string,
+  isAlternate: PropTypes.bool,
+  isEnabled: PropTypes.bool,
+  isInline: PropTypes.bool,
+  tabIndex: PropTypes.number,
+  title: PropTypes.string.isRequired,
+  type: PropTypes.oneOf(['button', 'reset', 'submit']),
+};
 
 export default Button;

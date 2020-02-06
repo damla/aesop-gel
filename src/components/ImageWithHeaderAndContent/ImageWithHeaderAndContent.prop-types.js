@@ -10,8 +10,10 @@ export const COPY_PROP_TYPE_SHAPE = PropTypes.exact({
 export const PROP_TYPES = {
   copy: COPY_PROP_TYPE_SHAPE.isRequired,
   content: PropTypes.oneOf([PropTypes.element, PropTypes.node]),
+  fullWidthImage: PropTypes.bool,
   image: IMAGE_PROP_TYPE_SHAPE.isRequired,
   reverse: PropTypes.bool,
+  theme: PropTypes.string,
 };
 
 export default PROP_TYPES;

@@ -4,13 +4,5 @@
   "semi": true,
   "singleQuote": true,
   "tabWidth": 2,
-  "trailingComma": "all",
-  "overrides": [
-    {
-      "files": "package*.json",
-      "options": {
-        "printWidth": 1000
-      }
-    }
-  ]
+  "trailingComma": "all"
 }

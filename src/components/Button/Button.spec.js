@@ -60,7 +60,7 @@ describe('<Button />', () => {
   it('renders component with icon correctly', () => {
     const tree = renderer
       .create(
-        <Button icon={true} title="Aēsop" to="about">
+        <Button title="Aēsop" to="about">
           Button
         </Button>,
       )
@@ -71,7 +71,7 @@ describe('<Button />', () => {
   it('renders disabled variation correctly', () => {
     const tree = renderer
       .create(
-        <Button disabled={true} handleClick={mockFn} title="Aēsop">
+        <Button handleClick={mockFn} isEnabled={false} title="Aēsop">
           Disabled Button
         </Button>,
       )
@@ -82,7 +82,7 @@ describe('<Button />', () => {
   it('renders alternate variation correctly', () => {
     const tree = renderer
       .create(
-        <Button alternate={true} handleClick={mockFn} title="Aēsop">
+        <Button handleClick={mockFn} isAlternate={true} title="Aēsop">
           Alternate Button
         </Button>,
       )
@@ -113,7 +113,7 @@ describe('<Button /> error handling.', () => {
 
   it('should return `null` if `to` or `external` are passed with `disabled` as props', () => {
     const component = shallow(
-      <Button disabled={true} title="Aēsop" to="about">
+      <Button isEnabled={false} title="Aēsop" to="about">
         Aēsop
       </Button>,
     );
@@ -122,7 +122,7 @@ describe('<Button /> error handling.', () => {
 
   it('should return `null` if `inline` and `alternate` are passed as props', () => {
     const component = shallow(
-      <Button alternate={true} inline={true} title="Aēsop" to="about">
+      <Button isAlternate={true} isInline={true} title="Aēsop" to="about">
         Aēsop
       </Button>,
     );

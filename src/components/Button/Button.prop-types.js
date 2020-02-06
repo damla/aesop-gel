@@ -13,15 +13,15 @@ export const LINK_PROP_TYPE_SHAPE = PropTypes.exact({
 });
 
 export const PROP_TYPES = {
-  alternate: PropTypes.bool,
   children: PropTypes.any.isRequired,
   className: PropTypes.string,
   dataTestRef: PropTypes.string,
-  disabled: PropTypes.bool,
   handleClick: PropTypes.func,
   hasLightText: PropTypes.bool,
-  inline: PropTypes.bool,
   id: PropTypes.string,
+  isAlternate: PropTypes.bool,
+  isEnabled: PropTypes.bool,
+  isInline: PropTypes.bool,
   tabIndex: PropTypes.number,
   title: PropTypes.string.isRequired,
   type: PropTypes.oneOf(getPropTypeOptionValues(BUTTON_TYPE_PROP_TYPE_OPTIONS)),

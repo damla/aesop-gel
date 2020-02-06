@@ -170,7 +170,7 @@
   }
 }
 
-.hasLightText {
+.lightText {
   color: var(--color-white);
 
   &:focus,

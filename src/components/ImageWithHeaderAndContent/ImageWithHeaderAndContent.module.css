@@ -86,3 +86,24 @@
     margin-bottom: 26px;
   }
 }
+
+.theme-1 {
+  background-color: #ede5cf;
+}
+
+.theme-2 {
+  background-color: #b19c93;
+}
+
+.theme-3 {
+  background-color: #f0c3a0;
+}
+
+.theme-4 {
+  background-color: #d1d6c0;
+}
+
+.theme-5 {
+  background-color: #252525;
+  color: #fffef2;
+}

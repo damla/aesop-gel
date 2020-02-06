@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import '~/styles/base.module.css';
-
 import CarouselFixture from '~/components/Carousel/Carousel.fixture';
 import Carousel from '~/components/Carousel';
 

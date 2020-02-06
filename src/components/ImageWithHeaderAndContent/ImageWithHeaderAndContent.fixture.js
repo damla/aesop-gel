@@ -43,6 +43,15 @@ export default {
     small:
       'https://www.aesop.com/medias/Aesop-Room-Sprays-Hybris-Cythera-Pattern-Desktop-1440x1600.jpg?context=bWFzdGVyfGltYWdlc3w0MTU4Mjl8aW1hZ2UvanBlZ3xpbWFnZXMvaGIyL2g0MS84ODEzNzIxNTUwODc4LmpwZ3wxODAxZWQ5YTdlNzMxNDYxZWZhMThiNzQ1YTJhZTRmMjE3ZWU3YzEzZDJmOGZjZWU0M2Y4ZWJlNjg2YjE1NjQ2',
   },
+  imageFullWidth: {
+    altText: 'alt image',
+    large:
+      'https://acceptance.aesop.com/medias/Aesop-Gift-Kits-2019-20-Hybris-The-Humourist-PDP-Tertiary-50-50-Desktop-1440x1800px.png?context=bWFzdGVyfGltYWdlc3w1MzQ1MnxpbWFnZS9wbmd8aW1hZ2VzL2hhNC9oN2YvOTE2MjAxNjQ1NjczNC5wbmd8MzE4ZmYyZDU3YTU4NWQ5ODczNmYwODczNjA2OTAyM2EwNjcwMmQ0MzQ4NDFiZjRjZWJkNzAzZmI2OWI2ODQyOQ',
+    medium:
+      'https://acceptance.aesop.com/medias/Aesop-Gift-Kits-2019-20-Hybris-The-Humourist-PDP-Tertiary-50-50-Tablet-1536x1685px.png?context=bWFzdGVyfGltYWdlc3w1OTMwMnxpbWFnZS9wbmd8aW1hZ2VzL2g4Mi9oYWMvOTE2MjAxNjUyMjI3MC5wbmd8NjBmNzczOTA3MGVmNDBmNWZjNGY5MjBjZWE0Y2VlZmE5NjM1NTc2NGQ1MGIxMDRiOWU5ZDJiNDg4ZGJhMDQ3Mg',
+    small:
+      'https://acceptance.aesop.com/medias/Aesop-Gift-Kits-2019-20-Hybris-The-Humourist-PDP-Tertiary-1-Mobile-640x800px.png?context=bWFzdGVyfGltYWdlc3wyMjU1MXxpbWFnZS9wbmd8aW1hZ2VzL2gxMy9oMTIvOTE2MjAxNjU4NzgwNi5wbmd8NWQ2NzcyMWNhNTMzMTkyOTA2ODg5ZDhkM2ZkYzcwYzk2NGFjMzBjM2QzNDJlYzUyNTE1NzU3MjFjOGNmNWFjMQ',
+  },
   definitionList: [
     {
       term: 'Dosage',

@@ -7,13 +7,20 @@ import PROP_TYPES from './ImageWithHeaderAndContent.prop-types';
 import styles from './ImageWithHeaderAndContent.module.css';
 
 const ImageWithHeaderAndContent = ({
-  className,
-  content,
-  copy,
-  image,
+  className = undefined,
+  content = undefined,
+  copy = undefined,
+  fullWidthImage = false,
+  image = undefined,
   reverse = false,
+  theme = 1,
 }) => {
-  const classSet = cx(styles.base, { [styles.reverse]: reverse }, className);
+  const classSet = cx(
+    styles.base,
+    { [styles.reverse]: reverse },
+    styles[`theme-${theme}`],
+    className,
+  );
 
   return (
     <section className={classSet}>

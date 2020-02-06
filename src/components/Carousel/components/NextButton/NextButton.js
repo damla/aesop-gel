@@ -12,7 +12,7 @@ const NextButton = ({ onClick }) => (
   <Button
     className={styles.base}
     handleClick={onClick}
-    inline={true}
+    isInline={true}
     title="next slide"
   >
     <Icon height={18} name="chevron" width={18} />

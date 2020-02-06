@@ -11,10 +11,10 @@
     "prettier-eslint": "prettier --write \"./**/*.{js,jsx,ts,tsx}\"",
     "prettier-stylelint": "prettier-stylelint  --write './src/**/*.css' --config .stylelintrc --quiet",
     "start": "webpack-dev-server --config ./webpack.config.js --mode development --watch",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 6006  -s ./public",
     "stylelint": "stylelint 'src/**/*.css'",
     "test": "jest --no-cache --passWithNoTests --maxWorkers=2",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook -s ./public"
   },
   "repository": {
     "type": "git",
