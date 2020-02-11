@@ -1,12 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
-import PROP_TYPES from './DefinitionList.prop-types';
+import { isObjectPopulatedArray } from '~/utils/objects';
 import styles from './DefinitionList.module.css';
 
-const DefinitionList = ({ className, items = [] }) => {
+const DefinitionList = ({ className, items }) => {
   const classSet = cx(styles.base, className);
 
-  if (items.length === 0) {
+  if (!isObjectPopulatedArray(items)) {
     return null;
   }
 
@@ -24,6 +25,19 @@ const DefinitionList = ({ className, items = [] }) => {
   );
 };
 
-DefinitionList.propTypes = PROP_TYPES;
+DefinitionList.propTypes = {
+  className: PropTypes.string,
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      term: PropTypes.string,
+      description: PropTypes.string,
+    }),
+  ),
+};
+
+DefinitionList.defaultProps = {
+  className: undefined,
+  items: undefined,
+};
 
 export default DefinitionList;

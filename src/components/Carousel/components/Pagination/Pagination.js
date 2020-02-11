@@ -1,5 +1,5 @@
 import React from 'react';
-import PROP_TYPES from './Pagination.prop-types';
+import PropTypes from 'prop-types';
 import styles from './Pagination.module.css';
 
 const Pagination = ({ dots }) => (
@@ -8,6 +8,12 @@ const Pagination = ({ dots }) => (
   </div>
 );
 
-Pagination.propTypes = PROP_TYPES;
+Pagination.propTypes = {
+  dots: PropTypes.array,
+};
+
+Pagination.defaultProps = {
+  dots: undefined,
+};
 
 export default Pagination;

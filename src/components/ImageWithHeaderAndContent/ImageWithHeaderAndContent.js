@@ -1,23 +1,23 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 import Heading from '~/components/Heading';
 import Image from '~/components/Image';
 import { P } from '~/components/Paragraph';
-import PROP_TYPES from './ImageWithHeaderAndContent.prop-types';
 import styles from './ImageWithHeaderAndContent.module.css';
 
 const ImageWithHeaderAndContent = ({
-  className = undefined,
-  content = undefined,
-  copy = undefined,
-  fullWidthImage = false,
-  image = undefined,
-  reverse = false,
-  theme = 1,
+  className,
+  content,
+  copy,
+  hasFullWidthImage,
+  image,
+  isReverse,
+  theme,
 }) => {
   const classSet = cx(
     styles.base,
-    { [styles.reverse]: reverse },
+    { [styles.reverse]: isReverse },
     styles[`theme-${theme}`],
     className,
   );
@@ -50,6 +50,28 @@ const ImageWithHeaderAndContent = ({
   );
 };
 
-ImageWithHeaderAndContent.propTypes = PROP_TYPES;
+ImageWithHeaderAndContent.propTypes = {
+  className: PropTypes.string,
+  content: PropTypes.oneOf([PropTypes.element, PropTypes.node]),
+  copy: PropTypes.exact({
+    description: PropTypes.string,
+    subTitle: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+  }).isRequired,
+  hasFullWidthImage: PropTypes.bool,
+  image: PropTypes.object.isRequired,
+  isReverse: PropTypes.bool,
+  theme: PropTypes.string,
+};
+
+ImageWithHeaderAndContent.defaultProps = {
+  className: undefined,
+  content: undefined,
+  copy: undefined,
+  hasFullWidthImage: false,
+  image: undefined,
+  isReverse: false,
+  theme: '1',
+};
 
 export default ImageWithHeaderAndContent;

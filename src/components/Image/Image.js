@@ -1,9 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'lodash/get';
 import { constraintsByViewport } from '~/utils/viewports/viewports';
 import Hyperlink from '~/components/Hyperlink';
-import PROP_TYPES from './Image.prop-types';
 import styles from './Image.module.css';
 
 const Image = ({ altText, className, cta, large, medium, small, type }) => {
@@ -62,6 +62,28 @@ const Image = ({ altText, className, cta, large, medium, small, type }) => {
   );
 };
 
-Image.propTypes = PROP_TYPES;
+Image.propTypes = {
+  className: PropTypes.string,
+  altText: PropTypes.string.isRequired,
+  cta: PropTypes.object,
+  fullBleedImage: PropTypes.bool,
+  id: PropTypes.string,
+  large: PropTypes.string,
+  medium: PropTypes.string,
+  small: PropTypes.string,
+  type: PropTypes.string,
+};
+
+Image.defaultProps = {
+  className: undefined,
+  altText: undefined,
+  cta: undefined,
+  fullBleedImage: undefined,
+  id: undefined,
+  large: undefined,
+  medium: undefined,
+  small: undefined,
+  type: undefined,
+};
 
 export default Image;

@@ -1,7 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Heading from '~/components/Heading';
 import Image from '~/components/Image';
-import PROP_TYPES from './Slide.prop-types';
 import styles from './Slide.module.css';
 
 const Slide = ({ heading, description, image }) => (
@@ -22,6 +22,16 @@ const Slide = ({ heading, description, image }) => (
   </>
 );
 
-Slide.propTypes = PROP_TYPES;
+Slide.propTypes = {
+  heading: PropTypes.string,
+  description: PropTypes.string,
+  image: PropTypes.object.isRequired,
+};
+
+Slide.defaultProps = {
+  heading: undefined,
+  description: undefined,
+  image: undefined,
+};
 
 export default Slide;

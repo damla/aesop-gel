@@ -1,62 +1,29 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { text, boolean, select } from '@storybook/addon-knobs';
-import { getPropTypeOptionValues } from '~/utils/propTypes/propTypes';
 import 'normalize.css';
-
 import Heading from './Heading';
-import {
-  LEVEL_PROP_TYPE_OPTIONS,
-  SIZE_PROP_TYPE_OPTIONS,
-} from './Heading.prop-types';
 
-const levelOptions = getPropTypeOptionValues(LEVEL_PROP_TYPE_OPTIONS);
-const sizeOptions = getPropTypeOptionValues(SIZE_PROP_TYPE_OPTIONS);
-const base = storiesOf('Heading', module);
+const levelOptions = [1, 2, 3, 4, 5, 6];
+const sizeOptions = ['xSmall', 'small', 'medium', 'large', 'xLarge'];
 
-base.add('Base component', () => (
-  <Heading
-    level={select('level', levelOptions, LEVEL_PROP_TYPE_OPTIONS.ONE)}
-    noMargin={boolean('noMargin', false)}
-    noTopMargin={boolean('noTopMargin', false)}
-    size={select('size', sizeOptions, SIZE_PROP_TYPE_OPTIONS.LARGE)}
-  >
-    {text('children', 'Fortification of the highest order')}
-  </Heading>
-));
-
-const variation = storiesOf('Heading.Variations', module);
-
-variation
-  .add('Level 1, Size xLarge', () => (
-    <Heading level="1" size="xLarge">
-      Heading level="3" size="large" Fortification of the highest order. Parsley
-      Seed Anti-Oxidant Facial Hydrating Cream 60mL
+storiesOf('Heading', module)
+  .add('Base component', () => (
+    <Heading hasTopMargin={true} isFlush={false} level={1} size="large">
+      Fortification of the highest order
     </Heading>
   ))
-  .add('Level 2, Size large', () => (
-    <Heading level="2" size="large">
-      Fortification of the highest order.
-    </Heading>
-  ))
-  .add('Level 3, Size medium', () => (
-    <Heading level="3" size="medium">
-      Fortification of the highest order.
-    </Heading>
-  ))
-  .add('Level 4, Size small', () => (
-    <Heading level="4" size="small">
-      Fortification of the highest order.
-    </Heading>
-  ))
-  .add('Level 5, Size small', () => (
-    <Heading level="5" size="small">
-      Fortification of the highest order.
-    </Heading>
-  ))
-  .add('Level 6, Size xSmall', () => (
-    <Heading level="6" size="xSmall">
-      Fortification of the highest order.
+  .add('Component with knobs', () => (
+    <Heading
+      className={text('className', 'storybook-heading-class')}
+      hasTopMargin={boolean('hasTopMargin', true)}
+      id={text('id', 'storybook-heading-class')}
+      isFlush={boolean('isFlush', false)}
+      isSerifFont={boolean('isSerifFont', false)}
+      level={select('level', levelOptions, 1)}
+      size={select('size', sizeOptions, 'large')}
+    >
+      {text('children', 'Fortification of the highest order')}
     </Heading>
   ))
   .add('All variations', () => (

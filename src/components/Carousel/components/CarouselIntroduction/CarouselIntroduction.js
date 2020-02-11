@@ -1,7 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Heading from '~/components/Heading';
 import { P } from '~/components/Paragraph';
-import PROP_TYPES from './CarouselIntroduction.prop-types';
 import styles from './CarouselIntroduction.module.css';
 
 const CarouselIntroduction = ({ heading, description }) => (
@@ -18,6 +18,14 @@ const CarouselIntroduction = ({ heading, description }) => (
   </header>
 );
 
-CarouselIntroduction.propTypes = PROP_TYPES;
+CarouselIntroduction.propTypes = {
+  heading: PropTypes.string,
+  description: PropTypes.string,
+};
+
+CarouselIntroduction.defaultProps = {
+  heading: undefined,
+  description: undefined,
+};
 
 export default CarouselIntroduction;

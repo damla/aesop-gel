@@ -1,0 +1,55 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { action } from '@storybook/addon-actions';
+import { withKnobs } from '@storybook/addon-knobs';
+import { text, boolean, select } from '@storybook/addon-knobs';
+import Button from './Button';
+
+<Meta title="Button" component={Button} decorators={[withKnobs]} />
+
+# Button
+
+<Preview>
+  <Story name="Base component">
+    <Button
+      className={text('className', '')}
+      dataTestRef={text('dataTestRef', 'dataTestRef')}
+      handleClick={action('clicked')}
+      hasLightText={boolean('hasLightText', false)}
+      id={text('id', '')}
+      isAlternate={boolean('isAlternate', false)}
+      isEnabled={boolean('isEnabled', true)}
+      isInline={boolean('isInline', false)}
+      tabIndex={text('tabIndex', '-1')}
+      title={text('title', 'Aēsop')}
+      type={select('type', ['button', 'reset', 'submit'], 'button')}
+    >
+      {text('children', 'Button')}
+    </Button>
+  </Story>
+</Preview>
+
+## API
+
+<Props of={Button} />
+
+## Usage example
+
+```
+import Button from '@aesop-gel/components/Button'
+
+...
+
+<Button
+  className="submit"
+  dataTestRef="submit"
+  handleClick={handleClick}
+  hasLightText={false}
+  id="submit"
+  isAlternate={false}
+  isEnabled={true}
+  isInline={false}
+  tabIndex={-1}
+  title="Submit"
+  type="submit"
+/>
+```

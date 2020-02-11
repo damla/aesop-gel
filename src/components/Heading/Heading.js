@@ -1,23 +1,23 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
-import PROP_TYPES from './Heading.prop-types';
 import styles from './Heading.module.css';
 
 const Heading = ({
   children,
   className,
-  id = '',
+  id,
   level,
-  noMargin = false,
-  noTopMargin = false,
+  isFlush,
+  hasTopMargin,
   size,
-  useSerifFont = false,
+  isSerifFont,
 }) => {
   const classSet = cx(
     styles.base,
-    { [styles.noTopMargin]: noTopMargin },
-    { [styles.noMargin]: noMargin },
-    { [styles.serifFont]: useSerifFont },
+    { [styles.noTopMargin]: !hasTopMargin },
+    { [styles.noMargin]: isFlush },
+    { [styles.serifFont]: isSerifFont },
     styles[size],
     className,
   );
@@ -29,6 +29,27 @@ const Heading = ({
   );
 };
 
-Heading.propTypes = PROP_TYPES;
+Heading.propTypes = {
+  children: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  hasTopMargin: PropTypes.bool,
+  id: PropTypes.string,
+  isFlush: PropTypes.bool,
+  isSerifFont: PropTypes.bool,
+  level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]).isRequired,
+  size: PropTypes.oneOf(['xSmall', 'small', 'medium', 'large', 'xLarge'])
+    .isRequired,
+};
+
+Heading.defaultProps = {
+  children: undefined,
+  className: undefined,
+  hasTopMargin: true,
+  id: undefined,
+  isFlush: false,
+  isSerifFont: false,
+  level: undefined,
+  size: undefined,
+};
 
 export default Heading;

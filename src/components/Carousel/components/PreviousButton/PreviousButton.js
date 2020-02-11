@@ -1,7 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Button from '~/components/Button';
 import Icon from '~/components/Icon';
-import PROP_TYPES from './PreviousButton.prop-types';
 import styles from './PreviousButton.module.css';
 
 /**
@@ -19,6 +19,12 @@ const PreviousButton = ({ onClick }) => (
   </Button>
 );
 
-PreviousButton.propTypes = PROP_TYPES;
+PreviousButton.propTypes = {
+  onClick: PropTypes.func,
+};
+
+PreviousButton.defaultProps = {
+  onClick: undefined,
+};
 
 export default PreviousButton;

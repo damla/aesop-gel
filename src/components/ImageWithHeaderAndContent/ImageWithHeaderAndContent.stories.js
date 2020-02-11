@@ -18,16 +18,16 @@ storiesOf('ImageWithHeaderAndContent', module)
       }
       copy={ImageWithHeaderAndContentFixture.copy}
       image={ImageWithHeaderAndContentFixture.image}
-      reverse={boolean('reverse', false)}
+      isReverse={boolean('reverse', false)}
       theme={select('theme', ['1', '2', '3', '4', '5'], '1')}
     />
   ))
   .add('Background variation', () => (
     <ImageWithHeaderAndContent
       copy={ImageWithHeaderAndContentFixture.copy}
-      fullWidthImage={true}
+      hasFullWidthImage={true}
       image={ImageWithHeaderAndContentFixture.imageFullWidth}
-      reverse={true}
+      isReverse={true}
       theme={select('theme', ['1', '2', '3', '4', '5'], '1')}
     />
   ));
