@@ -1,6 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
-import PROP_TYPES, { PARAGRAPH_SET_PROP_TYPES } from './Paragraph.prop-types';
 import styles from './Paragraph.module.css';
 
 const Paragraph = ({ children, className }) => {
@@ -9,7 +9,15 @@ const Paragraph = ({ children, className }) => {
   return <p className={classSet}>{children}</p>;
 };
 
-Paragraph.propTypes = PROP_TYPES;
+Paragraph.propTypes = {
+  children: PropTypes.any,
+  className: PropTypes.string,
+};
+
+Paragraph.defaultProps = {
+  children: undefined,
+  className: undefined,
+};
 
 const ParagraphSet = ({ children, className }) => {
   const classSet = cx(styles.set, className);
@@ -17,7 +25,15 @@ const ParagraphSet = ({ children, className }) => {
   return <div className={classSet}>{children}</div>;
 };
 
-ParagraphSet.propTypes = PARAGRAPH_SET_PROP_TYPES;
+ParagraphSet.propTypes = {
+  children: PropTypes.any,
+  className: PropTypes.string,
+};
+
+ParagraphSet.defaultProps = {
+  children: undefined,
+  className: undefined,
+};
 
 export { Paragraph as P };
 export { ParagraphSet };

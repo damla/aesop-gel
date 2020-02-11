@@ -1,10 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 import Slider from 'react-slick';
 import useWindowHasResized from '~/hooks/useWindowHasResized';
 import { ascertainIsMobileOrTablet } from '~/utils/viewports';
 import Hyperlink from '~/components/Hyperlink';
-import PROP_TYPES from './Carousel.prop-types';
 import { getCarouselSettings } from './Carousel.utils';
 import CarouselIntroduction from './components/CarouselIntroduction';
 import NextButton from './components/NextButton/NextButton';
@@ -13,10 +13,12 @@ import PreviousButton from './components/PreviousButton';
 import Slide from './components/Slide';
 import styles from './Carousel.module.css';
 
-const Carousel = ({ className = '', introduction, slides = [] }) => {
+console.log('CarouselIntroduction', CarouselIntroduction);
+
+const Carousel = ({ className, introduction, slides }) => {
   useWindowHasResized();
 
-  if (slides.length === 0) {
+  if (typeof slides === undefined || slides.length === 0) {
     return null;
   }
 
@@ -71,6 +73,25 @@ const Carousel = ({ className = '', introduction, slides = [] }) => {
   );
 };
 
-Carousel.propTypes = PROP_TYPES;
+Carousel.propTypes = {
+  className: PropTypes.string,
+  introduction: {
+    cta: PropTypes.object,
+    description: PropTypes.string.isRequired,
+    heading: PropTypes.string.isRequired,
+  },
+  slides: PropTypes.arrayOf({
+    description: PropTypes.string,
+    heading: PropTypes.string,
+    image: PropTypes.object.isRequired,
+    url: PropTypes.string,
+  }).isRequired,
+};
+
+Carousel.defaultProps = {
+  className: undefined,
+  introduction: undefined,
+  slides: undefined,
+};
 
 export default Carousel;

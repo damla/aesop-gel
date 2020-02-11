@@ -3,6 +3,10 @@
     margin: 15px 40px;
   }
 
+  #root {
+    padding: 40px;
+  }
+
   pre {
     max-width: 980px;
   }

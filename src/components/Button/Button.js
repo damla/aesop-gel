@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { getPropTypeOptionValues } from '~/utils/propTypes';
 import styles from './Button.module.css';
 
 const Button = ({
@@ -11,12 +10,12 @@ const Button = ({
   handleClick,
   hasLightText,
   id,
-  isAlternate = false,
-  isEnabled = true,
-  isInline = false,
-  tabIndex = undefined,
-  title = undefined,
-  type = 'button',
+  isAlternate,
+  isEnabled,
+  isInline,
+  tabIndex,
+  title,
+  type,
 }) => {
   const classSet = cx(
     styles.base,
@@ -45,21 +44,6 @@ const Button = ({
   );
 };
 
-Button.defaultProps = {
-  children: undefined,
-  className: undefined,
-  dataTestRef: undefined,
-  handleClick: undefined,
-  hasLightText: undefined,
-  id: undefined,
-  isAlternate: false,
-  isEnabled: true,
-  isInline: false,
-  tabIndex: undefined,
-  title: undefined,
-  type: 'button',
-};
-
 Button.propTypes = {
   children: PropTypes.any.isRequired,
   className: PropTypes.string,
@@ -73,6 +57,21 @@ Button.propTypes = {
   tabIndex: PropTypes.number,
   title: PropTypes.string.isRequired,
   type: PropTypes.oneOf(['button', 'reset', 'submit']),
+};
+
+Button.defaultProps = {
+  children: undefined,
+  className: undefined,
+  dataTestRef: undefined,
+  handleClick: undefined,
+  hasLightText: undefined,
+  id: undefined,
+  isAlternate: false,
+  isEnabled: true,
+  isInline: false,
+  tabIndex: undefined,
+  title: undefined,
+  type: 'button',
 };
 
 export default Button;

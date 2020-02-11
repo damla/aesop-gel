@@ -1,21 +1,21 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 import uuidv4 from 'uuid/v4';
 import find from 'lodash/find';
-import PROP_TYPES from './Icon.prop-types';
 import svgs from './Icon.svgs';
 import { generateSvgBlueprint } from './Icon.utils';
 import styles from './Icon.module.css';
 
 const Icon = ({
-  className = '',
-  dataRef = '',
-  height = 12,
-  isActive = false,
-  name = '',
-  tabIndex = -1,
+  className,
+  dataRef,
+  height,
+  isActive,
+  name,
+  tabIndex,
   title,
-  width = 12,
+  width,
 }) => {
   const svg = find(svgs, { name });
 
@@ -50,6 +50,26 @@ const Icon = ({
   );
 };
 
-Icon.propTypes = PROP_TYPES;
+Icon.propTypes = {
+  className: PropTypes.string,
+  dataRef: PropTypes.string,
+  height: PropTypes.number,
+  isActive: PropTypes.bool,
+  name: PropTypes.string.isRequired,
+  tabIndex: PropTypes.number,
+  title: PropTypes.string,
+  width: PropTypes.number,
+};
+
+Icon.defaultProps = {
+  className: undefined,
+  dataRef: '',
+  height: 12,
+  isActive: false,
+  name: '',
+  tabIndex: -1,
+  title: undefined,
+  width: 12,
+};
 
 export default Icon;
