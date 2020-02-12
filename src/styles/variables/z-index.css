@@ -10,4 +10,6 @@
   --z-index-fixed-header: 70;
   --z-index-aesop-logo: 60;
   --z-index-carousel-navigation: 60;
+  --z-index-forground-content: 20;
+  --z-index-background-image: 10;
 }

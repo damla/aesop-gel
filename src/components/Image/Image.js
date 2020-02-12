@@ -63,11 +63,11 @@ const Image = ({ altText, className, cta, large, medium, small, type }) => {
 };
 
 Image.propTypes = {
-  className: PropTypes.string,
   altText: PropTypes.string.isRequired,
+  className: PropTypes.string,
   cta: PropTypes.object,
-  fullBleedImage: PropTypes.bool,
   id: PropTypes.string,
+  isFullBleedImage: PropTypes.bool,
   large: PropTypes.string,
   medium: PropTypes.string,
   small: PropTypes.string,
@@ -75,11 +75,11 @@ Image.propTypes = {
 };
 
 Image.defaultProps = {
-  className: undefined,
   altText: undefined,
+  className: undefined,
   cta: undefined,
-  fullBleedImage: undefined,
   id: undefined,
+  isFullBleedImage: undefined,
   large: undefined,
   medium: undefined,
   small: undefined,

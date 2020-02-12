@@ -17,6 +17,7 @@ storiesOf('ImageWithHeaderAndContent', module)
         />
       }
       copy={ImageWithHeaderAndContentFixture.copy}
+      hasFullWidthImage={boolean('hasFullWidthImage', false)}
       image={ImageWithHeaderAndContentFixture.image}
       isReverse={boolean('reverse', false)}
       theme={select('theme', ['1', '2', '3', '4', '5'], '1')}

@@ -54,7 +54,7 @@
     display: block;
     width: 33.33%;
     padding: 115px 0;
-    margin: auto;
+    margin: auto 60px;
   }
 
   header {
@@ -72,6 +72,23 @@
       flex-basis: auto;
       margin-left: 20px;
     }
+  }
+}
+
+.isFullWidthImage {
+  position: absolute;
+  z-index: var(--z-index-background-image);
+  width: 100%;
+}
+
+.hasFullWidthImage {
+  z-index: var(--z-index-forground-content);
+  margin-right: 60px;
+  margin-left: auto;
+
+  .reverse & {
+    margin-right: auto;
+    margin-left: 60px;
   }
 }
 

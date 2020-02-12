@@ -1,28 +1,14 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import { withKnobs } from '@storybook/addon-knobs';
 import { text, object } from '@storybook/addon-knobs';
-import DefinitionList from './DefinitionList';
-import DefinitionListFixture from './DefinitionList.fixture';
 import Paragraph, { P, ParagraphSet } from './Paragraph';
 
-<Meta
-  title="DefinitionList"
-  component={DefinitionList}
-  decorators={[withKnobs]}
-/>
+<Meta title="Paragraph" component={Paragraph} decorators={[withKnobs]} />
 
 # Paragraph
 
 <Preview>
-  <Story name="DefinitionList docs">
-    <Paragraph>
-      A lightweight, vitamin C-rich layering serum that soothes, replenishes and
-      balances skin with its complex blend of anti-oxidant, hydrating and
-      conditioning ingredients.
-    </Paragraph>
-  </Story>
-
-  <Story name="DefinitionList docs">
+  <Story name="Paragraph docs">
     <Paragraph>
       A lightweight, vitamin C-rich layering serum that soothes, replenishes and
       balances skin with its complex blend of anti-oxidant, hydrating and
@@ -33,40 +19,18 @@ import Paragraph, { P, ParagraphSet } from './Paragraph';
 
 ## API
 
-<Props of={DefinitionList} />
+<Props of={Paragraph} />
 
 ## Usage example
 
 ```
-import DefinitionList from '@aesop-gel/components/DefinitionList'
+import Paragraph from '@aesop-gel/components/Paragraph'
 
 ...
 
-<DefinitionList
-  items={[
-    {
-      term: 'Aroma',
-      description: 'Fresh, woody, citrus',
-    },
-    {
-      term: 'Usage',
-      description:
-        'Spray  two to three pumps throughout the immediate space and refresh as needed; the aroma will last for several hours.',
-    },
-  ]}
-/>
+<Paragraph>
+  A lightweight, vitamin C-rich layering serum that soothes, replenishes and
+  balances skin with its complex blend of anti-oxidant, hydrating and
+  conditioning ingredients.
+</Paragraph>
 ```
-
-# Paragraph Set
-
-<Preview>
-  <Story name="DefinitionList docs">
-    <ParagraphSet>
-      <P>A lightweight, vitamin C-rich layering serum that soothes</P>
-      <P>
-        Replenishes and balances skin with its complex blend of anti-oxidant,
-        hydrating and conditioning ingredients.
-      </P>
-    </ParagraphSet>
-  </Story>
-</Preview>
