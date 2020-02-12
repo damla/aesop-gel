@@ -8,7 +8,7 @@ module.exports = {
     '@storybook/addon-a11y/register',
     '@storybook/addon-links/register',
     '@storybook/addon-viewport/register',
-    '@storybook/addon-docs/react/preset',
+    '@storybook/addon-docs/preset',
   ],
   webpackFinal: async (config, { configType }) => {
     // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'

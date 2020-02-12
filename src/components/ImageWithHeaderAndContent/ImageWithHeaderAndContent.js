@@ -26,13 +26,19 @@ const ImageWithHeaderAndContent = ({
     <section className={classSet}>
       <Image
         altText={image.altText}
-        className={styles.figure}
+        className={cx(styles.figure, {
+          [styles.isFullWidthImage]: hasFullWidthImage,
+        })}
         large={image.large}
         medium={image.medium}
         small={image.small}
       />
 
-      <div className={styles.container}>
+      <div
+        className={cx(styles.container, {
+          [styles.hasFullWidthImage]: hasFullWidthImage,
+        })}
+      >
         <header>
           <Heading level="2" noMargin={true} size="xSmall">
             {copy.title}

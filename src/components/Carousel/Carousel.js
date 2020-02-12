@@ -13,8 +13,6 @@ import PreviousButton from './components/PreviousButton';
 import Slide from './components/Slide';
 import styles from './Carousel.module.css';
 
-console.log('CarouselIntroduction', CarouselIntroduction);
-
 const Carousel = ({ className, introduction, slides }) => {
   useWindowHasResized();
 
