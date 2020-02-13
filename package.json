@@ -18,7 +18,7 @@
     "deploy-storybook": "storybook-to-ghpages"
   },
   "pre-push": [
-    "lint"
+    "eslint"
   ],
   "repository": {
     "type": "git",
