@@ -3,6 +3,7 @@
 
 .base {
   position: relative;
+  z-index: var(--z-index-forground-content);
   overflow: hidden;
 
   picture {
@@ -21,18 +22,63 @@
     }
 
     .slick-list {
-      margin: 10px 20px 40px;
+      position: relative;
+      margin: 0 40px 40px;
 
+      &::before {
+        position: absolute;
+        z-index: var(--z-index-carousel-edge);
+        left: -40px;
+        width: 40px;
+        height: 100%;
+        background:
+          -webkit-gradient(
+            linear,
+            left top,
+            right top,
+            from(rgb(255, 254, 240)),
+            to(rgba(0, 0, 0, 0))
+          );
+        content: '';
+      }
+
+      &::after {
+        position: absolute;
+        z-index: var(--z-index-carousel-edge);
+        top: 0;
+        right: -40px;
+        width: 40px;
+        height: 100%;
+        background:
+          -webkit-gradient(
+            linear,
+            right top,
+            left top,
+            from(rgb(255, 254, 240)),
+            to(rgba(0, 0, 0, 0))
+          );
+        content: '';
+      }
+
+      /*
       @media (--viewport-md) {
-        margin: 10px 60px 40px;
+        margin: 10px 0 40px;
       }
 
       @media (--viewport-lg) {
-        margin: 10px 100px 40px;
-      }
+        margin: 10px 0 40px;
+      } */
     }
 
     .slick-slide {
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+
+      &:not(:first-child) {
+        margin-left: 10px;
+      }
+
       & > div {
         height: 100%;
       }

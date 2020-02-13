@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Heading from '~/components/Heading';
-import { P } from '~/components/Paragraph';
+import Paragraph from '~/components/Paragraph';
 import styles from './CarouselIntroduction.module.css';
 
 const CarouselIntroduction = ({ heading, description }) => (
@@ -14,7 +14,7 @@ const CarouselIntroduction = ({ heading, description }) => (
     >
       {heading}
     </Heading>
-    <P className={styles.description}>{description}</P>
+    <Paragraph className={styles.description}>{description}</Paragraph>
   </header>
 );
 
