@@ -17,6 +17,9 @@
     "build-storybook": "build-storybook -s ./public",
     "deploy-storybook": "storybook-to-ghpages"
   },
+  "pre-push": [
+    "lint"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aesop/aesop-gel.git"
