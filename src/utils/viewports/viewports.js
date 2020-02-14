@@ -6,7 +6,8 @@ export const BREAKPOINT_CONDITIONS = {
 };
 
 const { LARGE, MEDIUM, SMALL } = BREAKPOINTS;
-const CONSTRAINT_KEYS = {
+
+export const CONSTRAINT_KEYS = {
   MIN_WIDTH: 'minWidth',
   VIEWPORT: 'viewport',
 };
@@ -36,7 +37,7 @@ constraints.forEach(constraint => {
  * @param width: number
  * @return string
  */
-const getViewportForWidth = width => {
+export const getViewportForWidth = width => {
   let i = constraints.length - 1;
   while (i >= 0 && width < constraints[i].minWidth) {
     i--;
@@ -54,9 +55,10 @@ export const ascertainIsMobileOrTablet = () =>
     ? window.matchMedia(IS_MOBILE_OR_TABLET).matches
     : false;
 
-export {
+export default {
   CONSTRAINT_KEYS,
   constraints,
   constraintsByViewport,
   getViewportForWidth,
+  ascertainIsMobileOrTablet,
 };

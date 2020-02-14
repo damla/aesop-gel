@@ -11,13 +11,13 @@ const Heading = ({
   isFlush,
   hasTopMargin,
   size,
-  isSerifFont,
+  hasSerifFont,
 }) => {
   const classSet = cx(
     styles.base,
     { [styles.noTopMargin]: !hasTopMargin },
     { [styles.noMargin]: isFlush },
-    { [styles.serifFont]: isSerifFont },
+    { [styles.serifFont]: hasSerifFont },
     styles[size],
     className,
   );
@@ -35,7 +35,7 @@ Heading.propTypes = {
   hasTopMargin: PropTypes.bool,
   id: PropTypes.string,
   isFlush: PropTypes.bool,
-  isSerifFont: PropTypes.bool,
+  hasSerifFont: PropTypes.bool,
   level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]).isRequired,
   size: PropTypes.oneOf(['xSmall', 'small', 'medium', 'large', 'xLarge'])
     .isRequired,
@@ -47,7 +47,7 @@ Heading.defaultProps = {
   hasTopMargin: true,
   id: undefined,
   isFlush: false,
-  isSerifFont: false,
+  hasSerifFont: false,
   level: undefined,
   size: undefined,
 };

@@ -1,4 +1,4 @@
-const paragraphsFromDivs = original => {
+export const paragraphsFromDivs = original => {
   const result = original
     .replace('<div>&nbsp;</div>', '')
     .replace(new RegExp('<div>', 'gi'), '<p>')
@@ -11,4 +11,4 @@ const paragraphsFromDivs = original => {
   return result;
 };
 
-export default paragraphsFromDivs;
+export default { paragraphsFromDivs };

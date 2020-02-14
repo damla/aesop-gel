@@ -22,7 +22,7 @@
   font-size: rem(14px);
   line-height: 1.4;
 
-  &:first-child {
+  &:first-of-type {
     border-top: 2px solid var(--color-grey-20);
   }
 

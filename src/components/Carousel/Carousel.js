@@ -73,17 +73,19 @@ const Carousel = ({ className, introduction, slides }) => {
 
 Carousel.propTypes = {
   className: PropTypes.string,
-  introduction: {
+  introduction: PropTypes.shape({
     cta: PropTypes.object,
     description: PropTypes.string.isRequired,
     heading: PropTypes.string.isRequired,
-  },
-  slides: PropTypes.arrayOf({
-    description: PropTypes.string,
-    heading: PropTypes.string,
-    image: PropTypes.object.isRequired,
-    url: PropTypes.string,
-  }).isRequired,
+  }),
+  slides: PropTypes.arrayOf(
+    PropTypes.shape({
+      description: PropTypes.string,
+      heading: PropTypes.string,
+      image: PropTypes.object.isRequired,
+      url: PropTypes.string,
+    }),
+  ).isRequired,
 };
 
 Carousel.defaultProps = {
