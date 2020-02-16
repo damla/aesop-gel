@@ -83,12 +83,15 @@
 
 .hasFullWidthImage {
   z-index: var(--z-index-forground-content);
-  margin-right: 60px;
-  margin-left: auto;
+
+  @media (--viewport-lg) {
+    margin: auto 60px auto calc(50% + 60px);
+  }
 
   .reverse & {
-    margin-right: auto;
-    margin-left: 60px;
+    @media (--viewport-lg) {
+      margin: auto calc(50% + 60px) auto 60px;
+    }
   }
 }
 

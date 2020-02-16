@@ -12,7 +12,7 @@ export const CONSTRAINT_KEYS = {
   VIEWPORT: 'viewport',
 };
 
-const constraints = [
+export const constraints = [
   {
     [CONSTRAINT_KEYS.MIN_WIDTH]: SMALL.MIN_WIDTH,
     [CONSTRAINT_KEYS.VIEWPORT]: SMALL.VIEWPORT,
@@ -27,7 +27,7 @@ const constraints = [
   },
 ];
 
-const constraintsByViewport = {};
+export const constraintsByViewport = {};
 constraints.forEach(constraint => {
   constraintsByViewport[constraint.viewport] = constraint;
 });

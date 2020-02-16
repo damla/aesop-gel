@@ -17,6 +17,26 @@ import Paragraph, { P, ParagraphSet } from './Paragraph';
   </Story>
 </Preview>
 
+## API
+
+<Props of={Paragraph} />
+
+## Usage Example
+
+```
+import Paragraph from '@aesop-gel/components/Paragraph'
+
+...
+
+<Paragraph>
+  A lightweight, vitamin C-rich layering serum that soothes, replenishes and
+  balances skin with its complex blend of anti-oxidant, hydrating and
+  conditioning ingredients.
+</Paragraph>
+```
+
+## Variations
+
 ### ParagraphSet
 
 <Preview>
@@ -36,20 +56,23 @@ import Paragraph, { P, ParagraphSet } from './Paragraph';
   </Story>
 </Preview>
 
-## API
-
-<Props of={Paragraph} />
-
-## Usage example
+### ParagraphSet Usage Example
 
 ```
-import Paragraph from '@aesop-gel/components/Paragraph'
+import Paragraph, { ParagraphSet } from '@aesop-gel/components/Paragraph'
 
 ...
 
-<Paragraph>
-  A lightweight, vitamin C-rich layering serum that soothes, replenishes and
-  balances skin with its complex blend of anti-oxidant, hydrating and
-  conditioning ingredients.
-</Paragraph>
+<ParagraphSet>
+  <Paragraph>
+    A lightweight, vitamin C-rich layering serum that soothes, replenishes
+    and balances skin with its complex blend of anti-oxidant, hydrating and
+    conditioning ingredients.
+  </Paragraph>
+  <Paragraph>
+    A lightweight, vitamin C-rich layering serum that soothes, replenishes
+    and balances skin with its complex blend of anti-oxidant, hydrating and
+    conditioning ingredients.
+  </Paragraph>
+</ParagraphSet>
 ```

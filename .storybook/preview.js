@@ -1,6 +1,14 @@
-import { addDecorator } from '@storybook/react';
+import { addDecorator, addParameters } from '@storybook/react';
 import { withA11y } from '@storybook/addon-a11y';
 import { withKnobs } from '@storybook/addon-knobs';
+
+addParameters({
+  paddings: [
+    { name: 'Small', value: '16px' },
+    { name: 'Medium', value: '32px', default: true },
+    { name: 'Large', value: '64px' },
+  ],
+});
 
 addDecorator(withA11y);
 addDecorator(withKnobs);

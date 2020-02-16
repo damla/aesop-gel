@@ -1,8 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 import parse from 'html-react-parser';
 import marked from 'marked';
-import PROP_TYPES from './Figure.prop-types';
 import styles from './Figure.module.css';
 
 const Figure = ({ caption, children, className, id }) => {
@@ -20,6 +20,11 @@ const Figure = ({ caption, children, className, id }) => {
   );
 };
 
-Figure.propTypes = PROP_TYPES;
+Figure.propTypes = {
+  caption: PropTypes.string,
+  children: PropTypes.oneOfType([PropTypes.node, PropTypes.element]),
+  className: PropTypes.string,
+  id: PropTypes.string.isRequired,
+};
 
 export default Figure;

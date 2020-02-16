@@ -1,0 +1,53 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs } from '@storybook/addon-knobs';
+import { boolean } from '@storybook/addon-knobs';
+import CarouselFixture from './Carousel.fixture';
+import Carousel from './Carousel';
+
+<Meta title="Carousel" component={Carousel} decorators={[withKnobs]} />
+
+# Carousel
+
+<Preview>
+  <Story name="Base component">
+    <Carousel
+      hasEdges={boolean('hasEdges', false)}
+      introduction={CarouselFixture.introduction}
+      slides={CarouselFixture.slides}
+    />
+  </Story>
+</Preview>
+
+## API
+
+<Props of={Carousel} />
+
+## Usage Example
+
+```
+import Carousel from '@aesop-gel/components/Carousel'
+
+...
+
+<Carousel
+  introduction={{
+    heading: 'Accompany with',
+    description:
+      'Richly foaming Parsley Seed Facial Cleanser offers mild exfoliation from Lactic Acid to clarify and soften skin; complement twice weekly with Parsley Seed Cleansing Masque to extract impurities and purify pores. For intensive fortification and hydration, blend Hydrator with Parsley Seed Anti-Oxidant Facial Treatment.',
+  }}
+  slides={[
+    {
+      url: '/',
+      description: 'Example description',
+      heading: 'Parsley Seed Facial Cleanser',
+      image: {
+        altText: 'Image of Parsley Seed Facial Cleanser',
+        ...
+        large:
+          'https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ',
+      },
+    },
+    ...
+  ]}
+/>
+```
