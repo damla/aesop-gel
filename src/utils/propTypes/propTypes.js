@@ -5,3 +5,5 @@
  */
 export const getPropTypeOptionValues = options =>
   Object.values(options).map(value => value);
+
+export default { getPropTypeOptionValues };

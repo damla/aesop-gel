@@ -30,3 +30,5 @@ export const useOverflowHidden = isVisible => {
     };
   }, [hidden, isVisible, reset]);
 };
+
+export default useOverflowHidden;
