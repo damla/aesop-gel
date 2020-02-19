@@ -13,7 +13,7 @@ import PreviousButton from './components/PreviousButton';
 import Slide from './components/Slide';
 import styles from './Carousel.module.css';
 
-const Carousel = ({ className, introduction, slides }) => {
+const Carousel = ({ className, hasEdges, introduction, slides }) => {
   useWindowHasResized();
 
   if (typeof slides === undefined || slides.length === 0) {
@@ -21,7 +21,7 @@ const Carousel = ({ className, introduction, slides }) => {
   }
 
   const isMobileOrTablet = ascertainIsMobileOrTablet();
-  const classSet = cx(styles.base, className);
+  const classSet = cx(styles.base, className, { [styles.edges]: hasEdges });
 
   const settings = getCarouselSettings({
     className: classSet,
@@ -73,21 +73,25 @@ const Carousel = ({ className, introduction, slides }) => {
 
 Carousel.propTypes = {
   className: PropTypes.string,
-  introduction: {
+  hasEdges: PropTypes.bool,
+  introduction: PropTypes.shape({
     cta: PropTypes.object,
     description: PropTypes.string.isRequired,
     heading: PropTypes.string.isRequired,
-  },
-  slides: PropTypes.arrayOf({
-    description: PropTypes.string,
-    heading: PropTypes.string,
-    image: PropTypes.object.isRequired,
-    url: PropTypes.string,
-  }).isRequired,
+  }),
+  slides: PropTypes.arrayOf(
+    PropTypes.shape({
+      description: PropTypes.string,
+      heading: PropTypes.string,
+      image: PropTypes.object.isRequired,
+      url: PropTypes.string,
+    }),
+  ).isRequired,
 };
 
 Carousel.defaultProps = {
   className: undefined,
+  hasEdges: false,
   introduction: undefined,
   slides: undefined,
 };

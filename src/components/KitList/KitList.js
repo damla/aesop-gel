@@ -1,7 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 import List from '~/components/List';
-import PROP_TYPES from './KitList.prop-types';
 import styles from './KitList.module.css';
 
 const KitList = ({ items, className }) => {
@@ -16,6 +16,14 @@ const KitList = ({ items, className }) => {
   );
 };
 
-KitList.propTypes = PROP_TYPES;
+KitList.propTypes = {
+  className: PropTypes.string,
+  items: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
+
+KitList.defaultProps = {
+  className: undefined,
+  items: undefined,
+};
 
 export default KitList;

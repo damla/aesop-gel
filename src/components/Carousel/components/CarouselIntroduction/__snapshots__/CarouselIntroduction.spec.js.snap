@@ -5,8 +5,7 @@ exports[`<Carousel.CarouselIntroduction /> renders base component correctly 1`] 
   className="base"
 >
   <h4
-    className="base serifFont large heading"
-    id=""
+    className="base large heading"
   >
     Accompany with
   </h4>

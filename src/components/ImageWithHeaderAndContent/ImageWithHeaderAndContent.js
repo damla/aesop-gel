@@ -40,10 +40,10 @@ const ImageWithHeaderAndContent = ({
         })}
       >
         <header>
-          <Heading level="2" noMargin={true} size="xSmall">
+          <Heading level={2} noMargin={true} size="xSmall">
             {copy.title}
           </Heading>
-          <Heading level="3" size="xLarge" useSerifFont={true}>
+          <Heading level={3} size="xLarge" useSerifFont={true}>
             {copy.subTitle}
           </Heading>
           {copy.description && (
@@ -58,7 +58,7 @@ const ImageWithHeaderAndContent = ({
 
 ImageWithHeaderAndContent.propTypes = {
   className: PropTypes.string,
-  content: PropTypes.oneOf([PropTypes.element, PropTypes.node]),
+  content: PropTypes.any,
   copy: PropTypes.exact({
     description: PropTypes.string,
     subTitle: PropTypes.string.isRequired,

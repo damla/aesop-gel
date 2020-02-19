@@ -22,3 +22,5 @@ export const useEscapeKeyListener = onKeyPress => {
     };
   }, [onKeyPress]);
 };
+
+export default useEscapeKeyListener;

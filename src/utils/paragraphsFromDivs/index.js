@@ -1,3 +1,5 @@
-import paragraphsFromDivs from './paragraphsFromDivs';
+import { paragraphsFromDivs } from './paragraphsFromDivs';
 
-export default paragraphsFromDivs;
+export { paragraphsFromDivs };
+
+export default { paragraphsFromDivs };

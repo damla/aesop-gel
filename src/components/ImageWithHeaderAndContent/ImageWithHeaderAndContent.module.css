@@ -83,12 +83,15 @@
 
 .hasFullWidthImage {
   z-index: var(--z-index-forground-content);
-  margin-right: 60px;
-  margin-left: auto;
+
+  @media (--viewport-lg) {
+    margin: auto 60px auto calc(50% + 60px);
+  }
 
   .reverse & {
-    margin-right: auto;
-    margin-left: 60px;
+    @media (--viewport-lg) {
+      margin: auto calc(50% + 60px) auto 60px;
+    }
   }
 }
 
@@ -105,22 +108,37 @@
 }
 
 .theme-1 {
-  background-color: #ede5cf;
+  &,
+  .figure {
+    background-color: #ede5cf;
+  }
 }
 
 .theme-2 {
-  background-color: #b19c93;
+  &,
+  .figure {
+    background-color: #b19c93;
+  }
 }
 
 .theme-3 {
-  background-color: #f0c3a0;
+  &,
+  .figure {
+    background-color: #f0c3a0;
+  }
 }
 
 .theme-4 {
-  background-color: #d1d6c0;
+  &,
+  .figure {
+    background-color: #d1d6c0;
+  }
 }
 
 .theme-5 {
-  background-color: #252525;
-  color: #fffef2;
+  &,
+  .figure {
+    background-color: #252525;
+    color: #fffef2;
+  }
 }

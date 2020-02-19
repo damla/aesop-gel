@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DefinitionList /> renders base component correctly 1`] = `
+<dl
+  className="base"
+>
+  <dt
+    className="term"
+  >
+    Aroma
+  </dt>
+  <dd
+    className="description"
+  >
+    Fresh, woody, citrus
+  </dd>
+  <dt
+    className="term"
+  >
+    Usage
+  </dt>
+  <dd
+    className="description"
+  >
+    Spray  two to three pumps throughout the immediate space and refresh as needed; the aroma will last for several hours.
+  </dd>
+</dl>
+`;

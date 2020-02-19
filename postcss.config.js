@@ -3,7 +3,12 @@ module.exports = {
     require('postcss-import')({ path: './src' }),
     require('postcss-extend-rule')(),
     require('postcss-mixins')(),
-    require('postcss-rem')(),
+    require('postcss-rem')({
+      baseline: 16,
+      convert: 'px',
+      fallback: false,
+      precision: 5,
+    }),
     require('postcss-url')(),
     require('postcss-color-mod-function')(),
     require('postcss-for')(),
