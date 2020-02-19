@@ -119,6 +119,7 @@
     "prettier-stylelint": "^0.4.2",
     "prop-types": "^15.7.2",
     "react-test-renderer": "^16.8.0",
+    "rollup": "^1.31.1",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-babel-minify": "^9.1.1",
     "rollup-plugin-commonjs": "^10.1.0",
