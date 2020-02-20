@@ -19,18 +19,19 @@ const Button = ({
 }) => {
   const classSet = cx(
     styles.base,
+    styles.action,
     { [styles.alternate]: isAlternate },
-    { [styles.block]: !isInline },
+    { [styles.blockStyle]: !isInline },
     { [styles.disabled]: !isEnabled },
     { [styles.external]: external },
     { [styles.lightText]: hasLightText },
-    { [styles.inline]: isInline },
+    { [styles.inlineStyle]: isInline },
     className,
   );
 
   return (
     <button
-      className={cx(classSet, styles.action)}
+      className={classSet}
       data-test-ref={dataTestRef}
       disabled={!isEnabled}
       id={id}

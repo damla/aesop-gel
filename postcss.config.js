@@ -13,7 +13,9 @@ module.exports = {
     require('postcss-color-mod-function')(),
     require('postcss-for')(),
     require('postcss-nested')({ preserveEmpty: false }),
-    require('postcss-custom-properties'),
+    require('postcss-custom-properties')({
+      preserve: false,
+    }),
     require('postcss-preset-env')({ stage: 0, browsers: 'last 2 versions' }),
   ],
 };

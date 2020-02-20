@@ -23,7 +23,7 @@
 
     .slick-list {
       position: relative;
-      margin: 0 40px 40px;
+      margin: 40px 100px 40px;
 
       /*
       @media (--viewport-md) {

@@ -1,5 +1,6 @@
-const ghpages = require('gh-pages', {
-  branch: 'develop',
-});
+const ghpages = require('gh-pages');
 
-ghpages.publish('storybook-static');
+ghpages.publish('storybook-static', {
+  branch: 'develop',
+  message: 'Auto-generated commit: Update Storybook',
+});

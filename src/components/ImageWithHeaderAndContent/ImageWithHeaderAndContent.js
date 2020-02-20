@@ -39,18 +39,25 @@ const ImageWithHeaderAndContent = ({
           [styles.hasFullWidthImage]: hasFullWidthImage,
         })}
       >
-        <header>
-          <Heading level={2} noMargin={true} size="xSmall">
-            {copy.title}
-          </Heading>
-          <Heading level={3} size="xLarge" useSerifFont={true}>
-            {copy.subTitle}
-          </Heading>
-          {copy.description && (
-            <P className={styles.description}>{copy.description}</P>
-          )}
-        </header>
-        {content}
+        <div className={styles.wrapper}>
+          <header>
+            <Heading
+              className={styles.title}
+              level={2}
+              noMargin={true}
+              size="xSmall"
+            >
+              {copy.title}
+            </Heading>
+            <Heading hasSerifFont={true} level={3} size="xLarge">
+              {copy.subTitle}
+            </Heading>
+            {copy.description && (
+              <P className={styles.description}>{copy.description}</P>
+            )}
+          </header>
+          {content}
+        </div>
       </div>
     </section>
   );

@@ -61,7 +61,7 @@
   margin: 0;
   color: var(--color-grey-30);
   font-family: var(--font-family-sans-serif-regular);
-  font-size: 0.9rem;
+  font-size: rem(15px);
   line-height: 1.8;
 }
 
