@@ -552,7 +552,7 @@ sans-serif;
     }
 .Carousel-module_base__2Zak0 .slick-list {
       position: relative;
-      margin: 40px 100px 40px;
+      margin: 100px 80px 125px;
 
       /*
       @media (--viewport-md) {
@@ -925,7 +925,8 @@ sans-serif;
   }
 .ImageWithHeaderAndContent-module_theme-1__2-Tbt,
   .ImageWithHeaderAndContent-module_theme-1__2-Tbt .ImageWithHeaderAndContent-module_figure__1SmE4 {
-    background-color: #ede5cf;
+    /* background-color: #ede5cf; */
+    background-color: #f6f5e8;
   }
 .ImageWithHeaderAndContent-module_theme-2__3dySr,
   .ImageWithHeaderAndContent-module_theme-2__3dySr .ImageWithHeaderAndContent-module_figure__1SmE4 {
