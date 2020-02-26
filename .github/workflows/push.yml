@@ -1,4 +1,4 @@
-name: Test
+name: Push
 on:
   push
 
@@ -8,6 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          registry-url: 'https://npm.pkg.github.com'
 
       - name: Install
         run: npm ci
@@ -19,6 +22,6 @@ jobs:
       #   run: npm run test
 
       - name: Publish!
-        run: |
-          npm login --registry=https://npm.pkg.github.com/
-          npm publish
+        run: npm publish
+        env:
+           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
