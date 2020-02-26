@@ -1,5 +1,8 @@
 {
-  "name": "aesop-gel",
+  "name": "@aesop/aesop-gel",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/aesop"
+  },
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -30,7 +33,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aesop/aesop-gel.git"
+    "url": "git://github.com/aesop/aesop-gel.git"
   },
   "keywords": [],
   "license": "ISC",
