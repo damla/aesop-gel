@@ -39,14 +39,15 @@
   },
   "homepage": "https://github.com/aesop/aesop-gel#readme",
   "peerDependencies": {
-    "react": ">=16.8.0",
-    "prop-types": ">=15.7.2",
     "classnames": ">=2.2.6",
-    "react-slick": ">=0.25.2",
     "html-react-parser": ">=0.10.0",
+    "lodash": ">=4.17.15",
     "marked": ">=0.8.0",
-    "uuid": ">=3.4.0",
-    "lodash": ">=4.17.15"
+    "prop-types": ">=15.7.2",
+    "react-dom": ">=16.8.0",
+    "react-slick": ">=0.25.2",
+    "react": ">=16.8.0",
+    "uuid": ">=3.4.0"
   },
   "dependencies": {
     "@babel/core": "^7.7.4",

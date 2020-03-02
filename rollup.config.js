@@ -7,10 +7,9 @@ import path from 'path';
 import postcss from 'rollup-plugin-postcss';
 import replace from 'rollup-plugin-replace';
 import resolve from 'rollup-plugin-node-resolve';
-import postcssModules from 'postcss-modules';
+import pkg from './package.json';
 
-const cssExportMap = {};
-
+/** @TODO set up actual env vars */
 const NODE_ENV = 'development';
 
 export default {
@@ -20,18 +19,7 @@ export default {
     format: 'esm',
     sourcemap: true,
   },
-  // All the used libs needs to be here
-  external: [
-    'classnames',
-    'html-react-parser',
-    'lodash',
-    'marked',
-    'prop-types',
-    'react-slick',
-    'react',
-    'react-dom',
-    'uuid',
-  ],
+  external: [...Object.keys(pkg.peerDependencies || {})],
   plugins: [
     alias({
       entries: [{ find: '~', replacement: path.resolve(__dirname, 'src') }],
