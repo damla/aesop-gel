@@ -15,7 +15,7 @@ const NODE_ENV = 'development';
 export default {
   input: 'src/index.js',
   output: {
-    file: 'dist/bundle.js',
+    file: 'dist/index.js',
     format: 'esm',
     sourcemap: true,
   },
