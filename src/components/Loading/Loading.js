@@ -1,9 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
-import PROP_TYPES from './Loading.prop-types';
 import styles from './Loading.module.css';
 
-const Loading = ({ className, isLight = false, isLoading, small = false }) => {
+const Loading = ({ className, isLight, isLoading, small }) => {
   const classSet = cx(
     styles.base,
     {
@@ -23,6 +23,18 @@ const Loading = ({ className, isLight = false, isLoading, small = false }) => {
   );
 };
 
-Loading.propTypes = PROP_TYPES;
+Loading.propTypes = {
+  className: PropTypes.string,
+  isLight: PropTypes.bool,
+  isLoading: PropTypes.bool.isRequired,
+  small: PropTypes.bool,
+};
+
+Loading.defaultProps = {
+  className: undefined,
+  isLight: false,
+  isLoading: undefined,
+  small: false,
+};
 
 export default Loading;

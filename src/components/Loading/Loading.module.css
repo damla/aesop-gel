@@ -1,12 +1,12 @@
 @import 'styles/variables/index';
+@import 'styles/key-frame.css';
+@import 'styles/font-face.css';
 
 .base {
   display: flex;
   width: 100%;
-  height: 8px;
-  align-items: center;
+  height: 30px;
   justify-content: center;
-  margin-top: -4px;
   opacity: 0;
   pointer-events: none;
   transition: opacity 50ms var(--easing-ease-in-out-cubic);
@@ -19,8 +19,8 @@
 
 .dot {
   display: block;
-  width: 7px;
-  height: 7px;
+  width: 30px;
+  height: 30px;
   margin: 0 3px;
   background: var(--color-grey-20);
   border-radius: 100%;
