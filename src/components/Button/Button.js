@@ -7,12 +7,12 @@ const Button = ({
   children,
   className,
   dataTestRef,
-  handleClick,
   hasLightText,
   id,
   isAlternate,
   isEnabled,
   isInline,
+  onClick,
   tabIndex,
   title,
   type,
@@ -35,7 +35,7 @@ const Button = ({
       data-test-ref={dataTestRef}
       disabled={!isEnabled}
       id={id}
-      onClick={handleClick}
+      onClick={onClick}
       tabIndex={tabIndex}
       title={title}
       type={type}
@@ -49,12 +49,12 @@ Button.propTypes = {
   children: PropTypes.any.isRequired,
   className: PropTypes.string,
   dataTestRef: PropTypes.string,
-  handleClick: PropTypes.func,
   hasLightText: PropTypes.bool,
   id: PropTypes.string,
   isAlternate: PropTypes.bool,
   isEnabled: PropTypes.bool,
   isInline: PropTypes.bool,
+  onClick: PropTypes.func,
   tabIndex: PropTypes.number,
   title: PropTypes.string.isRequired,
   type: PropTypes.oneOf(['button', 'reset', 'submit']),
@@ -64,12 +64,12 @@ Button.defaultProps = {
   children: undefined,
   className: undefined,
   dataTestRef: undefined,
-  handleClick: undefined,
   hasLightText: undefined,
   id: undefined,
   isAlternate: false,
   isEnabled: true,
   isInline: false,
+  onClick: undefined,
   tabIndex: undefined,
   title: undefined,
   type: 'button',
