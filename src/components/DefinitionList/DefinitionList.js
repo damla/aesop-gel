@@ -13,7 +13,7 @@ const DefinitionList = ({ className, items }) => {
   }
 
   return (
-    <Transition activeOnMount={true} type="shiftInDown">
+    <Transition isActiveOnMount={true} type="shiftInDown">
       <dl className={classSet}>
         ...
         {items
