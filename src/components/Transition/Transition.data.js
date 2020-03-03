@@ -4,8 +4,10 @@ const fade = {
   classNames: {
     enter: transitions.fadeEnter,
     enterActive: transitions.fadeEnterActive,
+    enterDone: transitions.fadeEnterDone,
     exit: transitions.fadeExit,
     exitActive: transitions.fadeExitActive,
+    exitDone: transitions.fadeExitDone,
   },
   timeout: 500,
 };
@@ -13,9 +15,11 @@ const fade = {
 const slowFade = {
   classNames: {
     enter: transitions.slowFadeEnter,
-    enterActive: transitions.slowFadeActive,
+    enterActive: transitions.slowFadeEnterActive,
+    enterDone: transitions.slowFadeEnterDone,
     exit: transitions.slowFadeExit,
     exitActive: transitions.slowFadeExitActive,
+    exitDone: transitions.slowFadeExitDone,
   },
   timeout: 1500,
 };
@@ -23,9 +27,11 @@ const slowFade = {
 const shiftInLeft = {
   classNames: {
     enter: transitions.shiftInLeftEnter,
-    enterActive: transitions.shiftInLeftActive,
+    enterActive: transitions.shiftInLeftEnterActive,
+    enterDone: transitions.shiftInLeftEnterDone,
     exit: transitions.shiftInLeftExit,
     exitActive: transitions.shiftInLeftExitActive,
+    exitDone: transitions.shiftInLeftExitDone,
   },
   timeout: 1500,
 };
@@ -33,9 +39,11 @@ const shiftInLeft = {
 const shiftInDown = {
   classNames: {
     enter: transitions.shiftInDownEnter,
-    enterActive: transitions.shiftInDownActive,
+    enterActive: transitions.shiftInDownEnterActive,
+    enterDone: transitions.shiftInDownEnterDone,
     exit: transitions.shiftInDownExit,
     exitActive: transitions.shiftInDownExitActive,
+    exitDone: transitions.shiftInDownExitDone,
   },
   timeout: 1500,
 };
@@ -44,8 +52,10 @@ const slideDown = {
   classNames: {
     enter: transitions.slideDownEnter,
     enterActive: transitions.slideDownEnterActive,
+    enterDone: transitions.slideDownEnterDone,
     exit: transitions.slideDownExit,
     exitActive: transitions.slideDownExitActive,
+    exitDone: transitions.slideDownExitDone,
   },
   timeout: 500,
 };
@@ -54,8 +64,10 @@ const slideRight = {
   classNames: {
     enter: transitions.slideRightEnter,
     enterActive: transitions.slideRightEnterActive,
+    enterDone: transitions.slideRightEnterDone,
     exit: transitions.slideRightExit,
     exitActive: transitions.slideRightExitActive,
+    exitDone: transitions.slideRightExitDone,
   },
   timeout: 500,
 };
@@ -64,8 +76,10 @@ const zoom = {
   classNames: {
     enter: transitions.zoomEnter,
     enterActive: transitions.zoomEnterActive,
+    enterDone: transitions.zoomEnterDone,
     exit: transitions.zoomExit,
     exitActive: transitions.zoomExitActive,
+    exitDone: transitions.zoomExitDone,
   },
   timeout: 500,
 };

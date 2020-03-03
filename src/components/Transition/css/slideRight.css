@@ -13,6 +13,11 @@
   visibility: visible;
 }
 
+.slideRightEnterDone {
+  transform: translate3d(0, 0, 0);
+  visibility: visible;
+}
+
 .slideRightExit {
   transform: translate3d(0, 0, 0);
   visibility: visible;
@@ -23,5 +28,10 @@
   transition:
     transform 500ms var(--easing-ease-out-cubic),
     visibility 500ms var(--easing-ease-out-cubic);
+  visibility: hidden;
+}
+
+.slideRightExitDone {
+  transform: translate3d(-100%, 0, 0);
   visibility: hidden;
 }

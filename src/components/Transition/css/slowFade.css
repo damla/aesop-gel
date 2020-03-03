@@ -4,9 +4,13 @@
   opacity: 0;
 }
 
-.slowFadeActive {
+.slowFadeEnterActive {
   opacity: 1;
   transition: opacity 1500ms var(--easing-ease-out-cubic);
+}
+
+.slowFadeEnterDone {
+  opacity: 1;
 }
 
 .slowFadeExit {
@@ -16,4 +20,8 @@
 .slowFadeExitActive {
   opacity: 0;
   transition: opacity 1500ms var(--easing-ease-out-cubic);
+}
+
+.slowFadeExitDone {
+  opacity: 0;
 }

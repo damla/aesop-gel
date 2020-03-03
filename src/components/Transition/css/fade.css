@@ -9,6 +9,10 @@
   transition: opacity 500ms var(--easing-ease-out-cubic);
 }
 
+.fadeEnterDone {
+  opacity: 1;
+}
+
 .fadeExit {
   opacity: 1;
 }
@@ -16,4 +20,8 @@
 .fadeExitActive {
   opacity: 0;
   transition: opacity 500ms var(--easing-ease-out-cubic);
+}
+
+.fadeExitDone {
+  opacity: 0;
 }

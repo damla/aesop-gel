@@ -13,6 +13,11 @@
     opacity 500ms var(--easing-ease-out-cubic);
 }
 
+.zoomEnterDone {
+  opacity: 1;
+  transform: scale3d(1, 1, 1);
+}
+
 .zoomExit {
   opacity: 1;
   transform: scale3d(1, 1, 1);
@@ -24,4 +29,9 @@
   transition:
     transform 500ms var(--easing-ease-out-cubic),
     opacity 500ms var(--easing-ease-out-cubic);
+}
+
+.zoomExitDone {
+  opacity: 0;
+  transform: scale3d(0.9, 0.9, 0.9);
 }
