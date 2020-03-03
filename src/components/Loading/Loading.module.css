@@ -5,11 +5,15 @@
 .base {
   display: flex;
   width: 100%;
-  height: 30px;
+  height: 7px;
   justify-content: center;
   opacity: 0;
   pointer-events: none;
   transition: opacity 50ms var(--easing-ease-in-out-cubic);
+}
+
+.small {
+  height: 7px;
 }
 
 .isLoading {
@@ -19,8 +23,8 @@
 
 .dot {
   display: block;
-  width: 30px;
-  height: 30px;
+  width: 7px;
+  height: 7px;
   margin: 0 3px;
   background: var(--color-grey-20);
   border-radius: 100%;

@@ -6,7 +6,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
   dir="ltr"
 >
   <button
-    className="base external inline base action"
+    className="base action external inlineStyle base"
     disabled={false}
     onClick={null}
     title="next slide"
@@ -78,7 +78,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
             className="base"
           >
             <h4
-              className="base large heading"
+              className="base serifFont xLarge heading"
             >
               Accompany with
             </h4>
@@ -120,11 +120,13 @@ exports[`<Carousel /> renders base component correctly 1`] = `
             >
               <div>
                 <h5
-                  className="base xSmall title"
+                  className="base xSmall heading"
                 >
                   Parsley Seed Facial Cleanser
                 </h5>
-                <div>
+                <div
+                  className="description"
+                >
                   Example description
                 </div>
               </div>
@@ -185,7 +187,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
             >
               <div>
                 <h5
-                  className="base xSmall title"
+                  className="base xSmall heading"
                 >
                   Parsley Seed Facial Cleanser
                 </h5>
@@ -247,7 +249,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
             >
               <div>
                 <h5
-                  className="base xSmall title"
+                  className="base xSmall heading"
                 >
                   Parsley Seed Cleansing Masque
                 </h5>
@@ -308,7 +310,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
             >
               <div>
                 <h5
-                  className="base xSmall title"
+                  className="base xSmall heading"
                 >
                   Parsley Seed Anti-Oxidant Facial Treatment with No URL
                 </h5>
@@ -344,7 +346,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
     </div>
   </div>
   <button
-    className="base external inline base action"
+    className="base action external inlineStyle base"
     disabled={false}
     onClick={[Function]}
     title="next slide"
@@ -445,11 +447,13 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
             >
               <div>
                 <h5
-                  className="base xSmall title"
+                  className="base xSmall heading"
                 >
                   Parsley Seed Facial Cleanser
                 </h5>
-                <div>
+                <div
+                  className="description"
+                >
                   Example description
                 </div>
               </div>
@@ -510,7 +514,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
             >
               <div>
                 <h5
-                  className="base xSmall title"
+                  className="base xSmall heading"
                 >
                   Parsley Seed Facial Cleanser
                 </h5>
@@ -572,7 +576,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
             >
               <div>
                 <h5
-                  className="base xSmall title"
+                  className="base xSmall heading"
                 >
                   Parsley Seed Cleansing Masque
                 </h5>
@@ -633,7 +637,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
             >
               <div>
                 <h5
-                  className="base xSmall title"
+                  className="base xSmall heading"
                 >
                   Parsley Seed Anti-Oxidant Facial Treatment with No URL
                 </h5>
@@ -725,11 +729,13 @@ exports[`<Carousel /> renders component correctly if no \`url\` member is provid
             >
               <div>
                 <h5
-                  className="base xSmall title"
+                  className="base xSmall heading"
                 >
                   Parsley Seed Facial Cleanser
                 </h5>
-                <div>
+                <div
+                  className="description"
+                >
                   Example description
                 </div>
               </div>

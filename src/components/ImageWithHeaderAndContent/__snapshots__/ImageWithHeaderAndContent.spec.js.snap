@@ -26,57 +26,61 @@ exports[`<ImageWithHeaderAndContent /> renders base component correctly 1`] = `
   <div
     className="container"
   >
-    <header>
-      <h2
-        className="base xSmall"
-      >
-        How to use
-      </h2>
-      <h3
-        className="base xLarge"
-      >
-        A comprehensive skin care regimen, ideal in urban environments.
-      </h3>
-      <p
-        className="base description"
-      >
-        Morning and evening, use Parsley Seed Facial Cleansing Oil, Facial Toner, Anti-Oxidant Serum, and Eye Cream. Twice weekly, apply Masque after cleansing; follow with Facial Treatment.
-      </p>
-    </header>
-    <dl
-      className="base"
+    <div
+      className="wrapper"
     >
-      <dt
-        className="term"
+      <header>
+        <h2
+          className="base xSmall title"
+        >
+          How to use
+        </h2>
+        <h3
+          className="base serifFont xLarge"
+        >
+          A comprehensive skin care regimen, ideal in urban environments.
+        </h3>
+        <p
+          className="base description"
+        >
+          Morning and evening, use Parsley Seed Facial Cleansing Oil, Facial Toner, Anti-Oxidant Serum, and Eye Cream. Twice weekly, apply Masque after cleansing; follow with Facial Treatment.
+        </p>
+      </header>
+      <dl
+        className="base"
       >
-        Dosage
-      </dt>
-      <dd
-        className="description"
-      >
-        Desired amount
-      </dd>
-      <dt
-        className="term"
-      >
-        Texture
-      </dt>
-      <dd
-        className="description"
-      >
-        Water-soluble cream with fine grain
-      </dd>
-      <dt
-        className="term"
-      >
-        Aroma
-      </dt>
-      <dd
-        className="description"
-      >
-        Herbaceous, floral, earthy
-      </dd>
-    </dl>
+        <dt
+          className="term"
+        >
+          Dosage
+        </dt>
+        <dd
+          className="description"
+        >
+          Desired amount
+        </dd>
+        <dt
+          className="term"
+        >
+          Texture
+        </dt>
+        <dd
+          className="description"
+        >
+          Water-soluble cream with fine grain
+        </dd>
+        <dt
+          className="term"
+        >
+          Aroma
+        </dt>
+        <dd
+          className="description"
+        >
+          Herbaceous, floral, earthy
+        </dd>
+      </dl>
+    </div>
   </div>
 </section>
 `;
