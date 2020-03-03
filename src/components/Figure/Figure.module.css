@@ -1,13 +1,14 @@
-@import 'styles/variables/index';
+@import 'styles/index';
 
 .base {
+  margin: 0;
 }
 
 .caption {
   margin: 0;
   color: var(--color-grey-30);
   font-family: var(--font-family-sans-serif-regular);
-  font-size: 0.9rem;
+  font-size: rem(15px);
   line-height: 1.8;
 }
 
@@ -18,14 +19,14 @@
   @nest .fullBleedImage & {
     width: 100%;
     padding: 0 var(--layout-sm-spacing);
-    margin-top: 25px;
     border: none;
+    margin-top: 25px;
 
     @media (--viewport-md) {
       width: calc(100% - (100% / 6));
       padding: 0 var(--layout-md-spacing) 25px 0;
-      margin-left: calc(100% * 1 / 6);
       border-bottom: 1px solid var(--color-grey-60);
+      margin-left: calc(100% * 1 / 6);
     }
 
     @media (--viewport-lg) {

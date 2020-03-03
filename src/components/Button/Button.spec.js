@@ -13,10 +13,10 @@ describe('<Button />', () => {
     expect(Button).toBeDefined();
   });
 
-  it('renders base component correctly with `handleClick` prop', () => {
+  it('renders base component correctly with `onClick` prop', () => {
     const tree = renderer
       .create(
-        <Button className="aesop" handleClick={mockFn} title="Aēsop">
+        <Button className="aesop" onClick={mockFn} title="Aēsop">
           Button
         </Button>,
       )
@@ -71,7 +71,7 @@ describe('<Button />', () => {
   it('renders disabled variation correctly', () => {
     const tree = renderer
       .create(
-        <Button handleClick={mockFn} isEnabled={false} title="Aēsop">
+        <Button isEnabled={false} onClick={mockFn} title="Aēsop">
           Disabled Button
         </Button>,
       )
@@ -82,7 +82,7 @@ describe('<Button />', () => {
   it('renders alternate variation correctly', () => {
     const tree = renderer
       .create(
-        <Button handleClick={mockFn} isAlternate={true} title="Aēsop">
+        <Button isAlternate={true} onClick={mockFn} title="Aēsop">
           Alternate Button
         </Button>,
       )
@@ -92,7 +92,7 @@ describe('<Button />', () => {
 
   it('should call mock function when button is clicked', () => {
     shallow(
-      <Button handleClick={mockFn} title="Aēsop">
+      <Button onClick={mockFn} title="Aēsop">
         Aēsop
       </Button>,
     ).simulate('click');
@@ -102,9 +102,9 @@ describe('<Button />', () => {
 });
 
 describe('<Button /> error handling.', () => {
-  it('should return `null` if `handleClick` and `icon` are passed as props', () => {
+  it('should return `null` if `onClick` and `icon` are passed as props', () => {
     const component = shallow(
-      <Button handleClick={mockFn} icon={true} title="Aēsop">
+      <Button icon={true} onClick={mockFn} title="Aēsop">
         Aēsop
       </Button>,
     );
@@ -138,7 +138,7 @@ describe('<Button /> error handling.', () => {
     expect(component.type()).toEqual(null);
   });
 
-  it('should return `null` if at least `to`, `href` or `handleClick` are not provided as a prop', () => {
+  it('should return `null` if at least `to`, `href` or `onClick` are not provided as a prop', () => {
     const component = shallow(<Button title="Aēsop">Aēsop</Button>);
     expect(component.type()).toEqual(null);
   });

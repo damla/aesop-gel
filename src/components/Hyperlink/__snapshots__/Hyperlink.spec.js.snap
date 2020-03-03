@@ -2,7 +2,7 @@
 
 exports[`<Hyperlink /> renders base component correctly 1`] = `
 <button
-  className="base block external action"
+  className="base action blockStyle external"
   disabled={false}
   title="Link to http://aesop.com"
   type="button"

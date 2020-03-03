@@ -1,0 +1,27 @@
+@import 'styles/variables/index';
+
+.slowFadeEnter {
+  opacity: 0;
+}
+
+.slowFadeEnterActive {
+  opacity: 1;
+  transition: opacity 1500ms var(--easing-ease-out-cubic);
+}
+
+.slowFadeEnterDone {
+  opacity: 1;
+}
+
+.slowFadeExit {
+  opacity: 1;
+}
+
+.slowFadeExitActive {
+  opacity: 0;
+  transition: opacity 1500ms var(--easing-ease-out-cubic);
+}
+
+.slowFadeExitDone {
+  opacity: 0;
+}

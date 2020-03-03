@@ -1,7 +1,12 @@
-@import 'styles/variables/index';
+@import 'styles/index';
 
 .base {
   padding: var(--layout-sm-spacing);
+
+  img {
+    width: 100%;
+    height: auto;
+  }
 
   @media (--viewport-md) {
     padding: var(--layout-md-spacing) 0;
@@ -22,6 +27,10 @@
   position: relative;
   width: 100%;
   padding: 0;
+
+  img {
+    width: 100%;
+  }
 }
 
 .captionWrapper {
@@ -61,7 +70,7 @@
   margin: 0;
   color: var(--color-grey-30);
   font-family: var(--font-family-sans-serif-regular);
-  font-size: 0.9rem;
+  font-size: rem(15px);
   line-height: 1.8;
 }
 

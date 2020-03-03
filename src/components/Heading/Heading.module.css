@@ -1,5 +1,4 @@
-@import 'styles/variables/index.css';
-@import 'styles/mixins/index.css';
+@import 'styles/index';
 
 .base {
   @extend %title-typography;
@@ -19,46 +18,57 @@
 }
 
 .xSmall {
-  font-size: 1rem;
+  /* font-size: 1rem; */
+  font-size: rem(14px);
 }
 
 .small {
-  font-size: 1.1rem;
+  /* font-size: 1.1rem; */
+  font-size: rem(16px);
 
   @media (--viewport-md) {
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
+    font-size: rem(18px);
   }
 }
 
 .medium {
-  font-size: 1.3rem;
+  /* font-size: 1.3rem; */
+  font-size: rem(20px);
 
   @media (--viewport-md) {
-    font-size: 1.4rem;
+    /* font-size: 1.4rem; */
+    font-size: rem(22px);
   }
 }
 
 .large {
-  font-size: 1.45rem;
+  /* font-size: ; 1.45rem */
+  font-size: rem(24px);
   line-height: 1.5;
 
   @media (--viewport-md) {
-    font-size: 1.55rem;
+    /* font-size: 1.55rem; */
+    font-size: rem(26px);
   }
 
   @media (--viewport-lg) {
-    font-size: 1.65rem;
+    /* font-size: 1.65rem; */
+    font-size: rem(28px);
   }
 }
 
 .xLarge {
-  font-size: 1.6rem;
+  /* font-size: 1.6rem; */
+  font-size: rem(26px);
 
   @media (--viewport-md) {
-    font-size: 1.7rem;
+    /* font-size: 1.7rem; */
+    font-size: rem(28px);
   }
 
   @media (--viewport-lg) {
-    font-size: 1.9rem;
+    /* font-size: 1.9rem; */
+    font-size: rem(30px);
   }
 }

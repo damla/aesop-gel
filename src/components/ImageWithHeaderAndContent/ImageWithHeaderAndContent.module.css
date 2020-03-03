@@ -1,5 +1,4 @@
-@import 'styles/variables/index';
-@import 'styles/mixins/index';
+@import 'styles/index';
 
 .base {
   position: relative;
@@ -25,10 +24,44 @@
   }
 }
 
+.title.title {
+  font-family: var(--font-family-sans-serif-medium);
+}
+
 .reverse {
   @media (--viewport-lg) {
     display: flex;
     flex-direction: row-reverse;
+  }
+}
+
+/** @TODO finish responsive styles */
+.wrapper {
+  /* width: 66.66667%;
+  flex-basis: auto;
+  flex-direction: column;
+  padding: 115px 0;
+  margin: auto; */
+
+  padding: 76px 20px;
+
+  @media (--viewport-md) {
+    display: flex;
+    flex-basis: auto;
+    padding: 110px 34px;
+  }
+
+  @media (--viewport-lg) {
+    /* display: block;
+    width: 33.33%;
+    padding: 115px 0;
+    margin: auto 60px; */
+
+    width: 66.66667%;
+    flex-basis: auto;
+    flex-direction: column;
+    padding: 115px 0;
+    margin: auto;
   }
 }
 
@@ -42,19 +75,19 @@
 }
 
 .container {
-  padding: 76px 20px;
+  /* padding: 76px 20px; */
 
   @media (--viewport-md) {
-    display: flex;
+    /* display: flex;
     flex-basis: auto;
-    padding: 110px 34px;
+    padding: 110px 34px; */
   }
 
   @media (--viewport-lg) {
-    display: block;
+    /* display: block;
     width: 33.33%;
     padding: 115px 0;
-    margin: auto 60px;
+    margin: auto 60px; */
   }
 
   header {
@@ -107,10 +140,15 @@
   }
 }
 
+/** @TODO get actual theme colours */
+/** @TODO set up Theme context funtionality */
+/** @TODO add hex values to constants */
+
 .theme-1 {
   &,
   .figure {
-    background-color: #ede5cf;
+    /* background-color: #ede5cf; */
+    background-color: #f6f5e8;
   }
 }
 

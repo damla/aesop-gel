@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component - Element - List renders base component correctly 1`] = `
+<ul
+  className="base"
+>
+  <li
+    className="item"
+  >
+    Fragrance
+  </li>
+  <li
+    className="item"
+  >
+    Gifts
+  </li>
+</ul>
+`;

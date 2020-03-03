@@ -2,7 +2,7 @@
 
 exports[`<Button /> renders alternate variation correctly 1`] = `
 <button
-  className="base alternate block external action"
+  className="base action alternate blockStyle external"
   disabled={false}
   onClick={[MockFunction]}
   title="Aēsop"
@@ -14,7 +14,7 @@ exports[`<Button /> renders alternate variation correctly 1`] = `
 
 exports[`<Button /> renders base component correct with \`type\` prop 1`] = `
 <button
-  className="base block external aesop action"
+  className="base action blockStyle external aesop"
   disabled={false}
   title="Aēsop"
   type="submit"
@@ -23,9 +23,20 @@ exports[`<Button /> renders base component correct with \`type\` prop 1`] = `
 </button>
 `;
 
-exports[`<Button /> renders base component correctly with \`handleClick\` prop 1`] = `
+exports[`<Button /> renders base component correctly with \`href\` prop 1`] = `
 <button
-  className="base block external aesop action"
+  className="base action blockStyle external"
+  disabled={false}
+  title="Aēsop"
+  type="button"
+>
+  Button
+</button>
+`;
+
+exports[`<Button /> renders base component correctly with \`onClick\` prop 1`] = `
+<button
+  className="base action blockStyle external aesop"
   disabled={false}
   onClick={[MockFunction]}
   title="Aēsop"
@@ -35,20 +46,9 @@ exports[`<Button /> renders base component correctly with \`handleClick\` prop 1
 </button>
 `;
 
-exports[`<Button /> renders base component correctly with \`href\` prop 1`] = `
-<button
-  className="base block external action"
-  disabled={false}
-  title="Aēsop"
-  type="button"
->
-  Button
-</button>
-`;
-
 exports[`<Button /> renders base component correctly with \`to\` prop 1`] = `
 <button
-  className="base block external action"
+  className="base action blockStyle external"
   disabled={false}
   title="Aēsop"
   type="button"
@@ -59,7 +59,7 @@ exports[`<Button /> renders base component correctly with \`to\` prop 1`] = `
 
 exports[`<Button /> renders component with icon correctly 1`] = `
 <button
-  className="base block external action"
+  className="base action blockStyle external"
   disabled={false}
   title="Aēsop"
   type="button"
@@ -70,7 +70,7 @@ exports[`<Button /> renders component with icon correctly 1`] = `
 
 exports[`<Button /> renders disabled variation correctly 1`] = `
 <button
-  className="base block disabled external action"
+  className="base action blockStyle disabled external"
   disabled={true}
   onClick={[MockFunction]}
   title="Aēsop"
