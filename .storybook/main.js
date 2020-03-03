@@ -59,7 +59,7 @@ module.exports = {
     config.module.rules.push({
       test: /\.(ttf|eot|woff|woff2)$/,
       loader: 'file-loader',
-      include: path.resolve(__dirname, '../assets/fonts/'),
+      include: path.resolve(__dirname, '../dist/fonts/'),
     })
 
     // Return the altered config

@@ -1,6 +1,9 @@
 const ghpages = require('gh-pages');
 
 ghpages.publish('storybook-static', {
-  branch: 'develop',
+  dest: '.',
+  branch: 'gh-pages',
+  src: '**/*',
+  remote: 'origin',
   message: 'Auto-generated commit: Update Storybook',
 });
