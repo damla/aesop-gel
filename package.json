@@ -8,6 +8,7 @@
     "dist"
   ],
   "scripts": {
+    "deploy": "gh-pages-deploy",
     "build": "webpack",
     "eslint": "eslint './src/**/*.{js,jsx,ts,tsx}' --ignore-path .eslintignore --config .eslintrc",
     "lint": "npm run eslint && npm run stylelint",
@@ -24,6 +25,13 @@
     "release": "npm run build:dev && npm run build:prod",
     "build:prod": "NODE_ENV=production rollup -c",
     "build:dev": "NODE_ENV=development rollup -c"
+  },
+  "gh-pages-deploy": {
+    "staticpath": "storybook-static",
+    "prep": [
+      "build-storybook"
+    ],
+    "commit": "Auto-generated commit gh-pages-deploy: Update Storybook"
   },
   "husky": {
     "hooks": {
