@@ -1,7 +1,12 @@
-@import 'styles/variables/index';
+@import 'styles/index';
 
 .base {
   padding: var(--layout-sm-spacing);
+
+  img {
+    width: 100%;
+    height: auto;
+  }
 
   @media (--viewport-md) {
     padding: var(--layout-md-spacing) 0;

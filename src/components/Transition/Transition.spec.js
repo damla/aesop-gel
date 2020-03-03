@@ -10,7 +10,7 @@ describe('<Transition />', () => {
   it('renders base component correctly', () => {
     const tree = renderer
       .create(
-        <Transition active={true} type="fade">
+        <Transition isActive={true} type="fade">
           <div>Content</div>
         </Transition>,
       )

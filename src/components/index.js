@@ -10,6 +10,7 @@ import ImageWithHeaderAndContent from './ImageWithHeaderAndContent';
 import KitList from './KitList';
 import List from './List';
 import Paragraph from './Paragraph';
+import Transition from './Paragraph';
 
 export default {
   Button,
@@ -24,4 +25,5 @@ export default {
   KitList,
   List,
   Paragraph,
+  Transition,
 };

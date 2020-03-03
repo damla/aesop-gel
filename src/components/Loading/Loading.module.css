@@ -1,6 +1,4 @@
-@import 'styles/variables/index';
-@import 'styles/key-frame.css';
-@import 'styles/font-face.css';
+@import 'styles/index';
 
 .base {
   display: flex;

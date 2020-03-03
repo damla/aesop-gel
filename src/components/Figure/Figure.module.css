@@ -1,6 +1,7 @@
-@import 'styles/variables/index';
+@import 'styles/index';
 
 .base {
+  margin: 0;
 }
 
 .caption {
