@@ -13,18 +13,20 @@ const DefinitionList = ({ className, items }) => {
   }
 
   return (
-    <Transition isActiveOnMount={true} type="fade">
-      <dl className={classSet}>
-        {items
-          .filter(({ description, term }) => description && term)
-          .map(({ description, term }, index) => (
-            <React.Fragment key={index}>
-              <dt className={styles.term}>{term}</dt>
-              <dd className={styles.description}>{description}</dd>
-            </React.Fragment>
-          ))}
-      </dl>
-    </Transition>
+    <div>
+      <Transition isActiveOnMount={true} type="fade">
+        <dl className={classSet}>
+          {items
+            .filter(({ description, term }) => description && term)
+            .map(({ description, term }, index) => (
+              <React.Fragment key={index}>
+                <dt className={styles.term}>{term}</dt>
+                <dd className={styles.description}>{description}</dd>
+              </React.Fragment>
+            ))}
+        </dl>
+      </Transition>
+    </div>
   );
 };
 
