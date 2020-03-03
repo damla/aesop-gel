@@ -14,7 +14,7 @@ const Transition = ({
 }) => {
   const hasMounted = useHasMounted();
 
-  console.log({
+  console.log('aesop gel Transition', {
     hasCSSTransitionMountOnEnter,
     isActiveOnMount,
     hasMounted,

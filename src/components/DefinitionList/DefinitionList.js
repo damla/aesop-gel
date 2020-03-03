@@ -13,9 +13,8 @@ const DefinitionList = ({ className, items }) => {
   }
 
   return (
-    <Transition isActiveOnMount={true} type="shiftInDown">
+    <Transition isActiveOnMount={true} type="fade">
       <dl className={classSet}>
-        ...
         {items
           .filter(({ description, term }) => description && term)
           .map(({ description, term }, index) => (
