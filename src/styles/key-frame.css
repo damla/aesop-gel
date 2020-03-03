@@ -1,4 +1,4 @@
-@keyframes :global (fadeInOut) {
+@keyframes fadeInOut {
   0% {
     opacity: 0;
   }

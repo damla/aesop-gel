@@ -12,7 +12,7 @@ storiesOf('Transition', module).add('Base component', () => {
   // }
 
   return (
-    <Transition isActive={true} type="fade">
+    <Transition isActiveOnMount={true} type="fade">
       <div>Content</div>
     </Transition>
   );
