@@ -21,7 +21,7 @@ describe('<FlyinPanel />', () => {
   it('renders base component correctly', () => {
     const tree = renderer
       .create(
-        <FlyinPanel handleClose={mockFn} title="title">
+        <FlyinPanel onClose={mockFn} title="title">
           Content
         </FlyinPanel>,
       )

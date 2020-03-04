@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 import uuidv4 from 'uuid/v4';
 import { useEscapeKeyListener } from '~/hooks/useEscapeKeyListener';
@@ -8,45 +9,38 @@ import Heading from '~/components/Heading';
 import Icon from '~/components/Icon';
 import Overlay from '~/components/Overlay';
 import Transition from '~/components/Transition';
-import PROP_TYPES from './FlyinPanel.prop-types';
 import styles from './FlyinPanel.module.css';
 
-const FlyinPanel = ({
-  children,
-  className,
-  handleClose,
-  heading,
-  isVisible = false,
-}) => {
-  useEscapeKeyListener(handleClose);
+const FlyinPanel = ({ children, className, heading, isVisible, onClose }) => {
+  useEscapeKeyListener(onClose);
   useOverflowHidden(isVisible);
 
-  const classSet = cx(className);
+  const classSet = cx(styles.base, className);
   const labelledby = uuidv4();
   const describedby = uuidv4();
   const asideRole = 'dialog';
   const closeButtonTitle = 'Close';
 
   return (
-    <aside
-      aria-describedby={describedby}
-      aria-hidden={!isVisible}
-      aria-labelledby={labelledby}
-      className={classSet}
-      role={asideRole}
-    >
-      <Overlay handleClose={handleClose} isVisible={isVisible} />
+    <>
+      <Overlay isVisible={isVisible} onClose={onClose} />
       <Transition
-        active={!!isVisible}
-        mountOnEnter={true}
+        hasCSSTransitionMountOnEnter={true}
+        hasCSSTransitionUnmountOnExit={true}
+        isActive={!!isVisible}
         type="slideRight"
-        unmountOnExit={true}
       >
-        <div className={styles.content}>
+        <aside
+          aria-describedby={describedby}
+          aria-hidden={!isVisible}
+          aria-labelledby={labelledby}
+          className={classSet}
+          role={asideRole}
+        >
           <Button
             className={styles.closeButton}
-            inline={true}
-            onClick={handleClose}
+            isInline={true}
+            onClick={onClose}
             tabIndex={0}
             title={closeButtonTitle}
           >
@@ -58,12 +52,26 @@ const FlyinPanel = ({
             </Heading>
           )}
           <div id={describedby}>{children}</div>
-        </div>
+        </aside>
       </Transition>
-    </aside>
+    </>
   );
 };
 
-FlyinPanel.propTypes = PROP_TYPES;
+FlyinPanel.propTypes = {
+  children: PropTypes.any.isRequired,
+  className: PropTypes.string,
+  heading: PropTypes.string,
+  isVisible: PropTypes.bool,
+  onClose: PropTypes.func.isRequired,
+};
+
+FlyinPanel.defaultProps = {
+  children: undefined,
+  className: undefined,
+  heading: undefined,
+  isVisible: false,
+  onClose: undefined,
+};
 
 export default FlyinPanel;

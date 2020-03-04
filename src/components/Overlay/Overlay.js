@@ -1,11 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { KEYBOARD_CODES } from '~/constants';
 import Transition from '~/components/Transition';
-import PROP_TYPES from './Overlay.prop-types';
 import styles from './Overlay.module.css';
 
-const Overlay = ({ className, handleClose, isVisible = false }) => {
+const Overlay = ({ className, isVisible = false, onClose }) => {
   const classSet = cx(
     styles.base,
     {
@@ -16,17 +16,17 @@ const Overlay = ({ className, handleClose, isVisible = false }) => {
 
   return (
     <Transition
-      active={!!isVisible}
-      mountOnEnter={true}
+      hasCSSTransitionMountOnEnter={true}
+      hasCSSTransitionUnmountOnExit={true}
+      isActive={!!isVisible}
       type="fade"
-      unmountOnExit={true}
     >
       <div
         className={classSet}
-        onClick={handleClose}
+        onClick={onClose}
         onKeyPress={event => {
           if (event.keyCode === KEYBOARD_CODES.ESCAPE) {
-            handleClose(event);
+            onClose(event);
           }
         }}
         role="button"
@@ -36,6 +36,16 @@ const Overlay = ({ className, handleClose, isVisible = false }) => {
   );
 };
 
-Overlay.propTypes = PROP_TYPES;
+Overlay.propTypes = {
+  className: PropTypes.string,
+  isVisible: PropTypes.bool,
+  onClose: PropTypes.func.isRequired,
+};
+
+Overlay.defaultProps = {
+  className: undefined,
+  isVisible: false,
+  onClose: undefined,
+};
 
 export default Overlay;

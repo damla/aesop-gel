@@ -102,7 +102,6 @@
   "devDependencies": {
     "@rollup/plugin-alias": "^3.0.1",
     "@rollup/plugin-json": "^4.0.2",
-    "@sambego/storybook-state": "^2.0.1",
     "@storybook/addon-a11y": "^5.3.12",
     "@storybook/addon-actions": "^5.3.12",
     "@storybook/addon-docs": "^5.3.12",
