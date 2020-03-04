@@ -14,7 +14,7 @@ storiesOf('FlyinPanel', module).add('Base component', () => {
           <FlyinPanel
             isVisible={state.isVisible}
             onClose={() => {
-              setState(state => ({ ...state, isVisible: !state.isVisible }));
+              setState(() => ({ ...state, isVisible: false }));
             }}
             title="Ingredients"
           >
@@ -35,7 +35,7 @@ storiesOf('FlyinPanel', module).add('Base component', () => {
           </FlyinPanel>
           <Button
             onClick={() => {
-              setState(state => ({ ...state, isVisible: !state.isVisible }));
+              setState(() => ({ ...state, isVisible: true }));
             }}
             title="open Flyin"
           >

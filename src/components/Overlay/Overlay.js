@@ -2,10 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { KEYBOARD_CODES } from '~/constants';
+import { useEscapeKeyListener } from '~/hooks/useEscapeKeyListener';
 import Transition from '~/components/Transition';
 import styles from './Overlay.module.css';
 
 const Overlay = ({ className, isVisible = false, onClose }) => {
+  useEscapeKeyListener(onClose);
+
   const classSet = cx(
     styles.base,
     {
@@ -13,6 +16,12 @@ const Overlay = ({ className, isVisible = false, onClose }) => {
     },
     className,
   );
+
+  const handleOnKeyPress = event => {
+    if (event.keyCode === KEYBOARD_CODES.ESCAPE) {
+      onClose();
+    }
+  };
 
   return (
     <Transition
@@ -24,11 +33,7 @@ const Overlay = ({ className, isVisible = false, onClose }) => {
       <div
         className={classSet}
         onClick={onClose}
-        onKeyPress={event => {
-          if (event.keyCode === KEYBOARD_CODES.ESCAPE) {
-            onClose(event);
-          }
-        }}
+        onKeyPress={handleOnKeyPress}
         role="button"
         tabIndex={-1}
       />
