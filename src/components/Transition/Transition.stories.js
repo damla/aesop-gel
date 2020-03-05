@@ -7,7 +7,7 @@ import DefinitionList from '~/components/DefinitionList';
 import Transition from './Transition';
 
 storiesOf('Transition', module).add('Base component', () => (
-  <State initialState={{ isActive: true }}>
+  <State initialState={{ isActive: false }}>
     {(state, setState) => (
       <>
         <Button

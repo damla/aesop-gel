@@ -6,15 +6,22 @@ import Transition from '~/components/Transition';
 
 storiesOf('Hooks', module).add('useOnScreen', () => {
   const ref = useRef();
-  const onScreen = useOnScreen(ref, '-100px');
+  const onScreen = useOnScreen(ref, '-50px');
 
   return (
     <div>
       <div style={{ height: '100vh' }}>
-        <h1>Scroll down to next section.</h1>
+        <h1>
+          Scroll down to next section. The next section will reveal after a 50px
+          buffer.
+        </h1>
       </div>
       <div ref={ref}>
-        <Transition isActiveOnMount={onScreen} type="shiftInDown">
+        <Transition
+          isActive={onScreen}
+          isHiddenOnMount={true}
+          type="shiftInDown"
+        >
           <DefinitionList
             items={[
               {

@@ -33,11 +33,6 @@
     ],
     "commit": "Auto-generated commit gh-pages-deploy: Update Storybook"
   },
-  "husky": {
-    "hooks": {
-      "pre-push": "npm run eslint"
-    }
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aesop/aesop-gel.git"
