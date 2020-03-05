@@ -7,7 +7,7 @@ import DefinitionList from '~/components/DefinitionList';
 import Transition from './Transition';
 
 storiesOf('Transition', module).add('Base component', () => (
-  <State initialState={{ isActive: false }}>
+  <State initialState={{ isActive: true }}>
     {(state, setState) => (
       <>
         <Button
@@ -21,8 +21,6 @@ storiesOf('Transition', module).add('Base component', () => (
         <br />
         <br />
         <Transition
-          hasCSSTransitionMountOnEnter={true}
-          hasCSSTransitionUnmountOnExit={true}
           isActive={state.isActive}
           type={select(
             'type',
@@ -35,7 +33,7 @@ storiesOf('Transition', module).add('Base component', () => (
               'slowFade',
               'zoom',
             ],
-            'fade',
+            'shiftInDown',
           )}
         >
           <DefinitionList

@@ -17,10 +17,10 @@ const Transition = ({
   return (
     <CSSTransition
       classNames={data[type].classNames}
-      in={isActiveOnMount ? hasMounted : isActive}
-      mountOnEnter={hasCSSTransitionMountOnEnter}
+      in={isActiveOnMount ? !!hasMounted : !!isActive}
+      mountOnEnter={!!hasCSSTransitionMountOnEnter}
       timeout={data[type].timeout}
-      unmountOnExit={hasCSSTransitionUnmountOnExit}
+      unmountOnExit={!!hasCSSTransitionUnmountOnExit}
     >
       {children}
     </CSSTransition>
@@ -48,7 +48,7 @@ Transition.defaultProps = {
   children: undefined,
   hasCSSTransitionMountOnEnter: false,
   hasCSSTransitionUnmountOnExit: false,
-  isActive: true,
+  isActive: false,
   isActiveOnMount: false,
   type: undefined,
 };
