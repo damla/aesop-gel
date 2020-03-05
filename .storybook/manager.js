@@ -35,6 +35,7 @@ addons.setConfig({
 
     brandTitle: 'Aesop Global Experience Language',
     brandUrl: 'https://gel.aesop.com',
-    brandImage: 'https://upload.wikimedia.org/wikipedia/commons/4/4d/Aesop_logo_2013.svg',
+    brandImage:
+      'https://upload.wikimedia.org/wikipedia/commons/4/4d/Aesop_logo_2013.svg',
   },
 });

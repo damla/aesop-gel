@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export const State = ({ children, initialState }) => {
   const [state, setState] = React.useState(initialState);

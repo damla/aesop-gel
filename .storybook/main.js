@@ -37,7 +37,8 @@ module.exports = {
             importLoaders: 1,
             modules: {
               mode: 'local',
-              localIdentName: 'aesop-gel-[path][name]__[local]--[hash:base64:5]',
+              localIdentName:
+                'aesop-gel-[path][name]__[local]--[hash:base64:5]',
             },
           },
         },
@@ -54,13 +55,12 @@ module.exports = {
       include: path.resolve(__dirname, '../'),
     });
 
-
     // Load fonts
     config.module.rules.push({
       test: /\.(ttf|eot|woff|woff2)$/,
       loader: 'file-loader',
       include: path.resolve(__dirname, '../dist/fonts/'),
-    })
+    });
 
     // Return the altered config
     return config;
