@@ -169,8 +169,6 @@ npm run pretty
 
 ### Pre Commit Hook
 
-TBA
-
 [Husky](https://github.com/typicode/husky) is used to automatically run `npm run format` as a pre-commit hook, ensuring changes to
 source files follow the same formatting. The configurations of Husky is found in [.huskyrc](.huskyrc).
 
