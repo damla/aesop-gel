@@ -4,7 +4,7 @@ exports[`<Image /> renders base component correctly 1`] = `
 <a
   className="base"
   href="https://www.aesop.com/au/r/philosophy-to-products"
-  title="Link to https://www.aesop.com/au/r/philosophy-to-products"
+  target="_self"
 >
   <picture
     className="picture base"

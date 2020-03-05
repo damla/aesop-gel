@@ -1,12 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Hyperlink /> renders base component correctly 1`] = `
-<button
-  className="base action blockStyle external"
-  disabled={false}
-  title="Link to http://aesop.com"
-  type="button"
->
-  Aesop
-</button>
+<a
+  className="base"
+  href="http://aesop.com"
+  target="_self"
+/>
 `;

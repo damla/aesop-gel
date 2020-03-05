@@ -1,5 +1,5 @@
 export default {
   copy: {
-    closeDialog: 'Close dialog',
+    close: 'Close Modal',
   },
 };

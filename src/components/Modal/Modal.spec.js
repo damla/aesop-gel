@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
 import Modal from './Modal';
 
@@ -7,7 +6,7 @@ jest.mock('react-dom');
 const mockFn = jest.fn();
 
 describe('<Modal />', () => {
-  let modalRoot;
+  let modalRoot = null;
 
   it('should be defined', () => {
     expect(Modal).toBeDefined();
@@ -23,7 +22,7 @@ describe('<Modal />', () => {
   it('renders base component correctly', () => {
     const tree = renderer
       .create(
-        <Modal handleClose={mockFn} isVisible={true}>
+        <Modal isVisible={true} onClose={mockFn}>
           <h1>Heading</h1>
         </Modal>,
       )

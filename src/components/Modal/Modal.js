@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { useEscapeKeyListener } from '~/hooks/useEscapeKeyListener';
 import { useOverflowHidden } from '~/hooks/useOverflowHidden';
@@ -7,11 +8,10 @@ import ModalBody from './components/ModalBody';
 import ModalBodyFixture from './components/ModalBody/ModalBody.fixture';
 import Overlay from '~/components/Overlay';
 import Transition from '~/components/Transition';
-import PROP_TYPES from './Modal.prop-types';
 import styles from './Modal.module.css';
 
-const Modal = ({ children, className, handleClose, isVisible }) => {
-  useEscapeKeyListener(handleClose);
+const Modal = ({ children, className, onClose, isVisible }) => {
+  useEscapeKeyListener(onClose);
   useOverflowHidden(isVisible);
 
   const classSet = cx(styles.base, className);
@@ -25,18 +25,18 @@ const Modal = ({ children, className, handleClose, isVisible }) => {
     <>
       {ReactDOM.createPortal(
         <aside aria-hidden={!isVisible} className={classSet}>
-          <Overlay handleClose={handleClose} isVisible={isVisible} />
+          <Overlay isVisible={isVisible} onClose={onClose} />
           <Transition
-            active={isVisible}
-            mountOnEnter={true}
+            hasCSSTransitionMountOnEnter={true}
+            hasCSSTransitionUnmountOnExit={true}
+            isActive={isVisible}
             type="zoom"
-            unmountOnExit={true}
           >
             <div className={styles.inner}>
               <ModalBody
                 copy={ModalBodyFixture.copy}
-                handleClose={handleClose}
                 isVisible={isVisible}
+                onClose={onClose}
               >
                 {children}
               </ModalBody>
@@ -49,6 +49,17 @@ const Modal = ({ children, className, handleClose, isVisible }) => {
   );
 };
 
-Modal.propTypes = PROP_TYPES;
+Modal.propTypes = {
+  children: PropTypes.any,
+  className: PropTypes.string,
+  isVisible: PropTypes.bool,
+  onClose: PropTypes.func,
+};
 
+Modal.defaultProps = {
+  children: undefined,
+  className: undefined,
+  isVisible: undefined,
+  onClose: undefined,
+};
 export default Modal;

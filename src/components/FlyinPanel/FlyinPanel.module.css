@@ -1,7 +1,7 @@
 @import 'styles/variables/index';
 @import 'styles/mixins/index';
 
-.content {
+.base {
   position: fixed;
   z-index: var(--z-index-flyin-panel);
   top: 0;

@@ -9,6 +9,7 @@ import Image from './Image';
 import ImageWithHeaderAndContent from './ImageWithHeaderAndContent';
 import KitList from './KitList';
 import List from './List';
+import Modal from './Modal';
 import Paragraph from './Paragraph';
 import Transition from './Transition';
 
@@ -24,6 +25,7 @@ export default {
   ImageWithHeaderAndContent,
   KitList,
   List,
+  Modal,
   Paragraph,
   Transition,
 };

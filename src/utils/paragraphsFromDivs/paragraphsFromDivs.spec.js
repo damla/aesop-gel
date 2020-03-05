@@ -1,4 +1,4 @@
-import paragraphsFromDivs from './paragraphsFromDivs';
+import { paragraphsFromDivs } from './paragraphsFromDivs';
 
 describe('paragraphsFromDivs()', () => {
   test('Expect to return a string with `div` tags repalced with `p` tags', () => {

@@ -1,64 +1,47 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { HYPERLINK_STYLE_TYPES } from '~/constants';
-import Button from '~/components/Button';
 import {
-  checkIsInlineFromStyle,
-  getButtonPropsFromStyle,
+  // checkIsInlineFromStyle,
+  // getButtonPropsFromStyle,
   getTargetType,
-  hasIconFromStyle,
+  // hasIconFromStyle,
 } from './Hyperlink.utils';
 import styles from './Hyperlink.module.css';
-
-const { NO_ICON_LINK } = HYPERLINK_STYLE_TYPES;
 
 const Hyperlink = ({
   children,
   className,
   dataTestRef,
-  openInANewWindow = false,
-  style = NO_ICON_LINK,
-  text,
+  hasTargetInNewWindow,
+  // style,
   title,
   url,
 }) => {
   const classSet = cx(styles.base, className);
-
-  if (!text) {
-    return (
-      <a className={classSet} href={url} title={title || `Link to ${url}`}>
-        {children}
-      </a>
-    );
-  }
-
-  const inline = checkIsInlineFromStyle(style);
-  const props = getButtonPropsFromStyle(style, url);
-  const hasIcon = hasIconFromStyle(style);
-  const target = getTargetType(openInANewWindow);
+  // const inline = checkIsInlineFromStyle(style);
+  // const hasIcon = hasIconFromStyle(style);
+  const target = getTargetType(hasTargetInNewWindow);
 
   return (
-    <Button
-      className={className}
-      dataTestRef={dataTestRef}
-      icon={hasIcon}
-      inline={inline}
+    <a
+      className={classSet}
+      data-test-ref={dataTestRef}
+      href={url}
       target={target}
-      title={title || `Link to ${url}`}
-      {...props}
+      title={title}
     >
-      {text}
-    </Button>
+      {children}
+    </a>
   );
 };
 
 Hyperlink.propTypes = {
-  children: PropTypes.any,
+  children: PropTypes.any.isRequired,
   className: PropTypes.string,
-  id: PropTypes.string,
   dataTestRef: PropTypes.string,
-  openInANewWindow: PropTypes.bool,
+  hasTargetInNewWindow: PropTypes.bool,
+  id: PropTypes.string,
   style: PropTypes.oneOf([
     'External Button Link',
     'External Text Link',
@@ -68,7 +51,6 @@ Hyperlink.propTypes = {
     'No Icon Link',
   ]),
   title: PropTypes.string,
-  text: PropTypes.string,
   type: PropTypes.oneOf(['Relative', 'Absolute']),
   url: PropTypes.string.isRequired,
 };
@@ -76,12 +58,11 @@ Hyperlink.propTypes = {
 Hyperlink.defaultProps = {
   children: undefined,
   className: undefined,
-  id: undefined,
   dataTestRef: undefined,
-  openInANewWindow: false,
+  hasTargetInNewWindow: false,
+  id: undefined,
   style: 'No Icon Link',
   title: undefined,
-  text: undefined,
   type: undefined,
   url: undefined,
 };

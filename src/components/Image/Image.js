@@ -54,7 +54,7 @@ const Image = ({ altText, className, cta, large, medium, small, type }) => {
   );
 
   return cta ? (
-    <Hyperlink openInANewWindow={cta.openInANewWindow} url={cta.url}>
+    <Hyperlink hasTargetInNewWindow={cta.openInANewWindow} url={cta.url}>
       {picture}
     </Hyperlink>
   ) : (

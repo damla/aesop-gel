@@ -1,11 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 import Button from '~/components/Button';
 import Icon from '~/components/Icon';
-import PROP_TYPES from './ModalBody.prop-types';
 import styles from './ModalBody.module.css';
 
-const ModalBody = ({ children, className, copy, handleClose, isVisible }) => {
+const ModalBody = ({ children, className, copy, onClose, isVisible }) => {
   const classSet = cx(
     styles.base,
     { [styles.isVisible]: isVisible },
@@ -18,9 +18,9 @@ const ModalBody = ({ children, className, copy, handleClose, isVisible }) => {
       <Button
         className={styles.closeButton}
         dataTestRef="MODAL_CLOSE_BUTTON"
-        inline={true}
-        onClick={handleClose}
-        title={copy.closeDialog}
+        isInline={true}
+        onClick={onClose}
+        title={copy.close}
       >
         <Icon
           className={styles.closeIcon}
@@ -33,6 +33,22 @@ const ModalBody = ({ children, className, copy, handleClose, isVisible }) => {
   );
 };
 
-ModalBody.propTypes = PROP_TYPES;
+ModalBody.propTypes = {
+  children: PropTypes.any,
+  className: PropTypes.string,
+  copy: PropTypes.shape({
+    close: PropTypes.string,
+  }).isRequired,
+  onClose: PropTypes.func.isRequired,
+  isVisible: PropTypes.bool.isRequired,
+};
+
+ModalBody.defaultProps = {
+  children: undefined,
+  className: undefined,
+  copy: undefined,
+  onClose: undefined,
+  isVisible: undefined,
+};
 
 export default ModalBody;
