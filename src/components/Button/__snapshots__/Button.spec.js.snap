@@ -1,39 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Button /> renders alternate variation correctly 1`] = `
-<button
-  className="base action alternate blockStyle external"
-  disabled={false}
-  onClick={[MockFunction]}
-  title="Aēsop"
-  type="button"
->
-  Alternate Button
-</button>
-`;
-
-exports[`<Button /> renders base component correct with \`type\` prop 1`] = `
-<button
-  className="base action blockStyle external aesop"
-  disabled={false}
-  title="Aēsop"
-  type="submit"
->
-  Submit
-</button>
-`;
-
-exports[`<Button /> renders base component correctly with \`href\` prop 1`] = `
-<button
-  className="base action blockStyle external"
-  disabled={false}
-  title="Aēsop"
-  type="button"
->
-  Button
-</button>
-`;
-
 exports[`<Button /> renders base component correctly with \`onClick\` prop 1`] = `
 <button
   className="base action blockStyle external aesop"
@@ -43,39 +9,5 @@ exports[`<Button /> renders base component correctly with \`onClick\` prop 1`] =
   type="button"
 >
   Button
-</button>
-`;
-
-exports[`<Button /> renders base component correctly with \`to\` prop 1`] = `
-<button
-  className="base action blockStyle external"
-  disabled={false}
-  title="Aēsop"
-  type="button"
->
-  Button
-</button>
-`;
-
-exports[`<Button /> renders component with icon correctly 1`] = `
-<button
-  className="base action blockStyle external"
-  disabled={false}
-  title="Aēsop"
-  type="button"
->
-  Button
-</button>
-`;
-
-exports[`<Button /> renders disabled variation correctly 1`] = `
-<button
-  className="base action blockStyle disabled external"
-  disabled={true}
-  onClick={[MockFunction]}
-  title="Aēsop"
-  type="button"
->
-  Disabled Button
 </button>
 `;

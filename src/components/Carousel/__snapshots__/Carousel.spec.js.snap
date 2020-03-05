@@ -116,6 +116,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
             <a
               className="base item link"
               href="/"
+              target="_self"
               title="Link to Parsley Seed Facial Cleanser"
             >
               <div>
@@ -183,6 +184,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
             <a
               className="base item link"
               href="/"
+              target="_self"
               title="Link to Parsley Seed Facial Cleanser"
             >
               <div>
@@ -245,6 +247,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
             <a
               className="base item link"
               href="/"
+              target="_self"
               title="Link to Parsley Seed Cleansing Masque"
             >
               <div>
@@ -443,6 +446,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
             <a
               className="base item link"
               href="/"
+              target="_self"
               title="Link to Parsley Seed Facial Cleanser"
             >
               <div>
@@ -510,6 +514,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
             <a
               className="base item link"
               href="/"
+              target="_self"
               title="Link to Parsley Seed Facial Cleanser"
             >
               <div>
@@ -572,6 +577,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
             <a
               className="base item link"
               href="/"
+              target="_self"
               title="Link to Parsley Seed Cleansing Masque"
             >
               <div>
