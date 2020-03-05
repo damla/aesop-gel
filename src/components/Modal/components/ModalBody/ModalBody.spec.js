@@ -1,5 +1,5 @@
 import React from 'react';
-import renderer, { ReactTestInstance } from 'react-test-renderer';
+import renderer from 'react-test-renderer';
 import ModalBody from './ModalBody';
 import ModalBodyFixture from './ModalBody.fixture';
 
@@ -15,8 +15,8 @@ describe('<ModalBody />', () => {
       .create(
         <ModalBody
           copy={ModalBodyFixture.copy}
-          handleClose={mockFn}
           isVisible={true}
+          onClose={mockFn}
         >
           Body Content
         </ModalBody>,
@@ -30,14 +30,14 @@ describe('<ModalBody />', () => {
       const component = renderer.create(
         <ModalBody
           copy={ModalBodyFixture.copy}
-          handleClose={mockFn}
           isVisible={true}
+          onClose={mockFn}
         >
           Body Content
         </ModalBody>,
       );
 
-      const closeButton: ReactTestInstance = component.root.findByProps({
+      const closeButton = component.root.findByProps({
         'data-test-ref': 'MODAL_CLOSE_BUTTON',
       });
 

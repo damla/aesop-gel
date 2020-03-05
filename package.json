@@ -24,7 +24,11 @@
     "prepublishOnly": "npm run release",
     "release": "npm run build:dev && npm run build:prod",
     "build:prod": "NODE_ENV=production rollup -c",
-    "build:dev": "NODE_ENV=development rollup -c"
+    "build:dev": "NODE_ENV=development rollup -c",
+    "deploy-storybook-gh": "storybook-to-ghpages -- --source-branch=develop"
+  },
+  "storybook-deployer": {
+    "commitMessage": "Deploy Storybook to GitHub Pages"
   },
   "gh-pages-deploy": {
     "staticpath": "storybook-static",
@@ -111,7 +115,6 @@
     "@storybook/addon-viewport": "^5.3.12",
     "@storybook/addons": "^5.3.12",
     "@storybook/react": "^5.3.12",
-    "@storybook/storybook-deployer": "^2.8.1",
     "@storybook/theming": "^5.3.12",
     "@types/jest": "^25.1.1",
     "babel-eslint": "^10.0.3",
