@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import cx from 'classnames';
 import { CSSTransition } from 'react-transition-group';
 import useHasMounted from '~/hooks/useHasMounted';
 import data from './Transition.data';
@@ -14,15 +15,22 @@ const Transition = ({
 }) => {
   const hasMounted = useHasMounted();
 
+  const isVisible = isActiveOnMount ? !!hasMounted : !!isActive;
+
   return (
     <CSSTransition
       classNames={data[type].classNames}
-      in={isActiveOnMount ? !!hasMounted : !!isActive}
+      in={isVisible}
       mountOnEnter={!!hasCSSTransitionMountOnEnter}
       timeout={data[type].timeout}
       unmountOnExit={!!hasCSSTransitionUnmountOnExit}
     >
-      {children}
+      {React.cloneElement(children, {
+        className: cx(
+          children.props.className,
+          isVisible ? '' : data[type].classNames.enter,
+        ),
+      })}
     </CSSTransition>
   );
 };
@@ -46,8 +54,8 @@ Transition.propTypes = {
 
 Transition.defaultProps = {
   children: undefined,
-  hasCSSTransitionMountOnEnter: false,
-  hasCSSTransitionUnmountOnExit: false,
+  hasCSSTransitionMountOnEnter: undefined,
+  hasCSSTransitionUnmountOnExit: undefined,
   isActive: false,
   isActiveOnMount: false,
   type: undefined,
