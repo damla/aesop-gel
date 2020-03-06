@@ -29,8 +29,8 @@ export const useOnScreen = (ref, rootMargin = '0px') => {
     }
 
     return () => {
-      if (!hasIntersectionObserver) {
-        setVisible(true);
+      if (hasIntersectionObserver) {
+        observer.unobserve(ref.current)
       }
     };
   }, []);
