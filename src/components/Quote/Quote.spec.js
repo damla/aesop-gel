@@ -15,7 +15,7 @@ describe('<Quote />', () => {
   it('renders base component correctly', () => {
     const tree = renderer
       .create(
-        <Quote author={QuoteFixture.author}>{QuoteFixture.content}</Quote>,
+        <Quote author={QuoteFixture.author} content={QuoteFixture.content} />,
       )
       .toJSON();
 

@@ -11,17 +11,10 @@ storiesOf('Hooks', module).add('useOnScreen', () => {
   return (
     <div>
       <div style={{ height: '100vh' }}>
-        <h1>
-          Scroll down to the next DefinitionList. </h1>
-          <h3>
-            The next DefinitionList will reveal after a 50px
-          buffer.
-          </h3>
+        <h1>Scroll down to the next DefinitionList. </h1>
+        <h3>The next DefinitionList will reveal after a 50px buffer.</h3>
 
-        <Transition
-          isActiveOnMount={true}
-          type="shiftInDown"
-        >
+        <Transition isActiveOnMount={true} type="shiftInDown">
           <DefinitionList
             items={[
               {
@@ -38,10 +31,7 @@ storiesOf('Hooks', module).add('useOnScreen', () => {
         </Transition>
       </div>
       <div ref={ref}>
-        <Transition
-          isActive={onScreen}
-          type="shiftInDown"
-        >
+        <Transition isActive={onScreen} type="shiftInDown">
           <DefinitionList
             items={[
               {

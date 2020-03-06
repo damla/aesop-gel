@@ -9,10 +9,13 @@ export const useOnScreen = (ref, rootMargin = '0px') => {
   const [isVisible, setVisible] = useState(false);
 
   useEffect(() => {
+    let observer = null;
+    const currentRef = ref.current;
+
     if (!hasIntersectionObserver) {
       setVisible(true);
     } else {
-      const observer = new IntersectionObserver(
+      observer = new IntersectionObserver(
         entries => {
           entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -25,15 +28,15 @@ export const useOnScreen = (ref, rootMargin = '0px') => {
         },
       );
 
-      observer.observe(ref.current);
+      observer.observe(currentRef);
     }
 
     return () => {
       if (hasIntersectionObserver) {
-        observer.unobserve(ref.current)
+        observer.unobserve(currentRef);
       }
     };
-  }, []);
+  }, [ref, rootMargin]);
 
   return isVisible;
 };
