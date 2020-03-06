@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 import marked from 'marked';
 import parse from 'html-react-parser';
 import Heading from '~/components/Heading/Heading';
 import Hyperlink from '~/components/Hyperlink';
-import PROP_TYPES from './BodyCopy.prop-types';
+import { P } from '~/components/Paragraph';
 import { getPrimaryTitleLevel, getSecondaryTitleLevel } from './BodyCopy.utils';
 import styles from './BodyCopy.module.css';
 
@@ -14,7 +15,7 @@ const BodyCopy = ({
   cta,
   eyebrow,
   id,
-  parent = '',
+  parent,
   primaryTitle,
   quote,
   secondaryTitle,
@@ -49,9 +50,7 @@ const BodyCopy = ({
         </Heading>
       )}
 
-      {copy && (
-        <div className={styles.copy}>{parse(marked(copy.toString()))}</div>
-      )}
+      {copy && <P className={styles.copy}>{parse(marked(copy.toString()))}</P>}
 
       {cta && cta.text && (
         <Hyperlink
@@ -68,6 +67,28 @@ const BodyCopy = ({
   );
 };
 
-BodyCopy.propTypes = PROP_TYPES;
+BodyCopy.propTypes = {
+  className: PropTypes.string,
+  copy: PropTypes.oneOf([PropTypes.string, PropTypes.node]),
+  cta: PropTypes.object,
+  eyebrow: PropTypes.string,
+  id: PropTypes.string,
+  parent: PropTypes.oneOf(['TextOverHero', 'HalfWidthFullBleed']),
+  primaryTitle: PropTypes.string,
+  quote: PropTypes.string,
+  secondaryTitle: PropTypes.string,
+};
+
+BodyCopy.defaultProps = {
+  className: undefined,
+  copy: undefined,
+  cta: undefined,
+  eyebrow: undefined,
+  id: undefined,
+  parent: undefined,
+  primaryTitle: undefined,
+  quote: undefined,
+  secondaryTitle: undefined,
+};
 
 export default BodyCopy;

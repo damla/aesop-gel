@@ -2,6 +2,8 @@
 
 .base {
   padding: 20px;
+  color: var(--color-body-copy);
+  font-family: var(--font-family-sans-serif-regular);
 }
 
 .hasLightText {
@@ -96,7 +98,7 @@
   font-size: rem(16px);
   line-height: 1.7;
 
-  .copyLink {
+  a {
     color: var(--color-grey-20);
     font-weight: var(--font-weight-normal);
     text-decoration: underline;

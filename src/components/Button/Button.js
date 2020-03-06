@@ -19,7 +19,6 @@ const Button = ({
 }) => {
   const classSet = cx(
     styles.base,
-    styles.action,
     { [styles.alternate]: isAlternate },
     { [styles.blockStyle]: !isInline },
     { [styles.disabled]: !isEnabled },

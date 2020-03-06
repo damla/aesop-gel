@@ -14,7 +14,6 @@ const Transition = ({
   type,
 }) => {
   const hasMounted = useHasMounted();
-
   const isVisible = isActiveOnMount ? !!hasMounted : !!isActive;
 
   return (

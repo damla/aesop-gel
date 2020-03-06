@@ -132,7 +132,7 @@
   font-size: rem(16px);
 
   @media (--viewport-lg) {
-    font-size: rem(14px);
+    font-size: rem(15px);
   }
 
   &:last-of-type {

@@ -13,9 +13,7 @@ const Quote = ({ author, className, content, hasTopPadding }) => {
   return (
     <div className={classSet}>
       <div className={styles.wrapper}>
-        <blockquote className={styles.blockquote}>
-          <p>{content}</p>
-        </blockquote>
+        <blockquote className={styles.blockquote}>{content}</blockquote>
         <cite className={styles.author}>{author}</cite>
       </div>
     </div>

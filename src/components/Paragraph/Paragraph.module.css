@@ -16,6 +16,8 @@
 
 .base {
   @extend .paragraph;
+
+  font-family: var(--font-family-sans-serif-regular);
 }
 
 .set {

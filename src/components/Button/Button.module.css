@@ -6,6 +6,7 @@
   background-color: transparent;
   cursor: pointer;
   font-family: var(--font-family-sans-serif-medium);
+  font-size: rem(15px);
 
   &,
   &:link,
@@ -130,7 +131,7 @@
   display: inline-block;
   min-width: 210px;
   max-width: 400px;
-  padding: 23px;
+  padding: 20px;
   border: 1px solid var(--color-grey-rgba-20);
   transition: background-color 400ms;
 

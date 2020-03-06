@@ -14,11 +14,11 @@
 
 .term,
 .description {
-  font-size: rem(14px);
+  font-size: rem(15px);
   line-height: 1.4;
 
   @media (--viewport-md) {
-    line-height: 1.7;
+    line-height: 1.6;
   }
 }
 
@@ -26,6 +26,7 @@
   position: relative;
   padding-top: 26px;
   margin-bottom: 4px;
+  color: var(--color-secondary);
   font-family: var(--font-family-sans-serif-medium);
 
   &:nth-of-type(1) {
@@ -48,6 +49,7 @@
   padding-bottom: 26px;
   margin-left: 0;
   color: var(--color-grey-30);
+  font-family: var(--font-family-sans-serif-regular);
 
   &:nth-of-type(1) {
     transition-delay: calc((1 * 100ms) + 200ms);

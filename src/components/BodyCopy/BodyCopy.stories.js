@@ -1,8 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { text, boolean } from '@storybook/addon-knobs';
-import 'normalize.css';
-import '~/styles/base.module.css';
 import '~.storybook/storybook.module.css';
 import BodyCopy from './BodyCopy';
 

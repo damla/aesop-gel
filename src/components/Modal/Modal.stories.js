@@ -19,7 +19,9 @@ storiesOf('Modal', module).add('Base component', () => (
             setState(() => ({ ...state, isVisible: false }));
           }}
         >
-          <p>Modal content</p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id mauris
+          lacinia, sollicitudin dolor quis, pellentesque nibh. Integer pharetra
+          ullamcorper leo sit amet dictum. Phasellus in pellentesque augue.
         </Modal>
         <Button
           onClick={() => {

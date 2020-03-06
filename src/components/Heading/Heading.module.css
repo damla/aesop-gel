@@ -2,6 +2,8 @@
 
 .base {
   @extend %title-typography;
+
+  color: var(--color-body-copy);
 }
 
 .noTopMargin {
@@ -19,7 +21,7 @@
 
 .xSmall {
   /* font-size: 1rem; */
-  font-size: rem(14px);
+  font-size: rem(15px);
 }
 
 .small {

@@ -2,6 +2,7 @@
 
 .base {
   color: var(--color-grey-20);
+  font-size: rem(15px);
   font-weight: var(--font-weight-normal);
 
   &:hover,

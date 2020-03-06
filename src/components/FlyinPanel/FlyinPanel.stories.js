@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import '~.storybook/storybook.module.css';
 import { State } from '~.storybook/State';
 import Button from '~/components/Button';
+import Heading from '~/components/Heading';
 import { P } from '~/components/Paragraph';
 import FlyinPanel from './FlyinPanel';
 
@@ -17,6 +18,9 @@ storiesOf('FlyinPanel', module).add('Base component', () => (
           }}
           title="Ingredients"
         >
+          <Heading level={2} size="xSmall">
+            Product Ingredients
+          </Heading>
           <P>
             Water (Aqua), Glycerin, Sodium Ascorbyl Phosphate, Niacinamide,
             PEG-40 Hydrogenated Castor Oil, Phenoxyethanol, Citric Acid, Xanthan
