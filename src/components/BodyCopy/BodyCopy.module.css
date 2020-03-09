@@ -10,32 +10,13 @@
   color: var(--color-white);
 }
 
-.eyebrow {
-  margin-top: 0;
-  margin-bottom: 20px;
-  font-family: var(--font-family-sans-serif-medium);
-  font-size: 0.9rem;
-  line-height: 1.7;
-}
-
-.secondaryTitle {
-  font-family: var(--font-family-sans-serif-medium);
-  font-size: rem(17px);
-}
-
-.primaryTitle,
-.secondaryTitle {
-  margin-top: 0;
-  margin-bottom: 30px;
-}
-
 .TextOverHero {
-  .primaryTitle,
-  .secondaryTitle {
+  .heading,
+  .subHeading {
     margin: 0;
   }
 
-  .secondaryTitle {
+  .subHeading {
     padding-top: 5px;
   }
 
@@ -54,7 +35,7 @@
 }
 
 .TwoColumn {
-  .primaryTitle {
+  .heading {
     font-family: var(--font-family-zapf-serif);
   }
 }
@@ -73,7 +54,7 @@
     }
   }
 
-  .primaryTitle {
+  .heading {
     padding: 0 0 17px 0;
     border-bottom: 2px solid var(--color-grey-10);
     font-family: var(--font-family-zapf-serif);
@@ -86,11 +67,6 @@
       padding: 0 0 17px;
     }
   }
-}
-
-.ternaryTitle.ternaryTitle {
-  /* @TODO fix this in regards to https://github.com/aesop/aesop-web/issues/42 */
-  font-family: var(--font-family-sans-serif-medium);
 }
 
 .copy p {

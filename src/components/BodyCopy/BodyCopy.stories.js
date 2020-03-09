@@ -17,11 +17,11 @@ storiesOf('BodyCopy', module).add('Base component', () => (
       openInANewWindow: boolean('cta.openInANewWindow', true),
     }}
     eyebrow={text('eyebrow', 'Recommended Nearby')}
-    id={text('id', 'Anti-Oxidant')}
-    primaryTitle={text(
-      'primaryTitle',
+    heading={text(
+      'heading',
       'Aesop and The Paris Review: A Partnership Extended',
-    )} // TBC -- nested component
-    secondaryTitle={text('secondaryTitle', 'Active Nutrients')}
+    )}
+    id={text('id', 'Anti-Oxidant')} // TBC -- nested component
+    subHeading={text('subHeading', 'Active Nutrients')}
   />
 ));

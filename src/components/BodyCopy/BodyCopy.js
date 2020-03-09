@@ -3,9 +3,8 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import marked from 'marked';
 import parse from 'html-react-parser';
-import Heading from '~/components/Heading/Heading';
+import PageHeading from '~/components/PageHeading';
 import Hyperlink from '~/components/Hyperlink';
-import { getPrimaryTitleLevel, getSecondaryTitleLevel } from './BodyCopy.utils';
 import styles from './BodyCopy.module.css';
 
 const BodyCopy = ({
@@ -15,38 +14,24 @@ const BodyCopy = ({
   eyebrow,
   id,
   parent,
-  primaryTitle,
-  secondaryTitle,
+  heading,
+  subHeading,
 }) => {
   const classSet = cx(styles.base, className, styles[parent]);
 
   return (
     <section className={classSet} id={id}>
-      {eyebrow && (
-        <Heading className={styles.eyebrow} level="2" size="xSmall">
-          {eyebrow}
-        </Heading>
-      )}
-
-      {primaryTitle && (
-        <Heading
-          className={styles.primaryTitle}
-          level={getPrimaryTitleLevel(eyebrow)}
-          size="xLarge"
-        >
-          {primaryTitle}
-        </Heading>
-      )}
-
-      {secondaryTitle && (
-        <Heading
-          className={styles.secondaryTitle}
-          level={getSecondaryTitleLevel(eyebrow, primaryTitle)}
-          size="small"
-        >
-          {secondaryTitle}
-        </Heading>
-      )}
+      <PageHeading
+        childrenClassNames={{
+          eyebrow: styles.eyebrow,
+          heading: styles.heading,
+          subHeading: styles.subHeading,
+        }}
+        eyebrow={eyebrow}
+        heading={heading}
+        id={id}
+        subHeading={subHeading}
+      />
 
       {copy && (
         <div className={styles.copy}>{parse(marked(copy.toString()))}</div>
@@ -72,10 +57,10 @@ BodyCopy.propTypes = {
   copy: PropTypes.oneOf([PropTypes.string, PropTypes.node]),
   cta: PropTypes.object,
   eyebrow: PropTypes.string,
+  heading: PropTypes.string,
   id: PropTypes.string,
   parent: PropTypes.oneOf(['TextOverHero', 'HalfWidthFullBleed']),
-  primaryTitle: PropTypes.string,
-  secondaryTitle: PropTypes.string,
+  subHeading: PropTypes.string,
 };
 
 BodyCopy.defaultProps = {
@@ -83,10 +68,10 @@ BodyCopy.defaultProps = {
   copy: undefined,
   cta: undefined,
   eyebrow: undefined,
+  heading: undefined,
   id: undefined,
   parent: undefined,
-  primaryTitle: undefined,
-  secondaryTitle: undefined,
+  subHeading: undefined,
 };
 
 export default BodyCopy;

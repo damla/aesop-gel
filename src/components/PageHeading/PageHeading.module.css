@@ -1,0 +1,19 @@
+@import 'styles/variables/index';
+
+.base {
+  position: relative;
+  margin-top: rem(22px);
+  margin-bottom: rem(22px);
+}
+
+.heading {
+  margin: 0 0 20px;
+}
+
+.eyebrow {
+  color: var(--color-body-copy);
+}
+
+.subHeading {
+  color: var(--color-body-copy);
+}
