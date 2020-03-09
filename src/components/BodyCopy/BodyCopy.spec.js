@@ -28,7 +28,6 @@ describe('<BodyCopy />', () => {
           eyebrow="Recommended Nearby"
           id="Anti-Oxidant"
           primaryTitle="Aesop & The Paris Review: A Partnership Extended"
-          quote="Fortification of the highest order. Parsley Seed Anti-Oxidant Facial Hydrating Cream."
           secondaryTitle="Active Nutrients"
         />,
       )

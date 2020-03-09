@@ -5,7 +5,6 @@ import marked from 'marked';
 import parse from 'html-react-parser';
 import Heading from '~/components/Heading/Heading';
 import Hyperlink from '~/components/Hyperlink';
-import { P } from '~/components/Paragraph';
 import { getPrimaryTitleLevel, getSecondaryTitleLevel } from './BodyCopy.utils';
 import styles from './BodyCopy.module.css';
 
@@ -17,7 +16,6 @@ const BodyCopy = ({
   id,
   parent,
   primaryTitle,
-  quote,
   secondaryTitle,
 }) => {
   const classSet = cx(styles.base, className, styles[parent]);
@@ -50,19 +48,21 @@ const BodyCopy = ({
         </Heading>
       )}
 
-      {copy && <P className={styles.copy}>{parse(marked(copy.toString()))}</P>}
-
-      {cta && cta.text && (
-        <Hyperlink
-          openInANewWindow={cta.openInANewWindow}
-          style={cta.style}
-          url={cta.url}
-        >
-          {cta.text}
-        </Hyperlink>
+      {copy && (
+        <div className={styles.copy}>{parse(marked(copy.toString()))}</div>
       )}
 
-      {quote && <p className={styles.quote}>{quote}</p>}
+      {cta && cta.text && (
+        <div className={styles.ctaWrapper}>
+          <Hyperlink
+            openInANewWindow={cta.openInANewWindow}
+            style={cta.style}
+            url={cta.url}
+          >
+            {cta.text}
+          </Hyperlink>
+        </div>
+      )}
     </section>
   );
 };
@@ -75,7 +75,6 @@ BodyCopy.propTypes = {
   id: PropTypes.string,
   parent: PropTypes.oneOf(['TextOverHero', 'HalfWidthFullBleed']),
   primaryTitle: PropTypes.string,
-  quote: PropTypes.string,
   secondaryTitle: PropTypes.string,
 };
 
@@ -87,7 +86,6 @@ BodyCopy.defaultProps = {
   id: undefined,
   parent: undefined,
   primaryTitle: undefined,
-  quote: undefined,
   secondaryTitle: undefined,
 };
 
