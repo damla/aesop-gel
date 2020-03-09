@@ -10,6 +10,16 @@
   font-family: var(--font-family-sans-serif-regular);
   font-size: rem(15px);
   line-height: 1.8;
+
+  p {
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .captionWrapper {

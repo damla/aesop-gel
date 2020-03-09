@@ -22,7 +22,10 @@ const Figure = ({ caption, children, className, id }) => {
 
 Figure.propTypes = {
   caption: PropTypes.string,
-  children: PropTypes.oneOfType([PropTypes.node, PropTypes.element]),
+  children: PropTypes.oneOfType([
+    PropTypes.instanceOf(Image),
+    // PropTypes.instanceOf(Video) /** @TODO uncomment when Video component is available */
+  ]),
   className: PropTypes.string,
   id: PropTypes.string.isRequired,
 };
