@@ -22,10 +22,6 @@ storiesOf('BodyCopy', module).add('Base component', () => (
       'primaryTitle',
       'Aesop and The Paris Review: A Partnership Extended',
     )} // TBC -- nested component
-    quote={text(
-      'quote',
-      'Fortification of the highest order. Parsley Seed Anti-Oxidant Facial Hydrating Cream.',
-    )}
     secondaryTitle={text('secondaryTitle', 'Active Nutrients')}
   />
 ));

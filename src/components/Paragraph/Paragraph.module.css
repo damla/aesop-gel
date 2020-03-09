@@ -1,7 +1,7 @@
 @import 'styles/index';
 
 .paragraph {
-  margin: rem(16px) 0;
+  margin: rem(17px) 0;
   color: var(--color-body-copy);
   line-height: 1.6;
 

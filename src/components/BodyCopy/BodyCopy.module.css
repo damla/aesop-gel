@@ -20,7 +20,7 @@
 
 .secondaryTitle {
   font-family: var(--font-family-sans-serif-medium);
-  font-size: rem(16px);
+  font-size: rem(17px);
 }
 
 .primaryTitle,
@@ -94,9 +94,17 @@
 }
 
 .copy p {
-  margin-bottom: 30px;
-  font-size: rem(16px);
+  margin: 10px 0;
+  font-size: rem(17px);
   line-height: 1.7;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 
   a {
     color: var(--color-grey-20);
@@ -110,4 +118,8 @@
   font-family: var(--font-family-zapf-serif);
   font-size: rem(26px);
   line-height: 1.5;
+}
+
+.ctaWrapper {
+  margin-top: 20px;
 }
