@@ -1,8 +1,9 @@
 @import 'styles/index';
 
 .paragraph {
-  margin: rem(17px) 0;
+  margin: rem(18px) 0;
   color: var(--color-body-copy);
+  font-size: rem(15px);
   line-height: 1.6;
 
   &:first-of-type {

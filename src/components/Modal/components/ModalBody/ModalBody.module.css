@@ -9,7 +9,7 @@
   color: var(--color-grey-10);
   font-family: var(--font-family-sans-serif-regular);
   font-size: rem(15px);
-  line-height: 1.4;
+  line-height: 1.6;
   transform: translateZ(0);
 
   @media (--viewport-md) {

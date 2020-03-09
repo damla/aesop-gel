@@ -1,8 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 import Button from '~/components/Button';
 import Image from '~/components/Image';
-import PROP_TYPES from './Video.prop-types';
 import styles from './Video.module.css';
 
 export const Video = ({
@@ -91,6 +91,69 @@ export const Video = ({
   );
 };
 
-Video.propTypes = PROP_TYPES;
+Video.propTypes = {
+  autoplay: PropTypes.bool.isRequired,
+  className: PropTypes.string,
+  fallbackImage: PropTypes.shape({
+    className: PropTypes.string,
+    altText: PropTypes.string.isRequired,
+    cta: PropTypes.shape({
+      id: PropTypes.string,
+      dataTestRef: PropTypes.string,
+      openInANewWindow: PropTypes.bool,
+      style: PropTypes.oneOf(['Relative', 'Absolute']),
+      title: PropTypes.string,
+      text: PropTypes.string,
+      type: PropTypes.oneOf([
+        'External Button Link',
+        'External Text Link',
+        'Internal Button Link',
+        'Internal Text Link',
+        'External No Icon Link',
+        'No Icon Link',
+      ]),
+      url: PropTypes.string.isRequired,
+    }),
+    fullBleedImage: PropTypes.bool,
+    id: PropTypes.bool,
+    large: PropTypes.string,
+    medium: PropTypes.string,
+    small: PropTypes.string,
+    type: PropTypes.string,
+  }),
+  id: PropTypes.string.isRequired,
+  large: PropTypes.string,
+  loop: PropTypes.bool.isRequired,
+  medium: PropTypes.string,
+  poster: PropTypes.shape({
+    className: PropTypes.string,
+    altText: PropTypes.string.isRequired,
+    cta: PropTypes.exact({
+      id: PropTypes.string,
+      dataTestRef: PropTypes.string,
+      openInANewWindow: PropTypes.bool,
+      style: PropTypes.oneOf(['Relative', 'Absolute']),
+      title: PropTypes.string,
+      text: PropTypes.string,
+      type: PropTypes.oneOf([
+        'External Button Link',
+        'External Text Link',
+        'Internal Button Link',
+        'Internal Text Link',
+        'External No Icon Link',
+        'No Icon Link',
+      ]),
+      url: PropTypes.string.isRequired,
+    }),
+    fullBleedImage: PropTypes.bool,
+    id: PropTypes.bool,
+    large: PropTypes.string,
+    medium: PropTypes.string,
+    small: PropTypes.string,
+    type: PropTypes.string,
+  }),
+  small: PropTypes.string,
+  playInFullScreen: PropTypes.bool,
+};
 
 export default Video;

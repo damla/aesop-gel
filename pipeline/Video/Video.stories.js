@@ -9,7 +9,7 @@ import Video from './Video';
 
 storiesOf('Video', module).add('Base component', () => (
   <Video
-    autoplay={boolean('autoplay', true)}
+    autoplay={boolean('autoplay', false)}
     id={text('id', 'video')}
     large={text(
       'large',

@@ -20,7 +20,7 @@ const BodyCopy = ({
   const classSet = cx(styles.base, className, styles[parent]);
 
   return (
-    <section className={classSet} id={id}>
+    <article className={classSet} id={id}>
       <PageHeading
         childrenClassNames={{
           eyebrow: styles.eyebrow,
@@ -48,7 +48,7 @@ const BodyCopy = ({
           </Hyperlink>
         </div>
       )}
-    </section>
+    </article>
   );
 };
 
