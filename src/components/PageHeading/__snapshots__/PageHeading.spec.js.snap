@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PageHeading /> renders base component correctly 1`] = `
+<header
+  className="base"
+  id="Anti-Oxidant"
+>
+  <h2
+    className="base large heading"
+  >
+    Title: Fortification of the highest order. Parsley Seed Anti-Oxidant Facial Hydrating Cream.
+  </h2>
+</header>
+`;
+
+exports[`<PageHeading /> renders with subHeading and eyebrow variation correctly 1`] = `
+<header
+  className="base"
+  id="Anti-Oxidant"
+>
+  <h1
+    className="base xSmall eyebrow"
+  >
+    Eyebrow: Offers fortification of the highest order against free radicals.
+  </h1>
+  <h3
+    className="base large heading"
+  >
+    Heading: Fortification of the highest order. Parsley Seed Anti-Oxidant Facial Hydrating Cream.
+  </h3>
+  <h4
+    className="base xSmall subHeading"
+  >
+    SubHeading: Parsley Seed Cream. Intensely soothing, nourishing and hydrating, this elegant formulation contains a potent blend of botanicals that offer fortification of the highest order against free radicals.
+  </h4>
+</header>
+`;
+
+exports[`<PageHeading /> renders with subHeading variation correctly 1`] = `
+<header
+  className="base"
+  id="Parsley"
+>
+  <h2
+    className="base large heading"
+  >
+    Heading: Fortification of the highest order.
+  </h2>
+  <h3
+    className="base xSmall subHeading"
+  >
+    Subcopy: Parsley Seed Anti-Oxidant Facial Hydrating Cream 60mL
+  </h3>
+</header>
+`;

@@ -15,7 +15,7 @@ import Heading from './Heading';
       id={text('id', 'storybook-heading-class')}
       isFlush={boolean('isFlush', false)}
       hasSerifFont={boolean('hasSerifFont', false)}
-      level={select('level', [1, 2, 3, 4, 5, 6], 1)}
+      level={select('level', ['1', '2', '3', '4', '5', '6'], 1)}
       size={select('size', ['xSmall', 'small', 'medium', 'large', 'xLarge'], 'large')}
     >
       {text('children', 'Fortification of the highest order')}
@@ -34,7 +34,7 @@ import Heading from '@aesop-gel/components/Heading'
 
 ...
 
-<Heading level={1} size="xLarge">
+<Heading level="1" size="xLarge">
   Parsley Seed Anti-Oxidant Facial Hydrating Cream 60mL
 </Heading>
 ```
@@ -45,7 +45,7 @@ import Heading from '@aesop-gel/components/Heading'
 
 <Preview>
   <Story name="Heading with Serif Font">
-    <Heading level={1} size="xLarge" hasSerifFont={true}>
+    <Heading level="1" size="xLarge" hasSerifFont={true}>
       Parsley Seed Anti-Oxidant Facial Hydrating Cream 60mL
     </Heading>
   </Story>
@@ -56,19 +56,19 @@ import Heading from '@aesop-gel/components/Heading'
 <Preview>
   <Story name="Heading size variations">
     <div>
-      <Heading level={1} size="xLarge">
+      <Heading level="1" size="xLarge">
         Parsley Seed Anti-Oxidant Facial Hydrating Cream 60mL
       </Heading>
-      <Heading level={2} size="large">
+      <Heading level="2" size="large">
         Parsley Seed Anti-Oxidant Facial Hydrating Cream 60mL
       </Heading>
-      <Heading level={3} size="medium">
+      <Heading level="3" size="medium">
         Parsley Seed Anti-Oxidant Facial Hydrating Cream 60mL
       </Heading>
-      <Heading level={4} size="small">
+      <Heading level="4" size="small">
         Parsley Seed Anti-Oxidant Facial Hydrating Cream 60mL
       </Heading>
-      <Heading level={5} size="xSmall">
+      <Heading level="5" size="xSmall">
         Parsley Seed Anti-Oxidant Facial Hydrating Cream 60mL
       </Heading>
     </div>

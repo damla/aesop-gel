@@ -2,9 +2,9 @@ export default {
   leftColumn: [
     {
       id: '1',
-      primaryTitle: 'Title 1',
-      subTitle: 'Sub title 1',
-      subItemLinks: [
+      heading: 'Title 1',
+      subHeading: 'Sub title 1',
+      items: [
         {
           id: '1',
           text: 'About',
@@ -19,9 +19,9 @@ export default {
     },
     {
       id: '2',
-      primaryTitle: 'Title 2',
-      subTitle: 'Sub title 2',
-      subItemLinks: [
+      heading: 'Title 2',
+      subHeading: 'Sub title 2',
+      items: [
         {
           id: '1',
           text: 'Philosophy',
@@ -33,17 +33,17 @@ export default {
   rightColumn: [
     {
       id: '1',
-      primaryTitle: 'Title 1',
-      subTitle: 'Sub title 1',
-      subItemLinks: [
+      heading: 'Suisse Heading 24',
+      subHeading: 'Suisse Sub Heading',
+      items: [
         {
           id: '1',
-          text: 'About',
+          text: 'About link one',
           url: 'https://www.aesop.com/au/r/about',
         },
         {
           id: '2',
-          text: 'About 2',
+          text: 'About link two',
           url: 'https://www.aesop.com/au/r/about',
         },
       ],

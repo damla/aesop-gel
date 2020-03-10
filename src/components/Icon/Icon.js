@@ -20,8 +20,6 @@ const Icon = ({
   const svg = find(svgs, { name });
 
   if (svg === undefined) {
-    console.error('<Icon />: svg does no exist'); // eslint-disable-line no-console
-
     return null;
   }
 

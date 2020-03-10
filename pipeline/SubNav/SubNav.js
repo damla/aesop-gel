@@ -21,17 +21,15 @@ export const getLinkItems = links =>
 
 const SubNav = ({ className, titleClassName, links, title }) => {
   const classSet = cx(styles.base, className);
-  const headingSize = 'small';
-  const headingLevel = '5';
 
   return (
     <nav className={classSet}>
       {title && (
         <Heading
           className={cx(styles.title, titleClassName)}
-          level={headingLevel}
+          level=""
           noMargin={true}
-          size={headingSize}
+          size="small"
         >
           {title}
         </Heading>

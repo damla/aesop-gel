@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import Heading from '~/components/Heading';
-import { getHeadingLevel, getSubHeadingLEvel } from './PageHeading.utils';
+import { getHeadingLevel, getSubHeadingLevel } from './PageHeading.utils';
 import styles from './PageHeading.module.css';
 
 const PageHeading = ({
@@ -40,7 +40,7 @@ const PageHeading = ({
       {subHeading && (
         <Heading
           className={subHeadingClassSet}
-          level={getSubHeadingLEvel(eyebrow, heading)}
+          level={getSubHeadingLevel(eyebrow, heading)}
           size="xSmall"
         >
           {subHeading}
@@ -51,11 +51,11 @@ const PageHeading = ({
 };
 
 PageHeading.propTypes = {
-  childrenClassNames: {
+  childrenClassNames: PropTypes.shape({
     eyebrow: PropTypes.string,
     heading: PropTypes.string,
     subHeading: PropTypes.string,
-  },
+  }),
   className: PropTypes.string,
   eyebrow: PropTypes.string,
   heading: PropTypes.string,

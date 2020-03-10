@@ -18,7 +18,7 @@ storiesOf('FlyinPanel', module).add('Base component', () => (
           }}
           title="Ingredients"
         >
-          <Heading level={2} size="xSmall">
+          <Heading level="2" size="xSmall">
             Product Ingredients
           </Heading>
           <P>

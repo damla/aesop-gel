@@ -9,7 +9,7 @@ const Slide = ({ heading, description, image }) => (
     {(heading || description) && (
       <div className={styles.information}>
         {heading && (
-          <Heading className={styles.heading} level={5} size="xSmall">
+          <Heading className={styles.heading} level="5" size="xSmall">
             {heading}
           </Heading>
         )}

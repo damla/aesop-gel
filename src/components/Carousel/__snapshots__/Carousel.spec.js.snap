@@ -6,7 +6,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
   dir="ltr"
 >
   <button
-    className="base action external inlineStyle base"
+    className="base external inlineStyle base"
     disabled={false}
     onClick={null}
     title="next slide"
@@ -119,7 +119,9 @@ exports[`<Carousel /> renders base component correctly 1`] = `
               target="_self"
               title="Link to Parsley Seed Facial Cleanser"
             >
-              <div>
+              <div
+                className="information"
+              >
                 <h5
                   className="base xSmall heading"
                 >
@@ -187,7 +189,9 @@ exports[`<Carousel /> renders base component correctly 1`] = `
               target="_self"
               title="Link to Parsley Seed Facial Cleanser"
             >
-              <div>
+              <div
+                className="information"
+              >
                 <h5
                   className="base xSmall heading"
                 >
@@ -250,7 +254,9 @@ exports[`<Carousel /> renders base component correctly 1`] = `
               target="_self"
               title="Link to Parsley Seed Cleansing Masque"
             >
-              <div>
+              <div
+                className="information"
+              >
                 <h5
                   className="base xSmall heading"
                 >
@@ -311,7 +317,9 @@ exports[`<Carousel /> renders base component correctly 1`] = `
             <div
               className="item"
             >
-              <div>
+              <div
+                className="information"
+              >
                 <h5
                   className="base xSmall heading"
                 >
@@ -349,7 +357,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
     </div>
   </div>
   <button
-    className="base action external inlineStyle base"
+    className="base external inlineStyle base"
     disabled={false}
     onClick={[Function]}
     title="next slide"
@@ -449,7 +457,9 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
               target="_self"
               title="Link to Parsley Seed Facial Cleanser"
             >
-              <div>
+              <div
+                className="information"
+              >
                 <h5
                   className="base xSmall heading"
                 >
@@ -517,7 +527,9 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
               target="_self"
               title="Link to Parsley Seed Facial Cleanser"
             >
-              <div>
+              <div
+                className="information"
+              >
                 <h5
                   className="base xSmall heading"
                 >
@@ -580,7 +592,9 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
               target="_self"
               title="Link to Parsley Seed Cleansing Masque"
             >
-              <div>
+              <div
+                className="information"
+              >
                 <h5
                   className="base xSmall heading"
                 >
@@ -641,7 +655,9 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
             <div
               className="item"
             >
-              <div>
+              <div
+                className="information"
+              >
                 <h5
                   className="base xSmall heading"
                 >
@@ -733,7 +749,9 @@ exports[`<Carousel /> renders component correctly if no \`url\` member is provid
             <div
               className="item"
             >
-              <div>
+              <div
+                className="information"
+              >
                 <h5
                   className="base xSmall heading"
                 >

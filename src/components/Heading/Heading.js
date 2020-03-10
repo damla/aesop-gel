@@ -36,7 +36,7 @@ Heading.propTypes = {
   id: PropTypes.string,
   isFlush: PropTypes.bool,
   hasSerifFont: PropTypes.bool,
-  level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]).isRequired,
+  level: PropTypes.oneOf(['1', '2', '3', '4', '5', '6']).isRequired,
   size: PropTypes.oneOf(['xSmall', 'small', 'medium', 'large', 'xLarge'])
     .isRequired,
 };
