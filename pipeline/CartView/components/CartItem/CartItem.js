@@ -2,7 +2,7 @@ import React from 'react';
 import cx from 'classnames';
 import Button from '~/components/Button';
 import QuantitySelect from '~/components/QuantitySelect';
-// import { useMutationUpdateCartEntry } from '~/hooks/api/useMutationUpdateCartEntry';
+// import { useMutationUpdateCartEntry } from '~/customHooks/api/useMutationUpdateCartEntry';
 // import PROP_TYPES from './CartItem.prop-types';
 import { getQuantityOptions } from './CartItem.utils';
 import styles from './CartItem.module.css';

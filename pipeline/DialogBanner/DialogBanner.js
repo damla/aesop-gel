@@ -1,7 +1,7 @@
 import React from 'react';
 import cx from 'classnames';
-import { useEscapeKeyListener } from '~/hooks/useEscapeKeyListener';
-import { useOverflowHidden } from '~/hooks/useOverflowHidden';
+import { useEscapeKeyListener } from '~/customHooks/useEscapeKeyListener';
+import { useOverflowHidden } from '~/customHooks/useOverflowHidden';
 import Button from '~/components/Button';
 import Heading from '~/components/Heading';
 import Icon from '~/components/Icon';

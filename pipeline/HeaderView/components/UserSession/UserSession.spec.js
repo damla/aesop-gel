@@ -1,14 +1,14 @@
 import React from 'react';
 import renderer, { act, ReactTestInstance } from 'react-test-renderer';
 import waitForExpect from 'wait-for-expect';
-import { useQueryGetUserSession } from '~/hooks/api/useQueryGetUserSession';
+import { useQueryGetUserSession } from '~/customHooks/api/useQueryGetUserSession';
 import { Locale } from '~/types/Locale';
 import { LocaleContext } from '~/components/contexts/LocaleContext/LocaleContext';
 import LocaleContextFixture from '~/components/contexts/LocaleContext/LocaleContext.fixture';
 import UserSession from './UserSession';
 
 const mockFn = jest.fn();
-jest.mock('~/hooks/api/useQueryGetUserSession');
+jest.mock('~/customHooks/api/useQueryGetUserSession');
 
 describe('<UserSession />', () => {
   let data;

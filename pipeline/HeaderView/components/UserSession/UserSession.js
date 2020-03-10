@@ -1,7 +1,7 @@
 import React from 'react';
 import { get } from 'lodash';
 import cx from 'classnames';
-import { useQueryGetUserSession } from '~/hooks/api/useQueryGetUserSession';
+import { useQueryGetUserSession } from '~/customHooks/api/useQueryGetUserSession';
 import Button from '~/components/Button';
 import List from '~/components/List';
 // import Props from './UserSession.types';

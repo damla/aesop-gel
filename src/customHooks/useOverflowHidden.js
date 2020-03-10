@@ -1,9 +1,9 @@
-import React from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 export const useOverflowHidden = isVisible => {
-  const [isOverflowHidden, setIsOverflowHidden] = React.useState(false);
+  const [isOverflowHidden, setIsOverflowHidden] = useState(false);
 
-  const hidden = React.useCallback(() => {
+  const hidden = useCallback(() => {
     if (typeof document !== 'undefined') {
       if (document.body.style.overflow !== 'hidden') {
         document.body.style.overflow = 'hidden';
@@ -12,13 +12,13 @@ export const useOverflowHidden = isVisible => {
     }
   }, []);
 
-  const reset = React.useCallback(() => {
+  const reset = useCallback(() => {
     if (typeof document !== 'undefined' && isOverflowHidden) {
       document.body.style.overflow = 'unset';
     }
   }, [isOverflowHidden]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (isVisible) {
       hidden();
     } else {

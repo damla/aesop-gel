@@ -6,10 +6,10 @@ import CartView from './CartView';
 import CartViewFixture from './CartView.fixture';
 import { LocaleContext } from '~/components/contexts/LocaleContext/LocaleContext';
 import LocaleContextFixture from '~/components/contexts/LocaleContext/LocaleContext.fixture';
-import { useQueryGetCart } from '~/hooks/api/useQueryGetCart';
+import { useQueryGetCart } from '~/customHooks/api/useQueryGetCart';
 
 const mockFn = jest.fn();
-jest.mock('~/hooks/api/useQueryGetCart');
+jest.mock('~/customHooks/api/useQueryGetCart');
 
 describe('<CartView />', () => {
   let data;

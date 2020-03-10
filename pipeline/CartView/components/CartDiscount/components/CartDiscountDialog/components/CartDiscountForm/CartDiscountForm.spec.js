@@ -6,12 +6,12 @@ import CartDiscountForm from './CartDiscountForm';
 import CartDiscountFormFixture from './CartDiscountForm.fixture';
 import { LocaleContext } from '~/components/contexts/LocaleContext/LocaleContext';
 import LocaleContextFixture from '~/components/contexts/LocaleContext/LocaleContext.fixture';
-import { useMutationCreateCartPromotion } from '~/hooks/api/useMutationCreateCartPromotion';
+import { useMutationCreateCartPromotion } from '~/customHooks/api/useMutationCreateCartPromotion';
 
 const mockMutationFn = jest.fn();
 const mockCompletedFn = jest.fn();
 
-jest.mock('~/hooks/api/useMutationCreateCartPromotion');
+jest.mock('~/customHooks/api/useMutationCreateCartPromotion');
 
 describe('<CartDiscountForm />', () => {
   let copy;

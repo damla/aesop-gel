@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 import AddToCartButton from './AddToCartButton';
 import AddToCartButtonFixture from './AddToCartButton.fixture';
 
-jest.mock('~/hooks/api/useMutationCreateCartEntry');
+jest.mock('~/customHooks/api/useMutationCreateCartEntry');
 
 describe('<AddToCartButton />', () => {
   it('should be defined', () => {

@@ -2,12 +2,12 @@ import React from 'react';
 import { MockedProvider } from '@apollo/react-testing';
 import renderer, { act, ReactTestInstance } from 'react-test-renderer';
 import waitForExpect from 'wait-for-expect';
-import { useQueryGetNotification } from '~/hooks/api/useQueryGetNotification';
-import { useMutationHideNotification } from '~/hooks/api/useMutationHideNotification';
+import { useQueryGetNotification } from '~/customHooks/api/useQueryGetNotification';
+import { useMutationHideNotification } from '~/customHooks/api/useMutationHideNotification';
 import NotificationBanner from './NotificationBanner';
 
-jest.mock('~/hooks/api/useMutationHideNotification');
-jest.mock('~/hooks/api/useQueryGetNotification');
+jest.mock('~/customHooks/api/useMutationHideNotification');
+jest.mock('~/customHooks/api/useQueryGetNotification');
 
 describe('<NotificationBanner />', () => {
   it('should be defined', () => {

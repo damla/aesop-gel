@@ -1,6 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
-import { useMutationDeleteCartPromotion } from '~/hooks/api/useMutationDeleteCartPromotion';
+import { useMutationDeleteCartPromotion } from '~/customHooks/api/useMutationDeleteCartPromotion';
 // import Props from './CartDiscountItem.types';
 import Button from '~/components/Button';
 import styles from './CartDiscountItem.module.css';

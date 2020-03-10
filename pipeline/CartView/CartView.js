@@ -1,7 +1,7 @@
 import React from 'react';
 import cx from 'classnames';
-import { useEscapeKeyListener } from '~/hooks/useEscapeKeyListener';
-import { useOverflowHidden } from '~/hooks/useOverflowHidden';
+import { useEscapeKeyListener } from '~/customHooks/useEscapeKeyListener';
+import { useOverflowHidden } from '~/customHooks/useOverflowHidden';
 import CartCheckoutFixture from './components/CartCheckout/CartCheckout.fixture';
 import CartDiscountFixture from './components/CartDiscount/CartDiscount.fixture';
 import CartHeaderFixture from './components/CartHeader/CartHeader.fixture';
@@ -13,7 +13,7 @@ import CartInformation from './components/CartInformation';
 import CartItem from './components/CartItem';
 import Overlay from '~/components/Overlay';
 import Transition from '~/components/Transition';
-import { useQueryGetCart } from '~/hooks/api/useQueryGetCart';
+import { useQueryGetCart } from '~/customHooks/api/useQueryGetCart';
 import PROP_TYPES from './CartView.prop-types';
 import styles from './CartView.module.css';
 

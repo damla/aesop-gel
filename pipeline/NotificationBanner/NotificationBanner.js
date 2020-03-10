@@ -2,8 +2,8 @@ import React from 'react';
 import cx from 'classnames';
 import { get } from 'lodash';
 import Transition from '~/components/Transition';
-// import { useMutationHideNotification } from '~/hooks/api/useMutationHideNotification';
-// import { useQueryGetNotification } from '~/hooks/api/useQueryGetNotification';
+// import { useMutationHideNotification } from '~/customHooks/api/useMutationHideNotification';
+// import { useQueryGetNotification } from '~/customHooks/api/useQueryGetNotification';
 import PropTypes from './NotificationBanner.prop-types';
 import styles from './NotificationBanner.module.css';
 

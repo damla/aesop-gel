@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { storiesOf } from '@storybook/react';
-import { useOnScreen } from '~/hooks/useOnScreen';
+import { useOnScreen } from '~/customHooks/useOnScreen';
 import DefinitionList from '~/components/DefinitionList';
 import Transition from '~/components/Transition';
 

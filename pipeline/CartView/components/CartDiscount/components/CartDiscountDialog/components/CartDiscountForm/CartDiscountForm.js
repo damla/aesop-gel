@@ -3,8 +3,8 @@ import Button from '~/components/Button';
 import FormRow from '~/components/FormRow';
 import { Input } from '~/components/controls';
 import Loading from '~/components/Loading';
-import { useFormValues } from '~/hooks/useFormValues';
-import { useMutationCreateCartPromotion } from '~/hooks/api/useMutationCreateCartPromotion';
+import { useFormValues } from '~/customHooks/useFormValues';
+import { useMutationCreateCartPromotion } from '~/customHooks/api/useMutationCreateCartPromotion';
 // import Props from './CartDiscountForm.types';
 import styles from './CartDiscountForm.module.css';
 

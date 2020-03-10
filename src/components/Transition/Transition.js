@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { CSSTransition } from 'react-transition-group';
-import useHasMounted from '~/hooks/useHasMounted';
+import useHasMounted from '~/customHooks/useHasMounted';
 import data from './Transition.data';
 
 const Transition = ({

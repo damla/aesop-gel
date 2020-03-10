@@ -7,9 +7,9 @@ import CartItem from './CartItem';
 import CartItemFixture from './CartItem.fixture';
 import { LocaleContext } from '~/components/contexts/LocaleContext/LocaleContext';
 import LocaleContextFixture from '~/components/contexts/LocaleContext/LocaleContext.fixture';
-import { useMutationUpdateCartEntry } from '~/hooks/api/useMutationUpdateCartEntry';
+import { useMutationUpdateCartEntry } from '~/customHooks/api/useMutationUpdateCartEntry';
 
-jest.mock('~/hooks/api/useMutationUpdateCartEntry');
+jest.mock('~/customHooks/api/useMutationUpdateCartEntry');
 jest.mock('~/lib/apollo/cache/onChangeCart');
 
 describe('<CartItem />', () => {

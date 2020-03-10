@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import Slider from 'react-slick';
-import useWindowHasResized from '~/hooks/useWindowHasResized';
+import useWindowHasResized from '~/customHooks/useWindowHasResized';
 import { ascertainIsMobileOrTablet } from '~/utils/viewports';
 import Hyperlink from '~/components/Hyperlink';
 import { getCarouselSettings } from './Carousel.utils';

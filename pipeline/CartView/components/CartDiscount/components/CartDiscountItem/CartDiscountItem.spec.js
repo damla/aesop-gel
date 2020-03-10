@@ -6,9 +6,9 @@ import CartDiscountItem from './CartDiscountItem';
 import CartDiscountItemFixture from './CartDiscountItem.fixture';
 import { LocaleContext } from '~/components/contexts/LocaleContext/LocaleContext';
 import LocaleContextFixture from '~/components/contexts/LocaleContext/LocaleContext.fixture';
-import { useMutationDeleteCartPromotion } from '~/hooks/api/useMutationDeleteCartPromotion';
+import { useMutationDeleteCartPromotion } from '~/customHooks/api/useMutationDeleteCartPromotion';
 
-jest.mock('~/hooks/api/useMutationDeleteCartPromotion');
+jest.mock('~/customHooks/api/useMutationDeleteCartPromotion');
 
 describe('<CartDiscountItem />', () => {
   let data;
