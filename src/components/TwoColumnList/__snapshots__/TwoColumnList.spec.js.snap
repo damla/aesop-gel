@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TwoColumnList /> renders base component correctly 1`] = `
+<div
+  className="base"
+>
+  <div
+    className="column"
+  >
+    <div
+      className="wrapper"
+    >
+      <h2
+        className="base medium"
+      >
+        Title 1
+      </h2>
+      <h4
+        className="base xSmall subHeading"
+      >
+        Sub title 1
+      </h4>
+      <ul
+        className="base list"
+      >
+        <li
+          className="item"
+        >
+          <a
+            className="base"
+            href="https://www.aesop.com/au/r/about"
+            target="_self"
+          >
+            About
+          </a>
+        </li>
+        <li
+          className="item"
+        >
+          <a
+            className="base"
+            href="https://www.aesop.com/au/r/about"
+            target="_self"
+          >
+            About 2
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div
+      className="wrapper"
+    >
+      <h2
+        className="base medium"
+      >
+        Title 2
+      </h2>
+      <h4
+        className="base xSmall subHeading"
+      >
+        Sub title 2
+      </h4>
+      <ul
+        className="base list"
+      >
+        <li
+          className="item"
+        >
+          <a
+            className="base"
+            href="https://www.aesop.com/au/r/philosophy-to-products"
+            target="_self"
+          >
+            Philosophy
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    className="column"
+  >
+    <div
+      className="wrapper"
+    >
+      <h2
+        className="base medium"
+      >
+        Suisse Heading 24
+      </h2>
+      <h4
+        className="base xSmall subHeading"
+      >
+        Suisse Sub Heading
+      </h4>
+      <ul
+        className="base list"
+      >
+        <li
+          className="item"
+        >
+          <a
+            className="base"
+            href="https://www.aesop.com/au/r/about"
+            target="_self"
+          >
+            About link one
+          </a>
+        </li>
+        <li
+          className="item"
+        >
+          <a
+            className="base"
+            href="https://www.aesop.com/au/r/about"
+            target="_self"
+          >
+            About link two
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;

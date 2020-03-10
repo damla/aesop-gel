@@ -27,7 +27,11 @@ describe('<Hyperlink />', () => {
 
   it('renders base component correctly', () => {
     const tree = renderer
-      .create(<Hyperlink text="Aesop" url="http://aesop.com" />)
+      .create(
+        <Hyperlink text="Aesop" url="http://aesop.com">
+          Aesop
+        </Hyperlink>,
+      )
       .toJSON();
 
     expect(tree).toMatchSnapshot();

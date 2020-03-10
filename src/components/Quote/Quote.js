@@ -27,7 +27,7 @@ Quote.propTypes = {
   hasTopPadding: PropTypes.bool,
 };
 
-Quote.propTypes = {
+Quote.defaultProps = {
   author: undefined,
   className: undefined,
   content: undefined,

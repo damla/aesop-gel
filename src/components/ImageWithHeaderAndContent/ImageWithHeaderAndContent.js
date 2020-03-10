@@ -43,13 +43,13 @@ const ImageWithHeaderAndContent = ({
           <header>
             <Heading
               className={styles.title}
-              level={2}
+              level="2"
               noMargin={true}
               size="xSmall"
             >
               {copy.title}
             </Heading>
-            <Heading hasSerifFont={true} level={3} size="xLarge">
+            <Heading hasSerifFont={true} level="3" size="xLarge">
               {copy.subTitle}
             </Heading>
             {copy.description && (

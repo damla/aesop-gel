@@ -2,6 +2,7 @@ import React from 'react';
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import renderer from 'react-test-renderer';
+import { getHeadingLevel, getSubHeadingLevel } from './PageHeading.utils';
 import PageHeading from './PageHeading';
 
 configure({ adapter: new Adapter() });
@@ -51,5 +52,31 @@ describe('<PageHeading />', () => {
       .toJSON();
 
     expect(tree).toMatchSnapshot();
+  });
+});
+
+describe('PageHeading.utils', () => {
+  it('renders heading as an `h2` if no `eyebrow` prop is passed', () => {
+    expect(getHeadingLevel(undefined)).toEqual('2');
+  });
+
+  it('renders heading as an `h3` if `eyebrow` prop is passed', () => {
+    expect(getHeadingLevel('eyebrow')).toEqual('3');
+  });
+
+  it('renders subHeading as an `h2` if no `eyebrow` or `heading` prop are passed', () => {
+    expect(getSubHeadingLevel(undefined, undefined)).toEqual('2');
+  });
+
+  it('renders subHeading as an `h3` if `eyebrow` prop is passed but no `heading` prop is passed', () => {
+    expect(getSubHeadingLevel('eyebrow', undefined)).toEqual('3');
+  });
+
+  it('renders subHeading as an `h3` if no `eyebrow` prop is passed but `heading` prop is passed', () => {
+    expect(getSubHeadingLevel(undefined, 'subHeading')).toEqual('3');
+  });
+
+  it('renders subHeading as an `h4` if `eyebrow` and `heading` props are passed', () => {
+    expect(getSubHeadingLevel('eyebrow', 'subHeading')).toEqual('4');
   });
 });

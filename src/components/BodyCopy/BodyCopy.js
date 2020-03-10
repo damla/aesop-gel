@@ -54,7 +54,7 @@ const BodyCopy = ({
 
 BodyCopy.propTypes = {
   className: PropTypes.string,
-  copy: PropTypes.oneOf([PropTypes.string, PropTypes.node]),
+  copy: PropTypes.node,
   cta: PropTypes.object,
   eyebrow: PropTypes.string,
   heading: PropTypes.string,

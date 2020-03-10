@@ -9,7 +9,7 @@ const CarouselIntroduction = ({ heading, description }) => (
     <Heading
       className={styles.heading}
       hasSerifFont={true}
-      level={4}
+      level="4"
       size="xLarge"
     >
       {heading}

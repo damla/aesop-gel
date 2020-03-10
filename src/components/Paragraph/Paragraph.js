@@ -26,7 +26,7 @@ const ParagraphSet = ({ children, className }) => {
 };
 
 ParagraphSet.propTypes = {
-  children: PropTypes.any,
+  children: PropTypes.node,
   className: PropTypes.string,
 };
 

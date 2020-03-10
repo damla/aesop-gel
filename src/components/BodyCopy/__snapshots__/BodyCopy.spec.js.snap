@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BodyCopy /> renders base component correctly 1`] = `
+<article
+  className="base undefined"
+  id="Anti-Oxidant"
+>
+  <header
+    className="base"
+    id="Anti-Oxidant"
+  >
+    <h1
+      className="base xSmall eyebrow eyebrow"
+    >
+      Recommended Nearby
+    </h1>
+    <h3
+      className="base large heading heading"
+    >
+      Aesop & The Paris Review: A Partnership Extended
+    </h3>
+    <h4
+      className="base xSmall subHeading subHeading"
+    >
+      Active Nutrients
+    </h4>
+  </header>
+  <div
+    className="copy"
+  >
+    <p>
+      Parsley Seed Cream. 
+      <a
+        href="http://theparisreview.org"
+      >
+        The Paris Review
+      </a>
+       Intensely soothing, nourishing and hydrating, this elegant formulation contains a potent blend of botanicals that offer fortification of the highest order against free radicals.
+    </p>
+    
+
+  </div>
+  <div
+    className="ctaWrapper"
+  >
+    <a
+      className="base"
+      href="http://aesop.com"
+      target="_self"
+    >
+      Read more
+    </a>
+  </div>
+</article>
+`;
+
+exports[`<BodyCopy /> renders promary title as an \`h2\` if no \`eyebrow\` or \`primaryTitle\` prop are passed 1`] = `
+<article
+  className="base undefined"
+>
+  <header
+    className="base"
+  >
+    <h2
+      className="base xSmall subHeading subHeading"
+    >
+      Aesop & The Paris Review: A Partnership Extended
+    </h2>
+  </header>
+</article>
+`;
+
+exports[`<BodyCopy /> renders promary title as an \`h2\` if no \`eyebrow\` prop is passed 1`] = `
+<article
+  className="base undefined"
+>
+  <header
+    className="base"
+  >
+    <h2
+      className="base large heading heading"
+    >
+      Aesop & The Paris Review: A Partnership Extended
+    </h2>
+  </header>
+</article>
+`;

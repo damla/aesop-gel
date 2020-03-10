@@ -5,5 +5,7 @@ exports[`<Hyperlink /> renders base component correctly 1`] = `
   className="base"
   href="http://aesop.com"
   target="_self"
-/>
+>
+  Aesop
+</a>
 `;

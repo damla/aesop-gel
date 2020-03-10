@@ -3,6 +3,7 @@
 exports[`<Overlay /> renders base component correctly 1`] = `
 <div
   className="base isVisible"
+  onClick={[MockFunction]}
   onKeyPress={[Function]}
   role="button"
   tabIndex={-1}

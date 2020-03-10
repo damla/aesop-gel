@@ -1,0 +1,64 @@
+@import 'styles/variables/index';
+@import 'styles/mixins/index';
+
+.base {
+  @media (--viewport-md) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  box-sizing: border-box;
+
+  * {
+    &,
+    &::before,
+    &::after {
+      box-sizing: inherit;
+    }
+  }
+}
+
+.subHeading {
+  font-family: var(--font-family-sans-serif-medium);
+}
+
+.column {
+  padding-right: var(--layout-sm-spacing);
+  padding-left: var(--layout-sm-spacing);
+
+  @media (--viewport-md) {
+    max-width: 50%;
+    flex: 0 0 50%;
+  }
+}
+
+.wrapper {
+  margin-bottom: rem(30px);
+
+  @media (--viewport-md) {
+    margin-bottom: rem(60px);
+  }
+}
+
+.list.list {
+  color: var(--color-secondary);
+  font-size: 15px;
+
+  a {
+    color: var(--color-grey-30);
+    font-size: 15px;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: var(--color-secondary);
+      text-decoration: underline;
+    }
+  }
+
+  li {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}

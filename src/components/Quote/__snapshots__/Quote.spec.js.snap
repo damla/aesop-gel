@@ -2,7 +2,7 @@
 
 exports[`<Quote /> renders base component correctly 1`] = `
 <div
-  className="base noTopPadding"
+  className="base"
 >
   <div
     className="wrapper"
@@ -10,9 +10,7 @@ exports[`<Quote /> renders base component correctly 1`] = `
     <blockquote
       className="blockquote"
     >
-      <p>
-        ‘Do not wish to be anything but what you are, and try to be that perfectly’
-      </p>
+      ‘Do not wish to be anything but what you are, and try to be that perfectly’
     </blockquote>
     <cite
       className="author"
