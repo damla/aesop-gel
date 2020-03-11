@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BynderWidget /> renders base component correctly 1`] = `
+<article
+  className="base [object Window]"
+  id="6E8E63F9-7A54-442B-861E291124E19D94"
+>
+  <h3
+    className="heading"
+  >
+    Media Releases
+  </h3>
+  <div
+    data-bynder-widget="media-list"
+    data-collection-id="6E8E63F9-7A54-442B-861E291124E19D94"
+    data-rows="3"
+  />
+</article>
+`;
