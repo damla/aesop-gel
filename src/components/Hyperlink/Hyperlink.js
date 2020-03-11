@@ -52,8 +52,6 @@ const Hyperlink = ({
     // props.href = href;
   }
 
-  console.log('inline, hasIcon', isInline, hasIcon);
-
   return (
     <a
       className={classSet}
@@ -76,8 +74,10 @@ Hyperlink.propTypes = {
   children: PropTypes.any.isRequired,
   className: PropTypes.string,
   dataTestRef: PropTypes.string,
+  hasLightText: PropTypes.bool,
   hasTargetInNewWindow: PropTypes.bool,
   id: PropTypes.string,
+  isAlternate: PropTypes.bool,
   style: PropTypes.oneOf([
     'External Button Link',
     'External Text Link',
@@ -95,8 +95,10 @@ Hyperlink.defaultProps = {
   children: undefined,
   className: undefined,
   dataTestRef: undefined,
+  hasLightText: undefined,
   hasTargetInNewWindow: false,
   id: undefined,
+  isAlternate: undefined,
   style: 'No Icon Link',
   title: undefined,
   type: undefined,
