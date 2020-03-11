@@ -6,18 +6,20 @@ import styles from './Heading.module.css';
 const Heading = ({
   children,
   className,
-  id,
-  level,
-  isFlush,
-  hasTopMargin,
-  size,
+  hasMediumWeightFont,
   hasSerifFont,
+  hasTopMargin,
+  id,
+  isFlush,
+  level,
+  size,
 }) => {
   const classSet = cx(
     styles.base,
     { [styles.noTopMargin]: !hasTopMargin },
     { [styles.noMargin]: isFlush },
     { [styles.serifFont]: hasSerifFont },
+    { [styles.mediumWeightFont]: hasMediumWeightFont },
     styles[size],
     className,
   );
@@ -32,10 +34,11 @@ const Heading = ({
 Heading.propTypes = {
   children: PropTypes.string.isRequired,
   className: PropTypes.string,
+  hasMediumWeightFont: PropTypes.bool,
+  hasSerifFont: PropTypes.bool,
   hasTopMargin: PropTypes.bool,
   id: PropTypes.string,
   isFlush: PropTypes.bool,
-  hasSerifFont: PropTypes.bool,
   level: PropTypes.oneOf(['1', '2', '3', '4', '5', '6']).isRequired,
   size: PropTypes.oneOf(['xSmall', 'small', 'medium', 'large', 'xLarge'])
     .isRequired,
@@ -44,10 +47,11 @@ Heading.propTypes = {
 Heading.defaultProps = {
   children: undefined,
   className: undefined,
+  hasMediumWeightFont: false,
+  hasSerifFont: false,
   hasTopMargin: true,
   id: undefined,
   isFlush: false,
-  hasSerifFont: false,
   level: undefined,
   size: undefined,
 };

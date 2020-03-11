@@ -1,11 +1,8 @@
-import React, { useRef } from 'react';
+import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import { useOnScreen } from '~/customHooks/useOnScreen';
-import DefinitionList from '~/components/DefinitionList';
-import Transition from '~/components/Transition';
+import { useEscapeKeyListener } from '~/customHooks/useEscapeKeyListener';
 
 storiesOf('Hooks', module).add('useOnScreen', () => {
-  const ref = useRef();
   const onScreen = useOnScreen(ref, '-50px');
 
   return (

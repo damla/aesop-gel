@@ -14,6 +14,7 @@ const BodyCopy = ({
   eyebrow,
   id,
   parent,
+  hasSerifFontHeading,
   heading,
   subHeading,
 }) => {
@@ -28,6 +29,7 @@ const BodyCopy = ({
           subHeading: styles.subHeading,
         }}
         eyebrow={eyebrow}
+        hasSerifFontHeading={hasSerifFontHeading}
         heading={heading}
         id={id}
         subHeading={subHeading}
@@ -57,6 +59,7 @@ BodyCopy.propTypes = {
   copy: PropTypes.node,
   cta: PropTypes.object,
   eyebrow: PropTypes.string,
+  hasSerifFontHeading: PropTypes.bool,
   heading: PropTypes.string,
   id: PropTypes.string,
   parent: PropTypes.oneOf(['TextOverHero', 'HalfWidthFullBleed']),
@@ -68,6 +71,7 @@ BodyCopy.defaultProps = {
   copy: undefined,
   cta: undefined,
   eyebrow: undefined,
+  hasSerifFontHeading: false,
   heading: undefined,
   id: undefined,
   parent: undefined,

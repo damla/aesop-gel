@@ -12,6 +12,7 @@ const PageHeading = ({
   id,
   subHeading,
   heading,
+  hasSerifFontHeading,
 }) => {
   const classSet = cx(styles.base, className);
   const eyebrowClassSet = cx(styles.eyebrow, childrenClassNames.eyebrow);
@@ -24,15 +25,21 @@ const PageHeading = ({
   return (
     <header className={classSet} id={id}>
       {eyebrow && (
-        <Heading className={eyebrowClassSet} level="1" size="xSmall">
+        <Heading
+          className={eyebrowClassSet}
+          hasMediumWeightFont={true}
+          level="1"
+          size="xSmall"
+        >
           {eyebrow}
         </Heading>
       )}
       {heading && (
         <Heading
           className={headingClassSet}
+          hasSerifFont={hasSerifFontHeading}
           level={getHeadingLevel(eyebrow)}
-          size="large"
+          size="xLarge"
         >
           {heading}
         </Heading>
@@ -40,6 +47,7 @@ const PageHeading = ({
       {subHeading && (
         <Heading
           className={subHeadingClassSet}
+          hasMediumWeightFont={true}
           level={getSubHeadingLevel(eyebrow, heading)}
           size="xSmall"
         >
@@ -58,6 +66,7 @@ PageHeading.propTypes = {
   }),
   className: PropTypes.string,
   eyebrow: PropTypes.string,
+  hasSerifFontHeading: PropTypes.bool,
   heading: PropTypes.string,
   id: PropTypes.string,
   subHeading: PropTypes.string,
@@ -71,6 +80,7 @@ PageHeading.defaultProps = {
   },
   className: undefined,
   eyebrow: undefined,
+  hasSerifFontHeading: false,
   heading: undefined,
   id: undefined,
   subHeading: undefined,

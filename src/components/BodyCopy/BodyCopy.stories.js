@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { text, boolean } from '@storybook/addon-knobs';
+import { text, boolean, select } from '@storybook/addon-knobs';
 import '~.storybook/storybook.module.css';
 import BodyCopy from './BodyCopy';
 
@@ -15,8 +15,21 @@ storiesOf('Components/BodyCopy', module).add('Base component', () => (
       text: text('cta.text', 'Read more'),
       url: text('cta.url', 'http://aesop.com'),
       openInANewWindow: boolean('cta.openInANewWindow', true),
+      style: select(
+        'cta.style',
+        [
+          'External Button Link',
+          'External Text Link',
+          'Internal Button Link',
+          'Internal Text Link',
+          'External No Icon Link',
+          'No Icon Link',
+        ],
+        'Internal Text Link',
+      ),
     }}
     eyebrow={text('eyebrow', 'Recommended Nearby')}
+    hasSerifFontHeading={boolean('hasSerifFontHeading', false)}
     heading={text(
       'heading',
       'Aesop and The Paris Review: A Partnership Extended',
