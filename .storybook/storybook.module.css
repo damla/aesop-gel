@@ -6,16 +6,17 @@
     height: auto;
   }
 
+  .sbdocs-wrapper {
+    min-height: 100vh;
+    background-color: #fff;
+  }
+
   #story-root {
     margin: 15px 40px;
   }
 
   #root {
     /* padding: 40px; */
-  }
-
-  pre {
-    max-width: 980px;
   }
 
   table {
@@ -28,5 +29,32 @@
     padding: 0.5rem;
     border: 1px solid #999;
     text-align: left;
+  }
+
+  pre {
+    padding: rem(12px);
+    border: 1px solid #efefef;
+    background-color: #fff;
+    border-radius: 3px;
+    color: #888;
+    font-family:
+      Consolas,
+      'Andale Mono WT',
+      'Andale Mono',
+      'Lucida Console',
+      'Lucida Sans Typewriter',
+      'DejaVu Sans Mono',
+      'Bitstream Vera Sans Mono',
+      'Liberation Mono',
+      'Nimbus Mono L',
+      Monaco,
+      'Courier New',
+      Courier,
+      monospace;
+    font-size: rem(15px);
+    line-height: 1.4;
+    overflow-x: auto;
+    text-align: justify;
+    word-wrap: break-word;
   }
 }

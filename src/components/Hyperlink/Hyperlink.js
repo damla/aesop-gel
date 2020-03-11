@@ -60,7 +60,7 @@ const Hyperlink = ({
       target={target}
       title={title}
     >
-      <span>{children}</span>
+      {children}
       {hasIcon && (
         <i aria-hidden="true" className={styles.icon}>
           <Icon height={15} name={iconName} width={15} />
