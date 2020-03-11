@@ -4,7 +4,7 @@ import { text } from '@storybook/addon-knobs';
 import '~.storybook/storybook.module.css';
 import Hyperlink from './Hyperlink';
 
-storiesOf('Hyperlink', module).add('Base component', () => (
+storiesOf('Components/Hyperlink', module).add('Base component', () => (
   <Hyperlink url={text('url', 'http://aesop.com')}>
     {text('children', 'Aesop')}
   </Hyperlink>

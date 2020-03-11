@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { object } from '@storybook/addon-knobs';
 import TwoColumnList from './TwoColumnList';
 
-storiesOf('TwoColumnList', module).add('Base component', () => (
+storiesOf('Components/TwoColumnList', module).add('Base component', () => (
   <TwoColumnList
     leftColumn={object('leftColumn', [
       {

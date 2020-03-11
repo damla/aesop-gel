@@ -4,6 +4,6 @@ import '~.storybook/storybook.module.css';
 import KitList from './KitList';
 import KitListFixture from './KitList.fixture';
 
-storiesOf('KitList', module).add('Base component', () => (
+storiesOf('Components/KitList', module).add('Base component', () => (
   <KitList items={KitListFixture.items} />
 ));

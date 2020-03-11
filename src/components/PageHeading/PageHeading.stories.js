@@ -4,7 +4,7 @@ import { text } from '@storybook/addon-knobs';
 import '~.storybook/storybook.module.css';
 import PageHeading from './PageHeading';
 
-storiesOf('PageHeading', module).add('Base component', () => (
+storiesOf('Components/PageHeading', module).add('Base component', () => (
   <PageHeading
     eyebrow={text(
       'eyebrow',

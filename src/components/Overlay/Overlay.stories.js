@@ -5,7 +5,7 @@ import '~.storybook/storybook.module.css';
 import Button from '~/components/Button';
 import Overlay from './Overlay';
 
-storiesOf('Overlay', module).add('Base component', () => {
+storiesOf('Components/Overlay', module).add('Base component', () => {
   return (
     <State initialState={{ isVisible: false }}>
       {(state, setState) => (

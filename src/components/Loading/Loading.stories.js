@@ -4,7 +4,7 @@ import { boolean, text } from '@storybook/addon-knobs';
 import '~.storybook/storybook.module.css';
 import Loading from './Loading';
 
-storiesOf('Loading', module).add('Base component', () => (
+storiesOf('Components/Loading', module).add('Base component', () => (
   <Loading
     className={text('className', '')}
     isLight={boolean('isLight', false)}

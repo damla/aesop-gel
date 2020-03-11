@@ -9,7 +9,7 @@ const modalPortal = document.createElement('div');
 modalPortal.setAttribute('id', 'modal');
 document.body.append(modalPortal);
 
-storiesOf('Modal', module).add('Base component', () => (
+storiesOf('Components/Modal', module).add('Base component', () => (
   <State initialState={{ isVisible: false }}>
     {(state, setState) => (
       <>

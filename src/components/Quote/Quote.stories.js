@@ -5,7 +5,7 @@ import '~.storybook/storybook.module.css';
 import Quote from './Quote';
 import QuoteFixture from './Quote.fixture';
 
-storiesOf('Quote', module).add('Base component', () => (
+storiesOf('Components/Quote', module).add('Base component', () => (
   <Quote
     author={text('author', QuoteFixture.author)}
     content={text('children', QuoteFixture.content)}

@@ -7,7 +7,7 @@ import Heading from '~/components/Heading';
 import { P } from '~/components/Paragraph';
 import FlyinPanel from './FlyinPanel';
 
-storiesOf('FlyinPanel', module).add('Base component', () => (
+storiesOf('Components/FlyinPanel', module).add('Base component', () => (
   <State initialState={{ isVisible: false }}>
     {(state, setState) => (
       <>
