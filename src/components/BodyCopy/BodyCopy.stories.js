@@ -4,7 +4,7 @@ import { text, boolean } from '@storybook/addon-knobs';
 import '~.storybook/storybook.module.css';
 import BodyCopy from './BodyCopy';
 
-storiesOf('Components/BodyCopy', module).add('Base component', () => (
+storiesOf('BodyCopy', module).add('Base component', () => (
   <BodyCopy
     copy={text(
       'copy',
