@@ -39,7 +39,6 @@ export default {
         {
           id: '1',
           text: 'About link one',
-          url: 'https://www.aesop.com/au/r/about',
         },
         {
           id: '2',

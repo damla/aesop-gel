@@ -5,8 +5,8 @@ import renderer from 'react-test-renderer';
 import { HYPERLINK_STYLE_TYPES } from '~/constants';
 import Hyperlink from './Hyperlink';
 import {
+  checkIsExternalFromStyle,
   checkIsInlineFromStyle,
-  getButtonPropsFromStyle,
   getTargetType,
   hasIconFromStyle,
 } from './Hyperlink.utils';
@@ -14,8 +14,8 @@ import {
 const {
   EXTERNAL_BUTTON_LINK,
   EXTERNAL_TEXT_LINK,
-  INTERNAL_BUTTON_LINK,
   EXTERNAL_NO_ICON_LINK,
+  INTERNAL_TEXT_LINK,
 } = HYPERLINK_STYLE_TYPES;
 
 configure({ adapter: new Adapter() });
@@ -43,6 +43,15 @@ describe('<Hyperlink />', () => {
     );
     expect(component.type()).toEqual('a');
   });
+
+  it('should return `a` is the style is an external style', () => {
+    const component = shallow(
+      <Hyperlink style={EXTERNAL_BUTTON_LINK} url="http://aesop.com">
+        Aesop
+      </Hyperlink>,
+    );
+    expect(component.type()).toEqual('a');
+  });
 });
 
 describe('Hyperlink.utils.checkIsInlineFromStyle', () => {
@@ -59,22 +68,36 @@ describe('Hyperlink.utils.checkIsInlineFromStyle', () => {
   });
 });
 
-describe('Hyperlink.utils.getButtonPropsFromStyle', () => {
-  it('should return obect with `to` property if `style` prop is `Internal Text Link`', () => {
-    const actual = getButtonPropsFromStyle(INTERNAL_BUTTON_LINK, 'about');
+describe('Hyperlink.utils.checkIsExternalFromStyle', () => {
+  it('should return true if `style` prop is `External Button Link`', () => {
+    const actual = checkIsExternalFromStyle(EXTERNAL_BUTTON_LINK);
 
-    expect(actual).toMatchObject({ to: 'about' });
+    expect(actual).toBe(true);
   });
 
-  it('should return obect with `href` property if `style` prop is `External Text Link`', () => {
-    const actual = getButtonPropsFromStyle(
-      EXTERNAL_TEXT_LINK,
-      'http://aesop.com',
-    );
+  it('should return false if `style` prop is `Internal Text Link`', () => {
+    const actual = checkIsExternalFromStyle(INTERNAL_TEXT_LINK);
 
-    expect(actual).toMatchObject({ href: 'http://aesop.com' });
+    expect(actual).toBe(false);
   });
 });
+
+// describe('Hyperlink.utils.getButtonPropsFromStyle', () => {
+//   it('should return obect with `to` property if `style` prop is `Internal Text Link`', () => {
+//     const actual = getButtonPropsFromStyle(INTERNAL_BUTTON_LINK, 'about');
+//
+//     expect(actual).toMatchObject({ to: 'about' });
+//   });
+//
+//   it('should return obect with `href` property if `style` prop is `External Text Link`', () => {
+//     const actual = getButtonPropsFromStyle(
+//       EXTERNAL_TEXT_LINK,
+//       'http://aesop.com',
+//     );
+//
+//     expect(actual).toMatchObject({ href: 'http://aesop.com' });
+//   });
+// });
 
 describe('Hyperlink.utils.getTargetType', () => {
   it('should return `_self` if `openInANewWindow` prop is passed as `falsey`', () => {

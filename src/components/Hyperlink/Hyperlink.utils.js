@@ -24,23 +24,32 @@ export const checkIsInlineFromStyle = style => {
 };
 
 /**
- * getButtonPropsFromStyle
+ * checkIsExternalFromStyle
  * @param style string
  * @param url string
  * @return object
  */
-export const getButtonPropsFromStyle = (style, url) => {
+export const checkIsExternalFromStyle = style => {
   const styleRepresentsAbsoluteLink =
     style === EXTERNAL_BUTTON_LINK ||
     style === EXTERNAL_TEXT_LINK ||
     style === EXTERNAL_NO_ICON_LINK;
 
-  const key = styleRepresentsAbsoluteLink ? 'href' : 'to';
-
-  return {
-    [key]: url,
-  };
+  return styleRepresentsAbsoluteLink ? true : false;
 };
+
+// export const getScopeFromStyle = (style, url) => {
+//   const styleRepresentsAbsoluteLink =
+//     style === EXTERNAL_BUTTON_LINK ||
+//     style === EXTERNAL_TEXT_LINK ||
+//     style === EXTERNAL_NO_ICON_LINK;
+//
+//   const key = styleRepresentsAbsoluteLink ? 'href' : 'to';
+//
+//   return {
+//     [key]: url,
+//   };
+// };
 
 /**
  * hasIconFromStyle
@@ -60,7 +69,6 @@ export const getTargetType = openInANewWindow =>
 
 export default {
   checkIsInlineFromStyle,
-  getButtonPropsFromStyle,
   getTargetType,
   hasIconFromStyle,
 };

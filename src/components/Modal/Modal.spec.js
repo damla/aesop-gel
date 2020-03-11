@@ -1,9 +1,24 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+import { configure, shallow } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import Modal from './Modal';
+
+configure({ adapter: new Adapter() });
 
 jest.mock('react-dom');
 const mockFn = jest.fn();
+
+describe('<Modal /> with no root element', () => {
+  it('returns null if not root element found to bind to', () => {
+    const component = shallow(
+      <Modal isVisible={true} onClose={mockFn}>
+        content
+      </Modal>,
+    );
+    expect(component.type()).toEqual(null);
+  });
+});
 
 describe('<Modal />', () => {
   let modalRoot = null;
@@ -23,7 +38,7 @@ describe('<Modal />', () => {
     const tree = renderer
       .create(
         <Modal isVisible={true} onClose={mockFn}>
-          <h1>Heading</h1>
+          content
         </Modal>,
       )
       .toJSON();

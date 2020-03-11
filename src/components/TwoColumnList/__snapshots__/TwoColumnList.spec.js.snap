@@ -27,22 +27,26 @@ exports[`<TwoColumnList /> renders base component correctly 1`] = `
           className="item"
         >
           <a
-            className="base"
+            className="base inlineStyle"
             href="https://www.aesop.com/au/r/about"
             target="_self"
           >
-            About
+            <span>
+              About
+            </span>
           </a>
         </li>
         <li
           className="item"
         >
           <a
-            className="base"
+            className="base inlineStyle"
             href="https://www.aesop.com/au/r/about"
             target="_self"
           >
-            About 2
+            <span>
+              About 2
+            </span>
           </a>
         </li>
       </ul>
@@ -67,11 +71,13 @@ exports[`<TwoColumnList /> renders base component correctly 1`] = `
           className="item"
         >
           <a
-            className="base"
+            className="base inlineStyle"
             href="https://www.aesop.com/au/r/philosophy-to-products"
             target="_self"
           >
-            Philosophy
+            <span>
+              Philosophy
+            </span>
           </a>
         </li>
       </ul>
@@ -99,23 +105,19 @@ exports[`<TwoColumnList /> renders base component correctly 1`] = `
         <li
           className="item"
         >
-          <a
-            className="base"
-            href="https://www.aesop.com/au/r/about"
-            target="_self"
-          >
-            About link one
-          </a>
+          About link one
         </li>
         <li
           className="item"
         >
           <a
-            className="base"
+            className="base inlineStyle"
             href="https://www.aesop.com/au/r/about"
             target="_self"
           >
-            About link two
+            <span>
+              About link two
+            </span>
           </a>
         </li>
       </ul>

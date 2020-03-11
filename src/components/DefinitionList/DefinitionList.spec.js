@@ -1,5 +1,5 @@
 import React from 'react';
-import { configure } from 'enzyme';
+import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import renderer from 'react-test-renderer';
 import DefinitionList from './DefinitionList';
@@ -23,5 +23,10 @@ describe('<DefinitionList />', () => {
       .toJSON();
 
     expect(tree).toMatchSnapshot();
+  });
+
+  it('returns null items prop is not a populated array', () => {
+    const component = shallow(<DefinitionList items={[]} />);
+    expect(component.type()).toEqual(null);
   });
 });

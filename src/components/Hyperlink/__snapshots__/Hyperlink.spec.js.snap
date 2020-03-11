@@ -2,10 +2,12 @@
 
 exports[`<Hyperlink /> renders base component correctly 1`] = `
 <a
-  className="base"
+  className="base inlineStyle"
   href="http://aesop.com"
   target="_self"
 >
-  Aesop
+  <span>
+    Aesop
+  </span>
 </a>
 `;
