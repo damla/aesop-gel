@@ -48,9 +48,7 @@ exports[`<BodyCopy /> renders base component correctly 1`] = `
       href="http://aesop.com"
       target="_self"
     >
-      <span>
-        Read more
-      </span>
+      Read more
     </a>
   </div>
 </article>

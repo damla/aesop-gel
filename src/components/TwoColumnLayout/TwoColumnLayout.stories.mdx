@@ -1,0 +1,76 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs } from '@storybook/addon-knobs';
+import { text, boolean } from '@storybook/addon-knobs';
+import '~.storybook/storybook.module.css';
+import TwoColumnList from '~/components/TwoColumnList';
+import TwoColumnListFixture from '~/components/TwoColumnList/TwoColumnList.fixture';
+import BodyCopy from '~/components/BodyCopy';
+import TwoColumnLayout from './TwoColumnLayout';
+
+<Meta
+  title="Components/TwoColumnLayout"
+  component={TwoColumnLayout}
+  decorators={[withKnobs]}
+/>
+
+# TwoColumnLayout
+
+<Preview>
+  <Story name="Base component">
+    <TwoColumnLayout
+      childrenClassNames={{ sidebar: 'sidebar', content: 'content' }}
+      content={
+        <>
+          <BodyCopy
+            copy="Parsley Seed Cream. [The Paris Review](http://theparisreview.org) Intensely soothing, nourishing and hydrating, this elegant formulation contains a potent blend of botanicals that offer fortification of the highest order against free radicals."
+            heading="Heading hasRightPadding isReversed Content Column nourishing and hydrating"
+            id="Anti-Oxidant"
+          />
+          <TwoColumnList
+            leftColumn={TwoColumnListFixture.leftColumn}
+            rightColumn={TwoColumnListFixture.rightColumn}
+          />
+        </>
+      }
+      hasRightPadding={boolean('hasRightPadding', true)}
+      hasVerticalPadding={boolean('hasVerticalPadding', true)}
+      id={text('id', 'TwoColumn-id')}
+      isReversed={boolean('isReversed', true)}
+      sidebar={
+        <BodyCopy
+          copy="Parsley Seed Cream. [The Paris Review](http://theparisreview.org) Intensely soothing, nourishing and hydrating, this elegant formulation contains a potent blend of botanicals that offer fortification of the highest order against free radicals."
+          cta={{
+            id: 'button-id',
+            text: 'Read more',
+            url: 'http://aesop.com',
+            openInANewWindow: true,
+            style: 'Internal Button Link',
+          }}
+          eyebrow="Recommended Nearby"
+          hasSerifFontHeading={true}
+          heading="Heading hasRightPadding isReversed Sidebar Column"
+          id="Anti-Oxidant"
+          subHeading="Active Nutrients"
+        />
+      }
+    />
+  </Story>
+</Preview>
+
+## API
+
+<Props of={TwoColumnLayout} />
+
+## Usage Example
+
+```
+<TwoColumnLayout
+  childrenClassNames={{ sidebar: '...', content: '...' }}
+  content={</>}
+  hasRightPadding={true}
+  hasVerticalPadding={true}
+  id="TwoColumn-id"
+  isReversed={true}
+  sidebar={</>}
+/>
+```

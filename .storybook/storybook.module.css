@@ -11,8 +11,16 @@
     background-color: #fff;
   }
 
+  .sbdocs-content {
+    max-width: 1220px !important;
+  }
+
   #story-root {
     margin: 15px 40px;
+  }
+
+  [scale='1'] {
+    transform: none !important;
   }
 
   #root {

@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TwoColumnLayout /> renders base component correctly 1`] = `
+<div
+  className="base reverse TwoColumnLayout"
+  id="TwoColumnLayout"
+>
+  <div
+    className="content content"
+    id="mainColumn"
+  >
+    <div>
+      content
+    </div>
+  </div>
+  <aside
+    className="sidebar sidebar"
+    id="sidebarColum"
+  >
+    <div>
+      content
+    </div>
+  </aside>
+</div>
+`;

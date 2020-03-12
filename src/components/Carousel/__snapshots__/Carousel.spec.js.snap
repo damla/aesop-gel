@@ -119,45 +119,43 @@ exports[`<Carousel /> renders base component correctly 1`] = `
               target="_self"
               title="Link to Parsley Seed Facial Cleanser"
             >
-              <span>
-                <div
-                  className="information"
+              <div
+                className="information"
+              >
+                <h5
+                  className="base xSmall heading"
                 >
-                  <h5
-                    className="base xSmall heading"
-                  >
-                    Parsley Seed Facial Cleanser
-                  </h5>
-                  <div
-                    className="description"
-                  >
-                    Example description
-                  </div>
-                </div>
+                  Parsley Seed Facial Cleanser
+                </h5>
                 <div
-                  className="imageContainer"
+                  className="description"
                 >
-                  <picture
-                    className="picture base image"
-                  >
-                    <source
-                      media="(min-width: 1025px)"
-                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
-                    />
-                    <source
-                      media="(min-width: 640px)"
-                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
-                    />
-                    <source
-                      media="(min-width: 0px)"
-                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
-                    />
-                    <img
-                      alt="Image of Parsley Seed Facial Cleanser"
-                    />
-                  </picture>
+                  Example description
                 </div>
-              </span>
+              </div>
+              <div
+                className="imageContainer"
+              >
+                <picture
+                  className="picture base image"
+                >
+                  <source
+                    media="(min-width: 1025px)"
+                    srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                  />
+                  <source
+                    media="(min-width: 640px)"
+                    srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                  />
+                  <source
+                    media="(min-width: 0px)"
+                    srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                  />
+                  <img
+                    alt="Image of Parsley Seed Facial Cleanser"
+                  />
+                </picture>
+              </div>
             </a>
           </div>
         </div>
@@ -191,40 +189,38 @@ exports[`<Carousel /> renders base component correctly 1`] = `
               target="_self"
               title="Link to Parsley Seed Facial Cleanser"
             >
-              <span>
-                <div
-                  className="information"
+              <div
+                className="information"
+              >
+                <h5
+                  className="base xSmall heading"
                 >
-                  <h5
-                    className="base xSmall heading"
-                  >
-                    Parsley Seed Facial Cleanser
-                  </h5>
-                </div>
-                <div
-                  className="imageContainer"
+                  Parsley Seed Facial Cleanser
+                </h5>
+              </div>
+              <div
+                className="imageContainer"
+              >
+                <picture
+                  className="picture base image"
                 >
-                  <picture
-                    className="picture base image"
-                  >
-                    <source
-                      media="(min-width: 1025px)"
-                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
-                    />
-                    <source
-                      media="(min-width: 640px)"
-                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
-                    />
-                    <source
-                      media="(min-width: 0px)"
-                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
-                    />
-                    <img
-                      alt="Image of Parsley Seed Facial Cleanser"
-                    />
-                  </picture>
-                </div>
-              </span>
+                  <source
+                    media="(min-width: 1025px)"
+                    srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                  />
+                  <source
+                    media="(min-width: 640px)"
+                    srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                  />
+                  <source
+                    media="(min-width: 0px)"
+                    srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                  />
+                  <img
+                    alt="Image of Parsley Seed Facial Cleanser"
+                  />
+                </picture>
+              </div>
             </a>
           </div>
         </div>
@@ -258,41 +254,39 @@ exports[`<Carousel /> renders base component correctly 1`] = `
               target="_self"
               title="Link to Parsley Seed Cleansing Masque"
             >
-              <span>
-                <div
-                  className="information"
+              <div
+                className="information"
+              >
+                <h5
+                  className="base xSmall heading"
                 >
-                  <h5
-                    className="base xSmall heading"
-                  >
-                    Parsley Seed Cleansing Masque
-                  </h5>
-                  
-                </div>
-                <div
-                  className="imageContainer"
+                  Parsley Seed Cleansing Masque
+                </h5>
+                
+              </div>
+              <div
+                className="imageContainer"
+              >
+                <picture
+                  className="picture base image"
                 >
-                  <picture
-                    className="picture base image"
-                  >
-                    <source
-                      media="(min-width: 1025px)"
-                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
-                    />
-                    <source
-                      media="(min-width: 640px)"
-                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
-                    />
-                    <source
-                      media="(min-width: 0px)"
-                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
-                    />
-                    <img
-                      alt="Image Parsley Seed Cleansing Masque"
-                    />
-                  </picture>
-                </div>
-              </span>
+                  <source
+                    media="(min-width: 1025px)"
+                    srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                  />
+                  <source
+                    media="(min-width: 640px)"
+                    srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                  />
+                  <source
+                    media="(min-width: 0px)"
+                    srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                  />
+                  <img
+                    alt="Image Parsley Seed Cleansing Masque"
+                  />
+                </picture>
+              </div>
             </a>
           </div>
         </div>
@@ -463,45 +457,43 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
               target="_self"
               title="Link to Parsley Seed Facial Cleanser"
             >
-              <span>
-                <div
-                  className="information"
+              <div
+                className="information"
+              >
+                <h5
+                  className="base xSmall heading"
                 >
-                  <h5
-                    className="base xSmall heading"
-                  >
-                    Parsley Seed Facial Cleanser
-                  </h5>
-                  <div
-                    className="description"
-                  >
-                    Example description
-                  </div>
-                </div>
+                  Parsley Seed Facial Cleanser
+                </h5>
                 <div
-                  className="imageContainer"
+                  className="description"
                 >
-                  <picture
-                    className="picture base image"
-                  >
-                    <source
-                      media="(min-width: 1025px)"
-                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
-                    />
-                    <source
-                      media="(min-width: 640px)"
-                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
-                    />
-                    <source
-                      media="(min-width: 0px)"
-                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
-                    />
-                    <img
-                      alt="Image of Parsley Seed Facial Cleanser"
-                    />
-                  </picture>
+                  Example description
                 </div>
-              </span>
+              </div>
+              <div
+                className="imageContainer"
+              >
+                <picture
+                  className="picture base image"
+                >
+                  <source
+                    media="(min-width: 1025px)"
+                    srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                  />
+                  <source
+                    media="(min-width: 640px)"
+                    srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                  />
+                  <source
+                    media="(min-width: 0px)"
+                    srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                  />
+                  <img
+                    alt="Image of Parsley Seed Facial Cleanser"
+                  />
+                </picture>
+              </div>
             </a>
           </div>
         </div>
@@ -535,40 +527,38 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
               target="_self"
               title="Link to Parsley Seed Facial Cleanser"
             >
-              <span>
-                <div
-                  className="information"
+              <div
+                className="information"
+              >
+                <h5
+                  className="base xSmall heading"
                 >
-                  <h5
-                    className="base xSmall heading"
-                  >
-                    Parsley Seed Facial Cleanser
-                  </h5>
-                </div>
-                <div
-                  className="imageContainer"
+                  Parsley Seed Facial Cleanser
+                </h5>
+              </div>
+              <div
+                className="imageContainer"
+              >
+                <picture
+                  className="picture base image"
                 >
-                  <picture
-                    className="picture base image"
-                  >
-                    <source
-                      media="(min-width: 1025px)"
-                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
-                    />
-                    <source
-                      media="(min-width: 640px)"
-                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
-                    />
-                    <source
-                      media="(min-width: 0px)"
-                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
-                    />
-                    <img
-                      alt="Image of Parsley Seed Facial Cleanser"
-                    />
-                  </picture>
-                </div>
-              </span>
+                  <source
+                    media="(min-width: 1025px)"
+                    srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                  />
+                  <source
+                    media="(min-width: 640px)"
+                    srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                  />
+                  <source
+                    media="(min-width: 0px)"
+                    srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                  />
+                  <img
+                    alt="Image of Parsley Seed Facial Cleanser"
+                  />
+                </picture>
+              </div>
             </a>
           </div>
         </div>
@@ -602,41 +592,39 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
               target="_self"
               title="Link to Parsley Seed Cleansing Masque"
             >
-              <span>
-                <div
-                  className="information"
+              <div
+                className="information"
+              >
+                <h5
+                  className="base xSmall heading"
                 >
-                  <h5
-                    className="base xSmall heading"
-                  >
-                    Parsley Seed Cleansing Masque
-                  </h5>
-                  
-                </div>
-                <div
-                  className="imageContainer"
+                  Parsley Seed Cleansing Masque
+                </h5>
+                
+              </div>
+              <div
+                className="imageContainer"
+              >
+                <picture
+                  className="picture base image"
                 >
-                  <picture
-                    className="picture base image"
-                  >
-                    <source
-                      media="(min-width: 1025px)"
-                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
-                    />
-                    <source
-                      media="(min-width: 640px)"
-                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
-                    />
-                    <source
-                      media="(min-width: 0px)"
-                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
-                    />
-                    <img
-                      alt="Image Parsley Seed Cleansing Masque"
-                    />
-                  </picture>
-                </div>
-              </span>
+                  <source
+                    media="(min-width: 1025px)"
+                    srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                  />
+                  <source
+                    media="(min-width: 640px)"
+                    srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                  />
+                  <source
+                    media="(min-width: 0px)"
+                    srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                  />
+                  <img
+                    alt="Image Parsley Seed Cleansing Masque"
+                  />
+                </picture>
+              </div>
             </a>
           </div>
         </div>

@@ -2,19 +2,18 @@
 @import 'styles/mixins/index';
 
 .base {
-  @media (--viewport-md) {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
   box-sizing: border-box;
-
   * {
     &,
     &::before,
     &::after {
       box-sizing: inherit;
     }
+  }
+
+  @media (--viewport-md) {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
@@ -24,7 +23,18 @@
 
 .column {
   padding-right: var(--layout-sm-spacing);
-  padding-left: var(--layout-sm-spacing);
+
+  @media (--viewport-md) {
+    &:not(:last-child) {
+      padding-right: var(--layout-sm-spacing);
+    }
+  }
+
+  @media (--viewport-lg) {
+    &:not(:last-child) {
+      padding-right: var(--layout-sm-spacing);
+    }
+  }
 
   @media (--viewport-md) {
     max-width: 50%;
@@ -33,10 +43,14 @@
 }
 
 .wrapper {
-  margin-bottom: rem(30px);
+  margin-bottom: var(--layout-sm-spacing);
 
   @media (--viewport-md) {
-    margin-bottom: rem(60px);
+    margin-bottom: var(--layout-md-spacing);
+  }
+
+  @media (--viewport-ld) {
+    margin-bottom: var(--layout-ld-spacing);
   }
 }
 
