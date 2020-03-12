@@ -31,9 +31,7 @@ exports[`<TwoColumnList /> renders base component correctly 1`] = `
             href="https://www.aesop.com/au/r/about"
             target="_self"
           >
-            <span>
-              About
-            </span>
+            About
           </a>
         </li>
         <li
@@ -44,9 +42,7 @@ exports[`<TwoColumnList /> renders base component correctly 1`] = `
             href="https://www.aesop.com/au/r/about"
             target="_self"
           >
-            <span>
-              About 2
-            </span>
+            About 2
           </a>
         </li>
       </ul>
@@ -75,9 +71,7 @@ exports[`<TwoColumnList /> renders base component correctly 1`] = `
             href="https://www.aesop.com/au/r/philosophy-to-products"
             target="_self"
           >
-            <span>
-              Philosophy
-            </span>
+            Philosophy
           </a>
         </li>
       </ul>
@@ -115,9 +109,7 @@ exports[`<TwoColumnList /> renders base component correctly 1`] = `
             href="https://www.aesop.com/au/r/about"
             target="_self"
           >
-            <span>
-              About link two
-            </span>
+            About link two
           </a>
         </li>
       </ul>

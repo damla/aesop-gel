@@ -1,9 +1,24 @@
 @import 'styles/variables/index';
 
 .base {
-  padding: 20px;
   color: var(--color-body-copy);
   font-family: var(--font-family-sans-serif-regular);
+
+  &:not(:last-child) {
+    margin-bottom: var(--layout-sm-spacing);
+  }
+
+  @media (--viewport-md) {
+    &:not(:last-child) {
+      margin-bottom: var(--layout-md-spacing);
+    }
+  }
+
+  @media (--viewport-ld) {
+    &:not(:last-child) {
+      margin-bottom: var(--layout-ld-spacing);
+    }
+  }
 }
 
 .hasLightText {

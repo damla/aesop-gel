@@ -6,27 +6,25 @@ exports[`<Image /> renders base component correctly 1`] = `
   href="https://www.aesop.com/au/r/philosophy-to-products"
   target="_self"
 >
-  <span>
-    <picture
-      className="picture base"
-    >
-      <source
-        media="(min-width: 1025px)"
-        srcSet="/images/products/Hand_Reverence_Aromatique_Hand_Wash_500mL_large.png 2x"
-      />
-      <source
-        media="(min-width: 640px)"
-        srcSet="/images/products/Hand_Reverence_Aromatique_Hand_Wash_500mL_medium.png 2x"
-      />
-      <source
-        media="(min-width: 0px)"
-        srcSet="/images/products/Hand_Reverence_Aromatique_Hand_Wash_500mL_small.png 2x"
-      />
-      <img
-        alt="Image of Milk Cleansing Campaign Aesop 2019"
-      />
-    </picture>
-  </span>
+  <picture
+    className="picture base"
+  >
+    <source
+      media="(min-width: 1025px)"
+      srcSet="/images/products/Hand_Reverence_Aromatique_Hand_Wash_500mL_large.png 2x"
+    />
+    <source
+      media="(min-width: 640px)"
+      srcSet="/images/products/Hand_Reverence_Aromatique_Hand_Wash_500mL_medium.png 2x"
+    />
+    <source
+      media="(min-width: 0px)"
+      srcSet="/images/products/Hand_Reverence_Aromatique_Hand_Wash_500mL_small.png 2x"
+    />
+    <img
+      alt="Image of Milk Cleansing Campaign Aesop 2019"
+    />
+  </picture>
 </a>
 `;
 
