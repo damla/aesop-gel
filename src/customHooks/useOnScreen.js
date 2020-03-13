@@ -3,7 +3,8 @@ import { useEffect, useState } from 'react';
 const hasIntersectionObserver =
   'IntersectionObserver' in window ||
   'IntersectionObserverEntry' in window ||
-  'intersectionRatio' in window.IntersectionObserverEntry.prototype;
+  ('IntersectionObserverEntry' in window &&
+    'intersectionRatio' in window.IntersectionObserverEntry.prototype);
 
 export const useOnScreen = (ref, rootMargin = '0px') => {
   const [isVisible, setVisible] = useState(false);

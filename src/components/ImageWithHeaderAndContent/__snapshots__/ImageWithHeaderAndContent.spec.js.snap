@@ -2,7 +2,8 @@
 
 exports[`<ImageWithHeaderAndContent /> renders base component correctly 1`] = `
 <section
-  className="base theme-1"
+  className="base theme-1 slowFadeEnter"
+  div={true}
 >
   <picture
     className="picture base figure"
