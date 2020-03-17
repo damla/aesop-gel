@@ -1,20 +1,17 @@
 :root {
-  --color-white: #fffef2;
-  --color-white-dark: #f6f5e8;
-  --color-white-disabled: #e0dfd6;
-  --color-black: #000;
-  --color-black-rgba-50: rgba(0, 0, 0, 0.5);
+  /* Base colours */
   --color-primary: #fffef0;
   --color-secondary: #333;
-  --color-body-copy: #333;
-  --color-background: var(--color-primary);
-  --color-light-bg: var(--color-background);
-  --color-label: #666;
-  --color-alternate-body: #ccc;
+  --color-white: #fffef2;
+  --color-white-dark: #f6f5e8;
+  --color-white-darker: #e0dfd6;
+  --color-black: #000;
+  --color-black-rgba-50: rgba(0, 0, 0, 0.5);
   --color-grey-90: #f5f5f5;
   --color-grey-80: #eee;
   --color-grey-70: #e5e5e5;
   --color-grey-65: #d5d4c9;
+  --color-grey-63: #ccc;
   --color-grey-60: #bcbbb4;
   --color-grey-55: #908f88;
   --color-grey-50: #8a939d;
@@ -23,5 +20,29 @@
   --color-grey-20: #4a4a4a;
   --color-grey-10: #252525;
   --color-grey-rgba-20: rgba(51, 51, 51, 0.2);
+
+  /* UI colours light theme */
+  --color-light-copy: var(--color-primary);
+  --color-light-copy-alternate: var(--color-white-darker);
+  --color-light-label: var(--color-white-darker);
+  --color-light-link: var(--color-primary);
+  --color-light-link-hover: var(--color-white-dark);
+  --color-light-decoration: var(--color-white-darker);
+  --color-light-disabled: var(--color-grey-40);
+
+  /* UI colours dark theme */
+  --color-dark-copy: var(--color-secondary);
+  --color-dark-copy-alternate: var(--color-grey-63);
+  --color-dark-label: var(--color-grey-30);
+  --color-dark-link: var(--color-grey-20);
+  --color-dark-link-hover: var(--color-grey-10);
+  --color-dark-decoration: var(--color-grey-30);
+  --color-dark-disabled: var(--color-grey-60);
+
+  /* Background colours */
+  --color-light-background: var(--color-primary);
+  --color-dark-background: var(--color-secondary);
+
+  /* System colours */
   --color-error: #ea6956;
 }

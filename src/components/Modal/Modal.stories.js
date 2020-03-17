@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { State } from '~.storybook/State';
 import '~.storybook/storybook.module.css';
+import ModalBodyFixture from './components/ModalBody/ModalBody.fixture';
 import Button from '~/components/Button';
 import Modal from './Modal';
 
@@ -14,6 +15,7 @@ storiesOf('Components/Modal', module).add('Base component', () => (
     {(state, setState) => (
       <>
         <Modal
+          copy={ModalBodyFixture.copy}
           isVisible={state.isVisible}
           onClose={() => {
             setState(() => ({ ...state, isVisible: false }));

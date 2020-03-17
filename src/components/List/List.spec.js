@@ -1,11 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+import { select } from '@storybook/addon-knobs';
 import List from './List';
-
-jest.mock('uuid/v4', () => {
-  let value = 0;
-  return () => value++;
-});
 
 describe('Component - Element - List', () => {
   it('should be defined', () => {
@@ -18,8 +14,9 @@ describe('Component - Element - List', () => {
         <List
           items={[
             { content: 'Fragrance', id: 'fragrance' },
-            { content: 'Gifts' },
+            { content: 'Gifts', id: 'gifts' },
           ]}
+          theme={select('theme', ['dark', 'light'], 'dark')}
         />,
       )
       .toJSON();

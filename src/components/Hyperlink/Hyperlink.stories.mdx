@@ -14,9 +14,6 @@ import Hyperlink from './Hyperlink';
 <Preview>
   <Story name="Base component">
     <Hyperlink
-      dataTestRef={text('dataTestRef', 'dataTestRef')}
-      hasTargetInNewWindow={boolean('hasTargetInNewWindow', false)}
-      isAlternate={boolean('isAlternate', false)}
       style={select(
         'style',
         [
@@ -29,8 +26,8 @@ import Hyperlink from './Hyperlink';
         ],
         'Internal Text Link',
       )}
+      theme={select('theme', ['dark', 'light'], 'dark')}
       title="Hyperlink Title"
-      type={select('type', ['Relative', 'Absolute'], 'Relative')}
       url={text('url', 'http://aesop.com')}
     >
       {text('children', 'Aesop')}
@@ -48,7 +45,6 @@ import Hyperlink from './Hyperlink';
 <Hyperlink
   dataTestRef="dataTestRef"
   hasTargetInNewWindow={false}
-  isAlternate={false}
   style="External Button Link"
   title="Hyperlink Title"
   url="http://aesop.com"

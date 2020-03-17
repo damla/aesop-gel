@@ -12,7 +12,7 @@
   }
 }
 
-.title {
+.heading {
   margin-bottom: 30px;
   color: var(--color-grey-30);
   font-family: var(--font-family-sans-serif-regular);
@@ -30,6 +30,6 @@
   }
 
   &:hover {
-    color: var(--color-body-copy);
+    color: var(--color-dark-copy);
   }
 }

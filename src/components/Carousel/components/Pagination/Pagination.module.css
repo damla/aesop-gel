@@ -1,6 +1,6 @@
 @import 'styles/index';
 
-.base {
+.list {
   position: relative;
   display: flex;
   height: 2px;

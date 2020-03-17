@@ -2,6 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+import ModalBodyFixture from './components/ModalBody/ModalBody.fixture';
 import Modal from './Modal';
 
 configure({ adapter: new Adapter() });
@@ -12,7 +13,7 @@ const mockFn = jest.fn();
 describe('<Modal /> with no root element', () => {
   it('returns null if not root element found to bind to', () => {
     const component = shallow(
-      <Modal isVisible={true} onClose={mockFn}>
+      <Modal copy={ModalBodyFixture.copy} isVisible={true} onClose={mockFn}>
         content
       </Modal>,
     );
@@ -37,7 +38,7 @@ describe('<Modal />', () => {
   it('renders base component correctly', () => {
     const tree = renderer
       .create(
-        <Modal isVisible={true} onClose={mockFn}>
+        <Modal copy={ModalBodyFixture.copy} isVisible={true} onClose={mockFn}>
           content
         </Modal>,
       )

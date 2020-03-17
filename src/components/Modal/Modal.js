@@ -5,16 +5,15 @@ import cx from 'classnames';
 import { useEscapeKeyListener } from '~/customHooks/useEscapeKeyListener';
 import { useOverflowHidden } from '~/customHooks/useOverflowHidden';
 import ModalBody from './components/ModalBody';
-import ModalBodyFixture from './components/ModalBody/ModalBody.fixture';
 import Overlay from '~/components/Overlay';
 import Transition from '~/components/Transition';
 import styles from './Modal.module.css';
 
-const Modal = ({ children, className, onClose, isVisible }) => {
+const Modal = ({ children, className, copy, onClose, isVisible, theme }) => {
   useEscapeKeyListener(onClose);
   useOverflowHidden(isVisible);
 
-  const classSet = cx(styles.base, className);
+  const classSet = cx(styles.base, styles[theme], className);
   const modalRootElement = document.querySelector('#modal');
 
   if (!modalRootElement) {
@@ -34,9 +33,10 @@ const Modal = ({ children, className, onClose, isVisible }) => {
           >
             <div className={styles.inner}>
               <ModalBody
-                copy={ModalBodyFixture.copy}
+                copy={copy}
                 isVisible={isVisible}
                 onClose={onClose}
+                theme={theme}
               >
                 {children}
               </ModalBody>
@@ -52,14 +52,22 @@ const Modal = ({ children, className, onClose, isVisible }) => {
 Modal.propTypes = {
   children: PropTypes.any,
   className: PropTypes.string,
+  copy: PropTypes.shape({
+    close: PropTypes.string,
+  }),
   isVisible: PropTypes.bool,
   onClose: PropTypes.func,
+  theme: PropTypes.oneOf(['dark', 'light']),
 };
 
 Modal.defaultProps = {
   children: undefined,
   className: undefined,
+  copy: {
+    copy: '',
+  },
   isVisible: undefined,
   onClose: undefined,
+  theme: 'dark',
 };
 export default Modal;

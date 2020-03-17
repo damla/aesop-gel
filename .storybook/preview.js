@@ -8,6 +8,10 @@ addParameters({
     { name: 'Medium', value: '32px', default: true },
     { name: 'Large', value: '64px' },
   ],
+  backgrounds: [
+    { name: 'light', value: '#fffef0', default: true },
+    { name: 'dark', value: '#333', },
+  ],
 });
 
 addDecorator(withA11y);

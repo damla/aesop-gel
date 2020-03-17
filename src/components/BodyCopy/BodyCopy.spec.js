@@ -4,6 +4,11 @@ import Adapter from 'enzyme-adapter-react-16';
 import renderer from 'react-test-renderer';
 import BodyCopy from './BodyCopy';
 
+theme,
+styles[theme],
+theme: PropTypes.oneOf(['dark', 'light']),
+theme: 'dark',
+
 configure({ adapter: new Adapter() });
 
 describe('<BodyCopy />', () => {

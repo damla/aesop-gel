@@ -7,15 +7,15 @@ export default {
     {
       id: 'about',
       style: EXTERNAL_NO_ICON_LINK,
-      text: 'About',
+      children: 'About',
       url: 'http://www.aesop.com/au/r/about',
     },
     {
       id: 'philosophy',
       style: EXTERNAL_NO_ICON_LINK,
-      text: 'Philosophy',
+      children: 'Philosophy',
       url: 'http://www.aesop.com/au/r/philosophy-to-products',
     },
   ],
-  title: 'SubNav Title',
+  heading: 'SubNav Title',
 };

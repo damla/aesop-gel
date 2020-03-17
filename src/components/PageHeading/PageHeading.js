@@ -13,6 +13,7 @@ const PageHeading = ({
   subHeading,
   heading,
   hasSerifFontHeading,
+  theme,
 }) => {
   const classSet = cx(styles.base, className);
   const eyebrowClassSet = cx(styles.eyebrow, childrenClassNames.eyebrow);
@@ -30,6 +31,7 @@ const PageHeading = ({
           hasMediumWeightFont={true}
           level="1"
           size="xSmall"
+          theme={theme}
         >
           {eyebrow}
         </Heading>
@@ -40,6 +42,7 @@ const PageHeading = ({
           hasSerifFont={hasSerifFontHeading}
           level={getHeadingLevel(eyebrow)}
           size="xLarge"
+          theme={theme}
         >
           {heading}
         </Heading>
@@ -50,6 +53,7 @@ const PageHeading = ({
           hasMediumWeightFont={true}
           level={getSubHeadingLevel(eyebrow, heading)}
           size="xSmall"
+          theme={theme}
         >
           {subHeading}
         </Heading>
@@ -70,6 +74,7 @@ PageHeading.propTypes = {
   heading: PropTypes.string,
   id: PropTypes.string,
   subHeading: PropTypes.string,
+  theme: PropTypes.oneOf('dark', 'light'),
 };
 
 PageHeading.defaultProps = {
@@ -84,6 +89,7 @@ PageHeading.defaultProps = {
   heading: undefined,
   id: undefined,
   subHeading: undefined,
+  theme: 'dark',
 };
 
 export default PageHeading;

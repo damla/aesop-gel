@@ -13,7 +13,7 @@ import PreviousButton from './components/PreviousButton';
 import Slide from './components/Slide';
 import styles from './Carousel.module.css';
 
-const Carousel = ({ className, hasEdges, introduction, slides }) => {
+const Carousel = ({ className, hasEdges, introduction, slides, theme }) => {
   useWindowHasResized();
 
   if (typeof slides === undefined || slides.length === 0) {
@@ -21,7 +21,12 @@ const Carousel = ({ className, hasEdges, introduction, slides }) => {
   }
 
   const isMobileOrTablet = ascertainIsMobileOrTablet();
-  const classSet = cx(styles.base, className, { [styles.edges]: hasEdges });
+  const classSet = cx(
+    styles.base,
+    styles[theme],
+    { [styles.edges]: hasEdges },
+    className,
+  );
 
   const settings = getCarouselSettings({
     className: classSet,
@@ -87,6 +92,7 @@ Carousel.propTypes = {
       url: PropTypes.string,
     }),
   ).isRequired,
+  theme: PropTypes.oneOf(['dark', 'light']),
 };
 
 Carousel.defaultProps = {
@@ -94,6 +100,7 @@ Carousel.defaultProps = {
   hasEdges: false,
   introduction: undefined,
   slides: undefined,
+  theme: 'dark',
 };
 
 export default Carousel;

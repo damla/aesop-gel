@@ -6,7 +6,16 @@ import { constraintsByViewport } from '~/utils/viewports';
 import Hyperlink from '~/components/Hyperlink';
 import styles from './Image.module.css';
 
-const Image = ({ altText, className, cta, large, medium, small, type }) => {
+const Image = ({
+  altText,
+  className,
+  cta,
+  large,
+  medium,
+  small,
+  type,
+  theme,
+}) => {
   const fullBleedImage = type === 'componentFullBleedImage';
   const isRightAligned = type === 'componentSquareImage';
 
@@ -18,7 +27,7 @@ const Image = ({ altText, className, cta, large, medium, small, type }) => {
   );
 
   const picture = (
-    <picture className={cx(styles.picture, classSet)}>
+    <picture className={cx(styles.picture, styles[theme], classSet)}>
       {large && (
         <source
           media={`(min-width: ${get(
@@ -54,7 +63,11 @@ const Image = ({ altText, className, cta, large, medium, small, type }) => {
   );
 
   return cta ? (
-    <Hyperlink hasTargetInNewWindow={cta.openInANewWindow} url={cta.url}>
+    <Hyperlink
+      hasTargetInNewWindow={cta.openInANewWindow}
+      theme={theme}
+      url={cta.url}
+    >
       {picture}
     </Hyperlink>
   ) : (
@@ -72,6 +85,7 @@ Image.propTypes = {
   medium: PropTypes.string,
   small: PropTypes.string,
   type: PropTypes.string,
+  theme: PropTypes.oneOf(['dark', 'light']),
 };
 
 Image.defaultProps = {
@@ -83,6 +97,7 @@ Image.defaultProps = {
   large: undefined,
   medium: undefined,
   small: undefined,
+  theme: 'dark',
   type: undefined,
 };
 

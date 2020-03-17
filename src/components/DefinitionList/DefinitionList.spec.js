@@ -7,11 +7,6 @@ import DefinitionListFixture from './DefinitionList.fixture';
 
 configure({ adapter: new Adapter() });
 
-jest.mock('uuid/v4', () => {
-  let value = 0;
-  return () => value++;
-});
-
 describe('<DefinitionList />', () => {
   it('should be defined', () => {
     expect(DefinitionList).toBeDefined();

@@ -2,8 +2,14 @@
 
 .base {
   @extend %title-typography;
+}
 
-  color: var(--color-body-copy);
+.dark {
+  @extend %font-theme-dark-copy;
+}
+
+.light {
+  @extend %font-theme-light-copy;
 }
 
 .noTopMargin {

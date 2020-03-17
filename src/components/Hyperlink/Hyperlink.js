@@ -14,10 +14,9 @@ const Hyperlink = ({
   children,
   className,
   dataTestRef,
-  hasLightText,
   hasTargetInNewWindow,
-  isAlternate,
   style,
+  theme,
   title,
   url,
 }) => {
@@ -27,12 +26,10 @@ const Hyperlink = ({
   const target = getTargetType(hasTargetInNewWindow);
   const classSet = cx(
     styles.base,
-    { [styles.alternate]: isAlternate },
     { [styles.blockStyle]: !isInline },
     { [styles.external]: isExternal },
-    { [styles.lightText]: hasLightText },
     { [styles.hasIcon]: hasIcon },
-    { [styles.inlineStyle]: isInline },
+    styles[theme],
     className,
   );
 
@@ -74,10 +71,8 @@ Hyperlink.propTypes = {
   children: PropTypes.any.isRequired,
   className: PropTypes.string,
   dataTestRef: PropTypes.string,
-  hasLightText: PropTypes.bool,
   hasTargetInNewWindow: PropTypes.bool,
   id: PropTypes.string,
-  isAlternate: PropTypes.bool,
   style: PropTypes.oneOf([
     'External Button Link',
     'External Text Link',
@@ -86,6 +81,7 @@ Hyperlink.propTypes = {
     'External No Icon Link',
     'No Icon Link',
   ]),
+  theme: PropTypes.oneOf(['dark', 'light']),
   title: PropTypes.string,
   type: PropTypes.oneOf(['Relative', 'Absolute']),
   url: PropTypes.string.isRequired,
@@ -95,11 +91,10 @@ Hyperlink.defaultProps = {
   children: undefined,
   className: undefined,
   dataTestRef: undefined,
-  hasLightText: undefined,
   hasTargetInNewWindow: false,
   id: undefined,
-  isAlternate: undefined,
   style: 'No Icon Link',
+  theme: 'dark',
   title: undefined,
   type: undefined,
   url: undefined,

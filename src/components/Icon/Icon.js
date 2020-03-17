@@ -14,6 +14,7 @@ const Icon = ({
   isActive,
   name,
   tabIndex,
+  theme,
   title,
   width,
 }) => {
@@ -26,9 +27,15 @@ const Icon = ({
   const uuidKey = uuidv4();
   const uuidariaLabellBy = `${name}-${uuidKey}`;
   const svgBlueprint = generateSvgBlueprint(svg, uuidKey);
-  const classSet = cx(styles.base, styles[name], className, {
-    [styles.isActive]: isActive,
-  });
+  const classSet = cx(
+    styles.base,
+    styles[name],
+    styles[theme],
+    {
+      [styles.isActive]: isActive,
+    },
+    className,
+  );
 
   return (
     <svg
@@ -55,6 +62,7 @@ Icon.propTypes = {
   isActive: PropTypes.bool,
   name: PropTypes.string.isRequired,
   tabIndex: PropTypes.number,
+  theme: PropTypes.oneOf(['dark', 'light']),
   title: PropTypes.string,
   width: PropTypes.number,
 };
@@ -66,6 +74,7 @@ Icon.defaultProps = {
   isActive: false,
   name: '',
   tabIndex: -1,
+  theme: 'dark',
   title: undefined,
   width: 12,
 };

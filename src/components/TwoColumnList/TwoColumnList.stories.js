@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { object } from '@storybook/addon-knobs';
+import { object, select } from '@storybook/addon-knobs';
 import TwoColumnList from './TwoColumnList';
 
 storiesOf('Components/TwoColumnList', module).add('Base component', () => (
@@ -59,5 +59,6 @@ storiesOf('Components/TwoColumnList', module).add('Base component', () => (
         ],
       },
     ])}
+    theme={select('TwoColumnList theme', ['dark', 'light'], 'light')}
   />
 ));

@@ -3,7 +3,7 @@
 .heading {
   /* min-height: rem(38px); */
   margin: 0 0 10px 0;
-  color: var(--color-body-copy);
+  color: var(--color-dark-copy);
   font-family: var(--font-family-sans-serif-medium);
   font-size: rem(15px);
 

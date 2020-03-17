@@ -37,6 +37,7 @@ const ImageWithHeaderAndContent = ({
           large={image.large}
           medium={image.medium}
           small={image.small}
+          theme={theme}
         />
 
         <div
@@ -47,18 +48,26 @@ const ImageWithHeaderAndContent = ({
           <div className={styles.wrapper}>
             <header>
               <Heading
-                className={styles.title}
+                className={styles.heading}
                 level="2"
                 noMargin={true}
                 size="xSmall"
+                theme={theme}
               >
-                {copy.title}
+                {copy.heading}
               </Heading>
-              <Heading hasSerifFont={true} level="3" size="xLarge">
-                {copy.subTitle}
+              <Heading
+                hasSerifFont={true}
+                level="3"
+                size="xLarge"
+                theme={theme}
+              >
+                {copy.subHeading}
               </Heading>
               {copy.description && (
-                <P className={styles.description}>{copy.description}</P>
+                <P className={styles.description} theme={theme}>
+                  {copy.description}
+                </P>
               )}
             </header>
 
@@ -91,7 +100,7 @@ ImageWithHeaderAndContent.defaultProps = {
   hasFullWidthImage: false,
   image: undefined,
   isReverse: false,
-  theme: '1',
+  theme: 'dark',
 };
 
 export default ImageWithHeaderAndContent;

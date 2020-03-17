@@ -6,7 +6,7 @@ import Hyperlink from '~/components/Hyperlink';
 import List from '~/components/List';
 import styles from './TwoColumnList.module.css';
 
-export const Column = ({ lists }) =>
+export const Column = ({ lists, theme }) =>
   lists.map(({ heading, id, items, subHeading }) => {
     const linkItems = items.map(
       ({ id, style, text, url, openInANewWindow, type }) => {
@@ -22,6 +22,7 @@ export const Column = ({ lists }) =>
             <Hyperlink
               openInANewWindow={openInANewWindow}
               style={style}
+              theme={theme}
               type={type}
               url={url}
             >
@@ -36,30 +37,37 @@ export const Column = ({ lists }) =>
     return (
       <div className={styles.wrapper} key={id}>
         {heading && (
-          <Heading level="2" size="medium">
+          <Heading level="2" size="medium" theme={theme}>
             {heading}
           </Heading>
         )}
         {subHeading && (
-          <Heading className={styles.subHeading} level="4" size="xSmall">
+          <Heading
+            className={styles.subHeading}
+            level="4"
+            size="xSmall"
+            theme={theme}
+          >
             {subHeading}
           </Heading>
         )}
-        {linkItems && <List className={styles.list} items={linkItems} />}
+        {linkItems && (
+          <List className={styles.list} items={linkItems} theme={theme} />
+        )}
       </div>
     );
   });
 
-const TwoColumnList = ({ leftColumn, rightColumn, className }) => {
-  const classSet = cx(styles.base, className);
+const TwoColumnList = ({ className, leftColumn, rightColumn, theme }) => {
+  const classSet = cx(styles.base, styles[theme], className);
 
   return (
     <div className={classSet}>
       <div className={styles.column}>
-        <Column lists={leftColumn} />
+        <Column lists={leftColumn} theme={theme} />
       </div>
       <div className={styles.column}>
-        <Column lists={rightColumn} />
+        <Column lists={rightColumn} theme={theme} />
       </div>
     </div>
   );
@@ -83,6 +91,14 @@ TwoColumnList.propTypes = {
       items: PropTypes.arrayOf(PropTypes.object),
     }),
   ).isRequired,
+  theme: PropTypes.oneOf(['dark', 'light']),
+};
+
+TwoColumnList.defaultProps = {
+  className: undefined,
+  leftColumn: undefined,
+  rightColumn: undefined,
+  theme: 'dark',
 };
 
 export default TwoColumnList;

@@ -64,7 +64,7 @@
   &::after {
     display: block;
     margin-top: 1px;
-    border-bottom: solid 1px var(--color-body-copy);
+    border-bottom: solid 1px var(--color-dark-copy);
     content: '';
     transform: scaleX(0);
     transform-origin: left;

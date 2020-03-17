@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import styles from './Loading.module.css';
 
-const Loading = ({ className, isLight, isLoading, small }) => {
+const Loading = ({ className, isLoading, small, theme }) => {
   const classSet = cx(
     styles.base,
     {
-      [styles.light]: isLight,
       [styles.isLoading]: isLoading,
       [styles.small]: small,
     },
+    styles[theme],
     className,
   );
 
@@ -25,16 +25,16 @@ const Loading = ({ className, isLight, isLoading, small }) => {
 
 Loading.propTypes = {
   className: PropTypes.string,
-  isLight: PropTypes.bool,
   isLoading: PropTypes.bool.isRequired,
   small: PropTypes.bool,
+  theme: PropTypes.oneOf(['dark', 'light']),
 };
 
 Loading.defaultProps = {
   className: undefined,
-  isLight: false,
   isLoading: undefined,
   small: false,
+  theme: 'dark',
 };
 
 export default Loading;

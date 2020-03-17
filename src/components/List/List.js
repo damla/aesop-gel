@@ -1,15 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import uuidv4 from 'uuid/v4';
 import styles from './List.module.css';
 
-const List = ({ className, items, listItemClassName, forwardedRef }) => {
-  const classSet = cx(styles.base, className);
+const List = ({ className, items, listItemClassName, forwardedRef, theme }) => {
+  const classSet = cx(styles.base, styles[theme], className);
 
   return (
     <ul className={classSet} ref={forwardedRef}>
-      {items.map(({ content, id = uuidv4() }) => (
+      {items.map(({ content, id }) => (
         <li className={cx(styles.item, listItemClassName)} key={id}>
           {content}
         </li>
@@ -28,10 +27,11 @@ List.propTypes = {
     PropTypes.exact({
       content: PropTypes.oneOfType([PropTypes.node, PropTypes.element])
         .isRequired,
-      id: PropTypes.string,
+      id: PropTypes.string.isRequired,
     }),
   ).isRequired,
   listItemClassName: PropTypes.string,
+  theme: PropTypes.oneOf(['dark', 'light']),
 };
 
 List.defaultProps = {
@@ -39,6 +39,7 @@ List.defaultProps = {
   forwardedRef: undefined,
   items: undefined,
   listItemClassName: undefined,
+  theme: 'dark',
 };
 
 export default List;

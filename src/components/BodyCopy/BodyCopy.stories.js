@@ -6,15 +6,18 @@ import BodyCopy from './BodyCopy';
 
 storiesOf('Components/BodyCopy', module).add('Base component', () => (
   <BodyCopy
-    copy={text(
-      'copy',
-      'Parsley Seed Cream. [The Paris Review](http://theparisreview.org) Intensely soothing, nourishing and hydrating, this elegant formulation contains a potent blend of botanicals that offer fortification of the highest order against free radicals.',
-    )}
+    copy={
+      <p>
+        Parsley Seed Cream.{' '}
+        <a href="http://theparisreview.org">The Paris Review</a> Intensely
+        soothing, nourishing and hydrating, this elegant formulation contains a
+        potent blend of botanicals that offer fortification of the highest order
+        against free radicals.
+      </p>
+    }
     cta={{
-      id: text('cta.id', 'button-id'),
       text: text('cta.text', 'Read more'),
       url: text('cta.url', 'http://aesop.com'),
-      openInANewWindow: boolean('cta.openInANewWindow', true),
       style: select(
         'cta.style',
         [
@@ -25,7 +28,7 @@ storiesOf('Components/BodyCopy', module).add('Base component', () => (
           'External No Icon Link',
           'No Icon Link',
         ],
-        'Internal Text Link',
+        'External Button Link',
       ),
     }}
     eyebrow={text('eyebrow', 'Recommended Nearby')}
@@ -34,7 +37,7 @@ storiesOf('Components/BodyCopy', module).add('Base component', () => (
       'heading',
       'Aesop and The Paris Review: A Partnership Extended',
     )}
-    id={text('id', 'Anti-Oxidant')} // TBC -- nested component
     subHeading={text('subHeading', 'Active Nutrients')}
+    theme={select('theme', ['dark', 'light'], 'dark')}
   />
 ));

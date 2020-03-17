@@ -1,5 +1,4 @@
-@import 'styles/variables/index';
-@import 'styles/mixins/index';
+@import 'styles/index';
 
 .base {
   box-sizing: border-box;
@@ -54,25 +53,52 @@
   }
 }
 
-.list.list {
-  color: var(--color-secondary);
-  font-size: 15px;
+.dark {
+  @extend %font-theme-dark-alternate;
 
   a {
-    color: var(--color-grey-30);
-    font-size: 15px;
-    text-decoration: none;
+    /* @extend %font-theme-dark-link; */
+    color: var(--color-dark-link);
 
     &:hover,
     &:focus {
-      color: var(--color-secondary);
-      text-decoration: underline;
+      color: var(--color-dark-link-hover);
     }
   }
+}
+
+.light.light {
+  @extend %font-theme-light-alternate;
+
+  a {
+    /* @extend %font-theme-light-link; */
+    color: var(--color-light-link);
+
+    &:hover,
+    &:focus {
+      color: var(--color-light-link-hover);
+    }
+  }
+}
+
+.list.list {
+  font-size: 15px;
 
   li {
-    &:not(:last-child) {
-      margin-bottom: 10px;
+    a {
+      font-size: 15px;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+
+    li {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
     }
   }
 }

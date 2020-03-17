@@ -1,31 +1,29 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { useEscapeKeyListener } from '~/customHooks/useEscapeKeyListener';
 import { useOverflowHidden } from '~/customHooks/useOverflowHidden';
 import Button from '~/components/Button';
 import Heading from '~/components/Heading';
+import Hyperlink from '~/components/Hyperlink';
 import Icon from '~/components/Icon';
 import Overlay from '~/components/Overlay';
-import P from '~/components/Paragraph';
+import { P } from '~/components/Paragraph';
 import Transition from '~/components/Transition';
-import PROP_TYPES, {
-  POSITION_PROP_TYPE_OPTIONS,
-  THEME_PROP_TYPE_OPTIONS,
-} from './DialogBanner.prop-types';
 import styles from './DialogBanner.module.css';
 
 const DialogBanner = ({
   className,
   cta,
-  handleClose,
-  isVisible = false,
+  hasCloseButton,
+  isVisible,
   message,
-  position = POSITION_PROP_TYPE_OPTIONS.TOP,
-  showCloseButton = true,
-  theme = THEME_PROP_TYPE_OPTIONS.DARK,
+  onClose,
+  position,
+  theme,
   title,
 }) => {
-  useEscapeKeyListener(handleClose);
+  useEscapeKeyListener(onClose);
   useOverflowHidden(isVisible);
 
   const classSet = cx(
@@ -38,12 +36,12 @@ const DialogBanner = ({
 
   return (
     <>
-      <Overlay handleClose={handleClose} isVisible={isVisible} />
+      <Overlay isVisible={isVisible} onClose={onClose} />
       <Transition
-        active={!!isVisible}
-        mountOnEnter={true}
+        hasCSSTransitionMountOnEnter={true}
+        hasCSSTransitionUnmountOnExit={true}
+        isActive={isVisible}
         type="slideDown"
-        unmountOnExit={true}
       >
         <aside className={classSet}>
           <div className={styles.iconContainer}>
@@ -66,11 +64,11 @@ const DialogBanner = ({
             <P className={styles.message}>{message}</P>
           </div>
           <div className={styles.closeContainer}>
-            {showCloseButton && (
+            {hasCloseButton && (
               <Button
                 className={styles.closeButton}
-                inline={true}
-                onClick={handleClose}
+                isInline={true}
+                onClick={onClose}
                 title="Close dialog button"
               >
                 <Icon
@@ -82,18 +80,18 @@ const DialogBanner = ({
               </Button>
             )}
             {cta && cta.text && (
-              <Button
+              <Hyperlink
                 className={styles.ctaButton}
                 dataTestRef={cta.dataTestRef}
-                hasLightText={true}
+                href={cta.url}
                 id={cta.id}
-                inline={true}
+                isInline={true}
                 target={cta.openInANewWindow ? '_blank' : '_self'}
-                title={`contact us link to ${cta.url}`}
-                to={cta.url}
+                theme={'light'}
+                title={cta.title}
               >
                 {cta.text}
-              </Button>
+              </Hyperlink>
             )}
           </div>
         </aside>
@@ -102,6 +100,28 @@ const DialogBanner = ({
   );
 };
 
-DialogBanner.propTypes = PROP_TYPES;
+DialogBanner.propTypes = {
+  className: PropTypes.string,
+  cta: PropTypes.object /** @TODO make hyperlink proptype */,
+  hasCloseButton: PropTypes.bool,
+  isVisible: PropTypes.bool,
+  message: PropTypes.string.isRequired,
+  onClose: PropTypes.func.isRequired,
+  position: PropTypes.oneOf(['top', 'bottom']),
+  theme: PropTypes.oneOf(['dark', 'black']),
+  title: PropTypes.string.isRequired,
+};
+
+DialogBanner.defaultProps = {
+  className: undefined,
+  cta: undefined,
+  hasCloseButton: true,
+  isVisible: false,
+  message: undefined,
+  onClose: undefined,
+  position: 'top',
+  theme: 'dark',
+  title: undefined,
+};
 
 export default DialogBanner;

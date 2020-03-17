@@ -42,7 +42,7 @@
     }
 
     p {
-      color: var(--color-body-copy);
+      color: var(--color-dark-copy);
     }
   }
 }

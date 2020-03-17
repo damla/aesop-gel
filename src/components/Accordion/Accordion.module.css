@@ -16,9 +16,23 @@
   }
 }
 
-.heading {
-  color: var(--color-body-copy);
+.dark {
+  @extend %font-theme-dark-copy;
 
+  svg {
+    fill: var(--color-dark-background);
+  }
+}
+
+.light {
+  @extend %font-theme-light-copy;
+
+  svg {
+    fill: var(--color-light-background);
+  }
+}
+
+.heading {
   /** @TODO replace with a heading font mixin */
   /* font-size: ; 1.45rem */
   font-size: rem(23px);
@@ -76,7 +90,6 @@
 
 .content {
   padding-top: 20px;
-  color: var(--color-body-copy);
   font-size: rem(17px);
   line-height: 1.6;
 

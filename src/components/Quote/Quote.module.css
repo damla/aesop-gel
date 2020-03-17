@@ -1,5 +1,4 @@
-@import 'styles/variables/index';
-@import 'styles/mixins/index';
+@import 'styles/index';
 
 .base {
   display: flex;
@@ -13,6 +12,14 @@
   @media (--viewport-lg) {
     padding: 160px var(--layout-lg-spacing);
   }
+}
+
+.dark {
+  @extend %font-theme-dark-copy;
+}
+
+.light {
+  @extend %font-theme-light-copy;
 }
 
 .noTopPadding {
@@ -36,7 +43,6 @@
   @extend %title-typography;
 
   padding: 0;
-  color: var(--color-secondary);
   font-family: var(--font-family-zapf-serif);
   font-size: rem(27px);
   line-height: 1.3;
@@ -45,7 +51,6 @@
 .author {
   display: block;
   margin-top: 24px;
-  color: var(--color-secondary);
   font-family: var(--font-family-sans-serif-medium);
   font-size: rem(15px);
   font-style: initial;

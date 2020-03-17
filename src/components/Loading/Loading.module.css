@@ -24,12 +24,15 @@
   width: 7px;
   height: 7px;
   margin: 0 3px;
-  background: var(--color-grey-20);
   border-radius: 100%;
 
   .small & {
     width: 5px;
     height: 5px;
+  }
+
+  .dark & {
+    background: var(--color-grey-20);
   }
 
   .light & {

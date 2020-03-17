@@ -13,6 +13,7 @@ const Heading = ({
   isFlush,
   level,
   size,
+  theme,
 }) => {
   const classSet = cx(
     styles.base,
@@ -21,6 +22,7 @@ const Heading = ({
     { [styles.serifFont]: hasSerifFont },
     { [styles.mediumWeightFont]: hasMediumWeightFont },
     styles[size],
+    styles[theme],
     className,
   );
 
@@ -42,6 +44,7 @@ Heading.propTypes = {
   level: PropTypes.oneOf(['1', '2', '3', '4', '5', '6']).isRequired,
   size: PropTypes.oneOf(['xSmall', 'small', 'medium', 'large', 'xLarge'])
     .isRequired,
+  theme: PropTypes.oneOf(['dark', 'light']),
 };
 
 Heading.defaultProps = {
@@ -54,6 +57,7 @@ Heading.defaultProps = {
   isFlush: false,
   level: undefined,
   size: undefined,
+  theme: 'dark',
 };
 
 export default Heading;

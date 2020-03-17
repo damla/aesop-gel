@@ -1,31 +1,41 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import cx from 'classnames';
 import Heading from '~/components/Heading';
 import Paragraph from '~/components/Paragraph';
 import styles from './CarouselIntroduction.module.css';
 
-const CarouselIntroduction = ({ heading, description }) => (
-  <header className={styles.base}>
-    <Heading
-      className={styles.heading}
-      hasSerifFont={true}
-      level="4"
-      size="xLarge"
-    >
-      {heading}
-    </Heading>
-    <Paragraph className={styles.description}>{description}</Paragraph>
-  </header>
-);
+const CarouselIntroduction = ({ heading, description, theme }) => {
+  const classSet = cx(styles.base, styles[theme]);
+
+  return (
+    <header className={classSet}>
+      <Heading
+        className={styles.heading}
+        hasSerifFont={true}
+        level="4"
+        size="xLarge"
+        theme={theme}
+      >
+        {heading}
+      </Heading>
+      <Paragraph className={styles.description} theme={theme}>
+        {description}
+      </Paragraph>
+    </header>
+  );
+};
 
 CarouselIntroduction.propTypes = {
-  heading: PropTypes.string,
   description: PropTypes.string,
+  heading: PropTypes.string,
+  theme: PropTypes.oneOf(['dark', 'light']),
 };
 
 CarouselIntroduction.defaultProps = {
-  heading: undefined,
   description: undefined,
+  heading: undefined,
+  theme: 'dark',
 };
 
 export default CarouselIntroduction;

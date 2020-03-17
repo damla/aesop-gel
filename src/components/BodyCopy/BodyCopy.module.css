@@ -1,7 +1,6 @@
-@import 'styles/variables/index';
+@import 'styles/index';
 
 .base {
-  color: var(--color-body-copy);
   font-family: var(--font-family-sans-serif-regular);
 
   &:not(:last-child) {
@@ -21,8 +20,63 @@
   }
 }
 
-.hasLightText {
-  color: var(--color-white);
+.copy {
+  &,
+  p {
+    margin: 10px 0;
+    font-size: rem(17px);
+    line-height: 1.7;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    a {
+      font-weight: var(--font-weight-normal);
+    }
+  }
+}
+
+.dark {
+  &.copy {
+    &,
+    p {
+      @extend %font-theme-dark-copy;
+    }
+
+    a {
+      /* @extend %font-theme-dark-link; */
+      color: var(--color-dark-link);
+
+      &:hover,
+      &:focus {
+        color: var(--color-dark-link-hover);
+      }
+    }
+  }
+}
+
+.light.light {
+  &.copy {
+    &,
+    p {
+      @extend %font-theme-light-copy;
+    }
+
+    a {
+      /* @extend %font-theme-light-link; */
+      color: var(--color-light-link);
+
+      &:hover,
+      &:focus {
+        color: var(--color-light-link-hover);
+      }
+    }
+  }
 }
 
 .TextOverHero {
@@ -82,33 +136,6 @@
       padding: 0 0 17px;
     }
   }
-}
-
-.copy p {
-  margin: 10px 0;
-  font-size: rem(17px);
-  line-height: 1.7;
-
-  &:first-of-type {
-    margin-top: 0;
-  }
-
-  &:last-of-type {
-    margin-bottom: 0;
-  }
-
-  a {
-    color: var(--color-grey-20);
-    font-weight: var(--font-weight-normal);
-    text-decoration: underline;
-  }
-}
-
-.quote {
-  margin-bottom: 30px;
-  font-family: var(--font-family-zapf-serif);
-  font-size: rem(26px);
-  line-height: 1.5;
 }
 
 .ctaWrapper {

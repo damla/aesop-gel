@@ -13,17 +13,15 @@ import Icon from '~/components/Icon';
 import { isObjectPopulatedArray } from '~/utils/objects';
 import styles from './Accordion.module.css';
 
-const Accordion = ({ className, items }) => {
+const Accordion = ({ className, items, theme }) => {
   const [activeNodes, setIsActiveNodes] = React.useState([]);
 
   if (!isObjectPopulatedArray(items)) {
     return null;
   }
 
-  const classSet = cx(styles.base, className);
-
+  const classSet = cx(styles.base, styles[theme], className);
   const handleOnChange = nodes => setIsActiveNodes(nodes);
-
   const checkIsActive = id => activeNodes.includes(id);
 
   return (
@@ -35,13 +33,14 @@ const Accordion = ({ className, items }) => {
     >
       {items.map(({ content, heading, id }) => (
         <AccordionItem className={styles.item} key={id} uuid={id}>
-          <AccordionItemHeading className={styles.heading}>
+          <AccordionItemHeading className={cx(styles.heading, styles[theme])}>
             <AccordionItemButton className={styles.button}>
               <span>{heading}</span>
               <Icon
                 className={styles.icon}
                 height={16}
                 name="downArrow"
+                theme={theme}
                 width={16}
               />
             </AccordionItemButton>
@@ -51,7 +50,7 @@ const Accordion = ({ className, items }) => {
               isOpened={checkIsActive(id)}
               theme={{ collapse: styles.collapse }}
             >
-              <div className={styles.content}>{content}</div>
+              <div className={cx(styles.content, styles[theme])}>{content}</div>
             </Collapse>
           </AccordionItemPanel>
         </AccordionItem>
@@ -69,11 +68,13 @@ Accordion.propTypes = {
       id: PropTypes.string.isRequired,
     }),
   ),
+  theme: PropTypes.oneOf(['dark', 'light']),
 };
 
 Accordion.defaultProps = {
   className: undefined,
   items: undefined,
+  theme: 'dark',
 };
 
 export default Accordion;

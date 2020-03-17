@@ -7,7 +7,6 @@ const Button = ({
   children,
   className,
   dataTestRef,
-  hasLightText,
   id,
   isAlternate,
   isEnabled,
@@ -16,6 +15,7 @@ const Button = ({
   tabIndex,
   title,
   type,
+  theme,
 }) => {
   const classSet = cx(
     styles.base,
@@ -23,8 +23,8 @@ const Button = ({
     { [styles.blockStyle]: !isInline },
     { [styles.disabled]: !isEnabled },
     { [styles.external]: external },
-    { [styles.lightText]: hasLightText },
     { [styles.inlineStyle]: isInline },
+    styles[theme],
     className,
   );
 
@@ -48,7 +48,6 @@ Button.propTypes = {
   children: PropTypes.any.isRequired,
   className: PropTypes.string,
   dataTestRef: PropTypes.string,
-  hasLightText: PropTypes.bool,
   id: PropTypes.string,
   isAlternate: PropTypes.bool,
   isEnabled: PropTypes.bool,
@@ -57,13 +56,13 @@ Button.propTypes = {
   tabIndex: PropTypes.number,
   title: PropTypes.string.isRequired,
   type: PropTypes.oneOf(['button', 'reset', 'submit']),
+  theme: PropTypes.oneOf(['dark', 'light']),
 };
 
 Button.defaultProps = {
   children: undefined,
   className: undefined,
   dataTestRef: undefined,
-  hasLightText: undefined,
   id: undefined,
   isAlternate: false,
   isEnabled: true,
@@ -72,6 +71,7 @@ Button.defaultProps = {
   tabIndex: undefined,
   title: undefined,
   type: 'button',
+  theme: 'dark',
 };
 
 export default Button;

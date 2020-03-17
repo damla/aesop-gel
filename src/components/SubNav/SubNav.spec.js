@@ -11,7 +11,7 @@ describe('<SubNav />', () => {
   it('renders base component correctly', () => {
     const tree = renderer
       .create(
-        <SubNav links={SubNavFixture.links} title={SubNavFixture.title} />,
+        <SubNav heading={SubNavFixture.heading} links={SubNavFixture.links} />,
       )
       .toJSON();
     expect(tree).toMatchSnapshot();
@@ -19,7 +19,7 @@ describe('<SubNav />', () => {
 
   it('renders without title if not `title` prop is passed', () => {
     const tree = renderer
-      .create(<SubNav links={[SubNavFixture.links[0]]} />)
+      .create(<SubNav links={SubNavFixture.links} />)
       .toJSON();
     expect(tree).toMatchSnapshot();
   });

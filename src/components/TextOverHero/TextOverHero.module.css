@@ -16,41 +16,6 @@
   margin-top: 0;
 }
 
-.hasLightText {
-  @media (--viewport-md) {
-    color: var(--color-white);
-
-    a,
-    button {
-      border-color: var(--color-white);
-
-      &:link,
-      &:visited {
-        color: var(--color-white);
-        text-decoration: none;
-      }
-
-      svg {
-        path {
-          fill: var(--color-white);
-        }
-      }
-
-      &:hover,
-      &:focus {
-        background-color: var(--color-white);
-        color: var(--color-body-copy);
-
-        svg {
-          path {
-            fill: var(--color-body-copy) !important;
-          }
-        }
-      }
-    }
-  }
-}
-
 figure {
   img,
   video {

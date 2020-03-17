@@ -1,18 +1,19 @@
 export default {
   copy: {
-    title: 'How to use',
-    subTitle:
+    heading: 'How to use',
+    subHeading:
       'Dispense into palm then massage gently over face, neck and lips, applying minimal pressure. Avoid eye area. Rinse thoroughly with warm water.',
   },
   copyKit: {
-    title: 'How to use',
-    subTitle: 'A comprehensive skin care regimen, ideal in urban environments.',
+    heading: 'How to use',
+    subHeading:
+      'A comprehensive skin care regimen, ideal in urban environments.',
     description:
       'Morning and evening, use Parsley Seed Facial Cleansing Oil, Facial Toner, Anti-Oxidant Serum, and Eye Cream. Twice weekly, apply Masque after cleansing; follow with Facial Treatment.',
   },
   copyExpectations: {
-    title: 'Cythera Aromatique Room Spray',
-    subTitle: 'The spirit stirred',
+    heading: 'Cythera Aromatique Room Spray',
+    subHeading: 'The spirit stirred',
     description:
       'Cythera conjures a moonlit garden as vespertine flowers relax their petals and nocturnal animals emerge from sleep. Drawing us into the present, an atmosphere of reverence is stirred as darkness returns. The air in this space holds a delicate aroma woven with the memory of the day, and the promise of the evening ahead.',
   },

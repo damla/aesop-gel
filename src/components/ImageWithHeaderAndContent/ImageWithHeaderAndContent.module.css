@@ -24,7 +24,7 @@
   }
 }
 
-.title.title {
+.heading.heading {
   font-family: var(--font-family-sans-serif-medium);
 }
 
@@ -144,7 +144,7 @@
 /** @TODO set up Theme context funtionality */
 /** @TODO add hex values to constants */
 
-.theme-1 {
+.theme-dark {
   &,
   .figure {
     /* background-color: #ede5cf; */
@@ -152,7 +152,7 @@
   }
 }
 
-.theme-2 {
+.theme-light {
   &,
   .figure {
     background-color: #b19c93;

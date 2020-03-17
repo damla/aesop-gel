@@ -11,15 +11,11 @@ import Button from './Button';
 <Preview>
   <Story name="Base component">
     <Button
-      className={text('className', '')}
-      dataTestRef={text('dataTestRef', 'dataTestRef')}
-      hasLightText={boolean('hasLightText', false)}
-      id={text('id', '')}
       isAlternate={boolean('isAlternate', false)}
       isEnabled={boolean('isEnabled', true)}
       isInline={boolean('isInline', false)}
       onClick={action('clicked')}
-      tabIndex={number('tabIndex', -1)}
+      theme={select('theme', ['dark', 'light'], 'dark')}
       title={text('title', 'Aēsop')}
       type={select('type', ['button', 'reset', 'submit'], 'button')}
     >
@@ -42,7 +38,6 @@ import Button from '@aesop-gel/components/Button'
 <Button
   className="submit"
   dataTestRef="submit"
-  hasLightText={false}
   id="submit"
   isAlternate={false}
   isEnabled={true}

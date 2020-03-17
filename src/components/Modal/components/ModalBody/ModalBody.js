@@ -5,10 +5,18 @@ import Button from '~/components/Button';
 import Icon from '~/components/Icon';
 import styles from './ModalBody.module.css';
 
-const ModalBody = ({ children, className, copy, onClose, isVisible }) => {
+const ModalBody = ({
+  children,
+  className,
+  copy,
+  onClose,
+  isVisible,
+  theme,
+}) => {
   const classSet = cx(
     styles.base,
     { [styles.isVisible]: isVisible },
+    styles[theme],
     className,
   );
 
@@ -20,12 +28,14 @@ const ModalBody = ({ children, className, copy, onClose, isVisible }) => {
         dataTestRef="MODAL_CLOSE_BUTTON"
         isInline={true}
         onClick={onClose}
+        theme={theme}
         title={copy.close}
       >
         <Icon
           className={styles.closeIcon}
           height={14}
           name="close"
+          theme={theme}
           width={14}
         />
       </Button>
@@ -41,6 +51,7 @@ ModalBody.propTypes = {
   }).isRequired,
   onClose: PropTypes.func.isRequired,
   isVisible: PropTypes.bool.isRequired,
+  theme: PropTypes.oneOf(['dark', 'light']),
 };
 
 ModalBody.defaultProps = {
@@ -49,6 +60,7 @@ ModalBody.defaultProps = {
   copy: undefined,
   onClose: undefined,
   isVisible: undefined,
+  theme: 'dark',
 };
 
 export default ModalBody;

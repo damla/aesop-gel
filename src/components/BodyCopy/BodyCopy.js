@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import marked from 'marked';
-import parse from 'html-react-parser';
 import PageHeading from '~/components/PageHeading';
 import Hyperlink from '~/components/Hyperlink';
 import styles from './BodyCopy.module.css';
@@ -17,8 +15,9 @@ const BodyCopy = ({
   hasSerifFontHeading,
   heading,
   subHeading,
+  theme,
 }) => {
-  const classSet = cx(styles.base, className, styles[parent]);
+  const classSet = cx(styles.base, styles[theme], styles[parent], className);
 
   return (
     <article className={classSet} id={id}>
@@ -33,17 +32,17 @@ const BodyCopy = ({
         heading={heading}
         id={id}
         subHeading={subHeading}
+        theme={theme}
       />
 
-      {copy && (
-        <div className={styles.copy}>{parse(marked(copy.toString()))}</div>
-      )}
+      {copy && <div className={cx(styles.copy, styles[theme])}>{copy}</div>}
 
       {cta && cta.text && (
         <div className={styles.ctaWrapper}>
           <Hyperlink
             openInANewWindow={cta.openInANewWindow}
             style={cta.style}
+            theme={theme}
             url={cta.url}
           >
             {cta.text}
@@ -64,6 +63,7 @@ BodyCopy.propTypes = {
   id: PropTypes.string,
   parent: PropTypes.oneOf(['TextOverHero', 'HalfWidthFullBleed']),
   subHeading: PropTypes.string,
+  theme: PropTypes.oneOf(['dark', 'light']),
 };
 
 BodyCopy.defaultProps = {
@@ -76,6 +76,7 @@ BodyCopy.defaultProps = {
   id: undefined,
   parent: undefined,
   subHeading: undefined,
+  theme: 'dark',
 };
 
 export default BodyCopy;

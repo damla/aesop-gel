@@ -2,19 +2,21 @@
 
 .base {
   position: relative;
-  color: var(--color-grey-20);
   font-family: var(--font-family-sans-serif-regular);
   font-size: rem(17px);
   font-weight: var(--font-weight-normal);
+  outline: none;
   text-decoration: none;
+}
 
-  &:hover,
-  &:focus {
-    color: var(--color-grey-10);
-  }
+.hasIcon {
+  padding-right: 26px;
 }
 
 .icon {
+  position: absolute;
+  top: 4px;
+  right: 0;
   display: inline-block;
 
   svg {
@@ -27,140 +29,97 @@
   }
 }
 
-.alternate {
-  background-color: var(--color-body-copy);
-
-  &.disabled {
-    border-color: var(--color-grey-50);
-    background-color: var(--color-grey-50);
-    color: var(--color-white-disabled);
-  }
-
-  &,
-  &:link,
-  &:visited {
-    color: var(--color-white);
-  }
-
-  &:hover,
-  &:focus {
-    background-color: var(--color-body-copy);
-
-    &.disabled {
-      color: var(--color-white-disabled);
-    }
-  }
-
-  svg {
-    path {
-      fill: var(--color-white);
-    }
-  }
-}
-
-.blockStyle .icon {
-  position: absolute;
-  top: calc(50% - 8px);
-  right: 23px;
-}
-
-.inlineStyle .icon {
-  position: absolute;
-  top: 4px;
-  right: 0;
-}
-
-.inlineStyle.external {
-  .icon {
-    top: 5px;
-  }
-}
-
-.inlineStyle {
-  display: inline;
-  padding: 0;
-  border: 0;
-
-  &.hasIcon {
-    padding-right: 26px;
-
-    .icon {
-      display: inline-block;
-    }
-  }
-
-  svg {
-    path {
-      fill: var(--color-body-copy);
-    }
-  }
-
-  &:hover,
-  &:focus {
-    color: var(--color-body-copy);
-
-    svg {
-      path {
-        fill: var(--color-body-copy);
-      }
-    }
-  }
-}
-
-.blockStyle.alternate {
-  background-color: var(--color-body-copy);
-
-  &,
-  &:link,
-  &:visited {
-    color: var(--color-white);
-  }
-
-  &:hover,
-  &:focus {
-    background-color: var(--color-body-copy);
-  }
-
-  svg {
-    path {
-      fill: var(--color-white);
-    }
-  }
-}
-
 .blockStyle {
   display: inline-block;
   min-width: 210px;
   max-width: 400px;
   padding: 20px;
-  border: 1px solid var(--color-grey-rgba-20);
-  transition: background-color 400ms var(--easing-ease-out-cubic);
+  border-width: 1px;
+  border-style: solid;
+  transition: all 200ms var(--easing-ease-in-out-cubic);
 
   &.hasIcon {
     padding-right: 55px;
+  }
+
+  .icon {
+    position: absolute;
+    top: calc(50% - 8px);
+    right: 23px;
+  }
+}
+
+.dark {
+  @extend %font-theme-dark-link;
+
+  .icon {
+    svg {
+      path {
+        fill: var(--color-dark-background);
+      }
+    }
+  }
+
+  &.blockStyle {
+    .icon {
+      svg {
+        path {
+          fill: var(--color-dark-background);
+        }
+      }
+    }
 
     &:hover,
     &:focus {
+      border-color: var(--color-dark-background);
+      background-color: var(--color-dark-background);
+      color: var(--color-light-link-hover);
+
+      .icon {
+        svg {
+          path {
+            fill: var(--color-light-link-hover);
+          }
+        }
+      }
+    }
+  }
+}
+
+.light.light {
+  @extend %font-theme-light-link;
+
+  .icon.icon {
+    svg {
+      path {
+        fill: var(--color-white);
+      }
+    }
+  }
+
+  &.blockStyle {
+    border: 1px solid var(--color-white);
+
+    .icon {
       svg {
         path {
           fill: var(--color-white);
         }
       }
     }
-  }
 
-  &:hover,
-  &:focus {
-    background-color: var(--color-body-copy);
-    color: var(--color-white);
-  }
-}
+    &:focus,
+    &:hover {
+      background-color: var(--color-white);
+      color: var(--color-dark-copy);
 
-.lightText {
-  color: var(--color-white);
-
-  &:focus,
-  &:hover {
-    color: var(--color-grey-65);
+      .icon {
+        svg {
+          path {
+            fill: var(--color-dark-copy);
+          }
+        }
+      }
+    }
   }
 }

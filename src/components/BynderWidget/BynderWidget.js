@@ -4,7 +4,7 @@ import cx from 'classnames';
 import useScript from '~/customHooks/useScript';
 import styles from './BynderWidget.module.css';
 
-const BynderWidget = ({ className, heading, id }) => {
+const BynderWidget = ({ className, heading, id, theme }) => {
   useScript(
     'https://d8ejoa1fys2rk.cloudfront.net/bynder-embed/latest/bynder-embed.js',
     'bynder-widgets-js',
@@ -14,7 +14,7 @@ const BynderWidget = ({ className, heading, id }) => {
     },
   );
 
-  const classSet = cx(styles.base, className, styles[parent]);
+  const classSet = cx(styles.base, styles[theme], className);
 
   return (
     <article className={classSet} id={id}>
@@ -32,12 +32,14 @@ BynderWidget.propTypes = {
   className: PropTypes.string,
   heading: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
+  theme: PropTypes.oneOf(['dark', 'light']),
 };
 
 BynderWidget.defaultProps = {
   className: undefined,
   heading: undefined,
   id: undefined,
+  theme: 'dark',
 };
 
 export default BynderWidget;

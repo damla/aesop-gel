@@ -9,7 +9,7 @@
  */
 html {
   box-sizing: border-box;
-  background-color: var(--color-light-bg);
+  background-color: var(--color-light-background);
 }
 
 * {
@@ -21,7 +21,7 @@ html {
 }
 
 body {
-  color: var(--color-body-copy);
+  color: var(--color-dark-copy);
   font-family: var(--font-family-sans-serif-regular);
   font-size: var(--font-base-size);
   -webkit-font-smoothing: antialiased;

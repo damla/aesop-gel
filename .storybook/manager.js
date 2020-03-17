@@ -10,7 +10,7 @@ addons.setConfig({
 
     // UI
     appBg: '#fffef0',
-    appContentBg: '#fffef0',
+    appContentBg: '#fff',
     appBorderColor: '#666',
     appBorderRadius: 0,
 
@@ -28,7 +28,7 @@ addons.setConfig({
     barBg: '#4a4a4a',
 
     // Form colors
-    inputBg: '#fffef0',
+    inputBg: '#fff',
     inputBorder: '#d5d4c9',
     inputTextColor: 'black',
     inputBorderRadius: 0,

@@ -11,11 +11,18 @@ import Overlay from '~/components/Overlay';
 import Transition from '~/components/Transition';
 import styles from './FlyinPanel.module.css';
 
-const FlyinPanel = ({ children, className, heading, isVisible, onClose }) => {
+const FlyinPanel = ({
+  children,
+  className,
+  heading,
+  isVisible,
+  onClose,
+  theme,
+}) => {
   useEscapeKeyListener(onClose);
   useOverflowHidden(isVisible);
 
-  const classSet = cx(styles.base, className);
+  const classSet = cx(styles.base, styles[theme], className);
   const labelledby = uuidv4();
   const describedby = uuidv4();
   const asideRole = 'dialog';
@@ -42,12 +49,13 @@ const FlyinPanel = ({ children, className, heading, isVisible, onClose }) => {
             isInline={true}
             onClick={onClose}
             tabIndex={0}
+            theme={theme}
             title={closeButtonTitle}
           >
-            <Icon height={12} name="close" width={12} />
+            <Icon height={12} name="close" theme={theme} width={12} />
           </Button>
           {heading && (
-            <Heading id={labelledby} level="2" size="small">
+            <Heading id={labelledby} level="2" size="small" theme={theme}>
               {heading}
             </Heading>
           )}
@@ -64,6 +72,7 @@ FlyinPanel.propTypes = {
   heading: PropTypes.string,
   isVisible: PropTypes.bool,
   onClose: PropTypes.func.isRequired,
+  theme: PropTypes.oneOf(['dark', 'light']),
 };
 
 FlyinPanel.defaultProps = {
@@ -72,6 +81,7 @@ FlyinPanel.defaultProps = {
   heading: undefined,
   isVisible: false,
   onClose: undefined,
+  theme: 'dark',
 };
 
 export default FlyinPanel;

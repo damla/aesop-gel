@@ -8,23 +8,26 @@ import styles from './PreviousButton.module.css';
  * The onClick callback for the PreviousButton
  * components are provided through react-slick
  */
-const PreviousButton = ({ onClick }) => (
+const PreviousButton = ({ onClick, theme }) => (
   <Button
     className={styles.base}
     isInline={true}
     onClick={onClick}
+    theme={theme}
     title="next slide"
   >
-    <Icon height={18} name="chevron" width={18} />
+    <Icon height={18} name="chevron" theme={theme} width={18} />
   </Button>
 );
 
 PreviousButton.propTypes = {
   onClick: PropTypes.func,
+  theme: PropTypes.oneOf(['dark', 'light']),
 };
 
 PreviousButton.defaultProps = {
   onClick: undefined,
+  theme: 'dark',
 };
 
 export default PreviousButton;

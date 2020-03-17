@@ -12,12 +12,14 @@ const TwoColumnLayout = ({
   id,
   isReversed,
   sidebar,
+  theme,
 }) => {
   const classSet = cx(
     styles.base,
     { [styles.reverse]: isReversed },
     { [styles.verticalPadding]: hasVerticalPadding },
     { [styles.contentOnly]: !sidebar },
+    styles[theme],
     className,
   );
   const contentClassSet = cx(
@@ -53,6 +55,7 @@ TwoColumnLayout.propTypes = {
   id: PropTypes.string,
   isReversed: PropTypes.bool,
   sidebar: PropTypes.any,
+  theme: PropTypes.oneOf(['dark', 'light']),
 };
 
 TwoColumnLayout.defaultProps = {
@@ -64,6 +67,7 @@ TwoColumnLayout.defaultProps = {
   id: undefined,
   isReversed: true,
   sidebar: undefined,
+  theme: 'dark',
 };
 
 export default TwoColumnLayout;

@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import styles from './Quote.module.css';
 
-const Quote = ({ author, className, content, hasTopPadding }) => {
+const Quote = ({ author, className, content, hasTopPadding, theme }) => {
   const classSet = cx(
     styles.base,
     { [styles.noTopPadding]: !hasTopPadding },
+    styles[theme],
     className,
   );
 
@@ -25,6 +26,7 @@ Quote.propTypes = {
   className: PropTypes.string,
   content: PropTypes.string.isRequired,
   hasTopPadding: PropTypes.bool,
+  theme: PropTypes.oneOf(['dark', 'light']),
 };
 
 Quote.defaultProps = {
@@ -32,6 +34,7 @@ Quote.defaultProps = {
   className: undefined,
   content: undefined,
   hasTopPadding: true,
+  theme: 'dark',
 };
 
 export default Quote;
