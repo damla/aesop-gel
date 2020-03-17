@@ -27,6 +27,8 @@ export default {
     postcss({
       modules: true,
       extract: 'dist/styles.css',
+      sourceMap: NODE_ENV === 'development' ? true : false,
+      minimize: NODE_ENV === 'development' ? false : true,
     }),
     replace({
       'process.env.NODE_ENV': JSON.stringify(NODE_ENV),
