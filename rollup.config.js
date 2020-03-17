@@ -13,14 +13,9 @@ import pkg from './package.json';
 const NODE_ENV = 'development';
 
 export default {
-  input: {
-    index: 'src/index.js',
-    'components/Button': 'src/components/Button/index.js',
-    'components/PageHeading': 'src/components/PageHeading/index.js',
-    'components/Heading': 'src/components/Heading/index.js',
-  },
+  input: 'src/index.js',
   output: {
-    dir: 'dist',
+    file: 'dist/index.js',
     format: 'esm',
     sourcemap: true,
   },
