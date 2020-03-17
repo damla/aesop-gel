@@ -10,7 +10,7 @@ addParameters({
   ],
   backgrounds: [
     { name: 'light', value: '#fffef0', default: true },
-    { name: 'dark', value: '#333', },
+    { name: 'dark', value: '#333' },
   ],
 });
 

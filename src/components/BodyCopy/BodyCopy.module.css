@@ -79,7 +79,7 @@
   }
 }
 
-.TextOverHero {
+/* .TextOverHero {
   .heading,
   .subHeading {
     margin: 0;
@@ -89,16 +89,16 @@
     padding-top: 5px;
   }
 
-  .copy {
+  .copy.copy {
     margin: 30px 0 0;
-  }
 
-  a {
-    width: 100%;
-    margin-top: 30px;
+    a {
+      width: 100%;
+      margin-top: 30px;
 
-    @media (--viewport-md) {
-      width: auto;
+      @media (--viewport-md) {
+        width: auto;
+      }
     }
   }
 }
@@ -136,7 +136,7 @@
       padding: 0 0 17px;
     }
   }
-}
+} */
 
 .ctaWrapper {
   margin-top: 20px;

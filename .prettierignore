@@ -8,5 +8,6 @@
 /node_modules
 /public
 /static
+/dist
 /stories
 /storybook-static

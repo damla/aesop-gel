@@ -81,9 +81,10 @@
   }
 }
 
-.list.list {
+.list {
   font-size: 15px;
 
+  /* stylelint-disable */
   li {
     a {
       font-size: 15px;
@@ -101,4 +102,5 @@
       }
     }
   }
+  /* stylelint-enable */
 }
