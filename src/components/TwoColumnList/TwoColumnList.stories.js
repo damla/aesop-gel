@@ -59,6 +59,6 @@ storiesOf('Components/TwoColumnList', module).add('Base component', () => (
         ],
       },
     ])}
-    theme={select('TwoColumnList theme', ['dark', 'light'], 'light')}
+    theme={select('TwoColumnList theme', ['dark', 'light'], 'dark')}
   />
 ));
