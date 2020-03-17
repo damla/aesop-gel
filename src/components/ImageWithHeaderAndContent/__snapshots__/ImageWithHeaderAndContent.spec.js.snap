@@ -2,11 +2,11 @@
 
 exports[`<ImageWithHeaderAndContent /> renders base component correctly 1`] = `
 <section
-  className="base theme-1 slowFadeEnter"
+  className="base theme-dark slowFadeEnter"
   div={true}
 >
   <picture
-    className="picture base figure"
+    className="picture dark base figure"
   >
     <source
       media="(min-width: 1025px)"
@@ -32,23 +32,23 @@ exports[`<ImageWithHeaderAndContent /> renders base component correctly 1`] = `
     >
       <header>
         <h2
-          className="base xSmall title"
+          className="base xSmall dark heading"
         >
           How to use
         </h2>
         <h3
-          className="base serifFont xLarge"
+          className="base serifFont xLarge dark"
         >
           A comprehensive skin care regimen, ideal in urban environments.
         </h3>
         <p
-          className="base description"
+          className="base dark description"
         >
           Morning and evening, use Parsley Seed Facial Cleansing Oil, Facial Toner, Anti-Oxidant Serum, and Eye Cream. Twice weekly, apply Masque after cleansing; follow with Facial Treatment.
         </p>
       </header>
       <dl
-        className="base"
+        className="base dark"
       >
         <dt
           className="term"

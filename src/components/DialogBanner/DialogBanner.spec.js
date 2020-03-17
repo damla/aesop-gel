@@ -21,11 +21,11 @@ describe('<DialogBanner />', () => {
             text: 'Need assistance?',
             url: '/contact-us/',
           }}
-          handleClose={mockFn}
+          hasCloseButton={true}
           isVisible={true}
           message="Our apologies, You have exceeded the maximum allowed quantity of this item."
+          onClose={mockFn}
           position="top"
-          showCloseButton={true}
           theme="dark"
           title="Maximum allowed quantity exceeded."
         />,

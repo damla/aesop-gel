@@ -83,12 +83,12 @@ const DialogBanner = ({
               <Hyperlink
                 className={styles.ctaButton}
                 dataTestRef={cta.dataTestRef}
-                href={cta.url}
                 id={cta.id}
                 isInline={true}
                 target={cta.openInANewWindow ? '_blank' : '_self'}
                 theme={'light'}
                 title={cta.title}
+                url={cta.url}
               >
                 {cta.text}
               </Hyperlink>

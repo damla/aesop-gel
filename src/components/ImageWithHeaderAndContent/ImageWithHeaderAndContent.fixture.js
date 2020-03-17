@@ -57,14 +57,17 @@ export default {
     {
       term: 'Dosage',
       description: 'Desired amount',
+      id: '1',
     },
     {
       term: 'Texture',
       description: 'Water-soluble cream with fine grain',
+      id: '2',
     },
     {
       term: 'Aroma',
       description: 'Herbaceous, floral, earthy',
+      id: '3',
     },
   ],
   kitList: [

@@ -82,10 +82,10 @@ const ImageWithHeaderAndContent = ({
 ImageWithHeaderAndContent.propTypes = {
   className: PropTypes.string,
   content: PropTypes.any,
-  copy: PropTypes.exact({
+  copy: PropTypes.shape({
     description: PropTypes.string,
-    subTitle: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
+    subHeading: PropTypes.string.isRequired,
+    heading: PropTypes.string.isRequired,
   }).isRequired,
   hasFullWidthImage: PropTypes.bool,
   image: PropTypes.object.isRequired,

@@ -2,11 +2,11 @@
 
 exports[`<Figure /> renders base component correctly 1`] = `
 <figure
-  className="base"
+  className="base dark"
   id="about"
 >
   <picture
-    className="picture base"
+    className="picture dark base"
   >
     <source
       media="(min-width: 1025px)"
@@ -22,11 +22,7 @@ exports[`<Figure /> renders base component correctly 1`] = `
     <div
       className="caption"
     >
-      <p>
-        About Aesop
-      </p>
-      
-
+      About Aesop
     </div>
   </figcaption>
 </figure>

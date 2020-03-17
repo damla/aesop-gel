@@ -3,10 +3,10 @@
 exports[`<Carousel.Slide /> renders a slide without a descritption correctly 1`] = `
 Array [
   <div
-    className="information"
+    className="information dark"
   >
     <h5
-      className="base xSmall heading"
+      className="base xSmall dark heading"
     >
       Parsley Seed Facial Cleanser
     </h5>
@@ -15,7 +15,7 @@ Array [
     className="imageContainer"
   >
     <picture
-      className="picture base image"
+      className="picture dark base image"
     >
       <source
         media="(min-width: 1025px)"
@@ -40,7 +40,7 @@ Array [
 exports[`<Carousel.Slide /> renders a slide without a heading correctly 1`] = `
 Array [
   <div
-    className="information"
+    className="information dark"
   >
     <div
       className="description"
@@ -52,7 +52,7 @@ Array [
     className="imageContainer"
   >
     <picture
-      className="picture base image"
+      className="picture dark base image"
     >
       <source
         media="(min-width: 1025px)"
@@ -77,10 +77,10 @@ Array [
 exports[`<Carousel.Slide /> renders base component correctly 1`] = `
 Array [
   <div
-    className="information"
+    className="information dark"
   >
     <h5
-      className="base xSmall heading"
+      className="base xSmall dark heading"
     >
       Parsley Seed Facial Cleanser
     </h5>
@@ -94,7 +94,7 @@ Array [
     className="imageContainer"
   >
     <picture
-      className="picture base image"
+      className="picture dark base image"
     >
       <source
         media="(min-width: 1025px)"

@@ -2,7 +2,7 @@
 
 exports[`<Paragraph /> renders base component correctly 1`] = `
 <p
-  className="base"
+  className="base dark"
 >
   A lightweight, vitamin C-rich layering serum that soothes, replenishes and balances skin with its complex blend of anti-oxidant, hydrating and conditioning ingredients.
 </p>
@@ -10,7 +10,7 @@ exports[`<Paragraph /> renders base component correctly 1`] = `
 
 exports[`<ParagraphSet /> renders a given collection of \`p\` tags 1`] = `
 <div
-  className="set"
+  className="set dark"
 >
   <p>
     A lightweight, vitamin C-rich layering serum that soothes

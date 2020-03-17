@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SubNav /> renders base component correctly 1`] = `
+<nav
+  className="base"
+>
+  <h3
+    className="base small dark heading"
+  >
+    SubNav Title
+  </h3>
+  <ul
+    className="base dark"
+  >
+    <li
+      className="item"
+    >
+      <a
+        className="base external dark itemList"
+        href="http://www.aesop.com/au/r/about"
+        target="_self"
+      >
+        About
+      </a>
+    </li>
+    <li
+      className="item"
+    >
+      <a
+        className="base external dark itemList"
+        href="http://www.aesop.com/au/r/philosophy-to-products"
+        target="_self"
+      >
+        Philosophy
+      </a>
+    </li>
+  </ul>
+</nav>
+`;
+
+exports[`<SubNav /> renders without title if not \`title\` prop is passed 1`] = `
+<nav
+  className="base"
+>
+  <ul
+    className="base dark"
+  >
+    <li
+      className="item"
+    >
+      <a
+        className="base external dark itemList"
+        href="http://www.aesop.com/au/r/about"
+        target="_self"
+      >
+        About
+      </a>
+    </li>
+    <li
+      className="item"
+    >
+      <a
+        className="base external dark itemList"
+        href="http://www.aesop.com/au/r/philosophy-to-products"
+        target="_self"
+      >
+        Philosophy
+      </a>
+    </li>
+  </ul>
+</nav>
+`;

@@ -15,7 +15,7 @@ const KitList = ({ items, className, theme }) => {
     <List
       className={classSet}
       forwardedRef={ref}
-      items={items.map(item => ({ content: item }))}
+      items={items}
       listItemClassName={listItemClassSet}
       theme={theme}
     />
@@ -24,7 +24,13 @@ const KitList = ({ items, className, theme }) => {
 
 KitList.propTypes = {
   className: PropTypes.string,
-  items: PropTypes.arrayOf(PropTypes.string).isRequired,
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      content: PropTypes.oneOfType([PropTypes.node, PropTypes.element])
+        .isRequired,
+      id: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
   theme: PropTypes.oneOf(['dark', 'light']),
 };
 

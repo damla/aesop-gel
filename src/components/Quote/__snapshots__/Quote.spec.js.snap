@@ -2,7 +2,7 @@
 
 exports[`<Quote /> renders base component correctly 1`] = `
 <div
-  className="base"
+  className="base dark"
 >
   <div
     className="wrapper"

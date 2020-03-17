@@ -24,7 +24,7 @@ List.propTypes = {
     PropTypes.shape({ current: PropTypes.elementType }),
   ]),
   items: PropTypes.arrayOf(
-    PropTypes.exact({
+    PropTypes.shape({
       content: PropTypes.oneOfType([PropTypes.node, PropTypes.element])
         .isRequired,
       id: PropTypes.string.isRequired,

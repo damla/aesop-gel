@@ -2,7 +2,7 @@
 
 exports[`<BynderWidget /> renders base component correctly 1`] = `
 <article
-  className="base [object Window]"
+  className="base dark"
   id="6E8E63F9-7A54-442B-861E291124E19D94"
 >
   <h3

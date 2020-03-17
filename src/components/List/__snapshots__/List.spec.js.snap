@@ -2,7 +2,7 @@
 
 exports[`Component - Element - List renders base component correctly 1`] = `
 <ul
-  className="base"
+  className="base dark"
 >
   <li
     className="item"

@@ -2,15 +2,15 @@
 
 exports[`<Carousel.CarouselIntroduction /> renders base component correctly 1`] = `
 <header
-  className="base"
+  className="base dark"
 >
   <h4
-    className="base serifFont xLarge heading"
+    className="base serifFont xLarge dark heading"
   >
     Accompany with
   </h4>
   <p
-    className="base description"
+    className="base dark description"
   >
     Richly foaming Parsley Seed Facial Cleanser offers mild exfoliation from Lactic Acid to clarify and soften skin; complement twice weekly with Parsley Seed Cleansing Masque to extract impurities and purify pores. For intensive fortification and hydration, blend Hydrator with Parsley Seed Anti-Oxidant Facial Treatment.
   </p>

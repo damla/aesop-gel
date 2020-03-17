@@ -2,7 +2,7 @@
 
 exports[`<DefinitionList /> renders base component correctly 1`] = `
 <dl
-  className="base"
+  className="base dark"
 >
   <dt
     className="term"

@@ -2,18 +2,18 @@
 
 exports[`<Carousel /> renders base component correctly 1`] = `
 <div
-  className="slick-slider base slick-initialized"
+  className="slick-slider base dark slick-initialized"
   dir="ltr"
 >
   <button
-    className="base external inlineStyle base"
+    className="base external inlineStyle dark base"
     disabled={false}
     onClick={null}
     title="next slide"
     type="button"
   >
     <svg
-      className="base chevron"
+      className="base chevron dark"
       data-ref=""
       focusable="false"
       height={18}
@@ -75,15 +75,15 @@ exports[`<Carousel /> renders base component correctly 1`] = `
       >
         <div>
           <header
-            className="base"
+            className="base dark"
           >
             <h4
-              className="base serifFont xLarge heading"
+              className="base serifFont xLarge dark heading"
             >
               Accompany with
             </h4>
             <p
-              className="base description"
+              className="base dark description"
             >
               Richly foaming Parsley Seed Facial Cleanser offers mild exfoliation from Lactic Acid to clarify and soften skin; complement twice weekly with Parsley Seed Cleansing Masque to extract impurities and purify pores. For intensive fortification and hydration, blend Hydrator with Parsley Seed Anti-Oxidant Facial Treatment.
             </p>
@@ -114,16 +114,16 @@ exports[`<Carousel /> renders base component correctly 1`] = `
             tabIndex={-1}
           >
             <a
-              className="base inlineStyle item link"
+              className="base dark item link"
               href="/"
               target="_self"
               title="Link to Parsley Seed Facial Cleanser"
             >
               <div
-                className="information"
+                className="information dark"
               >
                 <h5
-                  className="base xSmall heading"
+                  className="base xSmall dark heading"
                 >
                   Parsley Seed Facial Cleanser
                 </h5>
@@ -137,7 +137,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                 className="imageContainer"
               >
                 <picture
-                  className="picture base image"
+                  className="picture dark base image"
                 >
                   <source
                     media="(min-width: 1025px)"
@@ -184,16 +184,16 @@ exports[`<Carousel /> renders base component correctly 1`] = `
             tabIndex={-1}
           >
             <a
-              className="base inlineStyle item link"
+              className="base dark item link"
               href="/"
               target="_self"
               title="Link to Parsley Seed Facial Cleanser"
             >
               <div
-                className="information"
+                className="information dark"
               >
                 <h5
-                  className="base xSmall heading"
+                  className="base xSmall dark heading"
                 >
                   Parsley Seed Facial Cleanser
                 </h5>
@@ -202,7 +202,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                 className="imageContainer"
               >
                 <picture
-                  className="picture base image"
+                  className="picture dark base image"
                 >
                   <source
                     media="(min-width: 1025px)"
@@ -249,16 +249,16 @@ exports[`<Carousel /> renders base component correctly 1`] = `
             tabIndex={-1}
           >
             <a
-              className="base inlineStyle item link"
+              className="base dark item link"
               href="/"
               target="_self"
               title="Link to Parsley Seed Cleansing Masque"
             >
               <div
-                className="information"
+                className="information dark"
               >
                 <h5
-                  className="base xSmall heading"
+                  className="base xSmall dark heading"
                 >
                   Parsley Seed Cleansing Masque
                 </h5>
@@ -268,7 +268,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                 className="imageContainer"
               >
                 <picture
-                  className="picture base image"
+                  className="picture dark base image"
                 >
                   <source
                     media="(min-width: 1025px)"
@@ -318,10 +318,10 @@ exports[`<Carousel /> renders base component correctly 1`] = `
               className="item"
             >
               <div
-                className="information"
+                className="information dark"
               >
                 <h5
-                  className="base xSmall heading"
+                  className="base xSmall dark heading"
                 >
                   Parsley Seed Anti-Oxidant Facial Treatment with No URL
                 </h5>
@@ -331,7 +331,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                 className="imageContainer"
               >
                 <picture
-                  className="picture base image"
+                  className="picture dark base image"
                 >
                   <source
                     media="(min-width: 1025px)"
@@ -357,14 +357,14 @@ exports[`<Carousel /> renders base component correctly 1`] = `
     </div>
   </div>
   <button
-    className="base external inlineStyle base"
+    className="base external inlineStyle dark base"
     disabled={false}
     onClick={[Function]}
     title="next slide"
     type="button"
   >
     <svg
-      className="base chevron"
+      className="base chevron dark"
       data-ref=""
       focusable="false"
       height={18}
@@ -381,9 +381,11 @@ exports[`<Carousel /> renders base component correctly 1`] = `
       </g>
     </svg>
   </button>
-  <div>
+  <div
+    className="base"
+  >
     <ul
-      className="base"
+      className="list dark"
     >
       <li
         className="slick-active"
@@ -406,7 +408,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
 
 exports[`<Carousel /> renders component correctly if no \`introduction\` prop is provided 1`] = `
 <div
-  className="slick-slider base slick-initialized"
+  className="slick-slider base dark slick-initialized"
 >
   
   <div
@@ -452,16 +454,16 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
             tabIndex={-1}
           >
             <a
-              className="base inlineStyle item link"
+              className="base dark item link"
               href="/"
               target="_self"
               title="Link to Parsley Seed Facial Cleanser"
             >
               <div
-                className="information"
+                className="information dark"
               >
                 <h5
-                  className="base xSmall heading"
+                  className="base xSmall dark heading"
                 >
                   Parsley Seed Facial Cleanser
                 </h5>
@@ -475,7 +477,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                 className="imageContainer"
               >
                 <picture
-                  className="picture base image"
+                  className="picture dark base image"
                 >
                   <source
                     media="(min-width: 1025px)"
@@ -522,16 +524,16 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
             tabIndex={-1}
           >
             <a
-              className="base inlineStyle item link"
+              className="base dark item link"
               href="/"
               target="_self"
               title="Link to Parsley Seed Facial Cleanser"
             >
               <div
-                className="information"
+                className="information dark"
               >
                 <h5
-                  className="base xSmall heading"
+                  className="base xSmall dark heading"
                 >
                   Parsley Seed Facial Cleanser
                 </h5>
@@ -540,7 +542,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                 className="imageContainer"
               >
                 <picture
-                  className="picture base image"
+                  className="picture dark base image"
                 >
                   <source
                     media="(min-width: 1025px)"
@@ -587,16 +589,16 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
             tabIndex={-1}
           >
             <a
-              className="base inlineStyle item link"
+              className="base dark item link"
               href="/"
               target="_self"
               title="Link to Parsley Seed Cleansing Masque"
             >
               <div
-                className="information"
+                className="information dark"
               >
                 <h5
-                  className="base xSmall heading"
+                  className="base xSmall dark heading"
                 >
                   Parsley Seed Cleansing Masque
                 </h5>
@@ -606,7 +608,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                 className="imageContainer"
               >
                 <picture
-                  className="picture base image"
+                  className="picture dark base image"
                 >
                   <source
                     media="(min-width: 1025px)"
@@ -656,10 +658,10 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
               className="item"
             >
               <div
-                className="information"
+                className="information dark"
               >
                 <h5
-                  className="base xSmall heading"
+                  className="base xSmall dark heading"
                 >
                   Parsley Seed Anti-Oxidant Facial Treatment with No URL
                 </h5>
@@ -669,7 +671,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                 className="imageContainer"
               >
                 <picture
-                  className="picture base image"
+                  className="picture dark base image"
                 >
                   <source
                     media="(min-width: 1025px)"
@@ -701,7 +703,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
 
 exports[`<Carousel /> renders component correctly if no \`url\` member is provided on the \`slides\` prop 1`] = `
 <div
-  className="slick-slider base slick-initialized"
+  className="slick-slider base dark slick-initialized"
 >
   
   <div
@@ -750,10 +752,10 @@ exports[`<Carousel /> renders component correctly if no \`url\` member is provid
               className="item"
             >
               <div
-                className="information"
+                className="information dark"
               >
                 <h5
-                  className="base xSmall heading"
+                  className="base xSmall dark heading"
                 >
                   Parsley Seed Facial Cleanser
                 </h5>
@@ -767,7 +769,7 @@ exports[`<Carousel /> renders component correctly if no \`url\` member is provid
                 className="imageContainer"
               >
                 <picture
-                  className="picture base image"
+                  className="picture dark base image"
                 >
                   <source
                     media="(min-width: 1025px)"

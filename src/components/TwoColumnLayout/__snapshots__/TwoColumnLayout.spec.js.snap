@@ -2,7 +2,7 @@
 
 exports[`<TwoColumnLayout /> renders base component correctly 1`] = `
 <div
-  className="base reverse TwoColumnLayout"
+  className="base reverse dark TwoColumnLayout"
   id="TwoColumnLayout"
 >
   <div

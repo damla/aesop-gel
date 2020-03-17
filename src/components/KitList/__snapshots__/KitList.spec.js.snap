@@ -2,7 +2,7 @@
 
 exports[`<KitList /> renders base component correctly 1`] = `
 <ul
-  className="base base"
+  className="base dark base dark"
 >
   <li
     className="item item"

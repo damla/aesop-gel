@@ -2,14 +2,14 @@
 
 exports[`<Carousel.NextButton /> renders base component correctly 1`] = `
 <button
-  className="base external inlineStyle base"
+  className="base external inlineStyle dark base"
   disabled={false}
   onClick={[Function]}
   title="next slide"
   type="button"
 >
   <svg
-    className="base chevron"
+    className="base chevron dark"
     data-ref=""
     focusable="false"
     height={18}

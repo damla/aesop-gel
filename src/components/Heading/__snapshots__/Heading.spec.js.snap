@@ -2,7 +2,7 @@
 
 exports[`<Heading /> renders base component correctly 1`] = `
 <h1
-  className="base large"
+  className="base large dark"
 >
   Heading
 </h1>
@@ -10,7 +10,7 @@ exports[`<Heading /> renders base component correctly 1`] = `
 
 exports[`<Heading /> renders level 2 size medium variation correctly 1`] = `
 <h2
-  className="base medium"
+  className="base medium dark"
 >
   Heading
 </h2>
@@ -18,7 +18,7 @@ exports[`<Heading /> renders level 2 size medium variation correctly 1`] = `
 
 exports[`<Heading /> renders level 4 size small variation correctly 1`] = `
 <h4
-  className="base small"
+  className="base small dark"
 >
   Heading
 </h4>

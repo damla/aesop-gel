@@ -3,7 +3,7 @@
 exports[`<Icon /> renders SVG with provided title prop correctly 1`] = `
 <svg
   aria-labelledby="rightArrow-1"
-  className="base rightArrow"
+  className="base rightArrow dark"
   data-ref=""
   focusable="false"
   height={12}
@@ -28,7 +28,7 @@ exports[`<Icon /> renders SVG with provided title prop correctly 1`] = `
 
 exports[`<Icon /> renders base component correctly 1`] = `
 <svg
-  className="base rightArrow"
+  className="base rightArrow dark"
   data-ref=""
   focusable="false"
   height={12}

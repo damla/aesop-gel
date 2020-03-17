@@ -2,11 +2,11 @@
 
 exports[`<ModalBody /> renders base component correctly 1`] = `
 <div
-  className="base isVisible"
+  className="base isVisible dark"
 >
   Body Content
   <button
-    className="base external inlineStyle closeButton"
+    className="base external inlineStyle dark closeButton"
     data-test-ref="MODAL_CLOSE_BUTTON"
     disabled={false}
     onClick={[MockFunction]}
@@ -14,7 +14,7 @@ exports[`<ModalBody /> renders base component correctly 1`] = `
     type="button"
   >
     <svg
-      className="base close closeIcon"
+      className="base close dark closeIcon"
       data-ref=""
       focusable="false"
       height={14}

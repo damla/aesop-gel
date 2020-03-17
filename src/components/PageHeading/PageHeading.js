@@ -74,7 +74,7 @@ PageHeading.propTypes = {
   heading: PropTypes.string,
   id: PropTypes.string,
   subHeading: PropTypes.string,
-  theme: PropTypes.oneOf('dark', 'light'),
+  theme: PropTypes.oneOf(['dark', 'light']),
 };
 
 PageHeading.defaultProps = {

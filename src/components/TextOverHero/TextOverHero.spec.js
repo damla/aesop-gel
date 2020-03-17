@@ -14,9 +14,9 @@ describe('<TextOverHero />', () => {
         <TextOverHero
           copy={TextOverHeroFixture.copy}
           cta={TextOverHeroFixture.cta}
+          heading={TextOverHeroFixture.heading}
           id={TextOverHeroFixture.id}
-          title={TextOverHeroFixture.title}
-          video={TextOverHeroFixture.video}
+          image={TextOverHeroFixture.image}
         />,
       )
       .toJSON();

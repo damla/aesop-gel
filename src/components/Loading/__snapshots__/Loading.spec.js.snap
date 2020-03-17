@@ -2,7 +2,7 @@
 
 exports[`<Loading /> renders base component correctly 1`] = `
 <span
-  className="base isLoading"
+  className="base isLoading dark"
 >
   <span
     className="dot"
