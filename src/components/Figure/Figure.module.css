@@ -6,10 +6,17 @@
 
 .caption {
   margin: 0;
-  color: var(--color-grey-30);
   font-family: var(--font-family-sans-serif-regular);
   font-size: rem(15px);
   line-height: 1.8;
+
+  .dark & {
+    @extend %font-theme-dark-label;
+  }
+
+  .light & {
+    color: var(--color-light-label);
+  }
 
   p {
     &:first-of-type {
@@ -23,8 +30,13 @@
 }
 
 .captionWrapper {
-  padding: 25px 25px 25px 0;
+  padding: 20px;
   border-bottom: 1px solid var(--color-grey-60);
+  margin-top: 0;
+
+  @media (--viewport-md) {
+    padding: 25px 25px 25px 0;
+  }
 
   @nest .fullBleedImage & {
     width: 100%;

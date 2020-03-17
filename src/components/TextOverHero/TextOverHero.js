@@ -1,12 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import useWindowHasResized from '~/customHooks/useWindowHasResized';
+import { ascertainIsMobile } from '~/utils/viewports';
 import BodyCopy from '~/components/BodyCopy';
 import Image from '~/components/Image';
 import styles from './TextOverHero.module.css';
 
 const TextOverHero = ({
   className,
+  contentThemeOnMobile,
   copy,
   cta,
   eyebrow,
@@ -16,6 +19,9 @@ const TextOverHero = ({
   subHeading,
   theme,
 }) => {
+  useWindowHasResized();
+
+  const isMobile = ascertainIsMobile();
   const classSet = cx(styles.base, styles[theme], className);
 
   return (
@@ -25,7 +31,6 @@ const TextOverHero = ({
         large={image.large}
         medium={image.medium}
         small={image.small}
-        theme={theme}
       />
       <div className={styles.contentWrapper}>
         <div className={styles.content}>
@@ -36,7 +41,7 @@ const TextOverHero = ({
             heading={heading}
             id={id}
             subHeading={subHeading}
-            theme={theme}
+            theme={isMobile ? contentThemeOnMobile : theme}
           />
         </div>
       </div>
@@ -46,6 +51,7 @@ const TextOverHero = ({
 
 TextOverHero.propTypes = {
   className: PropTypes.string,
+  contentThemeOnMobile: PropTypes.oneOf(['dark', 'light']),
   copy: PropTypes.string,
   cta: PropTypes.object,
   eyebrow: PropTypes.string,
@@ -58,6 +64,7 @@ TextOverHero.propTypes = {
 
 TextOverHero.defaultProps = {
   className: undefined,
+  contentThemeOnMobile: 'dark',
   copy: undefined,
   cta: undefined,
   eyebrow: undefined,

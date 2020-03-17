@@ -16,7 +16,7 @@
   overflow-y: auto;
 
   @media (--viewport-sm-only) {
-    width: 100%;
+    width: auto;
   }
 
   @media (--viewport-md) {

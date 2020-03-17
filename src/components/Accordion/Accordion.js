@@ -35,7 +35,7 @@ const Accordion = ({ className, items, theme }) => {
         <AccordionItem className={styles.item} key={id} uuid={id}>
           <AccordionItemHeading className={cx(styles.heading, styles[theme])}>
             <AccordionItemButton className={styles.button}>
-              <span>{heading}</span>
+              <span className={styles.headingCopy}>{heading}</span>
               <Icon
                 className={styles.icon}
                 height={16}

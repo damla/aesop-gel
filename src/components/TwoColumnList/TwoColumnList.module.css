@@ -2,6 +2,7 @@
 
 .base {
   box-sizing: border-box;
+
   * {
     &,
     &::before,

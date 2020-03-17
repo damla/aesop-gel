@@ -25,12 +25,12 @@ import TwoColumnLayout from './TwoColumnLayout';
             copy="Parsley Seed Cream. [The Paris Review](http://theparisreview.org) Intensely soothing, nourishing and hydrating, this elegant formulation contains a potent blend of botanicals that offer fortification of the highest order against free radicals."
             heading="Heading hasRightPadding isReversed Content Column nourishing and hydrating"
             id="Anti-Oxidant"
-            theme={select('BodyCopy theme', ['dark', 'light'], 'dark')}
+            theme={select('theme', ['dark', 'light'], 'dark')}
           />
           <TwoColumnList
             leftColumn={TwoColumnListFixture.leftColumn}
             rightColumn={TwoColumnListFixture.rightColumn}
-            theme={select('TwoColumnList theme', ['dark', 'light'], 'dark')}
+            theme={select('theme', ['dark', 'light'], 'dark')}
           />
         </>
       }
@@ -53,7 +53,7 @@ import TwoColumnLayout from './TwoColumnLayout';
           heading="Heading hasRightPadding isReversed Sidebar Column"
           id="Anti-Oxidant"
           subHeading="Active Nutrients"
-          theme={select('sidebar BodyCopy theme', ['dark', 'light'], 'dark')}
+          theme={select('theme', ['dark', 'light'], 'dark')}
         />
       }
       theme={select('theme', ['dark', 'light'], 'dark')}

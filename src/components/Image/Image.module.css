@@ -1,7 +1,12 @@
 @import 'styles/index';
 
 .base {
-  padding: var(--layout-sm-spacing);
+  display: inline-block;
+}
+
+.picture {
+  padding: 0;
+  margin: 0 !important;
 
   img {
     width: 100%;

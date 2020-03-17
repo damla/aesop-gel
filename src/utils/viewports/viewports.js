@@ -1,5 +1,6 @@
 import { BREAKPOINTS } from '~/constants';
 
+export const IS_MOBILE = `(max-width: ${BREAKPOINTS.MEDIUM.MIN_WIDTH}px)`;
 export const IS_MOBILE_OR_TABLET = `(max-width: ${BREAKPOINTS.LARGE.MIN_WIDTH}px)`;
 export const BREAKPOINT_CONDITIONS = {
   IS_MOBILE_OR_TABLET,
@@ -54,6 +55,14 @@ export const ascertainIsMobileOrTablet = () =>
   typeof window !== 'undefined'
     ? window.matchMedia(IS_MOBILE_OR_TABLET).matches
     : false;
+
+/**
+ * ascertainIsMobileOrTablet
+ * @param none
+ * @return boolean
+ */
+export const ascertainIsMobile = () =>
+  typeof window !== 'undefined' ? window.matchMedia(IS_MOBILE).matches : false;
 
 export default {
   CONSTRAINT_KEYS,

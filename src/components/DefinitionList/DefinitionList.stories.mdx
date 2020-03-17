@@ -1,6 +1,6 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import { withKnobs } from '@storybook/addon-knobs';
-import { text, object } from '@storybook/addon-knobs';
+import { text, object, select } from '@storybook/addon-knobs';
 import DefinitionList from './DefinitionList';
 import DefinitionListFixture from './DefinitionList.fixture';
 
@@ -16,6 +16,7 @@ import DefinitionListFixture from './DefinitionList.fixture';
   <Story name="Base component">
     <DefinitionList
       items={object('items', DefinitionListFixture.items, 'items')}
+      theme={select('theme', ['dark', 'light'], 'dark')}
     />
   </Story>
 </Preview>

@@ -1,6 +1,6 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import { withKnobs } from '@storybook/addon-knobs';
-import { text } from '@storybook/addon-knobs';
+import { text, select } from '@storybook/addon-knobs';
 import Figure from './Figure';
 import Image from '~/components/Image';
 
@@ -10,11 +10,22 @@ import Image from '~/components/Image';
 
 <Preview>
   <Story name="Base component">
-    <Figure caption={text('caption', 'About Aesop')} id={text('id', 'aesop')}>
+    <Figure
+      caption={text('caption', 'About Aesop')} id={text('id', 'aesop')}
+      theme={select('Image theme', ['dark', 'light'], 'dark')}
+    >
       <Image
         altText={text('altText', 'Image of Milk Cleansing Campaign Aesop 2019')}
         large={text(
           'large',
+          'https://www.aesop.com/medias/GelCleanser-640x640.png?context=bWFzdGVyfGltYWdlc3w1MzE5NTl8aW1hZ2UvcG5nfGltYWdlcy9oOTUvaGNkLzg4MDc3OTc4NTAxNDIucG5nfGM3NTNhYjdkMWNiOTRhNWZhNDA0NWExZWJiODMxN2VhNzEyY2ZkNGUyYzc4ZWVkZDRjYTIzMzZmZTRlOGYxNjM',
+        )}
+        medium={text(
+          'medium',
+          'https://www.aesop.com/medias/GelCleanser-640x640.png?context=bWFzdGVyfGltYWdlc3w1MzE5NTl8aW1hZ2UvcG5nfGltYWdlcy9oOTUvaGNkLzg4MDc3OTc4NTAxNDIucG5nfGM3NTNhYjdkMWNiOTRhNWZhNDA0NWExZWJiODMxN2VhNzEyY2ZkNGUyYzc4ZWVkZDRjYTIzMzZmZTRlOGYxNjM',
+        )}
+        small={text(
+          'small',
           'https://www.aesop.com/medias/GelCleanser-640x640.png?context=bWFzdGVyfGltYWdlc3w1MzE5NTl8aW1hZ2UvcG5nfGltYWdlcy9oOTUvaGNkLzg4MDc3OTc4NTAxNDIucG5nfGM3NTNhYjdkMWNiOTRhNWZhNDA0NWExZWJiODMxN2VhNzEyY2ZkNGUyYzc4ZWVkZDRjYTIzMzZmZTRlOGYxNjM',
         )}
       />

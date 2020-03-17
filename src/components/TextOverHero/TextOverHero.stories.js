@@ -15,11 +15,16 @@ const typeOptions = ['Relative', 'Absolute'];
 
 storiesOf('Components/TextOverHero', module).add('Base component', () => (
   <TextOverHero
+    contentThemeOnMobile={select(
+      'contentThemeOnMobile',
+      ['dark', 'light'],
+      'dark',
+    )}
+    // @ts-ignore
     copy={text(
       'copy',
       'Offering an exceptionally mild yet thorough cleanse, Gentle Facial Cleansing Milk removes surface impurities without stripping moisture, making it especially beneficial for dry or sensitive skin.',
     )}
-    // @ts-ignore
     cta={{
       id: text('cta.id', 'button-id'),
       hasTargetInNewWindow: boolean('cta.hasTargetInNewWindow', true),

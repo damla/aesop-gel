@@ -20,14 +20,16 @@ const Image = ({
   const isRightAligned = type === 'componentSquareImage';
 
   const classSet = cx(
-    styles.base,
+    { [styles.base]: !cta },
+    styles.picture,
     { [styles.fullBleedImage]: fullBleedImage },
     { [styles.isRightAligned]: isRightAligned },
+    styles[theme],
     className,
   );
 
   const picture = (
-    <picture className={cx(styles.picture, styles[theme], classSet)}>
+    <picture className={classSet}>
       {large && (
         <source
           media={`(min-width: ${get(
@@ -64,6 +66,7 @@ const Image = ({
 
   return cta ? (
     <Hyperlink
+      className={styles.base}
       hasTargetInNewWindow={cta.openInANewWindow}
       theme={theme}
       url={cta.url}

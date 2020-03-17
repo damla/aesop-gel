@@ -45,6 +45,7 @@ const Icon = ({
       focusable="false"
       height={height}
       role="img"
+      style={{ height: `${height}px`, width: `${width}px` }}
       tabIndex={tabIndex}
       viewBox={svg.viewBox}
       width={width}
