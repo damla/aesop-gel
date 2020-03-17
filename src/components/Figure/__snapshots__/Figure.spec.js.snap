@@ -6,7 +6,7 @@ exports[`<Figure /> renders base component correctly 1`] = `
   id="about"
 >
   <picture
-    className="picture dark base"
+    className="base picture dark"
   >
     <source
       media="(min-width: 1025px)"

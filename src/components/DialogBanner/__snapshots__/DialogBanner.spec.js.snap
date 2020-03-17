@@ -21,6 +21,12 @@ Array [
         focusable="false"
         height={22}
         role="img"
+        style={
+          Object {
+            "height": "22px",
+            "width": "22px",
+          }
+        }
         tabIndex={-1}
         viewBox="0 0 50 50"
         width={22}
@@ -67,6 +73,12 @@ Array [
           focusable="false"
           height={12}
           role="img"
+          style={
+            Object {
+              "height": "12px",
+              "width": "12px",
+            }
+          }
           tabIndex={-1}
           viewBox="0 0 50 50"
           width={12}

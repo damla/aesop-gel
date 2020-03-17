@@ -18,6 +18,12 @@ exports[`<Carousel /> renders base component correctly 1`] = `
       focusable="false"
       height={18}
       role="img"
+      style={
+        Object {
+          "height": "18px",
+          "width": "18px",
+        }
+      }
       tabIndex={-1}
       viewBox="0 0 50 50"
       width={18}
@@ -137,7 +143,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                 className="imageContainer"
               >
                 <picture
-                  className="picture dark base image"
+                  className="base picture dark image"
                 >
                   <source
                     media="(min-width: 1025px)"
@@ -202,7 +208,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                 className="imageContainer"
               >
                 <picture
-                  className="picture dark base image"
+                  className="base picture dark image"
                 >
                   <source
                     media="(min-width: 1025px)"
@@ -268,7 +274,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                 className="imageContainer"
               >
                 <picture
-                  className="picture dark base image"
+                  className="base picture dark image"
                 >
                   <source
                     media="(min-width: 1025px)"
@@ -331,7 +337,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                 className="imageContainer"
               >
                 <picture
-                  className="picture dark base image"
+                  className="base picture dark image"
                 >
                   <source
                     media="(min-width: 1025px)"
@@ -369,6 +375,12 @@ exports[`<Carousel /> renders base component correctly 1`] = `
       focusable="false"
       height={18}
       role="img"
+      style={
+        Object {
+          "height": "18px",
+          "width": "18px",
+        }
+      }
       tabIndex={-1}
       viewBox="0 0 50 50"
       width={18}
@@ -477,7 +489,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                 className="imageContainer"
               >
                 <picture
-                  className="picture dark base image"
+                  className="base picture dark image"
                 >
                   <source
                     media="(min-width: 1025px)"
@@ -542,7 +554,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                 className="imageContainer"
               >
                 <picture
-                  className="picture dark base image"
+                  className="base picture dark image"
                 >
                   <source
                     media="(min-width: 1025px)"
@@ -608,7 +620,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                 className="imageContainer"
               >
                 <picture
-                  className="picture dark base image"
+                  className="base picture dark image"
                 >
                   <source
                     media="(min-width: 1025px)"
@@ -671,7 +683,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                 className="imageContainer"
               >
                 <picture
-                  className="picture dark base image"
+                  className="base picture dark image"
                 >
                   <source
                     media="(min-width: 1025px)"
@@ -769,7 +781,7 @@ exports[`<Carousel /> renders component correctly if no \`url\` member is provid
                 className="imageContainer"
               >
                 <picture
-                  className="picture dark base image"
+                  className="base picture dark image"
                 >
                   <source
                     media="(min-width: 1025px)"

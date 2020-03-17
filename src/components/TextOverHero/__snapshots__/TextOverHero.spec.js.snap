@@ -5,7 +5,7 @@ exports[`<TextOverHero /> renders base component correctly 1`] = `
   className="base dark"
 >
   <picture
-    className="picture dark base"
+    className="base picture dark"
   >
     <source
       media="(min-width: 1025px)"
@@ -67,6 +67,12 @@ exports[`<TextOverHero /> renders base component correctly 1`] = `
                 focusable="false"
                 height={15}
                 role="img"
+                style={
+                  Object {
+                    "height": "15px",
+                    "width": "15px",
+                  }
+                }
                 tabIndex={-1}
                 viewBox="0 0 50 50"
                 width={15}

@@ -14,6 +14,12 @@ exports[`<Carousel.PreviousButton /> renders base component correctly 1`] = `
     focusable="false"
     height={18}
     role="img"
+    style={
+      Object {
+        "height": "18px",
+        "width": "18px",
+      }
+    }
     tabIndex={-1}
     viewBox="0 0 50 50"
     width={18}

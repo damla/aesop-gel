@@ -6,7 +6,7 @@ exports[`<ImageWithHeaderAndContent /> renders base component correctly 1`] = `
   div={true}
 >
   <picture
-    className="picture dark base figure"
+    className="base picture dark figure"
   >
     <source
       media="(min-width: 1025px)"

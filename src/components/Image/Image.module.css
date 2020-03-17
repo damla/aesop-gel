@@ -5,8 +5,11 @@
 }
 
 .picture {
+  width: 100%;
+  height: auto;
   padding: 0;
-  margin: 0 !important;
+  margin: 0;
+  text-align: center;
 
   img {
     width: 100%;
@@ -77,11 +80,4 @@
   font-family: var(--font-family-sans-serif-regular);
   font-size: rem(15px);
   line-height: 1.8;
-}
-
-.picture {
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
-  text-align: center;
 }

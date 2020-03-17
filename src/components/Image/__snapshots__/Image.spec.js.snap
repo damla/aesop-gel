@@ -2,12 +2,12 @@
 
 exports[`<Image /> renders base component correctly 1`] = `
 <a
-  className="base dark"
+  className="base dark base"
   href="https://www.aesop.com/au/r/philosophy-to-products"
   target="_self"
 >
   <picture
-    className="picture dark base"
+    className="picture dark"
   >
     <source
       media="(min-width: 1025px)"
@@ -30,7 +30,7 @@ exports[`<Image /> renders base component correctly 1`] = `
 
 exports[`<Image /> renders the picture tag without a Hyperlink if the \`cta\` prop was not passed 1`] = `
 <picture
-  className="picture dark base"
+  className="base picture dark"
 >
   <source
     media="(min-width: 1025px)"

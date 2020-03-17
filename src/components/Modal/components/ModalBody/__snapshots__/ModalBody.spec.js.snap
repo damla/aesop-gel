@@ -19,6 +19,12 @@ exports[`<ModalBody /> renders base component correctly 1`] = `
       focusable="false"
       height={14}
       role="img"
+      style={
+        Object {
+          "height": "14px",
+          "width": "14px",
+        }
+      }
       tabIndex={-1}
       viewBox="0 0 50 50"
       width={14}
