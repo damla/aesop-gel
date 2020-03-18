@@ -64,11 +64,7 @@ const ImageWithHeaderAndContent = ({
               >
                 {copy.subHeading}
               </Heading>
-              {copy.description && (
-                <P className={styles.description} theme={theme}>
-                  {copy.description}
-                </P>
-              )}
+              {copy.description}
             </header>
 
             {content}
@@ -83,7 +79,7 @@ ImageWithHeaderAndContent.propTypes = {
   className: PropTypes.string,
   content: PropTypes.any,
   copy: PropTypes.shape({
-    description: PropTypes.string,
+    description: PropTypes.any,
     subHeading: PropTypes.string.isRequired,
     heading: PropTypes.string.isRequired,
   }).isRequired,
