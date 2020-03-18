@@ -1,11 +1,9 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { useOnScreen } from '~/customHooks/useOnScreen';
 import Heading from '~/components/Heading';
 import Image from '~/components/Image';
 import { P } from '~/components/Paragraph';
-import Transition from '~/components/Transition';
 import styles from './ImageWithHeaderAndContent.module.css';
 
 const ImageWithHeaderAndContent = ({
@@ -17,8 +15,6 @@ const ImageWithHeaderAndContent = ({
   isReverse,
   theme,
 }) => {
-  const ref = useRef();
-  const onScreen = useOnScreen(ref, '-200px');
   const classSet = cx(
     styles.base,
     { [styles.reverse]: isReverse },
@@ -27,55 +23,47 @@ const ImageWithHeaderAndContent = ({
   );
 
   return (
-    <Transition isActive={onScreen} type="slowFade">
-      <section className={classSet} div={true} ref={ref}>
-        <Image
-          altText={image.altText}
-          className={cx(styles.figure, {
-            [styles.isFullWidthImage]: hasFullWidthImage,
-          })}
-          large={image.large}
-          medium={image.medium}
-          small={image.small}
-          theme={theme}
-        />
+    <section className={classSet} div={true}>
+      <Image
+        altText={image.altText}
+        className={cx(styles.figure, {
+          [styles.isFullWidthImage]: hasFullWidthImage,
+        })}
+        large={image.large}
+        medium={image.medium}
+        small={image.small}
+        theme={theme}
+      />
 
-        <div
-          className={cx(styles.container, {
-            [styles.hasFullWidthImage]: hasFullWidthImage,
-          })}
-        >
-          <div className={styles.wrapper}>
-            <header>
-              <Heading
-                className={styles.heading}
-                level="2"
-                noMargin={true}
-                size="xSmall"
-                theme={theme}
-              >
-                {copy.heading}
-              </Heading>
-              <Heading
-                hasSerifFont={true}
-                level="3"
-                size="xLarge"
-                theme={theme}
-              >
-                {copy.subHeading}
-              </Heading>
-              {copy.description && (
-                <P className={styles.description} theme={theme}>
-                  {copy.description}
-                </P>
-              )}
-            </header>
-
-            {content}
-          </div>
+      <div
+        className={cx(styles.container, {
+          [styles.hasFullWidthImage]: hasFullWidthImage,
+        })}
+      >
+        <div className={styles.wrapper}>
+          <header>
+            <Heading
+              className={styles.heading}
+              level="2"
+              noMargin={true}
+              size="xSmall"
+              theme={theme}
+            >
+              {copy.heading}
+            </Heading>
+            <Heading hasSerifFont={true} level="3" size="xLarge" theme={theme}>
+              {copy.subHeading}
+            </Heading>
+            {copy.description && (
+              <P className={styles.description} theme={theme}>
+                {copy.description}
+              </P>
+            )}
+          </header>
+          {content}
         </div>
-      </section>
-    </Transition>
+      </div>
+    </section>
   );
 };
 

@@ -1,17 +1,20 @@
-import React, { useRef } from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { isObjectPopulatedArray } from '~/utils/objects';
-import { useOnScreen } from '~/customHooks/useOnScreen';
 import styles from './DefinitionList.module.css';
 
-const DefinitionList = ({ className, items, theme }) => {
-  const ref = useRef();
-  const onScreen = useOnScreen(ref, '-20px');
+const DefinitionList = ({
+  className,
+  forwardedRef,
+  isVisible,
+  items,
+  theme,
+}) => {
   const classSet = cx(styles.base, styles[theme], className);
-  const termClassSet = cx(styles.term, { [styles.slideIn]: onScreen });
+  const termClassSet = cx(styles.term, { [styles.slideIn]: isVisible });
   const descriptionClassSet = cx(styles.description, {
-    [styles.slideIn]: onScreen,
+    [styles.slideIn]: isVisible,
   });
 
   if (!isObjectPopulatedArray(items)) {
@@ -19,14 +22,14 @@ const DefinitionList = ({ className, items, theme }) => {
   }
 
   return (
-    <dl className={classSet} ref={ref}>
+    <dl className={classSet} ref={forwardedRef}>
       {items
         .filter(({ description, term }) => description && term)
         .map(({ description, id, term }) => (
-          <React.Fragment key={id}>
+          <Fragment key={id}>
             <dt className={termClassSet}>{term}</dt>
             <dd className={descriptionClassSet}>{description}</dd>
-          </React.Fragment>
+          </Fragment>
         ))}
     </dl>
   );
@@ -34,9 +37,14 @@ const DefinitionList = ({ className, items, theme }) => {
 
 DefinitionList.propTypes = {
   className: PropTypes.string,
+  forwardedRef: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.elementType }),
+  ]),
+  isVisible: PropTypes.bool,
   items: PropTypes.arrayOf(
     PropTypes.shape({
-      description: PropTypes.string.isRequired,
+      description: PropTypes.any.isRequired,
       id: PropTypes.string.isRequired,
       term: PropTypes.string.isRequired,
     }),
@@ -46,6 +54,8 @@ DefinitionList.propTypes = {
 
 DefinitionList.defaultProps = {
   className: undefined,
+  forwardedRef: undefined,
+  isVisible: true,
   items: undefined,
   theme: 'dark',
 };

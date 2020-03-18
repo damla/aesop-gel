@@ -7,9 +7,9 @@ import styles from './KitList.module.css';
 
 const KitList = ({ items, className, theme }) => {
   const ref = useRef();
-  const onScreen = useOnScreen(ref, '-20px');
+  const isOnScreen = useOnScreen(ref, '-20px');
   const classSet = cx(styles.base, styles[theme], className);
-  const listItemClassSet = cx(styles.item, { [styles.slideIn]: onScreen });
+  const listItemClassSet = cx(styles.item, { [styles.slideIn]: isOnScreen });
 
   return (
     <List

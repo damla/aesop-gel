@@ -6,26 +6,26 @@ const hasIntersectionObserver =
   ('IntersectionObserverEntry' in window &&
     'intersectionRatio' in window.IntersectionObserverEntry.prototype);
 
-export const useOnScreen = (ref, rootMargin = '0px') => {
-  const [isVisible, setVisible] = useState(false);
+export const useOnScreen = (ref, offset = '0px') => {
+  const [isOnScreen, setIsOnScreen] = useState(false);
 
   useEffect(() => {
     let observer = null;
     const currentRef = ref.current;
 
     if (!hasIntersectionObserver) {
-      setVisible(true);
+      setIsOnScreen(true);
     } else {
       observer = new IntersectionObserver(
         entries => {
           entries.forEach(entry => {
             if (entry.isIntersecting) {
-              setVisible(entry.isIntersecting);
+              setIsOnScreen(entry.isIntersecting);
             }
           });
         },
         {
-          rootMargin,
+          offset,
         },
       );
 
@@ -37,7 +37,7 @@ export const useOnScreen = (ref, rootMargin = '0px') => {
         observer.unobserve(currentRef);
       }
     };
-  }, [ref, rootMargin]);
+  }, [ref, offset]);
 
-  return isVisible;
+  return isOnScreen;
 };
