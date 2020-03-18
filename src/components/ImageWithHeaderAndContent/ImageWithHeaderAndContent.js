@@ -10,6 +10,7 @@ const ImageWithHeaderAndContent = ({
   className,
   content,
   copy,
+  forwardedRef,
   hasFullWidthImage,
   image,
   isReverse,
@@ -23,7 +24,7 @@ const ImageWithHeaderAndContent = ({
   );
 
   return (
-    <section className={classSet} div={true}>
+    <section className={classSet} div={true} ref={forwardedRef}>
       <Image
         altText={image.altText}
         className={cx(styles.figure, {
@@ -75,6 +76,10 @@ ImageWithHeaderAndContent.propTypes = {
     subHeading: PropTypes.string.isRequired,
     heading: PropTypes.string.isRequired,
   }).isRequired,
+  forwardedRef: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.elementType }),
+  ]),
   hasFullWidthImage: PropTypes.bool,
   image: PropTypes.object.isRequired,
   isReverse: PropTypes.bool,
@@ -85,6 +90,7 @@ ImageWithHeaderAndContent.defaultProps = {
   className: undefined,
   content: undefined,
   copy: undefined,
+  forwardedRef: undefined,
   hasFullWidthImage: false,
   image: undefined,
   isReverse: false,
