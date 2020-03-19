@@ -3,8 +3,10 @@
 
 .base {
   position: relative;
+  overflow: scroll;
   width: 100%;
-  padding: 20px 40px;
+  max-height: calc(100vh - var(--layout-sm-spacing) * 4);
+  padding: calc(var(--layout-sm-spacing) * 2);
   background-color: var(--color-white);
   color: var(--color-grey-10);
   font-family: var(--font-family-sans-serif-regular);
@@ -12,8 +14,17 @@
   line-height: 1.6;
   transform: translateZ(0);
 
+  * {
+    &,
+    &::before,
+    &::after {
+      box-sizing: inherit;
+    }
+  }
+
   @media (--viewport-md) {
-    padding: 50px;
+    max-height: calc(100vh - var(--layout-md-spacing) * 4 - 50px);
+    padding: calc(var(--layout-md-spacing) * 2);
   }
 
   &.isVisible {
@@ -27,8 +38,8 @@
 
 .closeButton {
   position: absolute;
-  top: 12px;
-  right: 12px;
+  top: var(--layout-sm-spacing);
+  right: var(--layout-sm-spacing);
   width: 30px;
   height: 30px;
   padding: 2px 4px 0 4px;
