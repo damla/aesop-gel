@@ -10,7 +10,7 @@ import ImageWithHeaderAndContent from './ImageWithHeaderAndContent';
 import KitList from './KitList';
 import List from './List';
 import Modal from './Modal';
-import Paragraph from './Paragraph';
+import Paragraph, { ParagraphSet } from './Paragraph';
 import Transition from './Transition';
 
 export default {
@@ -27,5 +27,6 @@ export default {
   List,
   Modal,
   Paragraph,
+  ParagraphSet,
   Transition,
 };
