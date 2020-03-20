@@ -2,11 +2,23 @@
 @import 'styles/mixins/index';
 
 .base {
-  position: fixed;
+  position: absolute;
   z-index: var(--z-index-modal);
   top: 0;
   right: 0;
   left: 0;
+
+  * {
+    &,
+    &::before,
+    &::after {
+      box-sizing: inherit;
+    }
+  }
+
+  @media (--viewport-md) {
+    position: fixed;
+  }
 }
 
 .inner {
@@ -19,10 +31,7 @@
   @media (--viewport-md) {
     min-width: 320px;
     max-width: 550px;
-    margin: 50px auto 0;
-  }
-
-  @media (--viewport-md) {
     align-items: center;
+    margin: 50px auto 0;
   }
 }

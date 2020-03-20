@@ -13,7 +13,14 @@ import PreviousButton from './components/PreviousButton';
 import Slide from './components/Slide';
 import styles from './Carousel.module.css';
 
-const Carousel = ({ className, hasEdges, introduction, slides, theme }) => {
+const Carousel = ({
+  className,
+  forwardedRef,
+  hasEdges,
+  introduction,
+  slides,
+  theme,
+}) => {
   useWindowHasResized();
 
   if (typeof slides === undefined || slides.length === 0) {
@@ -36,7 +43,7 @@ const Carousel = ({ className, hasEdges, introduction, slides, theme }) => {
   });
 
   return (
-    <>
+    <section ref={forwardedRef}>
       {introduction && isMobileOrTablet && (
         <aside className={styles.mobileCarouselIntroductionWrapper}>
           <CarouselIntroduction
@@ -72,12 +79,16 @@ const Carousel = ({ className, hasEdges, introduction, slides, theme }) => {
           </div>
         ))}
       </Slider>
-    </>
+    </section>
   );
 };
 
 Carousel.propTypes = {
   className: PropTypes.string,
+  forwardedRef: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.elementType }),
+  ]),
   hasEdges: PropTypes.bool,
   introduction: PropTypes.shape({
     cta: PropTypes.object,
@@ -97,6 +108,7 @@ Carousel.propTypes = {
 
 Carousel.defaultProps = {
   className: undefined,
+  forwardedRef: undefined,
   hasEdges: false,
   introduction: undefined,
   slides: undefined,

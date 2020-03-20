@@ -2,7 +2,7 @@
 
 exports[`<ImageWithHeaderAndContent /> renders base component correctly 1`] = `
 <section
-  className="base theme-dark slowFadeEnter"
+  className="base theme-dark"
   div={true}
 >
   <picture
@@ -51,32 +51,32 @@ exports[`<ImageWithHeaderAndContent /> renders base component correctly 1`] = `
         className="base dark"
       >
         <dt
-          className="term"
+          className="term slideIn"
         >
           Dosage
         </dt>
         <dd
-          className="description"
+          className="description slideIn"
         >
           Desired amount
         </dd>
         <dt
-          className="term"
+          className="term slideIn"
         >
           Texture
         </dt>
         <dd
-          className="description"
+          className="description slideIn"
         >
           Water-soluble cream with fine grain
         </dd>
         <dt
-          className="term"
+          className="term slideIn"
         >
           Aroma
         </dt>
         <dd
-          className="description"
+          className="description slideIn"
         >
           Herbaceous, floral, earthy
         </dd>

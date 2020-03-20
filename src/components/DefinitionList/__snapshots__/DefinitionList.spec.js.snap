@@ -5,22 +5,22 @@ exports[`<DefinitionList /> renders base component correctly 1`] = `
   className="base dark"
 >
   <dt
-    className="term"
+    className="term slideIn"
   >
     Aroma
   </dt>
   <dd
-    className="description"
+    className="description slideIn"
   >
     Fresh, woody, citrus
   </dd>
   <dt
-    className="term"
+    className="term slideIn"
   >
     Usage
   </dt>
   <dd
-    className="description"
+    className="description slideIn"
   >
     Spray  two to three pumps throughout the immediate space and refresh as needed; the aroma will last for several hours.
   </dd>

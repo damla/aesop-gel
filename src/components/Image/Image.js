@@ -10,6 +10,7 @@ const Image = ({
   altText,
   className,
   cta,
+  forwardedRef,
   large,
   medium,
   small,
@@ -29,7 +30,7 @@ const Image = ({
   );
 
   const picture = (
-    <picture className={classSet}>
+    <picture className={classSet} ref={forwardedRef}>
       {large && (
         <source
           media={`(min-width: ${get(
@@ -82,6 +83,10 @@ Image.propTypes = {
   altText: PropTypes.string.isRequired,
   className: PropTypes.string,
   cta: PropTypes.object,
+  forwardedRef: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.elementType }),
+  ]),
   id: PropTypes.string,
   isFullBleedImage: PropTypes.bool,
   large: PropTypes.string,
@@ -95,6 +100,7 @@ Image.defaultProps = {
   altText: undefined,
   className: undefined,
   cta: undefined,
+  forwardedRef: undefined,
   id: undefined,
   isFullBleedImage: undefined,
   large: undefined,
