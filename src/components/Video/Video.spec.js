@@ -15,10 +15,10 @@ describe('<Video />', () => {
     const tree = renderer
       .create(
         <Video
-          autoplay={true}
+          hasAutoplay={true}
+          hasLoop={true}
           id="video"
           large="https://player.vimeo.com/external/300219772.hd.mp4?s=981a375b08836e6d99532afaefda0b9a78fbf404&amp;profile_id=174"
-          loop={true}
           medium="https://player.vimeo.com/external/300219772.hd.mp4?s=981a375b08836e6d99532afaefda0b9a78fbf404&amp;profile_id=174"
           small="https://player.vimeo.com/external/300219772.hd.mp4?s=981a375b08836e6d99532afaefda0b9a78fbf404&amp;profile_id=174"
         />,
@@ -32,12 +32,12 @@ describe('<Video />', () => {
     const tree = renderer
       .create(
         <Video
-          autoplay={true}
           fallbackImage={{
             altText: 'Fallback Image',
             small:
               '/images/products/Hand_Reverence_Aromatique_Hand_Wash_500mL_large.png 2x',
           }}
+          hasAutoplay={true}
           id="video"
           loop={true}
         />,
@@ -48,7 +48,9 @@ describe('<Video />', () => {
   });
 
   it('should return `null` if no video sizes or fallback image are passed props', () => {
-    const component = shallow(<Video autoplay={true} id="video" loop={true} />);
+    const component = shallow(
+      <Video hasAutoplay={true} id="video" loop={true} />,
+    );
     expect(component.type()).toEqual(null);
   });
 });
