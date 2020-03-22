@@ -5,6 +5,7 @@ import Heading from '~/components/Heading';
 import Image from '~/components/Image';
 import { P } from '~/components/Paragraph';
 import styles from './ImageWithHeaderAndContent.module.css';
+import { ParagraphSet } from '../Paragraph';
 
 const ImageWithHeaderAndContent = ({
   className,
@@ -54,7 +55,9 @@ const ImageWithHeaderAndContent = ({
             <Heading hasSerifFont={true} level="3" size="xLarge" theme={theme}>
               {copy.subHeading}
             </Heading>
-            {copy.description}
+            <ParagraphSet className={styles.description}>
+              {copy.description}
+            </ParagraphSet>
           </header>
           {content}
         </div>
