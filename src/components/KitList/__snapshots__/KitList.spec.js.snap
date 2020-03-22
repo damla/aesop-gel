@@ -5,22 +5,22 @@ exports[`<KitList /> renders base component correctly 1`] = `
   className="base dark base dark"
 >
   <li
-    className="item item"
+    className="item item slideIn"
   >
     Parsley Seed Facial Cleansing Oil, 200 mL
   </li>
   <li
-    className="item item"
+    className="item item slideIn"
   >
     Parsley Seed Anti-Oxidant Facial Toner, 100 mL
   </li>
   <li
-    className="item item"
+    className="item item slideIn"
   >
     Parsley Seed Anti-Oxidant Serum, 100 mL
   </li>
   <li
-    className="item item"
+    className="item item slideIn"
   >
     Parsley Seed Anti-Oxidant Eye Cream, 10 mL
   </li>
