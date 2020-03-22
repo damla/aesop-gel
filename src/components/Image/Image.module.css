@@ -15,14 +15,6 @@
     width: 100%;
     height: auto;
   }
-
-  @media (--viewport-md) {
-    padding: var(--layout-md-spacing) 0;
-  }
-
-  @media (--viewport-lg) {
-    padding: var(--layout-lg-spacing) 0;
-  }
 }
 
 .isRightAligned {

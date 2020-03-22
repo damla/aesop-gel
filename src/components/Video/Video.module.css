@@ -1,0 +1,72 @@
+@import 'styles/variables/index';
+
+.base {
+  position: relative;
+  margin: 0;
+  background-color: var(--color-grey-20);
+}
+
+.video {
+  width: 100%;
+  height: auto;
+}
+
+.poster {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  pointer-events: none;
+}
+
+.close {
+  position: absolute;
+  top: var(--layout-sm-spacing);
+  right: var(--layout-sm-spacing);
+  padding-right: 4px;
+  color: var(--color-light-link);
+  font-size: rem(17px);
+  &:hover,
+  &:focus {
+    color: var(--color-light-link-hover);
+  }
+
+  svg {
+    fill: var(--color-light-link);
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: var(--color-light-link-hover);
+  }
+
+  @media (--viewport-md) {
+    top: var(--layout-md-spacing);
+    right: var(--layout-md-spacing);
+  }
+
+  @media (--viewport-lg) {
+    top: var(--layout-lg-spacing);
+    right: var(--layout-lg-spacing);
+  }
+}
+
+.icon {
+  transform: translate(5px, 1px);
+}
+
+.isVisible {
+  pointer-events: auto;
+}
+
+.fullScreen {
+  position: fixed;
+  z-index: var(--z-index-fixed-full-screen-video);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
