@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HeroWithContent /> renders base component correctly 1`] = `
+<section
+  className="base dark"
+>
+  <picture
+    className="base picture dark image"
+  >
+    <source
+      media="(min-width: 1025px)"
+      srcSet="/assets/images/HeroWithContent/Aesop_Protective_Facial_Lotion_SPF25_Homepage_Launch_Hero_Desktop_2880x1400px.jpg"
+    />
+    <source
+      media="(min-width: 640px)"
+      srcSet="/assets/images/HeroWithContent/Aesop_Protective_Facial_Lotion_SPF25_Homepage_Launch_Hero_Tablet_1400x1920px.jpg"
+    />
+    <source
+      media="(min-width: 0px)"
+      srcSet="/assets/images/HeroWithContent/Aesop_Protective_Facial_Lotion_SPF25_Homepage_Launch_Hero_Mobile_640x640px.jpg"
+    />
+    <img
+      alt="Image of Milk Cleansing Campaign Aesop 2019"
+    />
+  </picture>
+  <div
+    className="contentWrapper"
+  >
+    <div
+      className="content"
+    >
+      <article
+        className="base dark undefined"
+        id="ImageHeader-old-component"
+      >
+        <header
+          className="base"
+          id="ImageHeader-old-component"
+        >
+          <h2
+            className="base xLarge dark heading heading"
+          >
+            Gentle Facial Cleansing Milk
+          </h2>
+        </header>
+        <div
+          className="copy dark"
+        >
+          Offering an exceptionally mild yet thorough cleanse, Gentle Facial Cleansing Milk removes surface impurities without stripping moisture, making it especially beneficial for dry or sensitive skin.
+        </div>
+        <div
+          className="ctaWrapper"
+        >
+          <a
+            className="base blockStyle hasIcon dark"
+            href="http://google.com"
+            target="_self"
+          >
+            Read more
+            <i
+              aria-hidden="true"
+              className="icon"
+            >
+              <svg
+                className="base rightArrow dark"
+                data-ref=""
+                focusable="false"
+                height={15}
+                role="img"
+                style={
+                  Object {
+                    "height": "15px",
+                    "width": "15px",
+                  }
+                }
+                tabIndex={-1}
+                viewBox="0 0 50 50"
+                width={15}
+              >
+                <g>
+                  <path
+                    className="undefined"
+                    d="M30.1,5.3L50,25.1L30.1,45h-6.6l18-17.6H0v-4.8h41.5l-18-17.6h6.6V5.3z"
+                  />
+                </g>
+              </svg>
+            </i>
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+`;
