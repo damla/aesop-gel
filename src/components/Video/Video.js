@@ -9,6 +9,7 @@ import styles from './Video.module.css';
 
 export const Video = ({
   className,
+  copy,
   fallbackImage,
   forwardedRef,
   hasAllowAudio,
@@ -97,7 +98,7 @@ export const Video = ({
             className={posterClassName}
             isInline={true}
             onClick={hanldeOnPosterClick}
-            title="play video"
+            title={copy.playButtonTitle}
           >
             <Image
               altText={poster.altText}
@@ -119,7 +120,12 @@ export const Video = ({
       )}
 
       <Transition isActive={isPlaying} type="zoom">
-        <Button className={styles.close} isInline={true} onClick={stopVideo}>
+        <Button
+          className={styles.close}
+          isInline={true}
+          onClick={stopVideo}
+          title={copy.closeButtonTitle}
+        >
           Close <Icon className={styles.icon} name="close" />
         </Button>
       </Transition>
@@ -129,6 +135,10 @@ export const Video = ({
 
 Video.propTypes = {
   className: PropTypes.string,
+  copy: PropTypes.shape({
+    closeButtonTitle: PropTypes.string,
+    playButtonTitle: PropTypes.string,
+  }),
   fallbackImage: PropTypes.shape({
     altText: PropTypes.string.isRequired,
     className: PropTypes.string,
@@ -163,6 +173,10 @@ Video.propTypes = {
 
 Video.defaultProps = {
   className: undefined,
+  copy: {
+    closeButtonTitle: 'Close Video',
+    playButtonTitle: 'Play Video',
+  },
   fallbackImage: undefined,
   forwardedRef: undefined,
   hasAllowAudio: false,
