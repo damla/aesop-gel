@@ -14,6 +14,7 @@ const BodyCopy = ({
   parent,
   hasSerifFontHeading,
   heading,
+  secondaryCta,
   subHeading,
   theme,
 }) => {
@@ -37,16 +38,30 @@ const BodyCopy = ({
 
       {copy && <div className={cx(styles.copy, styles[theme])}>{copy}</div>}
 
-      {cta && cta.text && (
+      {((cta && cta.text) || (secondaryCta && secondaryCta.text)) && (
         <div className={styles.ctaWrapper}>
-          <Hyperlink
-            openInANewWindow={cta.openInANewWindow}
-            style={cta.style}
-            theme={theme}
-            url={cta.url}
-          >
-            {cta.text}
-          </Hyperlink>
+          {cta && (
+            <Hyperlink
+              openInANewWindow={cta.openInANewWindow}
+              style={cta.style}
+              theme={theme}
+              url={cta.url}
+            >
+              {cta.text}
+            </Hyperlink>
+          )}
+
+          {secondaryCta && (
+            <Hyperlink
+              className={styles.secondaryCta}
+              openInANewWindow={secondaryCta.openInANewWindow}
+              style={secondaryCta.style}
+              theme={theme}
+              url={secondaryCta.url}
+            >
+              {secondaryCta.text}
+            </Hyperlink>
+          )}
         </div>
       )}
     </article>
@@ -62,6 +77,7 @@ BodyCopy.propTypes = {
   heading: PropTypes.string,
   id: PropTypes.string,
   parent: PropTypes.oneOf(['TextOverHero', 'HalfWidthFullBleed']),
+  secondaryCta: PropTypes.object,
   subHeading: PropTypes.string,
   theme: PropTypes.oneOf(['dark', 'light']),
 };
@@ -75,6 +91,7 @@ BodyCopy.defaultProps = {
   heading: undefined,
   id: undefined,
   parent: undefined,
+  secondaryCta: undefined,
   subHeading: undefined,
   theme: 'dark',
 };

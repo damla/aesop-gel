@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import Heading from '~/components/Heading';
 import Image from '~/components/Image';
-import { P } from '~/components/Paragraph';
 import styles from './ImageWithHeaderAndContent.module.css';
 import { ParagraphSet } from '../Paragraph';
 

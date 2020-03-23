@@ -4,7 +4,7 @@ import { text, boolean } from '@storybook/addon-knobs';
 import '~.storybook/storybook.module.css';
 import Video from './Video';
 
-storiesOf('Video', module).add('Base component', () => (
+storiesOf('Components/Video', module).add('Base component', () => (
   <Video
     hasAllowAudio={boolean('hasAllowAudio', false)}
     hasAutoplay={boolean('hasAutoplay', false)}

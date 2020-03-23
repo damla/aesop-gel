@@ -37,6 +37,22 @@ storiesOf('Components/BodyCopy', module).add('Base component', () => (
       'heading',
       'Aesop and The Paris Review: A Partnership Extended',
     )}
+    secondaryCta={{
+      text: text('secondaryCta.text', 'Read more'),
+      url: text('secondaryCta.url', 'http://aesop.com'),
+      style: select(
+        'secondaryCta.style',
+        [
+          'External Button Link',
+          'External Text Link',
+          'Internal Button Link',
+          'Internal Text Link',
+          'External No Icon Link',
+          'No Icon Link',
+        ],
+        'External Button Link',
+      ),
+    }}
     subHeading={text('subHeading', 'Active Nutrients')}
     theme={select('theme', ['dark', 'light'], 'dark')}
   />
