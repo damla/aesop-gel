@@ -39,6 +39,20 @@
     background: var(--color-white);
   }
 
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+
+    60% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
   .isLoading & {
     animation: fadeInOut 1000ms var(--easing-ease-in-out-cubic) infinite;
 
