@@ -1,10 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { boolean, text, select } from '@storybook/addon-knobs';
-import TextOverHero from './TextOverHero';
-import TextOverHeroFixture from './TextOverHero.fixture';
-
-console.log('TextOverHeroFixture', TextOverHeroFixture);
+import { text, select } from '@storybook/addon-knobs';
+import HeroWithContent from './HeroWithContent';
+import HeroWithContentFixture from './HeroWithContent.fixture';
 
 const styleOptions = [
   'External Button Link',
@@ -14,8 +12,8 @@ const styleOptions = [
   'No Icon Link',
 ];
 
-storiesOf('Components/TextOverHero', module).add('Base component', () => (
-  <TextOverHero
+storiesOf('Components/HeroWithContent', module).add('Base component', () => (
+  <HeroWithContent
     contentThemeOnMobile={select(
       'contentThemeOnMobile',
       ['dark', 'light'],
@@ -33,32 +31,35 @@ storiesOf('Components/TextOverHero', module).add('Base component', () => (
     eyebrow={text('eyebrow', 'Mild yet thorough cleanse')}
     heading={text('heading', 'Gentle Facial Cleansing Milk')}
     id={text('id', 'ImageHeader-old-component')}
-    image={TextOverHeroFixture.image}
+    image={HeroWithContentFixture.image}
     theme={select('theme', ['dark', 'light'], 'light')}
   />
 ));
 
-storiesOf('Components/TextOverHero', module).add('With Secondary CTA', () => (
-  <TextOverHero
-    copy="Offering an exceptionally mild yet thorough cleanse, Gentle Facial Cleansing Milk removes surface impurities without stripping moisture, making it especially beneficial for dry or sensitive skin."
-    cta={{
-      text: 'About page',
-      url: 'http://aesop.com',
-      style: 'External Button Link',
-    }}
-    heading="Gentle Facial Cleansing Milk"
-    image={TextOverHeroFixture.image}
-    secondaryCta={{
-      text: 'Read more',
-      url: 'http://aesop.com',
-      style: 'External Button Link',
-    }}
-    theme="light"
-  />
-));
+storiesOf('Components/HeroWithContent', module).add(
+  'With Secondary CTA',
+  () => (
+    <HeroWithContent
+      copy="Offering an exceptionally mild yet thorough cleanse, Gentle Facial Cleansing Milk removes surface impurities without stripping moisture, making it especially beneficial for dry or sensitive skin."
+      cta={{
+        text: 'About page',
+        url: 'http://aesop.com',
+        style: 'External Button Link',
+      }}
+      heading="Gentle Facial Cleansing Milk"
+      image={HeroWithContentFixture.image}
+      secondaryCta={{
+        text: 'Read more',
+        url: 'http://aesop.com',
+        style: 'External Button Link',
+      }}
+      theme="light"
+    />
+  ),
+);
 
-storiesOf('Components/TextOverHero', module).add('Dark Theme', () => (
-  <TextOverHero
+storiesOf('Components/HeroWithContent', module).add('Dark Theme', () => (
+  <HeroWithContent
     copy="Offering an exceptionally mild yet thorough cleanse, Gentle Facial Cleansing Milk removes surface impurities without stripping moisture, making it especially beneficial for dry or sensitive skin."
     cta={{
       url: 'http://aesop.com',
@@ -67,7 +68,7 @@ storiesOf('Components/TextOverHero', module).add('Dark Theme', () => (
     }}
     eyebrow="Mild yet thorough cleanse"
     heading="Gentle Facial Cleansing Milk"
-    image={TextOverHeroFixture.lightImage}
+    image={HeroWithContentFixture.lightImage}
     secondaryCta={{
       text: 'Read more',
       url: 'http://aesop.com',
@@ -77,11 +78,11 @@ storiesOf('Components/TextOverHero', module).add('Dark Theme', () => (
   />
 ));
 
-storiesOf('Components/TextOverHero', module).add('With Sub Nav', () => (
-  <TextOverHero
+storiesOf('Components/HeroWithContent', module).add('With Sub Nav', () => (
+  <HeroWithContent
     heading="Gentle Facial Cleansing Milk"
-    image={TextOverHeroFixture.image}
-    subNavLinks={TextOverHeroFixture.subNavLinks}
+    image={HeroWithContentFixture.image}
+    subNavLinks={HeroWithContentFixture.subNavLinks}
     theme="light"
   />
 ));

@@ -7,9 +7,9 @@ import { ascertainIsMobile } from '~/utils/viewports';
 import BodyCopy from '~/components/BodyCopy';
 import SubNav from '~/components/SubNav';
 import Image from '~/components/Image';
-import styles from './TextOverHero.module.css';
+import styles from './HeroWithContent.module.css';
 
-const TextOverHero = ({
+const HeroWithContent = ({
   className,
   contentThemeOnMobile,
   copy,
@@ -28,12 +28,6 @@ const TextOverHero = ({
 
   const isMobile = ascertainIsMobile();
   const classSet = cx(styles.base, styles[theme], className);
-
-  console.log(
-    subNavLinks,
-    'isObjectPopulatedArray(subNavLinks)',
-    isObjectPopulatedArray(subNavLinks),
-  );
 
   return (
     <section className={classSet}>
@@ -71,7 +65,7 @@ const TextOverHero = ({
   );
 };
 
-TextOverHero.propTypes = {
+HeroWithContent.propTypes = {
   className: PropTypes.string,
   contentThemeOnMobile: PropTypes.oneOf(['dark', 'light']),
   copy: PropTypes.string,
@@ -87,7 +81,7 @@ TextOverHero.propTypes = {
   theme: PropTypes.oneOf(['dark', 'light']),
 };
 
-TextOverHero.defaultProps = {
+HeroWithContent.defaultProps = {
   className: undefined,
   contentThemeOnMobile: 'dark',
   copy: undefined,
@@ -103,4 +97,4 @@ TextOverHero.defaultProps = {
   theme: 'dark',
 };
 
-export default TextOverHero;
+export default HeroWithContent;

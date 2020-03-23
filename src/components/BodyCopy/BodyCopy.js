@@ -76,7 +76,7 @@ BodyCopy.propTypes = {
   hasSerifFontHeading: PropTypes.bool,
   heading: PropTypes.string,
   id: PropTypes.string,
-  parent: PropTypes.oneOf(['TextOverHero', 'HalfWidthFullBleed']),
+  parent: PropTypes.oneOf(['HeroWithContent', 'HalfWidthFullBleed']),
   secondaryCta: PropTypes.object,
   subHeading: PropTypes.string,
   theme: PropTypes.oneOf(['dark', 'light']),
