@@ -53,7 +53,7 @@
   }
 }
 
-.title {
+.heading {
   color: var(--color-white);
 
   @media (--viewport-sm-only) {

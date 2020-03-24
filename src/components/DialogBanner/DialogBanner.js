@@ -7,21 +7,22 @@ import Button from '~/components/Button';
 import Heading from '~/components/Heading';
 import Hyperlink from '~/components/Hyperlink';
 import Icon from '~/components/Icon';
-import Overlay from '~/components/Overlay';
 import { P } from '~/components/Paragraph';
+import Overlay from '~/components/Overlay';
 import Transition from '~/components/Transition';
 import styles from './DialogBanner.module.css';
 
 const DialogBanner = ({
   className,
+  copy,
   cta,
   hasCloseButton,
+  heading,
   isVisible,
   message,
   onClose,
   position,
   theme,
-  title,
 }) => {
   useEscapeKeyListener(onClose);
   useOverflowHidden(isVisible);
@@ -54,12 +55,12 @@ const DialogBanner = ({
           </div>
           <div className={styles.contentContainer}>
             <Heading
-              className={styles.title}
+              className={styles.heading}
               level="1"
               noTopMargin={true}
               size="large"
             >
-              {title}
+              {heading}
             </Heading>
             <P className={styles.message}>{message}</P>
           </div>
@@ -69,7 +70,7 @@ const DialogBanner = ({
                 className={styles.closeButton}
                 isInline={true}
                 onClick={onClose}
-                title="Close dialog button"
+                title={copy.closeButtonTitle}
               >
                 <Icon
                   className={styles.closeIcon}
@@ -102,18 +103,24 @@ const DialogBanner = ({
 
 DialogBanner.propTypes = {
   className: PropTypes.string,
-  cta: PropTypes.object /** @TODO make hyperlink proptype */,
+  copy: PropTypes.shape({
+    closeButtonTitle: PropTypes.string,
+  }),
+  cta: PropTypes.object,
   hasCloseButton: PropTypes.bool,
   isVisible: PropTypes.bool,
   message: PropTypes.string.isRequired,
   onClose: PropTypes.func.isRequired,
   position: PropTypes.oneOf(['top', 'bottom']),
   theme: PropTypes.oneOf(['dark', 'black']),
-  title: PropTypes.string.isRequired,
+  heading: PropTypes.string.isRequired,
 };
 
 DialogBanner.defaultProps = {
   className: undefined,
+  copy: {
+    closeButtonTitle: 'Close Dialog Banner',
+  },
   cta: undefined,
   hasCloseButton: true,
   isVisible: false,
@@ -121,7 +128,7 @@ DialogBanner.defaultProps = {
   onClose: undefined,
   position: 'top',
   theme: 'dark',
-  title: undefined,
+  heading: undefined,
 };
 
 export default DialogBanner;
