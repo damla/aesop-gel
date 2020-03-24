@@ -1,46 +1,38 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { isObjectPopulatedArray } from '~/utils/objects';
 import styles from './DefinitionList.module.css';
 
-const DefinitionList = ({
-  className,
-  forwardedRef,
-  isVisible,
-  items,
-  theme,
-}) => {
-  const classSet = cx(styles.base, styles[theme], className);
-  const termClassSet = cx(styles.term, { [styles.slideIn]: isVisible });
-  const descriptionClassSet = cx(styles.description, {
-    [styles.slideIn]: isVisible,
-  });
+const DefinitionList = forwardRef(
+  ({ className, isVisible, items, theme }, ref) => {
+    const classSet = cx(styles.base, styles[theme], className);
+    const termClassSet = cx(styles.term, { [styles.slideIn]: isVisible });
+    const descriptionClassSet = cx(styles.description, {
+      [styles.slideIn]: isVisible,
+    });
 
-  if (!isObjectPopulatedArray(items)) {
-    return null;
-  }
+    if (!isObjectPopulatedArray(items)) {
+      return null;
+    }
 
-  return (
-    <dl className={classSet} ref={forwardedRef}>
-      {items
-        .filter(({ description, term }) => description && term)
-        .map(({ description, id, term }) => (
-          <Fragment key={id}>
-            <dt className={termClassSet}>{term}</dt>
-            <dd className={descriptionClassSet}>{description}</dd>
-          </Fragment>
-        ))}
-    </dl>
-  );
-};
+    return (
+      <dl className={classSet} ref={ref}>
+        {items
+          .filter(({ description, term }) => description && term)
+          .map(({ description, id, term }) => (
+            <Fragment key={id}>
+              <dt className={termClassSet}>{term}</dt>
+              <dd className={descriptionClassSet}>{description}</dd>
+            </Fragment>
+          ))}
+      </dl>
+    );
+  },
+);
 
 DefinitionList.propTypes = {
   className: PropTypes.string,
-  forwardedRef: PropTypes.oneOfType([
-    PropTypes.func,
-    PropTypes.shape({ current: PropTypes.elementType }),
-  ]),
   isVisible: PropTypes.bool,
   items: PropTypes.arrayOf(
     PropTypes.shape({
@@ -54,7 +46,6 @@ DefinitionList.propTypes = {
 
 DefinitionList.defaultProps = {
   className: undefined,
-  forwardedRef: undefined,
   isVisible: true,
   items: undefined,
   theme: 'dark',

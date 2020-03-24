@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import Heading from '~/components/Heading';
@@ -6,64 +6,65 @@ import Image from '~/components/Image';
 import styles from './ImageWithHeaderAndContent.module.css';
 import { ParagraphSet } from '../Paragraph';
 
-const ImageWithHeaderAndContent = ({
-  className,
-  content,
-  copy,
-  forwardedRef,
-  hasFullWidthImage,
-  image,
-  isReverse,
-  theme,
-}) => {
-  const classSet = cx(
-    styles.base,
-    { [styles.reverse]: isReverse },
-    styles[`theme-${theme}`],
-    className,
-  );
+const ImageWithHeaderAndContent = forwardRef(
+  (
+    { className, content, copy, hasFullWidthImage, image, isReverse, theme },
+    ref,
+  ) => {
+    const classSet = cx(
+      styles.base,
+      { [styles.reverse]: isReverse },
+      styles[`theme-${theme}`],
+      className,
+    );
 
-  return (
-    <section className={classSet} div={true} ref={forwardedRef}>
-      <Image
-        altText={image.altText}
-        className={cx(styles.figure, {
-          [styles.isFullWidthImage]: hasFullWidthImage,
-        })}
-        large={image.large}
-        medium={image.medium}
-        small={image.small}
-        theme={theme}
-      />
-      <div
-        className={cx(styles.container, {
-          [styles.hasFullWidthImage]: hasFullWidthImage,
-        })}
-      >
-        <div className={styles.wrapper}>
-          <header>
-            <Heading
-              className={styles.heading}
-              level="2"
-              noMargin={true}
-              size="xSmall"
-              theme={theme}
-            >
-              {copy.heading}
-            </Heading>
-            <Heading hasSerifFont={true} level="3" size="xLarge" theme={theme}>
-              {copy.subHeading}
-            </Heading>
-            <ParagraphSet className={styles.description}>
-              {copy.description}
-            </ParagraphSet>
-          </header>
-          {content}
+    return (
+      <section className={classSet} div={true} ref={ref}>
+        <Image
+          altText={image.altText}
+          className={cx(styles.figure, {
+            [styles.isFullWidthImage]: hasFullWidthImage,
+          })}
+          large={image.large}
+          medium={image.medium}
+          small={image.small}
+          theme={theme}
+        />
+        <div
+          className={cx(styles.container, {
+            [styles.hasFullWidthImage]: hasFullWidthImage,
+          })}
+        >
+          <div className={styles.wrapper}>
+            <header>
+              <Heading
+                className={styles.heading}
+                level="2"
+                noMargin={true}
+                size="xSmall"
+                theme={theme}
+              >
+                {copy.heading}
+              </Heading>
+              <Heading
+                hasSerifFont={true}
+                level="3"
+                size="xLarge"
+                theme={theme}
+              >
+                {copy.subHeading}
+              </Heading>
+              <ParagraphSet className={styles.description}>
+                {copy.description}
+              </ParagraphSet>
+            </header>
+            {content}
+          </div>
         </div>
-      </div>
-    </section>
-  );
-};
+      </section>
+    );
+  },
+);
 
 ImageWithHeaderAndContent.propTypes = {
   className: PropTypes.string,
@@ -73,10 +74,6 @@ ImageWithHeaderAndContent.propTypes = {
     subHeading: PropTypes.string.isRequired,
     heading: PropTypes.string.isRequired,
   }).isRequired,
-  forwardedRef: PropTypes.oneOfType([
-    PropTypes.func,
-    PropTypes.shape({ current: PropTypes.elementType }),
-  ]),
   hasFullWidthImage: PropTypes.bool,
   image: PropTypes.object.isRequired,
   isReverse: PropTypes.bool,
@@ -87,7 +84,6 @@ ImageWithHeaderAndContent.defaultProps = {
   className: undefined,
   content: undefined,
   copy: undefined,
-  forwardedRef: undefined,
   hasFullWidthImage: false,
   image: undefined,
   isReverse: false,

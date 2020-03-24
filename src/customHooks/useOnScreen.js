@@ -41,3 +41,5 @@ export const useOnScreen = (ref, offset = '0px') => {
 
   return isOnScreen;
 };
+
+export default useOnScreen;
