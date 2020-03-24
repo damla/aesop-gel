@@ -42,7 +42,7 @@ export default {
       url: 'http://www.aesop.com/au/r/about',
     },
     {
-      id: 'about',
+      id: 'products',
       style: EXTERNAL_NO_ICON_LINK,
       children: 'Products',
       url: 'http://www.aesop.com/au/r/about',

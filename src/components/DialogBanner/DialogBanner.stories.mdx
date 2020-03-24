@@ -1,0 +1,67 @@
+import { Fragment } from 'react';
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs } from '@storybook/addon-knobs';
+import { State } from '~.storybook/State';
+import { object, text, select, boolean } from '@storybook/addon-knobs';
+import Button from '~/components/Button';
+import DialogBanner from './DialogBanner';
+
+<Meta
+  title="Components/DialogBanner"
+  component={DialogBanner}
+  decorators={[withKnobs]}
+/>
+
+# DialogBanner
+
+<Preview>
+  <Story name="Base component">
+    <State initialState={{ isVisible: false }}>
+      {(state, setState) => (
+        <Fragment>
+          <DialogBanner
+            cta={{
+              text: 'Need assistance?',
+              url: '/contact-us/',
+            }}
+            heading={text('heading', 'Maximum allowed quantity exceeded.')}
+            isVisible={state.isVisible}
+            message={text(
+              'message',
+              'Our apologies, You have exceeded the maximum allowed quantity of this item.',
+            )}
+            onClose={() => setState({ ...state, isVisible: false })}
+            position={select('position', ['top', 'bottom'], 'top')}
+            showCloseButton={boolean('showCloseButton', true)}
+            theme={select('theme', ['dark', 'black'], 'dark')}
+          />
+          <Button
+            onClick={() => setState({ ...state, isVisible: true })}
+            title="open Dialog Banner"
+          >
+            Open Dialog Banner
+          </Button>
+        </Fragment>
+      )}
+    </State>
+  </Story>
+</Preview>
+
+## API
+
+<Props of={DialogBanner} />
+
+## Usage Example
+
+```
+<DialogBanner
+  cta={{
+    text: 'Need assistance?',
+    url: '/contact-us/',
+  }}
+  heading="..."
+  isVisible={isVisible}
+  message="..."
+  onClose={callback}
+/>
+```

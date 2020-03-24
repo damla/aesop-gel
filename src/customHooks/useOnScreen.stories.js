@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { storiesOf } from '@storybook/react';
 import '~.storybook/storybook.module.css';
 import { useOnScreen } from '~/customHooks/useOnScreen';
-import DefinitionList from '~/components/DefinitionList';
+import KitList from '~/components/KitList';
 import { P } from '~/components/Paragraph';
 import Transition from '~/components/Transition';
 
@@ -23,22 +23,21 @@ storiesOf('Hooks/useOnScreen', module).add('useOnScreen', () => {
         </P>
       </div>
       <Transition isActive={isOnScreen} type="shiftInDown">
-        <DefinitionList
-          forwardedRef={ref}
+        <KitList
           isVisible={isOnScreen}
           items={[
+            { content: 'Parsley Seed Facial Cleansing Oil, 200 mL', id: '1' },
             {
-              description: 'Fresh, woody, citrus',
-              id: 'Aroma',
-              term: 'Aroma',
+              content: 'Parsley Seed Anti-Oxidant Facial Toner, 100 mL',
+              id: '2',
             },
+            { content: 'Parsley Seed Anti-Oxidant Serum, 100 mL', id: '3' },
             {
-              description:
-                'Spray  two to three pumps throughout the immediate space and refresh as needed; the aroma will last for several hours.',
-              id: 'Usage',
-              term: 'Usage',
+              content: 'Parsley Seed Anti-Oxidant Eye Cream, 10 mL',
+              id: '4',
             },
           ]}
+          ref={ref}
         />
       </Transition>
     </div>

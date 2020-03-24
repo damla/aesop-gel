@@ -22,12 +22,12 @@ describe('<DialogBanner />', () => {
             url: '/contact-us/',
           }}
           hasCloseButton={true}
+          heading="Maximum allowed quantity exceeded."
           isVisible={true}
           message="Our apologies, You have exceeded the maximum allowed quantity of this item."
           onClose={mockFn}
           position="top"
           theme="dark"
-          title="Maximum allowed quantity exceeded."
         />,
       )
       .toJSON();
