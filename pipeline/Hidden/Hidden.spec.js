@@ -3,7 +3,6 @@ import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import renderer from 'react-test-renderer';
 import Hidden from './Hidden';
-// @ts-ignore
 import styles from './Hidden.module.css';
 
 configure({ adapter: new Adapter() });

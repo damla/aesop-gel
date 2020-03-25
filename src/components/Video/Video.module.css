@@ -2,24 +2,80 @@
 
 .base {
   position: relative;
-  margin: 0;
-  background-color: var(--color-grey-20);
-}
-
-.video {
+  overflow: hidden;
   width: 100%;
-  height: auto;
+  height: 100%;
+  min-height: 40vh;
+  margin: 0;
+
+  @media (--viewport-md) {
+    min-height: 50vh;
+  }
+
+  /* position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  object-fit: cover; */
 }
 
-.poster {
-  position: absolute;
+.wrapper {
+  /* position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   overflow: hidden;
+  margin: 0;
+  object-fit: cover; */
+}
+
+.video {
+  /* position: absolute; */
+  /* top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   width: 100%;
-  pointer-events: none;
+  height: auto;
+  object-fit: cover; */
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.poster {
+  /* position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: inline-block;
+  overflow: hidden;
+  width: 100%; */
+
+  /* object-fit: cover; */
+  /* pointer-events: none; */
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  &,
+  picture,
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .close {
@@ -62,11 +118,79 @@
   pointer-events: auto;
 }
 
-.fullScreen {
-  position: fixed;
-  z-index: var(--z-index-fixed-full-screen-video);
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+.playsInFullScreen {
+  @media (--viewport-lg) {
+    position: fixed;
+    z-index: var(--z-index-fixed-full-screen-video);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.playPauseButton {
+  position: absolute;
+  bottom: var(--layout-sm-spacing);
+  left: var(--layout-sm-spacing);
+  display: flex;
+  align-items: center;
+  color: var(--color-light-link);
+
+  @media (--viewport-md) {
+    bottom: var(--layout-md-spacing);
+    left: var(--layout-md-spacing);
+  }
+
+  @media (--viewport-lg) {
+    bottom: var(--layout-lg-spacing);
+    left: var(--layout-lg-spacing);
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--color-light-link-hover);
+
+    .playPauseButtonIcon {
+      background-color: var(--color-light-link-hover);
+    }
+  }
+}
+
+.buttonIconOffset.buttonIconOffset {
+  svg {
+    transform: translateX(1px);
+  }
+}
+
+.playPauseButtonLabel {
+  display: none;
+
+  @media (--viewport-lg) {
+    display: inline;
+  }
+}
+
+.playPauseButtonIcon.playPauseButtonIcon {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  background-color: var(--color-light-link);
+  border-radius: 100%;
+
+  /* transform: translateX(1px); */
+
+  &:hover,
+  &:focus {
+    color: var(--color-light-link-hover);
+  }
+
+  svg {
+    fill: var(--color-dark-background);
+
+    /* transform: translateX(1px); */
+  }
 }

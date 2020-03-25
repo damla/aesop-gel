@@ -1,37 +1,51 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
-import PROP_TYPES from './Hidden.prop-types';
 import styles from './Hidden.module.css';
 
 const Hidden = ({
   children,
   className,
-  large = false,
-  medium = false,
-  small = false,
-  visuallyHidden = false,
-  xLarge = false,
+  isLarge,
+  isMedium,
+  isSmall,
+  isVisuallyHidden,
+  isXLarge,
 }) => {
   const classSet = cx(
     {
-      [styles.small]: small,
-      [styles.medium]: medium,
-      [styles.large]: large,
-      [styles.xLarge]: xLarge,
-      [styles.hidden]: !visuallyHidden && (small || medium || large || xLarge),
-      [styles.visuallyHidden]: visuallyHidden,
+      [styles.small]: isSmall,
+      [styles.medium]: isMedium,
+      [styles.large]: isLarge,
+      [styles.xLarge]: isXLarge,
+      [styles.hidden]:
+        !isVisuallyHidden && (isSmall || isMedium || isLarge || isXLarge),
+      [styles.visuallyHidden]: isVisuallyHidden,
     },
     className,
   );
 
-  /** @TODO attempt to get this working to avoid style only `div`s*/
-  // return (
-  //   <>{React.cloneElement(children, { className, classSet: className })}</>
-  // );
-
   return <div className={classSet}>{children}</div>;
 };
 
-Hidden.propTypes = PROP_TYPES;
+Hidden.propTypes = {
+  children: PropTypes.any,
+  className: PropTypes.string,
+  isLarge: PropTypes.bool,
+  isMedium: PropTypes.bool,
+  isSmall: PropTypes.bool,
+  isVisuallyHidden: PropTypes.bool,
+  isXLarge: PropTypes.bool,
+};
+
+Hidden.defaultProps = {
+  children: undefined,
+  className: undefined,
+  isLarge: false,
+  isMedium: false,
+  isSmall: false,
+  isVisuallyHidden: false,
+  isXLarge: false,
+};
 
 export default Hidden;

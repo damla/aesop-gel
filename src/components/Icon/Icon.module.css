@@ -1,6 +1,8 @@
 @import 'styles/index';
 
 .base {
+  outline: none;
+
   path {
     transition: fill 200ms var(--easing-ease-in-out-cubic);
   }

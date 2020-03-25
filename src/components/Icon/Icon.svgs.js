@@ -135,6 +135,36 @@ const svgs = [
     viewBox: '0 0 50 50',
   },
   {
+    name: 'play',
+    data: [
+      {
+        polygon: {
+          points: '0,0 8,5.5 0,11',
+          classes: 'play',
+        },
+      },
+    ],
+    viewBox: '0 0 8 11',
+  },
+  {
+    name: 'pause',
+    data: [
+      {
+        polygon: {
+          points: '0,0 3,0 3,10 0,10 0,0',
+          classes: 'play',
+        },
+      },
+      {
+        polygon: {
+          points: '6,0 9,0 9,10 6,10 6,0',
+          classes: 'play',
+        },
+      },
+    ],
+    viewBox: '0 0 9 10',
+  },
+  {
     name: 'aesop',
     data: [
       {
