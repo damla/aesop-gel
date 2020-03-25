@@ -1,6 +1,7 @@
 import React, { useRef, forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import { useEscapeKeyListener } from '~/customHooks/useEscapeKeyListener';
 import Button from '~/components/Button';
 import Icon from '~/components/Icon';
 import Image from '~/components/Image';
@@ -25,12 +26,10 @@ export const Video = forwardRef(
     },
     ref,
   ) => {
-    const [isPlaying, setIsPlaying] = React.useState(hasAutoplay);
-    const videoRef = useRef();
-
-    if (!large && !medium && !small && !fallbackImage) {
-      return null;
-    }
+    const pauseVideo = () => {
+      videoRef.current.pause();
+      setIsPlaying(false);
+    };
 
     const stopVideo = () => {
       videoRef.current.pause();
@@ -49,10 +48,19 @@ export const Video = forwardRef(
 
     const hanldeOnPosterClick = () => playVideo();
 
+    const [isPlaying, setIsPlaying] = React.useState(hasAutoplay);
+    const videoRef = useRef();
+    useEscapeKeyListener(stopVideo);
+
+    if (!large && !medium && !small && !fallbackImage) {
+      return null;
+    }
+
     const hasVideo = large || medium || small;
     const classSet = cx(styles.base, className);
+
     const videoClassName = cx(styles.video, {
-      [styles.fullScreen]: hasPlayInFullScreen,
+      [styles.playsInFullScreen]: isPlaying && hasPlayInFullScreen,
     });
 
     const posterClassName = cx(styles.poster, {
@@ -66,7 +74,7 @@ export const Video = forwardRef(
             <video
               autoPlay={hasAutoplay}
               className={videoClassName}
-              controls={true}
+              controls={false}
               controlsList="nodownload"
               loop={hasLoop}
               muted={!hasAllowAudio}
@@ -113,25 +121,37 @@ export const Video = forwardRef(
           </Transition>
         )}
 
-        {typeof fallbackImage !== 'undefined' && !hasVideo && (
-          <Image
-            altText={fallbackImage.altText}
-            large={fallbackImage.large}
-            medium={fallbackImage.medium}
-            small={fallbackImage.small}
-          />
-        )}
+        <div className={styles.controls}>
+          <Transition isActive={isPlaying} type="zoom">
+            <Button
+              className={styles.close}
+              isInline={true}
+              onClick={stopVideo}
+              title={copy.closeButtonTitle}
+            >
+              {copy.closeButtonTitle}{' '}
+              <Icon className={styles.icon} name="close" />
+            </Button>
+          </Transition>
 
-        <Transition isActive={isPlaying} type="zoom">
           <Button
-            className={styles.close}
+            className={styles.playPauseButton}
             isInline={true}
-            onClick={stopVideo}
-            title={copy.closeButtonTitle}
+            onClick={isPlaying ? pauseVideo : playVideo}
+            title={isPlaying ? copy.pauseButtonTitle : copy.playButtonTitle}
           >
-            Close <Icon className={styles.icon} name="close" />
+            <span
+              className={cx(styles.playPauseButtonIcon, {
+                [styles.buttonIconOffset]: !isPlaying,
+              })}
+            >
+              <Icon name={isPlaying ? 'pause' : 'play'} />
+            </span>
+            <span className={styles.playPauseButtonLabel}>
+              {isPlaying ? '' : copy.playButtonTitle}
+            </span>
           </Button>
-        </Transition>
+        </div>
       </figure>
     );
   },
@@ -142,6 +162,7 @@ Video.propTypes = {
   copy: PropTypes.shape({
     closeButtonTitle: PropTypes.string,
     playButtonTitle: PropTypes.string,
+    pauseButtonTitle: PropTypes.string,
   }),
   fallbackImage: PropTypes.shape({
     altText: PropTypes.string.isRequired,
@@ -167,17 +188,17 @@ Video.propTypes = {
     large: PropTypes.string,
     medium: PropTypes.string,
     small: PropTypes.string,
-  }),
+  }).isRequired,
   small: PropTypes.string,
 };
 
 Video.defaultProps = {
   className: undefined,
   copy: {
-    closeButtonTitle: 'Close Video',
-    playButtonTitle: 'Play Video',
+    closeButtonTitle: 'Close',
+    playButtonTitle: 'View video',
+    pauseButtonTitle: 'Pause video',
   },
-  fallbackImage: undefined,
   hasAllowAudio: false,
   hasAutoplay: undefined,
   hasLoop: false,

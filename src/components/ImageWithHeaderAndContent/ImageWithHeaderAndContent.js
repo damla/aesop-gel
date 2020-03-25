@@ -2,13 +2,23 @@ import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import Heading from '~/components/Heading';
+import Figure from '~/components/Figure';
 import Image from '~/components/Image';
 import styles from './ImageWithHeaderAndContent.module.css';
 import { ParagraphSet } from '../Paragraph';
 
 const ImageWithHeaderAndContent = forwardRef(
   (
-    { className, content, copy, hasFullWidthImage, image, isReverse, theme },
+    {
+      className,
+      content,
+      copy,
+      hasFullWidthImage,
+      image,
+      isReverse,
+      theme,
+      video,
+    },
     ref,
   ) => {
     const classSet = cx(
@@ -20,16 +30,24 @@ const ImageWithHeaderAndContent = forwardRef(
 
     return (
       <section className={classSet} div={true} ref={ref}>
-        <Image
-          altText={image.altText}
+        <div
           className={cx(styles.figure, {
             [styles.isFullWidthImage]: hasFullWidthImage,
           })}
-          large={image.large}
-          medium={image.medium}
-          small={image.small}
-          theme={theme}
-        />
+        >
+          {video ? (
+            video
+          ) : (
+            <Image
+              altText={image.altText}
+              large={image.large}
+              medium={image.medium}
+              small={image.small}
+              theme={theme}
+            />
+          )}
+        </div>
+
         <div
           className={cx(styles.container, {
             [styles.hasFullWidthImage]: hasFullWidthImage,

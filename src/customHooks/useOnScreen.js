@@ -25,7 +25,7 @@ export const useOnScreen = (ref, offset = '0px') => {
           });
         },
         {
-          offset,
+          rootMargin: offset,
         },
       );
 

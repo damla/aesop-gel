@@ -15,7 +15,6 @@ const HeroWithContent = ({
   copy,
   cta,
   eyebrow,
-  hasBackgroundImagePrototype,
   heading,
   id,
   image,
@@ -31,15 +30,13 @@ const HeroWithContent = ({
 
   return (
     <section className={classSet}>
-      {!hasBackgroundImagePrototype && (
-        <Image
-          altText={image.altText}
-          className={styles.image}
-          large={image.large}
-          medium={image.medium}
-          small={image.small}
-        />
-      )}
+      <Image
+        altText={image.altText}
+        className={styles.image}
+        large={image.large}
+        medium={image.medium}
+        small={image.small}
+      />
 
       <div className={styles.contentWrapper}>
         <div className={styles.content}>
@@ -71,7 +68,6 @@ HeroWithContent.propTypes = {
   copy: PropTypes.string,
   cta: PropTypes.object,
   eyebrow: PropTypes.string,
-  hasBackgroundImagePrototype: PropTypes.bool,
   heading: PropTypes.string.isRequired,
   id: PropTypes.string,
   image: PropTypes.object.isRequired,
@@ -87,7 +83,6 @@ HeroWithContent.defaultProps = {
   copy: undefined,
   cta: undefined,
   eyebrow: undefined,
-  hasBackgroundImagePrototype: false,
   heading: undefined,
   id: undefined,
   image: undefined,

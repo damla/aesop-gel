@@ -8,5 +8,5 @@ export default {
   hasVerticalPadding: false,
   id: 'TwoColumnLayout',
   isReversed: true,
-  sidebar: <div>content</div>,
+  sidebar: <div>sidebar</div>,
 };
