@@ -47,7 +47,7 @@ Array [
       className="contentContainer"
     >
       <h1
-        className="base large dark title"
+        className="base large dark heading"
       >
         Maximum allowed quantity exceeded.
       </h1>
@@ -64,7 +64,7 @@ Array [
         className="base external inlineStyle dark closeButton"
         disabled={false}
         onClick={[MockFunction]}
-        title="Close dialog button"
+        title="Close Dialog Banner"
         type="button"
       >
         <svg

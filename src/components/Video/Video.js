@@ -55,10 +55,6 @@ export const Video = forwardRef(
 
     const hasVideo = large || medium || small;
 
-    if (hasVideo && !poster) {
-      return null;
-    }
-
     const hanldeOnPosterClick = () => playVideo();
 
     const handlePlayPauseButtonOnClick = isPlaying ? pauseVideo : playVideo;
@@ -197,7 +193,7 @@ Video.propTypes = {
     pauseButtonTitle: PropTypes.string,
   }),
   hasAllowAudio: PropTypes.bool,
-  hasAutoplay: PropTypes.bool.isRequired,
+  hasAutoplay: PropTypes.bool,
   hasLoop: PropTypes.bool,
   hasPlayInFullScreen: PropTypes.bool,
   id: PropTypes.string.isRequired,
@@ -212,7 +208,7 @@ Video.propTypes = {
     large: PropTypes.string,
     medium: PropTypes.string,
     small: PropTypes.string,
-  }).isRequired,
+  }),
   small: PropTypes.string,
 };
 
@@ -224,7 +220,7 @@ Video.defaultProps = {
     pauseButtonTitle: 'Pause video',
   },
   hasAllowAudio: false,
-  hasAutoplay: undefined,
+  hasAutoplay: false,
   hasLoop: true,
   hasPlayInFullScreen: false,
   id: undefined,
