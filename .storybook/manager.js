@@ -34,7 +34,7 @@ addons.setConfig({
     inputBorderRadius: 0,
 
     brandTitle: 'Aesop Global Experience Language',
-    brandUrl: 'https://gel.aesop.com',
+    brandUrl: 'https://aesop.github.io/aesop-gel/',
     brandImage:
       'https://upload.wikimedia.org/wikipedia/commons/4/4d/Aesop_logo_2013.svg',
   },

@@ -31,7 +31,7 @@ const ImageWithHeaderAndContent = forwardRef(
     return (
       <section className={classSet} div={true} ref={ref}>
         <div
-          className={cx(styles.figure, {
+          className={cx(styles.mediaWrapper, {
             [styles.isFullWidthImage]: hasFullWidthImage,
           })}
         >
