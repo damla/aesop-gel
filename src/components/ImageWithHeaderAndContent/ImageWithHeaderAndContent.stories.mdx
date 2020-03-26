@@ -1,6 +1,6 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import { withKnobs } from '@storybook/addon-knobs';
-import { boolean, select } from '@storybook/addon-knobs';
+import { boolean, select, text } from '@storybook/addon-knobs';
 import DefinitionList from '~/components/DefinitionList';
 import KitList from '~/components/KitList';
 import ImageWithHeaderAndContent from './ImageWithHeaderAndContent';
@@ -19,56 +19,57 @@ import ImageWithHeaderAndContentFixture from './ImageWithHeaderAndContent.fixtur
 <Preview>
   <Story name="Base component">
     <ImageWithHeaderAndContent
+      backgroundColor={text('backgroundColor', '')}
       content={
         <DefinitionList
           items={ImageWithHeaderAndContentFixture.definitionList}
-          theme={select('theme', ['dark', 'light', '3', '4', '5'], 'dark')}
+          theme={select('theme', ['dark', 'light'], 'dark')}
         />
       }
       copy={ImageWithHeaderAndContentFixture.copy}
       hasFullWidthImage={boolean('hasFullWidthImage', false)}
       image={ImageWithHeaderAndContentFixture.imageExpectations}
-      isReverse={boolean('reverse', false)}
-      theme={select('theme', ['dark', 'light', '3', '4', '5'], 'dark')}
+      isReverse={boolean('iReverse', false)}
+      theme={select('theme', ['dark', 'light'], 'dark')}
     />
     <ImageWithHeaderAndContent
       content={
         <DefinitionList
           items={ImageWithHeaderAndContentFixture.definitionList}
-          theme={select('theme', ['dark', 'light', '3', '4', '5'], 'dark')}
+          theme={select('theme', ['dark', 'light'], 'dark')}
         />
       }
       copy={ImageWithHeaderAndContentFixture.copy}
       hasFullWidthImage={boolean('hasFullWidthImage', false)}
       image={ImageWithHeaderAndContentFixture.imageExpectations}
-      isReverse={boolean('reverse', false)}
-      theme={select('theme', ['dark', 'light', '3', '4', '5'], 'dark')}
+      isReverse={boolean('iReverse', false)}
+      theme={select('theme', ['dark', 'light'], 'dark')}
     />
     <ImageWithHeaderAndContent
       content={
         <DefinitionList
           items={ImageWithHeaderAndContentFixture.definitionList}
-          theme={select('theme', ['dark', 'light', '3', '4', '5'], 'dark')}
+          theme={select('theme', ['dark', 'light'], 'dark')}
         />
       }
       copy={ImageWithHeaderAndContentFixture.copy}
       hasFullWidthImage={boolean('hasFullWidthImage', false)}
       image={ImageWithHeaderAndContentFixture.imageExpectations}
       isReverse={boolean('reverse', false)}
-      theme={select('theme', ['dark', 'light', '3', '4', '5'], 'dark')}
+      theme={select('theme', ['dark', 'light'], 'dark')}
     />
     <ImageWithHeaderAndContent
       content={
         <DefinitionList
           items={ImageWithHeaderAndContentFixture.definitionList}
-          theme={select('theme', ['dark', 'light', '3', '4', '5'], 'dark')}
+          theme={select('theme', ['dark', 'light'], 'dark')}
         />
       }
       copy={ImageWithHeaderAndContentFixture.copy}
       hasFullWidthImage={boolean('hasFullWidthImage', false)}
       image={ImageWithHeaderAndContentFixture.imageExpectations}
-      isReverse={boolean('reverse', false)}
-      theme={select('theme', ['dark', 'light', '3', '4', '5'], 'dark')}
+      isReverse={boolean('iReverse', false)}
+      theme={select('theme', ['dark', 'light'], 'dark')}
     />
   </Story>
 </Preview>
@@ -80,10 +81,6 @@ import ImageWithHeaderAndContentFixture from './ImageWithHeaderAndContent.fixtur
 ## Usage Example
 
 ```
-import ImageWithHeaderAndContent from '@aesop-gel/components/ImageWithHeaderAndContent'
-
-...
-
 <ImageWithHeaderAndContent
   content={}
   copy={}
