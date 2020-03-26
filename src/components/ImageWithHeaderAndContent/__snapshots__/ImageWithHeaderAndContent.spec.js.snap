@@ -2,7 +2,7 @@
 
 exports[`<ImageWithHeaderAndContent /> renders base component correctly 1`] = `
 <section
-  className="base dark"
+  className="base original dark"
   div={true}
   style={
     Object {
@@ -48,7 +48,7 @@ exports[`<ImageWithHeaderAndContent /> renders base component correctly 1`] = `
           How to use
         </h2>
         <h3
-          className="base serifFont xLarge dark"
+          className="base serifFont xLarge dark subHeading"
         >
           A comprehensive skin care regimen, ideal in urban environments.
         </h3>
