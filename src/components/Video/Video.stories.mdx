@@ -1,0 +1,118 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs } from '@storybook/addon-knobs';
+import { text, boolean } from '@storybook/addon-knobs';
+import '~.storybook/storybook.module.css';
+import DefinitionList from '~/components/TwoColumnLayout';
+import ImageWithHeaderAndContentFixture from '~/components/ImageWithHeaderAndContent/ImageWithHeaderAndContent.fixture';
+import ImageWithHeaderAndContent from '~/components/ImageWithHeaderAndContent';
+import Video from './Video';
+
+<Meta title="Components/Video" component={Video} decorators={[withKnobs]} />
+
+# Video
+
+<Preview>
+  <Story name="Base component">
+    <Video
+      hasAutoplay={boolean('hasAutoplay', false)}
+      hasLoop={boolean('hasLoop', false)}
+      hasPlayInFullScreen={boolean('hasPlayInFullScreen', false)}
+      isFullWidth={boolean('isFullWidth', true)}
+      large={text(
+        'large',
+        'https://player.vimeo.com/external/225136214.hd.mp4?s=a01cd8b47f35767394e48dc01af10510ef8ff4dd&profile_id=174',
+      )}
+      medium={text(
+        'large',
+        'https://player.vimeo.com/external/225136214.hd.mp4?s=a01cd8b47f35767394e48dc01af10510ef8ff4dd&profile_id=174',
+      )}
+      poster={{
+        altText: 'How to Use Video for Tea Tree Leaf Facial Exfoliant',
+        large:
+          'assets/images/MediaWithContent/Large-PNG-AESOP-HWYL-HYBRIS-PRODUCT-PAGE-VIDEO-TABLET-1536x1920px-1-.png',
+        medium:
+          'assets/images/MediaWithContent/Large-PNG-AESOP-HWYL-HYBRIS-PRODUCT-PAGE-VIDEO-TABLET-1536x1920px-1-.png',
+        small:
+          'assets/images/MediaWithContent/Large-PNG-AESOP-HWYL-HYBRIS-PRODUCT-PAGE-VIDEO-TABLET-1536x1920px-1-.png',
+      }}
+      small={text(
+        'large',
+        'https://player.vimeo.com/external/225136214.hd.mp4?s=a01cd8b47f35767394e48dc01af10510ef8ff4dd&profile_id=174',
+      )}
+    />
+  </Story>
+</Preview>
+
+## API
+
+<Props of={Video} />
+
+## Usage Example
+
+```
+<Video
+  hasAutoplay={true}
+  hasLoop={true}
+  hasPlayInFullScreen={true}
+  isFullWidth={true}
+  large="..."
+  medium="..."
+  poster={{
+    altText: '...',
+    large:
+      '...',
+    medium:
+      '...',
+    small:
+      '...',
+  }}
+  small="..."
+/>
+```
+
+## Video in ImageWithHeaderAndContent
+
+<Preview>
+  <Story name="Plays in full screen, placed in 50/50 Component">
+    <ImageWithHeaderAndContent
+      content={
+        <DefinitionList
+          items={ImageWithHeaderAndContentFixture.definitionList}
+        />
+      }
+      copy={ImageWithHeaderAndContentFixture.copyKit}
+      image={ImageWithHeaderAndContentFixture.image}
+      video={
+        <Video
+          hasAllowAudio={false}
+          hasAutoplay={false}
+          hasLoop={true}
+          hasPlayInFullScreen={true}
+          isFullWidth={false}
+          large={text(
+            'large',
+            'https://player.vimeo.com/external/225136214.hd.mp4?s=a01cd8b47f35767394e48dc01af10510ef8ff4dd&profile_id=174',
+          )}
+          medium={text(
+            'large',
+            'https://player.vimeo.com/external/225136214.hd.mp4?s=a01cd8b47f35767394e48dc01af10510ef8ff4dd&profile_id=174',
+          )}
+          poster={{
+            altText: 'How to Use Video for Tea Tree Leaf Facial Exfoliant',
+            fullBleedImage: boolean('poster.fullBleedImage', false),
+            large:
+              'assets/images/MediaWithContent/Large-PNG-AESOP-HWYL-HYBRIS-PRODUCT-PAGE-VIDEO-TABLET-1536x1920px-1-.png',
+            medium:
+              'assets/images/MediaWithContent/Large-PNG-AESOP-HWYL-HYBRIS-PRODUCT-PAGE-VIDEO-TABLET-1536x1920px-1-.png',
+            small:
+              'assets/images/MediaWithContent/Large-PNG-AESOP-HWYL-HYBRIS-PRODUCT-PAGE-VIDEO-TABLET-1536x1920px-1-.png',
+          }}
+          small={text(
+            'large',
+            'https://player.vimeo.com/external/225136214.hd.mp4?s=a01cd8b47f35767394e48dc01af10510ef8ff4dd&profile_id=174',
+          )}
+        />
+      }
+    />
+  </Story>
+</Preview>

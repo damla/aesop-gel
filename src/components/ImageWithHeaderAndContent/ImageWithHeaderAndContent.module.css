@@ -66,7 +66,7 @@
 }
 
 .container,
-.figure {
+.mediaWrapper {
   @media (--viewport-lg) {
     display: flex;
     width: 50%;
@@ -75,7 +75,9 @@
 }
 
 .container {
-  /* padding: 76px 20px; */
+  font-family: var(--font-family-sans-serif-regular);
+  font-size: rem(15px);
+  line-height: 1.4;
 
   @media (--viewport-md) {
     /* display: flex;
@@ -146,7 +148,7 @@
 
 .theme-dark {
   &,
-  .figure {
+  .mediaWrapper {
     /* background-color: #ede5cf; */
     background-color: #f6f5e8;
   }
@@ -154,28 +156,28 @@
 
 .theme-light {
   &,
-  .figure {
+  .mediaWrapper {
     background-color: #b19c93;
   }
 }
 
 .theme-3 {
   &,
-  .figure {
+  .mediaWrapper {
     background-color: #f0c3a0;
   }
 }
 
 .theme-4 {
   &,
-  .figure {
+  .mediaWrapper {
     background-color: #d1d6c0;
   }
 }
 
 .theme-5 {
   &,
-  .figure {
+  .mediaWrapper {
     background-color: #252525;
     color: #fffef2;
   }

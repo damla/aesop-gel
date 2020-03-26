@@ -2,6 +2,7 @@ import React, { useRef, forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { useEscapeKeyListener } from '~/customHooks/useEscapeKeyListener';
+import { ascertainIsMobileOrTablet } from '~/utils/viewports';
 import Button from '~/components/Button';
 import Icon from '~/components/Icon';
 import Image from '~/components/Image';
@@ -13,12 +14,12 @@ export const Video = forwardRef(
     {
       className,
       copy,
-      fallbackImage,
       hasAllowAudio,
       hasAutoplay,
       hasLoop,
       hasPlayInFullScreen,
       id,
+      isFullWidth,
       large,
       medium,
       poster,
@@ -26,6 +27,10 @@ export const Video = forwardRef(
     },
     ref,
   ) => {
+    const [isPlaying, setIsPlaying] = React.useState(hasAutoplay);
+
+    const videoRef = useRef();
+
     const pauseVideo = () => {
       videoRef.current.pause();
       setIsPlaying(false);
@@ -46,26 +51,55 @@ export const Video = forwardRef(
       setIsPlaying(true);
     };
 
-    const hanldeOnPosterClick = () => playVideo();
-
-    const [isPlaying, setIsPlaying] = React.useState(hasAutoplay);
-    const videoRef = useRef();
     useEscapeKeyListener(stopVideo);
 
-    if (!large && !medium && !small && !fallbackImage) {
+    const hasVideo = large || medium || small;
+
+    if (hasVideo && !poster) {
       return null;
     }
 
-    const hasVideo = large || medium || small;
-    const classSet = cx(styles.base, className);
+    const hanldeOnPosterClick = () => playVideo();
 
-    const videoClassName = cx(styles.video, {
+    const handlePlayPauseButtonOnClick = isPlaying ? pauseVideo : playVideo;
+
+    const isMobileOrTablet = ascertainIsMobileOrTablet();
+
+    const classSet = cx(styles.base, className, {
+      [styles.fullWidth]: isFullWidth,
+    });
+
+    const videoClassSet = cx(styles.video, {
       [styles.playsInFullScreen]: isPlaying && hasPlayInFullScreen,
     });
 
-    const posterClassName = cx(styles.poster, {
+    const posterClassSet = cx(styles.poster, {
       [styles.isVisible]: !isPlaying,
     });
+
+    const controlsClassSet = cx(styles.controls, {
+      [styles.playsInFullScreen]: isPlaying && hasPlayInFullScreen,
+    });
+
+    const playPauseButtonIconClassSet = cx(styles.playPauseButtonIcon, {
+      [styles.buttonIconOffset]: !isPlaying,
+    });
+
+    const isPlayPauseButtonActive =
+      (!isPlaying && hasPlayInFullScreen) ||
+      isMobileOrTablet ||
+      !hasPlayInFullScreen;
+
+    const isCloseButtonActive =
+      isPlaying && hasPlayInFullScreen && !isMobileOrTablet;
+
+    const playPauseButtonLabel = isPlaying ? '' : copy.playButtonTitle;
+
+    const playPauseButtonTitle = isPlaying
+      ? copy.pauseButtonTitle
+      : copy.playButtonTitle;
+
+    const playPauseButtonIconName = isPlaying ? 'pause' : 'play';
 
     return (
       <figure className={classSet} id={id} ref={ref} role="group">
@@ -73,7 +107,7 @@ export const Video = forwardRef(
           <Transition isActive={!poster || (poster && isPlaying)} type="fade">
             <video
               autoPlay={hasAutoplay}
-              className={videoClassName}
+              className={videoClassSet}
               controls={false}
               controlsList="nodownload"
               loop={hasLoop}
@@ -106,7 +140,7 @@ export const Video = forwardRef(
         {poster && hasVideo && (
           <Transition isActive={!isPlaying} type="fade">
             <Button
-              className={posterClassName}
+              className={posterClassSet}
               isInline={true}
               onClick={hanldeOnPosterClick}
               title={copy.playButtonTitle}
@@ -121,8 +155,8 @@ export const Video = forwardRef(
           </Transition>
         )}
 
-        <div className={styles.controls}>
-          <Transition isActive={isPlaying} type="zoom">
+        <div className={controlsClassSet}>
+          <Transition isActive={isCloseButtonActive} type="zoom">
             <Button
               className={styles.close}
               isInline={true}
@@ -134,23 +168,21 @@ export const Video = forwardRef(
             </Button>
           </Transition>
 
-          <Button
-            className={styles.playPauseButton}
-            isInline={true}
-            onClick={isPlaying ? pauseVideo : playVideo}
-            title={isPlaying ? copy.pauseButtonTitle : copy.playButtonTitle}
-          >
-            <span
-              className={cx(styles.playPauseButtonIcon, {
-                [styles.buttonIconOffset]: !isPlaying,
-              })}
+          <Transition isActive={isPlayPauseButtonActive} type="zoom">
+            <Button
+              className={styles.playPauseButton}
+              isInline={true}
+              onClick={handlePlayPauseButtonOnClick}
+              title={playPauseButtonTitle}
             >
-              <Icon name={isPlaying ? 'pause' : 'play'} />
-            </span>
-            <span className={styles.playPauseButtonLabel}>
-              {isPlaying ? '' : copy.playButtonTitle}
-            </span>
-          </Button>
+              <span className={playPauseButtonIconClassSet}>
+                <Icon name={playPauseButtonIconName} />
+              </span>
+              <span className={styles.playPauseButtonLabel}>
+                {playPauseButtonLabel}
+              </span>
+            </Button>
+          </Transition>
         </div>
       </figure>
     );
@@ -164,20 +196,12 @@ Video.propTypes = {
     playButtonTitle: PropTypes.string,
     pauseButtonTitle: PropTypes.string,
   }),
-  fallbackImage: PropTypes.shape({
-    altText: PropTypes.string.isRequired,
-    className: PropTypes.string,
-    hasFullBleedImage: PropTypes.bool,
-    id: PropTypes.bool,
-    large: PropTypes.string,
-    medium: PropTypes.string,
-    small: PropTypes.string,
-  }),
   hasAllowAudio: PropTypes.bool,
   hasAutoplay: PropTypes.bool.isRequired,
   hasLoop: PropTypes.bool,
   hasPlayInFullScreen: PropTypes.bool,
   id: PropTypes.string.isRequired,
+  isFullWidth: PropTypes.bool,
   large: PropTypes.string,
   medium: PropTypes.string,
   poster: PropTypes.shape({
@@ -201,9 +225,10 @@ Video.defaultProps = {
   },
   hasAllowAudio: false,
   hasAutoplay: undefined,
-  hasLoop: false,
+  hasLoop: true,
   hasPlayInFullScreen: false,
   id: undefined,
+  isFullWidth: true,
   large: undefined,
   medium: undefined,
   poster: undefined,
