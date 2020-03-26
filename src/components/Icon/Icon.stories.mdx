@@ -13,7 +13,12 @@ import svgs from './Icon.svgs';
     <div className="aesop-gel-grid">
       {svgs.map((svg, key) => (
         <div className="aesop-gel-grid--cell" key={key}>
-          <Icon name={svg.name} />
+          <Icon
+            height={60}
+            width={60}
+            name={svg.name}
+            theme={select('theme', ['dark', 'light'], 'dark')}
+          />
         </div>
       ))}
     </div>
@@ -27,10 +32,6 @@ import svgs from './Icon.svgs';
 ## Usage Example
 
 ```
-import Icon from '@aesop-gel/components/Icon'
-
-...
-
 <Icon name={svg_name} />
 
 ```

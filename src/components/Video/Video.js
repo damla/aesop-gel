@@ -2,6 +2,7 @@ import React, { useRef, forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { useEscapeKeyListener } from '~/customHooks/useEscapeKeyListener';
+import { useOverflowHidden } from '~/customHooks/useOverflowHidden';
 import { ascertainIsMobileOrTablet } from '~/utils/viewports';
 import Button from '~/components/Button';
 import Icon from '~/components/Icon';
@@ -30,6 +31,8 @@ export const Video = forwardRef(
     const [isPlaying, setIsPlaying] = React.useState(hasAutoplay);
 
     const videoRef = useRef();
+
+    useOverflowHidden(isPlaying && hasPlayInFullScreen);
 
     const pauseVideo = () => {
       videoRef.current.pause();
@@ -159,8 +162,8 @@ export const Video = forwardRef(
               onClick={stopVideo}
               title={copy.closeButtonTitle}
             >
-              {copy.closeButtonTitle}{' '}
-              <Icon className={styles.icon} name="close" />
+              {copy.closeButtonTitle}
+              <Icon className={styles.icon} name="close" theme="light" />
             </Button>
           </Transition>
 

@@ -9,19 +9,6 @@
     min-height: 100vh;
     flex-direction: row;
   }
-
-  img {
-    width: 100%;
-    height: auto;
-    flex: 1 0 auto;
-    object-fit: cover;
-    transform: none;
-  }
-
-  picture {
-    padding: 0;
-    margin: 0;
-  }
 }
 
 .heading.heading {
@@ -35,14 +22,7 @@
   }
 }
 
-/** @TODO finish responsive styles */
 .wrapper {
-  /* width: 66.66667%;
-  flex-basis: auto;
-  flex-direction: column;
-  padding: 115px 0;
-  margin: auto; */
-
   padding: 76px 20px;
 
   @media (--viewport-md) {
@@ -52,11 +32,6 @@
   }
 
   @media (--viewport-lg) {
-    /* display: block;
-    width: 33.33%;
-    padding: 115px 0;
-    margin: auto 60px; */
-
     width: 66.66667%;
     flex-basis: auto;
     flex-direction: column;
@@ -79,19 +54,6 @@
   font-size: rem(15px);
   line-height: 1.4;
 
-  @media (--viewport-md) {
-    /* display: flex;
-    flex-basis: auto;
-    padding: 110px 34px; */
-  }
-
-  @media (--viewport-lg) {
-    /* display: block;
-    width: 33.33%;
-    padding: 115px 0;
-    margin: auto 60px; */
-  }
-
   header {
     @media (--viewport-md-only) {
       width: 50%;
@@ -110,14 +72,42 @@
   }
 }
 
+.mediaWrapper {
+  height: auto;
+
+  img {
+    width: 100%;
+    height: 100%;
+    flex: 1 0 auto;
+    line-height: 0;
+    object-fit: cover;
+    transform: none;
+
+    @media (--viewport-sm-md-only) {
+      max-height: 90vh;
+    }
+  }
+
+  picture {
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+  }
+}
+
 .isFullWidthImage {
-  position: absolute;
-  z-index: var(--z-index-background-image);
-  width: 100%;
+  height: 100%;
+
+  @media (--viewport-lg) {
+    position: absolute;
+    z-index: var(--z-index-background-image);
+    width: 100%;
+  }
 }
 
 .hasFullWidthImage {
   z-index: var(--z-index-forground-content);
+  height: 100%;
 
   @media (--viewport-lg) {
     margin: auto 60px auto calc(50% + 60px);
@@ -139,46 +129,5 @@
 
   &:last-of-type {
     margin-bottom: 26px;
-  }
-}
-
-/** @TODO get actual theme colours */
-/** @TODO set up Theme context funtionality */
-/** @TODO add hex values to constants */
-
-.theme-dark {
-  &,
-  .mediaWrapper {
-    /* background-color: #ede5cf; */
-    background-color: #f6f5e8;
-  }
-}
-
-.theme-light {
-  &,
-  .mediaWrapper {
-    background-color: #b19c93;
-  }
-}
-
-.theme-3 {
-  &,
-  .mediaWrapper {
-    background-color: #f0c3a0;
-  }
-}
-
-.theme-4 {
-  &,
-  .mediaWrapper {
-    background-color: #d1d6c0;
-  }
-}
-
-.theme-5 {
-  &,
-  .mediaWrapper {
-    background-color: #252525;
-    color: #fffef2;
   }
 }

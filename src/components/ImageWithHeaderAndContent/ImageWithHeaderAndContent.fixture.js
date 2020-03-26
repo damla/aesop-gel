@@ -1,8 +1,17 @@
+import React from 'react';
+
 export default {
   copy: {
     heading: 'How to use',
     subHeading:
       'Dispense into palm then massage gently over face, neck and lips, applying minimal pressure. Avoid eye area. Rinse thoroughly with warm water.',
+    description: (
+      <p>
+        Morning and evening, use Parsley Seed Facial Cleansing Oil, Facial
+        Toner, Anti-Oxidant Serum, and Eye Cream. Twice weekly, apply Masque
+        after cleansing; follow with Facial Treatment.
+      </p>
+    ),
   },
   copyKit: {
     heading: 'How to use',
@@ -71,9 +80,21 @@ export default {
     },
   ],
   kitList: [
-    'Parsley Seed Facial Cleansing Oil, 200 mL',
-    'Parsley Seed Anti-Oxidant Facial Toner, 100 mL',
-    'Parsley Seed Anti-Oxidant Serum, 100 mL',
-    'Parsley Seed Anti-Oxidant Eye Cream, 10 mL',
+    {
+      content: 'Parsley Seed Facial Cleansing Oil, 200 mL',
+      id: 'Parsley Seed Facial Cleansing Oil, 200 mL',
+    },
+    {
+      content: 'Parsley Seed Anti-Oxidant Facial Toner, 100 mL',
+      id: 'Parsley Seed Anti-Oxidant Facial Toner, 100 mL',
+    },
+    {
+      content: 'Parsley Seed Anti-Oxidant Serum, 100 mL',
+      id: 'Parsley Seed Anti-Oxidant Serum, 100 mL',
+    },
+    {
+      content: 'Parsley Seed Anti-Oxidant Eye Cream, 10 mL',
+      id: 'Parsley Seed Anti-Oxidant Eye Cream, 10 mL',
+    },
   ],
 };
