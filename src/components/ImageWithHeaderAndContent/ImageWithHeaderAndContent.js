@@ -2,7 +2,6 @@ import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import Heading from '~/components/Heading';
-import Figure from '~/components/Figure';
 import Image from '~/components/Image';
 import styles from './ImageWithHeaderAndContent.module.css';
 import { ParagraphSet } from '../Paragraph';
@@ -96,6 +95,7 @@ ImageWithHeaderAndContent.propTypes = {
   image: PropTypes.object.isRequired,
   isReverse: PropTypes.bool,
   theme: PropTypes.string,
+  video: PropTypes.object,
 };
 
 ImageWithHeaderAndContent.defaultProps = {
@@ -106,6 +106,7 @@ ImageWithHeaderAndContent.defaultProps = {
   image: undefined,
   isReverse: false,
   theme: 'dark',
+  video: undefined,
 };
 
 export default ImageWithHeaderAndContent;

@@ -27,30 +27,4 @@ describe('<Video />', () => {
 
     expect(tree).toMatchSnapshot();
   });
-
-  it('renders a fallback image correctly', () => {
-    const tree = renderer
-      .create(
-        <Video
-          fallbackImage={{
-            altText: 'Fallback Image',
-            small:
-              '/images/products/Hand_Reverence_Aromatique_Hand_Wash_500mL_large.png 2x',
-          }}
-          hasAutoplay={true}
-          id="video"
-          loop={true}
-        />,
-      )
-      .toJSON();
-
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('should return `null` if no video sizes or fallback image are passed props', () => {
-    const component = shallow(
-      <Video hasAutoplay={true} id="video" loop={true} />,
-    );
-    expect(component.type()).toEqual(null);
-  });
 });

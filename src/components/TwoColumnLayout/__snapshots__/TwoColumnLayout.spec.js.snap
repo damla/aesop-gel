@@ -18,7 +18,7 @@ exports[`<TwoColumnLayout /> renders base component correctly 1`] = `
     id="sidebarColum"
   >
     <div>
-      content
+      sidebar
     </div>
   </aside>
 </div>

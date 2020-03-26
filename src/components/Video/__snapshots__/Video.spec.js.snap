@@ -1,66 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Video /> renders a fallback image correctly 1`] = `
-<figure
-  className="base"
-  id="video"
-  role="group"
->
-  <picture
-    className="base picture dark"
-  >
-    <source
-      media="(min-width: 0px)"
-      srcSet="/images/products/Hand_Reverence_Aromatique_Hand_Wash_500mL_large.png 2x"
-    />
-    <img
-      alt="Fallback Image"
-    />
-  </picture>
-  <button
-    className="base external inlineStyle dark close"
-    disabled={false}
-    onClick={[Function]}
-    type="button"
-  >
-    Close 
-    <svg
-      className="base close dark icon"
-      data-ref=""
-      focusable="false"
-      height={12}
-      role="img"
-      style={
-        Object {
-          "height": "12px",
-          "width": "12px",
-        }
-      }
-      tabIndex={-1}
-      viewBox="0 0 50 50"
-      width={12}
-    >
-      <g>
-        <polygon
-          className="close"
-          points="50,5 45,0 25,20 5,0 0,5 20,25 0,45 5,50 25,30 45,50 50,45 30,25"
-        />
-      </g>
-    </svg>
-  </button>
-</figure>
-`;
-
 exports[`<Video /> renders base component correctly 1`] = `
 <figure
-  className="base"
+  className="base fullWidth"
   id="video"
   role="group"
 >
   <video
     autoPlay={true}
     className="video"
-    controls={true}
+    controls={false}
     controlsList="nodownload"
     loop={true}
     muted={true}
@@ -82,36 +31,86 @@ exports[`<Video /> renders base component correctly 1`] = `
       type="video/mp4"
     />
   </video>
-  <button
-    className="base external inlineStyle dark close"
-    disabled={false}
-    onClick={[Function]}
-    type="button"
+  <div
+    className="controls"
   >
-    Close 
-    <svg
-      className="base close dark icon"
-      data-ref=""
-      focusable="false"
-      height={12}
-      role="img"
-      style={
-        Object {
-          "height": "12px",
-          "width": "12px",
-        }
-      }
-      tabIndex={-1}
-      viewBox="0 0 50 50"
-      width={12}
+    <button
+      className="base external inlineStyle dark close zoomEnter"
+      disabled={false}
+      onClick={[Function]}
+      title="Close"
+      type="button"
     >
-      <g>
-        <polygon
-          className="close"
-          points="50,5 45,0 25,20 5,0 0,5 20,25 0,45 5,50 25,30 45,50 50,45 30,25"
-        />
-      </g>
-    </svg>
-  </button>
+      Close
+       
+      <svg
+        className="base close dark icon"
+        data-ref=""
+        focusable="false"
+        height={12}
+        role="img"
+        style={
+          Object {
+            "height": "12px",
+            "width": "12px",
+          }
+        }
+        tabIndex={-1}
+        viewBox="0 0 50 50"
+        width={12}
+      >
+        <g>
+          <polygon
+            className="close"
+            points="50,5 45,0 25,20 5,0 0,5 20,25 0,45 5,50 25,30 45,50 50,45 30,25"
+          />
+        </g>
+      </svg>
+    </button>
+    <button
+      className="base external inlineStyle dark playPauseButton"
+      disabled={false}
+      onClick={[Function]}
+      title="Pause video"
+      type="button"
+    >
+      <span
+        className="playPauseButtonIcon"
+      >
+        <svg
+          className="base pause dark"
+          data-ref=""
+          focusable="false"
+          height={12}
+          role="img"
+          style={
+            Object {
+              "height": "12px",
+              "width": "12px",
+            }
+          }
+          tabIndex={-1}
+          viewBox="0 0 9 10"
+          width={12}
+        >
+          <g>
+            <polygon
+              className="play"
+              points="0,0 3,0 3,10 0,10 0,0"
+            />
+            <polygon
+              className="play"
+              points="6,0 9,0 9,10 6,10 6,0"
+            />
+          </g>
+        </svg>
+      </span>
+      <span
+        className="playPauseButtonLabel"
+      >
+        
+      </span>
+    </button>
+  </div>
 </figure>
 `;
