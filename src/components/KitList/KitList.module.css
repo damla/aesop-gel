@@ -45,10 +45,6 @@
   .dark & {
     color: var(--color-dark-copy);
 
-    &:first-of-type {
-      border-top: 2px solid var(--color-grey-20);
-    }
-
     &:not(:last-child) {
       border-bottom: 1px solid var(--color-grey-65);
       margin: 0;
@@ -57,10 +53,6 @@
 
   .light.light & {
     color: var(--color-light-copy);
-
-    &:first-of-type {
-      border-top: 2px solid var(--color-white);
-    }
 
     &:not(:last-child) {
       border-bottom: 1px solid var(--color-grey-65);

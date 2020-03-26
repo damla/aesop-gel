@@ -57,14 +57,6 @@
     transition-delay: calc((4 * 100ms) + 200ms);
   }
 
-  .dark &:first-of-type {
-    border-top: 2px solid var(--color-grey-20);
-  }
-
-  .light &:first-of-type {
-    border-top: 2px solid var(--color-light-copy);
-  }
-
   @media (--viewport-md) {
     padding-top: 14px;
   }
