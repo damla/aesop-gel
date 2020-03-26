@@ -42,9 +42,8 @@ exports[`<Video /> renders base component correctly 1`] = `
       type="button"
     >
       Close
-       
       <svg
-        className="base close dark icon"
+        className="base close light icon"
         data-ref=""
         focusable="false"
         height={12}
