@@ -59,7 +59,7 @@ const ImageWithHeaderAndContent = forwardRef(
           })}
         >
           <div className={styles.wrapper}>
-            <header>
+            <header className={styles.header}>
               <Heading
                 className={styles.heading}
                 level="2"

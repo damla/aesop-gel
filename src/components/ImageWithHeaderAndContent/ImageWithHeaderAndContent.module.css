@@ -22,6 +22,16 @@
   }
 }
 
+.header {
+  .dark & {
+    border-bottom: 2px solid var(--color-grey-20);
+  }
+
+  .light & {
+    border-bottom: 2px solid var(--color-light-copy);
+  }
+}
+
 .wrapper {
   padding: 76px 20px;
 
