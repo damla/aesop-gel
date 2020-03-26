@@ -8,8 +8,6 @@ const KitList = forwardRef(({ className, isVisible, items, theme }, ref) => {
   const classSet = cx(styles.base, styles[theme], className);
   const listItemClassSet = cx(styles.item, { [styles.slideIn]: isVisible });
 
-  console.log('items', items);
-
   return (
     <List
       className={classSet}

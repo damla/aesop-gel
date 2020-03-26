@@ -7,8 +7,6 @@ const List = forwardRef(
   ({ className, items, listItemClassName, theme }, ref) => {
     const classSet = cx(styles.base, styles[theme], className);
 
-    console.log('ref', ref, items);
-
     return (
       <ul className={classSet} ref={ref}>
         {items.map(({ content, id }) => (
