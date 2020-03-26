@@ -24,6 +24,7 @@ const ImageWithHeaderAndContent = forwardRef(
     const classSet = cx(
       styles.base,
       { [styles.reverse]: isReverse },
+      { [styles.original]: !isReverse },
       styles[theme.toLowerCase()],
       className,
     );
@@ -70,6 +71,7 @@ const ImageWithHeaderAndContent = forwardRef(
                 {copy.heading}
               </Heading>
               <Heading
+                className={styles.subHeading}
                 hasSerifFont={true}
                 level="3"
                 size="xLarge"

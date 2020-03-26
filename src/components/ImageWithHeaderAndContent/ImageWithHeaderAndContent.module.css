@@ -22,14 +22,22 @@
   }
 }
 
-.header {
-  .dark & {
-    border-bottom: 2px solid var(--color-grey-20);
-  }
+.original.dark .header {
+  border-bottom: 2px solid var(--color-grey-20);
+}
 
-  .light & {
-    border-bottom: 2px solid var(--color-light-copy);
-  }
+.original.light .header {
+  border-bottom: 2px solid var(--color-light-copy);
+}
+
+.dark.reverse .subHeading {
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--color-grey-20);
+}
+
+.light.reverse .subHeading {
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--color-light-copy);
 }
 
 .wrapper {
