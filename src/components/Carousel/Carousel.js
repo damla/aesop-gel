@@ -1,9 +1,14 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import Slider from 'react-slick';
 import useWindowHasResized from '~/customHooks/useWindowHasResized';
-import { ascertainIsMobileOrTablet } from '~/utils/viewports';
+import {
+  ascertainIsSmallOnlyViewport,
+  ascertainIsMediumOnlyViewport,
+  ascertainIsLargeOrXLargeOnlyViewport,
+  ascertainIsSmallOrMediumOnlyViewport,
+} from '~/utils/viewports';
 import Hyperlink from '~/components/Hyperlink';
 import { getCarouselSettings } from './Carousel.utils';
 import CarouselIntroduction from './components/CarouselIntroduction';
@@ -15,13 +20,29 @@ import styles from './Carousel.module.css';
 
 const Carousel = forwardRef(
   ({ className, hasEdges, introduction, slides, theme }, ref) => {
+    const [isNextButtonActive, setIsNextButtonActive] = useState(true);
+    const [isPreviousButtonActive, setIsPreviousButtonActive] = useState(false);
+
     useWindowHasResized();
+
+    let slideOffset = 0;
+
+    if (ascertainIsSmallOnlyViewport()) {
+      slideOffset = 1;
+    } else if (ascertainIsMediumOnlyViewport()) {
+      slideOffset = 2;
+    } else if (ascertainIsLargeOrXLargeOnlyViewport()) {
+      slideOffset = 3;
+    } else {
+      slideOffset = 4;
+    }
 
     if (typeof slides === undefined || slides.length === 0) {
       return null;
     }
 
-    const isMobileOrTablet = ascertainIsMobileOrTablet();
+    const isMobileOrTablet = ascertainIsSmallOrMediumOnlyViewport();
+
     const classSet = cx(
       styles.base,
       styles[theme],
@@ -31,14 +52,27 @@ const Carousel = forwardRef(
 
     const settings = getCarouselSettings({
       className: classSet,
+      isNextButtonActive,
+      isPreviousButtonActive,
       Pagination,
       NextButton,
       PreviousButton,
     });
 
+    const hasIntroSlide = introduction && !isMobileOrTablet;
+    const slidesLength = slides.length;
+    const slidesCount = hasIntroSlide ? slidesLength + 1 : slidesLength;
+
+    const handleAfterChange = (index, nextIndex) => {
+      const currentIndex = slidesCount - nextIndex;
+
+      setIsPreviousButtonActive(nextIndex !== 0);
+      setIsNextButtonActive(currentIndex === slideOffset ? false : true);
+    };
+
     return (
       <section ref={ref}>
-        {introduction && isMobileOrTablet && (
+        {!hasIntroSlide && (
           <aside className={styles.mobileCarouselIntroductionWrapper}>
             <CarouselIntroduction
               description={introduction.description}
@@ -47,8 +81,8 @@ const Carousel = forwardRef(
           </aside>
         )}
 
-        <Slider {...settings}>
-          {introduction && !isMobileOrTablet && (
+        <Slider {...settings} beforeChange={handleAfterChange}>
+          {hasIntroSlide && (
             <CarouselIntroduction
               description={introduction.description}
               heading={introduction.heading}

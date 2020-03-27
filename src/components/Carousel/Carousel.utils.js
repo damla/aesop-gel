@@ -3,6 +3,8 @@ import { BREAKPOINTS } from '~/constants';
 
 export const getCarouselSettings = ({
   className,
+  isNextButtonActive,
+  isPreviousButtonActive,
   Pagination,
   NextButton,
   PreviousButton,
@@ -14,23 +16,23 @@ export const getCarouselSettings = ({
   dots: true,
   infinite: false,
   initialSlide: 0,
-  nextArrow: <NextButton />,
-  prevArrow: <PreviousButton />,
+  nextArrow: <NextButton isActive={isNextButtonActive} theme="light" />,
+  prevArrow: <PreviousButton isActive={isPreviousButtonActive} theme="light" />,
   responsive: [
     {
-      breakpoint: BREAKPOINTS.MEDIUM.MIN_WIDTH,
+      breakpoint: BREAKPOINTS.SMALL.MAX_WIDTH,
       settings: {
         slidesToShow: 1,
       },
     },
     {
-      breakpoint: BREAKPOINTS.LARGE.MIN_WIDTH,
+      breakpoint: BREAKPOINTS.MEDIUM.MAX_WIDTH,
       settings: {
         slidesToShow: 2,
       },
     },
     {
-      breakpoint: BREAKPOINTS.XLARGE.MIN_WIDTH,
+      breakpoint: BREAKPOINTS.XXLARGE.MIN_WIDTH,
       settings: {
         slidesToShow: 3,
       },
