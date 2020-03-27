@@ -29,6 +29,10 @@
   font-family: var(--font-family-sans-serif-medium);
 }
 
+.xXSmall {
+  font-size: rem(14px);
+}
+
 .xSmall {
   font-size: rem(15px);
 

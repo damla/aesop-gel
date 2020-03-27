@@ -42,8 +42,14 @@ Heading.propTypes = {
   id: PropTypes.string,
   isFlush: PropTypes.bool,
   level: PropTypes.oneOf(['1', '2', '3', '4', '5', '6']).isRequired,
-  size: PropTypes.oneOf(['xSmall', 'small', 'medium', 'large', 'xLarge'])
-    .isRequired,
+  size: PropTypes.oneOf([
+    'xXSmall',
+    'xSmall',
+    'small',
+    'medium',
+    'large',
+    'xLarge',
+  ]).isRequired,
   theme: PropTypes.oneOf(['dark', 'light']),
 };
 
