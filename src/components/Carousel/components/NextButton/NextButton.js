@@ -1,4 +1,5 @@
 import React from 'react';
+import cx from 'classnames';
 import PropTypes from 'prop-types';
 import Button from '~/components/Button';
 import Icon from '~/components/Icon';
@@ -8,9 +9,9 @@ import styles from './NextButton.module.css';
  * The onClick callback for the NextButton
  * components are provided through react-slick
  */
-const NextButton = ({ onClick, theme }) => (
+const NextButton = ({ isActive, onClick, theme }) => (
   <Button
-    className={styles.base}
+    className={cx(styles.base, { [styles.hidden]: !isActive })}
     isInline={true}
     onClick={onClick}
     theme={theme}
@@ -21,11 +22,13 @@ const NextButton = ({ onClick, theme }) => (
 );
 
 NextButton.propTypes = {
+  isActive: PropTypes.bool,
   onClick: PropTypes.func,
   theme: PropTypes.oneOf(['dark', 'light']),
 };
 
 NextButton.defaultProps = {
+  isActive: true,
   onClick: undefined,
   theme: 'dark',
 };

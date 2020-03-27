@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import useWindowHasResized from '~/customHooks/useWindowHasResized';
 import { isObjectPopulatedArray } from '~/utils/objects';
-import { ascertainIsMobile } from '~/utils/viewports';
+import { ascertainIsSmallOnlyViewport } from '~/utils/viewports';
 import BodyCopy from '~/components/BodyCopy';
 import SubNav from '~/components/SubNav';
 import Image from '~/components/Image';
@@ -25,7 +25,7 @@ const HeroWithContent = ({
 }) => {
   useWindowHasResized();
 
-  const isMobile = ascertainIsMobile();
+  const isMobile = ascertainIsSmallOnlyViewport();
   const classSet = cx(styles.base, styles[theme], className);
 
   return (
