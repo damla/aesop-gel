@@ -72,7 +72,7 @@ const Carousel = forwardRef(
 
     return (
       <section ref={ref}>
-        {!hasIntroSlide && (
+        {hasIntroSlide && (
           <aside className={styles.mobileCarouselIntroductionWrapper}>
             <CarouselIntroduction
               description={introduction.description}
