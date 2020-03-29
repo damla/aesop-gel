@@ -19,7 +19,7 @@ import Slide from './components/Slide';
 import styles from './Carousel.module.css';
 
 const Carousel = forwardRef(
-  ({ className, hasEdges, introduction, slides, theme }, ref) => {
+  ({ className, introduction, slides, theme }, ref) => {
     const [isNextButtonActive, setIsNextButtonActive] = useState(true);
     const [isPreviousButtonActive, setIsPreviousButtonActive] = useState(false);
 
@@ -43,12 +43,7 @@ const Carousel = forwardRef(
 
     const isMobileOrTablet = ascertainIsSmallOrMediumOnlyViewport();
 
-    const classSet = cx(
-      styles.base,
-      styles[theme],
-      { [styles.edges]: hasEdges },
-      className,
-    );
+    const classSet = cx(styles.base, styles[theme], className);
 
     const settings = getCarouselSettings({
       className: classSet,
@@ -72,10 +67,12 @@ const Carousel = forwardRef(
 
     return (
       <section ref={ref}>
-        {hasIntroSlide && (
+        {!hasIntroSlide && introduction && (
           <aside className={styles.mobileCarouselIntroductionWrapper}>
             <CarouselIntroduction
+              cta={introduction.cta}
               description={introduction.description}
+              eyebrow={introduction.eyebrow}
               heading={introduction.heading}
             />
           </aside>
@@ -84,7 +81,9 @@ const Carousel = forwardRef(
         <Slider {...settings} beforeChange={handleAfterChange}>
           {hasIntroSlide && (
             <CarouselIntroduction
+              cta={introduction.cta}
               description={introduction.description}
+              eyebrow={introduction.eyebrow}
               heading={introduction.heading}
             />
           )}
@@ -114,11 +113,16 @@ const Carousel = forwardRef(
 
 Carousel.propTypes = {
   className: PropTypes.string,
-  hasEdges: PropTypes.bool,
   introduction: PropTypes.shape({
-    cta: PropTypes.object,
-    description: PropTypes.string.isRequired,
-    heading: PropTypes.string.isRequired,
+    cta: PropTypes.shape({
+      style: PropTypes.string,
+      title: PropTypes.string,
+      url: PropTypes.string,
+      text: PropTypes.string,
+    }),
+    description: PropTypes.string,
+    eyebrow: PropTypes.string,
+    heading: PropTypes.string,
   }),
   slides: PropTypes.arrayOf(
     PropTypes.shape({
@@ -133,7 +137,6 @@ Carousel.propTypes = {
 
 Carousel.defaultProps = {
   className: undefined,
-  hasEdges: false,
   introduction: undefined,
   slides: undefined,
   theme: 'dark',
