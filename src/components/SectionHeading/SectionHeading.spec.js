@@ -2,20 +2,20 @@ import React from 'react';
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import renderer from 'react-test-renderer';
-import { getHeadingLevel, getSubHeadingLevel } from './PageHeading.utils';
-import PageHeading from './PageHeading';
+import { getHeadingLevel, getSubHeadingLevel } from './SectionHeading.utils';
+import SectionHeading from './SectionHeading';
 
 configure({ adapter: new Adapter() });
 
-describe('<PageHeading />', () => {
+describe('<SectionHeading />', () => {
   it('should be defined', () => {
-    expect(PageHeading).toBeDefined();
+    expect(SectionHeading).toBeDefined();
   });
 
   it('renders base component correctly', () => {
     const tree = renderer
       .create(
-        <PageHeading
+        <SectionHeading
           heading="Title: Fortification of the highest order. Parsley Seed Anti-Oxidant Facial Hydrating Cream."
           id="Anti-Oxidant"
         />,
@@ -28,7 +28,7 @@ describe('<PageHeading />', () => {
   it('renders with subHeading variation correctly', () => {
     const tree = renderer
       .create(
-        <PageHeading
+        <SectionHeading
           heading="Heading: Fortification of the highest order."
           id="Parsley"
           subHeading="Subcopy: Parsley Seed Anti-Oxidant Facial Hydrating Cream 60mL"
@@ -42,7 +42,7 @@ describe('<PageHeading />', () => {
   it('renders with subHeading and eyebrow variation correctly', () => {
     const tree = renderer
       .create(
-        <PageHeading
+        <SectionHeading
           eyebrow="Eyebrow: Offers fortification of the highest order against free radicals."
           heading="Heading: Fortification of the highest order. Parsley Seed Anti-Oxidant Facial Hydrating Cream."
           id="Anti-Oxidant"
@@ -55,7 +55,7 @@ describe('<PageHeading />', () => {
   });
 });
 
-describe('PageHeading.utils', () => {
+describe('SectionHeading.utils', () => {
   it('renders heading as an `h2` if no `eyebrow` prop is passed', () => {
     expect(getHeadingLevel(undefined)).toEqual('2');
   });

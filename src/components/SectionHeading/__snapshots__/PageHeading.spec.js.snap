@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<PageHeading /> renders base component correctly 1`] = `
+exports[`<SectionHeading /> renders base component correctly 1`] = `
 <header
   className="base"
   id="Anti-Oxidant"
@@ -13,7 +13,7 @@ exports[`<PageHeading /> renders base component correctly 1`] = `
 </header>
 `;
 
-exports[`<PageHeading /> renders with subHeading and eyebrow variation correctly 1`] = `
+exports[`<SectionHeading /> renders with subHeading and eyebrow variation correctly 1`] = `
 <header
   className="base"
   id="Anti-Oxidant"
@@ -36,7 +36,7 @@ exports[`<PageHeading /> renders with subHeading and eyebrow variation correctly
 </header>
 `;
 
-exports[`<PageHeading /> renders with subHeading variation correctly 1`] = `
+exports[`<SectionHeading /> renders with subHeading variation correctly 1`] = `
 <header
   className="base"
   id="Parsley"
