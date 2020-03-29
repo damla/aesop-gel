@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import PageHeading from '~/components/PageHeading';
+import SectionHeading from '~/components/SectionHeading';
 import Hyperlink from '~/components/Hyperlink';
 import styles from './BodyCopy.module.css';
 
@@ -22,7 +22,7 @@ const BodyCopy = ({
 
   return (
     <article className={classSet} id={id}>
-      <PageHeading
+      <SectionHeading
         childrenClassNames={{
           eyebrow: styles.eyebrow,
           heading: styles.heading,

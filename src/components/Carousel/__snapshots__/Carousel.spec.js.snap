@@ -7,14 +7,14 @@ exports[`<Carousel /> renders base component correctly 1`] = `
     dir="ltr"
   >
     <button
-      className="base external inlineStyle dark base"
+      className="base external inlineStyle light base hidden"
       disabled={false}
       onClick={null}
       title="next slide"
       type="button"
     >
       <svg
-        className="base chevron dark"
+        className="base chevron light"
         data-ref=""
         focusable="false"
         height={18}
@@ -81,20 +81,69 @@ exports[`<Carousel /> renders base component correctly 1`] = `
           tabIndex="-1"
         >
           <div>
-            <header
+            <div
               className="base dark"
             >
-              <h4
-                className="base serifFont xLarge dark heading"
+              <header
+                className="base heading"
               >
-                Accompany with
-              </h4>
+                <h2
+                  className="base noTopMargin mediumWeightFont xXSmall dark eyebrow"
+                >
+                  Skin Parsley Seed
+                </h2>
+                <h3
+                  className="base noTopMargin serifFont xLarge dark heading"
+                >
+                  Accompany with
+                </h3>
+              </header>
               <p
-                className="base dark description"
+                className="base dark description hasFooter"
               >
                 Richly foaming Parsley Seed Facial Cleanser offers mild exfoliation from Lactic Acid to clarify and soften skin; complement twice weekly with Parsley Seed Cleansing Masque to extract impurities and purify pores. For intensive fortification and hydration, blend Hydrator with Parsley Seed Anti-Oxidant Facial Treatment.
               </p>
-            </header>
+              <footer
+                className="ctaWrapper"
+              >
+                <a
+                  className="base hasIcon dark"
+                  href="/"
+                  target="_self"
+                  title="Link to Browse all"
+                >
+                  Browse all
+                  <i
+                    aria-hidden="true"
+                    className="icon"
+                  >
+                    <svg
+                      className="base rightArrow dark"
+                      data-ref=""
+                      focusable="false"
+                      height={15}
+                      role="img"
+                      style={
+                        Object {
+                          "height": "15px",
+                          "width": "15px",
+                        }
+                      }
+                      tabIndex={-1}
+                      viewBox="0 0 50 50"
+                      width={15}
+                    >
+                      <g>
+                        <path
+                          className="undefined"
+                          d="M30.1,5.3L50,25.1L30.1,45h-6.6l18-17.6H0v-4.8h41.5l-18-17.6h6.6V5.3z"
+                        />
+                      </g>
+                    </svg>
+                  </i>
+                </a>
+              </footer>
+            </div>
           </div>
         </div>
         <div
@@ -130,7 +179,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                   className="information dark"
                 >
                   <h5
-                    className="base xSmall dark heading"
+                    className="base xXSmall dark heading"
                   >
                     Parsley Seed Facial Cleanser
                   </h5>
@@ -200,10 +249,15 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                   className="information dark"
                 >
                   <h5
-                    className="base xSmall dark heading"
+                    className="base xXSmall dark heading"
                   >
                     Parsley Seed Facial Cleanser
                   </h5>
+                  <div
+                    className="description"
+                  >
+                    Example description
+                  </div>
                 </div>
                 <div
                   className="imageContainer"
@@ -259,13 +313,148 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                 className="base dark item link"
                 href="/"
                 target="_self"
+                title="Link to Parsley Seed Facial Cleanser"
+              >
+                <div
+                  className="information dark"
+                >
+                  <h5
+                    className="base xXSmall dark heading"
+                  >
+                    Parsley Seed Facial Cleanser
+                  </h5>
+                  <div
+                    className="description"
+                  >
+                    Example description
+                  </div>
+                </div>
+                <div
+                  className="imageContainer"
+                >
+                  <picture
+                    className="base picture dark image"
+                  >
+                    <source
+                      media="(min-width: 1025px)"
+                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                    />
+                    <source
+                      media="(min-width: 640px)"
+                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                    />
+                    <source
+                      media="(min-width: 0px)"
+                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                    />
+                    <img
+                      alt="Image of Parsley Seed Facial Cleanser"
+                    />
+                  </picture>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden={true}
+          className="slick-slide"
+          data-index={4}
+          onClick={[Function]}
+          style={
+            Object {
+              "outline": "none",
+              "width": 0,
+            }
+          }
+          tabIndex="-1"
+        >
+          <div>
+            <div
+              style={
+                Object {
+                  "display": "inline-block",
+                  "width": "100%",
+                }
+              }
+              tabIndex={-1}
+            >
+              <a
+                className="base dark item link"
+                href="/"
+                target="_self"
+                title="Link to Parsley Seed Facial Cleanser"
+              >
+                <div
+                  className="information dark"
+                >
+                  <h5
+                    className="base xXSmall dark heading"
+                  >
+                    Parsley Seed Facial Cleanser
+                  </h5>
+                </div>
+                <div
+                  className="imageContainer"
+                >
+                  <picture
+                    className="base picture dark image"
+                  >
+                    <source
+                      media="(min-width: 1025px)"
+                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                    />
+                    <source
+                      media="(min-width: 640px)"
+                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                    />
+                    <source
+                      media="(min-width: 0px)"
+                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                    />
+                    <img
+                      alt="Image of Parsley Seed Facial Cleanser"
+                    />
+                  </picture>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden={true}
+          className="slick-slide"
+          data-index={5}
+          onClick={[Function]}
+          style={
+            Object {
+              "outline": "none",
+              "width": 0,
+            }
+          }
+          tabIndex="-1"
+        >
+          <div>
+            <div
+              style={
+                Object {
+                  "display": "inline-block",
+                  "width": "100%",
+                }
+              }
+              tabIndex={-1}
+            >
+              <a
+                className="base dark item link"
+                href="/"
+                target="_self"
                 title="Link to Parsley Seed Cleansing Masque"
               >
                 <div
                   className="information dark"
                 >
                   <h5
-                    className="base xSmall dark heading"
+                    className="base xXSmall dark heading"
                   >
                     Parsley Seed Cleansing Masque
                   </h5>
@@ -298,80 +487,17 @@ exports[`<Carousel /> renders base component correctly 1`] = `
             </div>
           </div>
         </div>
-        <div
-          aria-hidden={true}
-          className="slick-slide"
-          data-index={4}
-          onClick={[Function]}
-          style={
-            Object {
-              "outline": "none",
-              "width": 0,
-            }
-          }
-          tabIndex="-1"
-        >
-          <div>
-            <div
-              style={
-                Object {
-                  "display": "inline-block",
-                  "width": "100%",
-                }
-              }
-              tabIndex={-1}
-            >
-              <div
-                className="item"
-              >
-                <div
-                  className="information dark"
-                >
-                  <h5
-                    className="base xSmall dark heading"
-                  >
-                    Parsley Seed Anti-Oxidant Facial Treatment with No URL
-                  </h5>
-                  
-                </div>
-                <div
-                  className="imageContainer"
-                >
-                  <picture
-                    className="base picture dark image"
-                  >
-                    <source
-                      media="(min-width: 1025px)"
-                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
-                    />
-                    <source
-                      media="(min-width: 640px)"
-                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
-                    />
-                    <source
-                      media="(min-width: 0px)"
-                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
-                    />
-                    <img
-                      alt="Image Parsley Seed Anti-Oxidant Facial Treatment"
-                    />
-                  </picture>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
     <button
-      className="base external inlineStyle dark base"
+      className="base external inlineStyle light base"
       disabled={false}
       onClick={[Function]}
       title="next slide"
       type="button"
     >
       <svg
-        className="base chevron dark"
+        className="base chevron light"
         data-ref=""
         focusable="false"
         height={18}
@@ -414,6 +540,13 @@ exports[`<Carousel /> renders base component correctly 1`] = `
             onClick={[Function]}
           />
         </li>
+        <li
+          className=""
+        >
+          <div
+            onClick={[Function]}
+          />
+        </li>
       </ul>
     </div>
   </div>
@@ -424,10 +557,52 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
 <section>
   <div
     className="slick-slider base dark slick-initialized"
+    dir="ltr"
   >
-    
+    <button
+      className="base external inlineStyle light base hidden"
+      disabled={false}
+      onClick={null}
+      title="next slide"
+      type="button"
+    >
+      <svg
+        className="base chevron light"
+        data-ref=""
+        focusable="false"
+        height={18}
+        role="img"
+        style={
+          Object {
+            "height": "18px",
+            "width": "18px",
+          }
+        }
+        tabIndex={-1}
+        viewBox="0 0 50 50"
+        width={18}
+      >
+        <g>
+          <polygon
+            className="chevronAndCloseWithCircleChevron"
+            points="25,31.3 4.2,10.5 0.1,14.6 25,39.5 50,14.6 45.9,10.5"
+          />
+        </g>
+      </svg>
+    </button>
     <div
       className="slick-list"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={null}
+      onMouseMove={null}
+      onMouseUp={[Function]}
+      onTouchCancel={null}
+      onTouchEnd={[Function]}
+      onTouchMove={null}
+      onTouchStart={[Function]}
+      style={Object {}}
     >
       <div
         className="slick-track"
@@ -478,7 +653,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                   className="information dark"
                 >
                   <h5
-                    className="base xSmall dark heading"
+                    className="base xXSmall dark heading"
                   >
                     Parsley Seed Facial Cleanser
                   </h5>
@@ -548,10 +723,15 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                   className="information dark"
                 >
                   <h5
-                    className="base xSmall dark heading"
+                    className="base xXSmall dark heading"
                   >
                     Parsley Seed Facial Cleanser
                   </h5>
+                  <div
+                    className="description"
+                  >
+                    Example description
+                  </div>
                 </div>
                 <div
                   className="imageContainer"
@@ -607,13 +787,148 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                 className="base dark item link"
                 href="/"
                 target="_self"
+                title="Link to Parsley Seed Facial Cleanser"
+              >
+                <div
+                  className="information dark"
+                >
+                  <h5
+                    className="base xXSmall dark heading"
+                  >
+                    Parsley Seed Facial Cleanser
+                  </h5>
+                  <div
+                    className="description"
+                  >
+                    Example description
+                  </div>
+                </div>
+                <div
+                  className="imageContainer"
+                >
+                  <picture
+                    className="base picture dark image"
+                  >
+                    <source
+                      media="(min-width: 1025px)"
+                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                    />
+                    <source
+                      media="(min-width: 640px)"
+                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                    />
+                    <source
+                      media="(min-width: 0px)"
+                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                    />
+                    <img
+                      alt="Image of Parsley Seed Facial Cleanser"
+                    />
+                  </picture>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden={false}
+          className="slick-slide slick-active"
+          data-index={3}
+          onClick={[Function]}
+          style={
+            Object {
+              "outline": "none",
+              "width": 0,
+            }
+          }
+          tabIndex="-1"
+        >
+          <div>
+            <div
+              style={
+                Object {
+                  "display": "inline-block",
+                  "width": "100%",
+                }
+              }
+              tabIndex={-1}
+            >
+              <a
+                className="base dark item link"
+                href="/"
+                target="_self"
+                title="Link to Parsley Seed Facial Cleanser"
+              >
+                <div
+                  className="information dark"
+                >
+                  <h5
+                    className="base xXSmall dark heading"
+                  >
+                    Parsley Seed Facial Cleanser
+                  </h5>
+                </div>
+                <div
+                  className="imageContainer"
+                >
+                  <picture
+                    className="base picture dark image"
+                  >
+                    <source
+                      media="(min-width: 1025px)"
+                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                    />
+                    <source
+                      media="(min-width: 640px)"
+                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                    />
+                    <source
+                      media="(min-width: 0px)"
+                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                    />
+                    <img
+                      alt="Image of Parsley Seed Facial Cleanser"
+                    />
+                  </picture>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden={true}
+          className="slick-slide"
+          data-index={4}
+          onClick={[Function]}
+          style={
+            Object {
+              "outline": "none",
+              "width": 0,
+            }
+          }
+          tabIndex="-1"
+        >
+          <div>
+            <div
+              style={
+                Object {
+                  "display": "inline-block",
+                  "width": "100%",
+                }
+              }
+              tabIndex={-1}
+            >
+              <a
+                className="base dark item link"
+                href="/"
+                target="_self"
                 title="Link to Parsley Seed Cleansing Masque"
               >
                 <div
                   className="information dark"
                 >
                   <h5
-                    className="base xSmall dark heading"
+                    className="base xXSmall dark heading"
                   >
                     Parsley Seed Cleansing Masque
                   </h5>
@@ -646,73 +961,61 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
             </div>
           </div>
         </div>
-        <div
-          aria-hidden={false}
-          className="slick-slide slick-active"
-          data-index={3}
-          onClick={[Function]}
-          style={
-            Object {
-              "outline": "none",
-              "width": 0,
-            }
-          }
-          tabIndex="-1"
-        >
-          <div>
-            <div
-              style={
-                Object {
-                  "display": "inline-block",
-                  "width": "100%",
-                }
-              }
-              tabIndex={-1}
-            >
-              <div
-                className="item"
-              >
-                <div
-                  className="information dark"
-                >
-                  <h5
-                    className="base xSmall dark heading"
-                  >
-                    Parsley Seed Anti-Oxidant Facial Treatment with No URL
-                  </h5>
-                  
-                </div>
-                <div
-                  className="imageContainer"
-                >
-                  <picture
-                    className="base picture dark image"
-                  >
-                    <source
-                      media="(min-width: 1025px)"
-                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
-                    />
-                    <source
-                      media="(min-width: 640px)"
-                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
-                    />
-                    <source
-                      media="(min-width: 0px)"
-                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
-                    />
-                    <img
-                      alt="Image Parsley Seed Anti-Oxidant Facial Treatment"
-                    />
-                  </picture>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
-    
-    
+    <button
+      className="base external inlineStyle light base"
+      disabled={false}
+      onClick={[Function]}
+      title="next slide"
+      type="button"
+    >
+      <svg
+        className="base chevron light"
+        data-ref=""
+        focusable="false"
+        height={18}
+        role="img"
+        style={
+          Object {
+            "height": "18px",
+            "width": "18px",
+          }
+        }
+        tabIndex={-1}
+        viewBox="0 0 50 50"
+        width={18}
+      >
+        <g>
+          <polygon
+            className="chevronAndCloseWithCircleChevron"
+            points="25,31.3 4.2,10.5 0.1,14.6 25,39.5 50,14.6 45.9,10.5"
+          />
+        </g>
+      </svg>
+    </button>
+    <div
+      className="base"
+    >
+      <ul
+        className="list dark"
+      >
+        <li
+          className="slick-active"
+        >
+          <div
+            onClick={[Function]}
+          />
+        </li>
+        <li
+          className=""
+        >
+          <div
+            onClick={[Function]}
+          />
+        </li>
+      </ul>
+    </div>
   </div>
 </section>
 `;
@@ -772,7 +1075,7 @@ exports[`<Carousel /> renders component correctly if no \`url\` member is provid
                   className="information dark"
                 >
                   <h5
-                    className="base xSmall dark heading"
+                    className="base xXSmall dark heading"
                   >
                     Parsley Seed Facial Cleanser
                   </h5>

@@ -2,8 +2,13 @@
 
 exports[`<ImageWithHeaderAndContent /> renders base component correctly 1`] = `
 <section
-  className="base theme-dark"
+  className="base original dark"
   div={true}
+  style={
+    Object {
+      "backgroundColor": "#F6F5E8",
+    }
+  }
 >
   <div
     className="mediaWrapper"
@@ -34,14 +39,16 @@ exports[`<ImageWithHeaderAndContent /> renders base component correctly 1`] = `
     <div
       className="wrapper"
     >
-      <header>
+      <header
+        className="header"
+      >
         <h2
           className="base xSmall dark heading"
         >
           How to use
         </h2>
         <h3
-          className="base serifFont xLarge dark"
+          className="base serifFont xLarge dark subHeading"
         >
           A comprehensive skin care regimen, ideal in urban environments.
         </h3>

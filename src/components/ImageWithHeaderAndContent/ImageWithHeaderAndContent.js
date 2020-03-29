@@ -9,6 +9,7 @@ import { ParagraphSet } from '../Paragraph';
 const ImageWithHeaderAndContent = forwardRef(
   (
     {
+      backgroundColor,
       className,
       content,
       copy,
@@ -23,12 +24,18 @@ const ImageWithHeaderAndContent = forwardRef(
     const classSet = cx(
       styles.base,
       { [styles.reverse]: isReverse },
-      styles[`theme-${theme}`],
+      { [styles.original]: !isReverse },
+      styles[theme.toLowerCase()],
       className,
     );
 
     return (
-      <section className={classSet} div={true} ref={ref}>
+      <section
+        className={classSet}
+        div={true}
+        ref={ref}
+        style={{ backgroundColor }}
+      >
         <div
           className={cx(styles.mediaWrapper, {
             [styles.isFullWidthImage]: hasFullWidthImage,
@@ -53,7 +60,7 @@ const ImageWithHeaderAndContent = forwardRef(
           })}
         >
           <div className={styles.wrapper}>
-            <header>
+            <header className={styles.header}>
               <Heading
                 className={styles.heading}
                 level="2"
@@ -64,6 +71,7 @@ const ImageWithHeaderAndContent = forwardRef(
                 {copy.heading}
               </Heading>
               <Heading
+                className={styles.subHeading}
                 hasSerifFont={true}
                 level="3"
                 size="xLarge"
@@ -71,7 +79,7 @@ const ImageWithHeaderAndContent = forwardRef(
               >
                 {copy.subHeading}
               </Heading>
-              <ParagraphSet className={styles.description}>
+              <ParagraphSet className={styles.description} theme={theme}>
                 {copy.description}
               </ParagraphSet>
             </header>
@@ -84,6 +92,7 @@ const ImageWithHeaderAndContent = forwardRef(
 );
 
 ImageWithHeaderAndContent.propTypes = {
+  backgroundColor: PropTypes.string,
   className: PropTypes.string,
   content: PropTypes.any,
   copy: PropTypes.shape({
@@ -94,11 +103,12 @@ ImageWithHeaderAndContent.propTypes = {
   hasFullWidthImage: PropTypes.bool,
   image: PropTypes.object.isRequired,
   isReverse: PropTypes.bool,
-  theme: PropTypes.string,
+  theme: PropTypes.oneOf(['dark', 'light']),
   video: PropTypes.object,
 };
 
 ImageWithHeaderAndContent.defaultProps = {
+  backgroundColor: '#F6F5E8',
   className: undefined,
   content: undefined,
   copy: undefined,

@@ -20,6 +20,7 @@ import Modal from './Modal';
 import Overlay from './Overlay';
 import Paragraph, { P, ParagraphSet } from './Paragraph';
 import Quote from './Quote';
+import SectionHeading from './SectionHeading';
 import SubNav from './SubNav';
 import Transition from './Transition';
 import TwoColumnLayout from './TwoColumnLayout';
@@ -51,6 +52,7 @@ export default {
   Paragraph,
   ParagraphSet,
   Quote,
+  SectionHeading,
   SubNav,
   Transition,
   TwoColumnLayout,

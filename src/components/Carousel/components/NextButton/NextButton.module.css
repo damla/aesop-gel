@@ -11,8 +11,9 @@
   align-items: center;
   justify-content: center;
   background-color: var(--color-secondary);
+  pointer-events: auto;
   transform: translate3d(80px, 0, 0);
-  transition: transform 500ms var(--easing-ease-out-cubic);
+  transition: all 500ms var(--easing-ease-out-cubic);
 
   @media (--viewport-md) {
     display: flex;
@@ -22,6 +23,11 @@
     fill: var(--color-white);
     transform: rotate(-90deg);
   }
+}
+
+.hidden {
+  pointer-events: none;
+  transform: translate3d(80px, 0, 0) !important;
 }
 
 :global {

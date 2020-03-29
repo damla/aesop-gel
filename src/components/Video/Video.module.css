@@ -97,6 +97,7 @@
   padding-right: 4px;
   color: var(--color-light-link);
   font-size: rem(17px);
+
   &:hover,
   &:focus {
     color: var(--color-light-link-hover);
@@ -123,7 +124,7 @@
 }
 
 .icon {
-  transform: translate(5px, 1px);
+  transform: translate(7px, 1px);
 }
 
 .isVisible {

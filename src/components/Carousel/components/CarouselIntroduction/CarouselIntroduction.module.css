@@ -1,7 +1,9 @@
 @import 'styles/index';
 
 .base {
-  display: block;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
 
   @media (--viewport-md-only) {
     display: flex;
@@ -10,6 +12,7 @@
 
 .heading {
   margin-top: 0;
+  margin-bottom: 0;
 
   @media (--viewport-md-only) {
     width: 50%;
@@ -23,4 +26,12 @@
     width: 50%;
     max-width: 100%;
   }
+}
+
+.hasFooter.hasFooter {
+  margin-bottom: 20px;
+}
+
+.ctaWrapper {
+  margin-top: auto;
 }

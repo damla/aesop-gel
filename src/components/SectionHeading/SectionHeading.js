@@ -2,17 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import Heading from '~/components/Heading';
-import { getHeadingLevel, getSubHeadingLevel } from './PageHeading.utils';
-import styles from './PageHeading.module.css';
+import { getHeadingLevel, getSubHeadingLevel } from './SectionHeading.utils';
+import styles from './SectionHeading.module.css';
 
-const PageHeading = ({
+const SectionHeading = ({
   childrenClassNames,
   className,
   eyebrow,
-  id,
-  subHeading,
-  heading,
+  hasHeadingTopMargin,
   hasSerifFontHeading,
+  heading,
+  id,
+  isPageHeading,
+  subHeading,
   theme,
 }) => {
   const classSet = cx(styles.base, className);
@@ -29,8 +31,9 @@ const PageHeading = ({
         <Heading
           className={eyebrowClassSet}
           hasMediumWeightFont={true}
-          level="1"
-          size="xSmall"
+          hasTopMargin={hasHeadingTopMargin}
+          level={isPageHeading ? '1' : '2'}
+          size="xXSmall"
           theme={theme}
         >
           {eyebrow}
@@ -40,7 +43,8 @@ const PageHeading = ({
         <Heading
           className={headingClassSet}
           hasSerifFont={hasSerifFontHeading}
-          level={getHeadingLevel(eyebrow)}
+          hasTopMargin={hasHeadingTopMargin}
+          level={getHeadingLevel(eyebrow, isPageHeading)}
           size="xLarge"
           theme={theme}
         >
@@ -51,7 +55,8 @@ const PageHeading = ({
         <Heading
           className={subHeadingClassSet}
           hasMediumWeightFont={true}
-          level={getSubHeadingLevel(eyebrow, heading)}
+          hasTopMargin={hasHeadingTopMargin}
+          level={getSubHeadingLevel(eyebrow, heading, isPageHeading)}
           size="xSmall"
           theme={theme}
         >
@@ -62,7 +67,7 @@ const PageHeading = ({
   );
 };
 
-PageHeading.propTypes = {
+SectionHeading.propTypes = {
   childrenClassNames: PropTypes.shape({
     eyebrow: PropTypes.string,
     heading: PropTypes.string,
@@ -71,13 +76,15 @@ PageHeading.propTypes = {
   className: PropTypes.string,
   eyebrow: PropTypes.string,
   hasSerifFontHeading: PropTypes.bool,
+  hasHeadingTopMargin: PropTypes.bool,
   heading: PropTypes.string,
   id: PropTypes.string,
+  isPageHeading: PropTypes.bool,
   subHeading: PropTypes.string,
   theme: PropTypes.oneOf(['dark', 'light']),
 };
 
-PageHeading.defaultProps = {
+SectionHeading.defaultProps = {
   childrenClassNames: {
     eyebrow: undefined,
     heading: undefined,
@@ -85,11 +92,12 @@ PageHeading.defaultProps = {
   },
   className: undefined,
   eyebrow: undefined,
-  hasSerifFontHeading: false,
+  hasHeadingTopMargin: false,
   heading: undefined,
   id: undefined,
+  isPageHeading: false,
   subHeading: undefined,
   theme: 'dark',
 };
 
-export default PageHeading;
+export default SectionHeading;

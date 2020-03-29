@@ -13,7 +13,7 @@ const Slide = ({ heading, description, image, theme }) => (
           <Heading
             className={styles.heading}
             level="5"
-            size="xSmall"
+            size="xXSmall"
             theme={theme}
           >
             {heading}
