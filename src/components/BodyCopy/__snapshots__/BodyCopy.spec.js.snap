@@ -9,18 +9,18 @@ exports[`<BodyCopy /> renders base component correctly 1`] = `
     className="base"
     id="Anti-Oxidant"
   >
-    <h1
-      className="base mediumWeightFont xSmall dark eyebrow eyebrow"
+    <h2
+      className="base noTopMargin mediumWeightFont xXSmall dark eyebrow eyebrow"
     >
       Recommended Nearby
-    </h1>
+    </h2>
     <h3
-      className="base xLarge dark heading heading"
+      className="base noTopMargin xLarge dark heading heading"
     >
       Aesop & The Paris Review: A Partnership Extended
     </h3>
     <h4
-      className="base mediumWeightFont xSmall dark subHeading subHeading"
+      className="base noTopMargin mediumWeightFont xSmall dark subHeading subHeading"
     >
       Active Nutrients
     </h4>
@@ -52,7 +52,7 @@ exports[`<BodyCopy /> renders promary title as an \`h2\` if no \`eyebrow\` or \`
     className="base"
   >
     <h2
-      className="base mediumWeightFont xSmall dark subHeading subHeading"
+      className="base noTopMargin mediumWeightFont xSmall dark subHeading subHeading"
     >
       Aesop & The Paris Review: A Partnership Extended
     </h2>
@@ -68,7 +68,7 @@ exports[`<BodyCopy /> renders promary title as an \`h2\` if no \`eyebrow\` prop 
     className="base"
   >
     <h2
-      className="base xLarge dark heading heading"
+      className="base noTopMargin xLarge dark heading heading"
     >
       Aesop & The Paris Review: A Partnership Extended
     </h2>

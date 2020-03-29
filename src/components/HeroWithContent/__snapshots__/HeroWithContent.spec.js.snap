@@ -38,7 +38,7 @@ exports[`<HeroWithContent /> renders base component correctly 1`] = `
           id="ImageHeader-old-component"
         >
           <h2
-            className="base xLarge dark heading heading"
+            className="base noTopMargin xLarge dark heading heading"
           >
             Gentle Facial Cleansing Milk
           </h2>
