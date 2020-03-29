@@ -2,24 +2,6 @@
 
 exports[`<Carousel /> renders base component correctly 1`] = `
 <section>
-  <aside
-    className="mobileCarouselIntroductionWrapper"
-  >
-    <header
-      className="base dark"
-    >
-      <h4
-        className="base serifFont xLarge dark heading"
-      >
-        Accompany with
-      </h4>
-      <p
-        className="base dark description"
-      >
-        Richly foaming Parsley Seed Facial Cleanser offers mild exfoliation from Lactic Acid to clarify and soften skin; complement twice weekly with Parsley Seed Cleansing Masque to extract impurities and purify pores. For intensive fortification and hydration, blend Hydrator with Parsley Seed Anti-Oxidant Facial Treatment.
-      </p>
-    </header>
-  </aside>
   <div
     className="slick-slider base dark slick-initialized"
     dir="ltr"
@@ -99,20 +81,69 @@ exports[`<Carousel /> renders base component correctly 1`] = `
           tabIndex="-1"
         >
           <div>
-            <header
+            <div
               className="base dark"
             >
-              <h4
-                className="base serifFont xLarge dark heading"
+              <header
+                className="base heading"
               >
-                Accompany with
-              </h4>
+                <h2
+                  className="base noTopMargin mediumWeightFont xXSmall dark eyebrow"
+                >
+                  Skin Parsley Seed
+                </h2>
+                <h3
+                  className="base noTopMargin serifFont xLarge dark heading"
+                >
+                  Accompany with
+                </h3>
+              </header>
               <p
-                className="base dark description"
+                className="base dark description hasFooter"
               >
                 Richly foaming Parsley Seed Facial Cleanser offers mild exfoliation from Lactic Acid to clarify and soften skin; complement twice weekly with Parsley Seed Cleansing Masque to extract impurities and purify pores. For intensive fortification and hydration, blend Hydrator with Parsley Seed Anti-Oxidant Facial Treatment.
               </p>
-            </header>
+              <footer
+                className="ctaWrapper"
+              >
+                <a
+                  className="base hasIcon dark"
+                  href="/"
+                  target="_self"
+                  title="Link to Browse all"
+                >
+                  Browse all
+                  <i
+                    aria-hidden="true"
+                    className="icon"
+                  >
+                    <svg
+                      className="base rightArrow dark"
+                      data-ref=""
+                      focusable="false"
+                      height={15}
+                      role="img"
+                      style={
+                        Object {
+                          "height": "15px",
+                          "width": "15px",
+                        }
+                      }
+                      tabIndex={-1}
+                      viewBox="0 0 50 50"
+                      width={15}
+                    >
+                      <g>
+                        <path
+                          className="undefined"
+                          d="M30.1,5.3L50,25.1L30.1,45h-6.6l18-17.6H0v-4.8h41.5l-18-17.6h6.6V5.3z"
+                        />
+                      </g>
+                    </svg>
+                  </i>
+                </a>
+              </footer>
+            </div>
           </div>
         </div>
         <div
@@ -148,7 +179,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                   className="information dark"
                 >
                   <h5
-                    className="base xSmall dark heading"
+                    className="base xXSmall dark heading"
                   >
                     Parsley Seed Facial Cleanser
                   </h5>
@@ -218,7 +249,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                   className="information dark"
                 >
                   <h5
-                    className="base xSmall dark heading"
+                    className="base xXSmall dark heading"
                   >
                     Parsley Seed Facial Cleanser
                   </h5>
@@ -288,7 +319,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                   className="information dark"
                 >
                   <h5
-                    className="base xSmall dark heading"
+                    className="base xXSmall dark heading"
                   >
                     Parsley Seed Facial Cleanser
                   </h5>
@@ -358,7 +389,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                   className="information dark"
                 >
                   <h5
-                    className="base xSmall dark heading"
+                    className="base xXSmall dark heading"
                   >
                     Parsley Seed Facial Cleanser
                   </h5>
@@ -423,7 +454,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                   className="information dark"
                 >
                   <h5
-                    className="base xSmall dark heading"
+                    className="base xXSmall dark heading"
                   >
                     Parsley Seed Cleansing Masque
                   </h5>
@@ -622,7 +653,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                   className="information dark"
                 >
                   <h5
-                    className="base xSmall dark heading"
+                    className="base xXSmall dark heading"
                   >
                     Parsley Seed Facial Cleanser
                   </h5>
@@ -692,7 +723,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                   className="information dark"
                 >
                   <h5
-                    className="base xSmall dark heading"
+                    className="base xXSmall dark heading"
                   >
                     Parsley Seed Facial Cleanser
                   </h5>
@@ -762,7 +793,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                   className="information dark"
                 >
                   <h5
-                    className="base xSmall dark heading"
+                    className="base xXSmall dark heading"
                   >
                     Parsley Seed Facial Cleanser
                   </h5>
@@ -832,7 +863,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                   className="information dark"
                 >
                   <h5
-                    className="base xSmall dark heading"
+                    className="base xXSmall dark heading"
                   >
                     Parsley Seed Facial Cleanser
                   </h5>
@@ -897,7 +928,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                   className="information dark"
                 >
                   <h5
-                    className="base xSmall dark heading"
+                    className="base xXSmall dark heading"
                   >
                     Parsley Seed Cleansing Masque
                   </h5>
@@ -1044,7 +1075,7 @@ exports[`<Carousel /> renders component correctly if no \`url\` member is provid
                   className="information dark"
                 >
                   <h5
-                    className="base xSmall dark heading"
+                    className="base xXSmall dark heading"
                   >
                     Parsley Seed Facial Cleanser
                   </h5>
