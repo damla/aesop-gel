@@ -15,7 +15,7 @@
 
 .icon {
   position: absolute;
-  top: 4px;
+  top: calc(50% - 8px);
   right: 0;
   display: inline-block;
 
