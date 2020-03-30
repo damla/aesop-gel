@@ -115,7 +115,7 @@ export const Video = forwardRef(
         <Poster
           copy={{
             playButtonTitle: copy.playButtonTitle,
-            altText: poster.altText,
+            altText: poster.copy.altText,
           }}
           isActive={!hasActiveVideo}
           large={poster.large}
@@ -147,6 +147,7 @@ export const Video = forwardRef(
 Video.propTypes = {
   className: PropTypes.string,
   copy: PropTypes.shape({
+    altText: PropTypes.string,
     closeButtonTitle: PropTypes.string,
     playButtonTitle: PropTypes.string,
     pauseButtonTitle: PropTypes.string,
@@ -159,7 +160,18 @@ Video.propTypes = {
   isFullWidth: PropTypes.bool,
   large: PropTypes.string,
   medium: PropTypes.string,
-  poster: PropTypes.object,
+  poster: PropTypes.shape({
+    className: PropTypes.string,
+    copy: PropTypes.shape({
+      playButtonTitle: PropTypes.string,
+      altText: PropTypes.string.isRequired,
+    }),
+    isActive: PropTypes.string,
+    large: PropTypes.bool,
+    medium: PropTypes.string,
+    onClick: PropTypes.func,
+    small: PropTypes.string,
+  }),
   small: PropTypes.string,
   title: PropTypes.string,
 };
@@ -167,6 +179,7 @@ Video.propTypes = {
 Video.defaultProps = {
   className: undefined,
   copy: {
+    altText: undefined,
     closeButtonTitle: 'Close',
     playButtonTitle: 'View video',
     pauseButtonTitle: 'Pause video',
@@ -179,7 +192,18 @@ Video.defaultProps = {
   isFullWidth: true,
   large: undefined,
   medium: undefined,
-  poster: undefined,
+  poster: {
+    className: undefined,
+    copy: {
+      playButtonTitle: undefined,
+      altText: undefined,
+    },
+    isActive: undefined,
+    large: undefined,
+    medium: undefined,
+    onClick: undefined,
+    small: undefined,
+  },
   small: undefined,
   title: undefined,
 };
