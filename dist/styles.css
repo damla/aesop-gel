@@ -434,7 +434,7 @@ sans-serif;
 }
 .Hyperlink-module_icon__1hgGy {
   position: absolute;
-  top: 4px;
+  top: calc(50% - 8px);
   right: 0;
   display: inline-block;
 }

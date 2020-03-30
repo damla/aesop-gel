@@ -1,0 +1,187 @@
+@import 'styles/index';
+
+.fullScreenControls {
+  @media (--viewport-lg) {
+    position: fixed;
+    z-index: var(--z-index-fixed-full-screen-video);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    transform: scale(0.95);
+    transition: all 800ms;
+  }
+}
+
+.videoTitle {
+  position: absolute;
+  top: calc(var(--layout-sm-spacing) * 2);
+  left: calc(var(--layout-sm-spacing) * 2);
+
+  @media (--viewport-md) {
+    top: calc(var(--layout-md-spacing) * 2);
+    left: calc(var(--layout-md-spacing) * 2);
+  }
+
+  @media (--viewport-lg) {
+    top: calc(var(--layout-lg-spacing) * 2);
+    left: calc(var(--layout-lg-spacing) * 2);
+  }
+}
+
+.activeFullScreenControls {
+  pointer-events: auto;
+  transform: scale(1);
+}
+
+.close {
+  position: absolute;
+  top: calc(var(--layout-sm-spacing) * 2);
+  right: calc(var(--layout-sm-spacing) * 2);
+  padding-right: 4px;
+  color: var(--color-light-link);
+  font-size: rem(17px);
+
+  &:hover,
+  &:focus {
+    color: var(--color-light-link-hover);
+  }
+
+  svg {
+    fill: var(--color-light-link);
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: var(--color-light-link-hover);
+  }
+
+  @media (--viewport-md) {
+    top: calc(var(--layout-md-spacing) * 2);
+    right: calc(var(--layout-md-spacing) * 2);
+  }
+
+  @media (--viewport-lg) {
+    top: calc(var(--layout-lg-spacing) * 2);
+    right: calc(var(--layout-lg-spacing) * 2);
+  }
+}
+
+.playPauseButton {
+  position: absolute;
+  bottom: var(--layout-sm-spacing);
+  left: var(--layout-sm-spacing);
+  display: flex;
+  align-items: center;
+  color: var(--color-light-link);
+
+  @media (--viewport-md) {
+    bottom: var(--layout-md-spacing);
+    left: var(--layout-md-spacing);
+  }
+
+  @media (--viewport-lg) {
+    bottom: var(--layout-lg-spacing);
+    left: var(--layout-lg-spacing);
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--color-light-link-hover);
+
+    .playPauseButtonIcon {
+      background-color: var(--color-light-link-hover);
+    }
+  }
+}
+
+.buttonIconOffset.buttonIconOffset {
+  svg {
+    transform: translateX(1px);
+  }
+}
+
+.playPauseButtonLabel {
+  display: none;
+
+  @media (--viewport-lg) {
+    display: inline;
+  }
+}
+
+.icon {
+  transform: translate(7px, 1px);
+}
+
+.fullScreenPlayPauseButton.fullScreenPlayPauseButton {
+  position: absolute;
+  z-index: var(--z-index-fixed-full-screen-video);
+  top: calc(50vh - 40px - 13px);
+  left: calc(50vw - 40px - 13px);
+  padding: 40px;
+  border: 1px solid var(--color-light-link);
+  background-color: var(--color-white-rgba-20);
+  line-height: 0;
+
+  svg {
+    fill: var(--color-light-link);
+  }
+
+  &:focus,
+  &:hover {
+    background-color: var(--color-white-rgba-60);
+  }
+}
+
+.playPauseButtonIcon.playPauseButtonIcon {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  background-color: var(--color-light-link);
+  border-radius: 100%;
+
+  &:hover,
+  &:focus {
+    color: var(--color-light-link-hover);
+  }
+
+  svg {
+    fill: var(--color-dark-background);
+  }
+}
+
+.progressBar {
+  position: absolute;
+  right: calc(var(--layout-lg-spacing) * 2);
+  bottom: 90px;
+  left: calc(var(--layout-lg-spacing) * 2);
+  display: block;
+  overflow: hidden;
+  height: 3px;
+  margin: 0;
+  background-color: var(--color-white-rgba-20);
+
+  @media (--viewport-sm-only) {
+    right: calc(var(--layout-sm-spacing) * 2);
+    bottom: 30px;
+    left: calc(var(--layout-sm-spacing) * 2);
+  }
+
+  @media (--viewport-md-only) {
+    right: calc(var(--layout-md-spacing) * 2);
+    bottom: 48px;
+    left: calc(var(--layout-md-spacing) * 2);
+  }
+}
+
+.progress {
+  width: 0;
+  height: 3px;
+  background-color: var(--color-white);
+  content: '';
+  transition: width 100ms var(--easing-ease-in-sine);
+}
