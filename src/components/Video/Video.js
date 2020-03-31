@@ -155,7 +155,7 @@ Video.propTypes = {
   hasAutoplay: PropTypes.bool,
   hasLoop: PropTypes.bool,
   hasPlayInFullScreen: PropTypes.bool,
-  id: PropTypes.string.isRequired,
+  id: PropTypes.string,
   isFullWidth: PropTypes.bool,
   large: PropTypes.string,
   medium: PropTypes.string,
@@ -163,7 +163,7 @@ Video.propTypes = {
     className: PropTypes.string,
     copy: PropTypes.shape({
       playButtonTitle: PropTypes.string,
-      altText: PropTypes.string.isRequired,
+      altText: PropTypes.string,
     }),
     isActive: PropTypes.string,
     large: PropTypes.bool,

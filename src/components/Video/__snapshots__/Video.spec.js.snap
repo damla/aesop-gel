@@ -40,7 +40,9 @@ exports[`<Video /> renders base component correctly 1`] = `
     <picture
       className="base picture dark"
     >
-      <img />
+      <img
+        alt="How to Use Video for Tea Tree Leaf Facial Exfoliant"
+      />
     </picture>
   </button>
   <div

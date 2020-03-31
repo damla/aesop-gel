@@ -42,7 +42,7 @@ Poster.propTypes = {
     playButtonTitle: PropTypes.string,
     altText: PropTypes.string.isRequired,
   }),
-  isActive: PropTypes.string,
+  isActive: PropTypes.bool,
   large: PropTypes.bool,
   medium: PropTypes.string,
   onClick: PropTypes.func,
