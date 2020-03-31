@@ -55,7 +55,7 @@ export const Video = forwardRef(
         videoRefCurrent.addEventListener('timeupdate', handleProgress);
       }
 
-      return function clear() {
+      return function cleanup() {
         videoRefCurrent.removeEventListener('timeupdate', handleProgress);
       };
     });
@@ -70,7 +70,7 @@ export const Video = forwardRef(
       setIsPlaying(false);
       setHasActiveVideo(false);
 
-      setTimeout(() => {
+      window.setTimeout(() => {
         videoRef.current.currentTime = 0;
         videoRef.current.load();
         setProgress(0);
@@ -147,7 +147,6 @@ export const Video = forwardRef(
 Video.propTypes = {
   className: PropTypes.string,
   copy: PropTypes.shape({
-    altText: PropTypes.string,
     closeButtonTitle: PropTypes.string,
     playButtonTitle: PropTypes.string,
     pauseButtonTitle: PropTypes.string,
@@ -179,7 +178,6 @@ Video.propTypes = {
 Video.defaultProps = {
   className: undefined,
   copy: {
-    altText: undefined,
     closeButtonTitle: 'Close',
     playButtonTitle: 'View video',
     pauseButtonTitle: 'Pause video',

@@ -49,73 +49,77 @@ exports[`<Video /> renders base component correctly 1`] = `
     <div
       className="zoomEnter"
     >
-      <button
-        className="base external inlineStyle dark close"
-        disabled={false}
-        onClick={[Function]}
-        title="Close"
-        type="button"
+      <div
+        className="fullScreenControlsHeader"
       >
-        Close
-        <svg
-          className="base close light icon"
-          data-ref=""
-          focusable="false"
-          height={12}
-          role="img"
-          style={
-            Object {
-              "height": "12px",
-              "width": "12px",
-            }
-          }
-          tabIndex={-1}
-          viewBox="0 0 50 50"
-          width={12}
+        <button
+          className="base external inlineStyle dark close"
+          disabled={false}
+          onClick={[Function]}
+          title="Close"
+          type="button"
         >
-          <g>
-            <polygon
-              className="close"
-              points="50,5 45,0 25,20 5,0 0,5 20,25 0,45 5,50 25,30 45,50 50,45 30,25"
-            />
-          </g>
-        </svg>
-      </button>
-      <button
-        className="base external inlineStyle dark fullScreenPlayPauseButton"
-        disabled={false}
-        onClick={[Function]}
-        title="Pause video"
-        type="button"
-      >
-        <svg
-          className="base pause light"
-          data-ref=""
-          focusable="false"
-          height={26}
-          role="img"
-          style={
-            Object {
-              "height": "26px",
-              "width": "26px",
+          Close
+          <svg
+            className="base close light icon"
+            data-ref=""
+            focusable="false"
+            height={12}
+            role="img"
+            style={
+              Object {
+                "height": "12px",
+                "width": "12px",
+              }
             }
-          }
-          tabIndex={-1}
-          viewBox="0 0 9 10"
-          width={26}
+            tabIndex={-1}
+            viewBox="0 0 50 50"
+            width={12}
+          >
+            <g>
+              <polygon
+                className="close"
+                points="50,5 45,0 25,20 5,0 0,5 20,25 0,45 5,50 25,30 45,50 50,45 30,25"
+              />
+            </g>
+          </svg>
+        </button>
+        <button
+          className="base external inlineStyle dark fullScreenPlayPauseButton"
+          disabled={false}
+          onClick={[Function]}
+          title="Pause video"
+          type="button"
         >
-          <g>
-            <polygon
-              className="play"
-              points="0,0 3,0 3,10 0,10 0,0"
-            />
-            <polygon
-              className="play"
-              points="6,0 9,0 9,10 6,10 6,0"
-            />
-          </g>
-        </svg>
-      </button>
+          <svg
+            className="base pause light"
+            data-ref=""
+            focusable="false"
+            height={26}
+            role="img"
+            style={
+              Object {
+                "height": "26px",
+                "width": "26px",
+              }
+            }
+            tabIndex={-1}
+            viewBox="0 0 9 10"
+            width={26}
+          >
+            <g>
+              <polygon
+                className="play"
+                points="0,0 3,0 3,10 0,10 0,0"
+              />
+              <polygon
+                className="play"
+                points="6,0 9,0 9,10 6,10 6,0"
+              />
+            </g>
+          </svg>
+        </button>
+      </div>
       <div
         className="progressBar"
       >

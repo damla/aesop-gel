@@ -1,6 +1,8 @@
-import React from 'react';
-import cx from 'classnames';
+import React, { useEffect, useState, useRef } from 'react';
 import PropTypes from 'prop-types';
+import cx from 'classnames';
+import debounce from 'lodash/debounce';
+import { useEscapeKeyListener } from '~/customHooks/useEscapeKeyListener';
 import Button from '~/components/Button';
 import Heading from '~/components/Heading';
 import Icon from '~/components/Icon';
@@ -19,6 +21,64 @@ const Controls = ({
   progress,
   videoTitle,
 }) => {
+  const [
+    isFullScreenControlsHeaderActive,
+    setIsFullScreenControlsHeaderActive,
+  ] = useState(true);
+
+  useEscapeKeyListener(() => {
+    setIsFullScreenControlsHeaderActive(true);
+    onCloseButtonClick();
+  });
+
+  const eventTimeout = useRef(null);
+  const windowIsDefined = typeof window !== 'undefined';
+  const TIMEOUT = 3000;
+
+  useEffect(() => {
+    if (windowIsDefined) {
+      window.clearTimeout(eventTimeout.current);
+    }
+
+    const startTimeout = () => {
+      setIsFullScreenControlsHeaderActive(true);
+
+      if (windowIsDefined) {
+        window.clearTimeout(eventTimeout.current);
+
+        eventTimeout.current = window.setTimeout(() => {
+          setIsFullScreenControlsHeaderActive(false);
+        }, TIMEOUT);
+      }
+    };
+
+    if (hasActiveVideo && hasPlayInFullScreen) {
+      startTimeout();
+    }
+
+    const handleMouseMove = debounce(() => {
+      if (hasActiveVideo && hasPlayInFullScreen) {
+        startTimeout();
+      }
+    }, 10);
+
+    if (windowIsDefined) {
+      window.addEventListener('mousemove', handleMouseMove);
+    }
+
+    return function cleanup() {
+      if (windowIsDefined) {
+        window.removeEventListener('mousemove', handleMouseMove);
+        window.clearTimeout(eventTimeout.current);
+      }
+    };
+  }, [windowIsDefined, hasActiveVideo, hasPlayInFullScreen]);
+
+  const handleCloseButtonClick = () => {
+    setIsFullScreenControlsHeaderActive(true);
+    onCloseButtonClick();
+  };
+
   const classSet = cx(styles.base, className);
 
   const fullScreenControlsClassSet = cx({
@@ -50,41 +110,47 @@ const Controls = ({
         type="zoom"
       >
         <div className={fullScreenControlsClassSet}>
-          {videoTitle && (
-            <Heading
-              className={styles.videoTitle}
-              isFlush={true}
-              level="3"
-              size="xSmall"
-              theme="light"
+          <div
+            className={cx(styles.fullScreenControlsHeader, {
+              [styles.hidden]: !isFullScreenControlsHeaderActive,
+            })}
+          >
+            {videoTitle && (
+              <Heading
+                className={styles.videoTitle}
+                isFlush={true}
+                level="3"
+                size="xSmall"
+                theme="light"
+              >
+                {videoTitle}
+              </Heading>
+            )}
+
+            <Button
+              className={styles.close}
+              isInline={true}
+              onClick={handleCloseButtonClick}
+              title={copy.closeButtonTitle}
             >
-              {videoTitle}
-            </Heading>
-          )}
+              {copy.closeButtonTitle}
+              <Icon className={styles.icon} name="close" theme="light" />
+            </Button>
 
-          <Button
-            className={styles.close}
-            isInline={true}
-            onClick={onCloseButtonClick}
-            title={copy.closeButtonTitle}
-          >
-            {copy.closeButtonTitle}
-            <Icon className={styles.icon} name="close" theme="light" />
-          </Button>
-
-          <Button
-            className={styles.fullScreenPlayPauseButton}
-            isInline={true}
-            onClick={onPlayPauseButtonClick}
-            title={playPauseButtonTitle}
-          >
-            <Icon
-              height={26}
-              name={playPauseButtonIconName}
-              theme="light"
-              width={26}
-            />
-          </Button>
+            <Button
+              className={styles.fullScreenPlayPauseButton}
+              isInline={true}
+              onClick={onPlayPauseButtonClick}
+              title={playPauseButtonTitle}
+            >
+              <Icon
+                height={26}
+                name={playPauseButtonIconName}
+                theme="light"
+                width={26}
+              />
+            </Button>
+          </div>
 
           <div className={styles.progressBar}>
             <div
