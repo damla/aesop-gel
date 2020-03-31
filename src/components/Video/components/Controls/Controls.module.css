@@ -30,6 +30,17 @@
   }
 }
 
+.fullScreenControlsHeader {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 500ms var(--easing-ease-in-sine);
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .activeFullScreenControls {
   pointer-events: auto;
   transform: scale(1);
