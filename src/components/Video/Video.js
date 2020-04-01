@@ -35,12 +35,15 @@ export const Video = forwardRef(
     const [isPlaying, setIsPlaying] = useState(hasAutoplay);
     const [hasActiveVideo, setHasActiveVideo] = useState(hasAutoplay);
     const [progress, setProgress] = useState(0);
+    const isMobileOrTablet = ascertainIsSmallOrMediumOnlyViewport();
 
     const videoRef = useRef();
 
     useWindowHasResized();
 
-    useOverflowHidden(hasActiveVideo && hasPlayInFullScreen);
+    useOverflowHidden(
+      hasActiveVideo && hasPlayInFullScreen && !isMobileOrTablet,
+    );
 
     useEffect(() => {
       const videoRefCurrent = videoRef.current;
@@ -95,8 +98,6 @@ export const Video = forwardRef(
     const hanldeOnPosterClick = () => playVideo();
 
     const handlePlayPauseButtonOnClick = isPlaying ? pauseVideo : playVideo;
-
-    const isMobileOrTablet = ascertainIsSmallOrMediumOnlyViewport();
 
     const classSet = cx(styles.base, className, {
       [styles.fullWidth]: isFullWidth,
