@@ -5,10 +5,10 @@ import Heading from '~/components/Heading';
 import Image from '~/components/Image';
 import styles from './Slide.module.css';
 
-const Slide = ({ heading, description, image, theme }) => (
+const Slide = ({ heading, description, id, image, theme }) => (
   <>
     {(heading || description) && (
-      <div className={cx(styles.information, styles[theme])}>
+      <div className={cx(styles.information, styles[theme])} id={id}>
         {heading && (
           <Heading
             className={styles.heading}
@@ -31,6 +31,7 @@ const Slide = ({ heading, description, image, theme }) => (
 Slide.propTypes = {
   heading: PropTypes.string,
   description: PropTypes.string,
+  id: PropTypes.string,
   image: PropTypes.object.isRequired,
   theme: PropTypes.oneOf(['dark', 'light']),
 };
@@ -38,6 +39,7 @@ Slide.propTypes = {
 Slide.defaultProps = {
   heading: undefined,
   description: undefined,
+  id: undefined,
   image: undefined,
   theme: 'dark',
 };

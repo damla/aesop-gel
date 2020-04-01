@@ -50,6 +50,7 @@ const DialogBanner = ({
               className={styles.warningIcon}
               height={22}
               name="warning"
+              theme="light"
               width={22}
             />
           </div>
@@ -76,6 +77,7 @@ const DialogBanner = ({
                   className={styles.closeIcon}
                   height={12}
                   name="close"
+                  theme="light"
                   width={12}
                 />
               </Button>

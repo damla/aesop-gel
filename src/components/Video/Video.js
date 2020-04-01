@@ -5,6 +5,7 @@ import { useEscapeKeyListener } from '~/customHooks/useEscapeKeyListener';
 import { useOverflowHidden } from '~/customHooks/useOverflowHidden';
 import useWindowHasResized from '~/customHooks/useWindowHasResized';
 import { ascertainIsSmallOrMediumOnlyViewport } from '~/utils/viewports';
+import Image from '~/components/Image';
 import Controls from './components/Controls';
 import Poster from './components/Poster';
 import VideoPlayer from './components/VideoPlayer';
@@ -15,6 +16,8 @@ export const Video = forwardRef(
     {
       className,
       copy,
+      fallbackImage,
+      hasControls,
       hasAllowAudio,
       hasAutoplay,
       hasLoop,
@@ -56,7 +59,9 @@ export const Video = forwardRef(
       }
 
       return function cleanup() {
-        videoRefCurrent.removeEventListener('timeupdate', handleProgress);
+        if (videoRefCurrent) {
+          videoRefCurrent.removeEventListener('timeupdate', handleProgress);
+        }
       };
     });
 
@@ -85,7 +90,7 @@ export const Video = forwardRef(
 
     useEscapeKeyListener(stopVideo);
 
-    // const hasVideo = large || medium || small;
+    const hasVideo = large || medium || small;
 
     const hanldeOnPosterClick = () => playVideo();
 
@@ -96,6 +101,20 @@ export const Video = forwardRef(
     const classSet = cx(styles.base, className, {
       [styles.fullWidth]: isFullWidth,
     });
+
+    if (!hasVideo && fallbackImage) {
+      return (
+        <figure className={classSet} id={id} ref={ref}>
+          <Image
+            altText={fallbackImage.copy.altText}
+            className={cx(styles.fallbackImage, fallbackImage.className)}
+            large={fallbackImage.large}
+            medium={fallbackImage.medium}
+            small={fallbackImage.small}
+          />
+        </figure>
+      );
+    }
 
     return (
       <figure className={classSet} id={id} ref={ref} role="group">
@@ -124,21 +143,23 @@ export const Video = forwardRef(
           small={poster.small}
         />
 
-        <Controls
-          copy={{
-            closeButtonTitle: copy.closeButtonTitle,
-            pauseButtonTitle: copy.pauseButtonTitle,
-            playButtonTitle: copy.playButtonTitle,
-          }}
-          hasActiveVideo={hasActiveVideo}
-          hasPlayInFullScreen={hasPlayInFullScreen}
-          isMobileOrTablet={isMobileOrTablet}
-          isPlaying={isPlaying}
-          onCloseButtonClick={stopVideo}
-          onPlayPauseButtonClick={handlePlayPauseButtonOnClick}
-          progress={progress}
-          videoTitle={title}
-        />
+        {hasControls && (
+          <Controls
+            copy={{
+              closeButtonTitle: copy.closeButtonTitle,
+              pauseButtonTitle: copy.pauseButtonTitle,
+              playButtonTitle: copy.playButtonTitle,
+            }}
+            hasActiveVideo={hasActiveVideo}
+            hasPlayInFullScreen={hasPlayInFullScreen}
+            isMobileOrTablet={isMobileOrTablet}
+            isPlaying={isPlaying}
+            onCloseButtonClick={stopVideo}
+            onPlayPauseButtonClick={handlePlayPauseButtonOnClick}
+            progress={progress}
+            videoTitle={title}
+          />
+        )}
       </figure>
     );
   },
@@ -151,6 +172,16 @@ Video.propTypes = {
     playButtonTitle: PropTypes.string,
     pauseButtonTitle: PropTypes.string,
   }),
+  fallbackImage: PropTypes.shape({
+    className: PropTypes.string,
+    copy: PropTypes.shape({
+      altText: PropTypes.string,
+    }),
+    large: PropTypes.string,
+    medium: PropTypes.string,
+    small: PropTypes.string,
+  }),
+  hasControls: PropTypes.bool,
   hasAllowAudio: PropTypes.bool,
   hasAutoplay: PropTypes.bool,
   hasLoop: PropTypes.bool,
@@ -166,7 +197,7 @@ Video.propTypes = {
       altText: PropTypes.string,
     }),
     isActive: PropTypes.string,
-    large: PropTypes.bool,
+    large: PropTypes.string,
     medium: PropTypes.string,
     onClick: PropTypes.func,
     small: PropTypes.string,
@@ -182,6 +213,16 @@ Video.defaultProps = {
     playButtonTitle: 'View video',
     pauseButtonTitle: 'Pause video',
   },
+  fallbackImage: {
+    className: undefined,
+    copy: {
+      altText: undefined,
+    },
+    large: undefined,
+    medium: undefined,
+    small: undefined,
+  },
+  hasControls: true,
   hasAllowAudio: false,
   hasAutoplay: false,
   hasLoop: true,

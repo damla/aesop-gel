@@ -16,7 +16,7 @@ Array [
       className="iconContainer"
     >
       <svg
-        className="base warning dark warningIcon"
+        className="base warning light warningIcon"
         data-ref=""
         focusable="false"
         height={22}
@@ -68,7 +68,7 @@ Array [
         type="button"
       >
         <svg
-          className="base close dark closeIcon"
+          className="base close light closeIcon"
           data-ref=""
           focusable="false"
           height={12}
