@@ -58,6 +58,10 @@
     background-color: #fff;
   }
 
+  .sb-show-main {
+    margin: 0;
+  }
+
   .sbdocs-content {
     max-width: 1220px !important;
   }

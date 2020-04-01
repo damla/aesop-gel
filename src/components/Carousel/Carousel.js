@@ -128,6 +128,7 @@ Carousel.propTypes = {
     PropTypes.shape({
       description: PropTypes.string,
       heading: PropTypes.string,
+      id: PropTypes.string,
       image: PropTypes.object.isRequired,
       url: PropTypes.string,
     }),

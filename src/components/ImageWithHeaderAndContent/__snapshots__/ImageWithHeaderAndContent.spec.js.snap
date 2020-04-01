@@ -43,7 +43,7 @@ exports[`<ImageWithHeaderAndContent /> renders base component correctly 1`] = `
         className="header"
       >
         <h2
-          className="base xSmall dark heading"
+          className="base xXSmall dark heading"
         >
           How to use
         </h2>

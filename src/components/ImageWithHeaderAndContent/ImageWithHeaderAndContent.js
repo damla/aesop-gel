@@ -65,7 +65,7 @@ const ImageWithHeaderAndContent = forwardRef(
                 className={styles.heading}
                 level="2"
                 noMargin={true}
-                size="xSmall"
+                size="xXSmall"
                 theme={theme}
               >
                 {copy.heading}
