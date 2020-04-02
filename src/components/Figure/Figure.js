@@ -11,11 +11,16 @@ const Figure = ({
   id,
   theme,
 }) => {
-  const classSet = cx(styles.base, styles[theme], className);
+  const classSet = cx(
+    styles.base,
+    styles[theme],
+    {
+      [styles.border]: hasCaptionBorder,
+    },
+    className,
+  );
 
-  const captionWrapperClassSet = cx(styles.captionWrapper, {
-    [styles.border]: hasCaptionBorder,
-  });
+  const captionWrapperClassSet = cx(styles.captionWrapper);
 
   return (
     <figure className={classSet} id={id}>
@@ -34,7 +39,7 @@ Figure.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   hasCaptionBorder: PropTypes.bool,
-  id: PropTypes.string.isRequired,
+  id: PropTypes.string,
   theme: PropTypes.oneOf(['dark', 'light']),
 };
 
