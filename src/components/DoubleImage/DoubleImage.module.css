@@ -1,0 +1,28 @@
+@import 'styles/index';
+
+.base {
+  padding: var(--layout-md-spacing);
+
+  @media (--viewport-md) {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--layout-md-spacing);
+  }
+
+  @media (--viewport-lg) {
+    padding: var(--layout-md-spacing) calc(var(--layout-md-spacing) * 2);
+  }
+}
+
+.figure {
+  margin-bottom: calc(var(--layout-sm-spacing) * 2);
+
+  @media (--viewport-md) {
+    flex: 0 0 calc(50% - var(--layout-md-spacing) / 4);
+    margin-bottom: 0;
+  }
+
+  @media (--viewport-lg) {
+    flex: 0 0 calc(50% - var(--layout-lg-spacing) / 4);
+  }
+}
