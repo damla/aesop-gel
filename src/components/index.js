@@ -5,6 +5,7 @@ import BynderWidget from './BynderWidget';
 import Carousel from './Carousel';
 import DefinitionList from './DefinitionList';
 import DialogBanner from './DialogBanner';
+import DoubleImage from './DoubleImage';
 import Figure from './Figure';
 import FlyinPanel from './FlyinPanel';
 import Heading from './Heading';
@@ -35,6 +36,7 @@ export default {
   Carousel,
   DefinitionList,
   DialogBanner,
+  DoubleImage,
   Figure,
   FlyinPanel,
   Heading,
