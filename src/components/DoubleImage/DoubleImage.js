@@ -14,6 +14,7 @@ const DoubleImage = ({ className, imageOne, imageTwo, theme }) => {
         caption={imageOne.caption}
         className={styles.figure}
         hasCaptionBorder={false}
+        theme={theme}
       >
         <Image
           altText={imageOne.altText}
@@ -26,6 +27,7 @@ const DoubleImage = ({ className, imageOne, imageTwo, theme }) => {
         caption={imageTwo.caption}
         className={styles.figure}
         hasCaptionBorder={false}
+        theme={theme}
       >
         <Image
           altText={imageTwo.altText}

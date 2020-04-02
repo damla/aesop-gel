@@ -2,7 +2,7 @@
 
 exports[`<Figure /> renders base component correctly 1`] = `
 <figure
-  className="base dark"
+  className="base dark border"
   id="about"
 >
   <picture
