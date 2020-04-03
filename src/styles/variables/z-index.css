@@ -1,5 +1,5 @@
 :root {
-  --z-index-fixed-full-screen-video: 150;
+  --z-index-fixed-full-screen-video: 1500;
   --z-index-fixed-dialog-banner: 140;
   --z-index-fixed-notification-banner: 130;
   --z-index-modal-inner: 120;
