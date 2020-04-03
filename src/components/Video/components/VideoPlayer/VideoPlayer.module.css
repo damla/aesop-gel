@@ -23,7 +23,7 @@
   }
 }
 
-.isPlayingInFullScreen {
+.isPlayingInFullScreen.isPlayingInFullScreen {
   pointer-events: auto;
   transform: scale(1);
 }

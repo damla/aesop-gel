@@ -1,5 +1,6 @@
 import Accordion from './Accordion';
 import BodyCopy from './BodyCopy';
+import Breadcrumbs from './Breadcrumbs';
 import Button from './Button';
 import BynderWidget from './BynderWidget';
 import Carousel from './Carousel';
@@ -31,6 +32,7 @@ import Video from './Video';
 export default {
   Accordion,
   BodyCopy,
+  Breadcrumbs,
   Button,
   BynderWidget,
   Carousel,

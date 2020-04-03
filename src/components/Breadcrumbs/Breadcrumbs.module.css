@@ -1,0 +1,57 @@
+@import 'styles/index';
+
+.base {
+  margin: calc(var(--layout-sm-spacing) / 2) 0;
+
+  @media (--viewport-md) {
+    margin: calc(var(--layout-md-spacing) / 2) 0;
+  }
+
+  @media (--viewport-ld) {
+    margin: calc(var(--layout-ld-spacing) / 2) 0;
+  }
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: 0;
+}
+
+.item {
+  display: inline-block;
+  padding: 0;
+
+  &:not(:first-child)::before {
+    display: inline-block;
+    padding: 0 10px;
+    content: '\2022';
+    font-size: rem(20px);
+    line-height: 1;
+    transform: translateY(3px);
+  }
+}
+
+.link {
+  position: relative;
+  display: inline-block;
+  color: var(--color-dark-copy);
+  font-size: rem(14px);
+
+  &::after {
+    display: block;
+    border-bottom: solid 1px var(--color-dark-copy);
+    margin-top: -3px;
+    margin-top: 0;
+    margin-bottom: -10px;
+    content: '';
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 250ms var(--easing-ease-out-cubic);
+  }
+
+  &:hover::after,
+  &:focus::after {
+    transform: scaleX(1);
+  }
+}

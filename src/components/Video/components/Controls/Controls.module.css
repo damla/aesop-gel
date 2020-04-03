@@ -41,7 +41,7 @@
   pointer-events: none;
 }
 
-.activeFullScreenControls {
+.activeFullScreenControls.activeFullScreenControls {
   pointer-events: auto;
   transform: scale(1);
 }
