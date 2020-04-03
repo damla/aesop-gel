@@ -61,7 +61,7 @@ Array [
       className="closeContainer"
     >
       <button
-        className="base external inlineStyle dark closeButton"
+        className="base inlineStyle dark closeButton"
         disabled={false}
         onClick={[MockFunction]}
         title="Close Dialog Banner"
