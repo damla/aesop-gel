@@ -43,15 +43,6 @@ describe('<Hyperlink />', () => {
     );
     expect(component.type()).toEqual('a');
   });
-
-  it('should return `a` is the style is an external style', () => {
-    const component = shallow(
-      <Hyperlink style={EXTERNAL_BUTTON_LINK} url="http://aesop.com">
-        Aesop
-      </Hyperlink>,
-    );
-    expect(component.type()).toEqual('a');
-  });
 });
 
 describe('Hyperlink.utils.checkIsInlineFromStyle', () => {

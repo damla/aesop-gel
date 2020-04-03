@@ -729,6 +729,100 @@ sans-serif;
 --color-dark-decoration: var(--color-grey-30);
 --color-dark-disabled: var(--color-grey-60);
 */
+.Breadcrumbs-module_base__1qjpj {
+  margin: calc(16px / 2) 0;
+}
+@media (min-width: 640px) {
+.Breadcrumbs-module_base__1qjpj {
+    margin: calc(34px / 2) 0
+}
+  }
+@media (--viewport-ld) {
+.Breadcrumbs-module_base__1qjpj {
+    margin: calc(var(--layout-ld-spacing) / 2) 0
+}
+  }
+.Breadcrumbs-module_list__eE_Me {
+  padding: 0;
+  margin: 0;
+  list-style: 0;
+}
+.Breadcrumbs-module_item__1Kvmk {
+  display: inline-block;
+  padding: 0;
+}
+.Breadcrumbs-module_item__1Kvmk:not(:first-child)::before {
+    display: inline-block;
+    padding: 0 10px;
+    content: '\2022';
+    font-size: 20px;
+    line-height: 1;
+    -webkit-transform: translateY(3px);
+            transform: translateY(3px);
+  }
+.Breadcrumbs-module_link__2UQyz {
+  position: relative;
+  display: inline-block;
+  color: #333;
+  font-size: 14px;
+}
+.Breadcrumbs-module_link__2UQyz::after {
+    display: block;
+    border-bottom: solid 1px #333;
+    margin-top: -3px;
+    margin-top: 0;
+    margin-bottom: -10px;
+    content: '';
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+    -webkit-transition: -webkit-transform 250ms cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: -webkit-transform 250ms cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: transform 250ms cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: transform 250ms cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 250ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+.Breadcrumbs-module_link__2UQyz:hover::after,
+  .Breadcrumbs-module_link__2UQyz:focus::after {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+
+/* @import './key-frame.css'; */
+/* @import './font-face.css'; */
+:root {
+  /* Base colours */
+
+  /* UI colours light theme */
+
+  /* UI colours dark theme */
+
+  /* Background colours */
+
+  /* System colours */
+}
+/* Dark theme UI elements */
+/* Light theme UI elements */
+/* UI colours light theme */
+/*
+--color-light-copy: var(--color-primary);
+--color-light-copy-alternate: var(--color-white-darker);
+--color-light-label: var(--color-white-darker);
+--color-light-link: var(--color-primary);
+--color-light-link-hover: var(--color-white-darker);
+--color-light-decoration: var(--color-white-darker);
+--color-light-disabled: var(--color-grey-60);
+*/
+/* UI colours dark theme */
+/*
+--color-dark-copy: var(--color-secondary);
+--color-dark-copy-alternate: var(--color-grey-63);
+--color-dark-label: var(--color-grey-30);
+--color-dark-link: var(--color-grey-20);
+--color-dark-link-hover: var(--color-grey-10);
+--color-dark-decoration: var(--color-grey-30);
+--color-dark-disabled: var(--color-grey-60);
+*/
 .Button-module_base__3aZlL {
   position: relative;
   padding: 0;
@@ -3888,7 +3982,7 @@ sans-serif;
 @media (min-width: 1025px) {
 .Controls-module_fullScreenControls__2TWMJ {
     position: fixed;
-    z-index: 150;
+    z-index: 1500;
     top: 0;
     right: 0;
     bottom: 0;
@@ -3927,7 +4021,7 @@ sans-serif;
   opacity: 0;
   pointer-events: none;
 }
-.Controls-module_activeFullScreenControls__3gh8o {
+.Controls-module_activeFullScreenControls__3gh8o.Controls-module_activeFullScreenControls__3gh8o {
   pointer-events: auto;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -3994,25 +4088,13 @@ sans-serif;
 .Controls-module_playPauseButton__3KMud:hover .Controls-module_playPauseButtonIcon__3Jt62, .Controls-module_playPauseButton__3KMud:focus .Controls-module_playPauseButtonIcon__3Jt62 {
       background-color: #f6f5e8;
     }
-.Controls-module_buttonIconOffset__1iBfK.Controls-module_buttonIconOffset__1iBfK svg {
-    -webkit-transform: translateX(1px);
-            transform: translateX(1px);
-  }
-.Controls-module_playPauseButtonLabel__1dTRg {
-  display: none;
-}
-@media (min-width: 1025px) {
-.Controls-module_playPauseButtonLabel__1dTRg {
-    display: inline
-}
-  }
 .Controls-module_icon__31awx {
   -webkit-transform: translate(7px, 1px);
           transform: translate(7px, 1px);
 }
 .Controls-module_fullScreenPlayPauseButton__2qnFo.Controls-module_fullScreenPlayPauseButton__2qnFo {
   position: absolute;
-  z-index: 150;
+  z-index: 1500;
   top: calc(50vh - 40px - 13px);
   left: calc(50vw - 40px - 13px);
   padding: 40px;
@@ -4188,7 +4270,7 @@ sans-serif;
 @media (min-width: 1025px) {
 .VideoPlayer-module_playsInFullScreen__2grcD {
     position: fixed;
-    z-index: 150;
+    z-index: 1500;
     top: 0;
     right: 0;
     bottom: 0;
@@ -4200,7 +4282,7 @@ sans-serif;
     transition: all 600ms
 }
   }
-.VideoPlayer-module_isPlayingInFullScreen__2kBK1 {
+.VideoPlayer-module_isPlayingInFullScreen__2kBK1.VideoPlayer-module_isPlayingInFullScreen__2kBK1 {
   pointer-events: auto;
   -webkit-transform: scale(1);
           transform: scale(1);

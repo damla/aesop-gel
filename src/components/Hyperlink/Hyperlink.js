@@ -27,7 +27,6 @@ const Hyperlink = ({
   const classSet = cx(
     styles.base,
     { [styles.blockStyle]: !isInline },
-    { [styles.external]: isExternal },
     { [styles.hasIcon]: hasIcon },
     styles[theme],
     className,

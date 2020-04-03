@@ -7,7 +7,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
     dir="ltr"
   >
     <button
-      className="base external inlineStyle light base hidden"
+      className="base inlineStyle light base hidden"
       disabled={false}
       onClick={null}
       title="next slide"
@@ -490,7 +490,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
       </div>
     </div>
     <button
-      className="base external inlineStyle light base"
+      className="base inlineStyle light base"
       disabled={false}
       onClick={[Function]}
       title="next slide"
@@ -560,7 +560,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
     dir="ltr"
   >
     <button
-      className="base external inlineStyle light base hidden"
+      className="base inlineStyle light base hidden"
       disabled={false}
       onClick={null}
       title="next slide"
@@ -964,7 +964,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
       </div>
     </div>
     <button
-      className="base external inlineStyle light base"
+      className="base inlineStyle light base"
       disabled={false}
       onClick={[Function]}
       title="next slide"

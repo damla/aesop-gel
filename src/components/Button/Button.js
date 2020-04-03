@@ -26,7 +26,6 @@ const Button = forwardRef(
       { [styles.alternate]: isAlternate },
       { [styles.blockStyle]: !isInline },
       { [styles.disabled]: !isEnabled },
-      { [styles.external]: external },
       { [styles.inlineStyle]: isInline },
       styles[theme],
       className,
