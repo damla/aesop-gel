@@ -61,6 +61,7 @@ exports[`<Video /> renders base component correctly 1`] = `
           title="Close"
           type="button"
         >
+          Close
           <svg
             className="base close light icon"
             data-ref=""
@@ -171,6 +172,11 @@ exports[`<Video /> renders base component correctly 1`] = `
             />
           </g>
         </svg>
+      </span>
+      <span
+        className="playPauseButtonLabel"
+      >
+        
       </span>
     </button>
   </div>

@@ -2,8 +2,8 @@
 
 .base {
   position: relative;
-  font-family: var(--font-family-sans-serif-regular);
-  font-size: rem(17px);
+  font-family: inherit;
+  font-size: inherit;
   font-weight: var(--font-weight-normal);
   outline: none;
   text-decoration: none;
