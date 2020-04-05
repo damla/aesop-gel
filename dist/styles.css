@@ -426,10 +426,8 @@ sans-serif;
 */
 .Hyperlink-module_base__uoaww {
   position: relative;
-  font-family: 'Suisse Regular'
-,
-sans-serif;
-  font-size: 17px;
+  font-family: inherit;
+  font-size: inherit;
   font-weight: 400;
   outline: none;
   text-decoration: none;
@@ -4088,6 +4086,18 @@ sans-serif;
 .Controls-module_playPauseButton__3KMud:hover .Controls-module_playPauseButtonIcon__3Jt62, .Controls-module_playPauseButton__3KMud:focus .Controls-module_playPauseButtonIcon__3Jt62 {
       background-color: #f6f5e8;
     }
+.Controls-module_buttonIconOffset__1iBfK.Controls-module_buttonIconOffset__1iBfK svg {
+    -webkit-transform: translateX(1px);
+            transform: translateX(1px);
+  }
+.Controls-module_playPauseButtonLabel__1dTRg {
+  display: none;
+}
+@media (min-width: 1025px) {
+.Controls-module_playPauseButtonLabel__1dTRg {
+    display: inline
+}
+  }
 .Controls-module_icon__31awx {
   -webkit-transform: translate(7px, 1px);
           transform: translate(7px, 1px);
