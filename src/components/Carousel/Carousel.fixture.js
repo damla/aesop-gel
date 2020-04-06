@@ -7,7 +7,6 @@ export default {
       text: 'Browse all',
     },
     heading: 'Accompany with',
-    eyebrow: 'Skin Parsley Seed',
     description:
       'Richly foaming Parsley Seed Facial Cleanser offers mild exfoliation from Lactic Acid to clarify and soften skin; complement twice weekly with Parsley Seed Cleansing Masque to extract impurities and purify pores. For intensive fortification and hydration, blend Hydrator with Parsley Seed Anti-Oxidant Facial Treatment.',
   },
