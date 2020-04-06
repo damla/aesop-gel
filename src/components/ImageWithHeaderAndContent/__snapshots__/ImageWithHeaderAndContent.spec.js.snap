@@ -39,59 +39,67 @@ exports[`<ImageWithHeaderAndContent /> renders base component correctly 1`] = `
     <div
       className="wrapper"
     >
-      <header
+      <div
         className="header"
       >
-        <h2
-          className="base xXSmall dark heading"
+        <header
+          className="base"
         >
-          How to use
-        </h2>
-        <h3
-          className="base serifFont xLarge dark subHeading"
-        >
-          A comprehensive skin care regimen, ideal in urban environments.
-        </h3>
+          <h2
+            className="base noTopMargin mediumWeightFont xXSmall dark eyebrow"
+          >
+            How to use
+          </h2>
+          <h3
+            className="base noTopMargin serifFont xLarge dark heading heading"
+          >
+            A comprehensive skin care regimen, ideal in urban environments.
+          </h3>
+        </header>
         <div
           className="set dark description"
         >
           Morning and evening, use Parsley Seed Facial Cleansing Oil, Facial Toner, Anti-Oxidant Serum, and Eye Cream. Twice weekly, apply Masque after cleansing; follow with Facial Treatment.
         </div>
-      </header>
-      <dl
-        className="base dark"
+      </div>
+      <div
+        className="content"
       >
-        <dt
-          className="term slideIn"
+        <dl
+          className="base dark"
         >
-          Dosage
-        </dt>
-        <dd
-          className="description slideIn"
-        >
-          Desired amount
-        </dd>
-        <dt
-          className="term slideIn"
-        >
-          Texture
-        </dt>
-        <dd
-          className="description slideIn"
-        >
-          Water-soluble cream with fine grain
-        </dd>
-        <dt
-          className="term slideIn"
-        >
-          Aroma
-        </dt>
-        <dd
-          className="description slideIn"
-        >
-          Herbaceous, floral, earthy
-        </dd>
-      </dl>
+          <dt
+            className="term slideIn"
+          >
+            Dosage
+          </dt>
+          <dd
+            className="description slideIn"
+          >
+            Desired amount
+          </dd>
+          <dt
+            className="term slideIn"
+          >
+            Texture
+          </dt>
+          <dd
+            className="description slideIn"
+          >
+            Water-soluble cream with fine grain
+          </dd>
+          <dt
+            className="term slideIn"
+          >
+            Aroma
+          </dt>
+          <dd
+            className="description slideIn"
+          >
+            Herbaceous, floral, earthy
+          </dd>
+        </dl>
+      </div>
     </div>
   </div>
 </section>

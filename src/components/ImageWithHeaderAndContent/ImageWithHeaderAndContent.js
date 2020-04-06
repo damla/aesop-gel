@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import Heading from '~/components/Heading';
+import SectionHeading from '~/components/SectionHeading';
 import Image from '~/components/Image';
 import styles from './ImageWithHeaderAndContent.module.css';
 import { ParagraphSet } from '../Paragraph';
@@ -60,30 +60,25 @@ const ImageWithHeaderAndContent = forwardRef(
           })}
         >
           <div className={styles.wrapper}>
-            <header className={styles.header}>
-              <Heading
-                className={styles.heading}
-                level="2"
-                noMargin={true}
-                size="xXSmall"
+            <div className={styles.header}>
+              <SectionHeading
+                childrenClassNames={{
+                  heading: styles.heading,
+                  subHeading: styles.subHeading,
+                }}
+                eyebrow={copy.eyebrow}
+                hasHeadingTopMargin={false}
+                hasSerifFontHeading={true}
+                heading={copy.heading}
+                subHeading={copy.subHeading}
                 theme={theme}
-              >
-                {copy.heading}
-              </Heading>
-              <Heading
-                className={styles.subHeading}
-                hasSerifFont={true}
-                level="3"
-                size="xLarge"
-                theme={theme}
-              >
-                {copy.subHeading}
-              </Heading>
+              />
+
               <ParagraphSet className={styles.description} theme={theme}>
                 {copy.description}
               </ParagraphSet>
-            </header>
-            {content}
+            </div>
+            <div className={styles.content}>{content}</div>
           </div>
         </div>
       </section>
@@ -97,11 +92,12 @@ ImageWithHeaderAndContent.propTypes = {
   content: PropTypes.any,
   copy: PropTypes.shape({
     description: PropTypes.any,
-    subHeading: PropTypes.string.isRequired,
-    heading: PropTypes.string.isRequired,
+    eyebrow: PropTypes.string,
+    heading: PropTypes,
+    subHeading: PropTypes.string,
   }).isRequired,
   hasFullWidthImage: PropTypes.bool,
-  image: PropTypes.object.isRequired,
+  image: PropTypes.object,
   isReverse: PropTypes.bool,
   theme: PropTypes.oneOf(['dark', 'light']),
   video: PropTypes.object,
@@ -111,7 +107,12 @@ ImageWithHeaderAndContent.defaultProps = {
   backgroundColor: '#F6F5E8',
   className: undefined,
   content: undefined,
-  copy: undefined,
+  copy: {
+    description: undefined,
+    eyebrow: undefined,
+    heading: undefined,
+    subHeading: undefined,
+  },
   hasFullWidthImage: false,
   image: undefined,
   isReverse: false,

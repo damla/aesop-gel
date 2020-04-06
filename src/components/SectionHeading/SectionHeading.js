@@ -92,6 +92,7 @@ SectionHeading.defaultProps = {
   },
   className: undefined,
   eyebrow: undefined,
+  hasSerifFontHeading: false,
   hasHeadingTopMargin: false,
   heading: undefined,
   id: undefined,
