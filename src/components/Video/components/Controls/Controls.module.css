@@ -50,7 +50,7 @@
   position: absolute;
   top: calc(var(--layout-sm-spacing) * 2);
   left: calc(var(--layout-sm-spacing) * 2);
-  opacity: 0.7;
+  opacity: 0.8;
   transition: opacity 200ms var(--easing-ease-in-sine);
 
   &:hover,
@@ -76,10 +76,12 @@
   padding-right: 4px;
   color: var(--color-light-link);
   font-size: rem(17px);
+  opacity: 0.8;
+  transition: opacity 200ms var(--easing-ease-in-sine);
 
   &:hover,
   &:focus {
-    color: var(--color-light-link-hover);
+    opacity: 1;
   }
 
   svg {

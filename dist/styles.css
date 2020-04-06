@@ -4034,7 +4034,7 @@ sans-serif;
   position: absolute;
   top: calc(16px * 2);
   left: calc(16px * 2);
-  opacity: 0.7;
+  opacity: 0.8;
   -webkit-transition: opacity 200ms cubic-bezier(0.47, 0, 0.745, 0.715);
   transition: opacity 200ms cubic-bezier(0.47, 0, 0.745, 0.715);
 }
@@ -4061,10 +4061,13 @@ sans-serif;
   padding-right: 4px;
   color: #fffef0;
   font-size: 17px;
+  opacity: 0.8;
+  -webkit-transition: opacity 200ms cubic-bezier(0.47, 0, 0.745, 0.715);
+  transition: opacity 200ms cubic-bezier(0.47, 0, 0.745, 0.715);
 }
 .Controls-module_close__2aDWj:hover,
   .Controls-module_close__2aDWj:focus {
-    color: #f6f5e8;
+    opacity: 1;
   }
 .Controls-module_close__2aDWj svg {
     fill: #fffef0;
