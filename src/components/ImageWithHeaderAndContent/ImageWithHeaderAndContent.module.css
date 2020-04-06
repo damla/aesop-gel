@@ -11,10 +11,6 @@
   }
 }
 
-/* .heading.heading {
-  font-family: var(--font-family-sans-serif-medium);
-} */
-
 .reverse {
   @media (--viewport-lg) {
     display: flex;

@@ -2971,9 +2971,6 @@ sans-serif;
             flex-direction: row
 }
   }
-/* .heading.heading {
-  font-family: var(--font-family-sans-serif-medium);
-} */
 @media (min-width: 1025px) {
 .ImageWithHeaderAndContent-module_reverse__3g8sq {
     display: -webkit-box;
@@ -4014,8 +4011,13 @@ sans-serif;
 }
 .Controls-module_mute__Zo2HR {
   position: absolute;
+  z-index: 1500;
   top: calc(16px * 2);
   left: calc(16px * 2);
+  padding: 7px;
+  background-color: #908f88;
+  border-radius: 100%;
+  line-height: 0;
   opacity: 0.8;
   -webkit-transition: opacity 200ms cubic-bezier(0.47, 0, 0.745, 0.715);
   transition: opacity 200ms cubic-bezier(0.47, 0, 0.745, 0.715);
@@ -4072,63 +4074,52 @@ sans-serif;
   }
 .Controls-module_playPauseButton__3KMud {
   position: absolute;
-  bottom: 16px;
-  left: 16px;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 10px;
+  background-color: #f6f5e8;
+  border-radius: 100%;
   color: #fffef0;
+  opacity: 0.7;
+  -webkit-transition: opacity 200ms cubic-bezier(0.47, 0, 0.745, 0.715);
+  transition: opacity 200ms cubic-bezier(0.47, 0, 0.745, 0.715);
 }
-@media (min-width: 640px) {
-.Controls-module_playPauseButton__3KMud {
-    bottom: 34px;
-    left: 34px
-}
-  }
-@media (min-width: 1025px) {
-.Controls-module_playPauseButton__3KMud {
-    bottom: 40px;
-    left: 40px
-}
-  }
 .Controls-module_playPauseButton__3KMud:hover,
   .Controls-module_playPauseButton__3KMud:focus {
     color: #f6f5e8;
+    opacity: 1;
   }
-.Controls-module_playPauseButton__3KMud:hover .Controls-module_playPauseButtonIcon__3Jt62, .Controls-module_playPauseButton__3KMud:focus .Controls-module_playPauseButtonIcon__3Jt62 {
-      background-color: #f6f5e8;
-    }
-.Controls-module_buttonIconOffset__1iBfK.Controls-module_buttonIconOffset__1iBfK svg {
-    -webkit-transform: translateX(1px);
-            transform: translateX(1px);
-  }
-.Controls-module_playPauseButtonLabel__1dTRg {
-  display: none;
+.Controls-module_activePlayPauseButton__3vXZv.Controls-module_activePlayPauseButton__3vXZv {
+  background-color: #908f88;
 }
-@media (min-width: 1025px) {
-.Controls-module_playPauseButtonLabel__1dTRg {
-    display: inline
-}
+.Controls-module_activePlayPauseButton__3vXZv.Controls-module_activePlayPauseButton__3vXZv svg {
+    fill: #fffef0;
   }
 .Controls-module_fullScreenPlayPauseButton__2qnFo.Controls-module_fullScreenPlayPauseButton__2qnFo {
   position: absolute;
   z-index: 1500;
   top: calc(50vh - 40px - 13px);
   left: calc(50vw - 40px - 13px);
-  padding: 40px;
-  border: 1px solid #fffef0;
-  background-color: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  background-color: #908f88;
+  border-radius: 100%;
   line-height: 0;
+  opacity: 0.7;
+  -webkit-transition: opacity 200ms cubic-bezier(0.47, 0, 0.745, 0.715);
+  transition: opacity 200ms cubic-bezier(0.47, 0, 0.745, 0.715);
 }
 .Controls-module_fullScreenPlayPauseButton__2qnFo.Controls-module_fullScreenPlayPauseButton__2qnFo svg {
     fill: #fffef0;
   }
-.Controls-module_fullScreenPlayPauseButton__2qnFo.Controls-module_fullScreenPlayPauseButton__2qnFo:focus,
-  .Controls-module_fullScreenPlayPauseButton__2qnFo.Controls-module_fullScreenPlayPauseButton__2qnFo:hover {
-    background-color: rgba(255, 255, 255, 0.6);
+.Controls-module_fullScreenPlayPauseButton__2qnFo.Controls-module_fullScreenPlayPauseButton__2qnFo:hover,
+  .Controls-module_fullScreenPlayPauseButton__2qnFo.Controls-module_fullScreenPlayPauseButton__2qnFo:focus {
+    opacity: 0.9;
   }
 .Controls-module_playPauseButtonIcon__3Jt62.Controls-module_playPauseButtonIcon__3Jt62 {
   display: -webkit-box;
@@ -4155,6 +4146,7 @@ sans-serif;
   }
 .Controls-module_progressBar__2qSO3 {
   position: absolute;
+  z-index: 1500;
   right: calc(40px * 2);
   bottom: 90px;
   left: calc(40px * 2);
@@ -4176,6 +4168,11 @@ sans-serif;
     right: calc(34px * 2);
     bottom: 48px;
     left: calc(34px * 2)
+}
+  }
+@media (min-width: 1025px) {
+.Controls-module_progressBar__2qSO3 {
+    position: fixed
 }
   }
 .Controls-module_progress__3LuK- {
