@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import debounce from 'lodash/debounce';
 import { useEscapeKeyListener } from '~/customHooks/useEscapeKeyListener';
+import { ascertainIsSmallOrMediumOnlyViewport } from '~/utils/viewports';
 import Button from '~/components/Button';
 import Icon from '~/components/Icon';
 import Transition from '~/components/Transition';
@@ -87,16 +88,10 @@ const Controls = ({
     [styles.activeFullScreenControls]: hasActiveVideo && hasPlayInFullScreen,
   });
 
-  const playPauseButtonIconClassSet = cx(styles.playPauseButtonIcon, {
-    [styles.buttonIconOffset]: !isPlaying,
-  });
-
   const isPlayPauseButtonActive =
     (!isPlaying && hasPlayInFullScreen) ||
     isMobileOrTablet ||
     !hasPlayInFullScreen;
-
-  const playPauseButtonLabel = isPlaying ? '' : copy.playButtonTitle;
 
   const playPauseButtonTitle = isPlaying
     ? copy.pauseButtonTitle
@@ -104,8 +99,26 @@ const Controls = ({
 
   const playPauseButtonIconName = isPlaying ? 'pause' : 'play';
 
+  const isSmallMediumViewport = ascertainIsSmallOrMediumOnlyViewport();
+
   return (
     <div className={classSet}>
+      {hasAllowAudio && isSmallMediumViewport && hasActiveVideo && (
+        <Button
+          className={cx(styles.mute)}
+          isInline={true}
+          onClick={onAudioButtonClick}
+          title={isMuted ? copy.unmuteButtonTitle : copy.muteButtonTitle}
+        >
+          <Icon
+            height={16}
+            name={isMuted ? 'muted' : 'unmuted'}
+            theme="light"
+            width={16}
+          />
+        </Button>
+      )}
+
       <Transition
         isActive={hasActiveVideo && hasPlayInFullScreen && !isMobileOrTablet}
         type="zoom"
@@ -124,10 +137,10 @@ const Controls = ({
                 title={isMuted ? copy.unmuteButtonTitle : copy.muteButtonTitle}
               >
                 <Icon
-                  height={30}
+                  height={16}
                   name={isMuted ? 'muted' : 'unmuted'}
                   theme="light"
-                  width={30}
+                  width={16}
                 />
               </Button>
             )}
@@ -148,37 +161,33 @@ const Controls = ({
               title={playPauseButtonTitle}
             >
               <Icon
-                height={26}
+                height={10}
                 name={playPauseButtonIconName}
                 theme="light"
-                width={26}
+                width={10}
               />
             </Button>
-          </div>
-
-          <div className={styles.progressBar}>
-            <div
-              className={styles.progress}
-              style={{ width: `${progress}%` }}
-            />
           </div>
         </div>
       </Transition>
 
       <Transition isActive={isPlayPauseButtonActive} type="fade">
         <Button
-          className={styles.playPauseButton}
+          className={cx(styles.playPauseButton, {
+            [styles.activePlayPauseButton]: hasActiveVideo,
+          })}
           isInline={true}
           onClick={onPlayPauseButtonClick}
           title={playPauseButtonTitle}
         >
-          <span className={playPauseButtonIconClassSet}>
-            <Icon name={playPauseButtonIconName} />
-          </span>
-          <span className={styles.playPauseButtonLabel}>
-            {playPauseButtonLabel}
-          </span>
+          <Icon height={10} name={playPauseButtonIconName} width={10} />
         </Button>
+      </Transition>
+
+      <Transition isActive={hasActiveVideo} type="fade">
+        <div className={styles.progressBar}>
+          <div className={styles.progress} style={{ width: `${progress}%` }} />
+        </div>
       </Transition>
     </div>
   );

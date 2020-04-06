@@ -179,17 +179,6 @@ const svgs = [
                 transform: 'translate(97.000000, 48.000000)',
                 data: [
                   {
-                    rect: {
-                      x: '0',
-                      y: '0',
-                      width: '30',
-                      height: '30',
-                      rx: '15',
-                      fillOpacity: '0.3',
-                      fill: '#FFFFFF',
-                    },
-                  },
-                  {
                     g: {
                       transform: 'translate(4.000000, 6.000000)',
                       fill: '#FFFEF2',
@@ -247,7 +236,7 @@ const svgs = [
         },
       },
     ],
-    viewBox: '0 0 30 30',
+    viewBox: '8 7 12 18',
   },
   {
     name: 'unmuted',
@@ -262,17 +251,6 @@ const svgs = [
               g: {
                 transform: 'translate(97.000000, 48.000000)',
                 data: [
-                  {
-                    rect: {
-                      x: '0',
-                      y: '0',
-                      width: '30',
-                      height: '30',
-                      rx: '15',
-                      fillOpacity: '0.3',
-                      fill: '#FFFFFF',
-                    },
-                  },
                   {
                     g: {
                       transform: 'translate(4.000000, 6.000000)',
@@ -318,7 +296,7 @@ const svgs = [
         },
       },
     ],
-    viewBox: '0 0 30 30',
+    viewBox: '8 7 12 18',
   },
   {
     name: 'aesop',
