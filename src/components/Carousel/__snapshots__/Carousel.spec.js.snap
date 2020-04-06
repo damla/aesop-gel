@@ -88,15 +88,10 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                 className="base heading"
               >
                 <h2
-                  className="base noTopMargin mediumWeightFont xXSmall dark eyebrow"
-                >
-                  Skin Parsley Seed
-                </h2>
-                <h3
                   className="base noTopMargin serifFont xLarge dark heading"
                 >
                   Accompany with
-                </h3>
+                </h2>
               </header>
               <p
                 className="base dark description hasFooter"
@@ -161,6 +156,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
         >
           <div>
             <div
+              className="slideWrapper"
               style={
                 Object {
                   "display": "inline-block",
@@ -231,6 +227,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
         >
           <div>
             <div
+              className="slideWrapper"
               style={
                 Object {
                   "display": "inline-block",
@@ -301,6 +298,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
         >
           <div>
             <div
+              className="slideWrapper"
               style={
                 Object {
                   "display": "inline-block",
@@ -313,7 +311,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                 className="base dark item link"
                 href="/"
                 target="_self"
-                title="Link to Parsley Seed Facial Cleanser"
+                title="Link to Resurrection Duet"
               >
                 <div
                   className="information dark"
@@ -321,12 +319,12 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                   <h5
                     className="base xXSmall dark heading"
                   >
-                    Parsley Seed Facial Cleanser
+                    Resurrection Duet
                   </h5>
                   <div
                     className="description"
                   >
-                    Example description
+                    A citrus, woody, herbaceous duo
                   </div>
                 </div>
                 <div
@@ -337,15 +335,15 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                   >
                     <source
                       media="(min-width: 1025px)"
-                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                      srcSet="https://www.aesop.com/medias/Aesop-Resurrection-Duet-with-Product-Large-1584x962px.png?context=bWFzdGVyfGltYWdlc3wzOTUwOTh8aW1hZ2UvcG5nfGltYWdlcy9oMWMvaDk4LzkxMTA3OTc2NDc5MDIucG5nfGYwMTE1NGQ3N2M0MDBmYTg1NzY4OTlkNTg0NTlmNmYzMWRkYmJkYzczYjFlOGEyMGMyOWVlZDRmZTRkYzE5ZjI"
                     />
                     <source
                       media="(min-width: 640px)"
-                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                      srcSet="https://www.aesop.com/medias/Aesop-Resurrection-Duet-with-Product-Medium-1238x752px.png?context=bWFzdGVyfGltYWdlc3wyNDczMDF8aW1hZ2UvcG5nfGltYWdlcy9oNjYvaDE5LzkxMTA3OTc4NzcyNzgucG5nfDk4Y2RjZjY4NDk3MGM4YzQ3YzMyMzY4NDhlYjNjNDFhNGNjNGM5MzE1NzFjNDc3YTg3NGIyNDdlYmQ1Yzc1NTA"
                     />
                     <source
                       media="(min-width: 0px)"
-                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                      srcSet="https://www.aesop.com/medias/Aesop-Resurrection-Duet-with-Product-Small-863x524px.png?context=bWFzdGVyfGltYWdlc3wxMjYxNTN8aW1hZ2UvcG5nfGltYWdlcy9oOTgvaDRmLzkxMTA3OTc5MTAwNDYucG5nfDExYTg3YzY4MmZlZTBlODU1NWJiN2IzNzBhNWYwZmExNzg2NGMzNDZhMWQyM2VjZWE4ZWVhMDljMjVmMmRiYzA"
                     />
                     <img
                       alt="Image of Parsley Seed Facial Cleanser"
@@ -371,6 +369,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
         >
           <div>
             <div
+              className="slideWrapper"
               style={
                 Object {
                   "display": "inline-block",
@@ -436,6 +435,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
         >
           <div>
             <div
+              className="slideWrapper"
               style={
                 Object {
                   "display": "inline-block",
@@ -635,6 +635,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
         >
           <div>
             <div
+              className="slideWrapper"
               style={
                 Object {
                   "display": "inline-block",
@@ -705,6 +706,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
         >
           <div>
             <div
+              className="slideWrapper"
               style={
                 Object {
                   "display": "inline-block",
@@ -775,6 +777,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
         >
           <div>
             <div
+              className="slideWrapper"
               style={
                 Object {
                   "display": "inline-block",
@@ -787,7 +790,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                 className="base dark item link"
                 href="/"
                 target="_self"
-                title="Link to Parsley Seed Facial Cleanser"
+                title="Link to Resurrection Duet"
               >
                 <div
                   className="information dark"
@@ -795,12 +798,12 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                   <h5
                     className="base xXSmall dark heading"
                   >
-                    Parsley Seed Facial Cleanser
+                    Resurrection Duet
                   </h5>
                   <div
                     className="description"
                   >
-                    Example description
+                    A citrus, woody, herbaceous duo
                   </div>
                 </div>
                 <div
@@ -811,15 +814,15 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                   >
                     <source
                       media="(min-width: 1025px)"
-                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                      srcSet="https://www.aesop.com/medias/Aesop-Resurrection-Duet-with-Product-Large-1584x962px.png?context=bWFzdGVyfGltYWdlc3wzOTUwOTh8aW1hZ2UvcG5nfGltYWdlcy9oMWMvaDk4LzkxMTA3OTc2NDc5MDIucG5nfGYwMTE1NGQ3N2M0MDBmYTg1NzY4OTlkNTg0NTlmNmYzMWRkYmJkYzczYjFlOGEyMGMyOWVlZDRmZTRkYzE5ZjI"
                     />
                     <source
                       media="(min-width: 640px)"
-                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                      srcSet="https://www.aesop.com/medias/Aesop-Resurrection-Duet-with-Product-Medium-1238x752px.png?context=bWFzdGVyfGltYWdlc3wyNDczMDF8aW1hZ2UvcG5nfGltYWdlcy9oNjYvaDE5LzkxMTA3OTc4NzcyNzgucG5nfDk4Y2RjZjY4NDk3MGM4YzQ3YzMyMzY4NDhlYjNjNDFhNGNjNGM5MzE1NzFjNDc3YTg3NGIyNDdlYmQ1Yzc1NTA"
                     />
                     <source
                       media="(min-width: 0px)"
-                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+                      srcSet="https://www.aesop.com/medias/Aesop-Resurrection-Duet-with-Product-Small-863x524px.png?context=bWFzdGVyfGltYWdlc3wxMjYxNTN8aW1hZ2UvcG5nfGltYWdlcy9oOTgvaDRmLzkxMTA3OTc5MTAwNDYucG5nfDExYTg3YzY4MmZlZTBlODU1NWJiN2IzNzBhNWYwZmExNzg2NGMzNDZhMWQyM2VjZWE4ZWVhMDljMjVmMmRiYzA"
                     />
                     <img
                       alt="Image of Parsley Seed Facial Cleanser"
@@ -845,6 +848,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
         >
           <div>
             <div
+              className="slideWrapper"
               style={
                 Object {
                   "display": "inline-block",
@@ -910,6 +914,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
         >
           <div>
             <div
+              className="slideWrapper"
               style={
                 Object {
                   "display": "inline-block",
@@ -1060,6 +1065,7 @@ exports[`<Carousel /> renders component correctly if no \`url\` member is provid
         >
           <div>
             <div
+              className="slideWrapper"
               style={
                 Object {
                   "display": "inline-block",

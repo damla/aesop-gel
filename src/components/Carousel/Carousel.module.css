@@ -22,7 +22,11 @@
 
     .slick-list {
       position: relative;
-      margin: 100px 80px 125px;
+      margin: 40px 80px 24px;
+
+      @media (--viewport-md) {
+        margin: 100px 80px 125px;
+      }
     }
 
     .slick-slide {
@@ -39,6 +43,10 @@
       }
     }
   }
+}
+
+.slideWrapper {
+  height: 100%;
 }
 
 /* .edges {

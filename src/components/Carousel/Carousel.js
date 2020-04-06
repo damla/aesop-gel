@@ -89,7 +89,7 @@ const Carousel = forwardRef(
           )}
 
           {slides.map(({ url, ...slide }, index) => (
-            <div key={index}>
+            <div className={styles.slideWrapper} key={index}>
               {url ? (
                 <Hyperlink
                   className={cx(styles.item, styles.link)}
