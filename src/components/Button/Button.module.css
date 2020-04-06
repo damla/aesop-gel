@@ -12,6 +12,10 @@
   font-weight: var(--font-weight-normal);
   outline: none;
   text-decoration: none;
+
+  > * {
+    pointer-events: none;
+  }
 }
 
 .blockStyle {

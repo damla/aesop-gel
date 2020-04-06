@@ -28,13 +28,13 @@ export const Video = forwardRef(
       medium,
       poster,
       small,
-      title,
     },
     ref,
   ) => {
     const [isPlaying, setIsPlaying] = useState(hasAutoplay);
     const [hasActiveVideo, setHasActiveVideo] = useState(hasAutoplay);
     const [progress, setProgress] = useState(0);
+    const [isMuted, setIsMuted] = useState(!hasAllowAudio);
     const isMobileOrTablet = ascertainIsSmallOrMediumOnlyViewport();
 
     const videoRef = useRef();
@@ -99,6 +99,8 @@ export const Video = forwardRef(
 
     const handlePlayPauseButtonOnClick = isPlaying ? pauseVideo : playVideo;
 
+    const handleAudioButtonClick = () => setIsMuted(!isMuted);
+
     const classSet = cx(styles.base, className, {
       [styles.fullWidth]: isFullWidth,
     });
@@ -126,6 +128,7 @@ export const Video = forwardRef(
           hasLoop={hasLoop}
           hasPlayInFullScreen={hasPlayInFullScreen}
           isActive={!poster || hasActiveVideo}
+          isMuted={isMuted}
           large={large}
           medium={medium}
           ref={videoRef}
@@ -150,15 +153,19 @@ export const Video = forwardRef(
               closeButtonTitle: copy.closeButtonTitle,
               pauseButtonTitle: copy.pauseButtonTitle,
               playButtonTitle: copy.playButtonTitle,
+              muteButtonTitle: copy.muteButtonTitle,
+              unmuteButtonTitle: copy.unmuteButtonTitle,
             }}
             hasActiveVideo={hasActiveVideo}
+            hasAllowAudio={hasAllowAudio}
             hasPlayInFullScreen={hasPlayInFullScreen}
             isMobileOrTablet={isMobileOrTablet}
+            isMuted={isMuted}
             isPlaying={isPlaying}
+            onAudioButtonClick={handleAudioButtonClick}
             onCloseButtonClick={stopVideo}
             onPlayPauseButtonClick={handlePlayPauseButtonOnClick}
             progress={progress}
-            videoTitle={title}
           />
         )}
       </figure>
@@ -170,8 +177,10 @@ Video.propTypes = {
   className: PropTypes.string,
   copy: PropTypes.shape({
     closeButtonTitle: PropTypes.string,
+    muteButtonTitle: PropTypes.string,
     playButtonTitle: PropTypes.string,
     pauseButtonTitle: PropTypes.string,
+    unmuteButtonTitle: PropTypes.string,
   }),
   fallbackImage: PropTypes.shape({
     className: PropTypes.string,
@@ -204,15 +213,16 @@ Video.propTypes = {
     small: PropTypes.string,
   }),
   small: PropTypes.string,
-  title: PropTypes.string,
 };
 
 Video.defaultProps = {
   className: undefined,
   copy: {
     closeButtonTitle: 'Close',
+    muteButtonTitle: 'Mute video',
     playButtonTitle: 'View video',
     pauseButtonTitle: 'Pause video',
+    unmuteButtonTitle: 'Unmute video',
   },
   fallbackImage: {
     className: undefined,
@@ -245,7 +255,6 @@ Video.defaultProps = {
     small: undefined,
   },
   small: undefined,
-  title: undefined,
 };
 
 export default Video;

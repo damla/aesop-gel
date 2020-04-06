@@ -61,22 +61,21 @@ exports[`<Video /> renders base component correctly 1`] = `
           title="Close"
           type="button"
         >
-          Close
           <svg
-            className="base close light icon"
+            className="base close light"
             data-ref=""
             focusable="false"
-            height={12}
+            height={16}
             role="img"
             style={
               Object {
-                "height": "12px",
-                "width": "12px",
+                "height": "16px",
+                "width": "16px",
               }
             }
             tabIndex={-1}
             viewBox="0 0 50 50"
-            width={12}
+            width={16}
           >
             <g>
               <polygon

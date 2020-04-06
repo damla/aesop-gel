@@ -46,6 +46,29 @@
   transform: scale(1);
 }
 
+.mute {
+  position: absolute;
+  top: calc(var(--layout-sm-spacing) * 2);
+  left: calc(var(--layout-sm-spacing) * 2);
+  opacity: 0.7;
+  transition: opacity 200ms var(--easing-ease-in-sine);
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+
+  @media (--viewport-md) {
+    top: calc(var(--layout-md-spacing) * 2);
+    left: calc(var(--layout-md-spacing) * 2);
+  }
+
+  @media (--viewport-lg) {
+    top: calc(var(--layout-lg-spacing) * 2);
+    left: calc(var(--layout-lg-spacing) * 2);
+  }
+}
+
 .close {
   position: absolute;
   top: calc(var(--layout-sm-spacing) * 2);
@@ -119,10 +142,6 @@
   @media (--viewport-lg) {
     display: inline;
   }
-}
-
-.icon {
-  transform: translate(7px, 1px);
 }
 
 .fullScreenPlayPauseButton.fullScreenPlayPauseButton {

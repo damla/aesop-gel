@@ -4,7 +4,6 @@ import cx from 'classnames';
 import debounce from 'lodash/debounce';
 import { useEscapeKeyListener } from '~/customHooks/useEscapeKeyListener';
 import Button from '~/components/Button';
-import Heading from '~/components/Heading';
 import Icon from '~/components/Icon';
 import Transition from '~/components/Transition';
 import styles from './Controls.module.css';
@@ -12,14 +11,16 @@ import styles from './Controls.module.css';
 const Controls = ({
   className,
   copy,
-  onPlayPauseButtonClick,
-  onCloseButtonClick,
-  hasPlayInFullScreen,
   hasActiveVideo,
-  isPlaying,
+  hasAllowAudio,
+  hasPlayInFullScreen,
   isMobileOrTablet,
+  isMuted,
+  isPlaying,
+  onAudioButtonClick,
+  onCloseButtonClick,
+  onPlayPauseButtonClick,
   progress,
-  videoTitle,
 }) => {
   const [
     isFullScreenControlsHeaderActive,
@@ -115,16 +116,20 @@ const Controls = ({
               [styles.hidden]: !isFullScreenControlsHeaderActive,
             })}
           >
-            {videoTitle && (
-              <Heading
-                className={styles.videoTitle}
-                isFlush={true}
-                level="3"
-                size="xSmall"
-                theme="light"
+            {hasAllowAudio && (
+              <Button
+                className={styles.mute}
+                isInline={true}
+                onClick={onAudioButtonClick}
+                title={isMuted ? copy.unmuteButtonTitle : copy.muteButtonTitle}
               >
-                {videoTitle}
-              </Heading>
+                <Icon
+                  height={30}
+                  name={isMuted ? 'muted' : 'unmuted'}
+                  theme="light"
+                  width={30}
+                />
+              </Button>
             )}
 
             <Button
@@ -133,8 +138,7 @@ const Controls = ({
               onClick={handleCloseButtonClick}
               title={copy.closeButtonTitle}
             >
-              {copy.closeButtonTitle}
-              <Icon className={styles.icon} name="close" theme="light" />
+              <Icon height={16} name="close" theme="light" width={16} />
             </Button>
 
             <Button
@@ -184,34 +188,42 @@ Controls.propTypes = {
   className: PropTypes.string,
   copy: PropTypes.shape({
     closeButtonTitle: PropTypes.string,
+    muteButtonTitle: PropTypes.string,
     pauseButtonTitle: PropTypes.string,
     playButtonTitle: PropTypes.string,
+    unmuteButtonTitle: PropTypes.string,
   }),
   hasActiveVideo: PropTypes.bool,
+  hasAllowAudio: PropTypes.bool,
   hasPlayInFullScreen: PropTypes.bool,
   isMobileOrTablet: PropTypes.bool,
+  isMuted: PropTypes.bool,
   isPlaying: PropTypes.bool,
+  onAudioButtonClick: PropTypes.func,
   onCloseButtonClick: PropTypes.func,
   onPlayPauseButtonClick: PropTypes.func,
   progress: PropTypes.number,
-  videoTitle: PropTypes.string,
 };
 
 Controls.defaultProps = {
   className: undefined,
   copy: {
     closeButtonTitle: 'Close',
+    muteButtonTitle: 'Mute video',
     pauseButtonTitle: 'View video',
     playButtonTitle: 'Pause video',
+    unmuteButtonTitle: 'Unmute video',
   },
   hasActiveVideo: false,
+  hasAllowAudio: false,
   hasPlayInFullScreen: false,
   isMobileOrTablet: false,
+  isMuted: true,
   isPlaying: false,
+  onAudioButtonClick: undefined,
   onCloseButtonClick: undefined,
   onPlayPauseButtonClick: undefined,
   progress: 0,
-  videoTitle: undefined,
 };
 
 export default Controls;

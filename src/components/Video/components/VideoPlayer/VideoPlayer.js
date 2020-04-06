@@ -8,15 +8,16 @@ const VideoPlayer = forwardRef(
   (
     {
       className,
-      isActive,
+      hasActiveVideo,
+      hasAllowAudio,
       hasAutoplay,
       hasLoop,
-      hasAllowAudio,
+      hasPlayInFullScreen,
+      isActive,
+      isMuted,
       large,
       medium,
       small,
-      hasActiveVideo,
-      hasPlayInFullScreen,
     },
     ref,
   ) => {
@@ -36,7 +37,7 @@ const VideoPlayer = forwardRef(
           className={classSet}
           controls={false}
           loop={hasLoop}
-          muted={!hasAllowAudio}
+          muted={!hasAllowAudio || (hasAllowAudio && isMuted)}
           playsInline={!hasPlayInFullScreen}
           ref={ref}
         >
@@ -64,6 +65,7 @@ VideoPlayer.propTypes = {
   hasLoop: PropTypes.bool,
   hasPlayInFullScreen: PropTypes.bool,
   isActive: PropTypes.bool,
+  isMuted: PropTypes.bool,
   large: PropTypes.string,
   medium: PropTypes.string,
   small: PropTypes.string,
@@ -77,6 +79,7 @@ VideoPlayer.defaultProps = {
   hasLoop: true,
   hasPlayInFullScreen: false,
   isActive: true,
+  isMuted: true,
   large: undefined,
   medium: undefined,
   small: undefined,
