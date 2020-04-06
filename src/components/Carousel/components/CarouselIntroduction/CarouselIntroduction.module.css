@@ -1,9 +1,11 @@
 @import 'styles/index';
 
 .base {
+  position: relative;
   display: flex;
   height: 100%;
   flex-direction: column;
+  font-size: rem(15px);
 
   @media (--viewport-md-only) {
     display: flex;
@@ -15,7 +17,11 @@
   margin-bottom: 0;
 
   @media (--viewport-md-only) {
+    position: absolute;
+    left: 0;
     width: 50%;
+    width: calc(50% - var(--layout-md-spacing));
+    padding-right: var(--layout-md-spacing);
   }
 }
 
@@ -25,6 +31,7 @@
   @media (--viewport-md-only) {
     width: 50%;
     max-width: 100%;
+    margin-left: 50%;
   }
 }
 
@@ -34,4 +41,10 @@
 
 .ctaWrapper {
   margin-top: auto;
+
+  @media (--viewport-md-only) {
+    width: 50%;
+    max-width: 100%;
+    margin-left: 50%;
+  }
 }

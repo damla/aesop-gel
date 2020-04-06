@@ -2,15 +2,11 @@
 
 .base {
   position: relative;
-  font-family: inherit;
+  font-family: var(--font-family-sans-serif-regular);
   font-size: inherit;
   font-weight: var(--font-weight-normal);
   outline: none;
   text-decoration: none;
-
-  > * {
-    pointer-events: none;
-  }
 }
 
 .hasIcon {

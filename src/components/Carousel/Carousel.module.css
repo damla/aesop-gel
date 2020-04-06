@@ -23,15 +23,6 @@
     .slick-list {
       position: relative;
       margin: 100px 80px 125px;
-
-      /*
-      @media (--viewport-md) {
-        margin: 10px 0 40px;
-      }
-
-      @media (--viewport-lg) {
-        margin: 10px 0 40px;
-      } */
     }
 
     .slick-slide {

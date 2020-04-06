@@ -10,7 +10,7 @@
   list-style-type: none;
 
   @media (--viewport-md) {
-    margin: 0 100px 40px;
+    margin: 0 80px 40px;
   }
 
   :global {
