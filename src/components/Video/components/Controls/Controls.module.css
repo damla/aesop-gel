@@ -178,6 +178,10 @@
   }
 }
 
+.playButtonIcon {
+  transform: translateX(1px);
+}
+
 .progressBar {
   position: absolute;
   z-index: var(--z-index-fixed-full-screen-video);
