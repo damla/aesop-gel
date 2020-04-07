@@ -23,13 +23,12 @@ const Controls = ({
   onPlayPauseButtonClick,
   progress,
 }) => {
-  const [
-    isFullScreenControlsHeaderActive,
-    setIsFullScreenControlsHeaderActive,
-  ] = useState(true);
+  const [isActiveVideoControlActive, setIsActiveVideoControlActive] = useState(
+    true,
+  );
 
   useEscapeKeyListener(() => {
-    setIsFullScreenControlsHeaderActive(true);
+    setIsActiveVideoControlActive(true);
     onCloseButtonClick();
   });
 
@@ -43,41 +42,43 @@ const Controls = ({
     }
 
     const startTimeout = () => {
-      setIsFullScreenControlsHeaderActive(true);
+      setIsActiveVideoControlActive(true);
 
       if (windowIsDefined) {
         window.clearTimeout(eventTimeout.current);
 
         eventTimeout.current = window.setTimeout(() => {
-          setIsFullScreenControlsHeaderActive(false);
+          setIsActiveVideoControlActive(false);
         }, TIMEOUT);
       }
     };
 
-    if (hasActiveVideo && hasPlayInFullScreen) {
+    if (hasActiveVideo) {
       startTimeout();
     }
 
     const handleMouseMove = debounce(() => {
-      if (hasActiveVideo && hasPlayInFullScreen) {
+      if (hasActiveVideo) {
         startTimeout();
       }
     }, 10);
 
     if (windowIsDefined) {
       window.addEventListener('mousemove', handleMouseMove);
+      window.addEventListener('touchstart', handleMouseMove);
     }
 
     return function cleanup() {
       if (windowIsDefined) {
         window.removeEventListener('mousemove', handleMouseMove);
+        window.removeEventListener('touchstart', handleMouseMove);
         window.clearTimeout(eventTimeout.current);
       }
     };
   }, [windowIsDefined, hasActiveVideo, hasPlayInFullScreen]);
 
   const handleCloseButtonClick = () => {
-    setIsFullScreenControlsHeaderActive(true);
+    setIsActiveVideoControlActive(true);
     onCloseButtonClick();
   };
 
@@ -101,11 +102,18 @@ const Controls = ({
 
   const isSmallMediumViewport = ascertainIsSmallOrMediumOnlyViewport();
 
+  const isInlineMuteActive =
+    hasAllowAudio &&
+    hasActiveVideo &&
+    (!hasPlayInFullScreen || isSmallMediumViewport);
+
   return (
     <div className={classSet}>
-      {hasAllowAudio && isSmallMediumViewport && hasActiveVideo && (
+      {isInlineMuteActive && (
         <Button
-          className={cx(styles.mute)}
+          className={cx(styles.mute, {
+            [styles.hidden]: !isActiveVideoControlActive,
+          })}
           isInline={true}
           onClick={onAudioButtonClick}
           title={isMuted ? copy.unmuteButtonTitle : copy.muteButtonTitle}
@@ -126,7 +134,7 @@ const Controls = ({
         <div className={fullScreenControlsClassSet}>
           <div
             className={cx(styles.fullScreenControlsHeader, {
-              [styles.hidden]: !isFullScreenControlsHeaderActive,
+              [styles.hidden]: !isActiveVideoControlActive,
             })}
           >
             {hasAllowAudio && (
@@ -175,6 +183,7 @@ const Controls = ({
         <Button
           className={cx(styles.playPauseButton, {
             [styles.activePlayPauseButton]: hasActiveVideo,
+            [styles.hidden]: !isActiveVideoControlActive,
           })}
           isInline={true}
           onClick={onPlayPauseButtonClick}
