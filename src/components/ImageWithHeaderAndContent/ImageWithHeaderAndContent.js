@@ -73,12 +73,16 @@ const ImageWithHeaderAndContent = forwardRef(
                 subHeading={copy.subHeading}
                 theme={theme}
               />
-
-              <ParagraphSet className={styles.description} theme={theme}>
-                {copy.description}
-              </ParagraphSet>
             </div>
-            <div className={styles.content}>{content}</div>
+            <div className={styles.content}>
+              {copy.description && (
+                <ParagraphSet className={styles.description} theme={theme}>
+                  {copy.description}
+                </ParagraphSet>
+              )}
+
+              {content}
+            </div>
           </div>
         </div>
       </section>

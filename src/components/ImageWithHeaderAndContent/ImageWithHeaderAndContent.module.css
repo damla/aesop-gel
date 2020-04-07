@@ -26,7 +26,7 @@
   }
 }
 
-.original.dark .content {
+/* .original.dark .content {
   border-top: 2px solid var(--color-grey-20);
 }
 
@@ -42,6 +42,14 @@
 .light.reverse .heading {
   padding-bottom: 20px;
   border-bottom: 2px solid var(--color-light-copy);
+} */
+
+.dark .content {
+  border-top: 2px solid var(--color-grey-20);
+}
+
+.light .content {
+  border-top: 2px solid var(--color-light-copy);
 }
 
 .wrapper {
@@ -130,6 +138,7 @@
 }
 
 .description {
+  padding-top: 20px;
   font-size: rem(15px);
 
   &:last-of-type {

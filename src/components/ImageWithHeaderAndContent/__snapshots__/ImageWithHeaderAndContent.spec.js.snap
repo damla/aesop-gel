@@ -56,11 +56,6 @@ exports[`<ImageWithHeaderAndContent /> renders base component correctly 1`] = `
             A comprehensive skin care regimen, ideal in urban environments.
           </h3>
         </header>
-        <div
-          className="set dark description"
-        >
-          Morning and evening, use Parsley Seed Facial Cleansing Oil, Facial Toner, Anti-Oxidant Serum, and Eye Cream. Twice weekly, apply Masque after cleansing; follow with Facial Treatment.
-        </div>
       </div>
       <div
         className="content"
