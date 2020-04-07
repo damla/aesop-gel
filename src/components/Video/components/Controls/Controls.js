@@ -107,6 +107,11 @@ const Controls = ({
     hasActiveVideo &&
     (!hasPlayInFullScreen || isSmallMediumViewport);
 
+  const isInlinePlayPauseButtonActive =
+    isSmallMediumViewport ||
+    (!isSmallMediumViewport && !hasActiveVideo) ||
+    (!isSmallMediumViewport && !hasPlayInFullScreen);
+
   return (
     <div className={classSet}>
       {isInlineMuteActive && (
@@ -183,6 +188,7 @@ const Controls = ({
         <Button
           className={cx(styles.playPauseButton, {
             [styles.activePlayPauseButton]: hasActiveVideo,
+            [styles.inactivePlayPauseButton]: !isInlinePlayPauseButtonActive,
             [styles.hidden]: !isActiveVideoControlActive,
           })}
           isInline={true}

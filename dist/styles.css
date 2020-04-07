@@ -4097,6 +4097,9 @@ sans-serif;
 .Controls-module_activePlayPauseButton__3vXZv.Controls-module_activePlayPauseButton__3vXZv svg {
     fill: #fffef0;
   }
+.Controls-module_inactivePlayPauseButton__2r-aT {
+  display: none;
+}
 .Controls-module_fullScreenPlayPauseButton__2qnFo.Controls-module_fullScreenPlayPauseButton__2qnFo {
   position: absolute;
   z-index: 1500;
