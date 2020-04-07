@@ -1310,6 +1310,9 @@ sans-serif;
 --color-dark-decoration: var(--color-grey-30);
 --color-dark-disabled: var(--color-grey-60);
 */
+.Pagination-module_base___SWdb {
+  position: relative;
+}
 .Pagination-module_list__2Oj5X {
   position: relative;
   display: -webkit-box;
@@ -1342,6 +1345,15 @@ sans-serif;
     -webkit-transition: background-color 700ms cubic-bezier(0.215, 0.61, 0.355, 1);
     transition: background-color 700ms cubic-bezier(0.215, 0.61, 0.355, 1);
   }
+.Pagination-module_bar__31cQF {
+  position: absolute;
+  height: 2px;
+  padding: 0;
+  margin: 0;
+  background-color: #333;
+  -webkit-transition: left 1000ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: left 1000ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
 
 /* @import './key-frame.css'; */
 /* @import './font-face.css'; */
@@ -3005,19 +3017,28 @@ sans-serif;
     margin-left: 20px
 }
   }
-.ImageWithHeaderAndContent-module_original__2W4i9.ImageWithHeaderAndContent-module_dark__19xnz .ImageWithHeaderAndContent-module_content__3tIQ4 {
+/* .original.dark .content {
+  border-top: 2px solid var(--color-grey-20);
+}
+
+.original.light .content {
+  border-top: 2px solid var(--color-light-copy);
+}
+
+.dark.reverse .heading {
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--color-grey-20);
+}
+
+.light.reverse .heading {
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--color-light-copy);
+} */
+.ImageWithHeaderAndContent-module_dark__19xnz .ImageWithHeaderAndContent-module_content__3tIQ4 {
   border-top: 2px solid #4a4a4a;
 }
-.ImageWithHeaderAndContent-module_original__2W4i9.ImageWithHeaderAndContent-module_light__XhSI- .ImageWithHeaderAndContent-module_content__3tIQ4 {
+.ImageWithHeaderAndContent-module_light__XhSI- .ImageWithHeaderAndContent-module_content__3tIQ4 {
   border-top: 2px solid #fffef0;
-}
-.ImageWithHeaderAndContent-module_dark__19xnz.ImageWithHeaderAndContent-module_reverse__3g8sq .ImageWithHeaderAndContent-module_heading__9khSf {
-  padding-bottom: 20px;
-  border-bottom: 2px solid #4a4a4a;
-}
-.ImageWithHeaderAndContent-module_light__XhSI-.ImageWithHeaderAndContent-module_reverse__3g8sq .ImageWithHeaderAndContent-module_heading__9khSf {
-  padding-bottom: 20px;
-  border-bottom: 2px solid #fffef0;
 }
 .ImageWithHeaderAndContent-module_wrapper__hwV4A {
   padding: 76px 20px;
@@ -3116,6 +3137,7 @@ sans-serif;
   }
     }
 .ImageWithHeaderAndContent-module_description__2w0J5 {
+  padding-top: 20px;
   font-size: 15px;
 }
 .ImageWithHeaderAndContent-module_description__2w0J5:last-of-type {
