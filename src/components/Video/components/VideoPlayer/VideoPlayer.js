@@ -38,7 +38,7 @@ const VideoPlayer = forwardRef(
           controls={false}
           loop={hasLoop}
           muted={!hasAllowAudio || (hasAllowAudio && isMuted)}
-          playsInline={!hasPlayInFullScreen}
+          playsInline={true}
           ref={ref}
         >
           {large && (
