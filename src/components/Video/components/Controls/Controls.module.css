@@ -132,6 +132,10 @@
   }
 }
 
+.inactivePlayPauseButton {
+  display: none;
+}
+
 .fullScreenPlayPauseButton.fullScreenPlayPauseButton {
   position: absolute;
   z-index: var(--z-index-fixed-full-screen-video);
