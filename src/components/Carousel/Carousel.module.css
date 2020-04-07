@@ -1,12 +1,26 @@
 @import 'styles/index';
 
+.slideWrapper {
+  height: 100%;
+}
+
 .base {
   position: relative;
   z-index: var(--z-index-forground-content);
   overflow: hidden;
 
   picture {
+    display: flex;
+    height: 380px;
     padding: 0;
+
+    @media (--viewport-md) {
+      height: 380px;
+    }
+
+    @media (--viewport-lg) {
+      height: 400px;
+    }
   }
 
   p {
@@ -22,31 +36,23 @@
 
     .slick-list {
       position: relative;
-      margin: 40px 80px 24px;
+      margin: 40px 0 24px;
 
       @media (--viewport-md) {
-        margin: 100px 80px 125px;
+        margin: 40px 40px 100px;
+      }
+
+      @media (--viewport-lg) {
+        margin: 40px 80px 100px;
       }
     }
 
     .slick-slide {
-      &:not(:last-child) {
-        margin-right: 10px;
-      }
-
-      &:not(:first-of-type) {
-        margin-left: 10px;
-      }
-
       & > div {
         height: 100%;
       }
     }
   }
-}
-
-.slideWrapper {
-  height: 100%;
 }
 
 /* .edges {
@@ -91,7 +97,6 @@
 
 .item {
   display: flex;
-  height: 100%;
   flex-direction: column-reverse;
   text-align: center;
   transition:
@@ -118,11 +123,11 @@
   margin: 50px 20px 40px;
 
   @media (--viewport-md) {
-    margin: 40px 60px 40px;
+    margin: 40px 40px 40px;
   }
 
   @media (--viewport-lg) {
-    margin: 50px 100px 40px;
+    margin: 50px 80px 40px;
   }
 
   p {
