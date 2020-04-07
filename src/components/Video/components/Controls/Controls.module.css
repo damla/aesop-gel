@@ -36,11 +36,6 @@
   transition: opacity 500ms var(--easing-ease-in-sine);
 }
 
-.hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-
 .activeFullScreenControls.activeFullScreenControls {
   pointer-events: auto;
   transform: scale(1);
@@ -48,15 +43,15 @@
 
 .mute {
   position: absolute;
-  z-index: var(--z-index-fixed-full-screen-video);
+  z-index: calc(var(--z-index-fixed-full-screen-video) + 1);
   top: calc(var(--layout-sm-spacing) * 2);
   left: calc(var(--layout-sm-spacing) * 2);
   padding: 7px;
-  background-color: var(--color-grey-55);
+  background-color: var(--color-grey-40);
   border-radius: 100%;
   line-height: 0;
   opacity: 0.8;
-  transition: opacity 200ms var(--easing-ease-in-sine);
+  transition: opacity 800ms var(--easing-ease-in-sine);
 
   &:hover,
   &:focus {
@@ -119,8 +114,8 @@
   background-color: var(--color-light-link-hover);
   border-radius: 100%;
   color: var(--color-light-link);
-  opacity: 0.7;
-  transition: opacity 200ms var(--easing-ease-in-sine);
+  opacity: 0.8;
+  transition: opacity 800ms var(--easing-ease-in-sine);
 
   &:hover,
   &:focus {
@@ -130,7 +125,7 @@
 }
 
 .activePlayPauseButton.activePlayPauseButton {
-  background-color: var(--color-grey-55);
+  background-color: var(--color-grey-40);
 
   svg {
     fill: var(--color-light-link);
@@ -143,10 +138,10 @@
   top: calc(50vh - 40px - 13px);
   left: calc(50vw - 40px - 13px);
   padding: 10px;
-  background-color: var(--color-grey-55);
+  background-color: var(--color-grey-40);
   border-radius: 100%;
   line-height: 0;
-  opacity: 0.7;
+  opacity: 0.8;
   transition: opacity 200ms var(--easing-ease-in-sine);
 
   svg {
@@ -214,4 +209,9 @@
   background-color: var(--color-white);
   content: '';
   transition: width 100ms var(--easing-ease-in-sine);
+}
+
+.hidden.hidden {
+  opacity: 0;
+  pointer-events: none;
 }
