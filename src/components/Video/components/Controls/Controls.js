@@ -174,6 +174,7 @@ const Controls = ({
               title={playPauseButtonTitle}
             >
               <Icon
+                className={cx({ [styles.playButtonIcon]: !isPlaying })}
                 height={10}
                 name={playPauseButtonIconName}
                 theme="light"
@@ -195,7 +196,12 @@ const Controls = ({
           onClick={onPlayPauseButtonClick}
           title={playPauseButtonTitle}
         >
-          <Icon height={10} name={playPauseButtonIconName} width={10} />
+          <Icon
+            className={cx({ [styles.playButtonIcon]: !isPlaying })}
+            height={10}
+            name={playPauseButtonIconName}
+            width={10}
+          />
         </Button>
       </Transition>
 
