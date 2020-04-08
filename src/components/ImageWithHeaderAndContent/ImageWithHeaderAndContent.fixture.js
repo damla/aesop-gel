@@ -5,13 +5,8 @@ export default {
     eyebrow: 'How to use',
     heading:
       'Dispense into palm then massage gently over face, neck and lips, applying minimal pressure. Avoid eye area. Rinse thoroughly with warm water.',
-    description: (
-      <p>
-        Morning and evening, use Parsley Seed Facial Cleansing Oil, Facial
-        Toner, Anti-Oxidant Serum, and Eye Cream. Twice weekly, apply Masque
-        after cleansing; follow with Facial Treatment.
-      </p>
-    ),
+    description:
+      'Morning and evening, use Parsley Seed Facial Cleansing Oil, Facial Toner, Anti-Oxidant Serum, and Eye Cream. Twice weekly, apply Masque after cleansing; follow with Facial Treatment.',
   },
   copyKit: {
     eyebrow: 'How to use',

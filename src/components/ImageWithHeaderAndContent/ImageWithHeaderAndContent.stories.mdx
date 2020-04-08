@@ -20,7 +20,18 @@ import ImageWithHeaderAndContentFixture from './ImageWithHeaderAndContent.fixtur
   <Story name="Base component">
     <ImageWithHeaderAndContent
       backgroundColor={text('backgroundColor', '')}
-      copy={ImageWithHeaderAndContentFixture.copy}
+      copy={{
+        description: text(
+          'description',
+          ImageWithHeaderAndContentFixture.copy.description,
+        ),
+        eyebrow: text('eyebrow', ImageWithHeaderAndContentFixture.copy.eyebrow),
+        heading: text('heading', ImageWithHeaderAndContentFixture.copy.heading),
+        subHeading: text(
+          'subHeading',
+          ImageWithHeaderAndContentFixture.copy.subHeading,
+        ),
+      }}
       hasFullWidthImage={boolean('hasFullWidthImage', false)}
       image={ImageWithHeaderAndContentFixture.imageExpectations}
       isReverse={boolean('iReverse', false)}
