@@ -17,17 +17,17 @@ exports[`<Carousel /> renders base component correctly 1`] = `
         className="base chevron light"
         data-ref=""
         focusable="false"
-        height={18}
+        height={16}
         role="img"
         style={
           Object {
-            "height": "18px",
-            "width": "18px",
+            "height": "16px",
+            "width": "16px",
           }
         }
         tabIndex={-1}
         viewBox="0 0 50 50"
-        width={18}
+        width={16}
       >
         <g>
           <polygon
@@ -500,17 +500,17 @@ exports[`<Carousel /> renders base component correctly 1`] = `
         className="base chevron light"
         data-ref=""
         focusable="false"
-        height={18}
+        height={16}
         role="img"
         style={
           Object {
-            "height": "18px",
-            "width": "18px",
+            "height": "16px",
+            "width": "16px",
           }
         }
         tabIndex={-1}
         viewBox="0 0 50 50"
-        width={18}
+        width={16}
       >
         <g>
           <polygon
@@ -570,17 +570,17 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
         className="base chevron light"
         data-ref=""
         focusable="false"
-        height={18}
+        height={16}
         role="img"
         style={
           Object {
-            "height": "18px",
-            "width": "18px",
+            "height": "16px",
+            "width": "16px",
           }
         }
         tabIndex={-1}
         viewBox="0 0 50 50"
-        width={18}
+        width={16}
       >
         <g>
           <polygon
@@ -979,17 +979,17 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
         className="base chevron light"
         data-ref=""
         focusable="false"
-        height={18}
+        height={16}
         role="img"
         style={
           Object {
-            "height": "18px",
-            "width": "18px",
+            "height": "16px",
+            "width": "16px",
           }
         }
         tabIndex={-1}
         viewBox="0 0 50 50"
-        width={18}
+        width={16}
       >
         <g>
           <polygon

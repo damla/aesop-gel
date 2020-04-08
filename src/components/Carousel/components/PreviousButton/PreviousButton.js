@@ -17,7 +17,7 @@ const PreviousButton = ({ isActive, onClick, theme }) => (
     theme={theme}
     title="next slide"
   >
-    <Icon height={18} name="chevron" theme={theme} width={18} />
+    <Icon height={16} name="chevron" theme={theme} width={16} />
   </Button>
 );
 
