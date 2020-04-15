@@ -1646,15 +1646,30 @@ sans-serif;
 --color-dark-decoration: var(--color-grey-30);
 --color-dark-disabled: var(--color-grey-60);
 */
+.Carousel-module_base__2Zak0 {
+  padding-top: 60px;
+  padding-bottom: 130px;
+}
+@media (min-width: 640px) {
+.Carousel-module_base__2Zak0 {
+    padding-top: 130px
+}
+  }
+@media (min-width: 1025px) {
+.Carousel-module_base__2Zak0 {
+    padding-top: 100px;
+    padding-bottom: 60px
+}
+  }
 .Carousel-module_slideWrapper__nqrVO {
   height: 100%;
 }
-.Carousel-module_base__2Zak0 {
+.Carousel-module_carousel__2ILZE {
   position: relative;
   z-index: 20;
   overflow: hidden;
 }
-.Carousel-module_base__2Zak0 picture {
+.Carousel-module_carousel__2ILZE picture {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1662,40 +1677,40 @@ sans-serif;
     padding: 0;
   }
 @media (min-width: 640px) {
-.Carousel-module_base__2Zak0 picture {
+.Carousel-module_carousel__2ILZE picture {
       height: 380px
   }
     }
 @media (min-width: 1025px) {
-.Carousel-module_base__2Zak0 picture {
+.Carousel-module_carousel__2ILZE picture {
       height: 400px
   }
     }
-.Carousel-module_base__2Zak0 p {
+.Carousel-module_carousel__2ILZE p {
     font-size: 15px;
     font-weight: 400;
     line-height: 1.7;
   }
-.Carousel-module_base__2Zak0 .slick-track {
+.Carousel-module_carousel__2ILZE .slick-track {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
     }
-.Carousel-module_base__2Zak0 .slick-list {
+.Carousel-module_carousel__2ILZE .slick-list {
       position: relative;
-      margin: 40px 0 24px;
+      margin: 0 0 24px;
     }
 @media (min-width: 640px) {
-.Carousel-module_base__2Zak0 .slick-list {
-        margin: 40px 40px 100px
+.Carousel-module_carousel__2ILZE .slick-list {
+        margin: 0 40px 24px
     }
       }
 @media (min-width: 1025px) {
-.Carousel-module_base__2Zak0 .slick-list {
-        margin: 40px 80px 100px
+.Carousel-module_carousel__2ILZE .slick-list {
+        margin: 0 80px 48px
     }
       }
-.Carousel-module_base__2Zak0 .slick-slide > div {
+.Carousel-module_carousel__2ILZE .slick-slide > div {
         height: 100%;
       }
 /* .edges {
@@ -1766,16 +1781,11 @@ sans-serif;
     color: #000;
   }
 .Carousel-module_mobileCarouselIntroductionWrapper__1Y0_X {
-  margin: 50px 20px 40px;
+  margin: 0 20px 60px;
 }
 @media (min-width: 640px) {
 .Carousel-module_mobileCarouselIntroductionWrapper__1Y0_X {
-    margin: 40px 40px 40px
-}
-  }
-@media (min-width: 1025px) {
-.Carousel-module_mobileCarouselIntroductionWrapper__1Y0_X {
-    margin: 50px 80px 40px
+    margin: 0 40px 100px
 }
   }
 .Carousel-module_mobileCarouselIntroductionWrapper__1Y0_X p {

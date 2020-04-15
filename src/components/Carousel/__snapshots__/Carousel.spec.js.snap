@@ -1,9 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Carousel /> renders base component correctly 1`] = `
-<section>
+<section
+  className="base dark"
+>
   <div
-    className="slick-slider base dark slick-initialized"
+    className="slick-slider carousel slick-initialized"
     dir="ltr"
   >
     <button
@@ -554,9 +556,11 @@ exports[`<Carousel /> renders base component correctly 1`] = `
 `;
 
 exports[`<Carousel /> renders component correctly if no \`introduction\` prop is provided 1`] = `
-<section>
+<section
+  className="base dark"
+>
   <div
-    className="slick-slider base dark slick-initialized"
+    className="slick-slider carousel slick-initialized"
     dir="ltr"
   >
     <button
@@ -1026,9 +1030,11 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
 `;
 
 exports[`<Carousel /> renders component correctly if no \`url\` member is provided on the \`slides\` prop 1`] = `
-<section>
+<section
+  className="base dark"
+>
   <div
-    className="slick-slider base dark slick-initialized"
+    className="slick-slider carousel slick-initialized"
   >
     
     <div

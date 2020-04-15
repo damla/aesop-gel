@@ -8,22 +8,23 @@
     "dist"
   ],
   "scripts": {
+    "build-storybook": "build-storybook -s ./public",
+    "build:dev": "NODE_ENV=development rollup -c",
+    "build:prod": "NODE_ENV=production rollup -c",
     "build": "webpack",
+    "deploy-storybook": "node deploy-storybook.js",
     "eslint": "eslint './src/**/*.{js,jsx,ts,tsx}' --ignore-path .eslintignore --config .eslintrc",
+    "generate-component": "./scripts/componentBoilerplate/create.sh $element",
     "lint": "npm run eslint && npm run stylelint",
-    "pretty": "npm run prettier-eslint && npm run prettier-stylelint",
+    "prepublishOnly": "npm run release",
     "prettier-eslint": "prettier --write \"./**/*.{js,jsx,ts,tsx}\" --loglevel \"error\"",
     "prettier-stylelint": "prettier-stylelint  --write './src/**/*.css' --config .stylelintrc --quiet",
+    "pretty": "npm run prettier-eslint && npm run prettier-stylelint",
+    "release": "npm run build:dev && npm run build:prod",
     "start": "webpack-dev-server --config ./webpack.config.js --mode development --watch",
     "storybook": "start-storybook -p 6006  -s ./public",
     "stylelint": "stylelint 'src/**/*.css'",
-    "test": "jest --no-cache --passWithNoTests --maxWorkers=2",
-    "build-storybook": "build-storybook -s ./public",
-    "deploy-storybook": "node deploy-storybook.js",
-    "prepublishOnly": "npm run release",
-    "release": "npm run build:dev && npm run build:prod",
-    "build:prod": "NODE_ENV=production rollup -c",
-    "build:dev": "NODE_ENV=development rollup -c"
+    "test": "jest --no-cache --passWithNoTests --maxWorkers=2"
   },
   "repository": {
     "type": "git",

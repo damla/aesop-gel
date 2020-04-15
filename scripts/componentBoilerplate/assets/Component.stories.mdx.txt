@@ -1,0 +1,29 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs } from '@storybook/addon-knobs';
+import { text } from '@storybook/addon-knobs';
+import ComponentBoilerplate from './ComponentBoilerplate';
+import ComponentBoilerplateFixture from './ComponentBoilerplate.fixture';
+
+<Meta
+  title="Components/ComponentBoilerplate"
+  component={ComponentBoilerplate}
+  decorators={[withKnobs]}
+/>
+
+# ComponentBoilerplate
+
+<Preview>
+  <Story name="Base component">
+    <ComponentBoilerplate />
+  </Story>
+</Preview>
+
+## API
+
+<Props of={ComponentBoilerplate} />
+
+## Usage Example
+
+```
+<ComponentBoilerplate />
+```
