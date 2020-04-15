@@ -1,10 +1,24 @@
 @import 'styles/index';
 
+.base {
+  padding-top: 60px;
+  padding-bottom: 130px;
+
+  @media (--viewport-md) {
+    padding-top: 130px;
+  }
+
+  @media (--viewport-lg) {
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+}
+
 .slideWrapper {
   height: 100%;
 }
 
-.base {
+.carousel {
   position: relative;
   z-index: var(--z-index-forground-content);
   overflow: hidden;
@@ -36,14 +50,14 @@
 
     .slick-list {
       position: relative;
-      margin: 40px 0 24px;
+      margin: 0 0 24px;
 
       @media (--viewport-md) {
-        margin: 40px 40px 100px;
+        margin: 0 40px 24px;
       }
 
       @media (--viewport-lg) {
-        margin: 40px 80px 100px;
+        margin: 0 80px 48px;
       }
     }
 
@@ -120,14 +134,10 @@
 }
 
 .mobileCarouselIntroductionWrapper {
-  margin: 50px 20px 40px;
+  margin: 0 20px 60px;
 
   @media (--viewport-md) {
-    margin: 40px 40px 40px;
-  }
-
-  @media (--viewport-lg) {
-    margin: 50px 80px 40px;
+    margin: 0 40px 100px;
   }
 
   p {
