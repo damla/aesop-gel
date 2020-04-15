@@ -1,0 +1,22 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import cx from 'classnames';
+import styles from './ComponentBoilerplate.module.css';
+
+const ComponentBoilerplate = ({ children, className }) => {
+  const classSet = cx(styles.base, className);
+
+  return <div className={classSet}>{children}</div>;
+};
+
+ComponentBoilerplate.propTypes = {
+  children: PropTypes.node,
+  className: PropTypes.string,
+};
+
+ComponentBoilerplate.defaultProps = {
+  children: undefined,
+  className: undefined,
+};
+
+export default ComponentBoilerplate;

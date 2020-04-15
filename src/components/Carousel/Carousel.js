@@ -46,7 +46,7 @@ const Carousel = forwardRef(
     const classSet = cx(styles.base, styles[theme], className);
 
     const settings = getCarouselSettings({
-      className: classSet,
+      className: styles.carousel,
       isNextButtonActive,
       isPreviousButtonActive,
       Pagination,
@@ -66,7 +66,7 @@ const Carousel = forwardRef(
     };
 
     return (
-      <section ref={ref}>
+      <section className={classSet} ref={ref}>
         {!hasIntroSlide && introduction && (
           <aside className={styles.mobileCarouselIntroductionWrapper}>
             <CarouselIntroduction
