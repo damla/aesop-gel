@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default {
   copy: {
     eyebrow: 'How to use',
