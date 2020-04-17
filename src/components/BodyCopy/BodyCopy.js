@@ -42,6 +42,7 @@ const BodyCopy = ({
         <div className={styles.ctaWrapper}>
           {cta && (
             <Hyperlink
+              className={cx({ [styles.ctaInset]: secondaryCta })}
               openInANewWindow={cta.openInANewWindow}
               style={cta.style}
               theme={theme}
