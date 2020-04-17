@@ -1,7 +1,7 @@
 @import 'styles/index';
 
 .heading {
-  margin: 0 0 10px 0;
+  margin: 10px 0 10px 0;
   color: var(--color-dark-copy);
   font-family: var(--font-family-sans-serif-medium);
 
@@ -28,6 +28,10 @@
     max-height: 100%;
     margin: auto auto 0;
   }
+}
+
+.fullWidthSlide.fullWidthSlide {
+  height: auto;
 }
 
 .imageContainer {

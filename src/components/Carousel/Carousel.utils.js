@@ -3,19 +3,21 @@ import { BREAKPOINTS } from '~/constants';
 
 export const getCarouselSettings = ({
   className,
+  hasFullWidthSlides,
+  initialSlideIndex,
   isNextButtonActive,
   isPreviousButtonActive,
   Pagination,
   NextButton,
   PreviousButton,
 }) => ({
-  appendDots: dots => <Pagination dots={dots} />,
+  appendDots: dots => <Pagination dots={dots} fullWidth={hasFullWidthSlides} />,
   centerMode: false,
   className,
   customPaging: () => <div />,
   dots: true,
-  infinite: false,
-  initialSlide: 0,
+  infinite: hasFullWidthSlides,
+  initialSlide: initialSlideIndex,
   nextArrow: <NextButton isActive={isNextButtonActive} theme="light" />,
   prevArrow: <PreviousButton isActive={isPreviousButtonActive} theme="light" />,
   responsive: [
@@ -28,18 +30,18 @@ export const getCarouselSettings = ({
     {
       breakpoint: BREAKPOINTS.MEDIUM.MAX_WIDTH,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: hasFullWidthSlides ? 1 : 2,
       },
     },
     {
       breakpoint: BREAKPOINTS.XXLARGE.MIN_WIDTH,
       settings: {
-        slidesToShow: 3,
+        slidesToShow: hasFullWidthSlides ? 1 : 3,
       },
     },
   ],
   slidesToScroll: 1,
-  slidesToShow: 4,
+  slidesToShow: hasFullWidthSlides ? 1 : 4,
   speed: 500,
   swipeToSlide: true,
 });

@@ -184,7 +184,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                   <div
                     className="description"
                   >
-                    Example description
+                    Example description Product 2
                   </div>
                 </div>
                 <div
@@ -255,7 +255,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                   <div
                     className="description"
                   >
-                    Example description
+                    Example description Product 3
                   </div>
                 </div>
                 <div
@@ -326,7 +326,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                   <div
                     className="description"
                   >
-                    A citrus, woody, herbaceous duo
+                    A citrus, woody, herbaceous duo Product 4
                   </div>
                 </div>
                 <div
@@ -394,6 +394,11 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                   >
                     Parsley Seed Facial Cleanser
                   </h5>
+                  <div
+                    className="description"
+                  >
+                    Product 5
+                  </div>
                 </div>
                 <div
                   className="imageContainer"
@@ -460,7 +465,11 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                   >
                     Parsley Seed Cleansing Masque
                   </h5>
-                  
+                  <div
+                    className="description"
+                  >
+                    Product 6
+                  </div>
                 </div>
                 <div
                   className="imageContainer"
@@ -665,7 +674,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                   <div
                     className="description"
                   >
-                    Example description
+                    Example description Product 2
                   </div>
                 </div>
                 <div
@@ -736,7 +745,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                   <div
                     className="description"
                   >
-                    Example description
+                    Example description Product 3
                   </div>
                 </div>
                 <div
@@ -807,7 +816,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                   <div
                     className="description"
                   >
-                    A citrus, woody, herbaceous duo
+                    A citrus, woody, herbaceous duo Product 4
                   </div>
                 </div>
                 <div
@@ -875,6 +884,11 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                   >
                     Parsley Seed Facial Cleanser
                   </h5>
+                  <div
+                    className="description"
+                  >
+                    Product 5
+                  </div>
                 </div>
                 <div
                   className="imageContainer"
@@ -941,7 +955,11 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                   >
                     Parsley Seed Cleansing Masque
                   </h5>
-                  
+                  <div
+                    className="description"
+                  >
+                    Product 6
+                  </div>
                 </div>
                 <div
                   className="imageContainer"
@@ -1094,7 +1112,7 @@ exports[`<Carousel /> renders component correctly if no \`url\` member is provid
                   <div
                     className="description"
                   >
-                    Example description
+                    Example description Product 2
                   </div>
                 </div>
                 <div

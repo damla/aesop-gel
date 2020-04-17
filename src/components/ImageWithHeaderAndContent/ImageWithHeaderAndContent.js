@@ -97,7 +97,7 @@ ImageWithHeaderAndContent.propTypes = {
   copy: PropTypes.shape({
     description: PropTypes.any,
     eyebrow: PropTypes.string,
-    heading: PropTypes,
+    heading: PropTypes.string,
     subHeading: PropTypes.string,
   }).isRequired,
   hasFullWidthImage: PropTypes.bool,

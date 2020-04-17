@@ -1,6 +1,7 @@
 import React, { forwardRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import get from 'lodash/get';
 import Slider from 'react-slick';
 import useWindowHasResized from '~/customHooks/useWindowHasResized';
 import {
@@ -19,34 +20,68 @@ import Slide from './components/Slide';
 import styles from './Carousel.module.css';
 
 const Carousel = forwardRef(
-  ({ className, introduction, slides, theme }, ref) => {
+  (
+    {
+      className,
+      hasFullWidthSlides,
+      hasShowCaption,
+      hasSlideCounter,
+      initialSlideIndex,
+      introduction,
+      slides,
+      theme,
+    },
+    ref,
+  ) => {
     const [isNextButtonActive, setIsNextButtonActive] = useState(true);
-    const [isPreviousButtonActive, setIsPreviousButtonActive] = useState(false);
+    const [isPreviousButtonActive, setIsPreviousButtonActive] = useState(
+      hasFullWidthSlides,
+    );
+
+    // SET IN EFEECT
+    const [caption, setCaption] = useState(
+      get(slides[initialSlideIndex], 'caption', ''),
+    );
+
+    const [slideCounter, setSlideCounter] = useState(
+      `${initialSlideIndex + 1} / ${slides.length}`,
+    );
 
     useWindowHasResized();
 
     let slideOffset = 0;
 
-    if (ascertainIsSmallOnlyViewport()) {
-      slideOffset = 1;
-    } else if (ascertainIsMediumOnlyViewport()) {
-      slideOffset = 2;
-    } else if (ascertainIsLargeOrXLargeOnlyViewport()) {
-      slideOffset = 3;
+    if (!hasFullWidthSlides) {
+      if (ascertainIsSmallOnlyViewport()) {
+        slideOffset = 1;
+      } else if (ascertainIsMediumOnlyViewport()) {
+        slideOffset = 2;
+      } else if (ascertainIsLargeOrXLargeOnlyViewport()) {
+        slideOffset = 3;
+      } else {
+        slideOffset = 4;
+      }
     } else {
-      slideOffset = 4;
+      slideOffset = 1;
     }
 
-    if (typeof slides === undefined || slides.length === 0) {
+    if (slides.length === 0) {
       return null;
     }
 
     const isMobileOrTablet = ascertainIsSmallOrMediumOnlyViewport();
 
-    const classSet = cx(styles.base, styles[theme], className);
+    const classSet = cx(
+      styles.base,
+      { [styles.fullWidthSlides]: hasFullWidthSlides },
+      styles[theme],
+      className,
+    );
 
     const settings = getCarouselSettings({
       className: styles.carousel,
+      hasFullWidthSlides,
+      initialSlideIndex,
       isNextButtonActive,
       isPreviousButtonActive,
       Pagination,
@@ -54,15 +89,25 @@ const Carousel = forwardRef(
       PreviousButton,
     });
 
-    const hasIntroSlide = introduction && !isMobileOrTablet;
+    const hasIntroSlide =
+      introduction && !isMobileOrTablet && !hasFullWidthSlides;
     const slidesLength = slides.length;
     const slidesCount = hasIntroSlide ? slidesLength + 1 : slidesLength;
 
-    const handleAfterChange = (index, nextIndex) => {
+    const handleBeforeChange = (index, nextIndex) => {
+      if (hasFullWidthSlides) {
+        return;
+      }
+
       const currentIndex = slidesCount - nextIndex;
 
       setIsPreviousButtonActive(nextIndex !== 0);
       setIsNextButtonActive(currentIndex === slideOffset ? false : true);
+    };
+
+    const handleAfterChange = index => {
+      setCaption(slides[index].caption);
+      setSlideCounter(`${index + 1} of ${slidesLength}`);
     };
 
     return (
@@ -78,7 +123,11 @@ const Carousel = forwardRef(
           </aside>
         )}
 
-        <Slider {...settings} beforeChange={handleAfterChange}>
+        <Slider
+          {...settings}
+          afterChange={handleAfterChange}
+          beforeChange={handleBeforeChange}
+        >
           {hasIntroSlide && (
             <CarouselIntroduction
               cta={introduction.cta}
@@ -96,16 +145,24 @@ const Carousel = forwardRef(
                   title={`Link to ${slide.heading}`}
                   url={url}
                 >
-                  <Slide {...slide} />
+                  <Slide {...slide} isFullWidthSlide={hasFullWidthSlides} />
                 </Hyperlink>
               ) : (
                 <div className={styles.item} key={index}>
-                  <Slide {...slide} />
+                  <Slide {...slide} isFullWidthSlide={hasFullWidthSlides} />
                 </div>
               )}
             </div>
           ))}
         </Slider>
+        {(hasShowCaption || hasSlideCounter) && (
+          <footer className={styles.footer}>
+            {hasSlideCounter && (
+              <div className={styles.slideCounter}>{slideCounter}</div>
+            )}
+            {hasShowCaption && <div className={styles.caption}>{caption}</div>}
+          </footer>
+        )}
       </section>
     );
   },
@@ -113,6 +170,10 @@ const Carousel = forwardRef(
 
 Carousel.propTypes = {
   className: PropTypes.string,
+  hasFullWidthSlides: PropTypes.bool,
+  hasShowCaption: PropTypes.bool,
+  hasSlideCounter: PropTypes.bool,
+  initialSlideIndex: PropTypes.number,
   introduction: PropTypes.shape({
     cta: PropTypes.shape({
       style: PropTypes.string,
@@ -126,6 +187,7 @@ Carousel.propTypes = {
   }),
   slides: PropTypes.arrayOf(
     PropTypes.shape({
+      caption: PropTypes.string,
       description: PropTypes.string,
       heading: PropTypes.string,
       id: PropTypes.string,
@@ -138,8 +200,12 @@ Carousel.propTypes = {
 
 Carousel.defaultProps = {
   className: undefined,
+  hasFullWidthSlides: false,
+  hasShowCaption: false,
+  hasSlideCounter: false,
+  initialSlideIndex: 0,
   introduction: undefined,
-  slides: undefined,
+  slides: [],
   theme: 'dark',
 };
 

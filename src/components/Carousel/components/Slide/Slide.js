@@ -5,7 +5,14 @@ import Heading from '~/components/Heading';
 import Image from '~/components/Image';
 import styles from './Slide.module.css';
 
-const Slide = ({ heading, description, id, image, theme }) => (
+const Slide = ({
+  description,
+  heading,
+  id,
+  image,
+  isFullWidthSlide,
+  theme,
+}) => (
   <>
     {(heading || description) && (
       <div className={cx(styles.information, styles[theme])} id={id}>
@@ -23,24 +30,32 @@ const Slide = ({ heading, description, id, image, theme }) => (
       </div>
     )}
     <div className={styles.imageContainer}>
-      <Image className={styles.image} theme={theme} {...image} />
+      <Image
+        className={cx(styles.image, {
+          [styles.fullWidthSlide]: isFullWidthSlide,
+        })}
+        theme={theme}
+        {...image}
+      />
     </div>
   </>
 );
 
 Slide.propTypes = {
-  heading: PropTypes.string,
   description: PropTypes.string,
+  heading: PropTypes.string,
   id: PropTypes.string,
   image: PropTypes.object.isRequired,
+  isFullWidthSlide: PropTypes.bool,
   theme: PropTypes.oneOf(['dark', 'light']),
 };
 
 Slide.defaultProps = {
-  heading: undefined,
   description: undefined,
+  heading: undefined,
   id: undefined,
   image: undefined,
+  isFullWidthSlide: false,
   theme: 'dark',
 };
 

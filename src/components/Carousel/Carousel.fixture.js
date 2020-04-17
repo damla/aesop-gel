@@ -13,7 +13,7 @@ export default {
   slides: [
     {
       url: '/',
-      description: 'Example description',
+      description: 'Example description Product 2',
       heading: 'Parsley Seed Facial Cleanser',
       image: {
         altText: 'Image of Parsley Seed Facial Cleanser',
@@ -27,7 +27,7 @@ export default {
     },
     {
       url: '/',
-      description: 'Example description',
+      description: 'Example description Product 3',
       heading: 'Parsley Seed Facial Cleanser',
       image: {
         altText: 'Image of Parsley Seed Facial Cleanser',
@@ -41,7 +41,7 @@ export default {
     },
     {
       url: '/',
-      description: 'A citrus, woody, herbaceous duo',
+      description: 'A citrus, woody, herbaceous duo Product 4',
       heading: 'Resurrection Duet',
       image: {
         altText: 'Image of Parsley Seed Facial Cleanser',
@@ -55,6 +55,7 @@ export default {
     },
     {
       url: '/',
+      description: 'Product 5',
       heading: 'Parsley Seed Facial Cleanser',
       image: {
         altText: 'Image of Parsley Seed Facial Cleanser',
@@ -68,7 +69,7 @@ export default {
     },
     {
       url: '/',
-      description: '',
+      description: 'Product 6',
       heading: 'Parsley Seed Cleansing Masque',
       image: {
         altText: 'Image Parsley Seed Cleansing Masque',
@@ -78,6 +79,28 @@ export default {
           'https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ',
         large:
           'https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ',
+      },
+    },
+  ],
+  imageSlides: [
+    {
+      caption:
+        'Image Two Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum facilisis ligula elementum.',
+      image: {
+        altText: 'Image Two AltText',
+        small: '/assets/images/ImageCarousel/image-two-small.jpg',
+        medium: '/assets/images/ImageCarousel/image-two-medium.jpg',
+        large: '/assets/images/ImageCarousel/image-two-large.jpg',
+      },
+    },
+    {
+      caption:
+        'Image Three Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum facilisis ligula elementum.',
+      image: {
+        altText: 'Image Three AltText',
+        small: '/assets/images/ImageCarousel/image-three-small.jpg',
+        medium: '/assets/images/ImageCarousel/image-three-medium.jpg',
+        large: '/assets/images/ImageCarousel/image-three-large.jpg',
       },
     },
   ],

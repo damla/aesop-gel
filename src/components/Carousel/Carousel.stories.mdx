@@ -13,13 +13,13 @@ import Carousel from './Carousel';
 # Carousel
 
 <Preview>
-  <Story name="Base component">
+  <Story name="Base component - Product Carousel">
     <Carousel
       introduction={CarouselFixture.introduction}
       slides={[
         {
           url: text('firstSlide.url', '/'),
-          description: text('firstSlide.description', 'Example description'),
+          description: text('firstSlide.description', 'Example description 1'),
           heading: text('firstSlide.heading', 'Parsley Seed Facial Cleanser'),
           image: {
             altText: text(
@@ -69,6 +69,67 @@ import Carousel from './Carousel';
         ...
         large:
           'https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ',
+      },
+    },
+    ...
+  ]}
+/>
+```
+
+### Image Carousel
+
+<Preview>
+  <Story name="Image Carousel">
+    <Carousel
+      hasFullWidthSlides={boolean('imageCarousel.hasFullWidthSlides', true)}
+      hasShowCaption={boolean('imageCarousel.hasShowCaption', true)}
+      hasSlideCounter={boolean('imageCarousel.hasSlideCounter', true)}
+      slides={[
+        {
+          caption: text(
+            'firstImageSlide.caption',
+            'Image One Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum facilisis ligula elementum.',
+          ),
+          image: {
+            altText: text(
+              'firstImageSlide.image.altText',
+              'Image of Parsley Seed Facial Cleanser',
+            ),
+            small: text(
+              'firstImageSlide.image.small',
+              '/assets/images/ImageCarousel/image-one-small.jpg',
+            ),
+            medium: text(
+              'firstImageSlide.image.medium',
+              '/assets/images/ImageCarousel/image-one-medium.jpg',
+            ),
+            large: text(
+              'firstImageSlide.image.large',
+              '/assets/images/ImageCarousel/image-one-large.jpg',
+            ),
+          },
+        },
+        ...CarouselFixture.imageSlides,
+      ]}
+    />
+  </Story>
+</Preview>
+
+## Usage Example
+
+```
+<Carousel
+  hasFullWidthSlides={true}
+  hasShowCaption={true}
+  hasSlideCounter={true}
+  slides={[
+    {
+      caption: '...',
+      image: {
+        altText: '...',
+        ...
+        large:
+          '...',
       },
     },
     ...
