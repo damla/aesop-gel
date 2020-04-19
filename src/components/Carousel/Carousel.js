@@ -11,6 +11,7 @@ import {
   ascertainIsSmallOrMediumOnlyViewport,
 } from '~/utils/viewports';
 import Hyperlink from '~/components/Hyperlink';
+import Transition from '~/components/Transition';
 import { getCarouselSettings } from './Carousel.utils';
 import CarouselIntroduction from './components/CarouselIntroduction';
 import NextButton from './components/NextButton/NextButton';
@@ -33,24 +34,28 @@ const Carousel = forwardRef(
     },
     ref,
   ) => {
+    const slidesLength = slides.length;
+    const [isCaptionActive, setIsCaptionActive] = useState(true);
     const [isNextButtonActive, setIsNextButtonActive] = useState(true);
     const [isPreviousButtonActive, setIsPreviousButtonActive] = useState(
       hasFullWidthSlides,
     );
 
-    // SET IN EFEECT
     const [caption, setCaption] = useState(
       get(slides[initialSlideIndex], 'caption', ''),
     );
 
     const [slideCounter, setSlideCounter] = useState(
-      `${initialSlideIndex + 1} / ${slides.length}`,
+      `${initialSlideIndex + 1} / ${slidesLength}`,
     );
 
     useWindowHasResized();
 
     let slideOffset = 0;
 
+    /* Slide offset refers to the number of slides in view per display size,
+     * and effects the offset position and Next Arrow display
+     */
     if (!hasFullWidthSlides) {
       if (ascertainIsSmallOnlyViewport()) {
         slideOffset = 1;
@@ -65,7 +70,7 @@ const Carousel = forwardRef(
       slideOffset = 1;
     }
 
-    if (slides.length === 0) {
+    if (slidesLength === 0) {
       return null;
     }
 
@@ -91,21 +96,24 @@ const Carousel = forwardRef(
 
     const hasIntroSlide =
       introduction && !isMobileOrTablet && !hasFullWidthSlides;
-    const slidesLength = slides.length;
-    const slidesCount = hasIntroSlide ? slidesLength + 1 : slidesLength;
+
+    const totalSlidesCount = hasIntroSlide ? slidesLength + 1 : slidesLength;
 
     const handleBeforeChange = (index, nextIndex) => {
+      setIsCaptionActive(false);
+
       if (hasFullWidthSlides) {
         return;
       }
 
-      const currentIndex = slidesCount - nextIndex;
+      const currentIndex = totalSlidesCount - nextIndex;
 
       setIsPreviousButtonActive(nextIndex !== 0);
       setIsNextButtonActive(currentIndex === slideOffset ? false : true);
     };
 
     const handleAfterChange = index => {
+      setIsCaptionActive(true);
       setCaption(slides[index].caption);
       setSlideCounter(`${index + 1} of ${slidesLength}`);
     };
@@ -158,9 +166,15 @@ const Carousel = forwardRef(
         {(hasShowCaption || hasSlideCounter) && (
           <footer className={styles.footer}>
             {hasSlideCounter && (
-              <div className={styles.slideCounter}>{slideCounter}</div>
+              <div className={styles.slideCounter}>
+                {totalSlidesCount > 1 && slideCounter}
+              </div>
             )}
-            {hasShowCaption && <div className={styles.caption}>{caption}</div>}
+            {hasShowCaption && (
+              <Transition isActive={isCaptionActive} type="fade">
+                <div className={styles.caption}>{caption}</div>
+              </Transition>
+            )}
           </footer>
         )}
       </section>

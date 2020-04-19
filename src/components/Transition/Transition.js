@@ -24,10 +24,10 @@ const Transition = ({
 
   return (
     <CSSTransition
-      classNames={data[type].classNames}
+      classNames={get(data[type], 'classNames', '')}
       in={isVisible}
       mountOnEnter={!!hasCSSTransitionMountOnEnter}
-      timeout={data[type].timeout}
+      timeout={get(data[type], 'timeout', 300)}
       unmountOnExit={!!hasCSSTransitionUnmountOnExit}
     >
       {React.cloneElement(children, {

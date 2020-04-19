@@ -16,6 +16,10 @@ const Pagination = ({ dots, theme }) => {
   );
 };
 
+// <div className={cx(styles.list, styles[theme])}>
+//   <div className={styles.bar} style={{ width, left: positionLeft }} />
+// </div>
+
 Pagination.propTypes = {
   dots: PropTypes.array,
   theme: PropTypes.oneOf(['dark', 'light']),
