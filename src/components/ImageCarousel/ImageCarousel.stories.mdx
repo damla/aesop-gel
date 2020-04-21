@@ -1,0 +1,69 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs } from '@storybook/addon-knobs';
+import { text } from '@storybook/addon-knobs';
+import ImageCarousel from './ImageCarousel';
+import ImageCarouselFixture from './ImageCarousel.fixture';
+
+<Meta
+  title="Components/ImageCarousel"
+  component={ImageCarousel}
+  decorators={[withKnobs]}
+/>
+
+# ImageCarousel
+
+<Preview>
+  <Story name="Base component">
+    <ImageCarousel
+      slides={[
+        {
+          caption: text(
+            'firstSlide.caption',
+            'Image One Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum facilisis ligula elementum.',
+          ),
+          image: {
+            altText: text(
+              'firstSlide.image.altText',
+              'Image of Parsley Seed Facial Cleanser',
+            ),
+            small: text(
+              'firstSlide.image.small',
+              '/assets/images/ImageCarousel/image-one-small.jpg',
+            ),
+            medium: text(
+              'firstSlide.image.medium',
+              '/assets/images/ImageCarousel/image-one-medium.jpg',
+            ),
+            large: text(
+              'firstSlide.image.large',
+              '/assets/images/ImageCarousel/image-one-large.jpg',
+            ),
+          },
+        },
+        ...ImageCarouselFixture.slides,
+      ]}
+    />
+  </Story>
+</Preview>
+
+## API
+
+<Props of={ImageCarousel} />
+
+## Usage Example
+
+```
+<ImageCarousel slides={
+  [
+    {
+      caption: '',
+      image: {
+        altText: '',
+        small: '',
+        medium: '',
+        large: '',
+      }
+    }
+  ]
+} />
+```

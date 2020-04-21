@@ -1,0 +1,410 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ImageCarousel /> renders base component correctly 1`] = `
+<section
+  className="base fullWidthSlides dark"
+>
+  <div
+    className="slick-slider carousel slick-initialized"
+    dir="ltr"
+  >
+    <button
+      className="base inlineStyle light base"
+      disabled={false}
+      onClick={[Function]}
+      title="next slide"
+      type="button"
+    >
+      <svg
+        className="base chevron light"
+        data-ref=""
+        focusable="false"
+        height={16}
+        role="img"
+        style={
+          Object {
+            "height": "16px",
+            "width": "16px",
+          }
+        }
+        tabIndex={-1}
+        viewBox="0 0 50 50"
+        width={16}
+      >
+        <g>
+          <polygon
+            className="chevronAndCloseWithCircleChevron"
+            points="25,31.3 4.2,10.5 0.1,14.6 25,39.5 50,14.6 45.9,10.5"
+          />
+        </g>
+      </svg>
+    </button>
+    <div
+      className="slick-list"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={null}
+      onMouseMove={null}
+      onMouseUp={[Function]}
+      onTouchCancel={null}
+      onTouchEnd={[Function]}
+      onTouchMove={null}
+      onTouchStart={[Function]}
+      style={Object {}}
+    >
+      <div
+        className="slick-track"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseOver={[Function]}
+        style={
+          Object {
+            "WebkitTransform": "translate3d(0px, 0px, 0px)",
+            "WebkitTransition": "",
+            "msTransform": "translateX(0px)",
+            "opacity": 1,
+            "transform": "translate3d(0px, 0px, 0px)",
+            "transition": "",
+          }
+        }
+      >
+        <div
+          aria-hidden={true}
+          className="slick-slide slick-cloned"
+          data-index={-1}
+          onClick={[Function]}
+          style={
+            Object {
+              "width": 0,
+            }
+          }
+          tabIndex="-1"
+        >
+          <div>
+            <div
+              className="slideWrapper"
+              style={
+                Object {
+                  "display": "inline-block",
+                  "width": "100%",
+                }
+              }
+              tabIndex={-1}
+            >
+              <div
+                className="item"
+              >
+                <div
+                  className="imageContainer"
+                >
+                  <picture
+                    className="base picture dark image fullWidthSlide"
+                  >
+                    <source
+                      media="(min-width: 1025px)"
+                      srcSet="/assets/images/ImageCarousel/image-three-large.jpg"
+                    />
+                    <source
+                      media="(min-width: 640px)"
+                      srcSet="/assets/images/ImageCarousel/image-three-medium.jpg"
+                    />
+                    <source
+                      media="(min-width: 0px)"
+                      srcSet="/assets/images/ImageCarousel/image-three-small.jpg"
+                    />
+                    <img
+                      alt="Image Three AltText"
+                    />
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden={false}
+          className="slick-slide slick-active slick-current"
+          data-index={0}
+          onClick={[Function]}
+          style={
+            Object {
+              "outline": "none",
+              "width": 0,
+            }
+          }
+          tabIndex="-1"
+        >
+          <div>
+            <div
+              className="slideWrapper"
+              style={
+                Object {
+                  "display": "inline-block",
+                  "width": "100%",
+                }
+              }
+              tabIndex={-1}
+            >
+              <div
+                className="item"
+              >
+                <div
+                  className="imageContainer"
+                >
+                  <picture
+                    className="base picture dark image fullWidthSlide"
+                  >
+                    <source
+                      media="(min-width: 1025px)"
+                      srcSet="/assets/images/ImageCarousel/image-two-large.jpg"
+                    />
+                    <source
+                      media="(min-width: 640px)"
+                      srcSet="/assets/images/ImageCarousel/image-two-medium.jpg"
+                    />
+                    <source
+                      media="(min-width: 0px)"
+                      srcSet="/assets/images/ImageCarousel/image-two-small.jpg"
+                    />
+                    <img
+                      alt="Image Two AltText"
+                    />
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden={true}
+          className="slick-slide"
+          data-index={1}
+          onClick={[Function]}
+          style={
+            Object {
+              "outline": "none",
+              "width": 0,
+            }
+          }
+          tabIndex="-1"
+        >
+          <div>
+            <div
+              className="slideWrapper"
+              style={
+                Object {
+                  "display": "inline-block",
+                  "width": "100%",
+                }
+              }
+              tabIndex={-1}
+            >
+              <div
+                className="item"
+              >
+                <div
+                  className="imageContainer"
+                >
+                  <picture
+                    className="base picture dark image fullWidthSlide"
+                  >
+                    <source
+                      media="(min-width: 1025px)"
+                      srcSet="/assets/images/ImageCarousel/image-three-large.jpg"
+                    />
+                    <source
+                      media="(min-width: 640px)"
+                      srcSet="/assets/images/ImageCarousel/image-three-medium.jpg"
+                    />
+                    <source
+                      media="(min-width: 0px)"
+                      srcSet="/assets/images/ImageCarousel/image-three-small.jpg"
+                    />
+                    <img
+                      alt="Image Three AltText"
+                    />
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden={true}
+          className="slick-slide slick-cloned"
+          data-index={2}
+          onClick={[Function]}
+          style={
+            Object {
+              "width": 0,
+            }
+          }
+          tabIndex="-1"
+        >
+          <div>
+            <div
+              className="slideWrapper"
+              style={
+                Object {
+                  "display": "inline-block",
+                  "width": "100%",
+                }
+              }
+              tabIndex={-1}
+            >
+              <div
+                className="item"
+              >
+                <div
+                  className="imageContainer"
+                >
+                  <picture
+                    className="base picture dark image fullWidthSlide"
+                  >
+                    <source
+                      media="(min-width: 1025px)"
+                      srcSet="/assets/images/ImageCarousel/image-two-large.jpg"
+                    />
+                    <source
+                      media="(min-width: 640px)"
+                      srcSet="/assets/images/ImageCarousel/image-two-medium.jpg"
+                    />
+                    <source
+                      media="(min-width: 0px)"
+                      srcSet="/assets/images/ImageCarousel/image-two-small.jpg"
+                    />
+                    <img
+                      alt="Image Two AltText"
+                    />
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden={true}
+          className="slick-slide slick-cloned"
+          data-index={3}
+          onClick={[Function]}
+          style={
+            Object {
+              "width": 0,
+            }
+          }
+          tabIndex="-1"
+        >
+          <div>
+            <div
+              className="slideWrapper"
+              style={
+                Object {
+                  "display": "inline-block",
+                  "width": "100%",
+                }
+              }
+              tabIndex={-1}
+            >
+              <div
+                className="item"
+              >
+                <div
+                  className="imageContainer"
+                >
+                  <picture
+                    className="base picture dark image fullWidthSlide"
+                  >
+                    <source
+                      media="(min-width: 1025px)"
+                      srcSet="/assets/images/ImageCarousel/image-three-large.jpg"
+                    />
+                    <source
+                      media="(min-width: 640px)"
+                      srcSet="/assets/images/ImageCarousel/image-three-medium.jpg"
+                    />
+                    <source
+                      media="(min-width: 0px)"
+                      srcSet="/assets/images/ImageCarousel/image-three-small.jpg"
+                    />
+                    <img
+                      alt="Image Three AltText"
+                    />
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button
+      className="base inlineStyle light base"
+      disabled={false}
+      onClick={[Function]}
+      title="next slide"
+      type="button"
+    >
+      <svg
+        className="base chevron light"
+        data-ref=""
+        focusable="false"
+        height={16}
+        role="img"
+        style={
+          Object {
+            "height": "16px",
+            "width": "16px",
+          }
+        }
+        tabIndex={-1}
+        viewBox="0 0 50 50"
+        width={16}
+      >
+        <g>
+          <polygon
+            className="chevronAndCloseWithCircleChevron"
+            points="25,31.3 4.2,10.5 0.1,14.6 25,39.5 50,14.6 45.9,10.5"
+          />
+        </g>
+      </svg>
+    </button>
+    <div
+      className="base"
+    >
+      <ul
+        className="list dark"
+      >
+        <li
+          className="slick-active"
+        >
+          <div
+            onClick={[Function]}
+          />
+        </li>
+        <li
+          className=""
+        >
+          <div
+            onClick={[Function]}
+          />
+        </li>
+      </ul>
+    </div>
+  </div>
+  <footer
+    className="footer"
+  >
+    <div
+      className="slideCounter"
+    >
+      1 / 2
+    </div>
+    <div
+      className="caption"
+    >
+      Image Two Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum facilisis ligula elementum.
+    </div>
+  </footer>
+</section>
+`;

@@ -14,6 +14,7 @@ import HeroWithContent from './HeroWithContent';
 import Hyperlink from './Hyperlink';
 import Icon from './Icon';
 import Image from './Image';
+import ImageCarousel from './ImageCarousel';
 import ImageWithHeaderAndContent from './ImageWithHeaderAndContent';
 import KitList from './KitList';
 import List from './List';
@@ -46,6 +47,7 @@ export default {
   Hyperlink,
   Icon,
   Image,
+  ImageCarousel,
   ImageWithHeaderAndContent,
   KitList,
   List,
