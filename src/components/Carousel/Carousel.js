@@ -208,7 +208,7 @@ Carousel.propTypes = {
       image: PropTypes.object.isRequired,
       url: PropTypes.string,
     }),
-  ).isRequired,
+  ),
   theme: PropTypes.oneOf(['dark', 'light']),
 };
 

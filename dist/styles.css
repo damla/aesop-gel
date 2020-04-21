@@ -369,6 +369,8 @@ sans-serif;
 }
   }
 
+/* @import './key-frame.css'; */
+/* @import './font-face.css'; */
 :root {
   /* Base colours */
 
@@ -380,12 +382,39 @@ sans-serif;
 
   /* System colours */
 }
+/* Dark theme UI elements */
+/* Light theme UI elements */
+/* UI colours light theme */
+/*
+--color-light-copy: var(--color-primary);
+--color-light-copy-alternate: var(--color-white-darker);
+--color-light-label: var(--color-white-darker);
+--color-light-link: var(--color-primary);
+--color-light-link-hover: var(--color-white-darker);
+--color-light-decoration: var(--color-white-darker);
+--color-light-disabled: var(--color-grey-60);
+*/
+/* UI colours dark theme */
+/*
+--color-dark-copy: var(--color-secondary);
+--color-dark-copy-alternate: var(--color-grey-63);
+--color-dark-label: var(--color-grey-30);
+--color-dark-link: var(--color-grey-20);
+--color-dark-link-hover: var(--color-grey-10);
+--color-dark-decoration: var(--color-grey-30);
+--color-dark-disabled: var(--color-grey-60);
+*/
 .SectionHeading-module_base__MQ5b- {
   position: relative;
 }
 .SectionHeading-module_heading__qFPqU {
   margin: 0 0 20px;
 }
+@media (min-width: 640px) {
+.SectionHeading-module_pageHeading__LQ8Mp {
+    margin-left: 33%
+}
+  }
 
 /* @import './key-frame.css'; */
 /* @import './font-face.css'; */
