@@ -17,7 +17,11 @@ const SectionHeading = ({
   subHeading,
   theme,
 }) => {
-  const classSet = cx(styles.base, className);
+  const classSet = cx(
+    styles.base,
+    { [styles.pageHeading]: isPageHeading },
+    className,
+  );
   const eyebrowClassSet = cx(styles.eyebrow, childrenClassNames.eyebrow);
   const headingClassSet = cx(styles.heading, childrenClassNames.heading);
   const subHeadingClassSet = cx(

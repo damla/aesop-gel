@@ -1,0 +1,72 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs } from '@storybook/addon-knobs';
+import { text, select, boolean } from '@storybook/addon-knobs';
+import SectionHeading from './SectionHeading';
+
+<Meta
+  title="Components/SectionHeading"
+  component={SectionHeading}
+  decorators={[withKnobs]}
+/>
+
+# SectionHeading
+
+<Preview>
+  <Story name="Base component">
+    <SectionHeading
+      eyebrow={text(
+        'eyebrow',
+        'Eyebrow: Offers fortification of the highest order against free radicals.',
+      )}
+      heading={text(
+        'heading',
+        'Heading: Fortification of the highest order. Parsley Seed Anti-Oxidant Facial Hydrating Cream.',
+      )}
+      id="Anti-Oxidant"
+      isPageHeading={boolean('isPageHeading', false)}
+      subHeading={text(
+        'subHeading',
+        'SubHeading: Parsley Seed Cream. Intensely soothing, nourishing and hydrating, this elegant formulation contains a potent blend of botanicals that offer fortification of the highest order against free radicals.',
+      )}
+      theme={select('theme', ['dark', 'light'], 'dark')}
+    />
+  </Story>
+</Preview>
+
+## API
+
+<Props of={SectionHeading} />
+
+## Usage Example
+
+```
+<SectionHeading
+  eyebrow=""
+  heading=""
+  id=""
+  subHeading=""
+/>
+```
+
+## Variations
+
+### Page Heading
+
+<Preview>
+  <Story name="Page Heading">
+    <SectionHeading
+      heading="Page Heading: Fortification of the highest order. Parsley Seed Anti-Oxidant Facial Hydrating Cream."
+      isPageHeading={true}
+      theme={select('theme', ['dark', 'light'], 'dark', 'pageHeading')}
+    />
+  </Story>
+</Preview>
+
+### Page Heading Usage Example
+
+```
+<SectionHeading
+  heading=""
+  isPageHeading={true}
+/>
+```
