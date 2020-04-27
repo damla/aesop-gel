@@ -15,6 +15,7 @@ const ImageWithHeaderAndContent = forwardRef(
       copy,
       hasFullWidthImage,
       image,
+      isHero,
       isReverse,
       theme,
       video,
@@ -24,7 +25,10 @@ const ImageWithHeaderAndContent = forwardRef(
     const classSet = cx(
       styles.base,
       { [styles.reverse]: isReverse },
-      { [styles.original]: !isReverse },
+      { [styles.hero]: isHero },
+      { [styles.section]: !isHero },
+      { [styles.hasFullWidthImage]: hasFullWidthImage },
+      { [styles.hasHalfWidthImage]: !hasFullWidthImage },
       styles[theme.toLowerCase()],
       className,
     );
@@ -36,11 +40,7 @@ const ImageWithHeaderAndContent = forwardRef(
         ref={ref}
         style={{ backgroundColor }}
       >
-        <div
-          className={cx(styles.mediaWrapper, {
-            [styles.isFullWidthImage]: hasFullWidthImage,
-          })}
-        >
+        <div className={styles.mediaWrapper}>
           {video ? (
             video
           ) : (
@@ -54,33 +54,27 @@ const ImageWithHeaderAndContent = forwardRef(
           )}
         </div>
 
-        <div
-          className={cx(styles.container, {
-            [styles.hasFullWidthImage]: hasFullWidthImage,
-          })}
-        >
-          <div className={styles.wrapper}>
-            <div className={styles.header}>
-              <SectionHeading
-                childrenClassNames={{
-                  heading: styles.heading,
-                  subHeading: styles.subHeading,
-                }}
-                eyebrow={copy.eyebrow}
-                hasHeadingTopMargin={false}
-                hasSerifFontHeading={true}
-                heading={copy.heading}
-                subHeading={copy.subHeading}
-                theme={theme}
-              />
-            </div>
+        <div className={styles.contentWrapper}>
+          <div className={styles.contentInnerWrapper}>
+            <SectionHeading
+              childrenClassNames={{
+                heading: styles.heading,
+                subHeading: styles.subHeading,
+              }}
+              className={styles.header}
+              eyebrow={copy.eyebrow}
+              hasHeadingTopMargin={false}
+              hasSerifFontHeading={true}
+              heading={copy.heading}
+              subHeading={copy.subHeading}
+              theme={theme}
+            />
             <div className={styles.content}>
               {copy.description && (
                 <ParagraphSet className={styles.description} theme={theme}>
                   {copy.description}
                 </ParagraphSet>
               )}
-
               {content}
             </div>
           </div>
@@ -102,6 +96,7 @@ ImageWithHeaderAndContent.propTypes = {
   }).isRequired,
   hasFullWidthImage: PropTypes.bool,
   image: PropTypes.object,
+  isHero: PropTypes.bool,
   isReverse: PropTypes.bool,
   theme: PropTypes.oneOf(['dark', 'light']),
   video: PropTypes.object,
@@ -119,6 +114,7 @@ ImageWithHeaderAndContent.defaultProps = {
   },
   hasFullWidthImage: false,
   image: undefined,
+  isHero: false,
   isReverse: false,
   theme: 'dark',
   video: undefined,

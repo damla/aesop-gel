@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import LinkButtonGroup from '~/components/LinkButtonGroup';
 import SectionHeading from '~/components/SectionHeading';
-import Hyperlink from '~/components/Hyperlink';
 import styles from './BodyCopy.module.css';
 
 const BodyCopy = ({
+  childrenClassNames,
   className,
   copy,
   cta,
@@ -24,9 +25,9 @@ const BodyCopy = ({
     <article className={classSet} id={id}>
       <SectionHeading
         childrenClassNames={{
-          eyebrow: styles.eyebrow,
-          heading: styles.heading,
-          subHeading: styles.subHeading,
+          eyebrow: cx(styles.eyebrow, childrenClassNames.eyebrow),
+          heading: cx(styles.heading, childrenClassNames.heading),
+          subHeading: cx(styles.subHeading, childrenClassNames.subHeading),
         }}
         eyebrow={eyebrow}
         hasSerifFontHeading={hasSerifFontHeading}
@@ -38,38 +39,17 @@ const BodyCopy = ({
 
       {copy && <div className={cx(styles.copy, styles[theme])}>{copy}</div>}
 
-      {((cta && cta.text) || (secondaryCta && secondaryCta.text)) && (
-        <div className={styles.ctaWrapper}>
-          {cta && (
-            <Hyperlink
-              className={cx({ [styles.ctaInset]: secondaryCta })}
-              openInANewWindow={cta.openInANewWindow}
-              style={cta.style}
-              theme={theme}
-              url={cta.url}
-            >
-              {cta.text}
-            </Hyperlink>
-          )}
-
-          {secondaryCta && (
-            <Hyperlink
-              className={styles.secondaryCta}
-              openInANewWindow={secondaryCta.openInANewWindow}
-              style={secondaryCta.style}
-              theme={theme}
-              url={secondaryCta.url}
-            >
-              {secondaryCta.text}
-            </Hyperlink>
-          )}
-        </div>
-      )}
+      <LinkButtonGroup link={cta} secondaryLink={secondaryCta} />
     </article>
   );
 };
 
 BodyCopy.propTypes = {
+  childrenClassNames: PropTypes.shape({
+    eyebrow: PropTypes.string,
+    heading: PropTypes.string,
+    subHeading: PropTypes.string,
+  }),
   className: PropTypes.string,
   copy: PropTypes.node,
   cta: PropTypes.object,
@@ -84,6 +64,11 @@ BodyCopy.propTypes = {
 };
 
 BodyCopy.defaultProps = {
+  childrenClassNames: {
+    eyebrow: undefined,
+    heading: undefined,
+    subHeading: undefined,
+  },
   className: undefined,
   copy: undefined,
   cta: undefined,

@@ -1,69 +1,57 @@
+import includes from 'lodash/includes';
 import { HYPERLINK_STYLE_TYPES } from '~/constants';
 
 const {
   EXTERNAL_BUTTON_LINK,
+  EXTERNAL_NO_ICON_BUTTON_LINK,
+  EXTERNAL_NO_ICON_TEXT_LINK,
   EXTERNAL_TEXT_LINK,
+  INTERNAL_BUTTON_LINK,
+  INTERNAL_NO_ICON_TEXT_LINK,
   INTERNAL_TEXT_LINK,
-  EXTERNAL_NO_ICON_LINK,
-  NO_ICON_LINK,
 } = HYPERLINK_STYLE_TYPES;
 
-/**
- * checkIsInlineFromStyle
- * @param style string
- * @return boolean
- */
 export const checkIsInlineFromStyle = style => {
-  const styleRepresentsInline =
-    style === EXTERNAL_TEXT_LINK ||
-    style === INTERNAL_TEXT_LINK ||
-    style === NO_ICON_LINK ||
-    style === EXTERNAL_NO_ICON_LINK;
+  const styleRepresentsInline = includes(
+    [
+      EXTERNAL_NO_ICON_TEXT_LINK,
+      EXTERNAL_TEXT_LINK,
+      INTERNAL_NO_ICON_TEXT_LINK,
+      INTERNAL_TEXT_LINK,
+    ],
+    style,
+  );
 
   return styleRepresentsInline ? true : false;
 };
 
-/**
- * checkIsExternalFromStyle
- * @param style string
- * @param url string
- * @return object
- */
 export const checkIsExternalFromStyle = style => {
-  const styleRepresentsAbsoluteLink =
-    style === EXTERNAL_BUTTON_LINK ||
-    style === EXTERNAL_TEXT_LINK ||
-    style === EXTERNAL_NO_ICON_LINK;
+  const styleRepresentsAbsoluteLink = includes(
+    [
+      EXTERNAL_BUTTON_LINK,
+      EXTERNAL_NO_ICON_BUTTON_LINK,
+      EXTERNAL_NO_ICON_TEXT_LINK,
+      EXTERNAL_TEXT_LINK,
+    ],
+    style,
+  );
 
   return styleRepresentsAbsoluteLink ? true : false;
 };
 
-// export const getScopeFromStyle = (style, url) => {
-//   const styleRepresentsAbsoluteLink =
-//     style === EXTERNAL_BUTTON_LINK ||
-//     style === EXTERNAL_TEXT_LINK ||
-//     style === EXTERNAL_NO_ICON_LINK;
-//
-//   const key = styleRepresentsAbsoluteLink ? 'href' : 'to';
-//
-//   return {
-//     [key]: url,
-//   };
-// };
-
-/**
- * hasIconFromStyle
- * @param style string
- * @return boolean
- */
 export const hasIconFromStyle = style =>
-  style === NO_ICON_LINK || style === EXTERNAL_NO_ICON_LINK ? false : true;
+  includes(
+    [
+      EXTERNAL_BUTTON_LINK,
+      EXTERNAL_TEXT_LINK,
+      INTERNAL_BUTTON_LINK,
+      INTERNAL_TEXT_LINK,
+    ],
+    style,
+  )
+    ? true
+    : false;
 
-/**
- * getTargetType
- * @param openInANewWindow boolean
- * @return string
- */
 export const getTargetType = openInANewWindow =>
   openInANewWindow ? '_blank' : '_self';
 

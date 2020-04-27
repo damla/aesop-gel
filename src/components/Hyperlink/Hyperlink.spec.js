@@ -14,7 +14,7 @@ import {
 const {
   EXTERNAL_BUTTON_LINK,
   EXTERNAL_TEXT_LINK,
-  EXTERNAL_NO_ICON_LINK,
+  EXTERNAL_NO_ICON_TEXT_LINK,
   INTERNAL_TEXT_LINK,
 } = HYPERLINK_STYLE_TYPES;
 
@@ -112,7 +112,7 @@ describe('Hyperlink.utils.hasIconFromStyle', () => {
   });
 
   it('should return `false` if `style` prop is passed as `External No Icon Link` or `No Icon Link`', () => {
-    const actual = hasIconFromStyle(EXTERNAL_NO_ICON_LINK);
+    const actual = hasIconFromStyle(EXTERNAL_NO_ICON_TEXT_LINK);
 
     expect(actual).toBe(false);
   });
