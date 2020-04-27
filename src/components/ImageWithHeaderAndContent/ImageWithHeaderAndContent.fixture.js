@@ -9,6 +9,8 @@ export default {
   copyKit: {
     eyebrow: 'How to use',
     heading: 'A comprehensive skin care regimen, ideal in urban environments.',
+    description:
+      'Morning and evening, use Parsley Seed Facial Cleansing Oil, Facial Toner, Anti-Oxidant Serum, and Eye Cream. Twice weekly, apply Masque after cleansing; follow with Facial Treatment.',
   },
   copyExpectations: {
     eyebrow: 'Cythera Aromatique Room Spray',

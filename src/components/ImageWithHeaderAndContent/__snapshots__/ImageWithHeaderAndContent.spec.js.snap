@@ -2,7 +2,7 @@
 
 exports[`<ImageWithHeaderAndContent /> renders base component correctly 1`] = `
 <section
-  className="base original dark"
+  className="base section hasHalfWidthImage dark"
   div={true}
   style={
     Object {
@@ -34,29 +34,25 @@ exports[`<ImageWithHeaderAndContent /> renders base component correctly 1`] = `
     </picture>
   </div>
   <div
-    className="container"
+    className="contentWrapper"
   >
     <div
-      className="wrapper"
+      className="contentInnerWrapper"
     >
-      <div
-        className="header"
+      <header
+        className="base header"
       >
-        <header
-          className="base"
+        <h2
+          className="base noTopMargin mediumWeightFont xXSmall dark eyebrow"
         >
-          <h2
-            className="base noTopMargin mediumWeightFont xXSmall dark eyebrow"
-          >
-            How to use
-          </h2>
-          <h3
-            className="base noTopMargin serifFont xLarge dark heading heading"
-          >
-            A comprehensive skin care regimen, ideal in urban environments.
-          </h3>
-        </header>
-      </div>
+          How to use
+        </h2>
+        <h3
+          className="base noTopMargin serifFont xLarge dark heading heading"
+        >
+          A comprehensive skin care regimen, ideal in urban environments.
+        </h3>
+      </header>
       <div
         className="content"
       >

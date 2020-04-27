@@ -104,7 +104,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                 className="ctaWrapper"
               >
                 <a
-                  className="base hasIcon dark"
+                  className="base hasIcon left dark"
                   href="/"
                   target="_self"
                   title="Link to Browse all"
@@ -168,7 +168,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
               tabIndex={-1}
             >
               <a
-                className="base dark item link"
+                className="base left dark item link"
                 href="/"
                 target="_self"
                 title="Link to Parsley Seed Facial Cleanser"
@@ -239,7 +239,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
               tabIndex={-1}
             >
               <a
-                className="base dark item link"
+                className="base left dark item link"
                 href="/"
                 target="_self"
                 title="Link to Parsley Seed Facial Cleanser"
@@ -310,7 +310,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
               tabIndex={-1}
             >
               <a
-                className="base dark item link"
+                className="base left dark item link"
                 href="/"
                 target="_self"
                 title="Link to Resurrection Duet"
@@ -381,7 +381,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
               tabIndex={-1}
             >
               <a
-                className="base dark item link"
+                className="base left dark item link"
                 href="/"
                 target="_self"
                 title="Link to Parsley Seed Facial Cleanser"
@@ -452,7 +452,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
               tabIndex={-1}
             >
               <a
-                className="base dark item link"
+                className="base left dark item link"
                 href="/"
                 target="_self"
                 title="Link to Parsley Seed Cleansing Masque"
@@ -658,7 +658,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
               tabIndex={-1}
             >
               <a
-                className="base dark item link"
+                className="base left dark item link"
                 href="/"
                 target="_self"
                 title="Link to Parsley Seed Facial Cleanser"
@@ -729,7 +729,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
               tabIndex={-1}
             >
               <a
-                className="base dark item link"
+                className="base left dark item link"
                 href="/"
                 target="_self"
                 title="Link to Parsley Seed Facial Cleanser"
@@ -800,7 +800,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
               tabIndex={-1}
             >
               <a
-                className="base dark item link"
+                className="base left dark item link"
                 href="/"
                 target="_self"
                 title="Link to Resurrection Duet"
@@ -871,7 +871,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
               tabIndex={-1}
             >
               <a
-                className="base dark item link"
+                className="base left dark item link"
                 href="/"
                 target="_self"
                 title="Link to Parsley Seed Facial Cleanser"
@@ -942,7 +942,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
               tabIndex={-1}
             >
               <a
-                className="base dark item link"
+                className="base left dark item link"
                 href="/"
                 target="_self"
                 title="Link to Parsley Seed Cleansing Masque"

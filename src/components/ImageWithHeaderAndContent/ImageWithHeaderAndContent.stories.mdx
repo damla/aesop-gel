@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import { withKnobs } from '@storybook/addon-knobs';
 import { boolean, select, text } from '@storybook/addon-knobs';
@@ -6,6 +7,8 @@ import KitList from '~/components/KitList';
 import ImageWithHeaderAndContent from './ImageWithHeaderAndContent';
 import ImageWithHeaderAndContentFixture from './ImageWithHeaderAndContent.fixture';
 import LinkButtonGroup from '~/components/LinkButtonGroup';
+import SubNav from '~/components/SubNav';
+import SubNavFixture from '~/components/SubNav/SubNav.fixture';
 
 <Meta
   title="Components/ImageWithHeaderAndContent"
@@ -97,19 +100,22 @@ import LinkButtonGroup from '~/components/LinkButtonGroup';
         heading: text('heading', 'Hero 50 50 heading'),
       }}
       content={
-        <LinkButtonGroup
-          link={{
-            text: 'About Aesop',
-            url: 'http://aesop.com',
-            style: 'Internal No Icon Button Link',
-          }}
-          secondaryLink={{
-            text: 'Read more',
-            url: 'http://aesop.com',
-            style: 'External No Icon Button Link',
-          }}
-          theme={'light'}
-        />
+        <Fragment>
+          <SubNav links={SubNavFixture.links} theme={'light'} />
+          <LinkButtonGroup
+            link={{
+              text: 'About Aesop',
+              url: 'http://aesop.com',
+              style: 'Internal No Icon Button Link',
+            }}
+            secondaryLink={{
+              text: 'Read more',
+              url: 'http://aesop.com',
+              style: 'External No Icon Button Link',
+            }}
+            theme={'light'}
+          />
+        </Fragment>
       }
       hasFullWidthImage={false}
       image={ImageWithHeaderAndContentFixture.imageExpectations}
