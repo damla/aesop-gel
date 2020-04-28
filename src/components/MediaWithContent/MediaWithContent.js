@@ -1,12 +1,13 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import SectionHeading from '~/components/SectionHeading';
 import Image from '~/components/Image';
-import styles from './ImageWithHeaderAndContent.module.css';
+import Video from '~/components/Video';
+import SectionHeading from '~/components/SectionHeading';
+import styles from './MediaWithContent.module.css';
 import { ParagraphSet } from '../Paragraph';
 
-const ImageWithHeaderAndContent = forwardRef(
+const MediaWithContent = forwardRef(
   (
     {
       backgroundColor,
@@ -14,11 +15,10 @@ const ImageWithHeaderAndContent = forwardRef(
       content,
       copy,
       hasFullWidthImage,
-      image,
       isHero,
       isReverse,
+      media,
       theme,
-      video,
     },
     ref,
   ) => {
@@ -40,26 +40,13 @@ const ImageWithHeaderAndContent = forwardRef(
         ref={ref}
         style={{ backgroundColor }}
       >
-        <div className={styles.mediaWrapper}>
-          {video ? (
-            video
-          ) : (
-            <Image
-              altText={image.altText}
-              large={image.large}
-              medium={image.medium}
-              small={image.small}
-              theme={theme}
-            />
-          )}
-        </div>
+        <div className={styles.mediaWrapper}>{media}</div>
 
         <div className={styles.contentWrapper}>
           <div className={styles.contentInnerWrapper}>
             <SectionHeading
               childrenClassNames={{
-                heading: styles.heading,
-                subHeading: styles.subHeading,
+                eyebrow: styles.eyebrow,
               }}
               className={styles.header}
               eyebrow={copy.eyebrow}
@@ -84,7 +71,7 @@ const ImageWithHeaderAndContent = forwardRef(
   },
 );
 
-ImageWithHeaderAndContent.propTypes = {
+MediaWithContent.propTypes = {
   backgroundColor: PropTypes.string,
   className: PropTypes.string,
   content: PropTypes.any,
@@ -95,14 +82,16 @@ ImageWithHeaderAndContent.propTypes = {
     subHeading: PropTypes.string,
   }).isRequired,
   hasFullWidthImage: PropTypes.bool,
-  image: PropTypes.object,
   isHero: PropTypes.bool,
   isReverse: PropTypes.bool,
+  media: PropTypes.oneOfType([
+    PropTypes.instanceOf(Image),
+    PropTypes.instanceOf(Video),
+  ]).isRequired,
   theme: PropTypes.oneOf(['dark', 'light']),
-  video: PropTypes.object,
 };
 
-ImageWithHeaderAndContent.defaultProps = {
+MediaWithContent.defaultProps = {
   backgroundColor: '#F6F5E8',
   className: undefined,
   content: undefined,
@@ -113,11 +102,10 @@ ImageWithHeaderAndContent.defaultProps = {
     subHeading: undefined,
   },
   hasFullWidthImage: false,
-  image: undefined,
   isHero: false,
   isReverse: false,
+  media: undefined,
   theme: 'dark',
-  video: undefined,
 };
 
-export default ImageWithHeaderAndContent;
+export default MediaWithContent;

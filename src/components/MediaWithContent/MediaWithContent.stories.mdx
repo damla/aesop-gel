@@ -1,0 +1,215 @@
+import { Fragment } from 'react';
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs } from '@storybook/addon-knobs';
+import { boolean, select, text } from '@storybook/addon-knobs';
+import DefinitionList from '~/components/DefinitionList';
+import Image from '~/components/Image';
+import KitList from '~/components/KitList';
+import LinkButtonGroup from '~/components/LinkButtonGroup';
+import SubNav from '~/components/SubNav';
+import SubNavFixture from '~/components/SubNav/SubNav.fixture';
+import MediaWithContent from './MediaWithContent';
+import MediaWithContentFixture from './MediaWithContent.fixture';
+
+<Meta
+  title="Components/MediaWithContent"
+  component={MediaWithContent}
+  decorators={[withKnobs]}
+/>
+
+# MediaWithContent
+
+**Shown as With Definition List**
+
+<Preview>
+  <Story name="Base component">
+    <MediaWithContent
+      backgroundColor={text('backgroundColor', '')}
+      content={
+        <LinkButtonGroup
+          link={{
+            text: 'About Aesop',
+            url: 'http://aesop.com',
+            style: 'Internal No Icon Button Link',
+          }}
+          secondaryLink={{
+            text: 'Read more',
+            url: 'http://aesop.com',
+            style: 'External No Icon Button Link',
+          }}
+          theme={select('theme', ['dark', 'light'], 'dark')}
+        />
+      }
+      copy={{
+        description: text(
+          'description',
+          MediaWithContentFixture.copy.description,
+        ),
+        eyebrow: text('eyebrow', MediaWithContentFixture.copy.eyebrow),
+        heading: text('heading', MediaWithContentFixture.copy.heading),
+        subHeading: text('subHeading', MediaWithContentFixture.copy.subHeading),
+      }}
+      hasFullWidthImage={boolean('hasFullWidthImage', false)}
+      isHero={boolean('isHero', false)}
+      isReverse={boolean('isReverse', false)}
+      media={
+        <Image
+          altText={MediaWithContentFixture.imageExpectations.altText}
+          large={MediaWithContentFixture.imageExpectations.large}
+          medium={MediaWithContentFixture.imageExpectations.medium}
+          small={MediaWithContentFixture.imageExpectations.small}
+          theme={MediaWithContentFixture.imageExpectations}
+        />
+      }
+      theme={select('theme', ['dark', 'light'], 'dark')}
+    />
+  </Story>
+</Preview>
+
+## API
+
+<Props of={MediaWithContent} />
+
+## Usage Example
+
+```
+<MediaWithContent
+  content={}
+  copy={}
+  hasFullWidthImage={}
+  image={}
+  isReverse={false}
+  theme={}
+/>
+```
+
+### With Kit List
+
+<Preview>
+  <Story name="With Kit List">
+    <MediaWithContent
+      content={<KitList items={MediaWithContentFixture.kitList} />}
+      copy={MediaWithContentFixture.copyKit}
+      media={
+        <Image
+          altText={MediaWithContentFixture.imageKit.altText}
+          large={MediaWithContentFixture.imageKit.large}
+          medium={MediaWithContentFixture.imageKit.medium}
+          small={MediaWithContentFixture.imageKit.small}
+          theme={MediaWithContentFixture.imageKit}
+        />
+      }
+    />
+  </Story>
+</Preview>
+
+### With Expectations
+
+<Preview>
+  <Story name="With Expectations">
+    <MediaWithContent
+      copy={MediaWithContentFixture.copyExpectations}
+      isReverse={true}
+      media={
+        <Image
+          altText={MediaWithContentFixture.imageExpectations.altText}
+          large={MediaWithContentFixture.imageExpectations.large}
+          medium={MediaWithContentFixture.imageExpectations.medium}
+          small={MediaWithContentFixture.imageExpectations.small}
+          theme={MediaWithContentFixture.imageExpectations}
+        />
+      }
+    />
+  </Story>
+</Preview>
+
+### Hero Image
+
+<Preview>
+  <Story name="Hero Image">
+    <MediaWithContent
+      backgroundColor="#633e43"
+      content={
+        <Fragment>
+          <LinkButtonGroup
+            link={{
+              text: 'Purchase Rozu',
+              url: 'http://aesop.com',
+              style: 'Internal No Icon Button Link',
+            }}
+            secondaryLink={{
+              text: 'Discover the inspiration',
+              url: 'http://aesop.com',
+              style: 'Internal No Icon Button Link',
+            }}
+            theme="light"
+          />
+        </Fragment>
+      }
+      copy={{
+        description:
+          'A complex evolution of the rose, our fourth fragrance is underpinned by green, woody and lightly smoky notes—unmistakably floral, yet nuanced and expansive.',
+        eyebrow: 'Brazen and delicate',
+        heading: 'Rōzu Eau de Parfum',
+      }}
+      hasFullWidthImage={false}
+      isHero={true}
+      isReverse={true}
+      media={
+        <Image
+          altText={MediaWithContentFixture.imageHero.altText}
+          large={MediaWithContentFixture.imageHero.large}
+          medium={MediaWithContentFixture.imageHero.medium}
+          small={MediaWithContentFixture.imageHero.small}
+          theme={MediaWithContentFixture.imageHero}
+        />
+      }
+      theme="light"
+    />
+  </Story>
+</Preview>
+
+### Hero Image Full Width
+
+<Preview>
+  <Story name="Hero Image Full Width">
+    <MediaWithContent
+      backgroundColor={text('backgroundColor', '#222e56')}
+      content={
+        <Fragment>
+          <SubNav links={SubNavFixture.links} theme={'light'} />
+          <LinkButtonGroup
+            link={{
+              text: 'About Aesop',
+              url: 'http://aesop.com',
+              style: 'Internal No Icon Button Link',
+            }}
+            secondaryLink={{
+              text: 'Read more',
+              url: 'http://aesop.com',
+              style: 'External No Icon Button Link',
+            }}
+            theme={'light'}
+          />
+        </Fragment>
+      }
+      copy={{
+        eyebrow: 'Hero Image Full Width Eyebrow',
+        heading: 'Hero Image Full Width Heading',
+      }}
+      hasFullWidthImage={true}
+      isHero={true}
+      isReverse={true}
+      media={
+        <Image
+          altText={MediaWithContentFixture.imageExpectations.altText}
+          large={MediaWithContentFixture.imageExpectations.large}
+          medium={MediaWithContentFixture.imageExpectations.medium}
+          small={MediaWithContentFixture.imageExpectations.small}
+          theme={MediaWithContentFixture.imageExpectations}
+        />
+      }
+      theme={'light'}
+    />
+  </Story>
+</Preview>

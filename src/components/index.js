@@ -14,7 +14,7 @@ import Hyperlink from './Hyperlink';
 import Icon from './Icon';
 import Image from './Image';
 import ImageCarousel from './ImageCarousel';
-import ImageWithHeaderAndContent from './ImageWithHeaderAndContent';
+import MediaWithContent from './MediaWithContent';
 import KitList from './KitList';
 import LinkButtonGroup from './LinkButtonGroup';
 import List from './List';
@@ -47,7 +47,7 @@ export default {
   Icon,
   Image,
   ImageCarousel,
-  ImageWithHeaderAndContent,
+  MediaWithContent,
   KitList,
   LinkButtonGroup,
   List,
