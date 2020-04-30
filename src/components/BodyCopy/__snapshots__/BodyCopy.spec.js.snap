@@ -31,10 +31,10 @@ exports[`<BodyCopy /> renders base component correctly 1`] = `
     Parsley Seed Cream. [The Paris Review](http://theparisreview.org) Intensely soothing, nourishing and hydrating, this elegant formulation contains a potent blend of botanicals that offer fortification of the highest order against free radicals.
   </div>
   <div
-    className="ctaWrapper"
+    className="base"
   >
     <a
-      className="base dark"
+      className="base center dark link center"
       href="http://aesop.com"
       target="_self"
     >
