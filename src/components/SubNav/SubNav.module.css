@@ -1,15 +1,7 @@
 @import 'styles/index';
 
 .base {
-  margin: var(--layout-sm-spacing) 0;
-
-  @media (--viewport-md) {
-    margin: var(--layout-md-spacing) 0;
-  }
-
-  @media (--viewport-lg) {
-    margin: var(--layout-lg-spacing) 0;
-  }
+  margin: 20px 0;
 }
 
 .heading {
@@ -28,5 +20,5 @@
 
 .itemList {
   font-family: var(--font-family-sans-serif-medium);
-  font-size: rem(17px);
+  font-size: rem(16px);
 }

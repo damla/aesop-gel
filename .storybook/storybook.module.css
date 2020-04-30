@@ -63,7 +63,7 @@
   }
 
   .sbdocs-content {
-    max-width: 1220px !important;
+    max-width: 1600px !important;
   }
 
   #story-root {
@@ -72,10 +72,6 @@
 
   [scale='1'] {
     transform: none !important;
-  }
-
-  #root {
-    /* padding: 40px; */
   }
 
   table {

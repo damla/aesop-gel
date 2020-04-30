@@ -36,7 +36,7 @@ const LinkButtonGroup = ({
         </Hyperlink>
       )}
 
-      {secondaryLink.text && (
+      {secondaryLink && secondaryLink.text && (
         <Hyperlink
           className={cx(styles.link, styles[textAlign])}
           openInANewWindow={secondaryLink.openInANewWindow}

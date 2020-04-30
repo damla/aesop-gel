@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import Image from '~/components/Image';
 import Video from '~/components/Video';
-import SectionHeading from '~/components/SectionHeading';
+import Media from './components/Media';
+import Content from './components/Content';
 import styles from './MediaWithContent.module.css';
-import { ParagraphSet } from '../Paragraph';
 
 const MediaWithContent = forwardRef(
   (
@@ -14,6 +14,7 @@ const MediaWithContent = forwardRef(
       className,
       content,
       copy,
+      foregroundImage,
       hasFullWidthImage,
       isHero,
       isReverse,
@@ -26,10 +27,6 @@ const MediaWithContent = forwardRef(
       styles.base,
       { [styles.reverse]: isReverse },
       { [styles.hero]: isHero },
-      { [styles.section]: !isHero },
-      { [styles.hasFullWidthImage]: hasFullWidthImage },
-      { [styles.hasHalfWidthImage]: !hasFullWidthImage },
-      styles[theme.toLowerCase()],
       className,
     );
 
@@ -40,32 +37,22 @@ const MediaWithContent = forwardRef(
         ref={ref}
         style={{ backgroundColor }}
       >
-        <div className={styles.mediaWrapper}>{media}</div>
+        <Media
+          className={styles.media}
+          foregroundImage={foregroundImage}
+          hasFullWidthImage={hasFullWidthImage}
+          isHero={isHero}
+          media={media}
+        />
 
-        <div className={styles.contentWrapper}>
-          <div className={styles.contentInnerWrapper}>
-            <SectionHeading
-              childrenClassNames={{
-                eyebrow: styles.eyebrow,
-              }}
-              className={styles.header}
-              eyebrow={copy.eyebrow}
-              hasHeadingTopMargin={false}
-              hasSerifFontHeading={true}
-              heading={copy.heading}
-              subHeading={copy.subHeading}
-              theme={theme}
-            />
-            <div className={styles.content}>
-              {copy.description && (
-                <ParagraphSet className={styles.description} theme={theme}>
-                  {copy.description}
-                </ParagraphSet>
-              )}
-              {content}
-            </div>
-          </div>
-        </div>
+        <Content
+          content={content}
+          copy={copy}
+          hasFullWidthImage={hasFullWidthImage}
+          isHero={isHero}
+          isReverse={isReverse}
+          theme={theme}
+        />
       </section>
     );
   },
@@ -81,6 +68,7 @@ MediaWithContent.propTypes = {
     heading: PropTypes.string,
     subHeading: PropTypes.string,
   }).isRequired,
+  foregroundImage: PropTypes.oneOfType([PropTypes.instanceOf(Image)]),
   hasFullWidthImage: PropTypes.bool,
   isHero: PropTypes.bool,
   isReverse: PropTypes.bool,
@@ -101,6 +89,7 @@ MediaWithContent.defaultProps = {
     heading: undefined,
     subHeading: undefined,
   },
+  foregroundImage: undefined,
   hasFullWidthImage: false,
   isHero: false,
   isReverse: false,

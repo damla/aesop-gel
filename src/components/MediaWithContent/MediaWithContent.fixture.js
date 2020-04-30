@@ -1,16 +1,14 @@
 export default {
-  copy: {
-    eyebrow: 'How to use',
-    heading:
-      'Dispense into palm then massage gently over face, neck and lips, applying minimal pressure. Avoid eye area. Rinse thoroughly with warm water.',
+  defaultCopy: {
+    eyebrow: 'Praesent tincidunt accumsan',
+    heading: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    subHeading: 'Sed consectetur facilisis imperdiet',
     description:
-      'Morning and evening, use Parsley Seed Facial Cleansing Oil, Facial Toner, Anti-Oxidant Serum, and Eye Cream. Twice weekly, apply Masque after cleansing; follow with Facial Treatment.',
+      'Aliquam turpis libero, posuere sed nisl in, porta facilisis lorem. Phasellus eu turpis in quam efficitur hendrerit.',
   },
   copyKit: {
     eyebrow: 'How to use',
     heading: 'A comprehensive skin care regimen, ideal in urban environments.',
-    description:
-      'Morning and evening, use Parsley Seed Facial Cleansing Oil, Facial Toner, Anti-Oxidant Serum, and Eye Cream. Twice weekly, apply Masque after cleansing; follow with Facial Treatment.',
   },
   copyExpectations: {
     eyebrow: 'Cythera Aromatique Room Spray',
@@ -41,6 +39,18 @@ export default {
     large: '/assets/images/MediaWithContent/hero-large.jpg',
     medium: '/assets/images/MediaWithContent/hero-medium.jpg',
     small: '/assets/images/MediaWithContent/hero-small.jpg',
+  },
+  foregroundImage: {
+    altText: 'alt image',
+    large: '/assets/images/MediaWithContent/foreground-large.jpg',
+    medium: '/assets/images/MediaWithContent/foreground-large.jpg',
+    small: '/assets/images/MediaWithContent/foreground-large.jpg',
+  },
+  backgroundImage: {
+    altText: 'alt image',
+    large: '/assets/images/MediaWithContent/background-large.jpg',
+    medium: '/assets/images/MediaWithContent/background-large.jpg',
+    small: '/assets/images/MediaWithContent/background-large.jpg',
   },
   imageExpectations: {
     altText: 'alt image',

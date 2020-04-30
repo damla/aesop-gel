@@ -20,9 +20,7 @@ const ProductDetail = ({ className, data }) => {
       <PDPHeader product={data.product} />
       <MediaWithContent
         content={
-          <DefinitionList
-            items={MediaWithContentFixture.definitionList}
-          />
+          <DefinitionList items={MediaWithContentFixture.definitionList} />
         }
         copy={MediaWithContentFixture.copy}
         image={MediaWithContentFixture.image}

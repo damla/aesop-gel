@@ -2,6 +2,12 @@
 
 .base {
   @mixin reset-list;
+
+  margin-top: 26px;
+
+  @media (--viewport-md) {
+    margin-top: 14px;
+  }
 }
 
 .item {
@@ -19,6 +25,7 @@
   transition-timing-function: var(--easing-ease-out-cubic);
 
   &:nth-of-type(1) {
+    padding-top: 0;
     transition-delay: calc((1 * 100ms) + 200ms);
   }
 

@@ -15,7 +15,7 @@ const Figure = ({
     styles.base,
     styles[theme],
     {
-      [styles.border]: hasCaptionBorder,
+      [styles.border]: hasCaptionBorder && caption,
     },
     className,
   );
