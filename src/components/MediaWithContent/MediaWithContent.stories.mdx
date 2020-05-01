@@ -3,13 +3,11 @@ import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import { withKnobs } from '@storybook/addon-knobs';
 import { boolean, select, text, radios } from '@storybook/addon-knobs';
 import DefinitionList from '~/components/DefinitionList';
-import DefinitionListFixture from  '~/components/DefinitionList/DefinitionList.fixture';
 import Hyperlink from '~/components/Hyperlink';
 import Image from '~/components/Image';
 import KitList from '~/components/KitList';
 import LinkButtonGroup from '~/components/LinkButtonGroup';
 import SubNav from '~/components/SubNav';
-import SubNavFixture from '~/components/SubNav/SubNav.fixture';
 import Video from '~/components/Video';
 import MediaWithContent from './MediaWithContent';
 import MediaWithContentFixture from './MediaWithContent.fixture';
@@ -29,28 +27,15 @@ import MediaWithContentFixture from './MediaWithContent.fixture';
             const options = {
               DefinitionList: {
                 Component: DefinitionList,
-                props: DefinitionListFixture,
+                props: MediaWithContentFixture.definitionList,
               },
               KitList: {
                 Component: KitList,
-                props: {
-                  items: MediaWithContentFixture.kitList,
-                },
+                props: MediaWithContentFixture.kitList,
               },
               LinkButtonGroup: {
                 Component: LinkButtonGroup,
-                props: {
-                  link: {
-                    text: 'Purchase Rozu',
-                    url: 'http://aesop.com',
-                    style: 'Internal No Icon Button Link',
-                  },
-                  secondaryLink: {
-                    text: 'Discover the inspiration',
-                    url: 'http://aesop.com',
-                    style: 'Internal No Icon Button Link',
-                  },
-                },
+                props: MediaWithContentFixture.linkButtonGroup,
               },
             };
             const componentName = select('content', Object.keys(options), 'LinkButtonGroup');
@@ -60,22 +45,21 @@ import MediaWithContentFixture from './MediaWithContent.fixture';
           copy={{
             description: text(
               'description',
-              MediaWithContentFixture.defaultCopy.description,
+              MediaWithContentFixture.copy.default.description,
             ),
-            eyebrow: text('eyebrow', MediaWithContentFixture.defaultCopy.eyebrow),
-            heading: text('heading', MediaWithContentFixture.defaultCopy.heading),
-            subHeading: text('subHeading', MediaWithContentFixture.defaultCopy.subHeading),
+            eyebrow: text('eyebrow', MediaWithContentFixture.copy.default.eyebrow),
+            heading: text('heading', MediaWithContentFixture.copy.default.heading),
+            subHeading: text('subHeading', MediaWithContentFixture.copy.default.subHeading),
           }}
           hasFullWidthImage={boolean('hasFullWidthImage', false)}
           isHero={boolean('isHero', false)}
           isReverse={boolean('isReverse', false)}
           media={
             <Image
-              altText={MediaWithContentFixture.imageExpectations.altText}
-              large={MediaWithContentFixture.imageExpectations.large}
-              medium={MediaWithContentFixture.imageExpectations.medium}
-              small={MediaWithContentFixture.imageExpectations.small}
-              theme={MediaWithContentFixture.imageExpectations}
+              altText={MediaWithContentFixture.image.expectations.altText}
+              large={MediaWithContentFixture.image.expectations.large}
+              medium={MediaWithContentFixture.image.expectations.medium}
+              small={MediaWithContentFixture.image.expectations.small}
             />
           }
           theme={theme}
@@ -109,26 +93,21 @@ import MediaWithContentFixture from './MediaWithContent.fixture';
     <MediaWithContent
       backgroundColor="#fffeef"
       content={
-        <DefinitionList items={DefinitionListFixture.items} />
+        <DefinitionList items={MediaWithContentFixture.definitionList.items} />
       }
       copy={{
-        description: text(
-          'description',
-          MediaWithContentFixture.defaultCopy.description,
-        ),
-        eyebrow: 'Nunc quam dolor',
-        heading: 'Sed consectetur facilisis imperdiet',
+        eyebrow: MediaWithContentFixture.copy.default.eyebrow,
+        heading: MediaWithContentFixture.copy.default.heading,
       }}
-      hasFullWidthImage={boolean('hasFullWidthImage', false)}
-      isHero={boolean('isHero', false)}
-      isReverse={boolean('isReverse', false)}
+      hasFullWidthImage={false}
+      isHero={false}
+      isReverse={false}
       media={
         <Image
-          altText={MediaWithContentFixture.imageExpectations.altText}
-          large={MediaWithContentFixture.imageExpectations.large}
-          medium={MediaWithContentFixture.imageExpectations.medium}
-          small={MediaWithContentFixture.imageExpectations.small}
-          theme={MediaWithContentFixture.imageExpectations}
+          altText={MediaWithContentFixture.image.default.altText}
+          large={MediaWithContentFixture.image.default.large}
+          medium={MediaWithContentFixture.image.default.medium}
+          small={MediaWithContentFixture.image.default.small}
         />
       }
       theme={select('theme', ['dark', 'light'], 'dark')}
@@ -141,14 +120,14 @@ import MediaWithContentFixture from './MediaWithContent.fixture';
 <Preview>
   <Story name="With Kit List">
     <MediaWithContent
-      content={<KitList items={MediaWithContentFixture.kitList} />}
-      copy={MediaWithContentFixture.copyKit}
+      content={<KitList items={MediaWithContentFixture.kitList.items} />}
+      copy={MediaWithContentFixture.kitList.copy}
       media={
         <Image
-          altText={MediaWithContentFixture.imageKit.altText}
-          large={MediaWithContentFixture.imageKit.large}
-          medium={MediaWithContentFixture.imageKit.medium}
-          small={MediaWithContentFixture.imageKit.small}
+          altText={MediaWithContentFixture.image.kit.altText}
+          large={MediaWithContentFixture.image.kit.large}
+          medium={MediaWithContentFixture.image.kit.medium}
+          small={MediaWithContentFixture.image.kit.small}
         />
       }
     />
@@ -160,14 +139,14 @@ import MediaWithContentFixture from './MediaWithContent.fixture';
 <Preview>
   <Story name="With Expectations">
     <MediaWithContent
-      copy={MediaWithContentFixture.copyExpectations}
+      copy={MediaWithContentFixture.copy.expectations}
       isReverse={true}
       media={
         <Image
-          altText={MediaWithContentFixture.imageExpectations.altText}
-          large={MediaWithContentFixture.imageExpectations.large}
-          medium={MediaWithContentFixture.imageExpectations.medium}
-          small={MediaWithContentFixture.imageExpectations.small}
+          altText={MediaWithContentFixture.image.expectations.altText}
+          large={MediaWithContentFixture.image.expectations.large}
+          medium={MediaWithContentFixture.image.expectations.medium}
+          small={MediaWithContentFixture.image.expectations.small}
         />
       }
     />
@@ -184,43 +163,27 @@ import MediaWithContentFixture from './MediaWithContent.fixture';
         const options = {
           SubNav: {
             Component: SubNav,
-            props: { links: SubNavFixture.links },
+            props: MediaWithContentFixture.subNav,
           },
           LinkButtonGroup: {
             Component: LinkButtonGroup,
-            props: {
-              link: {
-                text: 'Purchase Rozu',
-                url: 'http://aesop.com',
-                style: 'Internal No Icon Button Link',
-              },
-              secondaryLink: {
-                text: 'Discover the inspiration',
-                url: 'http://aesop.com',
-                style: 'Internal No Icon Button Link',
-              },
-            },
+            props: MediaWithContentFixture.linkButtonGroup,
           },
         };
         const componentName = select('content', Object.keys(options), 'LinkButtonGroup');
         const { Component, props } = options[componentName];
         return <Component {...props} theme="light" />
       })()}
-      copy={{
-        description:
-          'A complex evolution of the rose, our fourth fragrance is underpinned by green, woody and lightly smoky notes—unmistakably floral, yet nuanced and expansive.',
-        eyebrow: 'Brazen and delicate',
-        heading: 'Rōzu Eau de Parfum',
-      }}
+      copy={MediaWithContentFixture.copy.expectations}
       hasFullWidthImage={false}
       isHero={true}
       isReverse={true}
       media={
         <Image
-          altText={MediaWithContentFixture.imageHero.altText}
-          large={MediaWithContentFixture.imageHero.large}
-          medium={MediaWithContentFixture.imageHero.medium}
-          small={MediaWithContentFixture.imageHero.small}
+          altText={MediaWithContentFixture.image.hero.altText}
+          large={MediaWithContentFixture.image.hero.large}
+          medium={MediaWithContentFixture.image.hero.medium}
+          small={MediaWithContentFixture.image.hero.small}
         />
       }
       theme="light"
@@ -238,22 +201,11 @@ import MediaWithContentFixture from './MediaWithContent.fixture';
         const options = {
           SubNav: {
             Component: SubNav,
-            props: { links: SubNavFixture.links },
+            props: MediaWithContentFixture.subNav,
           },
           LinkButtonGroup: {
             Component: LinkButtonGroup,
-            props: {
-              link: {
-                text: 'Purchase Rozu',
-                url: 'http://aesop.com',
-                style: 'Internal No Icon Button Link',
-              },
-              secondaryLink: {
-                text: 'Discover the inspiration',
-                url: 'http://aesop.com',
-                style: 'Internal No Icon Button Link',
-              },
-            },
+            props: MediaWithContentFixture.linkButtonGroup,
           },
         };
         const componentName = select('content', Object.keys(options), 'LinkButtonGroup');
@@ -261,20 +213,20 @@ import MediaWithContentFixture from './MediaWithContent.fixture';
         return <Component {...props} theme="light" />
       })()}
       copy={{
-        heading: 'Hero Image Full Width Heading',
+        heading: MediaWithContentFixture.copy.default.heading,
       }}
       hasFullWidthImage={true}
       isHero={true}
       isReverse={true}
       media={
         <Image
-          altText={MediaWithContentFixture.imageExpectations.altText}
-          large={MediaWithContentFixture.imageExpectations.large}
-          medium={MediaWithContentFixture.imageExpectations.medium}
-          small={MediaWithContentFixture.imageExpectations.small}
+          altText={MediaWithContentFixture.image.expectations.altText}
+          large={MediaWithContentFixture.image.expectations.large}
+          medium={MediaWithContentFixture.image.expectations.medium}
+          small={MediaWithContentFixture.image.expectations.small}
         />
       }
-      theme={'light'}
+      theme="light"
     />
   </Story>
 </Preview>
@@ -286,25 +238,15 @@ import MediaWithContentFixture from './MediaWithContent.fixture';
     <MediaWithContent
       backgroundColor="#f5f3e6"
       content={
-        <Hyperlink
-          style="Internal Button Link"
-          url="http://aesop.com"
-          theme="dark"
-        >
-          Browse gifts
-        </Hyperlink>
+        <Hyperlink {...MediaWithContentFixture.hyperlinkButtonDark} />
       }
-      copy={{
-        eyebrow: 'Expressions of gratitude',
-        heading: 'In celebration of mothers',
-        description: 'Gifts for the woman who taught you how to tie your shoelaces, how to execute a parallel park—and how to play your cards right.',
-      }}
+      copy={MediaWithContentFixture.copy.expectations}
       foregroundImage={
         <Image
-          altText={MediaWithContentFixture.foregroundImage.altText}
-          large={MediaWithContentFixture.foregroundImage.large}
-          medium={MediaWithContentFixture.foregroundImage.medium}
-          small={MediaWithContentFixture.foregroundImage.small}
+          altText={MediaWithContentFixture.image.foreground.altText}
+          large={MediaWithContentFixture.image.foreground.large}
+          medium={MediaWithContentFixture.image.foreground.medium}
+          small={MediaWithContentFixture.image.foreground.small}
         />
       }
       hasFullWidthImage={false}
@@ -312,10 +254,10 @@ import MediaWithContentFixture from './MediaWithContent.fixture';
       isReverse={true}
       media={
         <Image
-          altText={MediaWithContentFixture.backgroundImage.altText}
-          large={MediaWithContentFixture.backgroundImage.large}
-          medium={MediaWithContentFixture.backgroundImage.medium}
-          small={MediaWithContentFixture.backgroundImage.small}
+          altText={MediaWithContentFixture.image.background.altText}
+          large={MediaWithContentFixture.image.background.large}
+          medium={MediaWithContentFixture.image.background.medium}
+          small={MediaWithContentFixture.image.background.small}
         />
       }
       theme="dark"
@@ -332,26 +274,12 @@ import MediaWithContentFixture from './MediaWithContent.fixture';
       content={
         <Fragment>
           <LinkButtonGroup
-            link={{
-              text: 'Purchase Rozu',
-              url: 'http://aesop.com',
-              style: 'Internal No Icon Button Link',
-            }}
-            secondaryLink={{
-              text: 'Discover the inspiration',
-              url: 'http://aesop.com',
-              style: 'Internal No Icon Button Link',
-            }}
+            {...MediaWithContentFixture.linkButtonGroup}
             theme="light"
           />
         </Fragment>
       }
-      copy={{
-        description:
-          'A complex evolution of the rose, our fourth fragrance is underpinned by green, woody and lightly smoky notes—unmistakably floral, yet nuanced and expansive.',
-        eyebrow: 'Brazen and delicate',
-        heading: 'Rōzu Eau de Parfum',
-      }}
+      copy={MediaWithContentFixture.copy.expectations}
       hasFullWidthImage={false}
       isHero={true}
       isReverse={true}
@@ -363,14 +291,8 @@ import MediaWithContentFixture from './MediaWithContent.fixture';
           hasPlayInFullScreen={false}
           hasControls={false}
           isFullWidth={false}
-          large={text(
-            'large',
-            'https://player.vimeo.com/external/225136214.hd.mp4?s=a01cd8b47f35767394e48dc01af10510ef8ff4dd&profile_id=174',
-          )}
-          medium={text(
-            'large',
-            'https://player.vimeo.com/external/225136214.hd.mp4?s=a01cd8b47f35767394e48dc01af10510ef8ff4dd&profile_id=174',
-          )}
+          large="https://player.vimeo.com/external/225136214.hd.mp4?s=a01cd8b47f35767394e48dc01af10510ef8ff4dd&profile_id=174"
+          medium="https://player.vimeo.com/external/225136214.hd.mp4?s=a01cd8b47f35767394e48dc01af10510ef8ff4dd&profile_id=174"
           poster={{
             copy: {
               altText: 'How to Use Video for Tea Tree Leaf Facial Exfoliant',
@@ -382,10 +304,7 @@ import MediaWithContentFixture from './MediaWithContent.fixture';
             small:
               '/assets/images/MediaWithContent/Large-PNG-AESOP-HWYL-HYBRIS-PRODUCT-PAGE-VIDEO-TABLET-1536x1920px-1-.png',
           }}
-          small={text(
-            'large',
-            'https://player.vimeo.com/external/225136214.hd.mp4?s=a01cd8b47f35767394e48dc01af10510ef8ff4dd&profile_id=174',
-          )}
+          small="https://player.vimeo.com/external/225136214.hd.mp4?s=a01cd8b47f35767394e48dc01af10510ef8ff4dd&profile_id=174"
         />
       }
       theme="light"

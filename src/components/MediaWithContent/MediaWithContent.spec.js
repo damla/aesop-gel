@@ -19,10 +19,12 @@ describe('<MediaWithContent />', () => {
       .create(
         <MediaWithContent
           content={
-            <DefinitionList items={MediaWithContentFixture.definitionList} />
+            <DefinitionList
+              items={MediaWithContentFixture.definitionList.items}
+            />
           }
-          copy={MediaWithContentFixture.copyKit}
-          media={<Image {...MediaWithContentFixture.image} />}
+          copy={MediaWithContentFixture.copy.expectations}
+          media={<Image {...MediaWithContentFixture.image.default} />}
         />,
       )
       .toJSON();

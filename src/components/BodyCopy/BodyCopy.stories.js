@@ -17,7 +17,7 @@ storiesOf('Components/BodyCopy', module).add('Base component', () => (
     }
     cta={{
       text: text('cta.text', 'Read more'),
-      url: text('cta.url', 'http://aesop.com'),
+      url: text('cta.url', 'https://aesop.com'),
       style: select(
         'cta.style',
         [
@@ -41,7 +41,7 @@ storiesOf('Components/BodyCopy', module).add('Base component', () => (
     )}
     secondaryCta={{
       text: text('secondaryCta.text', 'Read more'),
-      url: text('secondaryCta.url', 'http://aesop.com'),
+      url: text('secondaryCta.url', 'https://aesop.com'),
       style: select(
         'secondaryCta.style',
         [

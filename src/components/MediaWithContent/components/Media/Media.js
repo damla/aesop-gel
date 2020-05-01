@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import Figure from '~/components/Figure';
-import Image from '~/components/Image';
-import Video from '~/components/Video';
 import styles from './Media.module.css';
 
 const Media = ({
@@ -32,13 +30,10 @@ const Media = ({
 
 Media.propTypes = {
   className: PropTypes.string,
-  foregroundImage: PropTypes.oneOfType([PropTypes.instanceOf(Image)]),
+  foregroundImage: PropTypes.element,
   hasFullWidthImage: PropTypes.bool,
   isHero: PropTypes.bool,
-  media: PropTypes.oneOfType([
-    PropTypes.instanceOf(Image),
-    PropTypes.instanceOf(Video),
-  ]).isRequired,
+  media: PropTypes.element.isRequired,
 };
 
 Media.defaultProps = {

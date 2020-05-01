@@ -15,7 +15,7 @@ describe('<BodyCopy />', () => {
     const button = {
       id: 'button-id',
       text: 'Read more',
-      url: 'http://aesop.com',
+      url: 'https://aesop.com',
       openInANewWindow: true,
     };
 

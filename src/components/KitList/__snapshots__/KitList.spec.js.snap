@@ -7,22 +7,22 @@ exports[`<KitList /> renders base component correctly 1`] = `
   <li
     className="item item slideIn"
   >
-    Parsley Seed Facial Cleansing Oil, 200 mL
+    Pellentesque vitae sapien leo
   </li>
   <li
     className="item item slideIn"
   >
-    Parsley Seed Anti-Oxidant Facial Toner, 100 mL
+    Nunc in euismod lectus
   </li>
   <li
     className="item item slideIn"
   >
-    Parsley Seed Anti-Oxidant Serum, 100 mL
+    Aenean magna lectus, gravida non mi et, varius mattis sapien
   </li>
   <li
     className="item item slideIn"
   >
-    Parsley Seed Anti-Oxidant Eye Cream, 10 mL
+    Donec vel sapien accumsan, scelerisque lacus placerat, placerat est
   </li>
 </ul>
 `;

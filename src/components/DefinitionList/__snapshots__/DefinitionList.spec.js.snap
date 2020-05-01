@@ -7,22 +7,32 @@ exports[`<DefinitionList /> renders base component correctly 1`] = `
   <dt
     className="term slideIn"
   >
-    Aroma
+    Aliquam
   </dt>
   <dd
     className="description slideIn"
   >
-    Fresh, woody, citrus
+    Proin vulputate eros quis lectus pretium gravida.
   </dd>
   <dt
     className="term slideIn"
   >
-    Usage
+    Etiam eu augue quam
   </dt>
   <dd
     className="description slideIn"
   >
-    Spray  two to three pumps throughout the immediate space and refresh as needed; the aroma will last for several hours.
+    Pulvinar nulla enim, eu elementum lacus vehicula sed.
+  </dd>
+  <dt
+    className="term slideIn"
+  >
+    Duis at elit
+  </dt>
+  <dd
+    className="description slideIn"
+  >
+    Sed ac ipsum vel risus aliquam rutrum.
   </dd>
 </dl>
 `;

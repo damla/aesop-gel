@@ -3,7 +3,6 @@
 exports[`<MediaWithContent /> renders base component correctly 1`] = `
 <section
   className="base"
-  div={true}
   style={
     Object {
       "backgroundColor": "#F6F5E8",
@@ -49,49 +48,54 @@ exports[`<MediaWithContent /> renders base component correctly 1`] = `
         <h2
           className="base noTopMargin mediumWeightFont xXSmall dark eyebrow eyebrow"
         >
-          How to use
+          Quisque blandit est erat
         </h2>
         <h3
           className="base noTopMargin serifFont xLarge dark heading"
         >
-          A comprehensive skin care regimen, ideal in urban environments.
+          Fusce et dui nisi
         </h3>
       </header>
       <div
         className="content"
       >
+        <div
+          className="set dark description"
+        >
+          Aliquam lectus purus, gravida id metus dignissim, efficitur tempus lacus. Maecenas a cursus diam. Vivamus ultrices nisi non ex placerat, vel elementum sapien condimentum.
+        </div>
         <dl
           className="base dark"
         >
           <dt
             className="term slideIn"
           >
-            Dosage
+            Aliquam
           </dt>
           <dd
             className="description slideIn"
           >
-            Desired amount
+            Proin vulputate eros quis lectus pretium gravida.
           </dd>
           <dt
             className="term slideIn"
           >
-            Texture
+            Etiam eu augue quam
           </dt>
           <dd
             className="description slideIn"
           >
-            Water-soluble cream with fine grain
+            Pulvinar nulla enim, eu elementum lacus vehicula sed.
           </dd>
           <dt
             className="term slideIn"
           >
-            Aroma
+            Duis at elit
           </dt>
           <dd
             className="description slideIn"
           >
-            Herbaceous, floral, earthy
+            Sed ac ipsum vel risus aliquam rutrum.
           </dd>
         </dl>
       </div>

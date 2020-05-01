@@ -28,7 +28,7 @@ export default {
       {
         text: 'Our story',
         id: 'our-story',
-        url: 'http://www.aesop.com/au/r/about',
+        url: 'https://aesop.com.com/au/r/about',
         style: EXTERNAL_NO_ICON_TEXT_LINK,
       },
       {

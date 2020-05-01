@@ -1,8 +1,6 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import Image from '~/components/Image';
-import Video from '~/components/Video';
 import Media from './components/Media';
 import Content from './components/Content';
 import styles from './MediaWithContent.module.css';
@@ -31,12 +29,7 @@ const MediaWithContent = forwardRef(
     );
 
     return (
-      <section
-        className={classSet}
-        div={true}
-        ref={ref}
-        style={{ backgroundColor }}
-      >
+      <section className={classSet} ref={ref} style={{ backgroundColor }}>
         <Media
           className={styles.media}
           foregroundImage={foregroundImage}
@@ -44,7 +37,6 @@ const MediaWithContent = forwardRef(
           isHero={isHero}
           media={media}
         />
-
         <Content
           content={content}
           copy={copy}
@@ -68,14 +60,11 @@ MediaWithContent.propTypes = {
     heading: PropTypes.string,
     subHeading: PropTypes.string,
   }).isRequired,
-  foregroundImage: PropTypes.oneOfType([PropTypes.instanceOf(Image)]),
+  foregroundImage: PropTypes.element,
   hasFullWidthImage: PropTypes.bool,
   isHero: PropTypes.bool,
   isReverse: PropTypes.bool,
-  media: PropTypes.oneOfType([
-    PropTypes.instanceOf(Image),
-    PropTypes.instanceOf(Video),
-  ]).isRequired,
+  media: PropTypes.element.isRequired,
   theme: PropTypes.oneOf(['dark', 'light']),
 };
 
