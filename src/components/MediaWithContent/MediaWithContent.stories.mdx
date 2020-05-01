@@ -73,20 +73,7 @@ import MediaWithContentFixture from './MediaWithContent.fixture';
 
 <Props of={MediaWithContent} />
 
-## Usage Example
-
-```
-<MediaWithContent
-  content={}
-  copy={}
-  hasFullWidthImage={}
-  image={}
-  isReverse={false}
-  theme={}
-/>
-```
-
-**With Definition List**
+## With Definition List
 
 <Preview>
   <Story name="Definition List">
@@ -115,7 +102,7 @@ import MediaWithContentFixture from './MediaWithContent.fixture';
   </Story>
 </Preview>
 
-### With Kit List
+## With Kit List
 
 <Preview>
   <Story name="With Kit List">
@@ -134,7 +121,7 @@ import MediaWithContentFixture from './MediaWithContent.fixture';
   </Story>
 </Preview>
 
-### With Expectations
+## With Expectations
 
 <Preview>
   <Story name="With Expectations">
@@ -153,7 +140,7 @@ import MediaWithContentFixture from './MediaWithContent.fixture';
   </Story>
 </Preview>
 
-### Hero Image
+## Hero Image
 
 <Preview>
   <Story name="Hero Image">
@@ -191,7 +178,7 @@ import MediaWithContentFixture from './MediaWithContent.fixture';
   </Story>
 </Preview>
 
-### Hero Image Full Width
+## Hero Image Full Width
 
 <Preview>
   <Story name="Hero Image Full Width">
@@ -231,7 +218,7 @@ import MediaWithContentFixture from './MediaWithContent.fixture';
   </Story>
 </Preview>
 
-### Hero Image with Foreground Image
+## Hero Image with Foreground Image
 
 <Preview>
   <Story name="Hero Image with Foreground Image">
@@ -265,7 +252,7 @@ import MediaWithContentFixture from './MediaWithContent.fixture';
   </Story>
 </Preview>
 
-### Hero Video
+## Hero Video
 
 <Preview>
   <Story name="Hero Video">
@@ -291,20 +278,10 @@ import MediaWithContentFixture from './MediaWithContent.fixture';
           hasPlayInFullScreen={false}
           hasControls={false}
           isFullWidth={false}
-          large="https://player.vimeo.com/external/225136214.hd.mp4?s=a01cd8b47f35767394e48dc01af10510ef8ff4dd&profile_id=174"
-          medium="https://player.vimeo.com/external/225136214.hd.mp4?s=a01cd8b47f35767394e48dc01af10510ef8ff4dd&profile_id=174"
-          poster={{
-            copy: {
-              altText: 'How to Use Video for Tea Tree Leaf Facial Exfoliant',
-            },
-            large:
-              '/assets/images/MediaWithContent/Large-PNG-AESOP-HWYL-HYBRIS-PRODUCT-PAGE-VIDEO-TABLET-1536x1920px-1-.png',
-            medium:
-              '/assets/images/MediaWithContent/Large-PNG-AESOP-HWYL-HYBRIS-PRODUCT-PAGE-VIDEO-TABLET-1536x1920px-1-.png',
-            small:
-              '/assets/images/MediaWithContent/Large-PNG-AESOP-HWYL-HYBRIS-PRODUCT-PAGE-VIDEO-TABLET-1536x1920px-1-.png',
-          }}
-          small="https://player.vimeo.com/external/225136214.hd.mp4?s=a01cd8b47f35767394e48dc01af10510ef8ff4dd&profile_id=174"
+          large={MediaWithContentFixture.video.source}
+          medium={MediaWithContentFixture.video.source}
+          poster={MediaWithContentFixture.video.poster}
+          small={MediaWithContentFixture.video.source}
         />
       }
       theme="light"

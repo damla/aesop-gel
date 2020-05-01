@@ -53,7 +53,7 @@
   &,
   p {
     margin: 10px 0;
-    font-size: rem(17px);
+    font-size: rem(16px);
     line-height: 1.7;
 
     &:first-of-type {
