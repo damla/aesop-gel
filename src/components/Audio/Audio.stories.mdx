@@ -1,0 +1,29 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs } from '@storybook/addon-knobs';
+import { text } from '@storybook/addon-knobs';
+import Audio from './Audio';
+import AudioFixture from './Audio.fixture';
+
+<Meta
+  title="Components/Audio"
+  component={Audio}
+  decorators={[withKnobs]}
+/>
+
+# Audio
+
+<Preview>
+  <Story name="Base component">
+    <Audio />
+  </Story>
+</Preview>
+
+## API
+
+<Props of={Audio} />
+
+## Usage Example
+
+```
+<Audio />
+```

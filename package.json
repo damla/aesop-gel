@@ -75,6 +75,7 @@
     "prop-types": ">=15.7.2",
     "react": ">=16.8.0",
     "react-accessible-accordion": ">=3.0.1",
+    "react-audio-player": "^0.13.0",
     "react-collapse": ">=5.0.1",
     "react-dom": ">=16.8.0",
     "react-hot-loader": "^4.12.10",
