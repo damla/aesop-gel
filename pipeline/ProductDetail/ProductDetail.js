@@ -1,8 +1,8 @@
 import React from 'react';
 import cx from 'classnames';
 import Carousel from '~/components/Carousel';
-import ImageWithHeaderAndContent from '~/components/ImageWithHeaderAndContent';
-import ImageWithHeaderAndContentFixture from '~/components/ImageWithHeaderAndContent/ImageWithHeaderAndContent.fixture';
+import MediaWithContent from '~/components/MediaWithContent';
+import MediaWithContentFixture from '~/components/MediaWithContent/MediaWithContent.fixture';
 import PDPHeader from '~/components/PDPHeader';
 import Quote from '~/components/Quote';
 import DefinitionList from '~/components/DefinitionList';
@@ -18,20 +18,18 @@ const ProductDetail = ({ className, data }) => {
   return (
     <div className={classSet}>
       <PDPHeader product={data.product} />
-      <ImageWithHeaderAndContent
+      <MediaWithContent
         content={
-          <DefinitionList
-            items={ImageWithHeaderAndContentFixture.definitionList}
-          />
+          <DefinitionList items={MediaWithContentFixture.definitionList} />
         }
-        copy={ImageWithHeaderAndContentFixture.copy}
-        image={ImageWithHeaderAndContentFixture.image}
+        copy={MediaWithContentFixture.copy}
+        image={MediaWithContentFixture.image}
       />
       <Quote author={QuoteFixture.author}>{QuoteFixture.content}</Quote>
-      <ImageWithHeaderAndContent
-        content={<KitList items={ImageWithHeaderAndContentFixture.kitList} />}
-        copy={ImageWithHeaderAndContentFixture.copyKit}
-        image={ImageWithHeaderAndContentFixture.imageKit}
+      <MediaWithContent
+        content={<KitList items={MediaWithContentFixture.kitList} />}
+        copy={MediaWithContentFixture.copyKit}
+        image={MediaWithContentFixture.imageKit}
       />
       <Carousel
         className={styles.asideProducts}
@@ -40,9 +38,9 @@ const ProductDetail = ({ className, data }) => {
         }
         slides={ProductDetailFixture.data.product.accompanyWith.products}
       />
-      <ImageWithHeaderAndContent
-        copy={ImageWithHeaderAndContentFixture.copyExpectations}
-        image={ImageWithHeaderAndContentFixture.imageExpectations}
+      <MediaWithContent
+        copy={MediaWithContentFixture.copyExpectations}
+        image={MediaWithContentFixture.imageExpectations}
         reverse={true}
       />
     </div>

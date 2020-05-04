@@ -92,7 +92,7 @@ Array [
         </svg>
       </button>
       <a
-        className="base light ctaButton"
+        className="base left light ctaButton"
         href="/contact-us/"
         target="_self"
       >

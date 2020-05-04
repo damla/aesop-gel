@@ -18,17 +18,19 @@ import Hyperlink from './Hyperlink';
         'style',
         [
           'External Button Link',
+          'External No Icon Button Link',
+          'External No Icon Link',
           'External Text Link',
           'Internal Button Link',
+          'Internal No Icon Button Link',
+          'Internal No Icon Link',
           'Internal Text Link',
-          'External No Icon Link',
-          'No Icon Link',
         ],
         'Internal Text Link',
       )}
       theme={select('theme', ['dark', 'light'], 'dark')}
       title="Hyperlink Title"
-      url={text('url', 'http://aesop.com')}
+      url={text('url', 'https://aesop.com')}
     >
       {text('children', 'Aesop')}
     </Hyperlink>
@@ -47,7 +49,7 @@ import Hyperlink from './Hyperlink';
   hasTargetInNewWindow={false}
   style="External Button Link"
   title="Hyperlink Title"
-  url="http://aesop.com"
+  url="https://aesop.com"
 >
   Aesop
 </Hyperlink>

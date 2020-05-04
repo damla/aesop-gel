@@ -1,15 +1,19 @@
 export default {
   items: [
     {
-      description: 'Fresh, woody, citrus',
+      description: 'Proin vulputate eros quis lectus pretium gravida.',
       id: '1',
-      term: 'Aroma',
+      term: 'Aliquam',
     },
     {
-      description:
-        'Spray  two to three pumps throughout the immediate space and refresh as needed; the aroma will last for several hours.',
+      description: 'Pulvinar nulla enim, eu elementum lacus vehicula sed.',
       id: '2',
-      term: 'Usage',
+      term: 'Etiam eu augue quam',
+    },
+    {
+      description: 'Sed ac ipsum vel risus aliquam rutrum.',
+      id: '3',
+      term: 'Duis at elit',
     },
   ],
 };

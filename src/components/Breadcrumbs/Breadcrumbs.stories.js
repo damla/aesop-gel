@@ -7,8 +7,8 @@ import Breadcrumbs from './Breadcrumbs';
 storiesOf('Components/Breadcrumbs', module).add('Base component', () => (
   <Breadcrumbs
     items={object('items', [
-      { label: 'Fragrance', id: 'fragrance', url: '/' },
-      { label: 'Gifts', id: 'gifts', url: '/' },
+      { label: 'Suspendisse quis elit', id: 'suspendisse-quis-elit', url: '/' },
+      { label: 'Maecenas luctus', id: 'maecenas-luctus', url: '/' },
     ])}
   />
 ));

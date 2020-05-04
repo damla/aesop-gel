@@ -1,0 +1,23 @@
+@import 'styles/index';
+
+.base {
+  position: relative;
+
+  @media (--viewport-lg) {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: row;
+  }
+
+  &.hero {
+    @media (--viewport-lg) {
+      min-height: 70vh;
+    }
+  }
+}
+
+.reverse {
+  @media (--viewport-lg) {
+    flex-direction: row-reverse;
+  }
+}

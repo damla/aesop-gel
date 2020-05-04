@@ -1,0 +1,290 @@
+import { Fragment } from 'react';
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs } from '@storybook/addon-knobs';
+import { boolean, select, text, radios } from '@storybook/addon-knobs';
+import DefinitionList from '~/components/DefinitionList';
+import Hyperlink from '~/components/Hyperlink';
+import Image from '~/components/Image';
+import KitList from '~/components/KitList';
+import LinkButtonGroup from '~/components/LinkButtonGroup';
+import SubNav from '~/components/SubNav';
+import Video from '~/components/Video';
+import MediaWithContent from './MediaWithContent';
+import MediaWithContentFixture from './MediaWithContent.fixture';
+
+<Meta title="Components/MediaWithContent" component={MediaWithContent} decorators={[withKnobs]} />
+
+# MediaWithContent
+
+<Preview>
+  <Story name="Base Component">
+    {(() => {
+      const theme = select('theme', ['dark', 'light'], 'dark');
+      return (
+        <MediaWithContent
+          backgroundColor={text('backgroundColor', '#fffeef')}
+          content={(() => {
+            const options = {
+              DefinitionList: {
+                Component: DefinitionList,
+                props: MediaWithContentFixture.definitionList,
+              },
+              KitList: {
+                Component: KitList,
+                props: MediaWithContentFixture.kitList,
+              },
+              LinkButtonGroup: {
+                Component: LinkButtonGroup,
+                props: MediaWithContentFixture.linkButtonGroup,
+              },
+            };
+            const componentName = select('content', Object.keys(options), 'LinkButtonGroup');
+            const { Component, props } = options[componentName];
+            return <Component {...props} theme={theme} />
+          })()}
+          copy={{
+            description: text(
+              'description',
+              MediaWithContentFixture.copy.default.description,
+            ),
+            eyebrow: text('eyebrow', MediaWithContentFixture.copy.default.eyebrow),
+            heading: text('heading', MediaWithContentFixture.copy.default.heading),
+            subHeading: text('subHeading', MediaWithContentFixture.copy.default.subHeading),
+          }}
+          hasFullWidthImage={boolean('hasFullWidthImage', false)}
+          isHero={boolean('isHero', false)}
+          isReverse={boolean('isReverse', false)}
+          media={
+            <Image
+              altText={MediaWithContentFixture.image.expectations.altText}
+              large={MediaWithContentFixture.image.expectations.large}
+              medium={MediaWithContentFixture.image.expectations.medium}
+              small={MediaWithContentFixture.image.expectations.small}
+            />
+          }
+          theme={theme}
+        />
+      )
+    })()}
+  </Story>
+</Preview>
+
+## API
+
+<Props of={MediaWithContent} />
+
+## With Definition List
+
+<Preview>
+  <Story name="Definition List">
+    <MediaWithContent
+      backgroundColor="#fffeef"
+      content={
+        <DefinitionList items={MediaWithContentFixture.definitionList.items} />
+      }
+      copy={{
+        eyebrow: MediaWithContentFixture.copy.default.eyebrow,
+        heading: MediaWithContentFixture.copy.default.heading,
+      }}
+      hasFullWidthImage={false}
+      isHero={false}
+      isReverse={false}
+      media={
+        <Image
+          altText={MediaWithContentFixture.image.default.altText}
+          large={MediaWithContentFixture.image.default.large}
+          medium={MediaWithContentFixture.image.default.medium}
+          small={MediaWithContentFixture.image.default.small}
+        />
+      }
+      theme={select('theme', ['dark', 'light'], 'dark')}
+    />
+  </Story>
+</Preview>
+
+## With Kit List
+
+<Preview>
+  <Story name="With Kit List">
+    <MediaWithContent
+      content={<KitList items={MediaWithContentFixture.kitList.items} />}
+      copy={MediaWithContentFixture.kitList.copy}
+      media={
+        <Image
+          altText={MediaWithContentFixture.image.kit.altText}
+          large={MediaWithContentFixture.image.kit.large}
+          medium={MediaWithContentFixture.image.kit.medium}
+          small={MediaWithContentFixture.image.kit.small}
+        />
+      }
+    />
+  </Story>
+</Preview>
+
+## With Expectations
+
+<Preview>
+  <Story name="With Expectations">
+    <MediaWithContent
+      copy={MediaWithContentFixture.copy.expectations}
+      isReverse={true}
+      media={
+        <Image
+          altText={MediaWithContentFixture.image.expectations.altText}
+          large={MediaWithContentFixture.image.expectations.large}
+          medium={MediaWithContentFixture.image.expectations.medium}
+          small={MediaWithContentFixture.image.expectations.small}
+        />
+      }
+    />
+  </Story>
+</Preview>
+
+## Hero Image
+
+<Preview>
+  <Story name="Hero Image">
+    <MediaWithContent
+      backgroundColor="#633e43"
+      content={(() => {
+        const options = {
+          SubNav: {
+            Component: SubNav,
+            props: MediaWithContentFixture.subNav,
+          },
+          LinkButtonGroup: {
+            Component: LinkButtonGroup,
+            props: MediaWithContentFixture.linkButtonGroup,
+          },
+        };
+        const componentName = select('content', Object.keys(options), 'LinkButtonGroup');
+        const { Component, props } = options[componentName];
+        return <Component {...props} theme="light" />
+      })()}
+      copy={MediaWithContentFixture.copy.expectations}
+      hasFullWidthImage={false}
+      isHero={true}
+      isReverse={true}
+      media={
+        <Image
+          altText={MediaWithContentFixture.image.hero.altText}
+          large={MediaWithContentFixture.image.hero.large}
+          medium={MediaWithContentFixture.image.hero.medium}
+          small={MediaWithContentFixture.image.hero.small}
+        />
+      }
+      theme="light"
+    />
+  </Story>
+</Preview>
+
+## Hero Image Full Width
+
+<Preview>
+  <Story name="Hero Image Full Width">
+    <MediaWithContent
+      backgroundColor="#222e56"
+      content={(() => {
+        const options = {
+          SubNav: {
+            Component: SubNav,
+            props: MediaWithContentFixture.subNav,
+          },
+          LinkButtonGroup: {
+            Component: LinkButtonGroup,
+            props: MediaWithContentFixture.linkButtonGroup,
+          },
+        };
+        const componentName = select('content', Object.keys(options), 'LinkButtonGroup');
+        const { Component, props } = options[componentName];
+        return <Component {...props} theme="light" />
+      })()}
+      copy={{
+        heading: MediaWithContentFixture.copy.default.heading,
+      }}
+      hasFullWidthImage={true}
+      isHero={true}
+      isReverse={true}
+      media={
+        <Image
+          altText={MediaWithContentFixture.image.expectations.altText}
+          large={MediaWithContentFixture.image.expectations.large}
+          medium={MediaWithContentFixture.image.expectations.medium}
+          small={MediaWithContentFixture.image.expectations.small}
+        />
+      }
+      theme="light"
+    />
+  </Story>
+</Preview>
+
+## Hero Image with Foreground Image
+
+<Preview>
+  <Story name="Hero Image with Foreground Image">
+    <MediaWithContent
+      backgroundColor="#f5f3e6"
+      content={
+        <Hyperlink {...MediaWithContentFixture.hyperlinkButtonDark} />
+      }
+      copy={MediaWithContentFixture.copy.expectations}
+      foregroundImage={
+        <Image
+          altText={MediaWithContentFixture.image.foreground.altText}
+          large={MediaWithContentFixture.image.foreground.large}
+          medium={MediaWithContentFixture.image.foreground.medium}
+          small={MediaWithContentFixture.image.foreground.small}
+        />
+      }
+      hasFullWidthImage={false}
+      isHero={true}
+      isReverse={true}
+      media={
+        <Image
+          altText={MediaWithContentFixture.image.background.altText}
+          large={MediaWithContentFixture.image.background.large}
+          medium={MediaWithContentFixture.image.background.medium}
+          small={MediaWithContentFixture.image.background.small}
+        />
+      }
+      theme="dark"
+    />
+  </Story>
+</Preview>
+
+## Hero Video
+
+<Preview>
+  <Story name="Hero Video">
+    <MediaWithContent
+      backgroundColor="#633e43"
+      content={
+        <Fragment>
+          <LinkButtonGroup
+            {...MediaWithContentFixture.linkButtonGroup}
+            theme="light"
+          />
+        </Fragment>
+      }
+      copy={MediaWithContentFixture.copy.expectations}
+      hasFullWidthImage={false}
+      isHero={true}
+      isReverse={true}
+      media={
+        <Video
+          hasAllowAudio={false}
+          hasAutoplay={true}
+          hasLoop={true}
+          hasPlayInFullScreen={false}
+          hasControls={false}
+          isFullWidth={false}
+          large={MediaWithContentFixture.video.source}
+          medium={MediaWithContentFixture.video.source}
+          poster={MediaWithContentFixture.video.poster}
+          small={MediaWithContentFixture.video.source}
+        />
+      }
+      theme="light"
+    />
+  </Story>
+</Preview>

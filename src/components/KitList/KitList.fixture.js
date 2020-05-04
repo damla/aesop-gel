@@ -1,8 +1,15 @@
 export default {
   items: [
-    { content: 'Parsley Seed Facial Cleansing Oil, 200 mL', id: '1' },
-    { content: 'Parsley Seed Anti-Oxidant Facial Toner, 100 mL', id: '2' },
-    { content: 'Parsley Seed Anti-Oxidant Serum, 100 mL', id: '3' },
-    { content: 'Parsley Seed Anti-Oxidant Eye Cream, 10 mL', id: '4' },
+    { content: 'Pellentesque vitae sapien leo', id: '1' },
+    { content: 'Nunc in euismod lectus', id: '2' },
+    {
+      content: 'Aenean magna lectus, gravida non mi et, varius mattis sapien',
+      id: '3',
+    },
+    {
+      content:
+        'Donec vel sapien accumsan, scelerisque lacus placerat, placerat est',
+      id: '4',
+    },
   ],
 };

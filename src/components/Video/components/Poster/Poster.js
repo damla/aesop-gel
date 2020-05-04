@@ -43,7 +43,7 @@ Poster.propTypes = {
     altText: PropTypes.string.isRequired,
   }),
   isActive: PropTypes.bool,
-  large: PropTypes.bool,
+  large: PropTypes.string,
   medium: PropTypes.string,
   onClick: PropTypes.func,
   small: PropTypes.string,

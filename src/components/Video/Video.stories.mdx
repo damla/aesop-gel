@@ -3,8 +3,8 @@ import { withKnobs } from '@storybook/addon-knobs';
 import { text, boolean } from '@storybook/addon-knobs';
 import '~.storybook/storybook.module.css';
 import DefinitionList from '~/components/TwoColumnLayout';
-import ImageWithHeaderAndContentFixture from '~/components/ImageWithHeaderAndContent/ImageWithHeaderAndContent.fixture';
-import ImageWithHeaderAndContent from '~/components/ImageWithHeaderAndContent';
+import MediaWithContentFixture from '~/components/MediaWithContent/MediaWithContent.fixture';
+import MediaWithContent from '~/components/MediaWithContent';
 import Video from './Video';
 
 <Meta title="Components/Video" component={Video} decorators={[withKnobs]} />
@@ -14,8 +14,8 @@ import Video from './Video';
 <Preview>
   <Story name="Base component">
     <Video
-      hasAutoplay={boolean('hasAutoplay', false)}
       hasAllowAudio={boolean('hasAllowAudio', false)}
+      hasAutoplay={boolean('hasAutoplay', false)}
       hasLoop={boolean('hasLoop', false)}
       hasPlayInFullScreen={boolean('hasPlayInFullScreen', false)}
       isFullWidth={boolean('isFullWidth', true)}
@@ -73,20 +73,17 @@ import Video from './Video';
 />
 ```
 
-## Video in ImageWithHeaderAndContent
+## Video in MediaWithContent
 
 <Preview>
   <Story name="Plays in full screen, placed in 50/50 Component">
-    <ImageWithHeaderAndContent
-      isReverse={boolean('ImageWithHeaderAndContent.isReverse', false)}
+    <MediaWithContent
       content={
-        <DefinitionList
-          items={ImageWithHeaderAndContentFixture.definitionList}
-        />
+        <DefinitionList items={MediaWithContentFixture.definitionList} />
       }
-      copy={ImageWithHeaderAndContentFixture.copyKit}
-      image={ImageWithHeaderAndContentFixture.image}
-      video={
+      copy={MediaWithContentFixture.copyKit}
+      isReverse={boolean('isReverse', false)}
+      media={
         <Video
           hasAllowAudio={true}
           hasAutoplay={false}
@@ -106,7 +103,6 @@ import Video from './Video';
             copy: {
               altText: 'How to Use Video for Tea Tree Leaf Facial Exfoliant',
             },
-            fullBleedImage: boolean('poster.fullBleedImage', false),
             large:
               '/assets/images/MediaWithContent/Large-PNG-AESOP-HWYL-HYBRIS-PRODUCT-PAGE-VIDEO-TABLET-1536x1920px-1-.png',
             medium:

@@ -1,5 +1,12 @@
 @import 'styles/index';
 
+.base {
+  &,
+  & * {
+    box-sizing: border-box;
+  }
+}
+
 .fullScreenControls {
   @media (--viewport-lg) {
     position: fixed;
@@ -206,8 +213,10 @@
     left: calc(var(--layout-md-spacing) * 2);
   }
 
-  @media (--viewport-lg) {
-    position: fixed;
+  .fullScreenControls & {
+    @media (--viewport-lg) {
+      position: fixed;
+    }
   }
 }
 

@@ -22,7 +22,7 @@
   display: inline-block;
   padding: 0;
 
-  &:not(:first-child)::before {
+  &:not(:first-of-type)::before {
     display: inline-block;
     padding: 0 10px;
     content: '\2022';

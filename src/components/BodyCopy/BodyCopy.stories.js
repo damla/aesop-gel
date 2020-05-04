@@ -17,16 +17,18 @@ storiesOf('Components/BodyCopy', module).add('Base component', () => (
     }
     cta={{
       text: text('cta.text', 'Read more'),
-      url: text('cta.url', 'http://aesop.com'),
+      url: text('cta.url', 'https://aesop.com'),
       style: select(
         'cta.style',
         [
           'External Button Link',
+          'External No Icon Button Link',
+          'External No Icon Link',
           'External Text Link',
           'Internal Button Link',
+          'Internal No Icon Button Link',
+          'Internal No Icon Link',
           'Internal Text Link',
-          'External No Icon Link',
-          'No Icon Link',
         ],
         'External Button Link',
       ),
@@ -39,16 +41,18 @@ storiesOf('Components/BodyCopy', module).add('Base component', () => (
     )}
     secondaryCta={{
       text: text('secondaryCta.text', 'Read more'),
-      url: text('secondaryCta.url', 'http://aesop.com'),
+      url: text('secondaryCta.url', 'https://aesop.com'),
       style: select(
         'secondaryCta.style',
         [
           'External Button Link',
+          'External No Icon Button Link',
+          'External No Icon Link',
           'External Text Link',
           'Internal Button Link',
+          'Internal No Icon Button Link',
+          'Internal No Icon Link',
           'Internal Text Link',
-          'External No Icon Link',
-          'No Icon Link',
         ],
         'External Button Link',
       ),

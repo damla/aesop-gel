@@ -9,7 +9,6 @@ module.exports = {
     '@storybook/addon-links/register',
     '@storybook/addon-viewport/register',
     '@storybook/addon-docs/preset',
-    'storybook-addon-paddings',
     '@storybook/addon-backgrounds/register',
   ],
   webpackFinal: async (config, { configType }) => {

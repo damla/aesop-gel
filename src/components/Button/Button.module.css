@@ -20,12 +20,16 @@
 
 .blockStyle {
   display: inline-block;
-  min-width: 210px;
+  min-width: 160px;
   max-width: 400px;
-  padding: 20px;
+  padding: 12px;
   border-width: 1px;
   border-style: solid;
   transition: all 200ms var(--easing-ease-in-out-cubic);
+
+  @media (--viewport-md) {
+    padding: 15px;
+  }
 }
 
 .dark {

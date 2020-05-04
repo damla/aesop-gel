@@ -2,7 +2,7 @@
 
 exports[`<Image /> renders base component correctly 1`] = `
 <a
-  className="base dark base"
+  className="base left dark base"
   href="https://www.aesop.com/au/r/philosophy-to-products"
   target="_self"
 >

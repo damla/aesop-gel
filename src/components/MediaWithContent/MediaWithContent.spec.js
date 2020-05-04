@@ -3,27 +3,28 @@ import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import renderer from 'react-test-renderer';
 import DefinitionList from '~/components/DefinitionList';
-import ImageWithHeaderAndContent from './ImageWithHeaderAndContent';
-import ImageWithHeaderAndContentFixture from './ImageWithHeaderAndContent.fixture';
+import Image from '~/components/Image';
+import MediaWithContent from './MediaWithContent';
+import MediaWithContentFixture from './MediaWithContent.fixture';
 
 configure({ adapter: new Adapter() });
 
-describe('<ImageWithHeaderAndContent />', () => {
+describe('<MediaWithContent />', () => {
   it('should be defined', () => {
-    expect(ImageWithHeaderAndContent).toBeDefined();
+    expect(MediaWithContent).toBeDefined();
   });
 
   it('renders base component correctly', () => {
     const tree = renderer
       .create(
-        <ImageWithHeaderAndContent
+        <MediaWithContent
           content={
             <DefinitionList
-              items={ImageWithHeaderAndContentFixture.definitionList}
+              items={MediaWithContentFixture.definitionList.items}
             />
           }
-          copy={ImageWithHeaderAndContentFixture.copyKit}
-          image={ImageWithHeaderAndContentFixture.image}
+          copy={MediaWithContentFixture.copy.expectations}
+          media={<Image {...MediaWithContentFixture.image.default} />}
         />,
       )
       .toJSON();

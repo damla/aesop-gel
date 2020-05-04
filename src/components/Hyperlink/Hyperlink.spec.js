@@ -14,7 +14,7 @@ import {
 const {
   EXTERNAL_BUTTON_LINK,
   EXTERNAL_TEXT_LINK,
-  EXTERNAL_NO_ICON_LINK,
+  EXTERNAL_NO_ICON_TEXT_LINK,
   INTERNAL_TEXT_LINK,
 } = HYPERLINK_STYLE_TYPES;
 
@@ -28,7 +28,7 @@ describe('<Hyperlink />', () => {
   it('renders base component correctly', () => {
     const tree = renderer
       .create(
-        <Hyperlink text="Aesop" url="http://aesop.com">
+        <Hyperlink text="Aesop" url="https://aesop.com">
           Aesop
         </Hyperlink>,
       )
@@ -39,7 +39,7 @@ describe('<Hyperlink />', () => {
 
   it('should return `a` as the tag if no `text` prop was provided', () => {
     const component = shallow(
-      <Hyperlink url="http://aesop.com">Aesop</Hyperlink>,
+      <Hyperlink url="https://aesop.com">Aesop</Hyperlink>,
     );
     expect(component.type()).toEqual('a');
   });
@@ -83,10 +83,10 @@ describe('Hyperlink.utils.checkIsExternalFromStyle', () => {
 //   it('should return obect with `href` property if `style` prop is `External Text Link`', () => {
 //     const actual = getButtonPropsFromStyle(
 //       EXTERNAL_TEXT_LINK,
-//       'http://aesop.com',
+//       'https://aesop.com',
 //     );
 //
-//     expect(actual).toMatchObject({ href: 'http://aesop.com' });
+//     expect(actual).toMatchObject({ href: 'https://aesop.com' });
 //   });
 // });
 
@@ -112,7 +112,7 @@ describe('Hyperlink.utils.hasIconFromStyle', () => {
   });
 
   it('should return `false` if `style` prop is passed as `External No Icon Link` or `No Icon Link`', () => {
-    const actual = hasIconFromStyle(EXTERNAL_NO_ICON_LINK);
+    const actual = hasIconFromStyle(EXTERNAL_NO_ICON_TEXT_LINK);
 
     expect(actual).toBe(false);
   });

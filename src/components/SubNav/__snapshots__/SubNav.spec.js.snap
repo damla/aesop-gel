@@ -16,8 +16,8 @@ exports[`<SubNav /> renders base component correctly 1`] = `
       className="item"
     >
       <a
-        className="base dark itemList"
-        href="http://www.aesop.com/au/r/about"
+        className="base left dark itemList"
+        href="https://aesop.com.com/au/r/about"
         target="_self"
       >
         About
@@ -27,8 +27,8 @@ exports[`<SubNav /> renders base component correctly 1`] = `
       className="item"
     >
       <a
-        className="base dark itemList"
-        href="http://www.aesop.com/au/r/philosophy-to-products"
+        className="base left dark itemList"
+        href="https://aesop.com.com/au/r/philosophy-to-products"
         target="_self"
       >
         Philosophy
@@ -49,8 +49,8 @@ exports[`<SubNav /> renders without title if not \`title\` prop is passed 1`] = 
       className="item"
     >
       <a
-        className="base dark itemList"
-        href="http://www.aesop.com/au/r/about"
+        className="base left dark itemList"
+        href="https://aesop.com.com/au/r/about"
         target="_self"
       >
         About
@@ -60,8 +60,8 @@ exports[`<SubNav /> renders without title if not \`title\` prop is passed 1`] = 
       className="item"
     >
       <a
-        className="base dark itemList"
-        href="http://www.aesop.com/au/r/philosophy-to-products"
+        className="base left dark itemList"
+        href="https://aesop.com.com/au/r/philosophy-to-products"
         target="_self"
       >
         Philosophy

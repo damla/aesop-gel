@@ -16,6 +16,7 @@ const Hyperlink = ({
   dataTestRef,
   hasTargetInNewWindow,
   style,
+  textAlign,
   theme,
   title,
   url,
@@ -28,24 +29,17 @@ const Hyperlink = ({
     styles.base,
     { [styles.blockStyle]: !isInline },
     { [styles.hasIcon]: hasIcon },
+    styles[textAlign],
     styles[theme],
     className,
   );
 
-  /** @TODO Handle Link component */
-
   let iconName = '';
-  // let Element = '';
-  // const props: LinkProps = {};
 
   if (isExternal) {
-    // Element = Link;
     iconName = 'rightUpArrow';
-    // props.to = to;
   } else {
-    // Element = HTML.A;
     iconName = 'rightArrow';
-    // props.href = href;
   }
 
   return (
@@ -74,12 +68,15 @@ Hyperlink.propTypes = {
   id: PropTypes.string,
   style: PropTypes.oneOf([
     'External Button Link',
+    'External No Icon Button Link',
+    'External No Icon Link',
     'External Text Link',
     'Internal Button Link',
+    'Internal No Icon Button Link',
+    'Internal No Icon Link',
     'Internal Text Link',
-    'External No Icon Link',
-    'No Icon Link',
   ]),
+  textAlign: PropTypes.oneOf(['center', 'left', 'right']),
   theme: PropTypes.oneOf(['dark', 'light']),
   title: PropTypes.string,
   type: PropTypes.oneOf(['Relative', 'Absolute']),
@@ -92,7 +89,8 @@ Hyperlink.defaultProps = {
   dataTestRef: undefined,
   hasTargetInNewWindow: false,
   id: undefined,
-  style: 'No Icon Link',
+  style: 'Internal No Icon Link',
+  textAlign: 'left',
   theme: 'dark',
   title: undefined,
   type: undefined,

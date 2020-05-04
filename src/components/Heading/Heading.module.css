@@ -2,7 +2,7 @@
 
 .base {
   padding: 0;
-  margin: rem(20px) 0;
+  margin: 15px 0;
   font-family: var(--font-family-sans-serif-regular);
   font-weight: var(--font-weight-normal);
   line-height: 1.2;

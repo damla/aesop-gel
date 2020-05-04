@@ -10,13 +10,13 @@ import DoubleImage from './DoubleImage';
 import Figure from './Figure';
 import FlyinPanel from './FlyinPanel';
 import Heading from './Heading';
-import HeroWithContent from './HeroWithContent';
 import Hyperlink from './Hyperlink';
 import Icon from './Icon';
 import Image from './Image';
 import ImageCarousel from './ImageCarousel';
-import ImageWithHeaderAndContent from './ImageWithHeaderAndContent';
+import MediaWithContent from './MediaWithContent';
 import KitList from './KitList';
+import LinkButtonGroup from './LinkButtonGroup';
 import List from './List';
 import Loading from './Loading';
 import Modal from './Modal';
@@ -43,13 +43,13 @@ export default {
   Figure,
   FlyinPanel,
   Heading,
-  HeroWithContent,
   Hyperlink,
   Icon,
   Image,
   ImageCarousel,
-  ImageWithHeaderAndContent,
+  MediaWithContent,
   KitList,
+  LinkButtonGroup,
   List,
   Loading,
   Modal,

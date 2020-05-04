@@ -2,8 +2,8 @@
 
 exports[`<Hyperlink /> renders base component correctly 1`] = `
 <a
-  className="base dark"
-  href="http://aesop.com"
+  className="base left dark"
+  href="https://aesop.com"
   target="_self"
 >
   Aesop
