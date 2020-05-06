@@ -1,4 +1,4 @@
-import BREAKPOINTS from './breakpoints.js';
+import * as BREAKPOINTS from './breakpoints.js';
 import HTML from './html.js';
 import * as HYPERLINK_STYLE_TYPES from './hyperlink-style-types.js';
 import KEYBOARD_CODES from './keyboard-codes.js';

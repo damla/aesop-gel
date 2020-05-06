@@ -1,0 +1,29 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs } from '@storybook/addon-knobs';
+import { text } from '@storybook/addon-knobs';
+import ProductDetailBody from './ProductDetailBody';
+import ProductDetailBodyFixture from './ProductDetailBody.fixture';
+
+<Meta
+  title="Components/ProductDetailBody"
+  component={ProductDetailBody}
+  decorators={[withKnobs]}
+/>
+
+# ProductDetailBody
+
+<Preview>
+  <Story name="Base component">
+    <ProductDetailBody {...ProductDetailBodyFixture} />
+  </Story>
+</Preview>
+
+## API
+
+<Props of={ProductDetailBody} />
+
+## Usage Example
+
+```
+<ProductDetailBody />
+```

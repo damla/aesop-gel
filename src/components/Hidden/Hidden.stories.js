@@ -9,7 +9,6 @@ storiesOf('Hidden', module).add('Base component', () => (
     large={boolean('large', false)}
     medium={boolean('medium', false)}
     small={boolean('small', true)}
-    visuallyHidden={boolean('visuallyHidden', false)}
     xLarge={boolean('xLarge', false)}
   >
     <span>Hidden content</span>

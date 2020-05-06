@@ -1,15 +1,7 @@
 @import 'styles/index';
 
 .base {
-  margin: calc(var(--layout-sm-spacing) / 2) 0;
-
-  @media (--viewport-md) {
-    margin: calc(var(--layout-md-spacing) / 2) 0;
-  }
-
-  @media (--viewport-ld) {
-    margin: calc(var(--layout-ld-spacing) / 2) 0;
-  }
+  margin: 16px 0;
 }
 
 .list {

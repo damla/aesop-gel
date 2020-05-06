@@ -1,0 +1,29 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs } from '@storybook/addon-knobs';
+import { text } from '@storybook/addon-knobs';
+import ProductDetailImage from './ProductDetailImage';
+import ProductDetailImageFixture from './ProductDetailImage.fixture';
+
+<Meta
+  title="Components/ProductDetailImage"
+  component={ProductDetailImage}
+  decorators={[withKnobs]}
+/>
+
+# ProductDetailImage
+
+<Preview>
+  <Story name="Base component">
+    <ProductDetailImage image={ProductDetailImageFixture.image} />
+  </Story>
+</Preview>
+
+## API
+
+<Props of={ProductDetailImage} />
+
+## Usage Example
+
+```
+<ProductDetailImage />
+```
