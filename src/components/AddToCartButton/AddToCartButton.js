@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import AddToCartContext from '~/contexts/AddToCart.context';
+import VariantSelectContext from '~/contexts/VariantSelect.context';
 import Button from '~/components/Button';
 import Loading from '~/components/Loading';
 import styles from './AddToCartButton.module.css';
@@ -11,7 +12,6 @@ const AddToCartButton = ({
   copy,
   dataTestRef,
   isEnabled,
-  price,
   productName,
 }) => {
   const {
@@ -20,10 +20,18 @@ const AddToCartButton = ({
     handleOnClick,
     updateError,
   } = useContext(AddToCartContext);
+  const { selectedVariant } = useContext(VariantSelectContext);
+
+  if (!selectedVariant) {
+    return null;
+  }
+
+  const { price, sku } = selectedVariant;
   const classSet = cx(styles.base, className);
   const cartActionLabel = `${copy.cartAction} — ${price}`;
   const updateNotificationLabel = `${productName} ${copy.updateNotification}`;
   const showUpdateSuccessMessage = !isLoading && isUpdateSuccessful;
+
   const labelClassName = cx(
     styles.label,
     { [styles.hideLabel]: isLoading },
@@ -39,7 +47,7 @@ const AddToCartButton = ({
       className={classSet}
       dataTestRef={dataTestRef}
       isAlternate={true}
-      isEnabled={!isLoading && isEnabled}
+      isEnabled={!isLoading && price && sku && isEnabled}
       onClick={handleOnClick}
       title="Add to cart button"
     >
@@ -47,7 +55,7 @@ const AddToCartButton = ({
         <Loading
           className={styles.loading}
           data-test-ref={`${dataTestRef}_UPDATING`}
-          isLoading={isLoading}
+          isLoading={true}
           theme="light"
         />
       )}
@@ -72,9 +80,7 @@ AddToCartButton.propTypes = {
   }),
   dataTestRef: PropTypes.string,
   isEnabled: PropTypes.bool,
-  price: PropTypes.string,
   productName: PropTypes.string,
-  sku: PropTypes.string,
 };
 
 AddToCartButton.defaultProps = {
@@ -85,9 +91,7 @@ AddToCartButton.defaultProps = {
   },
   dataTestRef: undefined,
   isEnabled: true,
-  price: undefined,
   productName: '',
-  sku: undefined,
 };
 
 export default AddToCartButton;

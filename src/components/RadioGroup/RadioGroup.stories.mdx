@@ -1,0 +1,61 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs } from '@storybook/addon-knobs';
+import { text, object } from '@storybook/addon-knobs';
+import { State } from '~.storybook/State';
+import RadioGroup from './RadioGroup';
+import RadioGroupFixture from './RadioGroup.fixture';
+
+<Meta
+  title="Components/RadioGroup"
+  component={RadioGroup}
+  decorators={[withKnobs]}
+/>
+
+# RadioGroup
+
+<Preview>
+  <Story name="Base component">
+    <State
+      initialState={{
+        value: '',
+      }}
+     >
+      {(state, setState) => {
+        return (
+          <RadioGroup
+            name={text('name', 'radioGroup')}
+            onChange={(event) => {
+              event.persist();
+              const {
+                target: { value },
+              } = event;
+              setState({...state, value})
+            }}
+            options={object('options', [
+              {
+                value: 'morbi-id-nulla',
+                label: 'Morbi id nulla',
+              },
+              {
+                value: 'nullam-ultrices',
+                label: 'Nullam ultrices',
+              },
+            ])}
+            testReference={text('name', 'radioGroup')}
+            value={state.value}
+          />
+        )
+      }}
+    </State>
+  </Story>
+</Preview>
+
+## API
+
+<Props of={RadioGroup} />
+
+## Usage Example
+
+```
+<RadioGroup />
+```

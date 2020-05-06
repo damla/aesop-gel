@@ -78,3 +78,9 @@
     border-top: 2px solid var(--color-light-copy);
   }
 }
+
+.cartMessage {
+  color: var(--color-dark-label);
+  font-size: rem(13px);
+  line-height: 1.4;
+}

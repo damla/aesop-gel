@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import AddToCartContext from '~/contexts/AddToCart.context';
+import VariantSelectContext from '~/contexts/VariantSelect.context';
 import useAddToCart from '~/customHooks/useAddToCart';
+import useVariantSelect from '~/customHooks/useVariantSelect';
 import ProductDetail from '~/components/ProductDetail';
 import styles from './Product.module.css';
 
@@ -17,14 +19,21 @@ import CarouselFixture from '~/components/Carousel/Carousel.fixture';
 import MediaWithContentFixture from '~/components/MediaWithContent/MediaWithContent.fixture';
 import QuoteFixture from '~/components/Quote/Quote.fixture';
 
+console.log('useVariantSelect', useVariantSelect);
+
 const Product = ({ className }) => {
   const classSet = cx(styles.base, className);
   const addToCart = useAddToCart();
+  const variantSelect = useVariantSelect();
+
+  console.log('variantSelect', variantSelect);
 
   return (
     <div className={classSet} style={{ backgroundColor: '#fffeef' }}>
       <AddToCartContext.Provider value={addToCart}>
-        <ProductDetail />
+        <VariantSelectContext.Provider value={variantSelect}>
+          <ProductDetail />
+        </VariantSelectContext.Provider>
       </AddToCartContext.Provider>
 
       <MediaWithContent

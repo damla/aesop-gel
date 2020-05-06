@@ -36,11 +36,3 @@
     }
   }
 }
-
-.singleVariantLabel {
-  display: flex;
-  justify-content: space-around;
-  color: var(--color-secondary);
-  font-family: var(--font-family-sans-serif-regular);
-  font-size: rem(15px);
-}

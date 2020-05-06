@@ -18,13 +18,11 @@ const ProductDetailBody = ({
   definitionList,
   ingredients,
   keyIngredient,
-  price,
   productName,
-  sku,
   theme,
 }) => {
-  const classSet = cx(styles.base, styles[theme], className);
   const [isFlyinPanelVisible, setIsFlyinPanelVisible] = React.useState(false);
+  const classSet = cx(styles.base, styles[theme], className);
 
   const definitionListItems = [
     ...definitionList,
@@ -56,17 +54,20 @@ const ProductDetailBody = ({
     },
   ];
 
+  console.log('copy.cart', copy, copy.cart);
+
   return (
     <div className={classSet}>
       <Hidden isLarge={true} isXLarge={true}>
         <Transition isActiveOnMount={true} type="shiftInDown">
-          <AddToCartButton
-            dataTestRef="ADD_TO_CART_SMALL_CTA"
-            isEnabled={!!price && !!sku}
-            price={price}
-            productName={productName}
-            theme={theme}
-          />
+          <>
+            <AddToCartButton
+              dataTestRef="ADD_TO_CART_SMALL_CTA"
+              productName={productName}
+              theme={theme}
+            />
+            {copy.cart && <div className={styles.cartMessage}>{copy.cart}</div>}
+          </>
         </Transition>
       </Hidden>
 
@@ -80,15 +81,17 @@ const ProductDetailBody = ({
 
       <Hidden isMedium={true} isSmall={true}>
         <Transition isActiveOnMount={true} type="shiftInDown">
-          <AddToCartButton
-            dataTestRef="ADD_TO_CART_SMALL_CTA"
-            isEnabled={!!price && !!sku}
-            price={price}
-            productName={productName}
-            theme={theme}
-          />
+          <>
+            <AddToCartButton
+              dataTestRef="ADD_TO_CART_SMALL_CTA"
+              productName={productName}
+              theme={theme}
+            />
+            {copy.cart && <div className={styles.cartMessage}>{copy.cart}</div>}
+          </>
         </Transition>
       </Hidden>
+
       {ingredients && (
         <FlyinPanel
           heading={copy.ingredients.heading}
@@ -105,6 +108,7 @@ const ProductDetailBody = ({
 ProductDetailBody.propTypes = {
   className: PropTypes.string,
   copy: PropTypes.shape({
+    cart: PropTypes.string,
     ingredients: {
       heading: PropTypes.string,
       label: PropTypes.string,
@@ -128,6 +132,8 @@ ProductDetailBody.propTypes = {
 ProductDetailBody.defaultProps = {
   className: undefined,
   copy: {
+    cart:
+      'The 500 mL bottle containing this formulation is made from 99.7% recycled PET.',
     ingredients: {
       heading: 'Ingredients',
       label: 'Key ingredients',

@@ -4,6 +4,10 @@
   min-height: 80vh;
   padding: 20px;
 
+  @media (--viewport-md) {
+    padding: 100px 20px 40px 20px;
+  }
+
   @media (--viewport-lg) {
     padding: 100px 40px 80px 100px;
   }
