@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import AddToCartContext from '~/contexts/AddToCart.context';
-import VariantSelectContext from '~/contexts/VariantSelect.context';
+import { AddToCartContextProvider } from '~/contexts/AddToCart.context';
+import { ProductDetailContextProvider } from '~/contexts/ProductDetail.context';
+import { VariantSelectContextProvider } from '~/contexts/VariantSelect.context';
 import useAddToCart from '~/customHooks/useAddToCart';
+import useProductDetail from '~/customHooks/useProductDetail';
 import useVariantSelect from '~/customHooks/useVariantSelect';
 import ProductDetail from '~/components/ProductDetail';
 import styles from './Product.module.css';
@@ -15,26 +17,26 @@ import Carousel from '~/components/Carousel';
 import Image from '~/components/Image';
 import KitList from '~/components/KitList';
 
+import ProductDetailFixture from '~/components/ProductDetail/ProductDetail.fixture';
 import CarouselFixture from '~/components/Carousel/Carousel.fixture';
 import MediaWithContentFixture from '~/components/MediaWithContent/MediaWithContent.fixture';
 import QuoteFixture from '~/components/Quote/Quote.fixture';
 
-console.log('useVariantSelect', useVariantSelect);
-
-const Product = ({ className }) => {
+const Product = ({ className, product }) => {
   const classSet = cx(styles.base, className);
   const addToCart = useAddToCart();
-  const variantSelect = useVariantSelect();
-
-  console.log('variantSelect', variantSelect);
+  const productDetail = useProductDetail(product);
+  const variantSelect = useVariantSelect(product.variantOptions[0]);
 
   return (
     <div className={classSet} style={{ backgroundColor: '#fffeef' }}>
-      <AddToCartContext.Provider value={addToCart}>
-        <VariantSelectContext.Provider value={variantSelect}>
-          <ProductDetail />
-        </VariantSelectContext.Provider>
-      </AddToCartContext.Provider>
+      <AddToCartContextProvider value={addToCart}>
+        <VariantSelectContextProvider value={variantSelect}>
+          <ProductDetailContextProvider value={productDetail}>
+            <ProductDetail breadcrumbs={ProductDetailFixture.breadcrumbs} />
+          </ProductDetailContextProvider>
+        </VariantSelectContextProvider>
+      </AddToCartContextProvider>
 
       <MediaWithContent
         backgroundColor="#fffeef"
@@ -86,10 +88,12 @@ const Product = ({ className }) => {
 
 Product.propTypes = {
   className: PropTypes.string,
+  product: PropTypes.object,
 };
 
 Product.defaultProps = {
   className: undefined,
+  product: undefined,
 };
 
 export default Product;

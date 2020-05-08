@@ -23,9 +23,9 @@ const useAddToCart = () => {
   };
 
   return {
+    handleOnClick,
     isLoading,
     isUpdateSuccessful,
-    handleOnClick,
   };
 };
 

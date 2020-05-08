@@ -11,7 +11,10 @@ import ProductFixture from './Product.fixture';
 
 <Preview>
   <Story name="Base component">
-    <Product />
+    <Product
+      className={ProductFixture.className}
+      product={ProductFixture.product}
+    />
   </Story>
 </Preview>
 

@@ -13,7 +13,19 @@ describe('<RadioGroup />', () => {
   });
 
   it('renders base component correctly', () => {
-    const tree = renderer.create(<RadioGroup />).toJSON();
+    const tree = renderer
+      .create(
+        <RadioGroup
+          className={RadioGroupFixture.className}
+          errorMessage={RadioGroupFixture.errorMessage}
+          name={RadioGroupFixture.name}
+          onChange={RadioGroupFixture.onChange}
+          options={RadioGroupFixture.options}
+          testReference={RadioGroupFixture.testReference}
+          value={RadioGroupFixture.value}
+        />,
+      )
+      .toJSON();
 
     expect(tree).toMatchSnapshot();
   });

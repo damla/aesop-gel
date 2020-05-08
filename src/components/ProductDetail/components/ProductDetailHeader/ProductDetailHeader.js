@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import Breadcrumbs from '~/components/Breadcrumbs';
 import Heading from '~/components/Heading';
 import Paragraph from '~/components/Paragraph';
 import Transition from '~/components/Transition';

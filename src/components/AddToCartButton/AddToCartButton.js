@@ -1,8 +1,8 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import AddToCartContext from '~/contexts/AddToCart.context';
-import VariantSelectContext from '~/contexts/VariantSelect.context';
+import { useAddToCartContext } from '~/contexts/AddToCart.context';
+import { useVariantSelectContext } from '~/contexts/VariantSelect.context';
 import Button from '~/components/Button';
 import Loading from '~/components/Loading';
 import styles from './AddToCartButton.module.css';
@@ -19,15 +19,32 @@ const AddToCartButton = ({
     isUpdateSuccessful,
     handleOnClick,
     updateError,
-  } = useContext(AddToCartContext);
-  const { selectedVariant } = useContext(VariantSelectContext);
+  } = useAddToCartContext();
+  const { selectedVariant } = useVariantSelectContext();
+
+  const classSet = cx(styles.base, className);
+
+  const outOfStock = {
+    label: 'Out of Stock',
+    title: 'Out of stock',
+  };
 
   if (!selectedVariant) {
-    return null;
+    return (
+      <Button
+        className={classSet}
+        dataTestRef={dataTestRef}
+        isAlternate={true}
+        isEnabled={false}
+        onClick={() => {}}
+        title={outOfStock.title}
+      >
+        {outOfStock.label}
+      </Button>
+    );
   }
 
   const { price, sku } = selectedVariant;
-  const classSet = cx(styles.base, className);
   const cartActionLabel = `${copy.cartAction} — ${price}`;
   const updateNotificationLabel = `${productName} ${copy.updateNotification}`;
   const showUpdateSuccessMessage = !isLoading && isUpdateSuccessful;
@@ -39,7 +56,8 @@ const AddToCartButton = ({
   );
 
   if (updateError) {
-    console.error(updateError);
+    /** @TODO Handle errors thrown by handleOnClick */
+    console.error(updateError); // eslint-disable-line
   }
 
   return (
@@ -91,7 +109,7 @@ AddToCartButton.defaultProps = {
   },
   dataTestRef: undefined,
   isEnabled: true,
-  productName: '',
+  productName: undefined,
 };
 
 export default AddToCartButton;

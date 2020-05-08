@@ -14,7 +14,6 @@
 
   @media (--viewport-lg) {
     max-width: 470px;
-    padding-right: 30px;
     margin: 0 0 5px;
     transition: opacity 1300ms 300ms var(--easing-ease-out-cubic);
   }
@@ -80,7 +79,8 @@
 }
 
 .cartMessage {
+  margin-top: 18px;
   color: var(--color-dark-label);
   font-size: rem(13px);
-  line-height: 1.4;
+  line-height: 1.6;
 }

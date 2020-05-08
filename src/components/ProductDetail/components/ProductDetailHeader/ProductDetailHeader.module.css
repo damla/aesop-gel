@@ -13,11 +13,11 @@
 
   @media (--viewport-md-only) {
     flex-direction: row;
+    justify-content: space-between;
   }
 
   @media (--viewport-lg) {
     max-width: 470px;
-    padding-right: 30px;
   }
 }
 
@@ -35,8 +35,7 @@
   margin-top: 0;
 
   @media (--viewport-md-only) {
-    width: 50%;
-    padding-right: 20px;
+    width: 46%;
   }
 }
 

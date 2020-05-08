@@ -54,8 +54,6 @@ const ProductDetailBody = ({
     },
   ];
 
-  console.log('copy.cart', copy, copy.cart);
-
   return (
     <div className={classSet}>
       <Hidden isLarge={true} isXLarge={true}>

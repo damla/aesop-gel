@@ -13,7 +13,17 @@ describe('<AddToCartButton />', () => {
   });
 
   it('renders base component correctly', () => {
-    const tree = renderer.create(<AddToCartButton />).toJSON();
+    const tree = renderer
+      .create(
+        <AddToCartButton
+          className={AddToCartButtonFixture.className}
+          copy={AddToCartButtonFixture.copy}
+          dataTestRef={AddToCartButtonFixture.dataTestRef}
+          isEnabled={AddToCartButtonFixture.isEnabled}
+          productName={AddToCartButtonFixture.productName}
+        />,
+      )
+      .toJSON();
 
     expect(tree).toMatchSnapshot();
   });

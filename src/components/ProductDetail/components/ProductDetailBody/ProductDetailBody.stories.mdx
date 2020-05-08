@@ -1,6 +1,10 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import { withKnobs } from '@storybook/addon-knobs';
 import { text } from '@storybook/addon-knobs';
+import { AddToCartContextProvider } from '~/contexts/AddToCart.context';
+import { VariantSelectContextProvider } from '~/contexts/VariantSelect.context';
+import useAddToCart from '~/customHooks/useAddToCart';
+import useVariantSelect from '~/customHooks/useVariantSelect';
 import ProductDetailBody from './ProductDetailBody';
 import ProductDetailBodyFixture from './ProductDetailBody.fixture';
 
@@ -14,7 +18,19 @@ import ProductDetailBodyFixture from './ProductDetailBody.fixture';
 
 <Preview>
   <Story name="Base component">
-    <ProductDetailBody {...ProductDetailBodyFixture} />
+    <AddToCartContextProvider value={useAddToCart()}>
+      <VariantSelectContextProvider value={useVariantSelect()}>
+        <ProductDetailBody
+          className={ProductDetailBodyFixture.className}
+          copy={ProductDetailBodyFixture.copy}
+          definitionList={ProductDetailBodyFixture.definitionList}
+          ingredients={ProductDetailBodyFixture.ingredients}
+          keyIngredient={ProductDetailBodyFixture.keyIngredient}
+          productName={ProductDetailBodyFixture.productName}
+          theme={ProductDetailBodyFixture.theme}
+        />
+      </VariantSelectContextProvider>
+    </AddToCartContextProvider>
   </Story>
 </Preview>
 

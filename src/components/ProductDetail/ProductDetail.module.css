@@ -13,7 +13,7 @@
   }
 
   @media (--viewport-xl) {
-    padding: 140px 60px 120px 180px;
+    padding: 140px 120px 120px 120px;
   }
 
   &,

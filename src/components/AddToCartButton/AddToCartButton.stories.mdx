@@ -2,6 +2,10 @@ import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import { withKnobs } from '@storybook/addon-knobs';
 import { text } from '@storybook/addon-knobs';
 import { State } from '~.storybook/State';
+import { AddToCartContextProvider } from '~/contexts/AddToCart.context';
+import { VariantSelectContextProvider } from '~/contexts/VariantSelect.context';
+import useAddToCart from '~/customHooks/useAddToCart';
+import useVariantSelect from '~/customHooks/useVariantSelect';
 import AddToCartButton from './AddToCartButton';
 import AddToCartButtonFixture from './AddToCartButton.fixture';
 
@@ -15,37 +19,14 @@ import AddToCartButtonFixture from './AddToCartButton.fixture';
 
 <Preview>
   <Story name="Base component">
-    <State
-      initialState={{
-        isFetching: false,
-        isUpdateSuccessful: false,
-      }}
-     >
-      {(state, setState) => {
-        return (
-          <AddToCartButton
-            dataTestRef="ADD_TO_CART_SMALL_CTA"
-            isLoading={state.isFetching}
-            isUpdateSuccessful={state.isUpdateSuccessful}
-            onClick={() => {
-              setState({
-                ...state,
-                isFetching: true,
-              });
-              window.setTimeout(function mockNetworkRequest() {
-                setState({
-                  ...state,
-                  isFetching: false,
-                  isUpdateSuccessful: true,
-                });
-              }, 2000);
-            }}
-            price="$625.00"
-            productName="Product"
-          />
-        )
-      }}
-    </State>
+    <AddToCartContextProvider value={useAddToCart()}>
+      <VariantSelectContextProvider value={useVariantSelect()}>
+        <AddToCartButton
+          dataTestRef="ADD_TO_CART_SMALL_CTA"
+          productName="Product"
+        />
+      </VariantSelectContextProvider>
+    </AddToCartContextProvider>
   </Story>
 </Preview>
 

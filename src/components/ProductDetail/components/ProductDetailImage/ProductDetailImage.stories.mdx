@@ -1,6 +1,8 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import { withKnobs } from '@storybook/addon-knobs';
 import { text } from '@storybook/addon-knobs';
+import { VariantSelectContextProvider } from '~/contexts/VariantSelect.context';
+import useVariantSelect from '~/customHooks/useVariantSelect';
 import ProductDetailImage from './ProductDetailImage';
 import ProductDetailImageFixture from './ProductDetailImage.fixture';
 
@@ -14,7 +16,16 @@ import ProductDetailImageFixture from './ProductDetailImage.fixture';
 
 <Preview>
   <Story name="Base component">
-    <ProductDetailImage image={ProductDetailImageFixture.image} />
+    <VariantSelectContextProvider value={useVariantSelect()}>
+      <ProductDetailImage
+        className={ProductDetailImageFixture.className}
+        id={ProductDetailImageFixture.id}
+        onVariantChange={ProductDetailImageFixture.onVariantChange}
+        selectedOption={ProductDetailImageFixture.selectedOption}
+        theme={ProductDetailImageFixture.theme}
+        variantOptions={ProductDetailImageFixture.variantOptions}
+      />
+    </VariantSelectContextProvider>
   </Story>
 </Preview>
 

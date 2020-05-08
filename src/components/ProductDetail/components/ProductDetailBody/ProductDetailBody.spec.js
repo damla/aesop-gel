@@ -13,7 +13,19 @@ describe('<ProductDetailBody />', () => {
   });
 
   it('renders base component correctly', () => {
-    const tree = renderer.create(<ProductDetailBody />).toJSON();
+    const tree = renderer
+      .create(
+        <ProductDetailBody
+          className={ProductDetailBodyFixture.className}
+          copy={ProductDetailBodyFixture.copy}
+          definitionList={ProductDetailBodyFixture.definitionList}
+          ingredients={ProductDetailBodyFixture.ingredients}
+          keyIngredient={ProductDetailBodyFixture.keyIngredient}
+          productName={ProductDetailBodyFixture.productName}
+          theme={ProductDetailBodyFixture.theme}
+        />,
+      )
+      .toJSON();
 
     expect(tree).toMatchSnapshot();
   });

@@ -13,7 +13,17 @@ describe('<ProductDetailHeader />', () => {
   });
 
   it('renders base component correctly', () => {
-    const tree = renderer.create(<ProductDetailHeader />).toJSON();
+    const tree = renderer
+      .create(
+        <ProductDetailHeader
+          className={ProductDetailHeaderFixture.className}
+          description={ProductDetailHeaderFixture.description}
+          id={ProductDetailHeaderFixture.id}
+          productName={ProductDetailHeaderFixture.productName}
+          theme={ProductDetailHeaderFixture.theme}
+        />,
+      )
+      .toJSON();
 
     expect(tree).toMatchSnapshot();
   });

@@ -1,10 +1,15 @@
-import React from 'react';
+import { createContext, useContext } from 'react';
 
-const VariantSelectContext = React.createContext({
+const defaultValues = {
   onVariantChange: () => {},
-  selectedVariant: undefined,
-  setSelectedVariant: undefined,
-  value: undefined,
-});
+  selectedVariant: {},
+  setSelectedVariant: () => {},
+};
+
+const VariantSelectContext = createContext(defaultValues);
+
+export const VariantSelectContextProvider = VariantSelectContext.Provider;
+
+export const useVariantSelectContext = () => useContext(VariantSelectContext);
 
 export default VariantSelectContext;

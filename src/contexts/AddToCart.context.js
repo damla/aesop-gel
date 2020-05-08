@@ -1,9 +1,15 @@
-import React from 'react';
+import { createContext, useContext } from 'react';
 
-const AddToCartContext = React.createContext({
+const defaultValues = {
   handleOnClick: () => {},
   isLoading: false,
   isUpdateSuccessful: false,
-});
+};
+
+const AddToCartContext = createContext(defaultValues);
+
+export const AddToCartContextProvider = AddToCartContext.Provider;
+
+export const useAddToCartContext = () => useContext(AddToCartContext);
 
 export default AddToCartContext;

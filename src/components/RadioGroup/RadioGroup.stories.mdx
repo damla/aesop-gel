@@ -31,16 +31,7 @@ import RadioGroupFixture from './RadioGroup.fixture';
               } = event;
               setState({...state, value})
             }}
-            options={object('options', [
-              {
-                value: 'morbi-id-nulla',
-                label: 'Morbi id nulla',
-              },
-              {
-                value: 'nullam-ultrices',
-                label: 'Nullam ultrices',
-              },
-            ])}
+            options={object('options', RadioGroupFixture.options)}
             testReference={text('name', 'radioGroup')}
             value={state.value}
           />

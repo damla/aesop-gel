@@ -1,33 +1,27 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'lodash/get';
-import VariantSelectContext from '~/contexts/VariantSelect.context';
+import { useVariantSelectContext } from '~/contexts/VariantSelect.context';
 import Image from '~/components/Image';
 import RadioGroup from '~/components/RadioGroup';
 import Transition from '~/components/Transition';
 import styles from './ProductDetailImage.module.css';
 
-const ProductDetailImage = ({
-  className,
-  id,
-  image,
-  theme,
-  variantOptions,
-}) => {
-  const { onVariantChange, selectedVariant, setSelectedVariant } = useContext(
-    VariantSelectContext,
-  );
+const ProductDetailImage = ({ className, id, theme, variantOptions }) => {
+  const {
+    onVariantChange,
+    selectedVariant,
+    setSelectedVariant,
+  } = useVariantSelectContext();
 
   useEffect(() => {
     setSelectedVariant(variantOptions[0]);
   }, [variantOptions, setSelectedVariant]);
 
-  if (!image || !selectedVariant) {
+  if (!selectedVariant || !selectedVariant.image) {
     return null;
   }
-
-  console.log('selectedVariant', selectedVariant);
 
   const classSet = cx(styles.base, styles[theme], className);
 
@@ -64,21 +58,22 @@ const ProductDetailImage = ({
 ProductDetailImage.propTypes = {
   className: PropTypes.string,
   id: PropTypes.string,
-  image: PropTypes.shape({
-    altText: PropTypes.string.isRequired,
-    sizes: PropTypes.shape({
-      large: PropTypes.string,
-      medium: PropTypes.string,
-      small: PropTypes.string,
-    }).isRequired,
-  }),
   onVariantChange: PropTypes.func.isRequired,
   selectedOption: PropTypes.string.isRequired,
   theme: PropTypes.oneOf(['dark', 'light']),
   variantOptions: PropTypes.arrayOf(
     PropTypes.shape({
+      image: PropTypes.shape({
+        altText: PropTypes.string.isRequired,
+        sizes: PropTypes.shape({
+          large: PropTypes.string,
+          medium: PropTypes.string,
+          small: PropTypes.string,
+        }).isRequired,
+      }),
       sku: PropTypes.string.isRequired,
       size: PropTypes.string.isRequired,
+      price: PropTypes.string,
     }),
   ),
 };
@@ -86,7 +81,6 @@ ProductDetailImage.propTypes = {
 ProductDetailImage.defaultProps = {
   className: undefined,
   id: undefined,
-  image: {},
   onVariantChange: undefined,
   selectedOption: undefined,
   theme: 'dark',
