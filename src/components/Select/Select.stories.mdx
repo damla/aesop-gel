@@ -1,0 +1,47 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs } from '@storybook/addon-knobs';
+import { object, select, text } from '@storybook/addon-knobs';
+import { State } from '~.storybook/State';
+import Select from './Select';
+import SelectFixture from './Select.fixture';
+
+<Meta title="Components/Select" component={Select} decorators={[withKnobs]} />
+
+# Select
+
+<Preview>
+  <Story name="Base component">
+    <State
+     initialState={{
+       value: '',
+     }}
+    >
+     {(state, setState) => {
+       return (
+         <Select
+           label={text('label', SelectFixture.label)}
+           name={text('name', SelectFixture.name)}
+           onChange={(event) => {
+             event.persist();
+             setState({...state, value: event.target.value})
+           }}
+           options={object('options', SelectFixture.options)}
+           testReference={text('name', SelectFixture.testReference)}
+           theme={select('theme', ['dark', 'light'], SelectFixture.theme)}
+           value={state.value}
+         />
+       )
+     }}
+    </State>
+  </Story>
+</Preview>
+
+## API
+
+<Props of={Select} />
+
+## Usage Example
+
+```
+<Select />
+```

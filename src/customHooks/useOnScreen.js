@@ -33,7 +33,7 @@ export const useOnScreen = (ref, threshold = 0, rootMargin = '0px') => {
       observer.observe(currentRef);
     }
 
-    return () => {
+    return function cleanUp() {
       if (hasIntersectionObserver) {
         observer.unobserve(currentRef);
       }
