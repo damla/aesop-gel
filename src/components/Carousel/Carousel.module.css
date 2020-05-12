@@ -1,17 +1,7 @@
 @import 'styles/index';
 
 .base {
-  padding-top: 60px;
-  padding-bottom: 130px;
-
-  @media (--viewport-md) {
-    padding-top: 130px;
-  }
-
-  @media (--viewport-lg) {
-    padding-top: 100px;
-    padding-bottom: 60px;
-  }
+  padding: 0;
 }
 
 .slideWrapper {

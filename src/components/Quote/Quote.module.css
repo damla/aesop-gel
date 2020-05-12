@@ -3,14 +3,14 @@
 .base {
   display: flex;
   align-items: center;
-  padding: 60px var(--layout-sm-spacing);
+  padding: 0 var(--layout-sm-spacing);
 
   @media (--viewport-md) {
-    padding: 100px var(--layout-md-spacing);
+    padding: 0 var(--layout-md-spacing);
   }
 
   @media (--viewport-lg) {
-    padding: 160px var(--layout-lg-spacing);
+    padding: 0 var(--layout-lg-spacing);
   }
 }
 
@@ -20,10 +20,6 @@
 
 .light {
   @extend %font-theme-light-copy;
-}
-
-.noTopPadding {
-  padding-top: 0;
 }
 
 .wrapper {
@@ -41,7 +37,7 @@
 
 .blockquote {
   padding: 0;
-  margin: rem(20px) 0;
+  margin: 20px 0;
   font-family: var(--font-family-zapf-serif);
   font-size: rem(27px);
   font-weight: var(--font-weight-normal);

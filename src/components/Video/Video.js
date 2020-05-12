@@ -120,7 +120,7 @@ export const Video = forwardRef(
     }
 
     return (
-      <figure className={classSet} id={id} ref={ref} role="group">
+      <div className={classSet} id={id} ref={ref} role="group">
         <VideoPlayer
           hasActiveVideo={hasActiveVideo}
           hasAllowAudio={hasAllowAudio}
@@ -168,7 +168,7 @@ export const Video = forwardRef(
             progress={progress}
           />
         )}
-      </figure>
+      </div>
     );
   },
 );

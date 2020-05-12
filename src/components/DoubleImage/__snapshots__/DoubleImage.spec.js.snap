@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<DefinitionList /> renders base component correctly 1`] = `
-<section
+<div
   className="base dark"
 >
   <figure
@@ -68,5 +68,5 @@ exports[`<DefinitionList /> renders base component correctly 1`] = `
       </div>
     </figcaption>
   </figure>
-</section>
+</div>
 `;

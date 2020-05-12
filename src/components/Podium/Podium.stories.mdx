@@ -1,0 +1,41 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs } from '@storybook/addon-knobs';
+import { select, text } from '@storybook/addon-knobs';
+import CarouselFixture from '~/components/Carousel/Carousel.fixture';
+import Carousel from '~/components/Carousel';
+import Podium from './Podium';
+import PodiumFixture from './Podium.fixture';
+
+<Meta title="Components/Podium" component={Podium} decorators={[withKnobs]} />
+
+# Podium
+
+Presented with both `paddingTop` and `paddingBottom` set to `small`.
+
+<Preview>
+  <Story name="Base component">
+    <div style={{ border: '1px solid #333', margin: '20px'}}>
+      <Podium
+        paddingTop={select(
+          'paddingTop',
+          ['none', 'small', 'medium', 'large'],
+          'small',
+        )}
+        paddingBottom={select(
+          'paddingBottom',
+          ['none', 'small', 'medium', 'large'],
+          'small',
+        )}
+      >
+        <Carousel
+          introduction={CarouselFixture.introduction}
+          slides={CarouselFixture.slides}
+        />
+      </Podium>
+    </div>
+  </Story>
+</Preview>
+
+## API
+
+<Props of={Podium} />

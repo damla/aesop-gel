@@ -5,7 +5,6 @@ export default {
   className: 'TwoColumnLayout',
   content: <div>content</div>,
   hasRightPadding: true,
-  hasVerticalPadding: false,
   id: 'TwoColumnLayout',
   isReversed: true,
   sidebar: <div>sidebar</div>,

@@ -54,7 +54,7 @@ Transition.propTypes = {
     'slideRight',
     'slowFade',
     'zoom',
-  ]).isRequired,
+  ]),
 };
 
 Transition.defaultProps = {
@@ -63,7 +63,7 @@ Transition.defaultProps = {
   hasCSSTransitionUnmountOnExit: undefined,
   isActive: false,
   isActiveOnMount: false,
-  type: undefined,
+  type: 'fade',
 };
 
 export default Transition;

@@ -1,0 +1,23 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs } from '@storybook/addon-knobs';
+import { text, select } from '@storybook/addon-knobs';
+import Quote from './Quote';
+import QuoteFixture from './Quote.fixture';
+
+<Meta title="Components/Quote" component={Quote} decorators={[withKnobs]} />
+
+# Quote
+
+<Preview>
+  <Story name="Base component">
+    <Quote
+      author={text('author', QuoteFixture.author)}
+      content={text('children', QuoteFixture.content)}
+      theme={select('theme', ['dark', 'light'], 'dark')}
+    />
+  </Story>
+</Preview>
+
+## API
+
+<Props of={Quote} />

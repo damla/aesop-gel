@@ -119,7 +119,7 @@ const Carousel = forwardRef(
     };
 
     return (
-      <section className={classSet} ref={ref}>
+      <div className={classSet} ref={ref}>
         {!hasIntroSlide && introduction && (
           <aside className={styles.mobileCarouselIntroductionWrapper}>
             <CarouselIntroduction
@@ -177,7 +177,7 @@ const Carousel = forwardRef(
             )}
           </footer>
         )}
-      </section>
+      </div>
     );
   },
 );

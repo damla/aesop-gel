@@ -48,12 +48,31 @@
 }
 
 :global {
+  .sbdocs-content {
+    max-width: 1300px !important;
+  }
+}
+
+/*
+
+:global {
+  .sidebar-header {
+    max-width: 200px;
+  }
+
+  #storybook-panel-root,
+  .sidebar-container,
+  .simplebar-content-wrapper {
+    font-family: 'Suisse Regular', sans-serif;
+  }
+
   .sidebar-header a img {
     max-width: 180px;
     height: auto;
   }
 
   .sbdocs-wrapper {
+    max-width: 1400px;
     min-height: 100vh;
     background-color: #fff;
   }
@@ -113,3 +132,5 @@
     word-wrap: break-word;
   }
 }
+
+*/

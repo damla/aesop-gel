@@ -18,7 +18,7 @@
 
 .input {
   input {
-    padding-right: rem(24px);
+    padding-right: 24px;
   }
 }
 
@@ -34,7 +34,7 @@
 
 .submitButton {
   position: absolute;
-  top: rem(26px);
+  top: 26px;
   right: 0;
   min-width: inherit;
   padding: 0;
