@@ -1,7 +1,10 @@
 const path = require('path');
 
 module.exports = {
-  stories: ['../src/**/*.stories.(js|mdx)', 'README.mdx'],
+  stories: [
+    '../src/**/*.stories.(js|mdx)',
+    '../documentation/**/*.stories.mdx',
+  ],
   addons: [
     '@storybook/addon-knobs/register',
     '@storybook/addon-actions/register',

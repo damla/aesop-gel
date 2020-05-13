@@ -13,7 +13,16 @@ describe('<Podium />', () => {
   });
 
   it('renders base component correctly', () => {
-    const tree = renderer.create(<Podium />).toJSON();
+    const tree = renderer
+      .create(
+        <Podium
+          paddingBottom={PodiumFixture.paddingBottom}
+          paddingTop={PodiumFixture.paddingTop}
+        >
+          Content
+        </Podium>,
+      )
+      .toJSON();
 
     expect(tree).toMatchSnapshot();
   });

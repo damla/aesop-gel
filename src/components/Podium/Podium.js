@@ -1,17 +1,13 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import Transition from '~/components/Transition';
 import styles from './Podium.module.css';
 
-const Podium = ({
-  children,
-  className,
-  isActive,
-  paddingTop,
-  paddingBottom,
-  transition,
-}) => {
+const Podium = forwardRef(function PodiumRef(
+  { children, className, isActive, paddingTop, paddingBottom, transition },
+  ref,
+) {
   const classSet = cx(
     styles.base,
     styles[`${paddingTop}PaddingTop`],
@@ -21,10 +17,12 @@ const Podium = ({
 
   return (
     <Transition isActive={isActive} type={transition}>
-      <section className={classSet}>{children}</section>
+      <section className={classSet} ref={ref}>
+        {children}
+      </section>
     </Transition>
   );
-};
+});
 
 Podium.propTypes = {
   children: PropTypes.node,
