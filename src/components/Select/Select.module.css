@@ -1,0 +1,58 @@
+@import 'styles/index';
+@import 'styles/controls.module';
+
+.base {
+  position: relative;
+  display: block;
+
+  &,
+  & * {
+    box-sizing: border-box;
+  }
+}
+
+.input {
+  @extend %user-input, %gets-user-input;
+
+  cursor: pointer;
+
+  .dark & {
+    color: var(--color-dark-copy);
+  }
+
+  .light & {
+    color: var(--color-light-copy);
+  }
+}
+
+.isBlock {
+  padding: 20px 50px 20px 20px;
+  border-width: 1px;
+  font-size: rem(16px);
+  -webkit-padding-end: 50px;
+  -webkit-padding-start: 20px;
+}
+
+.icon {
+  position: absolute;
+  right: 22px;
+  bottom: calc(50% - 9px);
+  pointer-events: none;
+}
+
+.label {
+  @extend %gets-user-input-label;
+
+  .dark & {
+    color: var(--color-dark-label);
+  }
+
+  .light & {
+    color: var(--color-light-label);
+  }
+
+  .hasFocus & {
+    font-size: rem(14px);
+    transform: translateY(0);
+  }
+}
