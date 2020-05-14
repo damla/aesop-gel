@@ -103,15 +103,15 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
                   >
                     <source
                       media="(min-width: 1025px)"
-                      srcSet="/assets/images/ImageCarousel/image-three-large.jpg"
+                      srcSet="assets/images/ImageCarousel/image-three-large.jpg"
                     />
                     <source
                       media="(min-width: 640px)"
-                      srcSet="/assets/images/ImageCarousel/image-three-medium.jpg"
+                      srcSet="assets/images/ImageCarousel/image-three-medium.jpg"
                     />
                     <source
                       media="(min-width: 0px)"
-                      srcSet="/assets/images/ImageCarousel/image-three-small.jpg"
+                      srcSet="assets/images/ImageCarousel/image-three-small.jpg"
                     />
                     <img
                       alt="Image Three AltText"
@@ -157,15 +157,15 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
                   >
                     <source
                       media="(min-width: 1025px)"
-                      srcSet="/assets/images/ImageCarousel/image-two-large.jpg"
+                      srcSet="assets/images/ImageCarousel/image-two-large.jpg"
                     />
                     <source
                       media="(min-width: 640px)"
-                      srcSet="/assets/images/ImageCarousel/image-two-medium.jpg"
+                      srcSet="assets/images/ImageCarousel/image-two-medium.jpg"
                     />
                     <source
                       media="(min-width: 0px)"
-                      srcSet="/assets/images/ImageCarousel/image-two-small.jpg"
+                      srcSet="assets/images/ImageCarousel/image-two-small.jpg"
                     />
                     <img
                       alt="Image Two AltText"
@@ -211,15 +211,15 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
                   >
                     <source
                       media="(min-width: 1025px)"
-                      srcSet="/assets/images/ImageCarousel/image-three-large.jpg"
+                      srcSet="assets/images/ImageCarousel/image-three-large.jpg"
                     />
                     <source
                       media="(min-width: 640px)"
-                      srcSet="/assets/images/ImageCarousel/image-three-medium.jpg"
+                      srcSet="assets/images/ImageCarousel/image-three-medium.jpg"
                     />
                     <source
                       media="(min-width: 0px)"
-                      srcSet="/assets/images/ImageCarousel/image-three-small.jpg"
+                      srcSet="assets/images/ImageCarousel/image-three-small.jpg"
                     />
                     <img
                       alt="Image Three AltText"
@@ -264,15 +264,15 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
                   >
                     <source
                       media="(min-width: 1025px)"
-                      srcSet="/assets/images/ImageCarousel/image-two-large.jpg"
+                      srcSet="assets/images/ImageCarousel/image-two-large.jpg"
                     />
                     <source
                       media="(min-width: 640px)"
-                      srcSet="/assets/images/ImageCarousel/image-two-medium.jpg"
+                      srcSet="assets/images/ImageCarousel/image-two-medium.jpg"
                     />
                     <source
                       media="(min-width: 0px)"
-                      srcSet="/assets/images/ImageCarousel/image-two-small.jpg"
+                      srcSet="assets/images/ImageCarousel/image-two-small.jpg"
                     />
                     <img
                       alt="Image Two AltText"
@@ -317,15 +317,15 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
                   >
                     <source
                       media="(min-width: 1025px)"
-                      srcSet="/assets/images/ImageCarousel/image-three-large.jpg"
+                      srcSet="assets/images/ImageCarousel/image-three-large.jpg"
                     />
                     <source
                       media="(min-width: 640px)"
-                      srcSet="/assets/images/ImageCarousel/image-three-medium.jpg"
+                      srcSet="assets/images/ImageCarousel/image-three-medium.jpg"
                     />
                     <source
                       media="(min-width: 0px)"
-                      srcSet="/assets/images/ImageCarousel/image-three-small.jpg"
+                      srcSet="assets/images/ImageCarousel/image-three-small.jpg"
                     />
                     <img
                       alt="Image Three AltText"

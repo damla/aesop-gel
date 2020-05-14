@@ -62,7 +62,6 @@ module.exports = {
     config.module.rules.push({
       test: /\.(ttf|eot|woff|woff2)$/,
       loader: 'file-loader',
-      include: path.resolve(__dirname, '../.storybook/fonts/'),
     });
 
     // Return the altered config
