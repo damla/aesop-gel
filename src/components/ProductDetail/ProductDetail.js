@@ -46,7 +46,7 @@ const ProductDetail = ({ breadcrumbs, className, theme }) => {
 };
 
 ProductDetail.propTypes = {
-  breadcrumbs: PropTypes.arrayOf(PropTypes.object),
+  breadcrumbs: PropTypes.object,
   className: PropTypes.string,
   theme: PropTypes.oneOf(['dark', 'light']),
 };

@@ -58,8 +58,6 @@ const ProductDetailImage = ({ className, id, theme, variantOptions }) => {
 ProductDetailImage.propTypes = {
   className: PropTypes.string,
   id: PropTypes.string,
-  onVariantChange: PropTypes.func.isRequired,
-  selectedOption: PropTypes.string.isRequired,
   theme: PropTypes.oneOf(['dark', 'light']),
   variantOptions: PropTypes.arrayOf(
     PropTypes.shape({
@@ -81,8 +79,6 @@ ProductDetailImage.propTypes = {
 ProductDetailImage.defaultProps = {
   className: undefined,
   id: undefined,
-  onVariantChange: undefined,
-  selectedOption: undefined,
   theme: 'dark',
   variantOptions: [
     {

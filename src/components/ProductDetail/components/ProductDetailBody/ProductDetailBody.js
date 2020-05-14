@@ -107,11 +107,11 @@ ProductDetailBody.propTypes = {
   className: PropTypes.string,
   copy: PropTypes.shape({
     cart: PropTypes.string,
-    ingredients: {
+    ingredients: PropTypes.shape({
       heading: PropTypes.string,
       label: PropTypes.string,
       title: PropTypes.string,
-    },
+    }),
   }),
   definitionList: PropTypes.arrayOf(
     PropTypes.shape({
@@ -121,9 +121,7 @@ ProductDetailBody.propTypes = {
   ),
   ingredients: PropTypes.string,
   keyIngredient: PropTypes.string,
-  price: PropTypes.string,
   productName: PropTypes.string,
-  sku: PropTypes.string,
   theme: PropTypes.oneOf(['dark', 'light']),
 };
 
@@ -141,9 +139,7 @@ ProductDetailBody.defaultProps = {
   definitionList: [],
   ingredients: undefined,
   keyIngredient: undefined,
-  price: undefined,
   productName: undefined,
-  sku: undefined,
   theme: 'dark',
 };
 
