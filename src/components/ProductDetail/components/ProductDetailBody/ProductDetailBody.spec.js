@@ -1,0 +1,32 @@
+import React from 'react';
+import { configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+import renderer from 'react-test-renderer';
+import ProductDetailBody from './ProductDetailBody';
+import ProductDetailBodyFixture from './ProductDetailBody.fixture';
+
+configure({ adapter: new Adapter() });
+
+describe('<ProductDetailBody />', () => {
+  it('should be defined', () => {
+    expect(ProductDetailBody).toBeDefined();
+  });
+
+  it('renders base component correctly', () => {
+    const tree = renderer
+      .create(
+        <ProductDetailBody
+          className={ProductDetailBodyFixture.className}
+          copy={ProductDetailBodyFixture.copy}
+          definitionList={ProductDetailBodyFixture.definitionList}
+          ingredients={ProductDetailBodyFixture.ingredients}
+          keyIngredient={ProductDetailBodyFixture.keyIngredient}
+          productName={ProductDetailBodyFixture.productName}
+          theme={ProductDetailBodyFixture.theme}
+        />,
+      )
+      .toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+});

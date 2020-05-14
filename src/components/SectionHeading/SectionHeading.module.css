@@ -8,7 +8,7 @@
   margin: 0 0 15px;
 }
 
-.pageHeading {
+.offsetPageHeading {
   @media (--viewport-md) {
     margin-left: 33%;
   }
