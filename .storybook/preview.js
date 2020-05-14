@@ -4,7 +4,8 @@ import { withKnobs } from '@storybook/addon-knobs';
 
 addParameters({
   backgrounds: [
-    { name: 'light', value: '#fffef0', default: true },
+    { name: 'white', value: '#fff', default: true },
+    { name: 'alabaster', value: '#fffef0' },
     { name: 'dark', value: '#333' },
   ],
 });

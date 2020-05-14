@@ -3,11 +3,7 @@ import { withKnobs } from '@storybook/addon-knobs';
 import { text, select } from '@storybook/addon-knobs';
 import Accordion from './Accordion';
 
-<Meta
-  title="Components/Accordion"
-  component={Accordion}
-  decorators={[withKnobs]}
-/>
+<Meta title="Components/Accordion" component={Accordion} />
 
 # Accordion
 
@@ -57,19 +53,3 @@ import Accordion from './Accordion';
 ## API
 
 <Props of={Accordion} />
-
-## Usage Example
-
-```
-<Accordion
-  items={[
-    {
-      id: '...',
-      heading: '...',
-      content: '...',
-    },
-    ...
-  ]}
-/>
-
-```

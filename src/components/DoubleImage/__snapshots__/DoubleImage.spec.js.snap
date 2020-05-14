@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<DefinitionList /> renders base component correctly 1`] = `
-<section
+<div
   className="base dark"
 >
   <figure
@@ -12,15 +12,15 @@ exports[`<DefinitionList /> renders base component correctly 1`] = `
     >
       <source
         media="(min-width: 1025px)"
-        srcSet="/assets/images/DoubleImage/image-one-large.jpg"
+        srcSet="./assets/images/DoubleImage/image-one-large.jpg"
       />
       <source
         media="(min-width: 640px)"
-        srcSet="/assets/images/DoubleImage/image-one-medium.jpg"
+        srcSet="./assets/images/DoubleImage/image-one-medium.jpg"
       />
       <source
         media="(min-width: 0px)"
-        srcSet="/assets/images/DoubleImage/image-one-small.jpg"
+        srcSet="./assets/images/DoubleImage/image-one-small.jpg"
       />
       <img
         alt="A tactile approach infuses our work, from our product development to our retail service and visual merchandising."
@@ -44,15 +44,15 @@ exports[`<DefinitionList /> renders base component correctly 1`] = `
     >
       <source
         media="(min-width: 1025px)"
-        srcSet="/assets/images/DoubleImage/image-two-large.jpg"
+        srcSet="./assets/images/DoubleImage/image-two-large.jpg"
       />
       <source
         media="(min-width: 640px)"
-        srcSet="/assets/images/DoubleImage/image-two-medium.jpg"
+        srcSet="./assets/images/DoubleImage/image-two-medium.jpg"
       />
       <source
         media="(min-width: 0px)"
-        srcSet="/assets/images/DoubleImage/image-two-small.jpg"
+        srcSet="./assets/images/DoubleImage/image-two-small.jpg"
       />
       <img
         alt="Image of: Our passion for creativity in form and function, extends to the setting of a meal among staff."
@@ -68,5 +68,5 @@ exports[`<DefinitionList /> renders base component correctly 1`] = `
       </div>
     </figcaption>
   </figure>
-</section>
+</div>
 `;

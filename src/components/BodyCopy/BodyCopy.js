@@ -39,7 +39,7 @@ const BodyCopy = ({
 
       {copy && <div className={cx(styles.copy, styles[theme])}>{copy}</div>}
 
-      <LinkButtonGroup link={cta} secondaryLink={secondaryCta} />
+      <LinkButtonGroup link={cta} secondaryLink={secondaryCta} theme={theme} />
     </article>
   );
 };

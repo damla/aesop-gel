@@ -1,115 +1,54 @@
 @font-face {
   font-family: 'Portrait Web';
   src:
-    url('/assets/fonts/Portrait/Portrait-Regular-Web.woff2') format('woff2'),
-    url('/assets/fonts/Portrait/Portrait-Regular-Web.woff') format('woff'),
-    url('/assets/fonts/Portrait/Portrait-Regular-Web.eot');
+    url('/aesop-gel/assets/fonts/Portrait/Portrait-Regular-Web.woff2') format('woff2'),
+    url('/aesop-gel/assets/fonts/Portrait/Portrait-Regular-Web.woff') format('woff'),
+    url('/aesop-gel/assets/fonts/Portrait/Portrait-Regular-Web.eot');
 }
 
 @font-face {
   font-family: 'Suisse Regular';
   src:
-    url('/assets/fonts/Suisse/SuisseIntl-Regular-WebS.woff2') format('woff2'),
-    url('/assets/fonts/Suisse/SuisseIntl-Regular-WebS.woff') format('woff'),
-    url('/assets/fonts/Suisse/SuisseIntl-Regular-WebS.ttf') format('truetype');
+    url('/aesop-gel/assets/fonts/Suisse/SuisseIntl-Regular-WebS.woff2') format('woff2'),
+    url('/aesop-gel/assets/fonts/Suisse/SuisseIntl-Regular-WebS.woff') format('woff'),
+    url('/aesop-gel/assets/fonts/Suisse/SuisseIntl-Regular-WebS.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Suisse Medium';
   src:
-    url('/assets/fonts/Suisse/SuisseIntl-Medium-WebS.woff2') format('woff2'),
-    url('/assets/fonts/Suisse/SuisseIntl-Medium-WebS.woff') format('woff'),
-    url('/assets/fonts/Suisse/SuisseIntl-Medium-WebS.ttf') format('truetype');
+    url('/aesop-gel/assets/fonts/Suisse/SuisseIntl-Medium-WebS.woff2') format('woff2'),
+    url('/aesop-gel/assets/fonts/Suisse/SuisseIntl-Medium-WebS.woff') format('woff'),
+    url('/aesop-gel/assets/fonts/Suisse/SuisseIntl-Medium-WebS.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Suisse SemiBold';
   src:
-    url('/assets/fonts/Suisse/SuisseIntl-SemiBold-WebS.woff2')
+    url('/aesop-gel/assets/fonts/Suisse/SuisseIntl-SemiBold-WebS.woff2')
     format('woff2'),
-    url('/assets/fonts/Suisse/SuisseIntl-SemiBold-WebS.woff') format('woff'),
-    url('/assets/fonts/Suisse/SuisseIntl-SemiBold-WebS.ttf') format('truetype');
+    url('/aesop-gel/assets/fonts/Suisse/SuisseIntl-SemiBold-WebS.woff') format('woff'),
+    url('/aesop-gel/assets/fonts/Suisse/SuisseIntl-SemiBold-WebS.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Zapf Humanist';
   src:
-    url('/assets/fonts/Zapf/324B1A_0_0.woff2') format('woff2'),
-    url('/assets/fonts/Zapf/324B1A_0_0.woff') format('woff'),
-    url('/assets/fonts/Zapf/324B1A_0_0.ttf') format('truetype');
+    url('/aesop-gel/assets/fonts/Zapf/324B1A_0_0.woff2') format('woff2'),
+    url('/aesop-gel/assets/fonts/Zapf/324B1A_0_0.woff') format('woff'),
+    url('/aesop-gel/assets/fonts/Zapf/324B1A_0_0.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Canela Light';
   src:
-    url('/assets/fonts/Canela/Canela-Light-Web.woff2') format('woff2'),
-    url('/assets/fonts/Canela/Canela-Light-Web.woff') format('woff'),
-    url('/assets/fonts/Canela/Canela-Light-Web.eot');
+    url('/aesop-gel/assets/fonts/Canela/Canela-Light-Web.woff2') format('woff2'),
+    url('/aesop-gel/assets/fonts/Canela/Canela-Light-Web.woff') format('woff'),
+    url('/aesop-gel/assets/fonts/Canela/Canela-Light-Web.eot');
 }
 
 :global {
-  .sidebar-header a img {
-    max-width: 180px;
-    height: auto;
-  }
-
-  .sbdocs-wrapper {
-    min-height: 100vh;
-    background-color: #fff;
-  }
-
-  .sb-show-main {
-    margin: 0;
-  }
-
   .sbdocs-content {
-    max-width: 1600px !important;
-  }
-
-  #story-root {
-    margin: 15px 40px;
-  }
-
-  [scale='1'] {
-    transform: none !important;
-  }
-
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-
-  td,
-  th {
-    padding: 0.5rem;
-    border: 1px solid #999;
-    text-align: left;
-  }
-
-  pre {
-    padding: rem(12px);
-    border: 1px solid #efefef;
-    background-color: #fff;
-    border-radius: 3px;
-    color: #888;
-    font-family:
-      Consolas,
-      'Andale Mono WT',
-      'Andale Mono',
-      'Lucida Console',
-      'Lucida Sans Typewriter',
-      'DejaVu Sans Mono',
-      'Bitstream Vera Sans Mono',
-      'Liberation Mono',
-      'Nimbus Mono L',
-      Monaco,
-      'Courier New',
-      Courier,
-      monospace;
-    font-size: rem(15px);
-    line-height: 1.4;
-    overflow-x: auto;
-    text-align: justify;
-    word-wrap: break-word;
+    max-width: 1300px !important;
   }
 }

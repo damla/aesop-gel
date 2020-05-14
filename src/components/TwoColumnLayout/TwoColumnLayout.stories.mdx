@@ -35,7 +35,6 @@ import TwoColumnLayout from './TwoColumnLayout';
         </>
       }
       hasRightPadding={boolean('hasRightPadding', true)}
-      hasVerticalPadding={boolean('hasVerticalPadding', true)}
       id={text('id', 'TwoColumn-id')}
       isReversed={boolean('isReversed', true)}
       sidebar={
@@ -64,17 +63,3 @@ import TwoColumnLayout from './TwoColumnLayout';
 ## API
 
 <Props of={TwoColumnLayout} />
-
-## Usage Example
-
-```
-<TwoColumnLayout
-  childrenClassNames={{ sidebar: '...', content: '...' }}
-  content={</>}
-  hasRightPadding={true}
-  hasVerticalPadding={true}
-  id="TwoColumn-id"
-  isReversed={true}
-  sidebar={</>}
-/>
-```

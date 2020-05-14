@@ -39,21 +39,21 @@ export default {
     },
     hero: {
       altText: 'alt image',
-      large: '/assets/images/MediaWithContent/hero-large.jpg',
-      medium: '/assets/images/MediaWithContent/hero-medium.jpg',
-      small: '/assets/images/MediaWithContent/hero-small.jpg',
+      large: './assets/images/MediaWithContent/hero-large.jpg',
+      medium: './assets/images/MediaWithContent/hero-medium.jpg',
+      small: './assets/images/MediaWithContent/hero-small.jpg',
     },
     foreground: {
       altText: 'alt image',
-      large: '/assets/images/MediaWithContent/foreground-large.jpg',
-      medium: '/assets/images/MediaWithContent/foreground-large.jpg',
-      small: '/assets/images/MediaWithContent/foreground-large.jpg',
+      large: './assets/images/MediaWithContent/foreground-large.jpg',
+      medium: './assets/images/MediaWithContent/foreground-large.jpg',
+      small: './assets/images/MediaWithContent/foreground-large.jpg',
     },
     background: {
       altText: 'alt image',
-      large: '/assets/images/MediaWithContent/background-large.jpg',
-      medium: '/assets/images/MediaWithContent/background-large.jpg',
-      small: '/assets/images/MediaWithContent/background-large.jpg',
+      large: './assets/images/MediaWithContent/background-large.jpg',
+      medium: './assets/images/MediaWithContent/background-large.jpg',
+      small: './assets/images/MediaWithContent/background-large.jpg',
     },
     expectations: {
       altText: 'alt image',
@@ -163,9 +163,9 @@ export default {
       copy: {
         altText: 'How to Use Video for Tea Tree Leaf Facial Exfoliant',
       },
-      large: '/assets/images/MediaWithContent/video-poster.png',
-      medium: '/assets/images/MediaWithContent/video-poster.png',
-      small: '/assets/images/MediaWithContent/video-poster.png',
+      large: './assets/images/MediaWithContent/video-poster.png',
+      medium: './assets/images/MediaWithContent/video-poster.png',
+      small: './assets/images/MediaWithContent/video-poster.png',
     },
     source:
       'https://player.vimeo.com/external/225136214.hd.mp4?s=a01cd8b47f35767394e48dc01af10510ef8ff4dd&profile_id=174',

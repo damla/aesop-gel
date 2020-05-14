@@ -1,8 +1,8 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import { withKnobs } from '@storybook/addon-knobs';
-import { text, boolean } from '@storybook/addon-knobs';
+import { text, boolean, select } from '@storybook/addon-knobs';
 import '~.storybook/storybook.module.css';
-import DefinitionList from '~/components/TwoColumnLayout';
+import DefinitionList from '~/components/DefinitionList';
 import MediaWithContentFixture from '~/components/MediaWithContent/MediaWithContent.fixture';
 import MediaWithContent from '~/components/MediaWithContent';
 import Video from './Video';
@@ -31,12 +31,9 @@ import Video from './Video';
         copy: {
           altText: 'How to Use Video for Tea Tree Leaf Facial Exfoliant',
         },
-        large:
-          '/assets/images/MediaWithContent/Large-PNG-AESOP-HWYL-HYBRIS-PRODUCT-PAGE-VIDEO-TABLET-1536x1920px-1-.png',
-        medium:
-          '/assets/images/MediaWithContent/Large-PNG-AESOP-HWYL-HYBRIS-PRODUCT-PAGE-VIDEO-TABLET-1536x1920px-1-.png',
-        small:
-          '/assets/images/MediaWithContent/Large-PNG-AESOP-HWYL-HYBRIS-PRODUCT-PAGE-VIDEO-TABLET-1536x1920px-1-.png',
+        large: './assets/images/MediaWithContent/video-poster.png',
+        medium: './assets/images/MediaWithContent/video-poster.png',
+        small: './assets/images/MediaWithContent/video-poster.png',
       }}
       small={text(
         'large',
@@ -50,38 +47,23 @@ import Video from './Video';
 
 <Props of={Video} />
 
-## Usage Example
+## Variations
 
-```
-<Video
-  hasAutoplay={true}
-  hasLoop={true}
-  hasPlayInFullScreen={true}
-  isFullWidth={true}
-  large="..."
-  medium="..."
-  poster={{
-    altText: '...',
-    large:
-      '...',
-    medium:
-      '...',
-    small:
-      '...',
-  }}
-  small="..."
-/>
-```
-
-## Video in MediaWithContent
+### Video in MediaWithContent
 
 <Preview>
   <Story name="Plays in full screen, placed in 50/50 Component">
     <MediaWithContent
+      backgroundColor="#fffeef"
       content={
-        <DefinitionList items={MediaWithContentFixture.definitionList} />
+        <DefinitionList items={MediaWithContentFixture.definitionList.items} />
       }
-      copy={MediaWithContentFixture.copyKit}
+      copy={{
+        eyebrow: MediaWithContentFixture.copy.default.eyebrow,
+        heading: MediaWithContentFixture.copy.default.heading,
+      }}
+      hasFullWidthImage={false}
+      isHero={false}
       isReverse={boolean('isReverse', false)}
       media={
         <Video
@@ -103,12 +85,9 @@ import Video from './Video';
             copy: {
               altText: 'How to Use Video for Tea Tree Leaf Facial Exfoliant',
             },
-            large:
-              '/assets/images/MediaWithContent/Large-PNG-AESOP-HWYL-HYBRIS-PRODUCT-PAGE-VIDEO-TABLET-1536x1920px-1-.png',
-            medium:
-              '/assets/images/MediaWithContent/Large-PNG-AESOP-HWYL-HYBRIS-PRODUCT-PAGE-VIDEO-TABLET-1536x1920px-1-.png',
-            small:
-              '/assets/images/MediaWithContent/Large-PNG-AESOP-HWYL-HYBRIS-PRODUCT-PAGE-VIDEO-TABLET-1536x1920px-1-.png',
+            large: './assets/images/MediaWithContent/video-poster.png',
+            medium: './assets/images/MediaWithContent/video-poster.png',
+            small: './assets/images/MediaWithContent/video-poster.png',
           }}
           small={text(
             'large',
@@ -116,6 +95,7 @@ import Video from './Video';
           )}
         />
       }
+      theme={select('theme', ['dark', 'light'], 'dark')}
     />
   </Story>
 </Preview>

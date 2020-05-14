@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Video /> renders base component correctly 1`] = `
-<figure
+<div
   className="base fullWidth"
   id="video"
   role="group"
@@ -170,5 +170,5 @@ exports[`<Video /> renders base component correctly 1`] = `
       />
     </div>
   </div>
-</figure>
+</div>
 `;
