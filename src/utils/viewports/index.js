@@ -8,6 +8,7 @@ import {
   ascertainIsMediumViewport,
   ascertainIsMediumOnlyViewport,
   ascertainIsLargeViewport,
+  ascertainIsLargeOnlyViewport,
   ascertainIsLargeOrXLargeOnlyViewport,
   ascertainIsXLargeViewport,
   ascertainIsSmallToXLargeViewport,
@@ -24,6 +25,7 @@ export { ascertainIsSmallOrMediumOnlyViewport };
 export { ascertainIsMediumViewport };
 export { ascertainIsMediumOnlyViewport };
 export { ascertainIsLargeViewport };
+export { ascertainIsLargeOnlyViewport };
 export { ascertainIsLargeOrXLargeOnlyViewport };
 export { ascertainIsXLargeViewport };
 export { ascertainIsSmallToXLargeViewport };
@@ -40,6 +42,7 @@ export default {
   ascertainIsMediumViewport,
   ascertainIsMediumOnlyViewport,
   ascertainIsLargeViewport,
+  ascertainIsLargeOnlyViewport,
   ascertainIsLargeOrXLargeOnlyViewport,
   ascertainIsXLargeViewport,
   ascertainIsSmallToXLargeViewport,

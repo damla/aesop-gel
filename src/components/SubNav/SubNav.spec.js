@@ -11,7 +11,11 @@ describe('<SubNav />', () => {
   it('renders base component correctly', () => {
     const tree = renderer
       .create(
-        <SubNav heading={SubNavFixture.heading} links={SubNavFixture.links} />,
+        <SubNav
+          heading={SubNavFixture.heading}
+          id={SubNavFixture.id}
+          links={SubNavFixture.links}
+        />,
       )
       .toJSON();
     expect(tree).toMatchSnapshot();
