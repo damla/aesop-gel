@@ -4,7 +4,7 @@ import { boolean } from '@storybook/addon-knobs';
 import '~.storybook/storybook.module.css';
 import Hidden from './Hidden';
 
-storiesOf('Hidden', module).add('Base component', () => (
+storiesOf('Components/Hidden', module).add('Base component', () => (
   <Hidden
     large={boolean('large', false)}
     medium={boolean('medium', false)}

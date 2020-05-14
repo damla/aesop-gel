@@ -11,10 +11,12 @@ export default {
   },
   definitionList: [
     {
+      id: 'lorem-ipsum-dolor',
       term: 'Lorem ipsum dolor',
       description: 'Lorem ipsum dolort, consectetur adipiscing elit.',
     },
     {
+      id: 'ut-consectetur-mi',
       term: 'Ut consectetur mi',
       description: 'Ut consectetur, vitae libero imperdiet id. ',
     },

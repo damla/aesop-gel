@@ -51,6 +51,7 @@ const ProductDetailBody = ({
         </>
       ),
       description: keyIngredient,
+      id: 'ingredients',
     },
   ];
 

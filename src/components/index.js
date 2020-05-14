@@ -14,14 +14,15 @@ import Hyperlink from './Hyperlink';
 import Icon from './Icon';
 import Image from './Image';
 import ImageCarousel from './ImageCarousel';
-import MediaWithContent from './MediaWithContent';
 import KitList from './KitList';
 import LinkButtonGroup from './LinkButtonGroup';
 import List from './List';
 import Loading from './Loading';
+import MediaWithContent from './MediaWithContent';
 import Modal from './Modal';
 import Overlay from './Overlay';
 import Paragraph, { P, ParagraphSet } from './Paragraph';
+import Podium from './Podium';
 import Quote from './Quote';
 import SectionHeading from './SectionHeading';
 import SubNav from './SubNav';
@@ -47,16 +48,17 @@ export default {
   Icon,
   Image,
   ImageCarousel,
-  MediaWithContent,
   KitList,
   LinkButtonGroup,
   List,
   Loading,
+  MediaWithContent,
   Modal,
   Overlay,
   P,
   Paragraph,
   ParagraphSet,
+  Podium,
   Quote,
   SectionHeading,
   SubNav,

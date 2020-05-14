@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RadioGroup /> renders base component correctly 1`] = `
+<ul
+  className="base"
+>
+  <li
+    className="radio"
+  >
+    <label
+      className="label"
+      htmlFor="option-morbi-id-nulla"
+    >
+      <input
+        aria-checked={true}
+        checked={true}
+        className="input"
+        data-test-ref="RADIO_GROUP_TEST_REF"
+        id="option-morbi-id-nulla"
+        name="radio-group"
+        onChange={[Function]}
+        tabIndex={0}
+        type="radio"
+        value="morbi-id-nulla"
+      />
+      <span
+        className="pot"
+      />
+      <span
+        className="labelContent"
+      >
+        Morbi id nulla
+      </span>
+    </label>
+  </li>
+  <li
+    className="radio"
+  >
+    <label
+      className="label"
+      htmlFor="option-nullam-ultrices"
+    >
+      <input
+        aria-checked={false}
+        checked={false}
+        className="input"
+        data-test-ref="RADIO_GROUP_TEST_REF"
+        id="option-nullam-ultrices"
+        name="radio-group"
+        onChange={[Function]}
+        tabIndex={0}
+        type="radio"
+        value="nullam-ultrices"
+      />
+      <span
+        className="pot"
+      />
+      <span
+        className="labelContent"
+      >
+        Nullam ultrices
+      </span>
+    </label>
+  </li>
+  <div
+    className="errorMessage"
+  >
+    Test Error Messsage
+  </div>
+</ul>
+`;

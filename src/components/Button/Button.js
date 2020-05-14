@@ -3,51 +3,49 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import styles from './Button.module.css';
 
-const Button = forwardRef(
-  (
-    {
-      children,
-      className,
-      dataTestRef,
-      id,
-      isAlternate,
-      isEnabled,
-      isInline,
-      onClick,
-      tabIndex,
-      title,
-      type,
-      theme,
-    },
-    ref,
-  ) => {
-    const classSet = cx(
-      styles.base,
-      { [styles.alternate]: isAlternate },
-      { [styles.blockStyle]: !isInline },
-      { [styles.disabled]: !isEnabled },
-      { [styles.inlineStyle]: isInline },
-      styles[theme],
-      className,
-    );
-
-    return (
-      <button
-        className={classSet}
-        data-test-ref={dataTestRef}
-        disabled={!isEnabled}
-        id={id}
-        onClick={onClick}
-        ref={ref}
-        tabIndex={tabIndex}
-        title={title}
-        type={type}
-      >
-        {children}
-      </button>
-    );
+const Button = forwardRef(function ButtonRef(
+  {
+    children,
+    className,
+    dataTestRef,
+    id,
+    isAlternate,
+    isEnabled,
+    isInline,
+    onClick,
+    tabIndex,
+    title,
+    type,
+    theme,
   },
-);
+  ref,
+) {
+  const classSet = cx(
+    styles.base,
+    { [styles.alternate]: isAlternate },
+    { [styles.blockStyle]: !isInline },
+    { [styles.disabled]: !isEnabled },
+    { [styles.inlineStyle]: isInline },
+    styles[theme],
+    className,
+  );
+
+  return (
+    <button
+      className={classSet}
+      data-test-ref={dataTestRef}
+      disabled={!isEnabled}
+      id={id}
+      onClick={onClick}
+      ref={ref}
+      tabIndex={tabIndex}
+      title={title}
+      type={type}
+    >
+      {children}
+    </button>
+  );
+});
 
 Button.propTypes = {
   children: PropTypes.any.isRequired,

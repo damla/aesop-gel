@@ -7,15 +7,16 @@ import { VariantSelectContextProvider } from '~/contexts/VariantSelect.context';
 import useAddToCart from '~/customHooks/useAddToCart';
 import useProductDetail from '~/customHooks/useProductDetail';
 import useVariantSelect from '~/customHooks/useVariantSelect';
-import ProductDetail from '~/components/ProductDetail';
 import styles from './Product.module.css';
 
+import ProductDetail from '~/components/ProductDetail';
 import MediaWithContent from '~/components/MediaWithContent';
 import DefinitionList from '~/components/DefinitionList';
 import Quote from '~/components/Quote';
 import Carousel from '~/components/Carousel';
 import Image from '~/components/Image';
 import KitList from '~/components/KitList';
+import Podium from '~/components/Podium';
 
 import ProductDetailFixture from '~/components/ProductDetail/ProductDetail.fixture';
 import CarouselFixture from '~/components/Carousel/Carousel.fixture';
@@ -59,11 +60,15 @@ const Product = ({ className, product }) => {
         }
         theme="dark"
       />
-      <Quote
-        author={QuoteFixture.author}
-        content={QuoteFixture.content}
-        theme="dark"
-      />
+
+      <Podium paddingBottom="large" paddingTop="large">
+        <Quote
+          author={QuoteFixture.author}
+          content={QuoteFixture.content}
+          theme="dark"
+        />
+      </Podium>
+
       <MediaWithContent
         content={<KitList items={MediaWithContentFixture.kitList.items} />}
         copy={MediaWithContentFixture.kitList.copy}
@@ -77,11 +82,14 @@ const Product = ({ className, product }) => {
         }
         theme="dark"
       />
-      <Carousel
-        className={styles.asideProducts}
-        introduction={CarouselFixture.introduction}
-        slides={CarouselFixture.slides}
-      />
+
+      <Podium paddingBottom="medium" paddingTop="medium">
+        <Carousel
+          className={styles.asideProducts}
+          introduction={CarouselFixture.introduction}
+          slides={CarouselFixture.slides}
+        />
+      </Podium>
     </div>
   );
 };

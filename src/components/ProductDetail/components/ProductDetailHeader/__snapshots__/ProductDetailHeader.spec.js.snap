@@ -2,7 +2,7 @@
 
 exports[`<ProductDetailHeader /> renders base component correctly 1`] = `
 <header
-  className="base"
+  className="base fixture-classname"
   id="product-description-header-Lorem-ipsum-dolor"
 >
   <h1

@@ -2,7 +2,7 @@
 
 exports[`<ProductDetail /> renders base component correctly 1`] = `
 <div
-  className="base"
+  className="base fixture-classname"
 >
   <nav
     className="base dark breadcrumbs"
@@ -86,7 +86,7 @@ exports[`<ProductDetail /> renders base component correctly 1`] = `
         </p>
       </header>
       <div
-        className="base dark"
+        className="base dark fixture-classname"
       >
         <button
           className="base alternate blockStyle dark base"

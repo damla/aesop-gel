@@ -4,7 +4,10 @@ import cx from 'classnames';
 import List from '~/components/List';
 import styles from './KitList.module.css';
 
-const KitList = forwardRef(({ className, isVisible, items, theme }, ref) => {
+const KitList = forwardRef(function KitListRef(
+  { className, isVisible, items, theme },
+  ref,
+) {
   const classSet = cx(styles.base, styles[theme], className);
   const listItemClassSet = cx(styles.item, { [styles.slideIn]: isVisible });
 

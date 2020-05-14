@@ -5,13 +5,21 @@ import Transition from '~/components/Transition';
 import styles from './Podium.module.css';
 
 const Podium = forwardRef(function PodiumRef(
-  { children, className, isActive, paddingTop, paddingBottom, transition },
+  {
+    children,
+    className,
+    isActive,
+    paddingBottom,
+    paddingTop,
+    transition,
+    verticalPadding,
+  },
   ref,
 ) {
   const classSet = cx(
     styles.base,
-    styles[`${paddingTop}PaddingTop`],
-    styles[`${paddingBottom}PaddingBottom`],
+    styles[`${paddingTop ? paddingTop : verticalPadding}PaddingTop`],
+    styles[`${paddingBottom ? paddingTop : verticalPadding}PaddingBottom`],
     className,
   );
 
@@ -39,15 +47,17 @@ Podium.propTypes = {
     'slowFade',
     'zoom',
   ]),
+  verticalPadding: PropTypes.oneOf(['none', 'small', 'medium', 'large']),
 };
 
 Podium.defaultProps = {
   children: undefined,
   className: undefined,
   isActive: true,
-  paddingTop: 'none',
-  paddingBottom: 'none',
+  paddingTop: undefined,
+  paddingBottom: undefined,
   transition: 'fade',
+  verticalPadding: 'none',
 };
 
 export default Podium;

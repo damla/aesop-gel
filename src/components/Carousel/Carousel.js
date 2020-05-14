@@ -20,167 +20,165 @@ import PreviousButton from './components/PreviousButton';
 import Slide from './components/Slide';
 import styles from './Carousel.module.css';
 
-const Carousel = forwardRef(
-  (
-    {
-      className,
-      hasFullWidthSlides,
-      hasShowCaption,
-      hasSlideCounter,
-      initialSlideIndex,
-      introduction,
-      slides,
-      theme,
-    },
-    ref,
-  ) => {
-    const slidesLength = slides.length;
-    const [isCaptionActive, setIsCaptionActive] = useState(true);
-    const [isNextButtonActive, setIsNextButtonActive] = useState(true);
-    const [isPreviousButtonActive, setIsPreviousButtonActive] = useState(
-      hasFullWidthSlides,
-    );
+const Carousel = forwardRef(function CarouselRef(
+  {
+    className,
+    hasFullWidthSlides,
+    hasShowCaption,
+    hasSlideCounter,
+    initialSlideIndex,
+    introduction,
+    slides,
+    theme,
+  },
+  ref,
+) {
+  const slidesLength = slides.length;
+  const [isCaptionActive, setIsCaptionActive] = useState(true);
+  const [isNextButtonActive, setIsNextButtonActive] = useState(true);
+  const [isPreviousButtonActive, setIsPreviousButtonActive] = useState(
+    hasFullWidthSlides,
+  );
 
-    const [caption, setCaption] = useState(
-      get(slides[initialSlideIndex], 'caption', ''),
-    );
+  const [caption, setCaption] = useState(
+    get(slides[initialSlideIndex], 'caption', ''),
+  );
 
-    const [slideCounter, setSlideCounter] = useState(
-      `${initialSlideIndex + 1} / ${slidesLength}`,
-    );
+  const [slideCounter, setSlideCounter] = useState(
+    `${initialSlideIndex + 1} / ${slidesLength}`,
+  );
 
-    useWindowHasResized();
+  useWindowHasResized();
 
-    let slideOffset = 0;
+  let slideOffset = 0;
 
-    /* Slide offset refers to the number of slides in view per display size,
-     * and effects the offset position and Next Arrow display
-     */
-    if (!hasFullWidthSlides) {
-      if (ascertainIsSmallOnlyViewport()) {
-        slideOffset = 1;
-      } else if (ascertainIsMediumOnlyViewport()) {
-        slideOffset = 2;
-      } else if (ascertainIsLargeOrXLargeOnlyViewport()) {
-        slideOffset = 3;
-      } else {
-        slideOffset = 4;
-      }
-    } else {
+  /* Slide offset refers to the number of slides in view per display size,
+   * and effects the offset position and Next Arrow display
+   */
+  if (!hasFullWidthSlides) {
+    if (ascertainIsSmallOnlyViewport()) {
       slideOffset = 1;
+    } else if (ascertainIsMediumOnlyViewport()) {
+      slideOffset = 2;
+    } else if (ascertainIsLargeOrXLargeOnlyViewport()) {
+      slideOffset = 3;
+    } else {
+      slideOffset = 4;
+    }
+  } else {
+    slideOffset = 1;
+  }
+
+  if (slidesLength === 0) {
+    return null;
+  }
+
+  const isMobileOrTablet = ascertainIsSmallOrMediumOnlyViewport();
+
+  const classSet = cx(
+    styles.base,
+    { [styles.fullWidthSlides]: hasFullWidthSlides },
+    styles[theme],
+    className,
+  );
+
+  const settings = getCarouselSettings({
+    className: styles.carousel,
+    hasFullWidthSlides,
+    initialSlideIndex,
+    isNextButtonActive,
+    isPreviousButtonActive,
+    Pagination,
+    NextButton,
+    PreviousButton,
+  });
+
+  const hasIntroSlide =
+    introduction && !isMobileOrTablet && !hasFullWidthSlides;
+
+  const totalSlidesCount = hasIntroSlide ? slidesLength + 1 : slidesLength;
+
+  const handleBeforeChange = (index, nextIndex) => {
+    setIsCaptionActive(false);
+
+    if (hasFullWidthSlides) {
+      return;
     }
 
-    if (slidesLength === 0) {
-      return null;
-    }
+    const currentIndex = totalSlidesCount - nextIndex;
 
-    const isMobileOrTablet = ascertainIsSmallOrMediumOnlyViewport();
+    setIsPreviousButtonActive(nextIndex !== 0);
+    setIsNextButtonActive(currentIndex === slideOffset ? false : true);
+  };
 
-    const classSet = cx(
-      styles.base,
-      { [styles.fullWidthSlides]: hasFullWidthSlides },
-      styles[theme],
-      className,
-    );
+  const handleAfterChange = index => {
+    setIsCaptionActive(true);
+    setCaption(slides[index].caption);
+    setSlideCounter(`${index + 1} of ${slidesLength}`);
+  };
 
-    const settings = getCarouselSettings({
-      className: styles.carousel,
-      hasFullWidthSlides,
-      initialSlideIndex,
-      isNextButtonActive,
-      isPreviousButtonActive,
-      Pagination,
-      NextButton,
-      PreviousButton,
-    });
+  return (
+    <div className={classSet} ref={ref}>
+      {!hasIntroSlide && introduction && (
+        <aside className={styles.mobileCarouselIntroductionWrapper}>
+          <CarouselIntroduction
+            cta={introduction.cta}
+            description={introduction.description}
+            eyebrow={introduction.eyebrow}
+            heading={introduction.heading}
+          />
+        </aside>
+      )}
 
-    const hasIntroSlide =
-      introduction && !isMobileOrTablet && !hasFullWidthSlides;
-
-    const totalSlidesCount = hasIntroSlide ? slidesLength + 1 : slidesLength;
-
-    const handleBeforeChange = (index, nextIndex) => {
-      setIsCaptionActive(false);
-
-      if (hasFullWidthSlides) {
-        return;
-      }
-
-      const currentIndex = totalSlidesCount - nextIndex;
-
-      setIsPreviousButtonActive(nextIndex !== 0);
-      setIsNextButtonActive(currentIndex === slideOffset ? false : true);
-    };
-
-    const handleAfterChange = index => {
-      setIsCaptionActive(true);
-      setCaption(slides[index].caption);
-      setSlideCounter(`${index + 1} of ${slidesLength}`);
-    };
-
-    return (
-      <div className={classSet} ref={ref}>
-        {!hasIntroSlide && introduction && (
-          <aside className={styles.mobileCarouselIntroductionWrapper}>
-            <CarouselIntroduction
-              cta={introduction.cta}
-              description={introduction.description}
-              eyebrow={introduction.eyebrow}
-              heading={introduction.heading}
-            />
-          </aside>
+      <Slider
+        {...settings}
+        afterChange={handleAfterChange}
+        beforeChange={handleBeforeChange}
+      >
+        {hasIntroSlide && (
+          <CarouselIntroduction
+            cta={introduction.cta}
+            description={introduction.description}
+            eyebrow={introduction.eyebrow}
+            heading={introduction.heading}
+          />
         )}
 
-        <Slider
-          {...settings}
-          afterChange={handleAfterChange}
-          beforeChange={handleBeforeChange}
-        >
-          {hasIntroSlide && (
-            <CarouselIntroduction
-              cta={introduction.cta}
-              description={introduction.description}
-              eyebrow={introduction.eyebrow}
-              heading={introduction.heading}
-            />
-          )}
-
-          {slides.map(({ url, ...slide }, index) => (
-            <div className={styles.slideWrapper} key={index}>
-              {url ? (
-                <Hyperlink
-                  className={cx(styles.item, styles.link)}
-                  title={`Link to ${slide.heading}`}
-                  url={url}
-                >
-                  <Slide {...slide} isFullWidthSlide={hasFullWidthSlides} />
-                </Hyperlink>
-              ) : (
-                <div className={styles.item} key={index}>
-                  <Slide {...slide} isFullWidthSlide={hasFullWidthSlides} />
-                </div>
-              )}
-            </div>
-          ))}
-        </Slider>
-        {(hasShowCaption || hasSlideCounter) && (
-          <footer className={styles.footer}>
-            {hasSlideCounter && (
-              <div className={styles.slideCounter}>
-                {totalSlidesCount > 1 && slideCounter}
+        {slides.map(({ url, ...slide }, index) => (
+          <div className={styles.slideWrapper} key={index}>
+            {url ? (
+              <Hyperlink
+                className={cx(styles.item, styles.link)}
+                title={`Link to ${slide.heading}`}
+                url={url}
+              >
+                <Slide {...slide} isFullWidthSlide={hasFullWidthSlides} />
+              </Hyperlink>
+            ) : (
+              <div className={styles.item} key={index}>
+                <Slide {...slide} isFullWidthSlide={hasFullWidthSlides} />
               </div>
             )}
-            {hasShowCaption && (
-              <Transition isActive={isCaptionActive} type="fade">
-                <div className={styles.caption}>{caption}</div>
-              </Transition>
-            )}
-          </footer>
-        )}
-      </div>
-    );
-  },
-);
+          </div>
+        ))}
+      </Slider>
+      {(hasShowCaption || hasSlideCounter) && (
+        <footer className={styles.footer}>
+          {hasSlideCounter && (
+            <div className={styles.slideCounter}>
+              {totalSlidesCount > 1 && slideCounter}
+            </div>
+          )}
+          {hasShowCaption && (
+            <Transition isActive={isCaptionActive} type="fade">
+              <div className={styles.caption}>{caption}</div>
+            </Transition>
+          )}
+        </footer>
+      )}
+    </div>
+  );
+});
 
 Carousel.propTypes = {
   className: PropTypes.string,

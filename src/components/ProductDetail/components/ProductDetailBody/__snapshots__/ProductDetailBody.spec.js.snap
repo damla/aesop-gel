@@ -2,7 +2,7 @@
 
 exports[`<ProductDetailBody /> renders base component correctly 1`] = `
 <div
-  className="base dark"
+  className="base dark fixture-classname"
 >
   <button
     className="base alternate blockStyle dark base"
