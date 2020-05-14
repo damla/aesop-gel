@@ -8,7 +8,7 @@
   font-size: rem(15px);
 
   @media (--viewport-md-only) {
-    display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -19,8 +19,7 @@
   @media (--viewport-md-only) {
     position: absolute;
     left: 0;
-    width: 50%;
-    width: calc(50% - var(--layout-md-spacing));
+    width: 48%;
     padding-right: var(--layout-md-spacing);
   }
 }
@@ -29,9 +28,9 @@
   max-width: 85%;
 
   @media (--viewport-md-only) {
-    width: 50%;
+    width: 48%;
     max-width: 100%;
-    margin-left: 50%;
+    margin-left: 52%;
   }
 }
 
@@ -43,8 +42,8 @@
   margin-top: auto;
 
   @media (--viewport-md-only) {
-    width: 50%;
+    width: 48%;
     max-width: 100%;
-    margin-left: 50%;
+    margin-left: 52%;
   }
 }

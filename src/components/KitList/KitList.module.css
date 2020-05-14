@@ -3,7 +3,7 @@
 .base {
   @mixin reset-list;
 
-  margin-top: 26px;
+  margin-top: 18px;
 
   @media (--viewport-md) {
     margin-top: 14px;
@@ -12,8 +12,8 @@
 
 .item {
   position: relative;
-  padding-top: 26px;
-  padding-bottom: 26px;
+  padding-top: 18px;
+  padding-bottom: 18px;
   margin: 0;
   font-family: var(--font-family-sans-serif-medium);
   font-size: rem(15px);
