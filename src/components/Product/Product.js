@@ -83,7 +83,7 @@ const Product = ({ className, product }) => {
         theme="dark"
       />
 
-      <Podium paddingBottom="medium" paddingTop="medium">
+      <Podium verticalPadding="medium">
         <Carousel
           className={styles.asideProducts}
           introduction={CarouselFixture.introduction}

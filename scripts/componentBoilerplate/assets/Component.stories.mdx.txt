@@ -1,6 +1,6 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import { withKnobs } from '@storybook/addon-knobs';
-import { text } from '@storybook/addon-knobs';
+import * as knobs from '@storybook/addon-knobs';
 import ComponentBoilerplate from './ComponentBoilerplate';
 import ComponentBoilerplateFixture from './ComponentBoilerplate.fixture';
 

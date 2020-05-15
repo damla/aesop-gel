@@ -1,0 +1,29 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs } from '@storybook/addon-knobs';
+import * as knobs from '@storybook/addon-knobs';
+import List from './List';
+import ListFixture from './List.fixture';
+
+<Meta
+  title="Components/List"
+  component={List}
+  decorators={[withKnobs]}
+/>
+
+# List
+
+<Preview>
+  <Story name="Base component">
+    <List
+      items={knobs.object('items', [
+        { content: 'Fragrance', id: 'fragrance' },
+        { content: 'Gifts', id: 'gifts' },
+      ])}
+      theme={knobs.select('theme', ['dark', 'light'], 'dark')}
+    />
+  </Story>
+</Preview>
+
+## API
+
+<Props of={List} />

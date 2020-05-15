@@ -1,0 +1,46 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs } from '@storybook/addon-knobs';
+import * as knobs from '@storybook/addon-knobs';
+import { State } from '~.storybook/State';
+import Button from '~/components/Button';
+import Overlay from './Overlay';
+import OverlayFixture from './Overlay.fixture';
+
+<Meta
+  title="Components/Overlay"
+  component={Overlay}
+  decorators={[withKnobs]}
+/>
+
+# Overlay
+
+<Preview>
+  <Story name="Base component">
+    <State initialState={{ isVisible: false }}>
+      {(state, setState) => {
+        return (
+          <React.Fragment>
+            <Overlay
+              isVisible={state.isVisible}
+              onClose={() => {
+                setState(() => ({ ...state, isVisible: false }));
+              }}
+            />
+            <Button
+              onClick={() => {
+                setState(() => ({ ...state, isVisible: true }));
+              }}
+              title="Open Overlay"
+            >
+              Show Overlay
+            </Button>
+          </React.Fragment>
+        )
+      }}
+    </State>
+  </Story>
+</Preview>
+
+## API
+
+<Props of={Overlay} />

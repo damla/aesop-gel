@@ -1,0 +1,29 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs } from '@storybook/addon-knobs';
+import * as knobs from '@storybook/addon-knobs';
+import Hidden from './Hidden';
+
+<Meta
+  title="Components/Hidden"
+  component={Hidden}
+  decorators={[withKnobs]}
+/>
+
+# Hidden
+
+<Preview>
+  <Story name="Base component">
+    <Hidden
+      large={knobs.boolean('large', false)}
+      medium={knobs.boolean('medium', false)}
+      small={knobs.boolean('small', true)}
+      xLarge={knobs.boolean('xLarge', false)}
+    >
+      <span>Hidden content</span>
+    </Hidden>
+  </Story>
+</Preview>
+
+## API
+
+<Props of={Hidden} />

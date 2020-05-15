@@ -44,8 +44,8 @@ export const Column = ({ lists, theme }) =>
         {subHeading && (
           <Heading
             className={styles.subHeading}
-            level="4"
-            size="xSmall"
+            level="3"
+            size="small"
             theme={theme}
           >
             {subHeading}
@@ -80,7 +80,7 @@ TwoColumnList.propTypes = {
       id: PropTypes.string.isRequired,
       heading: PropTypes.string,
       subHeading: PropTypes.string,
-      items: PropTypes.arrayOf(PropTypes.object),
+      items: PropTypes.array,
     }),
   ).isRequired,
   rightColumn: PropTypes.arrayOf(
@@ -88,7 +88,7 @@ TwoColumnList.propTypes = {
       id: PropTypes.string.isRequired,
       heading: PropTypes.string,
       subHeading: PropTypes.string,
-      items: PropTypes.arrayOf(PropTypes.object),
+      items: PropTypes.array,
     }),
   ).isRequired,
   theme: PropTypes.oneOf(['dark', 'light']),

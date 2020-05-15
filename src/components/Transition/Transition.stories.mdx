@@ -1,0 +1,61 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs } from '@storybook/addon-knobs';
+import * as knobs from '@storybook/addon-knobs';
+import { State } from '~.storybook/State';
+import Button from '~/components/Button';
+import DefinitionList from '~/components/DefinitionList';
+import DefinitionListFixture from '~/components/DefinitionList/DefinitionList.fixture';
+import Transition from './Transition';
+
+<Meta
+  title="Components/Transition"
+  component={Transition}
+  decorators={[withKnobs]}
+/>
+
+# Transition
+
+<Preview>
+  <Story name="Base component">
+    <State initialState={{ isActive: false }}>
+      {(state, setState) => {
+        return (
+          <React.Fragment>
+            <Button
+              onClick={() => {
+                setState(state => ({ ...state, isActive: !state.isActive }));
+              }}
+              title="Toggle Transition"
+            >
+              Toggle Transition
+            </Button>
+            <Transition
+              isActive={state.isActive}
+              type={knobs.select(
+                'type',
+                [
+                  'fade',
+                  'shiftInDown',
+                  'shiftInLeft',
+                  'slideDown',
+                  'slideRight',
+                  'slowFade',
+                  'zoom',
+                ],
+                'shiftInDown',
+              )}
+            >
+              <DefinitionList
+                items={DefinitionListFixture.items}
+              />
+            </Transition>
+          </React.Fragment>
+        )
+      }}
+    </State>
+  </Story>
+</Preview>
+
+## API
+
+<Props of={Transition} />

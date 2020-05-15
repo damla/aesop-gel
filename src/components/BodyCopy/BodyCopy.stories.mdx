@@ -1,0 +1,85 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs } from '@storybook/addon-knobs';
+import * as knobs from '@storybook/addon-knobs';
+import BodyCopy from './BodyCopy';
+import BodyCopyFixture from './BodyCopy.fixture';
+
+<Meta
+  title="Components/BodyCopy"
+  component={BodyCopy}
+  decorators={[withKnobs]}
+/>
+
+# BodyCopy
+
+<Preview>
+  <Story name="Base component">
+    <BodyCopy
+      copy={knobs.text('body', BodyCopyFixture.copy, 'Copy')}
+      cta={{
+        text: knobs.text('text', BodyCopyFixture.cta.text, 'CTA'),
+        url: knobs.text('url', BodyCopyFixture.cta.url, 'CTA'),
+        style: knobs.select(
+          'style',
+          [
+            'External Button Link',
+            'External No Icon Button Link',
+            'External No Icon Link',
+            'External Text Link',
+            'Internal Button Link',
+            'Internal No Icon Button Link',
+            'Internal No Icon Link',
+            'Internal Text Link',
+          ],
+          BodyCopyFixture.cta.style,
+          'CTA',
+        ),
+      }}
+      eyebrow={knobs.text('eyebrow', BodyCopyFixture.eyebrow, 'Copy')}
+      hasSerifFontHeading={knobs.boolean(
+        'hasSerifFontHeading',
+        false,
+        'Typography',
+      )}
+      heading={knobs.text('heading', BodyCopyFixture.heading, 'Copy')}
+      secondaryCta={{
+        text: knobs.text(
+          'text',
+          BodyCopyFixture.secondaryCta.text,
+          'Secondary CTA',
+        ),
+        url: knobs.text(
+          'url',
+          BodyCopyFixture.secondaryCta.url,
+          'Secondary CTA',
+        ),
+        style: knobs.select(
+          'style',
+          [
+            'External Button Link',
+            'External No Icon Button Link',
+            'External No Icon Link',
+            'External Text Link',
+            'Internal Button Link',
+            'Internal No Icon Button Link',
+            'Internal No Icon Link',
+            'Internal Text Link',
+          ],
+          BodyCopyFixture.secondaryCta.style,
+          'Secondary CTA',
+        ),
+      }}
+      subHeading={knobs.text('subHeading', BodyCopyFixture.subHeading, 'Copy')}
+      theme={knobs.select(
+        'theme',
+        ['dark', 'light'],
+        BodyCopyFixture.theme,
+        'User Interface',
+      )}
+    />
+  </Story>
+</Preview>
+
+## API
+
+<Props of={BodyCopy} />

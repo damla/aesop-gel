@@ -84,6 +84,10 @@ const Controls = ({
 
   const classSet = cx(styles.base, className);
 
+  const progressBarClassSet = cx(styles.progressBar, className, {
+    [styles.fullScreenProgressBar]: hasPlayInFullScreen,
+  });
+
   const fullScreenControlsClassSet = cx({
     [styles.fullScreenControls]: hasPlayInFullScreen,
     [styles.activeFullScreenControls]: hasActiveVideo && hasPlayInFullScreen,
@@ -117,7 +121,7 @@ const Controls = ({
       {isInlineMuteActive && (
         <Button
           className={cx(styles.mute, {
-            [styles.hidden]: !isActiveVideoControlActive,
+            [styles.hidden]: !isActiveVideoControlActive && isPlaying,
           })}
           isInline={true}
           onClick={onAudioButtonClick}
@@ -139,7 +143,7 @@ const Controls = ({
         <div className={fullScreenControlsClassSet}>
           <div
             className={cx(styles.fullScreenControlsHeader, {
-              [styles.hidden]: !isActiveVideoControlActive,
+              [styles.hidden]: !isActiveVideoControlActive && isPlaying,
             })}
           >
             {hasAllowAudio && (
@@ -190,7 +194,7 @@ const Controls = ({
           className={cx(styles.playPauseButton, {
             [styles.activePlayPauseButton]: hasActiveVideo,
             [styles.inactivePlayPauseButton]: !isInlinePlayPauseButtonActive,
-            [styles.hidden]: !isActiveVideoControlActive,
+            [styles.hidden]: !isActiveVideoControlActive && isPlaying,
           })}
           isInline={true}
           onClick={onPlayPauseButtonClick}
@@ -206,7 +210,7 @@ const Controls = ({
       </Transition>
 
       <Transition isActive={hasActiveVideo} type="fade">
-        <div className={styles.progressBar}>
+        <div className={progressBarClassSet}>
           <div className={styles.progress} style={{ width: `${progress}%` }} />
         </div>
       </Transition>

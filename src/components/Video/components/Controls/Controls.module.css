@@ -147,7 +147,7 @@
   position: absolute;
   z-index: var(--z-index-fixed-full-screen-video);
   top: calc(50vh - 40px - 13px);
-  left: calc(50vw - 40px - 13px);
+  left: calc(50% - 13px);
   padding: 10px;
   background-color: var(--color-grey-40);
   border-radius: 100%;
@@ -212,11 +212,11 @@
     bottom: 48px;
     left: calc(var(--layout-md-spacing) * 2);
   }
+}
 
-  .fullScreenControls & {
-    @media (--viewport-lg) {
-      position: fixed;
-    }
+.fullScreenProgressBar {
+  @media (--viewport-lg) {
+    position: fixed;
   }
 }
 

@@ -1,0 +1,26 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs } from '@storybook/addon-knobs';
+import * as knobs from '@storybook/addon-knobs';
+import BynderWidget from './BynderWidget';
+import BynderWidgetFixture from './BynderWidget.fixture';
+
+<Meta
+  title="Components/BynderWidget"
+  component={BynderWidget}
+  decorators={[withKnobs]}
+/>
+
+# BynderWidget
+
+<Preview>
+  <Story name="Base component">
+    <BynderWidget
+      heading="Media Releases"
+      id="6E8E63F9-7A54-442B-861E291124E19D94"
+    />
+  </Story>
+</Preview>
+
+## API
+
+<Props of={BynderWidget} />
