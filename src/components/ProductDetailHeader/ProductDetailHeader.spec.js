@@ -16,10 +16,8 @@ describe('<ProductDetailHeader />', () => {
     const tree = renderer
       .create(
         <ProductDetailHeader
+          breadcrumbs={ProductDetailHeaderFixture.breadcrumbs}
           className={ProductDetailHeaderFixture.className}
-          description={ProductDetailHeaderFixture.description}
-          id={ProductDetailHeaderFixture.id}
-          productName={ProductDetailHeaderFixture.productName}
           theme={ProductDetailHeaderFixture.theme}
         />,
       )

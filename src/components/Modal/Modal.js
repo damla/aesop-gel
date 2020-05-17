@@ -9,12 +9,20 @@ import Overlay from '~/components/Overlay';
 import Transition from '~/components/Transition';
 import styles from './Modal.module.css';
 
-const Modal = ({ children, className, copy, onClose, isVisible, theme }) => {
+const Modal = ({
+  children,
+  className,
+  copy,
+  isVisible,
+  onClose,
+  portalId,
+  theme,
+}) => {
   useEscapeKeyListener(onClose);
   useOverflowHidden(isVisible);
 
   const classSet = cx(styles.base, styles[theme], className);
-  const modalRootElement = document.querySelector('#modal');
+  const modalRootElement = document.getElementById(portalId);
 
   if (!modalRootElement) {
     return null;
@@ -57,6 +65,7 @@ Modal.propTypes = {
   }),
   isVisible: PropTypes.bool,
   onClose: PropTypes.func,
+  portalId: PropTypes.string,
   theme: PropTypes.oneOf(['dark', 'light']),
 };
 
@@ -68,6 +77,7 @@ Modal.defaultProps = {
   },
   isVisible: undefined,
   onClose: undefined,
+  portalId: 'aesopModal',
   theme: 'dark',
 };
 export default Modal;

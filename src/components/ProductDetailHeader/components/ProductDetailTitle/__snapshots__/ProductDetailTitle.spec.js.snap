@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ProductDetailHeader /> renders base component correctly 1`] = `
+exports[`<ProductDetailTitle /> renders base component correctly 1`] = `
 <header
-  className="base fixture-classname"
+  className="base fixture-classname slowFadeEnter"
   id="product-description-header-Lorem-ipsum-dolor"
 >
   <h1

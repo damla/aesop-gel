@@ -1,31 +1,36 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs } from '@storybook/addon-knobs';
-import { text, boolean, select } from '@storybook/addon-knobs';
+import * as knobs from '@storybook/addon-knobs';
 import '~.storybook/storybook.module.css';
 import DefinitionList from '~/components/DefinitionList';
 import MediaWithContentFixture from '~/components/MediaWithContent/MediaWithContent.fixture';
 import MediaWithContent from '~/components/MediaWithContent';
 import Video from './Video';
 
-<Meta title="Components/Video" component={Video} decorators={[withKnobs]} />
+<Meta title="Components/Video" component={Video} />
 
 # Video
 
 <Preview>
   <Story name="Base component">
     <Video
-      hasAllowAudio={boolean('hasAllowAudio', false)}
-      hasAutoplay={boolean('hasAutoplay', false)}
-      hasLoop={boolean('hasLoop', false)}
-      hasPlayInFullScreen={boolean('hasPlayInFullScreen', false)}
-      isFullWidth={boolean('isFullWidth', true)}
-      large={text(
-        'large',
-        'https://player.vimeo.com/external/225136214.hd.mp4?s=a01cd8b47f35767394e48dc01af10510ef8ff4dd&profile_id=174',
+      hasAllowAudio={knobs.boolean('hasAllowAudio', false, 'Attributes')}
+      hasAutoplay={knobs.boolean('hasAutoplay', false, 'Attributes')}
+      hasLoop={knobs.boolean('hasLoop', false, 'Attributes')}
+      hasPlayInFullScreen={knobs.boolean(
+        'hasPlayInFullScreen',
+        false,
+        'Presentation',
       )}
-      medium={text(
+      isFullWidth={knobs.boolean('isFullWidth', true, 'Presentation')}
+      large={knobs.text(
         'large',
         'https://player.vimeo.com/external/225136214.hd.mp4?s=a01cd8b47f35767394e48dc01af10510ef8ff4dd&profile_id=174',
+        'Content',
+      )}
+      medium={knobs.text(
+        'large',
+        'https://player.vimeo.com/external/225136214.hd.mp4?s=a01cd8b47f35767394e48dc01af10510ef8ff4dd&profile_id=174',
+        'Content',
       )}
       poster={{
         copy: {
@@ -35,9 +40,10 @@ import Video from './Video';
         medium: './assets/images/MediaWithContent/video-poster.png',
         small: './assets/images/MediaWithContent/video-poster.png',
       }}
-      small={text(
+      small={knobs.text(
         'large',
         'https://player.vimeo.com/external/225136214.hd.mp4?s=a01cd8b47f35767394e48dc01af10510ef8ff4dd&profile_id=174',
+        'Content',
       )}
     />
   </Story>
@@ -64,7 +70,7 @@ import Video from './Video';
       }}
       hasFullWidthImage={false}
       isHero={false}
-      isReverse={boolean('isReverse', false)}
+      isReverse={knobs.boolean('isReverse', false, 'Presentation')}
       media={
         <Video
           hasAllowAudio={true}
@@ -73,14 +79,8 @@ import Video from './Video';
           hasPlayInFullScreen={true}
           hasControls={true}
           isFullWidth={false}
-          large={text(
-            'large',
-            'https://player.vimeo.com/external/225136214.hd.mp4?s=a01cd8b47f35767394e48dc01af10510ef8ff4dd&profile_id=174',
-          )}
-          medium={text(
-            'large',
-            'https://player.vimeo.com/external/225136214.hd.mp4?s=a01cd8b47f35767394e48dc01af10510ef8ff4dd&profile_id=174',
-          )}
+          large="https://player.vimeo.com/external/225136214.hd.mp4?s=a01cd8b47f35767394e48dc01af10510ef8ff4dd&profile_id=174"
+          medium="https://player.vimeo.com/external/225136214.hd.mp4?s=a01cd8b47f35767394e48dc01af10510ef8ff4dd&profile_id=174"
           poster={{
             copy: {
               altText: 'How to Use Video for Tea Tree Leaf Facial Exfoliant',
@@ -89,13 +89,10 @@ import Video from './Video';
             medium: './assets/images/MediaWithContent/video-poster.png',
             small: './assets/images/MediaWithContent/video-poster.png',
           }}
-          small={text(
-            'large',
-            'https://player.vimeo.com/external/225136214.hd.mp4?s=a01cd8b47f35767394e48dc01af10510ef8ff4dd&profile_id=174',
-          )}
+          small="https://player.vimeo.com/external/225136214.hd.mp4?s=a01cd8b47f35767394e48dc01af10510ef8ff4dd&profile_id=174"
         />
       }
-      theme={select('theme', ['dark', 'light'], 'dark')}
+      theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
     />
   </Story>
 </Preview>

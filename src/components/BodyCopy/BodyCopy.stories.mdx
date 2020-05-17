@@ -1,21 +1,16 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs } from '@storybook/addon-knobs';
 import * as knobs from '@storybook/addon-knobs';
 import BodyCopy from './BodyCopy';
 import BodyCopyFixture from './BodyCopy.fixture';
 
-<Meta
-  title="Components/BodyCopy"
-  component={BodyCopy}
-  decorators={[withKnobs]}
-/>
+<Meta title="Components/BodyCopy" component={BodyCopy} />
 
 # BodyCopy
 
 <Preview>
   <Story name="Base component">
     <BodyCopy
-      copy={knobs.text('body', BodyCopyFixture.copy, 'Copy')}
+      copy={knobs.text('copy', BodyCopyFixture.copy, 'Copy')}
       cta={{
         text: knobs.text('text', BodyCopyFixture.cta.text, 'CTA'),
         url: knobs.text('url', BodyCopyFixture.cta.url, 'CTA'),
@@ -74,7 +69,7 @@ import BodyCopyFixture from './BodyCopy.fixture';
         'theme',
         ['dark', 'light'],
         BodyCopyFixture.theme,
-        'User Interface',
+        'Presentation',
       )}
     />
   </Story>

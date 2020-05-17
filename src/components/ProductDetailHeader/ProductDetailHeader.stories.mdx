@@ -1,23 +1,29 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { State } from '~.storybook/State';
+import { withKnobs } from '@storybook/addon-knobs';
+import { text } from '@storybook/addon-knobs';
 import { AddToCartContextProvider } from '~/contexts/AddToCart.context';
 import { VariantSelectContextProvider } from '~/contexts/VariantSelect.context';
 import useAddToCart from '~/customHooks/useAddToCart';
 import useVariantSelect from '~/customHooks/useVariantSelect';
-import AddToCartButton from './AddToCartButton';
-import AddToCartButtonFixture from './AddToCartButton.fixture';
+import ProductDetailHeader from './ProductDetailHeader';
+import ProductDetailHeaderFixture from './ProductDetailHeader.fixture';
 
-<Meta title="Components/AddToCartButton" component={AddToCartButton} />
+<Meta
+  title="Components/ProductDetailHeader"
+  component={ProductDetailHeader}
+  decorators={[withKnobs]}
+/>
 
-# AddToCartButton
+# ProductDetailHeader
 
 <Preview>
   <Story name="Base component">
     <AddToCartContextProvider value={useAddToCart()}>
       <VariantSelectContextProvider value={useVariantSelect()}>
-        <AddToCartButton
-          dataTestRef="ADD_TO_CART_SMALL_CTA"
-          productName="Product"
+        <ProductDetailHeader
+          breadcrumbs={ProductDetailHeaderFixture.breadcrumbs}
+          className={ProductDetailHeaderFixture.className}
+          theme={ProductDetailHeaderFixture.theme}
         />
       </VariantSelectContextProvider>
     </AddToCartContextProvider>
@@ -26,4 +32,4 @@ import AddToCartButtonFixture from './AddToCartButton.fixture';
 
 ## API
 
-<Props of={AddToCartButton} />
+<Props of={ProductDetailHeader} />

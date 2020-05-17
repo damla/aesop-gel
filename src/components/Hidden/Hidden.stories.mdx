@@ -1,25 +1,29 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs } from '@storybook/addon-knobs';
 import * as knobs from '@storybook/addon-knobs';
+import DefinitionList from '~/components/DefinitionList';
+import DefinitionListFixture from '~/components/DefinitionList/DefinitionList.fixture';
 import Hidden from './Hidden';
 
 <Meta
   title="Components/Hidden"
   component={Hidden}
-  decorators={[withKnobs]}
 />
 
 # Hidden
 
+The Hidden component will unmount children components given they meet the breakpoint criteria of the `isSmall`, `isMedium`, `isLarge` and/or `isXLarge` props.
+
+This example has a `isSmall`, `isMedium` prop of true, and therefore will not be mounted at those breakpoints.
+
 <Preview>
   <Story name="Base component">
     <Hidden
-      large={knobs.boolean('large', false)}
-      medium={knobs.boolean('medium', false)}
-      small={knobs.boolean('small', true)}
-      xLarge={knobs.boolean('xLarge', false)}
+      isLarge={knobs.boolean('isLarge', false, 'Presentation')}
+      isMedium={knobs.boolean('isMedium', true, 'Presentation')}
+      isSmall={knobs.boolean('isSmall', true, 'Presentation')}
+      isXLarge={knobs.boolean('isXLarge', false, 'Presentation')}
     >
-      <span>Hidden content</span>
+      <DefinitionList items={DefinitionListFixture.items} />
     </Hidden>
   </Story>
 </Preview>

@@ -1,20 +1,18 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs } from '@storybook/addon-knobs';
 import * as knobs from '@storybook/addon-knobs';
 import Loading from './Loading';
 import LoadingFixture from './Loading.fixture';
 
-<Meta title="Components/Loading" component={Loading} decorators={[withKnobs]} />
+<Meta title="Components/Loading" component={Loading} />
 
 # Loading
 
 <Preview>
   <Story name="Base component">
     <Loading
-      className={knobs.text('className', '')}
-      isLoading={knobs.boolean('isLoading', true)}
-      small={knobs.boolean('isSmall', false)}
-      theme={knobs.select('theme', ['dark', 'light'], 'dark')}
+      isLoading={knobs.boolean('isLoading', true, 'Presentation')}
+      small={knobs.boolean('isSmall', false, 'Presentation')}
+      theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
     />
   </Story>
 </Preview>

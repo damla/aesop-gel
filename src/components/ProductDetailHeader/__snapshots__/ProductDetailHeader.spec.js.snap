@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ProductDetail /> renders base component correctly 1`] = `
+exports[`<ProductDetailHeader /> renders base component correctly 1`] = `
 <div
   className="base fixture-classname"
 >
@@ -71,7 +71,7 @@ exports[`<ProductDetail /> renders base component correctly 1`] = `
         </ul>
       </nav>
       <header
-        className="base"
+        className="base slowFadeEnter"
         id="product-description-header-undefined"
       >
         <h1

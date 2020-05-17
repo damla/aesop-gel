@@ -1,14 +1,13 @@
 import { useRef } from 'react';
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs } from '@storybook/addon-knobs';
-import { select, text } from '@storybook/addon-knobs';
+import * as knobs from '@storybook/addon-knobs';
 import { useOnScreen } from '~/customHooks/useOnScreen';
 import CarouselFixture from '~/components/Carousel/Carousel.fixture';
 import Carousel from '~/components/Carousel';
 import Podium from './Podium';
 import PodiumFixture from './Podium.fixture';
 
-<Meta title="Components/Podium" component={Podium} decorators={[withKnobs]} />
+<Meta title="Components/Podium" component={Podium} />
 
 # Podium
 
@@ -28,15 +27,17 @@ Presented here with both `paddingTop` and `paddingBottom` set to `small`, and fa
       return (
         <div style={{ border: '1px solid #333', margin: '20px'}}>
           <Podium
-            paddingTop={select(
+            paddingTop={knobs.select(
               'paddingTop',
               ['none', 'small', 'medium', 'large'],
               'small',
+              'Presentation',
             )}
-            paddingBottom={select(
+            paddingBottom={knobs.select(
               'paddingBottom',
               ['none', 'small', 'medium', 'large'],
               'small',
+              'Presentation',
             )}
             isActive={isOnScreen}
             transition="fade"

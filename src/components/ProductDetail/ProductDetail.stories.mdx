@@ -1,10 +1,7 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import { withKnobs } from '@storybook/addon-knobs';
 import { text } from '@storybook/addon-knobs';
-import { AddToCartContextProvider } from '~/contexts/AddToCart.context';
-import { VariantSelectContextProvider } from '~/contexts/VariantSelect.context';
-import useAddToCart from '~/customHooks/useAddToCart';
-import useVariantSelect from '~/customHooks/useVariantSelect';
+import { State } from '~.storybook/State';
 import ProductDetail from './ProductDetail';
 import ProductDetailFixture from './ProductDetail.fixture';
 
@@ -18,15 +15,10 @@ import ProductDetailFixture from './ProductDetail.fixture';
 
 <Preview>
   <Story name="Base component">
-    <AddToCartContextProvider value={useAddToCart()}>
-      <VariantSelectContextProvider value={useVariantSelect()}>
-        <ProductDetail
-          breadcrumbs={ProductDetailFixture.breadcrumbs}
-          className={ProductDetailFixture.className}
-          theme={ProductDetailFixture.theme}
-        />
-      </VariantSelectContextProvider>
-    </AddToCartContextProvider>
+    <ProductDetail
+      className={ProductDetailFixture.className}
+      product={ProductDetailFixture.product}
+    />
   </Story>
 </Preview>
 

@@ -1,5 +1,4 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs } from '@storybook/addon-knobs';
 import * as knobs from '@storybook/addon-knobs';
 import { State } from '~.storybook/State';
 import Button from '~/components/Button';
@@ -10,7 +9,6 @@ import Transition from './Transition';
 <Meta
   title="Components/Transition"
   component={Transition}
-  decorators={[withKnobs]}
 />
 
 # Transition
@@ -43,6 +41,7 @@ import Transition from './Transition';
                   'zoom',
                 ],
                 'shiftInDown',
+                'Presentation',
               )}
             >
               <DefinitionList

@@ -1,5 +1,4 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs } from '@storybook/addon-knobs';
 import * as knobs from '@storybook/addon-knobs';
 import { State } from '~.storybook/State';
 import Button from '~/components/Button';
@@ -11,7 +10,6 @@ import FlyinPanelFixture from './FlyinPanel.fixture';
 <Meta
   title="Components/FlyinPanel"
   component={FlyinPanel}
-  decorators={[withKnobs]}
 />
 
 # FlyinPanel
@@ -30,27 +28,20 @@ import FlyinPanelFixture from './FlyinPanel.fixture';
               title="Ingredients"
             >
               <Heading level="2" size="xSmall">
-                Product Ingredients
+                Lorem ipsum dolor sit amet
               </Heading>
               <P>
-                Water (Aqua), Glycerin, Sodium Ascorbyl Phosphate, Niacinamide,
-                PEG-40 Hydrogenated Castor Oil, Phenoxyethanol, Citric Acid, Xanthan
-                Gum, Sodium Gluconate, Sodium Dehydroacetate, Bisabolol, Polysorbate
-                20, Boswellia Carterii Oil, Fusanus Spicatus Wood Oil, Rosa
-                Damascena Flower Oil, Biosaccharide Gum-1, Sodium Carrageenan,
-                Glyceryl Caprylate, Sodium Anisate, Sodium Levulinate, Sea Salt
-                (Maris sal), d-Limonene, Citronellol, Farnesol, Geraniol.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id erat est. Ut convallis, neque id semper fermentum, urna risus gravida nibh, vel molestie sapien leo ac tortor. Nunc dignissim quis arcu a lobortis. Phasellus tempus consequat erat, at egestas elit pulvinar lacinia. Nullam pretium, risus a dictum rhoncus, ex libero cursus erat, dignissim malesuada tortor justo quis enim. Nulla pellentesque sit amet ante et molestie. Mauris interdum odio at mauris pulvinar, non placerat nulla tempus.
               </P>
               <P>
-                This ingredient list is subject to change, customers should refer to
-                the product packaging for the most up-to-date ingredient list.
+                Sed in justo a risus scelerisque molestie. Aliquam rhoncus erat sit amet quam vehicula venenatis. Maecenas elementum, metus id facilisis placerat, turpis diam sodales velit, quis sodales ipsum nunc nec velit. Aenean ac tortor consectetur, volutpat massa sed, ultricies orci. In euismod justo at mattis accumsan. Vestibulum ullamcorper, urna a mattis vehicula, ipsum ligula vehicula eros, eu auctor tellus enim eget elit. In a tempus mi.
               </P>
             </FlyinPanel>
             <Button
               onClick={() => {
                 setState(() => ({ ...state, isVisible: true }));
               }}
-              title="open Flyin"
+              title="Open Flyin"
             >
               Open Flyin
             </Button>

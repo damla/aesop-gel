@@ -1,14 +1,9 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs } from '@storybook/addon-knobs';
-import { object, select, boolean } from '@storybook/addon-knobs';
+import * as knobs from '@storybook/addon-knobs';
 import DoubleImage from './DoubleImage';
 import DoubleImageFixture from './DoubleImage.fixture';
 
-<Meta
-  title="Components/DoubleImage"
-  component={DoubleImage}
-  decorators={[withKnobs]}
-/>
+<Meta title="Components/DoubleImage" component={DoubleImage} />
 
 # DoubleImage
 
@@ -29,7 +24,7 @@ import DoubleImageFixture from './DoubleImage.fixture';
         medium: DoubleImageFixture.imageTwo.medium,
         small: DoubleImageFixture.imageTwo.small,
       }}
-      theme={select('theme', ['dark', 'light'], 'dark')}
+      theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
     />
   </Story>
 </Preview>

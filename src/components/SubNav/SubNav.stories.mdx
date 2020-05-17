@@ -1,11 +1,9 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs } from '@storybook/addon-knobs';
-import { boolean, select, text } from '@storybook/addon-knobs';
-import { State } from '~.storybook/State';
+import * as knobs from '@storybook/addon-knobs';
 import SubNav from './SubNav';
 import SubNavFixture from './SubNav.fixture';
 
-<Meta title="Components/SubNav" component={SubNav} decorators={[withKnobs]} />
+<Meta title="Components/SubNav" component={SubNav} />
 
 # SubNav
 
@@ -13,10 +11,10 @@ import SubNavFixture from './SubNav.fixture';
   <Story name="Base component">
     <SubNav
       heading={SubNavFixture.heading}
-      id={text('', SubNavFixture.id)}
-      isSelect={boolean('isSelect', false)}
+      id={SubNavFixture.id}
+      isSelect={knobs.boolean('isSelect', false, 'Presentation')}
       links={SubNavFixture.links}
-      theme={select('theme', ['dark', 'light'], 'dark')}
+      theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
     />
   </Story>
 </Preview>

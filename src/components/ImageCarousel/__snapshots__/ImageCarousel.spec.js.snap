@@ -33,7 +33,7 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
       >
         <g>
           <polygon
-            className="chevronAndCloseWithCircleChevron"
+            className="chevron"
             points="25,31.3 4.2,10.5 0.1,14.6 25,39.5 50,14.6 45.9,10.5"
           />
         </g>
@@ -114,7 +114,7 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
                       srcSet="./assets/images/ImageCarousel/image-three-small.jpg"
                     />
                     <img
-                      alt="Image Three AltText"
+                      alt="Vivamus sollicitudin"
                     />
                   </picture>
                 </div>
@@ -168,7 +168,7 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
                       srcSet="./assets/images/ImageCarousel/image-two-small.jpg"
                     />
                     <img
-                      alt="Image Two AltText"
+                      alt="Nunc dignissim"
                     />
                   </picture>
                 </div>
@@ -222,7 +222,7 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
                       srcSet="./assets/images/ImageCarousel/image-three-small.jpg"
                     />
                     <img
-                      alt="Image Three AltText"
+                      alt="Vivamus sollicitudin"
                     />
                   </picture>
                 </div>
@@ -275,7 +275,7 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
                       srcSet="./assets/images/ImageCarousel/image-two-small.jpg"
                     />
                     <img
-                      alt="Image Two AltText"
+                      alt="Nunc dignissim"
                     />
                   </picture>
                 </div>
@@ -328,7 +328,7 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
                       srcSet="./assets/images/ImageCarousel/image-three-small.jpg"
                     />
                     <img
-                      alt="Image Three AltText"
+                      alt="Vivamus sollicitudin"
                     />
                   </picture>
                 </div>
@@ -363,7 +363,7 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
       >
         <g>
           <polygon
-            className="chevronAndCloseWithCircleChevron"
+            className="chevron"
             points="25,31.3 4.2,10.5 0.1,14.6 25,39.5 50,14.6 45.9,10.5"
           />
         </g>
@@ -403,7 +403,7 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
     <div
       className="caption"
     >
-      Image Two Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum facilisis ligula elementum.
+      Nunc dignissim quis arcu a lobortis. Nullam auctor id nulla non sagittis. Quisque non enim efficitur quam mattis semper a nec arcu.
     </div>
   </footer>
 </div>

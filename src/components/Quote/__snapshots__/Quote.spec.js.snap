@@ -10,12 +10,12 @@ exports[`<Quote /> renders base component correctly 1`] = `
     <blockquote
       className="blockquote"
     >
-      ‘Do not wish to be anything but what you are, and try to be that perfectly’
+      ‘Lorem ipsum dolor sit amet, consectetur adipiscing sit amet ipsum dolor elit’
     </blockquote>
     <cite
       className="author"
     >
-      Diana Ramirez
+      Lorem ipsum
     </cite>
   </div>
 </div>

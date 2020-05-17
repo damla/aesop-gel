@@ -1,5 +1,4 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs } from '@storybook/addon-knobs';
 import * as knobs from '@storybook/addon-knobs';
 import { State } from '~.storybook/State';
 import Button from '~/components/Button';
@@ -10,10 +9,19 @@ import ModalBodyFixture from './components/ModalBody/ModalBody.fixture';
 <Meta
   title="Components/Modal"
   component={Modal}
-  decorators={[withKnobs]}
 />
 
 # Modal
+
+A basic modal component that requires a DOM anchor point that makes use of [React Portal]() to mount the modal once open.
+
+```
+<Modal portalId="uniqueID" ... />
+
+...
+
+<div id="uniqueID" />
+```
 
 <Preview>
   <Story name="Base component">
@@ -27,6 +35,7 @@ import ModalBodyFixture from './components/ModalBody/ModalBody.fixture';
               onClose={() => {
                 setState(() => ({ ...state, isVisible: false }));
               }}
+              portalId="modalPortal"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id mauris
               lacinia, sollicitudin dolor quis, pellentesque nibh. Integer pharetra
@@ -40,6 +49,7 @@ import ModalBodyFixture from './components/ModalBody/ModalBody.fixture';
             >
               Open Modal
             </Button>
+            <div id="modalPortal" />
           </React.Fragment>
         )
       }}

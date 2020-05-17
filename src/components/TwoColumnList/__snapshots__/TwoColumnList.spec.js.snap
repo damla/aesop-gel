@@ -13,13 +13,13 @@ exports[`<TwoColumnList /> renders base component correctly 1`] = `
       <h2
         className="base medium dark"
       >
-        Title 1
+        Suspendisse rhoncus
       </h2>
-      <h4
-        className="base xSmall dark subHeading"
+      <h3
+        className="base small dark subHeading"
       >
-        Sub title 1
-      </h4>
+        Sagittis diam
+      </h3>
       <ul
         className="base dark list"
       >
@@ -28,10 +28,10 @@ exports[`<TwoColumnList /> renders base component correctly 1`] = `
         >
           <a
             className="base left dark"
-            href="https://www.aesop.com/au/r/about"
+            href="/"
             target="_self"
           >
-            About
+            Quisque venenatis dictum
           </a>
         </li>
         <li
@@ -39,10 +39,10 @@ exports[`<TwoColumnList /> renders base component correctly 1`] = `
         >
           <a
             className="base left dark"
-            href="https://www.aesop.com/au/r/about"
+            href="/"
             target="_self"
           >
-            About 2
+            Aliquam ullamcorper
           </a>
         </li>
       </ul>
@@ -53,13 +53,13 @@ exports[`<TwoColumnList /> renders base component correctly 1`] = `
       <h2
         className="base medium dark"
       >
-        Title 2
+        Vestibulum ante ipsum
       </h2>
-      <h4
-        className="base xSmall dark subHeading"
+      <h3
+        className="base small dark subHeading"
       >
-        Sub title 2
-      </h4>
+        Nullam sed libero
+      </h3>
       <ul
         className="base dark list"
       >
@@ -68,10 +68,10 @@ exports[`<TwoColumnList /> renders base component correctly 1`] = `
         >
           <a
             className="base left dark"
-            href="https://www.aesop.com/au/r/philosophy-to-products"
+            href="/"
             target="_self"
           >
-            Philosophy
+            Donec non venenatis massa
           </a>
         </li>
       </ul>
@@ -86,30 +86,30 @@ exports[`<TwoColumnList /> renders base component correctly 1`] = `
       <h2
         className="base medium dark"
       >
-        Suisse Heading 24
+        Interdum et malesuada fames
       </h2>
-      <h4
-        className="base xSmall dark subHeading"
+      <h3
+        className="base small dark subHeading"
       >
-        Suisse Sub Heading
-      </h4>
+        Fusce venenatis
+      </h3>
       <ul
         className="base dark list"
       >
         <li
           className="item"
         >
-          About link one
+          Pellentesque luctus
         </li>
         <li
           className="item"
         >
           <a
             className="base left dark"
-            href="https://www.aesop.com/au/r/about"
+            href="/"
             target="_self"
           >
-            About link two
+            Maecenas a libero
           </a>
         </li>
       </ul>

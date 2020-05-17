@@ -1,43 +1,58 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs } from '@storybook/addon-knobs';
-import { boolean, text } from '@storybook/addon-knobs';
+import * as knobs from '@storybook/addon-knobs';
 import Carousel from './Carousel';
 import CarouselFixture from './Carousel.fixture';
 
-<Meta
-  title="Components/Carousel"
-  component={Carousel}
-  decorators={[withKnobs]}
-/>
+<Meta title="Components/Carousel" component={Carousel} />
 
 # Carousel
 
 <Preview>
   <Story name="Base component">
     <Carousel
-      introduction={CarouselFixture.introduction}
+      introduction={{
+        cta: {
+          style: CarouselFixture.introduction.cta.style,
+          title: CarouselFixture.introduction.cta.title,
+          url: CarouselFixture.introduction.cta.url,
+          text: knobs.text(
+            'cta text',
+            CarouselFixture.introduction.heading,
+            'Indroduction copy',
+          ),
+        },
+        heading: knobs.text(
+          'heading',
+          CarouselFixture.introduction.heading,
+          'Indroduction copy',
+        ),
+        description: knobs.text(
+          'description',
+          CarouselFixture.introduction.description,
+          'Indroduction copy',
+        ),
+      }}
       slides={[
         {
-          url: text('firstSlide.url', '/'),
-          description: text('firstSlide.description', 'Example description 1'),
-          heading: text('firstSlide.heading', 'Parsley Seed Facial Cleanser'),
+          url: '/',
+          description: knobs.text(
+            'description',
+            'Nunc dignissim quis',
+            'First slide copy',
+          ),
+          heading: knobs.text(
+            'heading',
+            'Lorem ipsum dolor sit',
+            'First slide copy',
+          ),
           image: {
-            altText: text(
-              'firstSlide.image.altText',
-              'Image of Parsley Seed Facial Cleanser',
-            ),
-            small: text(
-              'firstSlide.image.small',
+            altText: 'Lorem ipsum dolor sit',
+            small:
               'https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ',
-            ),
-            medium: text(
-              'firstSlide.image.medium',
+            medium:
               'https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ',
-            ),
-            large: text(
-              'firstSlide.image.large',
+            large:
               'https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ',
-            ),
           },
         },
         ...CarouselFixture.slides,

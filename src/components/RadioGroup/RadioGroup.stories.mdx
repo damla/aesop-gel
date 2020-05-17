@@ -1,6 +1,5 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs } from '@storybook/addon-knobs';
-import { text, object } from '@storybook/addon-knobs';
+import * as knobs from '@storybook/addon-knobs';
 import { State } from '~.storybook/State';
 import RadioGroup from './RadioGroup';
 import RadioGroupFixture from './RadioGroup.fixture';
@@ -8,7 +7,6 @@ import RadioGroupFixture from './RadioGroup.fixture';
 <Meta
   title="Components/RadioGroup"
   component={RadioGroup}
-  decorators={[withKnobs]}
 />
 
 # RadioGroup
@@ -23,7 +21,7 @@ import RadioGroupFixture from './RadioGroup.fixture';
       {(state, setState) => {
         return (
           <RadioGroup
-            name={text('name', 'radioGroup')}
+            name={knobs.text('name', 'radioGroup', 'Content')}
             onChange={(event) => {
               event.persist();
               const {
@@ -31,8 +29,7 @@ import RadioGroupFixture from './RadioGroup.fixture';
               } = event;
               setState({...state, value})
             }}
-            options={object('options', RadioGroupFixture.options)}
-            testReference={text('name', 'radioGroup')}
+            options={knobs.object('options', RadioGroupFixture.options, 'Content')}
             value={state.value}
           />
         )

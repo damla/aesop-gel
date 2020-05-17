@@ -1,57 +1,5 @@
 @import 'styles/index';
 
 .base {
-  min-height: 80vh;
-  padding: 20px;
-
-  @media (--viewport-md) {
-    padding: 100px 20px 40px 20px;
-  }
-
-  @media (--viewport-lg) {
-    padding: 100px 40px 80px 100px;
-  }
-
-  @media (--viewport-xl) {
-    padding: 140px 120px 120px 120px;
-  }
-
-  &,
-  & * {
-    box-sizing: border-box;
-  }
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column-reverse;
-
-  @media (--viewport-lg) {
-    flex-direction: row-reverse;
-  }
-
-  @media (--viewport-lg-only) {
-    justify-content: space-around;
-  }
-}
-
-.content {
-  @media (--viewport-lg) {
-    width: 40%;
-  }
-
-  @media (--viewport-xl) {
-    width: auto;
-  }
-}
-
-.image {
-  @media (--viewport-lg) {
-    width: 40%;
-    align-self: flex-end;
-  }
-
-  @media (--viewport-xl) {
-    width: auto;
-  }
+  display: block;
 }

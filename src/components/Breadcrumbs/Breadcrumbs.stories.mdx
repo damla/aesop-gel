@@ -1,14 +1,9 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs } from '@storybook/addon-knobs';
 import * as knobs from '@storybook/addon-knobs';
 import Breadcrumbs from './Breadcrumbs';
 import BreadcrumbsFixture from './Breadcrumbs.fixture';
 
-<Meta
-  title="Components/Breadcrumbs"
-  component={Breadcrumbs}
-  decorators={[withKnobs]}
-/>
+<Meta title="Components/Breadcrumbs" component={Breadcrumbs} />
 
 # Breadcrumbs
 
@@ -20,7 +15,7 @@ import BreadcrumbsFixture from './Breadcrumbs.fixture';
         'theme',
         ['dark', 'light'],
         BreadcrumbsFixture.theme,
-        'User Interface',
+        'Presentation',
       )}
     />
   </Story>

@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs } from '@storybook/addon-knobs';
+import * as knobs from '@storybook/addon-knobs';
 import { boolean, select, text, radios } from '@storybook/addon-knobs';
 import DefinitionList from '~/components/DefinitionList';
 import Hyperlink from '~/components/Hyperlink';
@@ -12,17 +12,17 @@ import Video from '~/components/Video';
 import MediaWithContent from './MediaWithContent';
 import MediaWithContentFixture from './MediaWithContent.fixture';
 
-<Meta title="Components/MediaWithContent" component={MediaWithContent} decorators={[withKnobs]} />
+<Meta title="Components/MediaWithContent" component={MediaWithContent} />
 
 # MediaWithContent
 
 <Preview>
   <Story name="Base Component">
     {(() => {
-      const theme = select('theme', ['dark', 'light'], 'dark');
+      const theme = knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation');
       return (
         <MediaWithContent
-          backgroundColor={text('backgroundColor', '#fffeef')}
+          backgroundColor={knobs.text('backgroundColor', '#fffeef', 'Presentation')}
           content={(() => {
             const options = {
               DefinitionList: {
@@ -38,22 +38,23 @@ import MediaWithContentFixture from './MediaWithContent.fixture';
                 props: MediaWithContentFixture.linkButtonGroup,
               },
             };
-            const componentName = select('content', Object.keys(options), 'LinkButtonGroup');
+            const componentName = knobs.select('content', Object.keys(options), 'LinkButtonGroup', 'Content');
             const { Component, props } = options[componentName];
             return <Component {...props} theme={theme} />
           })()}
           copy={{
-            description: text(
+            description: knobs.text(
               'description',
               MediaWithContentFixture.copy.default.description,
+              'Copy',
             ),
-            eyebrow: text('eyebrow', MediaWithContentFixture.copy.default.eyebrow),
-            heading: text('heading', MediaWithContentFixture.copy.default.heading),
-            subHeading: text('subHeading', MediaWithContentFixture.copy.default.subHeading),
+            eyebrow: knobs.text('eyebrow', MediaWithContentFixture.copy.default.eyebrow, 'Copy'),
+            heading: knobs.text('heading', MediaWithContentFixture.copy.default.heading, 'Copy'),
+            subHeading: knobs.text('subHeading', MediaWithContentFixture.copy.default.subHeading, 'Copy'),
           }}
-          hasFullWidthImage={boolean('hasFullWidthImage', false)}
-          isHero={boolean('isHero', false)}
-          isReverse={boolean('isReverse', false)}
+          hasFullWidthImage={knobs.boolean('hasFullWidthImage', false, 'Presentation')}
+          isHero={knobs.boolean('isHero', false, 'Presentation')}
+          isReverse={knobs.boolean('isReverse', false, 'Presentation')}
           media={
             <Image
               altText={MediaWithContentFixture.image.expectations.altText}
@@ -99,7 +100,6 @@ import MediaWithContentFixture from './MediaWithContent.fixture';
           small={MediaWithContentFixture.image.default.small}
         />
       }
-      theme={select('theme', ['dark', 'light'], 'dark')}
     />
   </Story>
 </Preview>

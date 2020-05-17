@@ -4,9 +4,9 @@ import cx from 'classnames';
 import Heading from '~/components/Heading';
 import Paragraph from '~/components/Paragraph';
 import Transition from '~/components/Transition';
-import styles from './ProductDetailHeader.module.css';
+import styles from './ProductDetailTitle.module.css';
 
-const ProductDetailHeader = ({
+const ProductDetailTitle = ({
   className,
   description,
   id,
@@ -17,29 +17,27 @@ const ProductDetailHeader = ({
 
   return (
     <Transition isActiveOnMount={true} type="slowFade">
-      <>
-        <header className={classSet} id={`product-description-header-${id}`}>
-          <Heading
-            className={styles.productName}
-            level="1"
-            size="xLarge"
-            theme={theme}
-          >
-            {productName}
-          </Heading>
+      <header className={classSet} id={`product-description-header-${id}`}>
+        <Heading
+          className={styles.productName}
+          level="1"
+          size="xLarge"
+          theme={theme}
+        >
+          {productName}
+        </Heading>
 
-          {description && (
-            <Paragraph className={styles.description} theme={theme}>
-              {description}
-            </Paragraph>
-          )}
-        </header>
-      </>
+        {description && (
+          <Paragraph className={styles.description} theme={theme}>
+            {description}
+          </Paragraph>
+        )}
+      </header>
     </Transition>
   );
 };
 
-ProductDetailHeader.propTypes = {
+ProductDetailTitle.propTypes = {
   className: PropTypes.string,
   description: PropTypes.string.isRequired,
   id: PropTypes.string,
@@ -47,7 +45,7 @@ ProductDetailHeader.propTypes = {
   theme: PropTypes.oneOf(['dark', 'light']),
 };
 
-ProductDetailHeader.defaultProps = {
+ProductDetailTitle.defaultProps = {
   className: undefined,
   description: undefined,
   id: undefined,
@@ -55,4 +53,4 @@ ProductDetailHeader.defaultProps = {
   theme: 'dark',
 };
 
-export default ProductDetailHeader;
+export default ProductDetailTitle;

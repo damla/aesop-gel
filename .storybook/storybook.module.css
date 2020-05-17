@@ -51,4 +51,8 @@
   .sbdocs-content {
     max-width: 1300px !important;
   }
+
+  div[class^='css-'][scale='1'] {
+    transform: none;
+  }
 }

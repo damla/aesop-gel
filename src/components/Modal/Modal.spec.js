@@ -11,7 +11,7 @@ jest.mock('react-dom');
 const mockFn = jest.fn();
 
 describe('<Modal /> with no root element', () => {
-  it('returns null if not root element found to bind to', () => {
+  it('returns null if no root element is found to bind to', () => {
     const component = shallow(
       <Modal copy={ModalBodyFixture.copy} isVisible={true} onClose={mockFn}>
         content
@@ -30,7 +30,7 @@ describe('<Modal />', () => {
 
   beforeEach(() => {
     modalRoot = document.createElement('div');
-    modalRoot.setAttribute('id', 'modal');
+    modalRoot.setAttribute('id', 'aesopModal');
 
     document.body.append(modalRoot);
   });
@@ -38,7 +38,12 @@ describe('<Modal />', () => {
   it('renders base component correctly', () => {
     const tree = renderer
       .create(
-        <Modal copy={ModalBodyFixture.copy} isVisible={true} onClose={mockFn}>
+        <Modal
+          copy={ModalBodyFixture.copy}
+          isVisible={true}
+          onClose={mockFn}
+          portalId="aesopModalll"
+        >
           content
         </Modal>,
       )

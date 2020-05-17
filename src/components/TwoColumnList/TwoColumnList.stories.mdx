@@ -1,26 +1,31 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs } from '@storybook/addon-knobs';
 import * as knobs from '@storybook/addon-knobs';
 import TwoColumnList from './TwoColumnList';
 import TwoColumnListFixture from './TwoColumnList.fixture';
 
-<Meta
-  title="Components/TwoColumnList"
-  component={TwoColumnList}
-  decorators={[withKnobs]}
-/>
+<Meta title="Components/TwoColumnList" component={TwoColumnList} />
 
 # TwoColumnList
 
 <Preview>
   <Story name="Base component">
     <TwoColumnList
-      leftColumn={knobs.object('leftColumn', TwoColumnListFixture.leftColumn)}
+      leftColumn={knobs.object(
+        'leftColumn',
+        TwoColumnListFixture.leftColumn,
+        'Content',
+      )}
       rightColumn={knobs.object(
         'rightColumn',
         TwoColumnListFixture.rightColumn,
+        'Content',
       )}
-      theme={knobs.select('TwoColumnList theme', ['dark', 'light'], 'dark')}
+      theme={knobs.select(
+        'TwoColumnList theme',
+        ['dark', 'light'],
+        'dark',
+        'Presentation',
+      )}
     />
   </Story>
 </Preview>

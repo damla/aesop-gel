@@ -1,32 +1,34 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs } from '@storybook/addon-knobs';
-import { text, select } from '@storybook/addon-knobs';
+import * as knobs from '@storybook/addon-knobs';
 import Figure from './Figure';
 import Image from '~/components/Image';
 
-<Meta title="Components/Figure" component={Figure} decorators={[withKnobs]} />
+<Meta title="Components/Figure" component={Figure} />
 
 # Figure
 
 <Preview>
   <Story name="Base component">
     <Figure
-      caption={text('caption', 'About Aesop')} id={text('id', 'aesop')}
-      theme={select('Image theme', ['dark', 'light'], 'dark')}
+      caption={knobs.text('caption', 'Lorem ipsum dolor sit amet', 'Copy')}
+      theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
     >
       <Image
-        altText={text('altText', 'Image of Milk Cleansing Campaign Aesop 2019')}
-        large={text(
+        altText="Lorem ipsum dolor sit amet"
+        large={knobs.text(
           'large',
           'https://www.aesop.com/medias/GelCleanser-640x640.png?context=bWFzdGVyfGltYWdlc3w1MzE5NTl8aW1hZ2UvcG5nfGltYWdlcy9oOTUvaGNkLzg4MDc3OTc4NTAxNDIucG5nfGM3NTNhYjdkMWNiOTRhNWZhNDA0NWExZWJiODMxN2VhNzEyY2ZkNGUyYzc4ZWVkZDRjYTIzMzZmZTRlOGYxNjM',
+          'Image',
         )}
-        medium={text(
+        medium={knobs.text(
           'medium',
           'https://www.aesop.com/medias/GelCleanser-640x640.png?context=bWFzdGVyfGltYWdlc3w1MzE5NTl8aW1hZ2UvcG5nfGltYWdlcy9oOTUvaGNkLzg4MDc3OTc4NTAxNDIucG5nfGM3NTNhYjdkMWNiOTRhNWZhNDA0NWExZWJiODMxN2VhNzEyY2ZkNGUyYzc4ZWVkZDRjYTIzMzZmZTRlOGYxNjM',
+          'Image',
         )}
-        small={text(
+        small={knobs.text(
           'small',
           'https://www.aesop.com/medias/GelCleanser-640x640.png?context=bWFzdGVyfGltYWdlc3w1MzE5NTl8aW1hZ2UvcG5nfGltYWdlcy9oOTUvaGNkLzg4MDc3OTc4NTAxNDIucG5nfGM3NTNhYjdkMWNiOTRhNWZhNDA0NWExZWJiODMxN2VhNzEyY2ZkNGUyYzc4ZWVkZDRjYTIzMzZmZTRlOGYxNjM',
+          'Image',
         )}
       />
     </Figure>

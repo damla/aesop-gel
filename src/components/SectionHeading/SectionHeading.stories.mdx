@@ -1,34 +1,32 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs } from '@storybook/addon-knobs';
-import { text, select, boolean } from '@storybook/addon-knobs';
+import * as knobs from '@storybook/addon-knobs';
 import SectionHeading from './SectionHeading';
 
-<Meta
-  title="Components/SectionHeading"
-  component={SectionHeading}
-  decorators={[withKnobs]}
-/>
+<Meta title="Components/SectionHeading" component={SectionHeading} />
 
 # SectionHeading
 
 <Preview>
   <Story name="Base component">
     <SectionHeading
-      eyebrow={text(
+      eyebrow={knobs.text(
         'eyebrow',
         'Eyebrow: Offers fortification of the highest order against free radicals.',
+        'Copy',
       )}
-      heading={text(
+      heading={knobs.text(
         'heading',
         'Heading: Fortification of the highest order. Parsley Seed Anti-Oxidant Facial Hydrating Cream.',
+        'Copy',
       )}
       id="Anti-Oxidant"
-      isPageHeading={boolean('isPageHeading', false)}
-      subHeading={text(
+      isPageHeading={knobs.boolean('isPageHeading', false, 'Presentation')}
+      subHeading={knobs.text(
         'subHeading',
         'SubHeading: Parsley Seed Cream. Intensely soothing, nourishing and hydrating, this elegant formulation contains a potent blend of botanicals that offer fortification of the highest order against free radicals.',
+        'Copy',
       )}
-      theme={select('theme', ['dark', 'light'], 'dark')}
+      theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
     />
   </Story>
 </Preview>
@@ -46,7 +44,6 @@ import SectionHeading from './SectionHeading';
     <SectionHeading
       heading="Page Heading: Fortification of the highest order. Parsley Seed Anti-Oxidant Facial Hydrating Cream."
       isPageHeading={true}
-      theme={select('theme', ['dark', 'light'], 'dark', 'pageHeading')}
     />
   </Story>
 </Preview>

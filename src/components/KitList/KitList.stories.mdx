@@ -1,19 +1,18 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs } from '@storybook/addon-knobs';
 import * as knobs from '@storybook/addon-knobs';
 import KitList from './KitList';
 import KitListFixture from './KitList.fixture';
 
-<Meta title="Components/KitList" component={KitList} decorators={[withKnobs]} />
+<Meta title="Components/KitList" component={KitList} />
 
 # KitList
 
 <Preview>
   <Story name="Base component">
     <KitList
-      isVisible={knobs.boolean('isActive', true)}
+      isVisible={knobs.boolean('isActive', true, 'Presentation')}
       items={KitListFixture.items}
-      theme={knobs.select('theme', ['dark', 'light'], 'dark')}
+      theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
     />
   </Story>
 </Preview>

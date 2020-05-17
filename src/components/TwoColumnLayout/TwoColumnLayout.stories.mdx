@@ -1,62 +1,70 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs } from '@storybook/addon-knobs';
-import { text, boolean, select } from '@storybook/addon-knobs';
-import '~.storybook/storybook.module.css';
+import * as knobs from '@storybook/addon-knobs';
 import TwoColumnList from '~/components/TwoColumnList';
 import TwoColumnListFixture from '~/components/TwoColumnList/TwoColumnList.fixture';
 import BodyCopy from '~/components/BodyCopy';
 import TwoColumnLayout from './TwoColumnLayout';
 
-<Meta
-  title="Components/TwoColumnLayout"
-  component={TwoColumnLayout}
-  decorators={[withKnobs]}
-/>
+<Meta title="Components/TwoColumnLayout" component={TwoColumnLayout} />
 
 # TwoColumnLayout
 
 <Preview>
   <Story name="Base component">
-    <TwoColumnLayout
-      childrenClassNames={{ sidebar: 'sidebar', content: 'content' }}
-      content={
-        <>
-          <BodyCopy
-            copy="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a metus vulputate, consectetur mauris sit amet, auctor tortor. Nunc at mauris enim. Maecenas tincidunt metus placerat, interdum arcu ac, semper lectus. Quisque venenatis dictum interdum. Maecenas velit tortor, egestas at ornare quis, egestas quis dui. Suspendisse rhoncus sagittis diam"
-            heading="Fusce a sollicitudin lacus"
-            id="Anti-Oxidant"
-            theme={select('theme', ['dark', 'light'], 'dark')}
-          />
-          <TwoColumnList
-            leftColumn={TwoColumnListFixture.leftColumn}
-            rightColumn={TwoColumnListFixture.rightColumn}
-            theme={select('theme', ['dark', 'light'], 'dark')}
-          />
-        </>
-      }
-      hasRightPadding={boolean('hasRightPadding', true)}
-      id={text('id', 'TwoColumn-id')}
-      isReversed={boolean('isReversed', true)}
-      sidebar={
-        <BodyCopy
-          copy="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a metus vulputate, consectetur mauris sit amet, auctor tortor. Nunc at mauris enim. Maecenas tincidunt metus placerat, interdum arcu ac, semper lectus. Quisque venenatis dictum interdum. Maecenas velit tortor, egestas at ornare quis, egestas quis dui. Suspendisse rhoncus sagittis diam"
-          cta={{
-            id: 'button-id',
-            text: 'Lorem ipsum dolor',
-            url: '/',
-            openInANewWindow: true,
-            style: 'Internal Button Link',
-          }}
-          eyebrow="In a metus vulputate"
-          hasSerifFontHeading={true}
-          heading="Lorem ipsum dolor sit amet"
-          id="Anti-Oxidant"
-          subHeading="Quisque venenatis dictum interdum"
-          theme={select('theme', ['dark', 'light'], 'dark')}
+    {() => {
+      const theme = knobs.select(
+        'theme',
+        ['dark', 'light'],
+        'dark',
+        'Presentation',
+      );
+      return (
+        <TwoColumnLayout
+          childrenClassNames={{ sidebar: 'sidebar', content: 'content' }}
+          content={
+            <React.Fragment>
+              <BodyCopy
+                copy="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a metus vulputate, consectetur mauris sit amet, auctor tortor. Nunc at mauris enim. Maecenas tincidunt metus placerat, interdum arcu ac, semper lectus. Quisque venenatis dictum interdum. Maecenas velit tortor, egestas at ornare quis, egestas quis dui. Suspendisse rhoncus sagittis diam"
+                heading="Fusce a sollicitudin lacus"
+                id="Anti-Oxidant"
+                theme={theme}
+              />
+              <TwoColumnList
+                leftColumn={TwoColumnListFixture.leftColumn}
+                rightColumn={TwoColumnListFixture.rightColumn}
+                theme={theme}
+              />
+            </React.Fragment>
+          }
+          hasRightPadding={knobs.boolean(
+            'hasRightPadding',
+            true,
+            'Presentation',
+          )}
+          id="TwoColumn-id"
+          isReversed={knobs.boolean('isReversed', true, 'Presentation')}
+          sidebar={
+            <BodyCopy
+              copy="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a metus vulputate, consectetur mauris sit amet, auctor tortor. Nunc at mauris enim. Maecenas tincidunt metus placerat, interdum arcu ac, semper lectus. Quisque venenatis dictum interdum. Maecenas velit tortor, egestas at ornare quis, egestas quis dui. Suspendisse rhoncus sagittis diam"
+              cta={{
+                id: 'button-id',
+                text: 'Lorem ipsum dolor',
+                url: '/',
+                openInANewWindow: true,
+                style: 'Internal Button Link',
+              }}
+              eyebrow="In a metus vulputate"
+              hasSerifFontHeading={true}
+              heading="Lorem ipsum dolor sit amet"
+              id="Anti-Oxidant"
+              subHeading="Quisque venenatis dictum interdum"
+              theme={theme}
+            />
+          }
+          theme={theme}
         />
-      }
-      theme={select('theme', ['dark', 'light'], 'dark')}
-    />
+      );
+    }}
   </Story>
 </Preview>
 

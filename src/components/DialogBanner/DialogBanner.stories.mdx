@@ -1,15 +1,13 @@
 import { Fragment } from 'react';
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs } from '@storybook/addon-knobs';
 import { State } from '~.storybook/State';
-import { object, text, select, boolean } from '@storybook/addon-knobs';
+import * as knobs from '@storybook/addon-knobs';
 import Button from '~/components/Button';
 import DialogBanner from './DialogBanner';
 
 <Meta
   title="Components/DialogBanner"
   component={DialogBanner}
-  decorators={[withKnobs]}
 />
 
 # DialogBanner
@@ -21,23 +19,24 @@ import DialogBanner from './DialogBanner';
         <Fragment>
           <DialogBanner
             cta={{
-              text: 'Need assistance?',
-              url: '/contact-us/',
+              text: 'Vestibulum ullamcorper.',
+              url: '/',
             }}
-            heading={text('heading', 'Maximum allowed quantity exceeded.')}
+            heading={knobs.text('heading', 'Maecenas elementum, metus id facilisis', 'Copy')}
             isVisible={state.isVisible}
-            message={text(
+            message={knobs.text(
               'message',
-              'Our apologies, You have exceeded the maximum allowed quantity of this item.',
+              'Nullam pretium, risus a dictum rhoncus, ex libero cursus erat, dignissim malesuada tortor justo quis enim. Nulla pellentesque sit amet ante et molestie.',
+              'Copy',
             )}
             onClose={() => setState({ ...state, isVisible: false })}
-            position={select('position', ['top', 'bottom'], 'top')}
-            showCloseButton={boolean('showCloseButton', true)}
-            theme={select('theme', ['dark', 'black'], 'dark')}
+            position={knobs.select('position', ['top', 'bottom'], 'top', 'Presentation')}
+            showCloseButton={knobs.boolean('showCloseButton', true, 'Presentation')}
+            theme={knobs.select('theme', ['dark', 'black'], 'dark', 'Presentation')}
           />
           <Button
             onClick={() => setState({ ...state, isVisible: true })}
-            title="open Dialog Banner"
+            title="Open Dialog Banner"
           >
             Open Dialog Banner
           </Button>
