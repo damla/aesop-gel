@@ -13,7 +13,7 @@ The `ThemeContextProvider` method, `useThemeContext` and `useTheme` hooks are us
     {() => {
       const ChildComponent = () => {
         return (
-          <p>Theme: <code>{JSON.stringify(useThemeContext())}</code></p>
+          <pre><code>{JSON.stringify(useThemeContext())}</code></pre>
         );
       };
       return (
