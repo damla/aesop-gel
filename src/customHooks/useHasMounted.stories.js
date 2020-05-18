@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { P } from '~/components/Paragraph';
 import { useHasMounted } from '~/customHooks/useHasMounted';
 
-storiesOf('Hooks/useHasMounted', module).add('useHasMounted', () => {
+storiesOf('Hooks/useHasMounted', module).add('Base hook', () => {
   const hasMounted = useHasMounted();
 
   return (

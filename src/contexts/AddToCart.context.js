@@ -12,4 +12,7 @@ export const AddToCartContextProvider = AddToCartContext.Provider;
 
 export const useAddToCartContext = () => useContext(AddToCartContext);
 
-export default AddToCartContext;
+export default {
+  AddToCartContextProvider,
+  useAddToCartContext,
+};

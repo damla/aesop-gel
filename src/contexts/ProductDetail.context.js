@@ -17,4 +17,7 @@ export const ProductDetailContextProvider = ProductDetailContext.Provider;
 
 export const useProductDetailContext = () => useContext(ProductDetailContext);
 
-export default ProductDetailContext;
+export default {
+  ProductDetailContextProvider,
+  useProductDetailContext,
+};
