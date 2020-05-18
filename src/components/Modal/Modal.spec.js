@@ -42,7 +42,7 @@ describe('<Modal />', () => {
           copy={ModalBodyFixture.copy}
           isVisible={true}
           onClose={mockFn}
-          portalId="aesopModalll"
+          portalId="aesopModal"
         >
           content
         </Modal>,

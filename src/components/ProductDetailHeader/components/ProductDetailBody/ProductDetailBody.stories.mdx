@@ -1,25 +1,22 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs } from '@storybook/addon-knobs';
-import { text } from '@storybook/addon-knobs';
 import { AddToCartContextProvider } from '~/contexts/AddToCart.context';
 import { VariantSelectContextProvider } from '~/contexts/VariantSelect.context';
 import useAddToCart from '~/customHooks/useAddToCart';
 import useVariantSelect from '~/customHooks/useVariantSelect';
+import ProductDetailImage from '~/components/ProductDetailHeader/components/ProductDetailImage/ProductDetailImage.fixture';
 import ProductDetailBody from './ProductDetailBody';
 import ProductDetailBodyFixture from './ProductDetailBody.fixture';
 
-<Meta
-  title="Components/ProductDetailBody"
-  component={ProductDetailBody}
-  decorators={[withKnobs]}
-/>
+<Meta title="Components/ProductDetailBody" component={ProductDetailBody} />
 
 # ProductDetailBody
 
 <Preview>
   <Story name="Base component">
     <AddToCartContextProvider value={useAddToCart()}>
-      <VariantSelectContextProvider value={useVariantSelect()}>
+      <VariantSelectContextProvider
+        value={useVariantSelect(ProductDetailImage.variantOptions)}
+      >
         <ProductDetailBody
           className={ProductDetailBodyFixture.className}
           copy={ProductDetailBodyFixture.copy}

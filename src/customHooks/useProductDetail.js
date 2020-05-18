@@ -1,7 +1,7 @@
 import { useCallback, useState } from 'react';
 
-const useProductDetail = () => {
-  const [productDetail, updateProductDetail] = useState(null);
+const useProductDetail = product => {
+  const [productDetail, updateProductDetail] = useState(product);
 
   const setProductDetail = useCallback(
     ({

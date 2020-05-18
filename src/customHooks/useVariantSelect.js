@@ -1,8 +1,8 @@
 import { useCallback, useState } from 'react';
 import find from 'lodash/find';
 
-const useVariantSelect = () => {
-  const [selectedVariant, updateSelectedVariant] = useState(null);
+const useVariantSelect = (variantOptions = []) => {
+  const [selectedVariant, updateSelectedVariant] = useState(variantOptions[0]);
 
   const setSelectedVariant = useCallback(currentSelectedVariant => {
     updateSelectedVariant(currentSelectedVariant);
@@ -24,6 +24,7 @@ const useVariantSelect = () => {
     onVariantChange,
     selectedVariant,
     setSelectedVariant,
+    variantOptions,
   };
 };
 
