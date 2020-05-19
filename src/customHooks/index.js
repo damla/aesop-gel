@@ -5,6 +5,7 @@ import useOnScreen from './useOnScreen';
 import useOverflowHidden from './useOverflowHidden';
 import useProductDetail from './useProductDetail';
 import useScript from './useScript';
+import useTheme from './useTheme';
 import useVariantSelect from './useVariantSelect';
 import useWindowHasResized from './useWindowHasResized';
 
@@ -15,6 +16,7 @@ export { useOnScreen };
 export { useOverflowHidden };
 export { useProductDetail };
 export { useScript };
+export { useTheme };
 export { useVariantSelect };
 export { useWindowHasResized };
 
@@ -25,6 +27,7 @@ export default {
   useOverflowHidden,
   useProductDetail,
   useScript,
+  useTheme,
   useVariantSelect,
   useWindowHasResized,
 };

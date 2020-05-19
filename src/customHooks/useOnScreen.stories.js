@@ -6,7 +6,7 @@ import KitList from '~/components/KitList';
 import { P } from '~/components/Paragraph';
 import Transition from '~/components/Transition';
 
-storiesOf('Hooks/useOnScreen', module).add('useOnScreen', () => {
+storiesOf('Hooks/useOnScreen', module).add('Base hook', () => {
   const ref = useRef();
   const isOnScreen = useOnScreen(ref, 0.25);
 

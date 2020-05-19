@@ -1,0 +1,54 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { ThemeContextProvider, useThemeContext } from '~/contexts';
+import useTheme from '~/customHooks/useTheme';
+
+<Meta title="Hooks/useTheme" />
+
+# useTheme
+
+The `ThemeContextProvider` method, `useThemeContext` and `useTheme` hooks are used to set and consume global values for site theme.
+
+<Preview>
+  <Story name="Base hook">
+    {() => {
+      const ChildComponent = () => {
+        return (
+          <pre><code>{JSON.stringify(useThemeContext())}</code></pre>
+        );
+      };
+      return (
+        <ThemeContextProvider value={useTheme({ navigationAndLogoTheme: 'light' })}>
+          <ChildComponent />
+        </ThemeContextProvider>
+      );
+    }}
+  </Story>
+</Preview>
+
+## Usage
+
+```
+// ComponentA.js
+import { ThemeContextProvider } from '~/contexts';
+import { useTheme } from '~/customHooks';
+import ComponentB from '~/ComponentB';
+
+const ComponentA = () => (
+  <ThemeContextProvider value={useTheme({ navigationAndLogoTheme: 'light' })}>
+    <ComponentB />
+  </ThemeContextProvider>
+)
+
+// ComponentB.js
+import { useThemeContext } from '~/contexts';
+
+const { loginAndCartTheme, navigationAndLogoTheme } = useThemeContext();
+const ComponentB = () => {
+  return (
+    <div>
+      loginAndCartTheme: {loginAndCartTheme}, // Default value 'dark'
+      navigationAndLogoTheme: {navigationAndLogoTheme}. // Custom value 'light'
+    </div>
+  );
+};
+```

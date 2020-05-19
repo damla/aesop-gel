@@ -12,4 +12,7 @@ export const VariantSelectContextProvider = VariantSelectContext.Provider;
 
 export const useVariantSelectContext = () => useContext(VariantSelectContext);
 
-export default VariantSelectContext;
+export default {
+  VariantSelectContextProvider,
+  useVariantSelectContext,
+};
