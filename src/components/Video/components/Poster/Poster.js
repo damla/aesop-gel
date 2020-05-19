@@ -40,7 +40,7 @@ Poster.propTypes = {
   className: PropTypes.string,
   copy: PropTypes.shape({
     playButtonTitle: PropTypes.string,
-    altText: PropTypes.string.isRequired,
+    altText: PropTypes.string,
   }),
   isActive: PropTypes.bool,
   large: PropTypes.string,

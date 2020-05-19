@@ -35,7 +35,6 @@ export const Video = forwardRef(function VideoRef(
   const [progress, setProgress] = useState(0);
   const [isMuted, setIsMuted] = useState(!hasAllowAudio);
   const isMobileOrTablet = ascertainIsSmallOrMediumOnlyViewport();
-
   const videoRef = useRef();
 
   useWindowHasResized();
@@ -91,11 +90,8 @@ export const Video = forwardRef(function VideoRef(
   useEscapeKeyListener(stopVideo);
 
   const hasVideo = large || medium || small;
-
   const hanldeOnPosterClick = () => playVideo();
-
   const handlePlayPauseButtonOnClick = isPlaying ? pauseVideo : playVideo;
-
   const handleAudioButtonClick = () => setIsMuted(!isMuted);
 
   const classSet = cx(styles.base, className, {
@@ -106,7 +102,7 @@ export const Video = forwardRef(function VideoRef(
     return (
       <figure className={classSet} id={id} ref={ref}>
         <Image
-          altText={fallbackImage.copy.altText}
+          altText={fallbackImage.copy?.altText}
           className={cx(styles.fallbackImage, fallbackImage.className)}
           large={fallbackImage.large}
           medium={fallbackImage.medium}
@@ -135,7 +131,7 @@ export const Video = forwardRef(function VideoRef(
       <Poster
         copy={{
           playButtonTitle: copy.playButtonTitle,
-          altText: poster.copy.altText,
+          altText: poster.copy?.altText,
         }}
         isActive={!hasActiveVideo}
         large={poster.large}

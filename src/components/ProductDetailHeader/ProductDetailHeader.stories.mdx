@@ -5,7 +5,6 @@ import { VariantSelectContextProvider } from '~/contexts/VariantSelect.context';
 import useAddToCart from '~/customHooks/useAddToCart';
 import useProductDetail from '~/customHooks/useProductDetail';
 import useVariantSelect from '~/customHooks/useVariantSelect';
-import ProductDetailFixture from '~/components/ProductDetail/ProductDetail.fixture';
 import ProductDetailBodyFixture from '~/components/ProductDetailHeader/components/ProductDetailBody/ProductDetailBody.fixture';
 import ProductDetailHeader from './ProductDetailHeader';
 import ProductDetailHeaderFixture from './ProductDetailHeader.fixture';
@@ -18,10 +17,12 @@ import ProductDetailHeaderFixture from './ProductDetailHeader.fixture';
   <Story name="Base component">
     <AddToCartContextProvider value={useAddToCart()}>
       <ProductDetailContextProvider
-        value={useProductDetail(ProductDetailFixture.product)}
+        value={useProductDetail(ProductDetailHeaderFixture.product)}
       >
         <VariantSelectContextProvider
-          value={useVariantSelect(ProductDetailFixture.product.variantOptions)}
+          value={useVariantSelect(
+            ProductDetailHeaderFixture.product.variantOptions,
+          )}
         >
           <ProductDetailHeader
             breadcrumbs={ProductDetailHeaderFixture.breadcrumbs}

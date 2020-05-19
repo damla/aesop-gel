@@ -73,7 +73,7 @@ const Image = forwardRef(function ImageRef(
 });
 
 Image.propTypes = {
-  altText: PropTypes.string.isRequired,
+  altText: PropTypes.string,
   className: PropTypes.string,
   cta: PropTypes.object,
   id: PropTypes.string,
