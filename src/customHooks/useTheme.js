@@ -1,24 +1,16 @@
-import { useCallback, useState } from 'react';
+import { useState } from 'react';
 import { defaultValues } from '~/contexts/Theme.context';
 
 const useTheme = ({
   navigationAndLogoTheme: navigationAndLogo,
   loginAndCartTheme: loginAndCart,
 }) => {
-  const [loginAndCartTheme, updateLoginAndCartTheme] = useState(
+  const [loginAndCartTheme, setLoginAndCartTheme] = useState(
     loginAndCart || defaultValues.loginAndCartTheme,
   );
-  const [navigationAndLogoTheme, updateNavigationAndLogoTheme] = useState(
+  const [navigationAndLogoTheme, setNavigationAndLogoTheme] = useState(
     navigationAndLogo || defaultValues.navigationAndLogoTheme,
   );
-
-  const setLoginAndCartTheme = useCallback(newTheme => {
-    updateLoginAndCartTheme(newTheme);
-  }, []);
-
-  const setNavigationAndLogoTheme = useCallback(newTheme => {
-    updateNavigationAndLogoTheme(newTheme);
-  }, []);
 
   return {
     loginAndCartTheme,
