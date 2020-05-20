@@ -1,19 +1,265 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Audio /> renders base component correctly 1`] = `
-<figure
+<div
   className="base"
 >
-  <canvas />
-  <audio
-    controls={true}
-    src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/shoptalk-clip.mp3"
+  <span
+    className="base isLoading dark"
   >
-    Your browser does not support the
-    <code>
-      audio
-    </code>
-     element.
-  </audio>
-</figure>
+    <span
+      className="dot"
+    />
+    <span
+      className="dot"
+    />
+    <span
+      className="dot"
+    />
+  </span>
+  <div
+    className="waveform"
+  />
+  <audio
+    src="./assets/audio/Istros_Imagined.mp3"
+  />
+  <footer
+    className="footer"
+  >
+    <button
+      className="base disabled inlineStyle dark playPauseButton"
+      disabled={true}
+      onClick={[Function]}
+      title="Loading audio file"
+      type="button"
+    >
+      <svg
+        className="base play dark iconPlay"
+        data-ref=""
+        focusable="false"
+        height={15}
+        role="img"
+        style={
+          Object {
+            "height": "15px",
+            "width": "15px",
+          }
+        }
+        tabIndex={-1}
+        viewBox="0 0 8 11"
+        width={15}
+      >
+        <g>
+          <polygon
+            className="play"
+            points="0,0 8,5.5 0,11"
+          />
+        </g>
+      </svg>
+      <svg
+        className="base pause dark iconPause hidden"
+        data-ref=""
+        focusable="false"
+        height={15}
+        role="img"
+        style={
+          Object {
+            "height": "15px",
+            "width": "15px",
+          }
+        }
+        tabIndex={-1}
+        viewBox="0 0 9 10"
+        width={15}
+      >
+        <g>
+          <polygon
+            className="play"
+            points="0,0 3,0 3,10 0,10 0,0"
+          />
+          <polygon
+            className="play"
+            points="6,0 9,0 9,10 6,10 6,0"
+          />
+        </g>
+      </svg>
+    </button>
+    <time
+      className="time"
+    >
+      00:00
+       /
+       
+      00:00
+    </time>
+    <div
+      className="controls"
+    >
+      <button
+        className="base disabled inlineStyle dark seekForward"
+        disabled={true}
+        onClick={[Function]}
+        title="Seek"
+        type="button"
+      >
+        <svg
+          className="base seek dark icon"
+          data-ref=""
+          focusable="false"
+          height={20}
+          role="img"
+          style={
+            Object {
+              "height": "20px",
+              "width": "20px",
+            }
+          }
+          tabIndex={-1}
+          viewBox="0 0 20 12"
+          width={20}
+        >
+          <g>
+            <path
+              className="undefined"
+              d="M19.996,11.991 L9.999,5.990 L19.996,-0.012"
+            />
+            <path
+              className="undefined"
+              d="M9.996,11.991 L-0.001,5.990 L9.996,-0.012"
+            />
+          </g>
+        </svg>
+      </button>
+      <button
+        className="base disabled inlineStyle dark playPauseButton"
+        disabled={true}
+        onClick={[Function]}
+        title="Loading audio file"
+        type="button"
+      >
+        <svg
+          className="base play dark iconPlay"
+          data-ref=""
+          focusable="false"
+          height={15}
+          role="img"
+          style={
+            Object {
+              "height": "15px",
+              "width": "15px",
+            }
+          }
+          tabIndex={-1}
+          viewBox="0 0 8 11"
+          width={15}
+        >
+          <g>
+            <polygon
+              className="play"
+              points="0,0 8,5.5 0,11"
+            />
+          </g>
+        </svg>
+        <svg
+          className="base pause dark iconPause hidden"
+          data-ref=""
+          focusable="false"
+          height={15}
+          role="img"
+          style={
+            Object {
+              "height": "15px",
+              "width": "15px",
+            }
+          }
+          tabIndex={-1}
+          viewBox="0 0 9 10"
+          width={15}
+        >
+          <g>
+            <polygon
+              className="play"
+              points="0,0 3,0 3,10 0,10 0,0"
+            />
+            <polygon
+              className="play"
+              points="6,0 9,0 9,10 6,10 6,0"
+            />
+          </g>
+        </svg>
+      </button>
+      <button
+        className="base disabled inlineStyle dark seekBackward"
+        disabled={true}
+        onClick={[Function]}
+        title="Seek"
+        type="button"
+      >
+        <svg
+          className="base seek dark icon"
+          data-ref=""
+          focusable="false"
+          height={20}
+          role="img"
+          style={
+            Object {
+              "height": "20px",
+              "width": "20px",
+            }
+          }
+          tabIndex={-1}
+          viewBox="0 0 20 12"
+          width={20}
+        >
+          <g>
+            <path
+              className="undefined"
+              d="M19.996,11.991 L9.999,5.990 L19.996,-0.012"
+            />
+            <path
+              className="undefined"
+              d="M9.996,11.991 L-0.001,5.990 L9.996,-0.012"
+            />
+          </g>
+        </svg>
+      </button>
+    </div>
+    <button
+      className="base inlineStyle dark downloadButton"
+      disabled={false}
+      onClick={[Function]}
+      title="Download"
+      type="button"
+    >
+      Download Music 
+      <svg
+        className="base download dark"
+        data-ref=""
+        focusable="false"
+        height={13}
+        role="img"
+        style={
+          Object {
+            "height": "13px",
+            "width": "13px",
+          }
+        }
+        tabIndex={-1}
+        viewBox="0 0 11 14"
+        width={13}
+      >
+        <g>
+          <path
+            className="undefined"
+            d="M10.992,6.125 L6.125,10.782 L6.125,0.001 L4.848,0.001 L4.848,10.768 L-0.004,6.125 L-0.004,7.819 L5.495,13.011 L10.992,7.819 L10.992,6.125 Z"
+          />
+          <path
+            className="undefined"
+            d="M-0.000,12.999 L11.000,12.999 L11.000,14.000 L-0.000,14.000 L-0.000,12.999 Z"
+          />
+        </g>
+      </svg>
+    </button>
+  </footer>
+</div>
 `;

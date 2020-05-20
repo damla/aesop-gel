@@ -138,9 +138,6 @@
   line-height: 1;
   transition: border-color 200ms var(--easing-ease-out-cubic);
 
-  @media (--viewport-sm-only) {
-  }
-
   &:hover {
     border-color: #c67330;
   }
