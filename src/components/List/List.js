@@ -3,21 +3,22 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import styles from './List.module.css';
 
-const List = forwardRef(
-  ({ className, items, listItemClassName, theme }, ref) => {
-    const classSet = cx(styles.base, styles[theme], className);
+const List = forwardRef(function ListRef(
+  { className, items, listItemClassName, theme },
+  ref,
+) {
+  const classSet = cx(styles.base, styles[theme], className);
 
-    return (
-      <ul className={classSet} ref={ref}>
-        {items.map(({ content, id }) => (
-          <li className={cx(styles.item, listItemClassName)} key={id}>
-            {content}
-          </li>
-        ))}
-      </ul>
-    );
-  },
-);
+  return (
+    <ul className={classSet} ref={ref}>
+      {items.map(({ content, id }) => (
+        <li className={cx(styles.item, listItemClassName)} key={id}>
+          {content}
+        </li>
+      ))}
+    </ul>
+  );
+});
 
 List.propTypes = {
   className: PropTypes.string,

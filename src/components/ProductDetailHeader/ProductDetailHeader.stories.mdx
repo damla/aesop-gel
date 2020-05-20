@@ -1,0 +1,43 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { AddToCartContextProvider } from '~/contexts/AddToCart.context';
+import { ProductDetailContextProvider } from '~/contexts/ProductDetail.context';
+import { VariantSelectContextProvider } from '~/contexts/VariantSelect.context';
+import useAddToCart from '~/customHooks/useAddToCart';
+import useProductDetail from '~/customHooks/useProductDetail';
+import useVariantSelect from '~/customHooks/useVariantSelect';
+import ProductDetailBodyFixture from '~/components/ProductDetailHeader/components/ProductDetailBody/ProductDetailBody.fixture';
+import ProductDetailHeader from './ProductDetailHeader';
+import ProductDetailHeaderFixture from './ProductDetailHeader.fixture';
+
+<Meta title="Components/ProductDetailHeader" component={ProductDetailHeader} />
+
+# ProductDetailHeader
+
+<Preview>
+  <Story name="Base component">
+    <AddToCartContextProvider value={useAddToCart()}>
+      <ProductDetailContextProvider
+        value={useProductDetail(ProductDetailHeaderFixture.product)}
+      >
+        <VariantSelectContextProvider
+          value={useVariantSelect(
+            ProductDetailHeaderFixture.product.variantOptions,
+          )}
+        >
+          <ProductDetailHeader
+            breadcrumbs={ProductDetailHeaderFixture.breadcrumbs}
+            className={ProductDetailHeaderFixture.className}
+            copy={{
+              ingredients: ProductDetailBodyFixture.copy.ingredients,
+            }}
+            theme={ProductDetailHeaderFixture.theme}
+          />
+        </VariantSelectContextProvider>
+      </ProductDetailContextProvider>
+    </AddToCartContextProvider>
+  </Story>
+</Preview>
+
+## API
+
+<Props of={ProductDetailHeader} />

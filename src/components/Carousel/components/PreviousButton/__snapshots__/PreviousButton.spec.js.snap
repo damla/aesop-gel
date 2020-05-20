@@ -26,7 +26,7 @@ exports[`<Carousel.PreviousButton /> renders base component correctly 1`] = `
   >
     <g>
       <polygon
-        className="chevronAndCloseWithCircleChevron"
+        className="chevron"
         points="25,31.3 4.2,10.5 0.1,14.6 25,39.5 50,14.6 45.9,10.5"
       />
     </g>

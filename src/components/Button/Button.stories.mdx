@@ -1,25 +1,23 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions';
-import { withKnobs } from '@storybook/addon-knobs';
-import { text, boolean, number, select } from '@storybook/addon-knobs';
+import * as knobs from '@storybook/addon-knobs';
 import Button from './Button';
 
-<Meta title="Components/Button" component={Button} decorators={[withKnobs]} />
+<Meta title="Components/Button" component={Button} />
 
 # Button
 
 <Preview>
   <Story name="Base component">
     <Button
-      isAlternate={boolean('isAlternate', false)}
-      isEnabled={boolean('isEnabled', true)}
-      isInline={boolean('isInline', false)}
+      isAlternate={knobs.boolean('isAlternate', false, 'Presentation')}
+      isEnabled={knobs.boolean('isEnabled', true, 'Presentation')}
+      isInline={knobs.boolean('isInline', false, 'Presentation')}
       onClick={action('clicked')}
-      theme={select('theme', ['dark', 'light'], 'dark')}
-      title={text('title', 'Aēsop')}
-      type={select('type', ['button', 'reset', 'submit'], 'button')}
+      theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
+      title={knobs.text('title', 'Aēsop', 'Copy')}
     >
-      {text('children', 'Button')}
+      {knobs.text('children', 'Button')}
     </Button>
   </Story>
 </Preview>
@@ -27,21 +25,3 @@ import Button from './Button';
 ## API
 
 <Props of={Button} />
-
-## Usage Example
-
-```
-
-<Button
-  className="submit"
-  dataTestRef="submit"
-  id="submit"
-  isAlternate={false}
-  isEnabled={true}
-  isInline={false}
-  onClick={onClick}
-  tabIndex={-1}
-  title="Submit"
-  type="submit"
-/>
-```

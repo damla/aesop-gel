@@ -5,50 +5,48 @@ import Media from './components/Media';
 import Content from './components/Content';
 import styles from './MediaWithContent.module.css';
 
-const MediaWithContent = forwardRef(
-  (
-    {
-      backgroundColor,
-      className,
-      content,
-      copy,
-      foregroundImage,
-      hasFullWidthImage,
-      isHero,
-      isReverse,
-      media,
-      theme,
-    },
-    ref,
-  ) => {
-    const classSet = cx(
-      styles.base,
-      { [styles.reverse]: isReverse },
-      { [styles.hero]: isHero },
-      className,
-    );
-
-    return (
-      <section className={classSet} ref={ref} style={{ backgroundColor }}>
-        <Media
-          className={styles.media}
-          foregroundImage={foregroundImage}
-          hasFullWidthImage={hasFullWidthImage}
-          isHero={isHero}
-          media={media}
-        />
-        <Content
-          content={content}
-          copy={copy}
-          hasFullWidthImage={hasFullWidthImage}
-          isHero={isHero}
-          isReverse={isReverse}
-          theme={theme}
-        />
-      </section>
-    );
+const MediaWithContent = forwardRef(function MediaWithContentRef(
+  {
+    backgroundColor,
+    className,
+    content,
+    copy,
+    foregroundImage,
+    hasFullWidthImage,
+    isHero,
+    isReverse,
+    media,
+    theme,
   },
-);
+  ref,
+) {
+  const classSet = cx(
+    styles.base,
+    { [styles.reverse]: isReverse },
+    { [styles.hero]: isHero },
+    className,
+  );
+
+  return (
+    <section className={classSet} ref={ref} style={{ backgroundColor }}>
+      <Media
+        className={styles.media}
+        foregroundImage={foregroundImage}
+        hasFullWidthImage={hasFullWidthImage}
+        isHero={isHero}
+        media={media}
+      />
+      <Content
+        content={content}
+        copy={copy}
+        hasFullWidthImage={hasFullWidthImage}
+        isHero={isHero}
+        isReverse={isReverse}
+        theme={theme}
+      />
+    </section>
+  );
+});
 
 MediaWithContent.propTypes = {
   backgroundColor: PropTypes.string,

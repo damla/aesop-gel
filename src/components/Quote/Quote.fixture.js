@@ -1,5 +1,5 @@
 export default {
-  author: 'Diana Ramirez',
+  author: 'Lorem ipsum',
   content:
-    '‘Do not wish to be anything but what you are, and try to be that perfectly’',
+    '‘Lorem ipsum dolor sit amet, consectetur adipiscing sit amet ipsum dolor elit’',
 };

@@ -1,0 +1,65 @@
+@import 'styles/index';
+
+%hidden {
+  display: none;
+}
+
+/** https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+/**
+%visuallyHidden {
+  position: absolute !important;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+}
+*/
+
+.small {
+  @media (--viewport-sm-only) {
+    &.hidden {
+      @extend %hidden;
+    }
+
+    /* &.visuallyHidden {
+      @extend %visuallyHidden;
+    } */
+  }
+}
+
+.medium {
+  @media (--viewport-md-only) {
+    &.hidden {
+      @extend %hidden;
+    }
+
+    /* &.visuallyHidden {
+      @extend %visuallyHidden;
+    } */
+  }
+}
+
+.large {
+  @media (--viewport-lg-only) {
+    &.hidden {
+      @extend %hidden;
+    }
+
+    /* &.visuallyHidden {
+      @extend %visuallyHidden;
+    } */
+  }
+}
+
+.xLarge {
+  @media (--viewport-xl) {
+    &.hidden {
+      @extend %hidden;
+    }
+
+    /* &.visuallyHidden {
+      @extend %visuallyHidden;
+    } */
+  }
+}

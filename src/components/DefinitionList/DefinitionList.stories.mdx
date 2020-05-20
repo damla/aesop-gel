@@ -1,23 +1,23 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs } from '@storybook/addon-knobs';
-import { object, select, boolean } from '@storybook/addon-knobs';
+import * as knobs from '@storybook/addon-knobs';
 import DefinitionList from './DefinitionList';
 import DefinitionListFixture from './DefinitionList.fixture';
 
-<Meta
-  title="Components/DefinitionList"
-  component={DefinitionList}
-  decorators={[withKnobs]}
-/>
+<Meta title="Components/DefinitionList" component={DefinitionList} />
 
 # DefinitionList
 
 <Preview>
   <Story name="Base component">
     <DefinitionList
-      isVisible={boolean('isActive', true)}
-      items={object('items', DefinitionListFixture.items, 'items')}
-      theme={select('theme', ['dark', 'light'], 'dark')}
+      isVisible={knobs.boolean('isActive', true, 'Presentation')}
+      items={knobs.object(
+        'items',
+        DefinitionListFixture.items,
+        'items',
+        'Copy',
+      )}
+      theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
     />
   </Story>
 </Preview>
@@ -25,25 +25,3 @@ import DefinitionListFixture from './DefinitionList.fixture';
 ## API
 
 <Props of={DefinitionList} />
-
-## Usage Example
-
-```
-
-<DefinitionList
-  items={[
-    {
-      description: 'Fresh, woody, citrus',
-      id: '1',
-      term: 'Aroma',
-    },
-    {
-      description:
-        'Spray  two to three pumps throughout the immediate space and refresh as needed; the aroma will last for several hours.',
-      id: '2',
-      term: 'Usage',
-
-    },
-  ]}
-/>
-```

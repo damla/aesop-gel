@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Carousel /> renders base component correctly 1`] = `
-<section
+<div
   className="base dark"
 >
   <div
@@ -33,7 +33,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
       >
         <g>
           <polygon
-            className="chevronAndCloseWithCircleChevron"
+            className="chevron"
             points="25,31.3 4.2,10.5 0.1,14.6 25,39.5 50,14.6 45.9,10.5"
           />
         </g>
@@ -92,13 +92,13 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                 <h2
                   className="base noTopMargin serifFont xLarge dark heading"
                 >
-                  Accompany with
+                  Maecenas elementum
                 </h2>
               </header>
               <p
                 className="base dark description hasFooter"
               >
-                Richly foaming Parsley Seed Facial Cleanser offers mild exfoliation from Lactic Acid to clarify and soften skin; complement twice weekly with Parsley Seed Cleansing Masque to extract impurities and purify pores. For intensive fortification and hydration, blend Hydrator with Parsley Seed Anti-Oxidant Facial Treatment.
+                Maecenas elementum, metus id facilisis placerat, turpis diam sodales velit, quis sodales ipsum nunc nec velit. Aenean ac tortor consectetur, volutpat massa sed, ultricies orci.
               </p>
               <footer
                 className="ctaWrapper"
@@ -107,9 +107,9 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                   className="base hasIcon left dark"
                   href="/"
                   target="_self"
-                  title="Link to Browse all"
+                  title="Aenean ac tortor"
                 >
-                  Browse all
+                  Aenean ac tortor
                   <i
                     aria-hidden="true"
                     className="icon"
@@ -171,7 +171,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                 className="base left dark item link"
                 href="/"
                 target="_self"
-                title="Link to Parsley Seed Facial Cleanser"
+                title="Link to Quisque non enim efficitur"
               >
                 <div
                   className="information dark"
@@ -179,12 +179,12 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                   <h5
                     className="base xXSmall dark heading"
                   >
-                    Parsley Seed Facial Cleanser
+                    Quisque non enim efficitur
                   </h5>
                   <div
                     className="description"
                   >
-                    Example description Product 2
+                    Vivamus sollicitudin ac ligula
                   </div>
                 </div>
                 <div
@@ -206,7 +206,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                       srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
                     />
                     <img
-                      alt="Image of Parsley Seed Facial Cleanser"
+                      alt="Quisque non enim efficitur"
                     />
                   </picture>
                 </div>
@@ -242,7 +242,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                 className="base left dark item link"
                 href="/"
                 target="_self"
-                title="Link to Parsley Seed Facial Cleanser"
+                title="Link to Phasellus posuere porta varius"
               >
                 <div
                   className="information dark"
@@ -250,12 +250,12 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                   <h5
                     className="base xXSmall dark heading"
                   >
-                    Parsley Seed Facial Cleanser
+                    Phasellus posuere porta varius
                   </h5>
                   <div
                     className="description"
                   >
-                    Example description Product 3
+                    Suspendisse elit mauris
                   </div>
                 </div>
                 <div
@@ -277,7 +277,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                       srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
                     />
                     <img
-                      alt="Image of Parsley Seed Facial Cleanser"
+                      alt="Phasellus posuere porta varius"
                     />
                   </picture>
                 </div>
@@ -313,7 +313,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                 className="base left dark item link"
                 href="/"
                 target="_self"
-                title="Link to Resurrection Duet"
+                title="Link to Etiam at pharetra nisl"
               >
                 <div
                   className="information dark"
@@ -321,12 +321,12 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                   <h5
                     className="base xXSmall dark heading"
                   >
-                    Resurrection Duet
+                    Etiam at pharetra nisl
                   </h5>
                   <div
                     className="description"
                   >
-                    A citrus, woody, herbaceous duo Product 4
+                    Aliquam metus enim, pellentesque eu
                   </div>
                 </div>
                 <div
@@ -348,7 +348,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                       srcSet="https://www.aesop.com/medias/Aesop-Resurrection-Duet-with-Product-Small-863x524px.png?context=bWFzdGVyfGltYWdlc3wxMjYxNTN8aW1hZ2UvcG5nfGltYWdlcy9oOTgvaDRmLzkxMTA3OTc5MTAwNDYucG5nfDExYTg3YzY4MmZlZTBlODU1NWJiN2IzNzBhNWYwZmExNzg2NGMzNDZhMWQyM2VjZWE4ZWVhMDljMjVmMmRiYzA"
                     />
                     <img
-                      alt="Image of Parsley Seed Facial Cleanser"
+                      alt="Etiam at pharetra nisl"
                     />
                   </picture>
                 </div>
@@ -384,7 +384,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                 className="base left dark item link"
                 href="/"
                 target="_self"
-                title="Link to Parsley Seed Facial Cleanser"
+                title="Link to Phasellus posuere porta varius"
               >
                 <div
                   className="information dark"
@@ -392,12 +392,12 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                   <h5
                     className="base xXSmall dark heading"
                   >
-                    Parsley Seed Facial Cleanser
+                    Phasellus posuere porta varius
                   </h5>
                   <div
                     className="description"
                   >
-                    Product 5
+                    Suspendisse elit
                   </div>
                 </div>
                 <div
@@ -419,78 +419,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                       srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
                     />
                     <img
-                      alt="Image of Parsley Seed Facial Cleanser"
-                    />
-                  </picture>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div
-          aria-hidden={true}
-          className="slick-slide"
-          data-index={5}
-          onClick={[Function]}
-          style={
-            Object {
-              "outline": "none",
-              "width": 0,
-            }
-          }
-          tabIndex="-1"
-        >
-          <div>
-            <div
-              className="slideWrapper"
-              style={
-                Object {
-                  "display": "inline-block",
-                  "width": "100%",
-                }
-              }
-              tabIndex={-1}
-            >
-              <a
-                className="base left dark item link"
-                href="/"
-                target="_self"
-                title="Link to Parsley Seed Cleansing Masque"
-              >
-                <div
-                  className="information dark"
-                >
-                  <h5
-                    className="base xXSmall dark heading"
-                  >
-                    Parsley Seed Cleansing Masque
-                  </h5>
-                  <div
-                    className="description"
-                  >
-                    Product 6
-                  </div>
-                </div>
-                <div
-                  className="imageContainer"
-                >
-                  <picture
-                    className="base picture dark image"
-                  >
-                    <source
-                      media="(min-width: 1025px)"
-                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
-                    />
-                    <source
-                      media="(min-width: 640px)"
-                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
-                    />
-                    <source
-                      media="(min-width: 0px)"
-                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
-                    />
-                    <img
-                      alt="Image Parsley Seed Cleansing Masque"
+                      alt="Phasellus posuere porta varius"
                     />
                   </picture>
                 </div>
@@ -525,7 +454,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
       >
         <g>
           <polygon
-            className="chevronAndCloseWithCircleChevron"
+            className="chevron"
             points="25,31.3 4.2,10.5 0.1,14.6 25,39.5 50,14.6 45.9,10.5"
           />
         </g>
@@ -551,71 +480,22 @@ exports[`<Carousel /> renders base component correctly 1`] = `
             onClick={[Function]}
           />
         </li>
-        <li
-          className=""
-        >
-          <div
-            onClick={[Function]}
-          />
-        </li>
       </ul>
     </div>
   </div>
-</section>
+</div>
 `;
 
 exports[`<Carousel /> renders component correctly if no \`introduction\` prop is provided 1`] = `
-<section
+<div
   className="base dark"
 >
   <div
     className="slick-slider carousel slick-initialized"
-    dir="ltr"
   >
-    <button
-      className="base inlineStyle light base hidden"
-      disabled={false}
-      onClick={null}
-      title="next slide"
-      type="button"
-    >
-      <svg
-        className="base chevron light"
-        data-ref=""
-        focusable="false"
-        height={16}
-        role="img"
-        style={
-          Object {
-            "height": "16px",
-            "width": "16px",
-          }
-        }
-        tabIndex={-1}
-        viewBox="0 0 50 50"
-        width={16}
-      >
-        <g>
-          <polygon
-            className="chevronAndCloseWithCircleChevron"
-            points="25,31.3 4.2,10.5 0.1,14.6 25,39.5 50,14.6 45.9,10.5"
-          />
-        </g>
-      </svg>
-    </button>
+    
     <div
       className="slick-list"
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      onMouseDown={[Function]}
-      onMouseLeave={null}
-      onMouseMove={null}
-      onMouseUp={[Function]}
-      onTouchCancel={null}
-      onTouchEnd={[Function]}
-      onTouchMove={null}
-      onTouchStart={[Function]}
-      style={Object {}}
     >
       <div
         className="slick-track"
@@ -661,7 +541,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                 className="base left dark item link"
                 href="/"
                 target="_self"
-                title="Link to Parsley Seed Facial Cleanser"
+                title="Link to Quisque non enim efficitur"
               >
                 <div
                   className="information dark"
@@ -669,12 +549,12 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                   <h5
                     className="base xXSmall dark heading"
                   >
-                    Parsley Seed Facial Cleanser
+                    Quisque non enim efficitur
                   </h5>
                   <div
                     className="description"
                   >
-                    Example description Product 2
+                    Vivamus sollicitudin ac ligula
                   </div>
                 </div>
                 <div
@@ -696,7 +576,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                       srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
                     />
                     <img
-                      alt="Image of Parsley Seed Facial Cleanser"
+                      alt="Quisque non enim efficitur"
                     />
                   </picture>
                 </div>
@@ -732,7 +612,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                 className="base left dark item link"
                 href="/"
                 target="_self"
-                title="Link to Parsley Seed Facial Cleanser"
+                title="Link to Phasellus posuere porta varius"
               >
                 <div
                   className="information dark"
@@ -740,12 +620,12 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                   <h5
                     className="base xXSmall dark heading"
                   >
-                    Parsley Seed Facial Cleanser
+                    Phasellus posuere porta varius
                   </h5>
                   <div
                     className="description"
                   >
-                    Example description Product 3
+                    Suspendisse elit mauris
                   </div>
                 </div>
                 <div
@@ -767,7 +647,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                       srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
                     />
                     <img
-                      alt="Image of Parsley Seed Facial Cleanser"
+                      alt="Phasellus posuere porta varius"
                     />
                   </picture>
                 </div>
@@ -803,7 +683,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                 className="base left dark item link"
                 href="/"
                 target="_self"
-                title="Link to Resurrection Duet"
+                title="Link to Etiam at pharetra nisl"
               >
                 <div
                   className="information dark"
@@ -811,12 +691,12 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                   <h5
                     className="base xXSmall dark heading"
                   >
-                    Resurrection Duet
+                    Etiam at pharetra nisl
                   </h5>
                   <div
                     className="description"
                   >
-                    A citrus, woody, herbaceous duo Product 4
+                    Aliquam metus enim, pellentesque eu
                   </div>
                 </div>
                 <div
@@ -838,7 +718,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                       srcSet="https://www.aesop.com/medias/Aesop-Resurrection-Duet-with-Product-Small-863x524px.png?context=bWFzdGVyfGltYWdlc3wxMjYxNTN8aW1hZ2UvcG5nfGltYWdlcy9oOTgvaDRmLzkxMTA3OTc5MTAwNDYucG5nfDExYTg3YzY4MmZlZTBlODU1NWJiN2IzNzBhNWYwZmExNzg2NGMzNDZhMWQyM2VjZWE4ZWVhMDljMjVmMmRiYzA"
                     />
                     <img
-                      alt="Image of Parsley Seed Facial Cleanser"
+                      alt="Etiam at pharetra nisl"
                     />
                   </picture>
                 </div>
@@ -874,7 +754,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                 className="base left dark item link"
                 href="/"
                 target="_self"
-                title="Link to Parsley Seed Facial Cleanser"
+                title="Link to Phasellus posuere porta varius"
               >
                 <div
                   className="information dark"
@@ -882,12 +762,12 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                   <h5
                     className="base xXSmall dark heading"
                   >
-                    Parsley Seed Facial Cleanser
+                    Phasellus posuere porta varius
                   </h5>
                   <div
                     className="description"
                   >
-                    Product 5
+                    Suspendisse elit
                   </div>
                 </div>
                 <div
@@ -909,78 +789,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                       srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
                     />
                     <img
-                      alt="Image of Parsley Seed Facial Cleanser"
-                    />
-                  </picture>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div
-          aria-hidden={true}
-          className="slick-slide"
-          data-index={4}
-          onClick={[Function]}
-          style={
-            Object {
-              "outline": "none",
-              "width": 0,
-            }
-          }
-          tabIndex="-1"
-        >
-          <div>
-            <div
-              className="slideWrapper"
-              style={
-                Object {
-                  "display": "inline-block",
-                  "width": "100%",
-                }
-              }
-              tabIndex={-1}
-            >
-              <a
-                className="base left dark item link"
-                href="/"
-                target="_self"
-                title="Link to Parsley Seed Cleansing Masque"
-              >
-                <div
-                  className="information dark"
-                >
-                  <h5
-                    className="base xXSmall dark heading"
-                  >
-                    Parsley Seed Cleansing Masque
-                  </h5>
-                  <div
-                    className="description"
-                  >
-                    Product 6
-                  </div>
-                </div>
-                <div
-                  className="imageContainer"
-                >
-                  <picture
-                    className="base picture dark image"
-                  >
-                    <source
-                      media="(min-width: 1025px)"
-                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
-                    />
-                    <source
-                      media="(min-width: 640px)"
-                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
-                    />
-                    <source
-                      media="(min-width: 0px)"
-                      srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
-                    />
-                    <img
-                      alt="Image Parsley Seed Cleansing Masque"
+                      alt="Phasellus posuere porta varius"
                     />
                   </picture>
                 </div>
@@ -990,65 +799,14 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
         </div>
       </div>
     </div>
-    <button
-      className="base inlineStyle light base"
-      disabled={false}
-      onClick={[Function]}
-      title="next slide"
-      type="button"
-    >
-      <svg
-        className="base chevron light"
-        data-ref=""
-        focusable="false"
-        height={16}
-        role="img"
-        style={
-          Object {
-            "height": "16px",
-            "width": "16px",
-          }
-        }
-        tabIndex={-1}
-        viewBox="0 0 50 50"
-        width={16}
-      >
-        <g>
-          <polygon
-            className="chevronAndCloseWithCircleChevron"
-            points="25,31.3 4.2,10.5 0.1,14.6 25,39.5 50,14.6 45.9,10.5"
-          />
-        </g>
-      </svg>
-    </button>
-    <div
-      className="base"
-    >
-      <ul
-        className="list dark"
-      >
-        <li
-          className="slick-active"
-        >
-          <div
-            onClick={[Function]}
-          />
-        </li>
-        <li
-          className=""
-        >
-          <div
-            onClick={[Function]}
-          />
-        </li>
-      </ul>
-    </div>
+    
+    
   </div>
-</section>
+</div>
 `;
 
 exports[`<Carousel /> renders component correctly if no \`url\` member is provided on the \`slides\` prop 1`] = `
-<section
+<div
   className="base dark"
 >
   <div
@@ -1107,12 +865,12 @@ exports[`<Carousel /> renders component correctly if no \`url\` member is provid
                   <h5
                     className="base xXSmall dark heading"
                   >
-                    Parsley Seed Facial Cleanser
+                    Quisque non enim efficitur
                   </h5>
                   <div
                     className="description"
                   >
-                    Example description Product 2
+                    Vivamus sollicitudin ac ligula
                   </div>
                 </div>
                 <div
@@ -1134,7 +892,7 @@ exports[`<Carousel /> renders component correctly if no \`url\` member is provid
                       srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
                     />
                     <img
-                      alt="Image of Parsley Seed Facial Cleanser"
+                      alt="Quisque non enim efficitur"
                     />
                   </picture>
                 </div>
@@ -1147,5 +905,5 @@ exports[`<Carousel /> renders component correctly if no \`url\` member is provid
     
     
   </div>
-</section>
+</div>
 `;

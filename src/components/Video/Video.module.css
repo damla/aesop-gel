@@ -15,10 +15,14 @@
   }
 
   @media (--viewport-lg) {
-    height: auto;
+    height: 100%;
     padding-top: 0;
-    padding-bottom: 100%;
+    padding-bottom: 0%;
   }
+}
+
+.spanContent {
+  display: contents;
 }
 
 .fullWidth {

@@ -1,25 +1,22 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs } from '@storybook/addon-knobs';
-import { text, boolean, select } from '@storybook/addon-knobs';
+import * as knobs from '@storybook/addon-knobs';
 import Heading from './Heading';
 
-<Meta title="Components/Heading" component={Heading} decorators={[withKnobs]} />
+<Meta title="Components/Heading" component={Heading} />
 
 # Heading
 
 <Preview>
   <Story name="Base component">
     <Heading
-      className={text('className', 'storybook-heading-class')}
-      hasTopMargin={boolean('hasTopMargin', true)}
-      id={text('id', 'storybook-heading-class')}
-      isFlush={boolean('isFlush', false)}
-      hasSerifFont={boolean('hasSerifFont', false)}
-      level={select('level', ['1', '2', '3', '4', '5', '6'], '1')}
-      size={select('size', ['xSmall', 'small', 'medium', 'large', 'xLarge'], 'large')}
-      theme={select('theme', ['dark', 'light'], 'dark')}
+      hasTopMargin={knobs.boolean('hasTopMargin', true, 'Presentation')}
+      isFlush={knobs.boolean('isFlush', false, 'Presentation')}
+      hasSerifFont={knobs.boolean('hasSerifFont', false, 'Typography')}
+      level={knobs.select('level', ['1', '2', '3', '4', '5', '6'], '1', 'Semantics')}
+      size={knobs.select('size', ['xSmall', 'small', 'medium', 'large', 'xLarge'], 'large', 'Typography')}
+      theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
     >
-      {text('children', 'Fortification of the highest order')}
+      {knobs.text('children', 'Lorem ipsum dolor sit amet consectetur', 'Copy')}
     </Heading>
   </Story>
 </Preview>
@@ -28,14 +25,6 @@ import Heading from './Heading';
 
 <Props of={Heading} />
 
-## Usage Example
-
-```
-<Heading level="1" size="xLarge">
-  Parsley Seed Anti-Oxidant Facial Hydrating Cream 60mL
-</Heading>
-```
-
 ## Variations
 
 ### Heading With Serif Font
@@ -43,7 +32,7 @@ import Heading from './Heading';
 <Preview>
   <Story name="Heading with Serif Font">
     <Heading level="1" size="xLarge" hasSerifFont={true}>
-      Parsley Seed Anti-Oxidant Facial Hydrating Cream 60mL
+      Lorem ipsum dolor sit amet consectetur
     </Heading>
   </Story>
 </Preview>
@@ -54,22 +43,22 @@ import Heading from './Heading';
   <Story name="Heading size variations">
     <div>
       <Heading level="1" size="xLarge">
-        Parsley Seed Anti-Oxidant Facial Hydrating Cream 60mL Parsley Seed Anti-Oxidant Facial Hydrating Cream 60mL
+        Lorem ipsum dolor sit amet consectetur adipiscing elit nullam id erat est
       </Heading>
       <Heading level="2" size="large">
-        Parsley Seed Anti-Oxidant Facial Hydrating Cream 60mL Parsley Seed Anti-Oxidant Facial Hydrating Cream 60mL
+        Lorem ipsum dolor sit amet consectetur adipiscing elit nullam id erat est
       </Heading>
       <Heading level="3" size="medium">
-        Parsley Seed Anti-Oxidant Facial Hydrating Cream 60mL Parsley Seed Anti-Oxidant Facial Hydrating Cream 60mL
+        Lorem ipsum dolor sit amet consectetur adipiscing elit nullam id erat est
       </Heading>
       <Heading level="4" size="small">
-        Parsley Seed Anti-Oxidant Facial Hydrating Cream 60mL Parsley Seed Anti-Oxidant Facial Hydrating Cream 60mL
+        Lorem ipsum dolor sit amet consectetur adipiscing elit nullam id erat est
       </Heading>
       <Heading level="5" size="xSmall">
-        Parsley Seed Anti-Oxidant Facial Hydrating Cream 60mL Parsley Seed Anti-Oxidant Facial Hydrating Cream 60mL
+        Lorem ipsum dolor sit amet consectetur adipiscing elit nullam id erat est
       </Heading>
       <Heading level="6" size="xXSmall">
-        Parsley Seed Anti-Oxidant Facial Hydrating Parsley Seed Anti-Oxidant Facial Hydrating Cream 60mL Parsley Seed Anti-Oxidant Facial Hydrating Cream 60mL
+        Lorem ipsum dolor sit amet consectetur adipiscing elit nullam id erat est
       </Heading>
     </div>
   </Story>

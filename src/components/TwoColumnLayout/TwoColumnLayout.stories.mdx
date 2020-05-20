@@ -1,80 +1,182 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs } from '@storybook/addon-knobs';
-import { text, boolean, select } from '@storybook/addon-knobs';
-import '~.storybook/storybook.module.css';
-import TwoColumnList from '~/components/TwoColumnList';
-import TwoColumnListFixture from '~/components/TwoColumnList/TwoColumnList.fixture';
+import * as knobs from '@storybook/addon-knobs';
+import Accordion from '~/components/Accordion';
 import BodyCopy from '~/components/BodyCopy';
+import BynderWidget from '~/components/BynderWidget';
+import Image from '~/components/Image';
+import SubNav from '~/components/SubNav';
+import SubNavFixture from '~/components/SubNav/SubNav.fixture';
+import TwoColumnList from '~/components/TwoColumnList';
+import Video from '~/components/Video';
+import TwoColumnListFixture from '~/components/TwoColumnList/TwoColumnList.fixture';
 import TwoColumnLayout from './TwoColumnLayout';
 
-<Meta
-  title="Components/TwoColumnLayout"
-  component={TwoColumnLayout}
-  decorators={[withKnobs]}
-/>
+<Meta title="Components/TwoColumnLayout" component={TwoColumnLayout} />
 
 # TwoColumnLayout
 
 <Preview>
   <Story name="Base component">
-    <TwoColumnLayout
-      childrenClassNames={{ sidebar: 'sidebar', content: 'content' }}
-      content={
-        <>
-          <BodyCopy
-            copy="Parsley Seed Cream. [The Paris Review](http://theparisreview.org) Intensely soothing, nourishing and hydrating, this elegant formulation contains a potent blend of botanicals that offer fortification of the highest order against free radicals."
-            heading="Heading hasRightPadding isReversed Content Column nourishing and hydrating"
-            id="Anti-Oxidant"
-            theme={select('theme', ['dark', 'light'], 'dark')}
-          />
-          <TwoColumnList
-            leftColumn={TwoColumnListFixture.leftColumn}
-            rightColumn={TwoColumnListFixture.rightColumn}
-            theme={select('theme', ['dark', 'light'], 'dark')}
-          />
-        </>
-      }
-      hasRightPadding={boolean('hasRightPadding', true)}
-      hasVerticalPadding={boolean('hasVerticalPadding', true)}
-      id={text('id', 'TwoColumn-id')}
-      isReversed={boolean('isReversed', true)}
-      sidebar={
-        <BodyCopy
-          copy="Parsley Seed Cream. [The Paris Review](http://theparisreview.org) Intensely soothing, nourishing and hydrating, this elegant formulation contains a potent blend of botanicals that offer fortification of the highest order against free radicals."
-          cta={{
-            id: 'button-id',
-            text: 'Read more',
-            url: 'https://aesop.com',
-            openInANewWindow: true,
-            style: 'Internal Button Link',
-          }}
-          eyebrow="Recommended Nearby"
-          hasSerifFontHeading={true}
-          heading="Heading hasRightPadding isReversed Sidebar Column"
-          id="Anti-Oxidant"
-          subHeading="Active Nutrients"
-          theme={select('theme', ['dark', 'light'], 'dark')}
+    {() => {
+      const theme = knobs.select(
+        'theme',
+        ['dark', 'light'],
+        'dark',
+        'Presentation',
+      );
+      return (
+        <TwoColumnLayout
+          childrenClassNames={{ sidebar: 'sidebar', content: 'content' }}
+          content={
+            <React.Fragment>
+              <BodyCopy
+                copy="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a metus vulputate, consectetur mauris sit amet, auctor tortor. Nunc at mauris enim. Maecenas tincidunt metus placerat, interdum arcu ac, semper lectus. Quisque venenatis dictum interdum. Maecenas velit tortor, egestas at ornare quis, egestas quis dui. Suspendisse rhoncus sagittis diam"
+                heading="Fusce a sollicitudin lacus"
+                id="Anti-Oxidant"
+                theme={theme}
+              />
+              <Image
+                altText="Lorem ipsum dolor sit amet"
+                cta={{
+                  url: '/',
+                }}
+                large="./assets/images/ImageCarousel/image-one-large.jpg"
+                medium="./assets/images/ImageCarousel/image-one-medium.jpg"
+                small="./assets/images/ImageCarousel/image-one-small.jpg"
+              />
+              <TwoColumnList
+                leftColumn={TwoColumnListFixture.leftColumn}
+                rightColumn={TwoColumnListFixture.rightColumn}
+                theme={theme}
+              />
+              <Video
+                hasAllowAudio={false}
+                hasAutoplay={false}
+                hasLoop={false}
+                hasSpanContent={false}
+                hasPlayInFullScreen={false}
+                isFullWidth={true}
+                large="https://player.vimeo.com/external/225136214.hd.mp4?s=a01cd8b47f35767394e48dc01af10510ef8ff4dd&profile_id=174"
+                medium="https://player.vimeo.com/external/225136214.hd.mp4?s=a01cd8b47f35767394e48dc01af10510ef8ff4dd&profile_id=174"
+                poster={{
+                  copy: {
+                    altText:
+                      'How to Use Video for Tea Tree Leaf Facial Exfoliant',
+                  },
+                  large: './assets/images/MediaWithContent/video-poster.png',
+                  medium: './assets/images/MediaWithContent/video-poster.png',
+                  small: './assets/images/MediaWithContent/video-poster.png',
+                }}
+                small="https://player.vimeo.com/external/225136214.hd.mp4?s=a01cd8b47f35767394e48dc01af10510ef8ff4dd&profile_id=174"
+              />
+              <Accordion
+                items={[
+                  {
+                    id: '1',
+                    heading:
+                      'What are the granting programs available for application?',
+                    content:
+                      'The Aesop Foundation will consider support for organisations working in Australia. While the majority of our grants are awarded to organisations that are invited to apply, we remain open to hearing new ideas from potential partners. If you believe your organisation’s project meets the objectives and guidelines of the Foundation we warmly invite you to submit a letter of enquiry.',
+                  },
+                  {
+                    id: '2',
+                    heading:
+                      'What organisations are considered for applications?',
+                    content:
+                      'The Aesop Foundation supports its partners through two granting programs. The Companion Grants program provides up to AUD30,000, usually for a single year. The Partnerships Grants program provides between AUD100,000-300,000 per year for up to five years.',
+                  },
+                  {
+                    id: '3',
+                    heading: 'What are the guidelines for an application?',
+                    content: (
+                      <React.Fragment>
+                        <p>
+                          We respectfully request that you review the following
+                          guidelines to ensure close alignment prior to
+                          submitting a letter of enquiry:
+                        </p>
+                        <p>
+                          Applicant organisations must be a DGR Item 1 entity,
+                          operating in Australia and a charity registered with
+                          the ACNC.
+                        </p>
+                        <p>
+                          The project must meet, or make a contribution to
+                          meeting, one or both of the objectives of the
+                          Foundation, as follows',
+                        </p>
+                      </React.Fragment>
+                    ),
+                  },
+                ]}
+                theme={knobs.select(
+                  'theme',
+                  ['dark', 'light'],
+                  'dark',
+                  'Presentation',
+                )}
+              />
+              <BynderWidget
+                heading="Media Releases"
+                id="6E8E63F9-7A54-442B-861E291124E19D94"
+              />
+            </React.Fragment>
+          }
+          hasRightPadding={knobs.boolean(
+            'hasRightPadding',
+            true,
+            'Presentation',
+          )}
+          id="TwoColumn-id"
+          isReversed={knobs.boolean('isReversed', true, 'Presentation')}
+          sidebar={
+            <React.Fragment>
+              <BodyCopy
+                copy="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a metus vulputate, consectetur mauris sit amet, auctor tortor. Nunc at mauris enim. Maecenas tincidunt metus placerat, interdum arcu ac, semper lectus. Quisque venenatis dictum interdum. Maecenas velit tortor, egestas at ornare quis, egestas quis dui. Suspendisse rhoncus sagittis diam"
+                cta={{
+                  id: 'button-id',
+                  text: 'Lorem ipsum dolor',
+                  url: '/',
+                  openInANewWindow: true,
+                  style: 'Internal Button Link',
+                }}
+                secondaryCta={{
+                  id: 'button-id',
+                  text: 'Ipsum dolor',
+                  url: '/',
+                  openInANewWindow: true,
+                  style: 'Internal Button Link',
+                }}
+                eyebrow="In a metus vulputate"
+                hasSerifFontHeading={true}
+                heading="Lorem ipsum dolor sit amet"
+                id="Anti-Oxidant"
+                subHeading="Quisque venenatis dictum interdum"
+                theme={theme}
+              />
+              <Image
+                altText="Lorem ipsum dolor sit amet"
+                cta={{
+                  url: '/',
+                }}
+                large="./assets/images/HeroWithContent/Large_JPG-Aesop_Combination_Skin_Range_Page_Primary_Image_640x456px_M.jpg"
+                medium="./assets/images/HeroWithContent/Large_JPG-Aesop_Combination_Skin_Range_Page_Primary_Image_640x456px_M.jpg"
+                small="./assets/images/HeroWithContent/Large_JPG-Aesop_Combination_Skin_Range_Page_Primary_Image_640x456px_M.jpg"
+              />
+              <SubNav
+                id="Navigation block"
+                isSelect={true}
+                links={SubNavFixture.links}
+              />
+            </React.Fragment>
+          }
+          theme={theme}
         />
-      }
-      theme={select('theme', ['dark', 'light'], 'dark')}
-    />
+      );
+    }}
   </Story>
 </Preview>
 
 ## API
 
 <Props of={TwoColumnLayout} />
-
-## Usage Example
-
-```
-<TwoColumnLayout
-  childrenClassNames={{ sidebar: '...', content: '...' }}
-  content={</>}
-  hasRightPadding={true}
-  hasVerticalPadding={true}
-  id="TwoColumn-id"
-  isReversed={true}
-  sidebar={</>}
-/>
-```

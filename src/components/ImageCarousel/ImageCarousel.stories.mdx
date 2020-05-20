@@ -1,14 +1,9 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs } from '@storybook/addon-knobs';
-import { text } from '@storybook/addon-knobs';
+import * as knobs from '@storybook/addon-knobs';
 import ImageCarousel from './ImageCarousel';
 import ImageCarouselFixture from './ImageCarousel.fixture';
 
-<Meta
-  title="Components/ImageCarousel"
-  component={ImageCarousel}
-  decorators={[withKnobs]}
-/>
+<Meta title="Components/ImageCarousel" component={ImageCarousel} />
 
 # ImageCarousel
 
@@ -17,27 +12,16 @@ import ImageCarouselFixture from './ImageCarousel.fixture';
     <ImageCarousel
       slides={[
         {
-          caption: text(
-            'firstSlide.caption',
-            'Image One Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum facilisis ligula elementum.',
+          caption: knobs.text(
+            'caption',
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum facilisis ligula elementum.',
+            'First slide copy',
           ),
           image: {
-            altText: text(
-              'firstSlide.image.altText',
-              'Image of Parsley Seed Facial Cleanser',
-            ),
-            small: text(
-              'firstSlide.image.small',
-              '/assets/images/ImageCarousel/image-one-small.jpg',
-            ),
-            medium: text(
-              'firstSlide.image.medium',
-              '/assets/images/ImageCarousel/image-one-medium.jpg',
-            ),
-            large: text(
-              'firstSlide.image.large',
-              '/assets/images/ImageCarousel/image-one-large.jpg',
-            ),
+            altText: 'Lorem ipsum dolor sit amet',
+            small: './assets/images/ImageCarousel/image-one-small.jpg',
+            medium: './assets/images/ImageCarousel/image-one-medium.jpg',
+            large: './assets/images/ImageCarousel/image-one-large.jpg',
           },
         },
         ...ImageCarouselFixture.slides,
@@ -49,21 +33,3 @@ import ImageCarouselFixture from './ImageCarousel.fixture';
 ## API
 
 <Props of={ImageCarousel} />
-
-## Usage Example
-
-```
-<ImageCarousel slides={
-  [
-    {
-      caption: '',
-      image: {
-        altText: '',
-        small: '',
-        medium: '',
-        large: '',
-      }
-    }
-  ]
-} />
-```

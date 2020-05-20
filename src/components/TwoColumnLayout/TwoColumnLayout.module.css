@@ -111,18 +111,3 @@
     }
   }
 }
-
-.verticalPadding {
-  padding-top: calc(var(--layout-sm-spacing) / 1.5);
-  padding-bottom: calc(var(--layout-sm-spacing) / 1.5);
-
-  @media (--viewport-md) {
-    padding-top: calc(var(--layout-md-spacing) / 1.5);
-    padding-bottom: calc(var(--layout-md-spacing) / 1.5);
-  }
-
-  @media (--viewport-lg) {
-    padding-top: calc(var(--layout-lg-spacing) / 1.5);
-    padding-bottom: calc(var(--layout-lg-spacing) / 1.5);
-  }
-}

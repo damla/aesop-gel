@@ -9,7 +9,7 @@ const DoubleImage = ({ className, imageOne, imageTwo, theme }) => {
   const classSet = cx(styles.base, styles[theme], className);
 
   return (
-    <section className={classSet}>
+    <div className={classSet}>
       <Figure
         caption={imageOne.caption}
         className={styles.figure}
@@ -36,7 +36,7 @@ const DoubleImage = ({ className, imageOne, imageTwo, theme }) => {
           small={imageTwo.small}
         />
       </Figure>
-    </section>
+    </div>
   );
 };
 

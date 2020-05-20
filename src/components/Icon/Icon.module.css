@@ -7,11 +7,11 @@
     transition: fill 200ms var(--easing-ease-in-out-cubic);
   }
 
-  &.dark {
+  .dark & {
     fill: var(--color-secondary);
   }
 
-  &.light {
+  .light & {
     fill: var(--color-primary);
   }
 }
@@ -24,11 +24,11 @@
     stroke-width: 3px;
     transition: fill 200ms var(--easing-ease-in-out-cubic);
 
-    &.dark {
+    .dark & {
       stroke: var(--color-secondary);
     }
 
-    &.light {
+    .light & {
       stroke: var(--color-primary);
     }
   }
@@ -41,12 +41,12 @@
       stroke 200ms var(--easing-ease-in-out-cubic),
       opacity 300ms var(--easing-ease-in-out-cubic);
 
-    &.dark {
+    .dark & {
       fill: var(--color-secondary);
       stroke: var(--color-secondary);
     }
 
-    &.light {
+    .light & {
       fill: var(--color-primary);
       stroke: var(--color-primary);
     }
@@ -57,12 +57,12 @@
     stroke-width: 2px;
     transition: opacity 300ms var(--easing-ease-in-out-cubic);
 
-    &.dark {
+    .dark & {
       fill: var(--color-secondary);
       stroke: var(--color-secondary);
     }
 
-    &.light {
+    .light & {
       fill: var(--color-primary);
       stroke: var(--color-primary);
     }

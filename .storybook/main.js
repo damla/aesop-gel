@@ -1,7 +1,10 @@
 const path = require('path');
 
 module.exports = {
-  stories: ['../src/**/*.stories.(js|mdx)'],
+  stories: [
+    '../src/**/*.stories.(js|mdx)',
+    '../documentation/**/*.stories.mdx',
+  ],
   addons: [
     '@storybook/addon-knobs/register',
     '@storybook/addon-actions/register',
@@ -59,7 +62,6 @@ module.exports = {
     config.module.rules.push({
       test: /\.(ttf|eot|woff|woff2)$/,
       loader: 'file-loader',
-      include: path.resolve(__dirname, '../.storybook/fonts/'),
     });
 
     // Return the altered config

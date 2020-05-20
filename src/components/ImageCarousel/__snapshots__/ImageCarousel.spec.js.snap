@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ImageCarousel /> renders base component correctly 1`] = `
-<section
+<div
   className="base fullWidthSlides dark"
 >
   <div
@@ -33,7 +33,7 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
       >
         <g>
           <polygon
-            className="chevronAndCloseWithCircleChevron"
+            className="chevron"
             points="25,31.3 4.2,10.5 0.1,14.6 25,39.5 50,14.6 45.9,10.5"
           />
         </g>
@@ -103,18 +103,18 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
                   >
                     <source
                       media="(min-width: 1025px)"
-                      srcSet="/assets/images/ImageCarousel/image-three-large.jpg"
+                      srcSet="./assets/images/ImageCarousel/image-three-large.jpg"
                     />
                     <source
                       media="(min-width: 640px)"
-                      srcSet="/assets/images/ImageCarousel/image-three-medium.jpg"
+                      srcSet="./assets/images/ImageCarousel/image-three-medium.jpg"
                     />
                     <source
                       media="(min-width: 0px)"
-                      srcSet="/assets/images/ImageCarousel/image-three-small.jpg"
+                      srcSet="./assets/images/ImageCarousel/image-three-small.jpg"
                     />
                     <img
-                      alt="Image Three AltText"
+                      alt="Vivamus sollicitudin"
                     />
                   </picture>
                 </div>
@@ -157,18 +157,18 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
                   >
                     <source
                       media="(min-width: 1025px)"
-                      srcSet="/assets/images/ImageCarousel/image-two-large.jpg"
+                      srcSet="./assets/images/ImageCarousel/image-two-large.jpg"
                     />
                     <source
                       media="(min-width: 640px)"
-                      srcSet="/assets/images/ImageCarousel/image-two-medium.jpg"
+                      srcSet="./assets/images/ImageCarousel/image-two-medium.jpg"
                     />
                     <source
                       media="(min-width: 0px)"
-                      srcSet="/assets/images/ImageCarousel/image-two-small.jpg"
+                      srcSet="./assets/images/ImageCarousel/image-two-small.jpg"
                     />
                     <img
-                      alt="Image Two AltText"
+                      alt="Nunc dignissim"
                     />
                   </picture>
                 </div>
@@ -211,18 +211,18 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
                   >
                     <source
                       media="(min-width: 1025px)"
-                      srcSet="/assets/images/ImageCarousel/image-three-large.jpg"
+                      srcSet="./assets/images/ImageCarousel/image-three-large.jpg"
                     />
                     <source
                       media="(min-width: 640px)"
-                      srcSet="/assets/images/ImageCarousel/image-three-medium.jpg"
+                      srcSet="./assets/images/ImageCarousel/image-three-medium.jpg"
                     />
                     <source
                       media="(min-width: 0px)"
-                      srcSet="/assets/images/ImageCarousel/image-three-small.jpg"
+                      srcSet="./assets/images/ImageCarousel/image-three-small.jpg"
                     />
                     <img
-                      alt="Image Three AltText"
+                      alt="Vivamus sollicitudin"
                     />
                   </picture>
                 </div>
@@ -264,18 +264,18 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
                   >
                     <source
                       media="(min-width: 1025px)"
-                      srcSet="/assets/images/ImageCarousel/image-two-large.jpg"
+                      srcSet="./assets/images/ImageCarousel/image-two-large.jpg"
                     />
                     <source
                       media="(min-width: 640px)"
-                      srcSet="/assets/images/ImageCarousel/image-two-medium.jpg"
+                      srcSet="./assets/images/ImageCarousel/image-two-medium.jpg"
                     />
                     <source
                       media="(min-width: 0px)"
-                      srcSet="/assets/images/ImageCarousel/image-two-small.jpg"
+                      srcSet="./assets/images/ImageCarousel/image-two-small.jpg"
                     />
                     <img
-                      alt="Image Two AltText"
+                      alt="Nunc dignissim"
                     />
                   </picture>
                 </div>
@@ -317,18 +317,18 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
                   >
                     <source
                       media="(min-width: 1025px)"
-                      srcSet="/assets/images/ImageCarousel/image-three-large.jpg"
+                      srcSet="./assets/images/ImageCarousel/image-three-large.jpg"
                     />
                     <source
                       media="(min-width: 640px)"
-                      srcSet="/assets/images/ImageCarousel/image-three-medium.jpg"
+                      srcSet="./assets/images/ImageCarousel/image-three-medium.jpg"
                     />
                     <source
                       media="(min-width: 0px)"
-                      srcSet="/assets/images/ImageCarousel/image-three-small.jpg"
+                      srcSet="./assets/images/ImageCarousel/image-three-small.jpg"
                     />
                     <img
-                      alt="Image Three AltText"
+                      alt="Vivamus sollicitudin"
                     />
                   </picture>
                 </div>
@@ -363,7 +363,7 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
       >
         <g>
           <polygon
-            className="chevronAndCloseWithCircleChevron"
+            className="chevron"
             points="25,31.3 4.2,10.5 0.1,14.6 25,39.5 50,14.6 45.9,10.5"
           />
         </g>
@@ -403,8 +403,8 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
     <div
       className="caption"
     >
-      Image Two Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum facilisis ligula elementum.
+      Nunc dignissim quis arcu a lobortis. Nullam auctor id nulla non sagittis. Quisque non enim efficitur quam mattis semper a nec arcu.
     </div>
   </footer>
-</section>
+</div>
 `;

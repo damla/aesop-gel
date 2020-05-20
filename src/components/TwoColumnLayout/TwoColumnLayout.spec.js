@@ -20,7 +20,6 @@ describe('<TwoColumnLayout />', () => {
           className={TwoColumnLayoutFixture.className}
           content={TwoColumnLayoutFixture.content}
           hasRightPadding={TwoColumnLayoutFixture.hasRightPadding}
-          hasVerticalPadding={TwoColumnLayoutFixture.hasVerticalPadding}
           id={TwoColumnLayoutFixture.id}
           isReversed={TwoColumnLayoutFixture.isReversed}
           sidebar={TwoColumnLayoutFixture.sidebar}

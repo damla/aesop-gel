@@ -6,10 +6,10 @@ exports[`<LinkButtonGroup /> renders base component correctly 1`] = `
 >
   <a
     className="base blockStyle center dark link center"
-    href="https://aesop.com"
+    href="/"
     target="_self"
   >
-    About Aesop
+    Lorem ipsum
   </a>
 </div>
 `;

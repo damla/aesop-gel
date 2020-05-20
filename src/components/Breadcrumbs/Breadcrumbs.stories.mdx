@@ -1,0 +1,26 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import * as knobs from '@storybook/addon-knobs';
+import Breadcrumbs from './Breadcrumbs';
+import BreadcrumbsFixture from './Breadcrumbs.fixture';
+
+<Meta title="Components/Breadcrumbs" component={Breadcrumbs} />
+
+# Breadcrumbs
+
+<Preview>
+  <Story name="Base component">
+    <Breadcrumbs
+      items={knobs.object('items', BreadcrumbsFixture.items, 'Copy')}
+      theme={knobs.select(
+        'theme',
+        ['dark', 'light'],
+        BreadcrumbsFixture.theme,
+        'Presentation',
+      )}
+    />
+  </Story>
+</Preview>
+
+## API
+
+<Props of={Breadcrumbs} />

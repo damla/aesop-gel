@@ -1,7 +1,7 @@
 @import 'styles/index';
 
 .paragraph {
-  margin: rem(18px) 0;
+  margin: 18px 0;
   font-size: rem(15px);
   line-height: 1.6;
 

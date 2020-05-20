@@ -85,6 +85,11 @@ export const ascertainIsLargeViewport = () =>
     ? window.matchMedia(IS_VIEWPORT_LARGE).matches
     : false;
 
+export const ascertainIsLargeOnlyViewport = () =>
+  typeof window !== 'undefined'
+    ? window.matchMedia(IS_VIEWPORT_LARGE_ONLY).matches
+    : false;
+
 export const ascertainIsLargeOrXLargeOnlyViewport = () =>
   typeof window !== 'undefined'
     ? window.matchMedia(IS_VIEWPORT_LARGE_XLARGE_ONLY).matches
@@ -120,6 +125,7 @@ export default {
   ascertainIsMediumViewport,
   ascertainIsMediumOnlyViewport,
   ascertainIsLargeViewport,
+  ascertainIsLargeOnlyViewport,
   ascertainIsLargeOrXLargeOnlyViewport,
   ascertainIsXLargeViewport,
   ascertainIsSmallToXLargeViewport,

@@ -1,28 +1,32 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs } from '@storybook/addon-knobs';
-import { text, select, boolean } from '@storybook/addon-knobs';
+import * as knobs from '@storybook/addon-knobs';
 import LinkButtonGroup from './LinkButtonGroup';
 import LinkButtonGroupFixture from './LinkButtonGroup.fixture';
 
-<Meta
-  title="Components/LinkButtonGroup"
-  component={LinkButtonGroup}
-  decorators={[withKnobs]}
-/>
+<Meta title="Components/LinkButtonGroup" component={LinkButtonGroup} />
 
 # LinkButtonGroup
 
 <Preview>
   <Story name="Base component">
     <LinkButtonGroup
-      hasFitContent={boolean('hasFitContent', false)}
-      theme={select('theme', ['dark', 'light'], 'dark')}
-      textAlign={select('textAlign', ['center', 'left', 'right'], 'center')}
+      hasFitContent={knobs.boolean('hasFitContent', false, 'Presentation')}
+      theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
+      textAlign={knobs.select(
+        'textAlign',
+        ['center', 'left', 'right'],
+        'center',
+        'Presentation',
+      )}
       link={{
-        text: text('link.text', LinkButtonGroupFixture.link.text),
-        url: text('link.url', LinkButtonGroupFixture.link.url),
-        style: select(
-          'link.style',
+        text: knobs.text(
+          'text',
+          LinkButtonGroupFixture.link.text,
+          'First link',
+        ),
+        url: knobs.text('url', LinkButtonGroupFixture.link.url, 'First link'),
+        style: knobs.select(
+          'style',
           [
             'External Button Link',
             'Internal Button Link',
@@ -30,19 +34,22 @@ import LinkButtonGroupFixture from './LinkButtonGroup.fixture';
             'Internal No Icon Button Link',
           ],
           LinkButtonGroupFixture.link.style,
+          'First link',
         ),
       }}
       secondaryLink={{
-        text: text(
-          'secondaryLink.text',
+        text: knobs.text(
+          'text',
           LinkButtonGroupFixture.secondaryLink.text,
+          'Second link',
         ),
-        url: text(
-          'secondaryLink.url',
+        url: knobs.text(
+          'url',
           LinkButtonGroupFixture.secondaryLink.url,
+          'Second link',
         ),
-        style: select(
-          'secondaryLink.style',
+        style: knobs.select(
+          'style',
           [
             'External Button Link',
             'Internal Button Link',
@@ -50,6 +57,7 @@ import LinkButtonGroupFixture from './LinkButtonGroup.fixture';
             'Internal No Icon Button Link',
           ],
           LinkButtonGroupFixture.secondaryLink.style,
+          'Second link',
         ),
       }}
     />
@@ -59,9 +67,3 @@ import LinkButtonGroupFixture from './LinkButtonGroup.fixture';
 ## API
 
 <Props of={LinkButtonGroup} />
-
-## Usage Example
-
-```
-<LinkButtonGroup />
-```

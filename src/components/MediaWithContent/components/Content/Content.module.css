@@ -35,7 +35,6 @@
 }
 
 .innerWrapper {
-  max-width: 780px;
   justify-content: space-between;
   padding: 36px 20px 56px;
 
@@ -59,6 +58,7 @@
 
   @media (--viewport-lg) {
     width: 66.66667%;
+    max-width: 780px;
     flex-basis: auto;
     flex-direction: column;
     padding: 115px 0;
@@ -106,7 +106,7 @@
 }
 
 .eyebrow {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .content {

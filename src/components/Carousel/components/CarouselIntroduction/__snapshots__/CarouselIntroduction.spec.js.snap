@@ -10,13 +10,13 @@ exports[`<Carousel.CarouselIntroduction /> renders base component correctly 1`] 
     <h2
       className="base noTopMargin serifFont xLarge dark heading"
     >
-      Accompany with
+      Maecenas elementum
     </h2>
   </header>
   <p
     className="base dark description"
   >
-    Richly foaming Parsley Seed Facial Cleanser offers mild exfoliation from Lactic Acid to clarify and soften skin; complement twice weekly with Parsley Seed Cleansing Masque to extract impurities and purify pores. For intensive fortification and hydration, blend Hydrator with Parsley Seed Anti-Oxidant Facial Treatment.
+    Maecenas elementum, metus id facilisis placerat, turpis diam sodales velit, quis sodales ipsum nunc nec velit. Aenean ac tortor consectetur, volutpat massa sed, ultricies orci.
   </p>
 </div>
 `;

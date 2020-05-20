@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AddToCartButton /> renders base component correctly 1`] = `
+<button
+  className="base alternate blockStyle dark base"
+  data-test-ref="DATA_TEST_REF"
+  disabled={false}
+  onClick={[Function]}
+  title="Add to cart button"
+  type="button"
+>
+  <span
+    className="label"
+  >
+    <span>
+      Lorem ipsum dolor added to your cart
+    </span>
+    <span>
+      Add to your cart — undefined
+    </span>
+  </span>
+</button>
+`;

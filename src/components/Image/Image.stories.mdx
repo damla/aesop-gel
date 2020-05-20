@@ -1,31 +1,27 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs } from '@storybook/addon-knobs';
-import { text } from '@storybook/addon-knobs';
+import * as knobs from '@storybook/addon-knobs';
 import Image from './Image';
 
-<Meta title="Components/Image" component={Image} decorators={[withKnobs]} />
+<Meta title="Components/Image" component={Image} />
 
 # Image
 
 <Preview>
   <Story name="Base component">
     <Image
-      altText={text('altText', 'Image of Milk Cleansing Campaign Aesop 2019')}
+      altText={knobs.text('altText', 'Lorem ipsum dolor sit amet')}
       cta={{
-        url: text(
-          'hyperlink.url',
-          'https://www.aesop.com/au/r/philosophy-to-products',
-        ),
+        url: knobs.text('hyperlink.url', '/'),
       }}
-      large={text(
+      large={knobs.text(
         'large',
         'https://www.aesop.com/medias/GelCleanser-640x640.png?context=bWFzdGVyfGltYWdlc3w1MzE5NTl8aW1hZ2UvcG5nfGltYWdlcy9oOTUvaGNkLzg4MDc3OTc4NTAxNDIucG5nfGM3NTNhYjdkMWNiOTRhNWZhNDA0NWExZWJiODMxN2VhNzEyY2ZkNGUyYzc4ZWVkZDRjYTIzMzZmZTRlOGYxNjM',
       )}
-      medium={text(
+      medium={knobs.text(
         'medium',
         'https://www.aesop.com/medias/GelCleanser-640x640.png?context=bWFzdGVyfGltYWdlc3w1MzE5NTl8aW1hZ2UvcG5nfGltYWdlcy9oOTUvaGNkLzg4MDc3OTc4NTAxNDIucG5nfGM3NTNhYjdkMWNiOTRhNWZhNDA0NWExZWJiODMxN2VhNzEyY2ZkNGUyYzc4ZWVkZDRjYTIzMzZmZTRlOGYxNjM',
       )}
-      small={text(
+      small={knobs.text(
         'small',
         'https://www.aesop.com/medias/GelCleanser-640x640.png?context=bWFzdGVyfGltYWdlc3w1MzE5NTl8aW1hZ2UvcG5nfGltYWdlcy9oOTUvaGNkLzg4MDc3OTc4NTAxNDIucG5nfGM3NTNhYjdkMWNiOTRhNWZhNDA0NWExZWJiODMxN2VhNzEyY2ZkNGUyYzc4ZWVkZDRjYTIzMzZmZTRlOGYxNjM',
       )}
@@ -36,18 +32,3 @@ import Image from './Image';
 ## API
 
 <Props of={Image} />
-
-## Usage Example
-
-```
-
-<Image
-  altText="Image of Milk Cleansing Campaign Aesop 2019"
-  cta={{
-    url: 'https://www.aesop.com/au/r/philosophy-to-products',
-  }}
-  large="https://www.aesop.com/medias/GelCleanser-640x640.png?context=bWFzdGVyfGltYWdlc3w1MzE5NTl8aW1hZ2UvcG5nfGltYWdlcy9oOTUvaGNkLzg4MDc3OTc4NTAxNDIucG5nfGM3NTNhYjdkMWNiOTRhNWZhNDA0NWExZWJiODMxN2VhNzEyY2ZkNGUyYzc4ZWVkZDRjYTIzMzZmZTRlOGYxNjM"
-  medium="https://www.aesop.com/medias/GelCleanser-640x640.png?context=bWFzdGVyfGltYWdlc3w1MzE5NTl8aW1hZ2UvcG5nfGltYWdlcy9oOTUvaGNkLzg4MDc3OTc4NTAxNDIucG5nfGM3NTNhYjdkMWNiOTRhNWZhNDA0NWExZWJiODMxN2VhNzEyY2ZkNGUyYzc4ZWVkZDRjYTIzMzZmZTRlOGYxNjM"
-  small="https://www.aesop.com/medias/GelCleanser-640x640.png?context=bWFzdGVyfGltYWdlc3w1MzE5NTl8aW1hZ2UvcG5nfGltYWdlcy9oOTUvaGNkLzg4MDc3OTc4NTAxNDIucG5nfGM3NTNhYjdkMWNiOTRhNWZhNDA0NWExZWJiODMxN2VhNzEyY2ZkNGUyYzc4ZWVkZDRjYTIzMzZmZTRlOGYxNjM"
-/>
-```

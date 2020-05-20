@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import useWindowHasResized from '~/customHooks/useWindowHasResized';
+import { ascertainIsSmallOrMediumOnlyViewport } from '~/utils/viewports';
 import Heading from '~/components/Heading';
-import Hyperlink from '~/components/Hyperlink/Hyperlink';
+import Hyperlink from '~/components/Hyperlink';
+import Select from '~/components/Select';
 import List from '~/components/List';
 import styles from './SubNav.module.css';
 
@@ -21,8 +24,22 @@ export const getLinkItems = (links, theme) =>
     id,
   }));
 
-const SubNav = ({ className, heading, headingClassName, links, theme }) => {
+const SubNav = ({
+  className,
+  heading,
+  headingClassName,
+  id,
+  isSelect,
+  links,
+  theme,
+}) => {
+  useWindowHasResized();
+
   const classSet = cx(styles.base, className);
+  const isSmallOrMediumViewport = ascertainIsSmallOrMediumOnlyViewport();
+  const onChange = event => {
+    window.location.href = event.target.value;
+  };
 
   return (
     <nav className={classSet}>
@@ -37,13 +54,29 @@ const SubNav = ({ className, heading, headingClassName, links, theme }) => {
           {heading}
         </Heading>
       )}
-      <List items={getLinkItems(links, theme)} theme={theme} />
+      {isSelect && isSmallOrMediumViewport ? (
+        <Select
+          isBlock={isSelect}
+          name={id}
+          onChange={onChange}
+          options={links.map(({ children, id, url }) => ({
+            id,
+            label: children,
+            value: url,
+          }))}
+          theme={theme}
+        />
+      ) : (
+        <List items={getLinkItems(links, theme)} theme={theme} />
+      )}
     </nav>
   );
 };
 
 SubNav.propTypes = {
   className: PropTypes.string,
+  id: PropTypes.string,
+  isSelect: PropTypes.bool,
   links: PropTypes.arrayOf(PropTypes.object)
     .isRequired /** @TODO hyperlink type */,
   heading: PropTypes.string,
@@ -53,6 +86,8 @@ SubNav.propTypes = {
 
 SubNav.defaultProps = {
   className: undefined,
+  id: undefined,
+  isSelect: false,
   links: undefined,
   heading: undefined,
   headingClassName: undefined,

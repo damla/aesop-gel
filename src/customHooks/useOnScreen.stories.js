@@ -6,7 +6,7 @@ import KitList from '~/components/KitList';
 import { P } from '~/components/Paragraph';
 import Transition from '~/components/Transition';
 
-storiesOf('Hooks/useOnScreen', module).add('useOnScreen', () => {
+storiesOf('Hooks/useOnScreen', module).add('Base hook', () => {
   const ref = useRef();
   const isOnScreen = useOnScreen(ref, 0.25);
 
@@ -23,27 +23,25 @@ storiesOf('Hooks/useOnScreen', module).add('useOnScreen', () => {
           of 25% (0.25).
         </P>
       </div>
-      <div style={{ backgroundColor: '#4a4a4a', padding: '0 20px' }}>
-        <Transition isActive={isOnScreen} type="shiftInDown">
-          <KitList
-            isVisible={isOnScreen}
-            items={[
-              { content: 'Parsley Seed Facial Cleansing Oil, 200 mL', id: '1' },
-              {
-                content: 'Parsley Seed Anti-Oxidant Facial Toner, 100 mL',
-                id: '2',
-              },
-              { content: 'Parsley Seed Anti-Oxidant Serum, 100 mL', id: '3' },
-              {
-                content: 'Parsley Seed Anti-Oxidant Eye Cream, 10 mL',
-                id: '4',
-              },
-            ]}
-            ref={ref}
-            theme="light"
-          />
-        </Transition>
-      </div>
+
+      <Transition isActive={isOnScreen} type="shiftInDown">
+        <KitList
+          isVisible={isOnScreen}
+          items={[
+            { content: 'Parsley Seed Facial Cleansing Oil, 200 mL', id: '1' },
+            {
+              content: 'Parsley Seed Anti-Oxidant Facial Toner, 100 mL',
+              id: '2',
+            },
+            { content: 'Parsley Seed Anti-Oxidant Serum, 100 mL', id: '3' },
+            {
+              content: 'Parsley Seed Anti-Oxidant Eye Cream, 10 mL',
+              id: '4',
+            },
+          ]}
+          ref={ref}
+        />
+      </Transition>
     </div>
   );
 });

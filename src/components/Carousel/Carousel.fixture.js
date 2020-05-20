@@ -2,21 +2,21 @@ export default {
   introduction: {
     cta: {
       style: 'Internal Text Link',
-      title: 'Link to Browse all',
+      title: 'Aenean ac tortor',
       url: '/',
-      text: 'Browse all',
+      text: 'Aenean ac tortor',
     },
-    heading: 'Accompany with',
+    heading: 'Maecenas elementum',
     description:
-      'Richly foaming Parsley Seed Facial Cleanser offers mild exfoliation from Lactic Acid to clarify and soften skin; complement twice weekly with Parsley Seed Cleansing Masque to extract impurities and purify pores. For intensive fortification and hydration, blend Hydrator with Parsley Seed Anti-Oxidant Facial Treatment.',
+      'Maecenas elementum, metus id facilisis placerat, turpis diam sodales velit, quis sodales ipsum nunc nec velit. Aenean ac tortor consectetur, volutpat massa sed, ultricies orci.',
   },
   slides: [
     {
       url: '/',
-      description: 'Example description Product 2',
-      heading: 'Parsley Seed Facial Cleanser',
+      description: 'Vivamus sollicitudin ac ligula',
+      heading: 'Quisque non enim efficitur',
       image: {
-        altText: 'Image of Parsley Seed Facial Cleanser',
+        altText: 'Quisque non enim efficitur',
         small:
           'https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ',
         medium:
@@ -27,10 +27,10 @@ export default {
     },
     {
       url: '/',
-      description: 'Example description Product 3',
-      heading: 'Parsley Seed Facial Cleanser',
+      description: 'Suspendisse elit mauris',
+      heading: 'Phasellus posuere porta varius',
       image: {
-        altText: 'Image of Parsley Seed Facial Cleanser',
+        altText: 'Phasellus posuere porta varius',
         small:
           'https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ',
         medium:
@@ -41,10 +41,10 @@ export default {
     },
     {
       url: '/',
-      description: 'A citrus, woody, herbaceous duo Product 4',
-      heading: 'Resurrection Duet',
+      description: 'Aliquam metus enim, pellentesque eu',
+      heading: 'Etiam at pharetra nisl',
       image: {
-        altText: 'Image of Parsley Seed Facial Cleanser',
+        altText: 'Etiam at pharetra nisl',
         small:
           'https://www.aesop.com/medias/Aesop-Resurrection-Duet-with-Product-Small-863x524px.png?context=bWFzdGVyfGltYWdlc3wxMjYxNTN8aW1hZ2UvcG5nfGltYWdlcy9oOTgvaDRmLzkxMTA3OTc5MTAwNDYucG5nfDExYTg3YzY4MmZlZTBlODU1NWJiN2IzNzBhNWYwZmExNzg2NGMzNDZhMWQyM2VjZWE4ZWVhMDljMjVmMmRiYzA',
         medium:
@@ -55,24 +55,10 @@ export default {
     },
     {
       url: '/',
-      description: 'Product 5',
-      heading: 'Parsley Seed Facial Cleanser',
+      description: 'Suspendisse elit',
+      heading: 'Phasellus posuere porta varius',
       image: {
-        altText: 'Image of Parsley Seed Facial Cleanser',
-        small:
-          'https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ',
-        medium:
-          'https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ',
-        large:
-          'https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ',
-      },
-    },
-    {
-      url: '/',
-      description: 'Product 6',
-      heading: 'Parsley Seed Cleansing Masque',
-      image: {
-        altText: 'Image Parsley Seed Cleansing Masque',
+        altText: 'Phasellus posuere porta varius',
         small:
           'https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ',
         medium:

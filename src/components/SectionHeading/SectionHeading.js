@@ -13,13 +13,14 @@ const SectionHeading = ({
   hasSerifFontHeading,
   heading,
   id,
+  isOffsetPageHeading,
   isPageHeading,
   subHeading,
   theme,
 }) => {
   const classSet = cx(
     styles.base,
-    { [styles.pageHeading]: isPageHeading },
+    { [styles.offsetPageHeading]: isOffsetPageHeading },
     className,
   );
   const eyebrowClassSet = cx(styles.eyebrow, childrenClassNames.eyebrow);
@@ -83,6 +84,7 @@ SectionHeading.propTypes = {
   hasHeadingTopMargin: PropTypes.bool,
   heading: PropTypes.string,
   id: PropTypes.string,
+  isOffsetPageHeading: PropTypes.bool,
   isPageHeading: PropTypes.bool,
   subHeading: PropTypes.string,
   theme: PropTypes.oneOf(['dark', 'light']),
@@ -100,6 +102,7 @@ SectionHeading.defaultProps = {
   hasHeadingTopMargin: false,
   heading: undefined,
   id: undefined,
+  isOffsetPageHeading: false,
   isPageHeading: false,
   subHeading: undefined,
   theme: 'dark',

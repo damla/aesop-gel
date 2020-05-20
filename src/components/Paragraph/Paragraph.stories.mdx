@@ -1,12 +1,10 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs } from '@storybook/addon-knobs';
-import { text, object, select } from '@storybook/addon-knobs';
+import * as knobs from '@storybook/addon-knobs';
 import Paragraph, { P, ParagraphSet } from './Paragraph';
 
 <Meta
   title="Components/Paragraph"
   component={Paragraph}
-  decorators={[withKnobs]}
 />
 
 # Paragraph
@@ -14,11 +12,9 @@ import Paragraph, { P, ParagraphSet } from './Paragraph';
 <Preview>
   <Story name="Base component">
     <Paragraph
-      theme={select('theme', ['dark', 'light'], 'dark')}
+      theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
     >
-      A lightweight, vitamin C-rich layering serum that soothes, replenishes and
-      balances skin with its complex blend of anti-oxidant, hydrating and
-      conditioning ingredients.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id erat est. Ut convallis, neque id semper fermentum, urna risus gravida nibh, vel molestie sapien leo ac tortor. Nunc dignissim quis arcu a lobortis. Phasellus tempus consequat erat, at egestas elit pulvinar lacinia. Nullam pretium, risus a dictum rhoncus, ex libero cursus erat, dignissim malesuada tortor justo quis enim. Nulla pellentesque sit amet ante et molestie. Mauris interdum odio at mauris pulvinar, non placerat nulla tempus.
     </Paragraph>
   </Story>
 </Preview>
@@ -27,16 +23,6 @@ import Paragraph, { P, ParagraphSet } from './Paragraph';
 
 <Props of={Paragraph} />
 
-## Usage Example
-
-```
-<Paragraph>
-  A lightweight, vitamin C-rich layering serum that soothes, replenishes and
-  balances skin with its complex blend of anti-oxidant, hydrating and
-  conditioning ingredients.
-</Paragraph>
-```
-
 ## Variations
 
 ### ParagraphSet
@@ -44,37 +30,14 @@ import Paragraph, { P, ParagraphSet } from './Paragraph';
 <Preview>
   <Story name="ParagraphSet component">
     <ParagraphSet
-      theme={select('theme', ['dark', 'light'], 'dark')}
+      theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
     >
       <Paragraph>
-        A lightweight, vitamin C-rich layering serum that soothes, replenishes
-        and balances skin with its complex blend of anti-oxidant, hydrating and
-        conditioning ingredients. A lightweight, vitamin C-rich layering serum
-        that soothes, replenishes and balances skin with its complex blend of
-        anti-oxidant, hydrating and conditioning ingredients.
+        Vivamus sollicitudin ac ligula nec convallis. Etiam varius faucibus libero id congue. In sit amet dignissim magna. Nullam auctor id nulla non sagittis. Quisque non enim efficitur quam mattis semper a nec arcu. In elementum placerat sapien ut malesuada. Mauris venenatis vitae orci et tempor. Praesent at purus eget turpis eleifend rutrum.
       </Paragraph>
       <Paragraph>
-        A lightweight, vitamin C-rich layering serum that soothes, replenishes
-        and balances skin with its complex blend of anti-oxidant, hydrating and
-        conditioning ingredients.
+        Suspendisse elit mauris, pretium malesuada elit vel, eleifend pretium eros. Fusce ultricies sapien vitae diam vehicula dapibus. Nullam et felis sem. Phasellus posuere porta varius. Nam sit amet fringilla felis. Donec egestas, velit eget semper vehicula, mauris nisl sodales libero, a rhoncus ipsum felis ac magna. Sed vehicula pretium tortor eget mollis. Maecenas quis erat hendrerit, aliquam augue et, tincidunt enim.
       </Paragraph>
     </ParagraphSet>
   </Story>
 </Preview>
-
-### ParagraphSet Usage Example
-
-```
-<ParagraphSet>
-  <Paragraph>
-    A lightweight, vitamin C-rich layering serum that soothes, replenishes
-    and balances skin with its complex blend of anti-oxidant, hydrating and
-    conditioning ingredients.
-  </Paragraph>
-  <Paragraph>
-    A lightweight, vitamin C-rich layering serum that soothes, replenishes
-    and balances skin with its complex blend of anti-oxidant, hydrating and
-    conditioning ingredients.
-  </Paragraph>
-</ParagraphSet>
-```

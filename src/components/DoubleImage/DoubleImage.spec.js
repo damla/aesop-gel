@@ -7,7 +7,7 @@ import DoubleImageFixture from './DoubleImage.fixture';
 
 configure({ adapter: new Adapter() });
 
-describe('<DefinitionList />', () => {
+describe('<DoubleImage />', () => {
   it('should be defined', () => {
     expect(DoubleImage).toBeDefined();
   });

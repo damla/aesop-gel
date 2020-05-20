@@ -1,0 +1,32 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { State } from '~.storybook/State';
+import { AddToCartContextProvider } from '~/contexts/AddToCart.context';
+import { VariantSelectContextProvider } from '~/contexts/VariantSelect.context';
+import useAddToCart from '~/customHooks/useAddToCart';
+import useVariantSelect from '~/customHooks/useVariantSelect';
+import ProductDetailImageFixture from '~/components/ProductDetailHeader/components/ProductDetailImage/ProductDetailImage.fixture';
+import AddToCartButton from './AddToCartButton';
+import AddToCartButtonFixture from './AddToCartButton.fixture';
+
+<Meta title="Components/AddToCartButton" component={AddToCartButton} />
+
+# AddToCartButton
+
+<Preview>
+  <Story name="Base component">
+    <AddToCartContextProvider value={useAddToCart()}>
+      <VariantSelectContextProvider
+        value={useVariantSelect(ProductDetailImageFixture.variantOptions)}
+      >
+        <AddToCartButton
+          dataTestRef="ADD_TO_CART_SMALL_CTA"
+          productName="Product"
+        />
+      </VariantSelectContextProvider>
+    </AddToCartContextProvider>
+  </Story>
+</Preview>
+
+## API
+
+<Props of={AddToCartButton} />

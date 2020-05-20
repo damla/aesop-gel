@@ -43,14 +43,10 @@
 }
 
 .wrapper {
-  margin-bottom: var(--layout-sm-spacing);
+  margin-bottom: var(--layout-md-spacing);
 
-  @media (--viewport-md) {
-    margin-bottom: var(--layout-md-spacing);
-  }
-
-  @media (--viewport-ld) {
-    margin-bottom: var(--layout-ld-spacing);
+  @media (--viewport-lg) {
+    margin-bottom: var(--layout-lg-spacing);
   }
 }
 

@@ -87,35 +87,7 @@ const svgs = [
       {
         polygon: {
           points: '25,31.3 4.2,10.5 0.1,14.6 25,39.5 50,14.6 45.9,10.5',
-          classes: 'chevronAndCloseWithCircleChevron',
-        },
-      },
-    ],
-    viewBox: '0 0 50 50',
-  },
-  {
-    name: 'chevronAndCloseWithCircle',
-    data: [
-      {
-        circle: {
-          cx: '25',
-          cy: '25',
-          r: '22',
-          fill: 'none',
-          classes: 'chevronAndCloseWithCircleCircle',
-        },
-      },
-      {
-        polygon: {
-          points: '25,30.3 15.9,21.2 14.1,23 25,33.9 35.9,23 34.1,21.2',
-          classes: 'chevronAndCloseWithCircleChevron',
-        },
-      },
-      {
-        polygon: {
-          points:
-            '32.9,19 31.2,17.3 25,23.4 18.8,17.2 17,19 23.3,25.2 17.1,31.3 18.8,33 25,26.9 31.2,33.1 33,31.3 26.7,25.1 ',
-          classes: 'chevronAndCloseWithCircleClose',
+          classes: 'chevron',
         },
       },
     ],

@@ -2,30 +2,30 @@ export default {
   leftColumn: [
     {
       id: '1',
-      heading: 'Title 1',
-      subHeading: 'Sub title 1',
+      heading: 'Suspendisse rhoncus',
+      subHeading: 'Sagittis diam',
       items: [
         {
           id: '1',
-          text: 'About',
-          url: 'https://www.aesop.com/au/r/about',
+          text: 'Quisque venenatis dictum',
+          url: '/',
         },
         {
           id: '2',
-          text: 'About 2',
-          url: 'https://www.aesop.com/au/r/about',
+          text: 'Aliquam ullamcorper',
+          url: '/',
         },
       ],
     },
     {
       id: '2',
-      heading: 'Title 2',
-      subHeading: 'Sub title 2',
+      heading: 'Vestibulum ante ipsum',
+      subHeading: 'Nullam sed libero',
       items: [
         {
           id: '1',
-          text: 'Philosophy',
-          url: 'https://www.aesop.com/au/r/philosophy-to-products',
+          text: 'Donec non venenatis massa',
+          url: '/',
         },
       ],
     },
@@ -33,17 +33,17 @@ export default {
   rightColumn: [
     {
       id: '1',
-      heading: 'Suisse Heading 24',
-      subHeading: 'Suisse Sub Heading',
+      heading: 'Interdum et malesuada fames',
+      subHeading: 'Fusce venenatis',
       items: [
         {
           id: '1',
-          text: 'About link one',
+          text: 'Pellentesque luctus',
         },
         {
           id: '2',
-          text: 'About link two',
-          url: 'https://www.aesop.com/au/r/about',
+          text: 'Maecenas a libero',
+          url: '/',
         },
       ],
     },

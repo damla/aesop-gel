@@ -1,0 +1,59 @@
+import { useRef } from 'react';
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import * as knobs from '@storybook/addon-knobs';
+import { useOnScreen } from '~/customHooks/useOnScreen';
+import CarouselFixture from '~/components/Carousel/Carousel.fixture';
+import Carousel from '~/components/Carousel';
+import Podium from './Podium';
+import PodiumFixture from './Podium.fixture';
+
+<Meta title="Components/Podium" component={Podium} />
+
+# Podium
+
+The **Podium** component abstracts a range of presentation functionality and requirements from components passed to it,
+such as vertical padding, transitions (There is one umbrella transition for all children components), background colour (TBA)
+and foreground theme colour (TBA).
+
+Presented here with both `paddingTop` and `paddingBottom` set to `small`, and fade transitions in on mount.
+
+*The black border is for demonstration purposes only.*
+
+<Preview>
+  <Story name="Base component">
+    {() => {
+      const ref = useRef();
+      const isOnScreen = useOnScreen(ref);
+      return (
+        <div style={{ border: '1px solid #333', margin: '20px'}}>
+          <Podium
+            paddingTop={knobs.select(
+              'paddingTop',
+              ['none', 'small', 'medium', 'large'],
+              'small',
+              'Presentation',
+            )}
+            paddingBottom={knobs.select(
+              'paddingBottom',
+              ['none', 'small', 'medium', 'large'],
+              'small',
+              'Presentation',
+            )}
+            isActive={isOnScreen}
+            transition="fade"
+            ref={ref}
+          >
+            <Carousel
+              introduction={CarouselFixture.introduction}
+              slides={CarouselFixture.slides}
+            />
+          </Podium>
+        </div>
+      )
+    }}
+  </Story>
+</Preview>
+
+## API
+
+<Props of={Podium} />

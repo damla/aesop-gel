@@ -1,12 +1,12 @@
 export default {
   link: {
-    text: 'About Aesop',
-    url: 'https://aesop.com',
+    text: 'Lorem ipsum',
+    url: '/',
     style: 'Internal No Icon Button Link',
   },
   secondaryLink: {
-    text: 'Read more',
-    url: 'https://aesop.com',
+    text: 'Nunc dignissim quis',
+    url: '/',
     style: 'External No Icon Button Link',
   },
 };
