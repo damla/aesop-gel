@@ -4,17 +4,13 @@ import { text } from '@storybook/addon-knobs';
 import Audio from './Audio';
 import AudioFixture from './Audio.fixture';
 
-<Meta
-  title="Components/Audio"
-  component={Audio}
-  decorators={[withKnobs]}
-/>
+<Meta title="Components/Audio" component={Audio} decorators={[withKnobs]} />
 
 # Audio
 
 <Preview>
   <Story name="Base component">
-    <Audio />
+    <Audio trackTitle="Istros Imagined" artistName="Jesse Paris Smith" />
   </Story>
 </Preview>
 
