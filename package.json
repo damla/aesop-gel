@@ -127,7 +127,7 @@
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-react-hooks": "^2.5.0",
     "gh-pages": "^2.2.0",
-    "husky": "^4.2.3",
+    "husky": "^4.2.5",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^25.1.0",
     "jest-cli": "^25.1.0",
