@@ -20,6 +20,7 @@ export const Video = forwardRef(function VideoRef(
     hasAllowAudio,
     hasAutoplay,
     hasLoop,
+    hasSpanContent,
     hasPlayInFullScreen,
     id,
     isFullWidth,
@@ -95,6 +96,7 @@ export const Video = forwardRef(function VideoRef(
   const handleAudioButtonClick = () => setIsMuted(!isMuted);
 
   const classSet = cx(styles.base, className, {
+    [styles.spanContent]: hasSpanContent,
     [styles.fullWidth]: isFullWidth,
   });
 
@@ -187,6 +189,7 @@ Video.propTypes = {
   hasAllowAudio: PropTypes.bool,
   hasAutoplay: PropTypes.bool,
   hasLoop: PropTypes.bool,
+  hasSpanContent: PropTypes.bool,
   hasPlayInFullScreen: PropTypes.bool,
   id: PropTypes.string,
   isFullWidth: PropTypes.bool,
@@ -229,6 +232,7 @@ Video.defaultProps = {
   hasAllowAudio: false,
   hasAutoplay: false,
   hasLoop: true,
+  hasSpanContent: false,
   hasPlayInFullScreen: false,
   id: undefined,
   isFullWidth: true,
