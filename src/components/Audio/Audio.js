@@ -6,7 +6,6 @@ import moment from 'moment';
 import WaveSurfer from 'wavesurfer.js';
 import Button from '~/components/Button';
 import Heading from '~/components/Heading';
-import Hidden from '~/components/Hidden';
 import Hyperlink from '~/components/Hyperlink';
 import Icon from '~/components/Icon';
 import Loading from '~/components/Loading';
@@ -200,24 +199,15 @@ const Audio = ({
       </div>
 
       <footer className={styles.footer}>
-        <Hidden isLarge={true} isMedium={true} isXLarge={true}>
-          <div className={styles.controls}>
-            <SeekForwardButton />
-            <PausePlayButton />
-            <SeekBackwardButton />
-          </div>
-        </Hidden>
         <time className={cx(styles.time, { [styles.disabled]: isLoading })}>
           {moment.utc(progress * 1000).format('mm:ss')} /{' '}
           {moment.utc(duration * 1000).format('mm:ss')}
         </time>
-        <Hidden isSmall={true}>
-          <div className={styles.controls}>
-            <SeekForwardButton />
-            <PausePlayButton />
-            <SeekBackwardButton />
-          </div>
-        </Hidden>
+        <div className={styles.controls}>
+          <SeekForwardButton />
+          <PausePlayButton />
+          <SeekBackwardButton />
+        </div>
         <div className={styles.download}>
           <Hyperlink
             className={styles.downloadButton}

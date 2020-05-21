@@ -5,14 +5,14 @@
   width: auto;
   max-width: 800px;
   padding-bottom: 20px;
-  border-bottom: 2px solid #797974;
+  border-bottom: 2px solid var(--color-dark-decoration);
   margin: 20px 10px;
   background: transparent;
   font-family: var(--font-family-sans-serif-regular);
   transition: border-color 400ms var(--easing-ease-out-cubic);
 
   &.disabled {
-    border-color: #d0cfc6;
+    border-color: var(--color-dark-disabled);
   }
 
   @media (--viewport-md) {
@@ -55,7 +55,7 @@
   transition: all 400ms var(--easing-ease-out-cubic);
 
   &.disabled {
-    fill: #d0cfc6;
+    fill: var(--color-dark-disabled);
   }
 }
 
@@ -66,7 +66,7 @@
   transition: all 400ms var(--easing-ease-out-cubic);
 
   &.disabled {
-    fill: #d0cfc6;
+    fill: var(--color-dark-disabled);
   }
 }
 
@@ -74,7 +74,7 @@
   transition: fill 200ms var(--easing-ease-out-cubic);
 
   &.disabled {
-    fill: #d0cfc6;
+    fill: var(--color-dark-disabled);
   }
 
   .seekForward & {
@@ -84,15 +84,15 @@
   .seekForward:not([disabled]):hover &,
   .seekBackward:not([disabled]):hover & {
     .orange & {
-      fill: #c67330;
+      fill: var(--color-highlight-orange);
     }
 
     .green & {
-      fill: #007544;
+      fill: var(--color-highlight-green);
     }
 
     .blue & {
-      fill: #114094;
+      fill: var(--color-highlight-blue);
     }
   }
 }
@@ -102,7 +102,7 @@
 }
 
 .artistName {
-  color: #666;
+  color: var(--color-dark-label);
 }
 
 .footer {
@@ -126,7 +126,7 @@
   transition: color 400ms var(--easing-ease-out-cubic);
 
   &.disabled {
-    color: #d0cfc6;
+    color: var(--color-dark-disabled);
   }
 
   @media (--viewport-sm-only) {
@@ -171,29 +171,29 @@
 
   &:hover {
     .orange & {
-      color: #c67330;
+      color: var(--color-highlight-orange);
     }
 
     .green & {
-      color: #007544;
+      color: var(--color-highlight-green);
     }
 
     .blue & {
-      color: #114094;
+      color: var(--color-highlight-blue);
     }
   }
 
   &:hover svg {
     .orange & {
-      fill: #c67330;
+      fill: var(--color-highlight-orange);
     }
 
     .green & {
-      fill: #007544;
+      fill: var(--color-highlight-green);
     }
 
     .blue & {
-      fill: #114094;
+      fill: var(--color-highlight-blue);
     }
   }
 }
@@ -216,41 +216,41 @@
   height: 47px;
   justify-content: center;
   padding: 15px;
-  border: 1px solid #333;
+  border: 1px solid var(--color-dark-copy);
   margin: 0 15px;
   border-radius: 100%;
   line-height: 1;
   transition: border-color 200ms var(--easing-ease-out-cubic);
 
   &.disabled {
-    border-color: #d0cfc6;
+    border-color: var(--color-dark-disabled);
   }
 
   &:not([disabled]):hover {
     .orange & {
-      border-color: #c67330;
+      border-color: var(--color-highlight-orange);
     }
 
     .green & {
-      border-color: #007544;
+      border-color: var(--color-highlight-green);
     }
 
     .blue & {
-      border-color: #114094;
+      border-color: var(--color-highlight-blue);
     }
   }
 
   &:not([disabled]):hover svg {
     .orange & {
-      fill: #c67330;
+      fill: var(--color-highlight-orange);
     }
 
     .green & {
-      fill: #007544;
+      fill: var(--color-highlight-green);
     }
 
     .blue & {
-      fill: #114094;
+      fill: var(--color-highlight-blue);
     }
   }
 }
