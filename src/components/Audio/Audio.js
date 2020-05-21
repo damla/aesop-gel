@@ -7,11 +7,21 @@ import WaveSurfer from 'wavesurfer.js';
 import Button from '~/components/Button';
 import Heading from '~/components/Heading';
 import Hidden from '~/components/Hidden';
+import Hyperlink from '~/components/Hyperlink';
 import Icon from '~/components/Icon';
 import Loading from '~/components/Loading';
 import styles from './Audio.module.css';
 
-const Audio = ({ artistName, className, trackTitle }) => {
+const Audio = ({
+  audioUrl,
+  artistName,
+  className,
+  copy,
+  hasAutoPlay,
+  id,
+  progressColour,
+  trackTitle,
+}) => {
   const waveformRef = useRef(null);
   const wavesurfer = useRef(null);
   const trackRef = useRef(null);
@@ -20,10 +30,17 @@ const Audio = ({ artistName, className, trackTitle }) => {
   const [progress, setProgress] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
 
-  // green #007544
-  // blue #114094
-
   useEffect(() => {
+    const getProgressColourHex = () => {
+      if (progressColour === 'green') {
+        return '#007544';
+      } else if (progressColour === 'blue') {
+        return '#114094';
+      }
+
+      return '#c67330';
+    };
+
     if (waveformRef.current) {
       wavesurfer.current = WaveSurfer.create({
         backend: 'MediaElement',
@@ -33,7 +50,7 @@ const Audio = ({ artistName, className, trackTitle }) => {
         cursorColor: 'transparent',
         cursorWidth: 1,
         height: 80,
-        progressColor: '#c67330',
+        progressColor: getProgressColourHex(),
         responsive: true,
         skipLength: 30,
         waveColor: '#b3ada5',
@@ -52,6 +69,11 @@ const Audio = ({ artistName, className, trackTitle }) => {
       const onReady = () => {
         setIsLoading(false);
         setCurrentDuration();
+
+        if (hasAutoPlay) {
+          setIsPlaying(state => !state);
+          wavesurfer.current.playPause();
+        }
       };
 
       wavesurfer.current.on('audioprocess', updateProgress);
@@ -62,11 +84,14 @@ const Audio = ({ artistName, className, trackTitle }) => {
         wavesurfer.current.destroy();
       };
     }
-  }, []);
+  }, [progressColour, hasAutoPlay]);
 
-  const url = './assets/audio/Istros_Imagined.mp3';
-
-  const classSet = cx(styles.base, className);
+  const classSet = cx(
+    styles.base,
+    { [styles.disabled]: isLoading },
+    styles[progressColour],
+    className,
+  );
 
   const handleOnClick = () => {
     setIsPlaying(state => !state);
@@ -76,21 +101,29 @@ const Audio = ({ artistName, className, trackTitle }) => {
   const PausePlayButton = () => {
     return (
       <Button
-        className={styles.playPauseButton}
+        className={cx(styles.playPauseButton, { [styles.disabled]: isLoading })}
         isEnabled={!isLoading}
         isInline={true}
         onClick={handleOnClick}
-        title={isLoading ? 'Loading audio file' : !isPlaying ? 'Play' : 'Pause'}
+        title={isLoading ? copy.loading : !isPlaying ? copy.play : copy.pause}
       >
         <Icon
-          className={cx(styles.iconPlay, { [styles.hidden]: isPlaying })}
+          className={cx(
+            styles.iconPlay,
+            { [styles.hidden]: isPlaying },
+            { [styles.disabled]: isLoading },
+          )}
           height={15}
           name="play"
           theme="dark"
           width={15}
         />
         <Icon
-          className={cx(styles.iconPause, { [styles.hidden]: !isPlaying })}
+          className={cx(
+            styles.iconPause,
+            { [styles.hidden]: !isPlaying },
+            { [styles.disabled]: isLoading },
+          )}
           height={15}
           name="pause"
           theme="dark"
@@ -109,9 +142,14 @@ const Audio = ({ artistName, className, trackTitle }) => {
         onClick={() => {
           wavesurfer.current.skipForward();
         }}
-        title="Seek"
+        title={copy.seekForward}
       >
-        <Icon className={styles.icon} height={20} name="seek" width={20} />
+        <Icon
+          className={cx(styles.icon, { [styles.disabled]: isLoading })}
+          height={20}
+          name="seek"
+          width={20}
+        />
       </Button>
     );
   };
@@ -125,15 +163,20 @@ const Audio = ({ artistName, className, trackTitle }) => {
         onClick={() => {
           wavesurfer.current.skipBackward();
         }}
-        title="Seek"
+        title={copy.seekBackward}
       >
-        <Icon className={styles.icon} height={20} name="seek" width={20} />
+        <Icon
+          className={cx(styles.icon, { [styles.disabled]: isLoading })}
+          height={20}
+          name="seek"
+          width={20}
+        />
       </Button>
     );
   };
 
   return (
-    <div className={classSet}>
+    <div className={classSet} id={id}>
       {(artistName || trackTitle) && (
         <header className={styles.header}>
           <Heading
@@ -150,15 +193,21 @@ const Audio = ({ artistName, className, trackTitle }) => {
         </header>
       )}
 
-      <Loading isLoading={isLoading} />
-      <div className={styles.waveform} ref={waveformRef} />
-      <audio ref={trackRef} src={url} />
+      <div className={styles.waveContainer}>
+        <Loading className={styles.loading} isLoading={isLoading} />
+        <div className={styles.waveform} ref={waveformRef} />
+        <audio ref={trackRef} src={audioUrl} />
+      </div>
 
       <footer className={styles.footer}>
         <Hidden isLarge={true} isMedium={true} isXLarge={true}>
-          <PausePlayButton />
+          <div className={styles.controls}>
+            <SeekForwardButton />
+            <PausePlayButton />
+            <SeekBackwardButton />
+          </div>
         </Hidden>
-        <time className={styles.time}>
+        <time className={cx(styles.time, { [styles.disabled]: isLoading })}>
           {moment.utc(progress * 1000).format('mm:ss')} /{' '}
           {moment.utc(duration * 1000).format('mm:ss')}
         </time>
@@ -169,28 +218,58 @@ const Audio = ({ artistName, className, trackTitle }) => {
             <SeekBackwardButton />
           </div>
         </Hidden>
-        <Button
-          className={styles.downloadButton}
-          isInline={true}
-          onClick={() => {}}
-          title="Download"
-        >
-          Download Music <Icon height={13} name="download" width={13} />
-        </Button>
+        <div className={styles.download}>
+          <Hyperlink
+            className={styles.downloadButton}
+            hasTargetInNewWindow={true}
+            isDownload={true}
+            style="External No Icon Link"
+            title={copy.downloadTitle}
+            url={audioUrl}
+          >
+            {copy.downloadLabel} <Icon height={13} name="download" width={13} />
+          </Hyperlink>
+        </div>
       </footer>
     </div>
   );
 };
 
 Audio.propTypes = {
+  audioUrl: PropTypes.string,
   artistName: PropTypes.string,
   className: PropTypes.string,
+  copy: PropTypes.shape({
+    loading: PropTypes.string,
+    play: PropTypes.string,
+    pause: PropTypes.string,
+    downloadLabel: PropTypes.string,
+    downloadTitle: PropTypes.string,
+    seekForward: PropTypes.string,
+    seekBackward: PropTypes.string,
+  }),
+  hasAutoPlay: PropTypes.bool,
+  id: PropTypes.string,
+  progressColour: PropTypes.oneOf(['orange', 'green', 'blue']),
   trackTitle: PropTypes.string,
 };
 
 Audio.defaultProps = {
+  audioUrl: undefined,
   artistName: undefined,
   className: undefined,
+  copy: {
+    loading: 'Loading audio file',
+    play: 'Play',
+    pause: 'Pause',
+    downloadLabel: 'Download Music',
+    downloadTitle: 'Download Music',
+    seekForward: 'Seek Forward',
+    seekBackward: 'Seek Backward',
+  },
+  hasAutoPlay: false,
+  id: undefined,
+  progressColour: 'orange',
   trackTitle: undefined,
 };
 

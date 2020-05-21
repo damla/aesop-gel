@@ -1,25 +1,45 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs } from '@storybook/addon-knobs';
-import { text } from '@storybook/addon-knobs';
+import * as knobs from '@storybook/addon-knobs';
 import Audio from './Audio';
 import AudioFixture from './Audio.fixture';
 
-<Meta title="Components/Audio" component={Audio} decorators={[withKnobs]} />
+<Meta title="Components/Audio" component={Audio} />
 
 # Audio
 
 <Preview>
   <Story name="Base component">
-    <Audio trackTitle="Istros Imagined" artistName="Jesse Paris Smith" />
+    <div>
+      <Audio
+        artistName={knobs.text(
+          'artistName',
+          AudioFixture.artistName,
+          'Content',
+        )}
+        audioUrl={knobs.text('audioUrl', AudioFixture.audioUrl, 'Content')}
+        copy={knobs.object('copy', AudioFixture.copy, 'Content')}
+        hasAutoPlay={knobs.boolean(
+          'hasAutoPlay',
+          AudioFixture.hasAutoPlay,
+          'Presentation',
+        )}
+        id={AudioFixture.id}
+        progressColour={knobs.select(
+          'progressColour',
+          ['orange', 'green', 'blue'],
+          AudioFixture.progressColour,
+          'Presentation',
+        )}
+        trackTitle={knobs.text(
+          'trackTitle',
+          AudioFixture.trackTitle,
+          'Content',
+        )}
+      />
+    </div>
   </Story>
 </Preview>
 
 ## API
 
 <Props of={Audio} />
-
-## Usage Example
-
-```
-<Audio />
-```
