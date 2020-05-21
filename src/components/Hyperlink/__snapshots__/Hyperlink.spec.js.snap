@@ -3,6 +3,7 @@
 exports[`<Hyperlink /> renders base component correctly 1`] = `
 <a
   className="base left dark"
+  download={false}
   href="https://aesop.com"
   target="_self"
 >

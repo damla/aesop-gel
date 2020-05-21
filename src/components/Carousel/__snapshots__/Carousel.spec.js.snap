@@ -105,6 +105,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
               >
                 <a
                   className="base hasIcon left dark"
+                  download={false}
                   href="/"
                   target="_self"
                   title="Aenean ac tortor"
@@ -169,6 +170,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
             >
               <a
                 className="base left dark item link"
+                download={false}
                 href="/"
                 target="_self"
                 title="Link to Quisque non enim efficitur"
@@ -240,6 +242,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
             >
               <a
                 className="base left dark item link"
+                download={false}
                 href="/"
                 target="_self"
                 title="Link to Phasellus posuere porta varius"
@@ -311,6 +314,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
             >
               <a
                 className="base left dark item link"
+                download={false}
                 href="/"
                 target="_self"
                 title="Link to Etiam at pharetra nisl"
@@ -382,6 +386,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
             >
               <a
                 className="base left dark item link"
+                download={false}
                 href="/"
                 target="_self"
                 title="Link to Phasellus posuere porta varius"
@@ -539,6 +544,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
             >
               <a
                 className="base left dark item link"
+                download={false}
                 href="/"
                 target="_self"
                 title="Link to Quisque non enim efficitur"
@@ -610,6 +616,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
             >
               <a
                 className="base left dark item link"
+                download={false}
                 href="/"
                 target="_self"
                 title="Link to Phasellus posuere porta varius"
@@ -681,6 +688,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
             >
               <a
                 className="base left dark item link"
+                download={false}
                 href="/"
                 target="_self"
                 title="Link to Etiam at pharetra nisl"
@@ -752,6 +760,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
             >
               <a
                 className="base left dark item link"
+                download={false}
                 href="/"
                 target="_self"
                 title="Link to Phasellus posuere porta varius"

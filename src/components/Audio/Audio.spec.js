@@ -13,7 +13,19 @@ describe('<Audio />', () => {
   });
 
   it('renders base component correctly', () => {
-    const tree = renderer.create(<Audio />).toJSON();
+    const tree = renderer
+      .create(
+        <Audio
+          artistName={AudioFixture.artistName}
+          audioUrl={AudioFixture.audioUrl}
+          copy={AudioFixture.copy}
+          hasAutoPlay={AudioFixture.hasAutoPlay}
+          id={AudioFixture.id}
+          progressColour={AudioFixture.progressColour}
+          trackTitle={AudioFixture.trackTitle}
+        />,
+      )
+      .toJSON();
 
     expect(tree).toMatchSnapshot();
   });

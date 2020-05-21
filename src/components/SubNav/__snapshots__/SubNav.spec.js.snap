@@ -17,6 +17,7 @@ exports[`<SubNav /> renders base component correctly 1`] = `
     >
       <a
         className="base left dark itemList"
+        download={false}
         href="https://aesop.com/"
         target="_self"
       >
@@ -28,6 +29,7 @@ exports[`<SubNav /> renders base component correctly 1`] = `
     >
       <a
         className="base left dark itemList"
+        download={false}
         href="https://aesop.com/"
         target="_self"
       >
@@ -50,6 +52,7 @@ exports[`<SubNav /> renders without title if not \`title\` prop is passed 1`] = 
     >
       <a
         className="base left dark itemList"
+        download={false}
         href="https://aesop.com/"
         target="_self"
       >
@@ -61,6 +64,7 @@ exports[`<SubNav /> renders without title if not \`title\` prop is passed 1`] = 
     >
       <a
         className="base left dark itemList"
+        download={false}
         href="https://aesop.com/"
         target="_self"
       >

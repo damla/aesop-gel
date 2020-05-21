@@ -35,6 +35,7 @@ exports[`<BodyCopy /> renders base component correctly 1`] = `
   >
     <a
       className="base center dark link center"
+      download={false}
       href="https://aesop.com"
       target="_self"
     >

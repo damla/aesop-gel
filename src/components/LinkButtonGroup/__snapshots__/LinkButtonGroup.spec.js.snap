@@ -6,6 +6,7 @@ exports[`<LinkButtonGroup /> renders base component correctly 1`] = `
 >
   <a
     className="base blockStyle center dark link center"
+    download={false}
     href="/"
     target="_self"
   >

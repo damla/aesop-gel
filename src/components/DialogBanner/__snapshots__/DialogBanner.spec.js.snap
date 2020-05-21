@@ -93,6 +93,7 @@ Array [
       </button>
       <a
         className="base left light ctaButton"
+        download={false}
         href="/contact-us/"
         target="_self"
       >

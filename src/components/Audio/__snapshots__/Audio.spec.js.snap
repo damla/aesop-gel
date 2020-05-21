@@ -2,96 +2,49 @@
 
 exports[`<Audio /> renders base component correctly 1`] = `
 <div
-  className="base"
+  className="base disabled orange"
+  id="Istros Imagined"
 >
-  <span
-    className="base isLoading dark"
+  <header
+    className="header"
+  >
+    <h3
+      className="base noMargin xXSmall dark artistName"
+    >
+      Jesse Paris Smith
+    </h3>
+    <h4
+      className="base noMargin serifFont medium dark"
+    >
+      Istros Imagined
+    </h4>
+  </header>
+  <div
+    className="waveContainer"
   >
     <span
-      className="dot"
+      className="base isLoading dark loading"
+    >
+      <span
+        className="dot"
+      />
+      <span
+        className="dot"
+      />
+      <span
+        className="dot"
+      />
+    </span>
+    <div
+      className="waveform"
     />
-    <span
-      className="dot"
+    <audio
+      src="./assets/audio/Istros_Imagined.mp3"
     />
-    <span
-      className="dot"
-    />
-  </span>
-  <div
-    className="waveform"
-  />
-  <audio
-    src="./assets/audio/Istros_Imagined.mp3"
-  />
+  </div>
   <footer
     className="footer"
   >
-    <button
-      className="base disabled inlineStyle dark playPauseButton"
-      disabled={true}
-      onClick={[Function]}
-      title="Loading audio file"
-      type="button"
-    >
-      <svg
-        className="base play dark iconPlay"
-        data-ref=""
-        focusable="false"
-        height={15}
-        role="img"
-        style={
-          Object {
-            "height": "15px",
-            "width": "15px",
-          }
-        }
-        tabIndex={-1}
-        viewBox="0 0 8 11"
-        width={15}
-      >
-        <g>
-          <polygon
-            className="play"
-            points="0,0 8,5.5 0,11"
-          />
-        </g>
-      </svg>
-      <svg
-        className="base pause dark iconPause hidden"
-        data-ref=""
-        focusable="false"
-        height={15}
-        role="img"
-        style={
-          Object {
-            "height": "15px",
-            "width": "15px",
-          }
-        }
-        tabIndex={-1}
-        viewBox="0 0 9 10"
-        width={15}
-      >
-        <g>
-          <polygon
-            className="play"
-            points="0,0 3,0 3,10 0,10 0,0"
-          />
-          <polygon
-            className="play"
-            points="6,0 9,0 9,10 6,10 6,0"
-          />
-        </g>
-      </svg>
-    </button>
-    <time
-      className="time"
-    >
-      00:00
-       /
-       
-      00:00
-    </time>
     <div
       className="controls"
     >
@@ -99,11 +52,11 @@ exports[`<Audio /> renders base component correctly 1`] = `
         className="base disabled inlineStyle dark seekForward"
         disabled={true}
         onClick={[Function]}
-        title="Seek"
+        title="Seek Forward"
         type="button"
       >
         <svg
-          className="base seek dark icon"
+          className="base seek dark icon disabled"
           data-ref=""
           focusable="false"
           height={20}
@@ -131,14 +84,14 @@ exports[`<Audio /> renders base component correctly 1`] = `
         </svg>
       </button>
       <button
-        className="base disabled inlineStyle dark playPauseButton"
+        className="base disabled inlineStyle dark playPauseButton disabled"
         disabled={true}
         onClick={[Function]}
         title="Loading audio file"
         type="button"
       >
         <svg
-          className="base play dark iconPlay"
+          className="base play dark iconPlay disabled"
           data-ref=""
           focusable="false"
           height={15}
@@ -161,7 +114,7 @@ exports[`<Audio /> renders base component correctly 1`] = `
           </g>
         </svg>
         <svg
-          className="base pause dark iconPause hidden"
+          className="base pause dark iconPause hidden disabled"
           data-ref=""
           focusable="false"
           height={15}
@@ -192,11 +145,11 @@ exports[`<Audio /> renders base component correctly 1`] = `
         className="base disabled inlineStyle dark seekBackward"
         disabled={true}
         onClick={[Function]}
-        title="Seek"
+        title="Seek Backward"
         type="button"
       >
         <svg
-          className="base seek dark icon"
+          className="base seek dark icon disabled"
           data-ref=""
           focusable="false"
           height={20}
@@ -224,42 +177,187 @@ exports[`<Audio /> renders base component correctly 1`] = `
         </svg>
       </button>
     </div>
-    <button
-      className="base inlineStyle dark downloadButton"
-      disabled={false}
-      onClick={[Function]}
-      title="Download"
-      type="button"
+    <time
+      className="time disabled"
     >
-      Download Music 
-      <svg
-        className="base download dark"
-        data-ref=""
-        focusable="false"
-        height={13}
-        role="img"
-        style={
-          Object {
-            "height": "13px",
-            "width": "13px",
-          }
-        }
-        tabIndex={-1}
-        viewBox="0 0 11 14"
-        width={13}
+      00:00
+       /
+       
+      00:00
+    </time>
+    <div
+      className="controls"
+    >
+      <button
+        className="base disabled inlineStyle dark seekForward"
+        disabled={true}
+        onClick={[Function]}
+        title="Seek Forward"
+        type="button"
       >
-        <g>
-          <path
-            className="undefined"
-            d="M10.992,6.125 L6.125,10.782 L6.125,0.001 L4.848,0.001 L4.848,10.768 L-0.004,6.125 L-0.004,7.819 L5.495,13.011 L10.992,7.819 L10.992,6.125 Z"
-          />
-          <path
-            className="undefined"
-            d="M-0.000,12.999 L11.000,12.999 L11.000,14.000 L-0.000,14.000 L-0.000,12.999 Z"
-          />
-        </g>
-      </svg>
-    </button>
+        <svg
+          className="base seek dark icon disabled"
+          data-ref=""
+          focusable="false"
+          height={20}
+          role="img"
+          style={
+            Object {
+              "height": "20px",
+              "width": "20px",
+            }
+          }
+          tabIndex={-1}
+          viewBox="0 0 20 12"
+          width={20}
+        >
+          <g>
+            <path
+              className="undefined"
+              d="M19.996,11.991 L9.999,5.990 L19.996,-0.012"
+            />
+            <path
+              className="undefined"
+              d="M9.996,11.991 L-0.001,5.990 L9.996,-0.012"
+            />
+          </g>
+        </svg>
+      </button>
+      <button
+        className="base disabled inlineStyle dark playPauseButton disabled"
+        disabled={true}
+        onClick={[Function]}
+        title="Loading audio file"
+        type="button"
+      >
+        <svg
+          className="base play dark iconPlay disabled"
+          data-ref=""
+          focusable="false"
+          height={15}
+          role="img"
+          style={
+            Object {
+              "height": "15px",
+              "width": "15px",
+            }
+          }
+          tabIndex={-1}
+          viewBox="0 0 8 11"
+          width={15}
+        >
+          <g>
+            <polygon
+              className="play"
+              points="0,0 8,5.5 0,11"
+            />
+          </g>
+        </svg>
+        <svg
+          className="base pause dark iconPause hidden disabled"
+          data-ref=""
+          focusable="false"
+          height={15}
+          role="img"
+          style={
+            Object {
+              "height": "15px",
+              "width": "15px",
+            }
+          }
+          tabIndex={-1}
+          viewBox="0 0 9 10"
+          width={15}
+        >
+          <g>
+            <polygon
+              className="play"
+              points="0,0 3,0 3,10 0,10 0,0"
+            />
+            <polygon
+              className="play"
+              points="6,0 9,0 9,10 6,10 6,0"
+            />
+          </g>
+        </svg>
+      </button>
+      <button
+        className="base disabled inlineStyle dark seekBackward"
+        disabled={true}
+        onClick={[Function]}
+        title="Seek Backward"
+        type="button"
+      >
+        <svg
+          className="base seek dark icon disabled"
+          data-ref=""
+          focusable="false"
+          height={20}
+          role="img"
+          style={
+            Object {
+              "height": "20px",
+              "width": "20px",
+            }
+          }
+          tabIndex={-1}
+          viewBox="0 0 20 12"
+          width={20}
+        >
+          <g>
+            <path
+              className="undefined"
+              d="M19.996,11.991 L9.999,5.990 L19.996,-0.012"
+            />
+            <path
+              className="undefined"
+              d="M9.996,11.991 L-0.001,5.990 L9.996,-0.012"
+            />
+          </g>
+        </svg>
+      </button>
+    </div>
+    <div
+      className="download"
+    >
+      <a
+        className="base left dark downloadButton"
+        download={true}
+        href="./assets/audio/Istros_Imagined.mp3"
+        target="_blank"
+        title="Download Music"
+      >
+        Download Music
+         
+        <svg
+          className="base download dark"
+          data-ref=""
+          focusable="false"
+          height={13}
+          role="img"
+          style={
+            Object {
+              "height": "13px",
+              "width": "13px",
+            }
+          }
+          tabIndex={-1}
+          viewBox="0 0 11 14"
+          width={13}
+        >
+          <g>
+            <path
+              className="undefined"
+              d="M10.992,6.125 L6.125,10.782 L6.125,0.001 L4.848,0.001 L4.848,10.768 L-0.004,6.125 L-0.004,7.819 L5.495,13.011 L10.992,7.819 L10.992,6.125 Z"
+            />
+            <path
+              className="undefined"
+              d="M-0.000,12.999 L11.000,12.999 L11.000,14.000 L-0.000,14.000 L-0.000,12.999 Z"
+            />
+          </g>
+        </svg>
+      </a>
+    </div>
   </footer>
 </div>
 `;
