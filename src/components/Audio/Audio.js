@@ -217,7 +217,13 @@ const Audio = ({
             title={copy.downloadTitle}
             url={audioUrl}
           >
-            {copy.downloadLabel} <Icon height={13} name="download" width={13} />
+            {copy.downloadLabel}{' '}
+            <Icon
+              className={styles.downloadButtonIcon}
+              height={13}
+              name="download"
+              width={13}
+            />
           </Hyperlink>
         </div>
       </footer>

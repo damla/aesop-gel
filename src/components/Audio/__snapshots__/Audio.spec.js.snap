@@ -198,7 +198,7 @@ exports[`<Audio /> renders base component correctly 1`] = `
         Download Music
          
         <svg
-          className="base download dark"
+          className="base download dark downloadButtonIcon"
           data-ref=""
           focusable="false"
           height={13}
