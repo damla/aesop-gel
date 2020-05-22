@@ -36,6 +36,11 @@
     "url": "https://github.com/aesop/aesop-gel/issues"
   },
   "homepage": "https://github.com/aesop/aesop-gel#readme",
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
   "peerDependencies": {
     "classnames": ">=2.2.6",
     "lodash": ">=4.17.15",
@@ -93,6 +98,8 @@
     "webpack-merge": "^4.2.2"
   },
   "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
     "@rollup/plugin-alias": "^3.0.1",
     "@rollup/plugin-json": "^4.0.2",
     "@semantic-release/commit-analyzer": "^8.0.1",
@@ -125,7 +132,7 @@
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-react-hooks": "^2.5.0",
     "gh-pages": "^2.2.0",
-    "husky": "^4.2.3",
+    "husky": "^4.2.5",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^25.1.0",
     "jest-cli": "^25.1.0",
