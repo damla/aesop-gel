@@ -28,7 +28,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aesop/aesop-gel.git"
+    "url": "git@github.com:aesop/aesop-gel.git"
   },
   "keywords": [],
   "license": "ISC",
