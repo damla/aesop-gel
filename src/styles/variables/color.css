@@ -47,4 +47,7 @@
 
   /* System colours */
   --color-error: #ea6956;
+  --color-highlight-orange: #c67330;
+  --color-highlight-green: #007544;
+  --color-highlight-blue: #114094;
 }
