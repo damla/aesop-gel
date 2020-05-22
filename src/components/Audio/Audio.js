@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import throttle from 'lodash/throttle';
 import moment from 'moment';
+import throttle from 'lodash/throttle';
 import WaveSurfer from 'wavesurfer.js';
+import { COLORS, HYPERLINK_STYLE_TYPES } from '~/constants';
 import Button from '~/components/Button';
 import Heading from '~/components/Heading';
 import Hyperlink from '~/components/Hyperlink';
@@ -12,8 +13,8 @@ import Loading from '~/components/Loading';
 import styles from './Audio.module.css';
 
 const Audio = ({
-  audioUrl,
   artistName,
+  audioUrl,
   className,
   copy,
   hasAutoPlay,
@@ -24,20 +25,20 @@ const Audio = ({
   const waveformRef = useRef(null);
   const wavesurfer = useRef(null);
   const trackRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(false);
   const [duration, setDuration] = useState(0);
-  const [progress, setProgress] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     const getProgressColourHex = () => {
       if (progressColour === 'green') {
-        return '#007544';
+        return COLORS.HIGHLIGHT_GREEN;
       } else if (progressColour === 'blue') {
-        return '#114094';
+        return COLORS.HIGHLIGHT_BLUE;
       }
 
-      return '#c67330';
+      return COLORS.HIGHLIGHT_ORANGE;
     };
 
     if (waveformRef.current) {
@@ -52,7 +53,7 @@ const Audio = ({
         progressColor: getProgressColourHex(),
         responsive: true,
         skipLength: 30,
-        waveColor: '#b3ada5',
+        waveColor: COLORS.GREY_60,
       });
 
       wavesurfer.current.load(trackRef.current);
@@ -70,8 +71,7 @@ const Audio = ({
         setCurrentDuration();
 
         if (hasAutoPlay) {
-          setIsPlaying(state => !state);
-          wavesurfer.current.playPause();
+          togglePlaying();
         }
       };
 
@@ -92,10 +92,14 @@ const Audio = ({
     className,
   );
 
-  const handleOnClick = () => {
+  function togglePlaying() {
     setIsPlaying(state => !state);
     wavesurfer.current.playPause();
-  };
+  }
+
+  function handleOnClick() {
+    togglePlaying();
+  }
 
   const PausePlayButton = () => {
     return (
@@ -213,11 +217,11 @@ const Audio = ({
             className={styles.downloadButton}
             hasTargetInNewWindow={true}
             isDownload={true}
-            style="External No Icon Link"
+            style={HYPERLINK_STYLE_TYPES.EXTERNAL_NO_ICON_TEXT_LINK}
             title={copy.downloadTitle}
             url={audioUrl}
           >
-            {copy.downloadLabel}{' '}
+            {`${copy.downloadLabel} `}
             <Icon
               className={styles.downloadButtonIcon}
               height={13}

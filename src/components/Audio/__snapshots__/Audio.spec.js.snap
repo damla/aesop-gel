@@ -195,8 +195,7 @@ exports[`<Audio /> renders base component correctly 1`] = `
         target="_blank"
         title="Download Music"
       >
-        Download Music
-         
+        Download Music 
         <svg
           className="base download dark downloadButtonIcon"
           data-ref=""
