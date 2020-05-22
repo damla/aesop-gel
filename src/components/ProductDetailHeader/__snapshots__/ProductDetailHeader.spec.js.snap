@@ -16,7 +16,6 @@ exports[`<ProductDetailHeader /> renders base component correctly 1`] = `
         >
           <a
             className="base left dark link"
-            download={false}
             href="/"
             target="_self"
           >
@@ -28,7 +27,6 @@ exports[`<ProductDetailHeader /> renders base component correctly 1`] = `
         >
           <a
             className="base left dark link"
-            download={false}
             href="/"
             target="_self"
           >
@@ -54,7 +52,6 @@ exports[`<ProductDetailHeader /> renders base component correctly 1`] = `
             >
               <a
                 className="base left dark link"
-                download={false}
                 href="/"
                 target="_self"
               >
@@ -66,7 +63,6 @@ exports[`<ProductDetailHeader /> renders base component correctly 1`] = `
             >
               <a
                 className="base left dark link"
-                download={false}
                 href="/"
                 target="_self"
               >

@@ -92,7 +92,7 @@ Hyperlink.defaultProps = {
   dataTestRef: undefined,
   hasTargetInNewWindow: false,
   id: undefined,
-  isDownload: false,
+  isDownload: undefined,
   style: 'Internal No Icon Link',
   textAlign: 'left',
   theme: 'dark',

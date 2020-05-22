@@ -28,7 +28,6 @@ exports[`<TwoColumnList /> renders base component correctly 1`] = `
         >
           <a
             className="base left dark"
-            download={false}
             href="/"
             target="_self"
           >
@@ -40,7 +39,6 @@ exports[`<TwoColumnList /> renders base component correctly 1`] = `
         >
           <a
             className="base left dark"
-            download={false}
             href="/"
             target="_self"
           >
@@ -70,7 +68,6 @@ exports[`<TwoColumnList /> renders base component correctly 1`] = `
         >
           <a
             className="base left dark"
-            download={false}
             href="/"
             target="_self"
           >
@@ -109,7 +106,6 @@ exports[`<TwoColumnList /> renders base component correctly 1`] = `
         >
           <a
             className="base left dark"
-            download={false}
             href="/"
             target="_self"
           >
