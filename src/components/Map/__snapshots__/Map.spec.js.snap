@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Map /> renders base component correctly 1`] = `
+<div
+  className="base"
+>
+  <span
+    className="base isLoading dark"
+  >
+    <span
+      className="dot"
+    />
+    <span
+      className="dot"
+    />
+    <span
+      className="dot"
+    />
+  </span>
+  <div
+    className="map"
+    id="google-map"
+  />
+</div>
+`;
