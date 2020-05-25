@@ -1,5 +1,0 @@
-@define-mixin reset-list $margin: 0, $padding: 0 {
-  padding: $padding;
-  margin: $margin;
-  list-style: none;
-}

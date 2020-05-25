@@ -19,7 +19,7 @@ const Podium = forwardRef(function PodiumRef(
   const classSet = cx(
     styles.base,
     styles[`${paddingTop ? paddingTop : verticalPadding}PaddingTop`],
-    styles[`${paddingBottom ? paddingTop : verticalPadding}PaddingBottom`],
+    styles[`${paddingBottom ? paddingBottom : verticalPadding}PaddingBottom`],
     className,
   );
 

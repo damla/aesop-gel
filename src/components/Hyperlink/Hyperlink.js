@@ -15,6 +15,7 @@ const Hyperlink = ({
   className,
   dataTestRef,
   hasTargetInNewWindow,
+  isDownload,
   style,
   textAlign,
   theme,
@@ -46,6 +47,7 @@ const Hyperlink = ({
     <a
       className={classSet}
       data-test-ref={dataTestRef}
+      download={isDownload}
       href={url}
       target={target}
       title={title}
@@ -66,6 +68,7 @@ Hyperlink.propTypes = {
   dataTestRef: PropTypes.string,
   hasTargetInNewWindow: PropTypes.bool,
   id: PropTypes.string,
+  isDownload: PropTypes.bool,
   style: PropTypes.oneOf([
     'External Button Link',
     'External No Icon Button Link',
@@ -89,6 +92,7 @@ Hyperlink.defaultProps = {
   dataTestRef: undefined,
   hasTargetInNewWindow: false,
   id: undefined,
+  isDownload: undefined,
   style: 'Internal No Icon Link',
   textAlign: 'left',
   theme: 'dark',

@@ -40,17 +40,63 @@ npm run build:prod
 
 ## Git Workflow
 
-This project adopts the [Gitflow Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow).
+This project adopts a simplified version of the [Gitflow Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow).
 
-**feature** (or **update**, or **bugfix** where appropriate) branches are branched from **develop**, and are merged back into **develop** after an approved Pull Request.
+`feature` (or `update`, or `bugfix` where appropriate) branches are branched from `develop`, and are merged back into `develop` after an approved Pull Request.
 
-A **release** branch is then cut from **develop** (so **develop** can continue receiving new features).
+`hotfix` branches can be merged into `master` if they originate from `master`.
 
-**hotfix** branches can be merged into **release** if they originate from **release**.
+`master` is always the updated stable version that truthfully represent production code.
 
-Finally, once the **release** branch has been handed over, **release** is rebased and merged back into **develop** and **master** respectively (along with any hotfixes).
+### Releasing code
+This project follows the [Semantic Versioning](https://semver.org/) standard or `MAJOR.MINOR.PATCH`. The version number is automatically maintained by the [semantic-release](https://github.com/semantic-release/semantic-release) package.
 
-**master** is always the updated stable version that truthfully represent production code.
+Commits to the `develop` branch will be released on the `develop` channel. These will be tagged as follows `v1.2.3-develop.4`. These can be thought of as 'beta' builds. The final number `.4` in the example above will be incremented until the `develop` branch is merged into `master`.
+
+When `develop` is merged into `master` a release will be created. These will be tagged as `v1.2.3` (Note the `master` should also be merged back into `develop` at this point so both branches contain a 'full' git tag history).
+
+These versions can be refrenced in other projects by adding `"aesop-gel": "github:aesop/aesop-gel#1.2.3",` to the package.json file. Generally the `master` releases should only be used. However during development and testing it may make sense to use the `develop` or 'beta' builds.
+
+Changes to the version number are calculated automatically via the CI flow. In short commits with a `feat` type will increment the `minor` version, commits with a `fix` type will increment the `patch` version.
+
+See [Commit messages](#commit-messages) below for more information.
+
+### Commit messages
+Commit messages follow the [Conventional commits](https://www.conventionalcommits.org/en/v1.0.0/). Details about each commit message type are explained in this [article](https://medium.com/@menuka/writing-meaningful-git-commit-messages-a62756b65c81). The basis of this is built around `type(scope?): subject` and is enforced by [commitlint](https://github.com/conventional-changelog/commitlint).
+
+
+#### Examples
+
+```feat(AES-123): add XComponent section```
+
+```fix: issue with XComponent CSS```
+
+```style: clean up whitespace issues```
+
+### Breaking changes
+Breaking changes should generally avoid, however they can be made in two ways;
+  - by adding `!` after the commit type `feat(aes-123)!: change all the APIs!`
+  - by adding `BREAKING CHANGE` in the commit body
+  ```
+    feat(aes-123): change all the APIs!
+
+    BREAKING CHANGE: The APIs have all been rewritten because I felt like it
+  ```
+
+#### Valid commit types
+```
+build
+ci
+chore
+docs
+feat
+fix
+perf
+refactor
+revert
+style
+test
+```
 
 ## Testing
 
