@@ -1,5 +1,6 @@
 export default {
-  markers: [
+  center: { lat: -37.8064, lng: 144.9826 },
+  places: [
     {
       id: 'aesop-fitzroy',
       lat: -37.8064,
@@ -15,6 +16,29 @@ export default {
       lng: 144.965485,
       storeName: 'Aesop QV',
       type: 'SIGNATURE_STORE',
+    },
+    {
+      id: 'aesop-south-yarra',
+      lat: -37.8388125,
+      lng: 144.9914976,
+      storeName: 'Aesop South Yarra',
+      type: 'SIGNATURE_STORE',
+    },
+    {
+      id: 'myer-melbourne',
+      lat: -37.813791,
+      lng: 144.964008,
+      storeName: 'Myer Melbourne',
+      type: 'DEPARTMENT_STORE',
+    },
+    {
+      id: 'aesop-newtown',
+      lat: -33.893405,
+      lng: 151.18367,
+      storeName: 'Aesop Newtown',
+      type: 'SIGNATURE_STORE',
+      address: '134A King Street, Newtown, NSW 2042',
+      phoneNumber: '+61 2 9517 3319',
     },
   ],
 };

@@ -60,6 +60,7 @@
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/preset-env": "^7.8.4",
     "@babel/preset-react": "^7.8.3",
+    "@google/markerclustererplus": "^5.0.3",
     "babel-loader": "^8.0.6",
     "babel-plugin-module-resolver": "^4.0.0",
     "classnames": ">=2.2.6",

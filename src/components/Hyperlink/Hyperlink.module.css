@@ -2,6 +2,7 @@
 
 .base {
   position: relative;
+  display: inline-block;
   font-family: var(--font-family-sans-serif-regular);
   font-size: inherit;
   font-weight: var(--font-weight-normal);
@@ -10,14 +11,12 @@
 }
 
 .hasIcon {
-  padding-right: 26px;
+  /* padding-right: 26px; */
 }
 
 .icon {
-  position: absolute;
-  top: calc(50% - 8px);
-  right: 0;
   display: inline-block;
+  transform: translateY(4px);
 
   svg {
     width: 15px;

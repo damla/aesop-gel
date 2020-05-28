@@ -9,7 +9,10 @@ import MapFixture from './Map.fixture';
 
 <Preview>
   <Story name="Base component">
-    <Map />
+    <Map
+      center={MapFixture.center}
+      places={knobs.object('places', MapFixture.places)}
+    />
   </Story>
 </Preview>
 
