@@ -42,16 +42,18 @@
     }
   },
   "peerDependencies": {
+    "@google/markerclustererplus": "^5.0.3",
     "classnames": ">=2.2.6",
+    "google-maps": "^4.2.3",
     "lodash": ">=4.17.15",
-    "prop-types": ">=15.7.2",
     "moment": "^2.25.3",
-    "react": ">=16.8.0",
+    "prop-types": ">=15.7.2",
     "react-accessible-accordion": ">=3.0.1",
     "react-collapse": ">=5.0.1",
     "react-dom": ">=16.8.0",
     "react-slick": ">=0.25.2",
     "react-transition-group": ">=4.4.1",
+    "react": ">=16.8.0",
     "uuid": ">=3.4.0",
     "wavesurfer.js": "^3.3.3"
   },
