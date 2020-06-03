@@ -7,11 +7,16 @@ import MapFixture from './Map.fixture';
 
 # Map
 
+Presented as with `customPinMarker`.
+
 <Preview>
   <Story name="Base component">
     <Map
-      center={MapFixture.center}
-      places={knobs.object('places', MapFixture.places)}
+      center={knobs.object('center', MapFixture.customPlaceMarkerCenter, 'Presentation')}
+      customMarker={knobs.object('customMarker', MapFixture.customPinMarker, 'Content')}
+      hasMarkerIndexes={knobs.boolean('hasMarkerIndexes', false, 'Presentation')}
+      initialZoom={knobs.number('initialZoom', 14, 'Presentation')}
+      places={knobs.object('places', MapFixture.places, 'Content')}
     />
   </Story>
 </Preview>
@@ -19,3 +24,17 @@ import MapFixture from './Map.fixture';
 ## API
 
 <Props of={Map} />
+
+## Variations
+
+### With Place Marker Indexes
+
+<Preview>
+  <Story name="With Place Marker Indexes">
+    <Map
+      center={MapFixture.center}
+      hasMarkerIndexes={true}
+      places={MapFixture.places}
+    />
+  </Story>
+</Preview>

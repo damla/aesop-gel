@@ -8,6 +8,7 @@ const Podium = forwardRef(function PodiumRef(
   {
     children,
     className,
+    horizontalPadding,
     isActive,
     paddingBottom,
     paddingTop,
@@ -20,6 +21,8 @@ const Podium = forwardRef(function PodiumRef(
     styles.base,
     styles[`${paddingTop ? paddingTop : verticalPadding}PaddingTop`],
     styles[`${paddingBottom ? paddingBottom : verticalPadding}PaddingBottom`],
+    styles[`${horizontalPadding}PaddingLeft`],
+    styles[`${horizontalPadding}PaddingRight`],
     className,
   );
 
@@ -35,6 +38,7 @@ const Podium = forwardRef(function PodiumRef(
 Podium.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
+  horizontalPadding: PropTypes.oneOf(['none', 'small']),
   isActive: PropTypes.bool,
   paddingTop: PropTypes.oneOf(['none', 'small', 'medium', 'large']),
   paddingBottom: PropTypes.oneOf(['none', 'small', 'medium', 'large']),
@@ -53,6 +57,7 @@ Podium.propTypes = {
 Podium.defaultProps = {
   children: undefined,
   className: undefined,
+  horizontalPadding: 'none',
   isActive: true,
   paddingTop: undefined,
   paddingBottom: undefined,

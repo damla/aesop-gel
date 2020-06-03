@@ -167,6 +167,11 @@
   }
 }
 
+.flush {
+  margin-right: 0;
+  margin-left: 0;
+}
+
 .slideCounter {
   margin-bottom: 10px;
 

@@ -110,6 +110,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                   title="Aenean ac tortor"
                 >
                   Aenean ac tortor
+                   
                   <i
                     aria-hidden="true"
                     className="icon"

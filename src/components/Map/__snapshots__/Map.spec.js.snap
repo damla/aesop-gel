@@ -4,22 +4,76 @@ exports[`<Map /> renders base component correctly 1`] = `
 <div
   className="base"
 >
-  <span
-    className="base isLoading dark"
+  <div
+    className="wrapper"
   >
     <span
-      className="dot"
+      className="base dark loading"
+    >
+      <span
+        className="dot"
+      />
+      <span
+        className="dot"
+      />
+      <span
+        className="dot"
+      />
+    </span>
+    <div
+      className="map"
+      id="google-map"
     />
-    <span
-      className="dot"
-    />
-    <span
-      className="dot"
-    />
-  </span>
-  <div
-    className="map"
-    id="google-map"
-  />
+  </div>
+  <footer
+    className="footer"
+  >
+    <div
+      className="viewStoreLabel"
+    >
+      Visit our nearby stores.
+    </div>
+    <div
+      className="viewStoreLinkWrapper"
+    >
+      <a
+        className="base hasIcon left dark viewStoreLink"
+        href="/"
+        target="_self"
+        title="Open Title"
+      >
+        Store locator
+         
+        <i
+          aria-hidden="true"
+          className="icon"
+        >
+          <svg
+            className="base rightArrow dark"
+            data-ref=""
+            focusable="false"
+            height={15}
+            role="img"
+            style={
+              Object {
+                "height": "15px",
+                "width": "15px",
+              }
+            }
+            tabIndex={-1}
+            viewBox="0 0 50 50"
+            width={15}
+          >
+            <g>
+              <path
+                className="undefined"
+                d="M30.1,5.3L50,25.1L30.1,45h-6.6l18-17.6H0v-4.8h41.5l-18-17.6h6.6V5.3z"
+              />
+            </g>
+          </svg>
+        </i>
+      </a>
+    </div>
+  </footer>
 </div>
 `;

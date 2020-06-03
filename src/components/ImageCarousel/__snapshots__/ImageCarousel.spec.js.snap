@@ -373,7 +373,7 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
       className="base"
     >
       <ul
-        className="list dark"
+        className="list dark flush"
       >
         <li
           className="slick-active"
@@ -393,7 +393,7 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
     </div>
   </div>
   <footer
-    className="footer"
+    className="footer flush"
   >
     <div
       className="slideCounter"

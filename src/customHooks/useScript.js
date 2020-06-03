@@ -36,8 +36,6 @@ const useScript = ({
     script.id = id;
     script.defer = defer;
 
-    console.log('script', count, script);
-
     if (dataSet) {
       Object.keys(dataSet).forEach(attr => {
         script.dataset[attr] = dataSet[attr];

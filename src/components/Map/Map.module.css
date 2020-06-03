@@ -2,32 +2,38 @@
 
 .base {
   position: relative;
+  display: block;
+
+  &,
+  & * {
+    box-sizing: border-box;
+  }
+}
+
+.wrapper {
+  position: relative;
   overflow: hidden;
   width: 100%;
-  height: 0;
-  padding-top: 30px;
-  padding-bottom: 56.25%; /* 16:9 */
   margin: 0;
   object-fit: cover;
-}
 
-.map {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+  @media (--viewport-md) {
+    height: 0;
+    padding-top: 30px;
+    padding-bottom: 56.25%; /* 16:9 */
+  }
 
-.base {
   :global {
     .gm-style-iw-c {
+      z-index: 100;
+      overflow: auto;
+      max-height: 400px !important;
       padding: 0 !important;
       border-top: 2px solid var(--color-secondary);
       margin: 0;
       background-color: var(--color-white);
       border-radius: 0;
+      box-shadow: none;
     }
 
     .gm-style .gm-style-iw-t::after {
@@ -38,14 +44,15 @@
           var(--color-white) 51%,
           var(--color-white) 100%
         ) !important;
+      box-shadow: none;
     }
 
     .gm-style-iw-d {
       overflow: auto !important;
+      max-height: none !important;
     }
 
     [aria-label='Close'] {
-      /* display: none !important; */
       top: 4px !important;
       right: 4px !important;
     }
@@ -53,6 +60,8 @@
     .cluster {
       width: 40px !important;
       height: 40px !important;
+
+      /** TODO change this SVG reference */
       background-image: url('https://www.aesop.com/_ui/responsive/common/images/icons/map-cluster-icon.svg');
 
       img,
@@ -63,87 +72,51 @@
   }
 }
 
-.info {
-  display: block;
-  width: 320px;
-  padding: 20px;
-  font-family: var(--font-family-sans-serif-regular);
-  font-weight: var(--font-weight-normal);
-
-  &,
-  & * {
-    box-sizing: border-box;
-  }
-}
-
-.address {
-  margin-bottom: 15px;
-  line-height: 1.4;
-}
-
-.hyperlink {
-  font-size: rem(15px);
-}
-
-.phoneNumber {
-  margin-bottom: 15px;
-  color: #666;
-  font-size: rem(15px);
-  line-height: 1.4;
-}
-
-.openingHoursHeading.openingHoursHeading {
-  margin-bottom: 6px;
-}
-
-.openingHoursList {
-  padding: 0;
-  margin: 0;
-  margin-bottom: 15px;
-  line-height: 1.4;
-  list-style-type: none;
-}
-
-.openingHoursItem {
-  padding: 0;
-  margin: 0;
-  margin-bottom: 4px;
-}
-
-.dayName {
-  font-family: var(--font-family-sans-serif-medium);
-  font-size: rem(15px);
-
-  &::after {
-    content: ': ';
-  }
-}
-
-.hours {
-  font-family: var(--font-family-sans-serif-regular);
-  font-size: rem(14px);
-}
-
-.specialHours {
-  color: #965d34;
-
-  &::after {
-    content: '*';
-  }
-}
-
-.specialHoursNote {
-  margin-bottom: 15px;
-  color: #965d34;
-  font-size: rem(13px);
-
-  &::before {
-    content: '*';
-  }
-}
-
 .map {
-  /* width: 100%;
-  height: 70vh;
-  min-height: 200px; */
+  width: 100%;
+  height: 60vh;
+  min-height: 200px;
+
+  @media (--viewport-md) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-height: initial;
+    object-fit: cover;
+  }
+}
+
+.loading {
+  position: absolute;
+  top: calc(50% - 7px);
+}
+
+.infoCardBlock {
+  border-bottom: 1px solid var(--color-grey-65);
+}
+
+.footer {
+  @media (--viewport-md) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.viewStoreLabel {
+  margin: 20px 0;
+  color: var(--color-dark-label);
+  font-size: rem(15px);
+  line-height: 1.6;
+}
+
+.viewStoreLinkWrapper {
+  margin: 20px 0;
+}
+
+.viewStoreLink {
+  font-size: rem(15px);
 }

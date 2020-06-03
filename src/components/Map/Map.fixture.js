@@ -1,5 +1,19 @@
 export default {
   center: { lat: -37.8064, lng: 144.9826 },
+  customPinMarker: { lat: -37.78863, lng: 144.9847727 },
+  customPlaceMarker: {
+    id: 'aesop-collins-street',
+    lat: -37.813971,
+    lng: 144.970604,
+    storeName: 'Aesop Collins Street',
+    type: 'SIGNATURE_STORE',
+    address: '87 Collins Street, Melbourne 3000',
+    phoneNumber: '+61 3 9650 3027',
+  },
+  customPlaceMarkerCenter: {
+    lat: -37.813971,
+    lng: 144.970604,
+  },
   places: [
     {
       id: 'aesop-fitzroy',

@@ -30,9 +30,7 @@
 
   @media (--viewport-lg) {
     width: calc((100% - var(--layout-lg-spacing) * 2) * 5 / 12);
-    padding:
-      0 var(--layout-lg-spacing) 0
-      calc((100% - var(--layout-lg-spacing) * 2) / 12);
+    padding: 0 var(--layout-lg-spacing) 0 0;
     margin-right: calc((100% + var(--layout-lg-spacing) * 2) * 1 / 12);
     margin-bottom: 0;
   }
@@ -55,13 +53,11 @@
 
   &.fullWidth {
     @media (--viewport-md) {
-      /* width: 100%;
-      padding-left: calc((100% - 34px * 2) / 6); */
+      width: calc((100% - var(--layout-md-spacing) * 2) * 5 / 6);
     }
 
     @media (--viewport-lg) {
-      /* width: calc((100% - 40px * 2) * 7 / 12 + 60px);
-      padding-left: 0; */
+      width: calc((100% - var(--layout-lg-spacing)) * 7 / 12);
     }
 
     &.reverse {
@@ -87,9 +83,7 @@
 
   .sidebar {
     @media (--viewport-lg) {
-      padding:
-        0 calc((100% - var(--layout-lg-spacing) * 2) / 12) 0
-        var(--layout-lg-spacing);
+      padding: 0 calc((100% - var(--layout-lg-spacing) * 2) / 12) 0 0;
       margin-right: 0;
     }
   }
@@ -107,6 +101,16 @@
       @media (--viewport-lg) {
         width: calc((100% - var(--layout-lg-spacing)) * 6 / 12);
         margin-left: calc((100% - var(--layout-lg-spacing) * 2) * 5 / 12);
+      }
+
+      &.fullWidth {
+        @media (--viewport-md) {
+          width: calc((100% - var(--layout-md-spacing) * 2) * 5 / 6);
+        }
+
+        @media (--viewport-lg) {
+          width: calc((100% - var(--layout-lg-spacing)) * 7 / 12);
+        }
       }
     }
   }

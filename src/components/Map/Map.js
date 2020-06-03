@@ -1,139 +1,126 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { Loader } from 'google-maps';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import { Loader } from 'google-maps';
+import isFunction from 'lodash/isFunction';
 import ReactDOMServer from 'react-dom/server';
 import MarkerClusterer from '@google/markerclustererplus';
+import { STORES } from '~/constants';
+import useWindowHasResized from '~/customHooks/useWindowHasResized';
+import {
+  ascertainIsSmallOnlyViewport,
+  ascertainIsMediumViewport,
+} from '~/utils/viewports';
 import Hyperlink from '~/components/Hyperlink';
 import Loading from '~/components/Loading';
-import Heading from '~/components/Heading';
-import styles from './Map.module.css';
+import Transition from '~/components/Transition';
 import MapOptions from './Map.options';
+import InfoCard from './components/InfoCard';
+import styles from './Map.module.css';
 
 const GOOGLE_MAP_API_KEY = 'AIzaSyC8XkoYL8hh3iWiHhMWV07qmFerF3DO1W0';
 
-const InfoCard = ({
-  address,
-  copy = {
-    directions: 'Directions to ',
-    specialHoursNote: 'Special opening hours',
-  },
-  phoneNumber,
-  storeName,
-  openingHours = [
-    { dayName: 'Monday', hours: '11am - 4pm', id: 1 },
-    { dayName: 'Tuesday', hours: '10am - 3pm', id: 2, special: true },
-  ],
+const loader = new Loader(GOOGLE_MAP_API_KEY, {
+  libraries: ['places'],
+});
+
+const Map = ({
+  center,
+  className,
+  customMarker,
+  hasMarkerIndexes,
+  places,
+  initialZoom,
 }) => {
-  return (
-    <div className={styles.info}>
-      <Heading level="3" size="xSmall">
-        {storeName}
-      </Heading>
-      {address && (
-        <div className={styles.address}>
-          <Hyperlink
-            className={styles.hyperlink}
-            dataTestRef="DIRECTION_URL"
-            hasTargetInNewWindow={true}
-            style="External Text Link"
-            title={`${copy.directions} ${address}`}
-            url={`https://www.google.com/maps?saddr=Current+Location&daddr=${address}`}
-          >
-            {address}
-          </Hyperlink>
-        </div>
-      )}
-      {phoneNumber && <div className={styles.phoneNumber}>{phoneNumber}</div>}
-
-      {openingHours.length !== 0 && (
-        <>
-          <Heading
-            className={styles.openingHoursHeading}
-            hasTopMargin={false}
-            level="4"
-            size="xXSmall"
-          >
-            Opening hours
-          </Heading>
-
-          <ul className={styles.openingHoursList}>
-            {openingHours.map(item => (
-              <li className={styles.openingHoursItem} key={item.id}>
-                <span className={styles.dayName}>{item.dayName}</span>
-                <span
-                  className={cx(styles.hours, {
-                    [styles.specialHours]: item.special,
-                  })}
-                >
-                  {item.hours}
-                </span>
-              </li>
-            ))}
-          </ul>
-          <div className={styles.specialHoursNote}>{copy.specialHoursNote}</div>
-        </>
-      )}
-    </div>
-  );
-};
-
-InfoCard.propTypes = {
-  address: PropTypes.string,
-  copy: PropTypes.object,
-  openingHours: PropTypes.array,
-  phoneNumber: PropTypes.string,
-  storeName: PropTypes.string,
-};
-
-export const STORE_LOCATION_TYPES = {
-  DEPARTMENT_STORE: 'DEPARTMENT_STORE',
-  SIGNATURE_STORE: 'SIGNATURE_STORE',
-  STOCKIST: 'STOCKIST',
-};
-
-const Map = ({ className, center, places }) => {
   const mapContainerRef = useRef();
   const mapRef = useRef();
   const google = useRef(null);
+  const activeInfoCard = useRef(null);
+  const handleMapClick = useRef(null);
+  const isIsSmallOnlyViewport = useRef(ascertainIsSmallOnlyViewport());
+  const isIsMediumViewport = useRef(ascertainIsMediumViewport());
+
+  const [activeInfoBlockData, setActiveInfoBlockData] = useState(null);
   const [markers, setMarkers] = useState([]);
   const [markerCluster, setMarkerCluster] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [isMapReady, setIsMapReady] = useState(false);
+
+  useWindowHasResized(() => {
+    if (activeInfoCard.current) {
+      activeInfoCard.current.close();
+    }
+
+    setActiveInfoBlockData(null);
+  });
+
+  isIsSmallOnlyViewport.current = ascertainIsSmallOnlyViewport();
+  isIsMediumViewport.current = ascertainIsMediumViewport();
+
+  const clearMapMarkers = () => {
+    markers.forEach(marker => marker.setMap(null));
+    setMarkers([]);
+  };
+
+  const clearMapClusters = () => {
+    if (isFunction(markerCluster.clearMarkers)) {
+      markerCluster.clearMarkers();
+    }
+
+    setMarkerCluster(null);
+  };
 
   useEffect(() => {
-    const load = async () => {
+    (async () => {
       setIsLoading(true);
-
-      const loader = new Loader(GOOGLE_MAP_API_KEY, {
-        libraries: ['places'],
-      });
 
       google.current = await loader.load();
       mapRef.current = createGoogleMap();
 
+      handleMapClick.current = google.current.maps.event.addListener(
+        mapRef.current,
+        'click',
+        () => {
+          if (activeInfoCard.current) {
+            activeInfoCard.current.close();
+          }
+        },
+      );
+
       setMarkers(() =>
-        places.map((marker, index) => createMarker(marker, index)),
+        [customMarker, ...places]
+          .filter(item => item?.lat !== undefined && item?.lng !== undefined)
+          .map((marker, index) =>
+            marker.id
+              ? createPlaceMarker(marker, index, index === 0)
+              : createPinMarker(marker, index),
+          ),
       );
 
       setIsLoading(false);
-      setIsMapReady(true);
-    };
+    })();
 
-    load();
+    return function cleanup() {
+      if (google.current) {
+        google.current.maps.event.removeListener(handleMapClick.current);
+        clearMapMarkers();
+      }
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [places]);
+  }, [customMarker, hasMarkerIndexes, places]);
 
   useEffect(() => {
     if (google.current) {
       setMarkerCluster(
         () =>
           new MarkerClusterer(mapRef.current, markers, {
-            imagePath:
-              'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m',
+            imagePath: '',
           }),
       );
     }
+    return function cleanup() {
+      clearMapClusters();
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [markers]);
 
   const createGoogleMap = useCallback(() => {
@@ -142,19 +129,51 @@ const Map = ({ className, center, places }) => {
       mapTypeControl: MapOptions.SHOW_MAP_TYPE_CONTROL,
       scrollwheel: MapOptions.SCROLL_WHEEL_ENABLED,
       styles: MapOptions.MAP_STYLES,
-      zoom: MapOptions.MAP_INITIAL_ZOOM,
+      zoom: initialZoom,
+      clickableIcons: false,
     });
-  }, [center]);
+  }, [center, initialZoom]);
 
-  const createMarker = useCallback(
-    ({ type, lat, lng, storeName, address, phoneNumber }, index) => {
+  const createPinMarker = useCallback(
+    (pin, index) => {
+      return new google.current.maps.Marker({
+        position: new google.current.maps.LatLng(pin.lat, pin.lng),
+        clickable: false,
+        map: mapRef.current,
+        icon: {
+          anchor: new google.current.maps.Point(
+            MapOptions.MAP_MARKER_ANCHOR_X,
+            MapOptions.MAP_MARKER_ANCHOR_Y,
+          ),
+          labelOrigin: new google.current.maps.Point(
+            MapOptions.MAP_LABEL_ORIGIN_X,
+            MapOptions.MAP_LABEL_ORIGIN_Y,
+          ),
+          ...MapOptions.MAP_MARKER,
+        },
+        label: {
+          text: hasMarkerIndexes ? `${index + 1}` : ' ',
+          ...MapOptions.MAP_LABEL,
+        },
+      });
+    },
+    [hasMarkerIndexes],
+  );
+
+  const createPlaceMarker = useCallback(
+    (
+      { type, lat, lng, storeName, address, phoneNumber },
+      index = 0,
+      custom = false,
+    ) => {
       const isStockistMarker =
-        type === STORE_LOCATION_TYPES.STOCKIST ||
-        type === STORE_LOCATION_TYPES.DEPARTMENT_STORE;
+        type === STORES.LOCATION_TYPES.STOCKIST ||
+        type === STORES.LOCATION_TYPES.DEPARTMENT_STORE;
 
-      const markerType = isStockistMarker
-        ? MapOptions.STOCKIST_MAP_MARKER
-        : MapOptions.MAP_MARKER;
+      const markerType =
+        !custom && (customMarker || isStockistMarker)
+          ? MapOptions.STOCKIST_MAP_MARKER
+          : MapOptions.MAP_MARKER;
 
       const marker = new google.current.maps.Marker({
         position: new google.current.maps.LatLng(lat, lng),
@@ -172,7 +191,7 @@ const Map = ({ className, center, places }) => {
         },
         title: storeName,
         label: {
-          text: `${index + 1}`,
+          text: hasMarkerIndexes ? `${index + 1}` : ' ',
           ...MapOptions.MAP_LABEL,
         },
       });
@@ -181,29 +200,77 @@ const Map = ({ className, center, places }) => {
         content: ReactDOMServer.renderToString(
           <InfoCard
             address={address}
+            count={index + 1}
             phoneNumber={phoneNumber}
             storeName={storeName}
           />,
         ),
       });
 
-      marker.addListener('click', function() {
-        infoCard.open(mapRef.current, marker);
-        mapRef.current.setCenter(marker.getPosition());
-        mapRef.current.setZoom(MapOptions.MAP_MAX_ZOOM);
+      marker.addListener('click', () => {
+        if (isIsMediumViewport.current) {
+          if (activeInfoCard.current) {
+            activeInfoCard.current.close();
+          }
+
+          activeInfoCard.current = infoCard;
+          activeInfoCard.current.open(mapRef.current, marker);
+        }
+
+        if (isIsSmallOnlyViewport.current) {
+          setActiveInfoBlockData({
+            address,
+            count: index + 1,
+            phoneNumber,
+            storeName,
+          });
+        }
+
+        // mapRef.current.setCenter(marker.getPosition());
+        // mapRef.current.setZoom(MapOptions.MAP_MAX_ZOOM);
       });
 
       return marker;
     },
-    [],
+    [customMarker, hasMarkerIndexes, isIsMediumViewport, isIsSmallOnlyViewport],
   );
 
   const classSet = cx(styles.base, className);
 
   return (
     <div className={classSet}>
-      <Loading isLoading={isLoading} />
-      <div className={styles.map} id="google-map" ref={mapContainerRef} />
+      <div className={styles.wrapper}>
+        <Loading className={styles.loading} isLoading={isLoading} />
+        <div className={styles.map} id="google-map" ref={mapContainerRef} />
+      </div>
+      <Transition
+        hasCSSTransitionMountOnEnter={true}
+        hasCSSTransitionUnmountOnExit={true}
+        isActive={!!activeInfoBlockData}
+        type="shiftInDown"
+      >
+        <InfoCard
+          address={activeInfoBlockData?.address}
+          className={styles.infoCardBlock}
+          count={activeInfoBlockData?.count}
+          hasMarkerIndexes={hasMarkerIndexes}
+          phoneNumber={activeInfoBlockData?.phoneNumber}
+          storeName={activeInfoBlockData?.storeName}
+        />
+      </Transition>
+      <footer className={styles.footer}>
+        <div className={styles.viewStoreLabel}>Visit our nearby stores.</div>
+        <div className={styles.viewStoreLinkWrapper}>
+          <Hyperlink
+            className={styles.viewStoreLink}
+            style="Internal Text Link"
+            title="Open Title"
+            url="/"
+          >
+            Store locator
+          </Hyperlink>
+        </div>
+      </footer>
     </div>
   );
 };
@@ -212,14 +279,23 @@ Map.propTypes = {
   center: PropTypes.shape({
     lat: PropTypes.number,
     lng: PropTypes.number,
-  }),
+  }).isRequired,
   className: PropTypes.string,
+  customMarker: PropTypes.shape({
+    lat: PropTypes.number,
+    lng: PropTypes.number,
+  }),
+  hasMarkerIndexes: PropTypes.bool,
+  initialZoom: PropTypes.number,
   places: PropTypes.array,
 };
 
 Map.defaultProps = {
   center: {},
   className: undefined,
+  customMarker: undefined,
+  hasMarkerIndexes: true,
+  initialZoom: MapOptions.MAP_INITIAL_ZOOM,
   places: [],
 };
 

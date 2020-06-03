@@ -16,6 +16,8 @@ const BynderWidget = ({ className, heading, id, theme }) => {
     },
   });
 
+  if (error) return; /** @TODO failed script load error */
+
   const classSet = cx(styles.base, styles[theme], className);
 
   return (

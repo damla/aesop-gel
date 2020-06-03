@@ -1,0 +1,108 @@
+@import 'styles/index';
+
+.base {
+  display: block;
+  width: 100%;
+  padding: 8px 16px 8px 48px;
+  font-family: var(--font-family-sans-serif-regular);
+  font-weight: var(--font-weight-normal);
+
+  @media (--viewport-md) {
+    width: 320px;
+    padding: 8px 16px;
+  }
+
+  &,
+  & * {
+    box-sizing: border-box;
+  }
+}
+
+.markerCount {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  display: flex;
+  width: 32px;
+  height: 32px;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid var(--color-dark-decoration);
+  border-radius: 100%;
+  font-size: rem(14px);
+  line-height: 0;
+
+  i {
+    font-style: normal;
+  }
+
+  @media (--viewport-md) {
+    display: none;
+  }
+}
+
+.address {
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.hyperlink {
+  font-size: rem(15px);
+}
+
+.phoneNumber {
+  margin-bottom: 15px;
+  color: var(--color-dark-label);
+  font-size: rem(15px);
+  line-height: 1.4;
+}
+
+.openingHoursHeading.openingHoursHeading {
+  margin-bottom: 6px;
+}
+
+.openingHoursList {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 15px;
+  line-height: 1.4;
+  list-style-type: none;
+}
+
+.openingHoursItem {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+.dayName {
+  font-family: var(--font-family-sans-serif-medium);
+  font-size: rem(14px);
+
+  &::after {
+    content: ': ';
+  }
+}
+
+.hours {
+  font-family: var(--font-family-sans-serif-regular);
+  font-size: rem(13px);
+}
+
+.specialHours {
+  color: var(--color-adjustment);
+
+  &::after {
+    content: '*';
+  }
+}
+
+.specialHoursNote {
+  margin-bottom: 15px;
+  color: var(--color-adjustment);
+  font-size: rem(13px);
+
+  &::before {
+    content: '*';
+  }
+}

@@ -5,6 +5,7 @@ import Carousel from '~/components/Carousel';
 const ImageCarousel = ({ className, slides }) => (
   <Carousel
     className={className}
+    hasFlushPagination={true}
     hasFullWidthSlides={true}
     hasShowCaption={true}
     hasSlideCounter={true}

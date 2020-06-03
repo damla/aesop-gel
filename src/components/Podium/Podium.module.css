@@ -44,3 +44,27 @@
     padding-bottom: 250px;
   }
 }
+
+.smallPaddingLeft {
+  padding-left: 20px;
+
+  @media (--viewport-md) {
+    padding-left: 34px;
+  }
+
+  @media (--viewport-lg) {
+    padding-left: 80px;
+  }
+}
+
+.smallPaddingRight {
+  padding-right: 20px;
+
+  @media (--viewport-md) {
+    padding-right: 34px;
+  }
+
+  @media (--viewport-lg) {
+    padding-right: 80px;
+  }
+}

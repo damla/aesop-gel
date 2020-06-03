@@ -23,6 +23,7 @@ import styles from './Carousel.module.css';
 const Carousel = forwardRef(function CarouselRef(
   {
     className,
+    hasFlushPagination,
     hasFullWidthSlides,
     hasShowCaption,
     hasSlideCounter,
@@ -84,6 +85,7 @@ const Carousel = forwardRef(function CarouselRef(
 
   const settings = getCarouselSettings({
     className: styles.carousel,
+    hasFlushPagination,
     hasFullWidthSlides,
     initialSlideIndex,
     isNextButtonActive,
@@ -163,7 +165,9 @@ const Carousel = forwardRef(function CarouselRef(
         ))}
       </Slider>
       {(hasShowCaption || hasSlideCounter) && (
-        <footer className={styles.footer}>
+        <footer
+          className={cx(styles.footer, { [styles.flush]: hasFlushPagination })}
+        >
           {hasSlideCounter && (
             <div className={styles.slideCounter}>
               {totalSlidesCount > 1 && slideCounter}
@@ -182,6 +186,7 @@ const Carousel = forwardRef(function CarouselRef(
 
 Carousel.propTypes = {
   className: PropTypes.string,
+  hasFlushPagination: PropTypes.bool,
   hasFullWidthSlides: PropTypes.bool,
   hasShowCaption: PropTypes.bool,
   hasSlideCounter: PropTypes.bool,
@@ -212,6 +217,7 @@ Carousel.propTypes = {
 
 Carousel.defaultProps = {
   className: undefined,
+  hasFlushPagination: false,
   hasFullWidthSlides: false,
   hasShowCaption: false,
   hasSlideCounter: false,
