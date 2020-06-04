@@ -1,5 +1,5 @@
-@import 'styles/variables/index';
 @import url('https://d8ejoa1fys2rk.cloudfront.net/bynder-embed/2.13/css/bynder-widgets.min.css');
+@import 'styles/variables/index';
 
 .heading {
   position: absolute;
@@ -13,7 +13,7 @@
 .base {
   :global {
     .bynder-widget-media-list {
-      border: 1px solid #ddd !important;
+      border: 1px solid var(--color-grey-65) !important;
       margin-bottom: 50px;
       border-radius: 0 !important;
     }
@@ -21,26 +21,26 @@
     .bynder-widget-media-list .bynder-widget-header,
     .bynder-widget-media-list .bynder-widget-content {
       border: none !important;
-      background: #fffef2 !important;
+      background-color: var(--color-white) !important;
       box-shadow: none !important;
     }
 
     a.bynder-widget-btn {
-      border: 1px solid #333 !important;
-      background: #333 !important;
+      border: 1px solid var(--color-secondary) !important;
+      background-color: var(--color-secondary) !important;
       border-radius: 0 !important;
-      box-shadow: 0 0 #333 !important;
+      box-shadow: 0 0 var(--color-secondary) !important;
     }
 
     a.bynder-widget-btn:hover {
-      background: #333 !important;
+      background-color: var(--color-secondary) !important;
     }
 
     div.media-item a.bynder-widget-media-link,
     ul.bynder-widget-media-items li a.bynder-widget-media-link {
       width: 80% !important;
-      border: 1px solid #ddd !important;
-      background: #fffef2 !important;
+      border: 1px solid var(--color-grey-65) !important;
+      background-color: var(--color-white) !important;
       box-shadow: 0 0 transparent !important;
     }
 
@@ -51,7 +51,7 @@
     div.media-item:hover a.bynder-widget-media-link,
     ul.bynder-widget-media-items li:hover a.bynder-widget-media-link {
       padding: 10px !important;
-      border: 2px solid #333 !important;
+      border: 2px solid var(--color-secondary) !important;
       box-shadow: 0 0 transparent !important;
     }
 
@@ -66,7 +66,7 @@
 
     ul.bynder-widget-media-items li a .bynder-widget-mediaholder {
       width: 100% !important;
-      background: transparent !important;
+      background-color: transparent !important;
     }
 
     .bynder-widget-header a.bynder-widget-btn {

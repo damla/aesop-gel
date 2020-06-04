@@ -27,7 +27,7 @@
     padding: 0 40px 0 0;
   }
 
-  @media (--viewport-lg) {
+  @media (--viewport-xl) {
     width: calc(100% * 1 / 3);
   }
 }
@@ -39,4 +39,6 @@
 
 .detailContent {
   color: var(--color-dark-label);
+  white-space: pre-wrap;
+  word-break: break-word;
 }
