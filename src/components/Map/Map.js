@@ -93,9 +93,9 @@ const Map = ({
         [customMarker, ...places]
           .filter(item => item?.lat !== undefined && item?.lng !== undefined)
           .map((marker, index) =>
-            marker.id
-              ? createPlaceMarker(marker, index, index === 0)
-              : createPinMarker(marker, index),
+            marker.type === MAP.MARKER_TYPE.PIN
+              ? createPinMarker(marker, index)
+              : createPlaceMarker(marker, index, index === 0),
           ),
       );
 
@@ -116,7 +116,7 @@ const Map = ({
       setMarkerCluster(
         () =>
           new MarkerClusterer(mapRef.current, markers, {
-            imagePath: MAP.CLUSTER_IMAGE_PATH,
+            imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m' //MAP.CLUSTER_IMAGE_PATH,
           }),
       );
     }
@@ -165,13 +165,13 @@ const Map = ({
 
   const createPlaceMarker = useCallback(
     (
-      { address, lat, lng, openingHours, phoneNumber, storeName, type },
+      { address, lat, lng, openingHours, phoneNumber, storeName, storeType },
       index = 0,
       custom = false,
     ) => {
       const isStockistMarker =
-        type === STORES.LOCATION_TYPES.STOCKIST ||
-        type === STORES.LOCATION_TYPES.DEPARTMENT_STORE;
+        storeType === STORES.LOCATION_TYPES.STOCKIST ||
+        storeType === STORES.LOCATION_TYPES.DEPARTMENT_STORE;
 
       const markerType =
         !custom && (customMarker || isStockistMarker)
@@ -316,11 +316,23 @@ Map.propTypes = {
   customMarker: PropTypes.shape({
     lat: PropTypes.number,
     lng: PropTypes.number,
+    type: PropTypes.oneOf(['PIN', 'PLACE']),
   }),
   hasMarkerIndexes: PropTypes.bool,
   id: PropTypes.string,
   initialZoom: PropTypes.number,
-  places: PropTypes.array,
+  places: PropTypes.arrayOf(
+    PropTypes.shape({
+      lat: PropTypes.number,
+      lng: PropTypes.number,
+      id: PropTypes.string,
+      storeName: PropTypes.string,
+      storeType: PropTypes.string,
+      address: PropTypes.string,
+      phoneNumber: PropTypes.string,
+      openingHours: PropTypes.array,
+    }),
+  ),
 };
 
 Map.defaultProps = {

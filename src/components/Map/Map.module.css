@@ -60,9 +60,7 @@
     .cluster {
       width: 40px !important;
       height: 40px !important;
-
-      /** TODO change this SVG reference */
-      background-image: url('https://www.aesop.com/_ui/responsive/common/images/icons/map-cluster-icon.svg');
+      background-image: url('./Map-cluster-icon.svg');
 
       img,
       span {

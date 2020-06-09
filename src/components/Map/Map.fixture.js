@@ -1,7 +1,8 @@
 export default {
   initialZoom: 14,
   center: { lat: -37.8064, lng: 144.9826 },
-  customPinMarker: { lat: -37.78863, lng: 144.9847727 },
+  customPinMarker: { lat: -37.78863, lng: 144.9847727, type: 'PIN' },
+  customPinMarkerCenter: { lat: -37.78863, lng: 144.9847727 },
   copy: {
     storeLocator: {
       label: 'Store locator',
@@ -20,7 +21,8 @@ export default {
     lat: -37.813971,
     lng: 144.970604,
     storeName: 'Aesop Collins Street',
-    type: 'SIGNATURE_STORE',
+    storeType: 'SIGNATURE_STORE',
+    type: 'PLACE',
     address: '87 Collins Street, Melbourne 3000',
     phoneNumber: '+61 3 9650 3027',
     openingHours: [
@@ -43,7 +45,7 @@ export default {
       lat: -37.8064,
       lng: 144.9826,
       storeName: 'Aesop Fitzroy',
-      type: 'SIGNATURE_STORE',
+      storeType: 'SIGNATURE_STORE',
       address: '242 Gertrude Street, Fitzroy VIC 3065',
       phoneNumber: '+61 3 9419 8356',
       openingHours: [
@@ -66,7 +68,7 @@ export default {
       lat: -37.810711,
       lng: 144.965485,
       storeName: 'Aesop QV',
-      type: 'SIGNATURE_STORE',
+      storeType: 'SIGNATURE_STORE',
       openingHours: [
         { dayName: 'Monday', hours: '11am - 4pm', id: '1' },
         { dayName: 'Tuesday', hours: '10am - 3pm', id: '2', isAlternate: true },
@@ -87,7 +89,7 @@ export default {
       lat: -37.8388125,
       lng: 144.9914976,
       storeName: 'Aesop South Yarra',
-      type: 'SIGNATURE_STORE',
+      storeType: 'SIGNATURE_STORE',
       openingHours: [
         { dayName: 'Monday', hours: '11am - 4pm', id: '1' },
         { dayName: 'Tuesday', hours: '10am - 3pm', id: '2', isAlternate: true },
@@ -108,7 +110,7 @@ export default {
       lat: -37.813791,
       lng: 144.964008,
       storeName: 'Myer Melbourne',
-      type: 'DEPARTMENT_STORE',
+      storeType: 'DEPARTMENT_STORE',
       openingHours: [
         { dayName: 'Monday', hours: '11am - 4pm', id: '1' },
         { dayName: 'Tuesday', hours: '10am - 3pm', id: '2', isAlternate: true },
@@ -129,7 +131,7 @@ export default {
       lat: -33.893405,
       lng: 151.18367,
       storeName: 'Aesop Newtown',
-      type: 'SIGNATURE_STORE',
+      storeType: 'SIGNATURE_STORE',
       address: '134A King Street, Newtown, NSW 2042',
       phoneNumber: '+61 2 9517 3319',
       openingHours: [

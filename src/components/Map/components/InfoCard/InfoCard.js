@@ -93,7 +93,7 @@ InfoCard.propTypes = {
       dayName: PropTypes.string,
       hours: PropTypes.string,
       id: PropTypes.string,
-      isAlternate: PropTypes.string,
+      isAlternate: PropTypes.bool,
     }),
   ),
   phoneNumber: PropTypes.string,

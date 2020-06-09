@@ -12,7 +12,7 @@ Presented as with `customPinMarker`.
 <Preview>
   <Story name="Base component">
     <Map
-      center={knobs.object('center', MapFixture.customPlaceMarkerCenter, 'Presentation')}
+      center={knobs.object('center', MapFixture.customPinMarkerCenter, 'Presentation')}
       copy={knobs.object('copy', MapFixture.copy, 'Content')}
       customMarker={knobs.object('customMarker', MapFixture.customPinMarker, 'Content')}
       hasMarkerIndexes={knobs.boolean('hasMarkerIndexes', false, 'Presentation')}
@@ -37,6 +37,21 @@ Presented as with `customPinMarker`.
       center={MapFixture.center}
       hasMarkerIndexes={true}
       id="google-map-indexes"
+      places={MapFixture.places}
+    />
+  </Story>
+</Preview>
+
+### With Custom Place Marker
+
+<Preview>
+  <Story name="With Custom Place Marker">
+    <Map
+      center={MapFixture.customPlaceMarkerCenter}
+      customMarker={MapFixture.customPlaceMarker}
+      hasMarkerIndexes={false}
+      id="google-map-custom-place"
+      initialZoom={15}
       places={MapFixture.places}
     />
   </Story>
