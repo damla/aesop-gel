@@ -89,7 +89,7 @@
   font-size: rem(13px);
 }
 
-.specialHours {
+.alternateHours {
   color: var(--color-adjustment);
 
   &::after {
@@ -97,7 +97,7 @@
   }
 }
 
-.specialHoursNote {
+.alternateHoursNote {
   margin-bottom: 15px;
   color: var(--color-adjustment);
   font-size: rem(13px);

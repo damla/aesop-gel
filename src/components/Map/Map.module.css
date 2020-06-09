@@ -78,7 +78,7 @@
   min-height: 200px;
 
   @media (--viewport-md) {
-    position: absolute;
+    position: absolute !important;
     top: 0;
     right: 0;
     bottom: 0;

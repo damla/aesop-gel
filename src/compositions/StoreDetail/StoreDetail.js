@@ -168,6 +168,7 @@ const StoreDetail = ({ className }) => {
             lat: MapFixture.places[0].lat,
             lng: MapFixture.places[0].lng,
           }}
+          id="store-detail-map"
           places={[MapFixture.places[0]]}
         />
       </Podium>

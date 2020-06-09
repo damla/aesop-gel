@@ -5,7 +5,7 @@ import { Loader } from 'google-maps';
 import isFunction from 'lodash/isFunction';
 import ReactDOMServer from 'react-dom/server';
 import MarkerClusterer from '@google/markerclustererplus';
-import { STORES } from '~/constants';
+import { HYPERLINK_STYLE_TYPES, MAP, STORES, TRANSITIONS } from '~/constants';
 import useWindowHasResized from '~/customHooks/useWindowHasResized';
 import {
   ascertainIsSmallOnlyViewport,
@@ -18,6 +18,7 @@ import MapOptions from './Map.options';
 import InfoCard from './components/InfoCard';
 import styles from './Map.module.css';
 
+/** @TODO store and fetch this key via an API */
 const GOOGLE_MAP_API_KEY = 'AIzaSyC8XkoYL8hh3iWiHhMWV07qmFerF3DO1W0';
 
 const loader = new Loader(GOOGLE_MAP_API_KEY, {
@@ -27,10 +28,12 @@ const loader = new Loader(GOOGLE_MAP_API_KEY, {
 const Map = ({
   center,
   className,
+  copy,
   customMarker,
   hasMarkerIndexes,
-  places,
+  id,
   initialZoom,
+  places,
 }) => {
   const mapContainerRef = useRef();
   const mapRef = useRef();
@@ -113,7 +116,7 @@ const Map = ({
       setMarkerCluster(
         () =>
           new MarkerClusterer(mapRef.current, markers, {
-            imagePath: '',
+            imagePath: MAP.CLUSTER_IMAGE_PATH,
           }),
       );
     }
@@ -162,7 +165,7 @@ const Map = ({
 
   const createPlaceMarker = useCallback(
     (
-      { type, lat, lng, storeName, address, phoneNumber },
+      { address, lat, lng, openingHours, phoneNumber, storeName, type },
       index = 0,
       custom = false,
     ) => {
@@ -200,7 +203,12 @@ const Map = ({
         content: ReactDOMServer.renderToString(
           <InfoCard
             address={address}
+            copy={{
+              directions: copy.directions,
+              openingHours: copy.openingHours,
+            }}
             count={index + 1}
+            openingHours={openingHours}
             phoneNumber={phoneNumber}
             storeName={storeName}
           />,
@@ -223,16 +231,20 @@ const Map = ({
             count: index + 1,
             phoneNumber,
             storeName,
+            openingHours,
           });
         }
-
-        // mapRef.current.setCenter(marker.getPosition());
-        // mapRef.current.setZoom(MapOptions.MAP_MAX_ZOOM);
       });
 
       return marker;
     },
-    [customMarker, hasMarkerIndexes, isIsMediumViewport, isIsSmallOnlyViewport],
+    [
+      copy,
+      customMarker,
+      hasMarkerIndexes,
+      isIsMediumViewport,
+      isIsSmallOnlyViewport,
+    ],
   );
 
   const classSet = cx(styles.base, className);
@@ -241,33 +253,40 @@ const Map = ({
     <div className={classSet}>
       <div className={styles.wrapper}>
         <Loading className={styles.loading} isLoading={isLoading} />
-        <div className={styles.map} id="google-map" ref={mapContainerRef} />
+        <div className={styles.map} id={id} ref={mapContainerRef} />
       </div>
       <Transition
         hasCSSTransitionMountOnEnter={true}
         hasCSSTransitionUnmountOnExit={true}
         isActive={!!activeInfoBlockData}
-        type="shiftInDown"
+        type={TRANSITIONS.TYPE.SHIFT_IN_DOWN}
       >
         <InfoCard
           address={activeInfoBlockData?.address}
           className={styles.infoCardBlock}
+          copy={{
+            directions: copy.directions,
+            openingHours: copy.openingHours,
+          }}
           count={activeInfoBlockData?.count}
           hasMarkerIndexes={hasMarkerIndexes}
+          openingHours={activeInfoBlockData?.openingHours}
           phoneNumber={activeInfoBlockData?.phoneNumber}
           storeName={activeInfoBlockData?.storeName}
         />
       </Transition>
       <footer className={styles.footer}>
-        <div className={styles.viewStoreLabel}>Visit our nearby stores.</div>
+        <div className={styles.viewStoreLabel}>
+          {copy.storeLocator?.message}
+        </div>
         <div className={styles.viewStoreLinkWrapper}>
           <Hyperlink
             className={styles.viewStoreLink}
-            style="Internal Text Link"
-            title="Open Title"
-            url="/"
+            style={HYPERLINK_STYLE_TYPES.INTERNAL_TEXT_LINK}
+            title={copy.storeLocator?.title}
+            url={copy.storeLocator?.url}
           >
-            Store locator
+            {copy.storeLocator?.label}
           </Hyperlink>
         </div>
       </footer>
@@ -281,11 +300,25 @@ Map.propTypes = {
     lng: PropTypes.number,
   }).isRequired,
   className: PropTypes.string,
+  copy: PropTypes.shape({
+    directions: PropTypes.string,
+    storeLocator: PropTypes.shape({
+      label: PropTypes.string,
+      message: PropTypes.string,
+      title: PropTypes.string,
+      url: PropTypes.string,
+    }),
+    openingHours: PropTypes.shape({
+      alternateHoursNote: PropTypes.string,
+      heading: PropTypes.string,
+    }),
+  }),
   customMarker: PropTypes.shape({
     lat: PropTypes.number,
     lng: PropTypes.number,
   }),
   hasMarkerIndexes: PropTypes.bool,
+  id: PropTypes.string,
   initialZoom: PropTypes.number,
   places: PropTypes.array,
 };
@@ -293,8 +326,22 @@ Map.propTypes = {
 Map.defaultProps = {
   center: {},
   className: undefined,
+  copy: {
+    directions: 'Directions to',
+    storeLocator: {
+      label: 'Store locator',
+      message: 'Visit our nearby stores.',
+      title: 'Open store locator link',
+      url: '/',
+    },
+    openingHours: {
+      alternateHoursNote: 'Special opening hours',
+      heading: 'Opening hours',
+    },
+  },
   customMarker: undefined,
   hasMarkerIndexes: true,
+  id: undefined,
   initialZoom: MapOptions.MAP_INITIAL_ZOOM,
   places: [],
 };

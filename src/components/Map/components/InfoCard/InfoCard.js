@@ -1,14 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import { HEADING, HYPERLINK_STYLE_TYPES, MAP } from '~/constants';
 import Heading from '~/components/Heading';
 import Hyperlink from '~/components/Hyperlink';
 import styles from './InfoCard.module.css';
 
-const GOOGLE_DIRECTIONS_URL_PREFIX =
-  'https://www.google.com/maps?saddr=Current+Location&daddr=';
-const HYPERLINK_DATA_TEST_REF = 'DIRECTION_URL';
-const HYPERLINK_STYLE = 'External Text Link';
+const DATA_TEST_REF = 'DIRECTION_URL';
 
 const InfoCard = ({
   address,
@@ -25,18 +23,18 @@ const InfoCard = ({
       <div className={styles.markerCount}>
         {hasMarkerIndexes ? <i>{count}</i> : ''}
       </div>
-      <Heading level="3" size="xSmall">
+      <Heading level={HEADING.LEVEL.THREE} size={HEADING.SIZE.X_SMALL}>
         {storeName}
       </Heading>
       {address && (
         <div className={styles.address}>
           <Hyperlink
             className={styles.hyperlink}
-            dataTestRef={HYPERLINK_DATA_TEST_REF}
+            dataTestRef={DATA_TEST_REF}
             hasTargetInNewWindow={true}
-            style={HYPERLINK_STYLE}
+            style={HYPERLINK_STYLE_TYPES.EXTERNAL_TEXT_LINK}
             title={`${copy.directions} ${address}`}
-            url={`${GOOGLE_DIRECTIONS_URL_PREFIX}${address}`}
+            url={`${MAP.DIRECTIONS_URL_PREFIX}${address}`}
           >
             {address}
           </Hyperlink>
@@ -49,10 +47,10 @@ const InfoCard = ({
           <Heading
             className={styles.openingHoursHeading}
             hasTopMargin={false}
-            level="4"
-            size="xXSmall"
+            level={HEADING.LEVEL.FOUR}
+            size={HEADING.SIZE.X_X_SMALL}
           >
-            Opening hours
+            {copy.openingHours.heading}
           </Heading>
 
           <ul className={styles.openingHoursList}>
@@ -61,7 +59,7 @@ const InfoCard = ({
                 <span className={styles.dayName}>{item.dayName}</span>
                 <span
                   className={cx(styles.hours, {
-                    [styles.specialHours]: item.special,
+                    [styles.alternateHours]: item.isAlternate,
                   })}
                 >
                   {item.hours}
@@ -69,7 +67,9 @@ const InfoCard = ({
               </li>
             ))}
           </ul>
-          <div className={styles.specialHoursNote}>{copy.specialHoursNote}</div>
+          <div className={styles.alternateHoursNote}>
+            {copy.openingHours?.alternateHoursNote}
+          </div>
         </>
       )}
     </div>
@@ -79,10 +79,23 @@ const InfoCard = ({
 InfoCard.propTypes = {
   address: PropTypes.string,
   className: PropTypes.string,
-  copy: PropTypes.object,
+  copy: PropTypes.shape({
+    directions: PropTypes.string,
+    openingHours: PropTypes.shape({
+      alternateHoursNote: PropTypes.string,
+      heading: PropTypes.string,
+    }),
+  }),
   count: PropTypes.number,
   hasMarkerIndexes: PropTypes.bool,
-  openingHours: PropTypes.array,
+  openingHours: PropTypes.arrayOf(
+    PropTypes.shape({
+      dayName: PropTypes.string,
+      hours: PropTypes.string,
+      id: PropTypes.string,
+      isAlternate: PropTypes.string,
+    }),
+  ),
   phoneNumber: PropTypes.string,
   storeName: PropTypes.string,
 };
@@ -91,20 +104,15 @@ InfoCard.defaultProps = {
   address: undefined,
   className: undefined,
   copy: {
-    directions: 'Directions to ',
-    specialHoursNote: 'Special opening hours',
+    directions: undefined,
+    openingHours: {
+      alternateHoursNote: undefined,
+      heading: undefined,
+    },
   },
   count: undefined,
   hasMarkerIndexes: false,
-  openingHours: [
-    { dayName: 'Monday', hours: '11am - 4pm', id: 1 },
-    { dayName: 'Tuesday', hours: '10am - 3pm', id: 2, special: true },
-    { dayName: 'Wednesday', hours: '10am - 3pm', id: 3 },
-    { dayName: 'Thursday', hours: '10am - 3pm', id: 4 },
-    { dayName: 'Friday', hours: '10am - 3pm', id: 5 },
-    { dayName: 'Saturday', hours: '10am - 3pm', id: 6, special: true },
-    { dayName: 'Sunday', hours: '10am - 3pm', id: 7 },
-  ],
+  openingHours: [],
   phoneNumber: undefined,
   storeName: undefined,
 };
