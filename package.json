@@ -36,11 +36,6 @@
     "url": "https://github.com/aesop/aesop-gel/issues"
   },
   "homepage": "https://github.com/aesop/aesop-gel#readme",
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
   "peerDependencies": {
     "@google/markerclustererplus": "^5.0.3",
     "classnames": ">=2.2.6",
