@@ -116,7 +116,8 @@ const Map = ({
       setMarkerCluster(
         () =>
           new MarkerClusterer(mapRef.current, markers, {
-            imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m' //MAP.CLUSTER_IMAGE_PATH,
+            imageExtension: 'png',
+            imagePath: MAP.CLUSTER_IMAGE_PATH,
           }),
       );
     }
