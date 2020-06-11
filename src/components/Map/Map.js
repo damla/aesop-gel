@@ -42,7 +42,6 @@ const Map = ({
   const handleMapClick = useRef(null);
   const isIsSmallOnlyViewport = useRef(ascertainIsSmallOnlyViewport());
   const isIsMediumViewport = useRef(ascertainIsMediumViewport());
-
   const [activeInfoBlockData, setActiveInfoBlockData] = useState(null);
   const [markers, setMarkers] = useState([]);
   const [markerCluster, setMarkerCluster] = useState([]);
