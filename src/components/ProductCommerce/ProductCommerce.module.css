@@ -15,9 +15,11 @@
 
 .imageWrapper {
   width: 100%;
+  margin-bottom: 40px;
 
   @media (--viewport-md) {
     width: 40%;
+    margin-bottom: 0;
   }
 }
 
@@ -31,7 +33,7 @@
 
   img {
     width: auto;
-    max-height: 200px;
+    max-height: 300px;
 
     @media (--viewport-md) {
       max-height: 400px;

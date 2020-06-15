@@ -1,0 +1,177 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProductCommerce /> renders base component correctly 1`] = `
+<div
+  className="base"
+>
+  <div
+    className="imageWrapper"
+  >
+    <picture
+      className="base picture dark image"
+    >
+      <source
+        media="(min-width: 1025px)"
+        srcSet="/assets/images/Product/variant-one-large.png"
+      />
+      <source
+        media="(min-width: 640px)"
+        srcSet="/assets/images/Product/variant-one-medium.png"
+      />
+      <source
+        media="(min-width: 0px)"
+        srcSet="/assets/images/Product/variant-one-small.png"
+      />
+      <img
+        alt="ATL TAG"
+      />
+    </picture>
+  </div>
+  <div
+    className="contentWrapper"
+  >
+    <header
+      className="base"
+    >
+      <h2
+        className="base flush mediumWeightFont xXSmall dark"
+      >
+        Vestibulum ante ipsum primis
+      </h2>
+      <h3
+        className="base flush xLarge dark"
+      >
+        Lorem ipsum dolor
+      </h3>
+    </header>
+    <p
+      className="base dark"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris volutpat molestie lobortis. Nunc vel aliquam odio.
+       
+    </p>
+    <div
+      className="variantsWrapper"
+    >
+      <h4
+        className="base flush mediumWeightFont xXSmall dark"
+      >
+        Sizes
+      </h4>
+      <ul
+        className="base variants"
+      >
+        <li
+          className="radio"
+        >
+          <label
+            className="label"
+            htmlFor="option-morbi-id-nulla"
+          >
+            <input
+              aria-checked={false}
+              checked={false}
+              className="input"
+              data-test-ref="selectedVariant"
+              id="option-morbi-id-nulla"
+              name="sku"
+              onChange={[Function]}
+              tabIndex={0}
+              type="radio"
+              value="morbi-id-nulla"
+            />
+            <span
+              className="pot"
+            />
+            <span
+              className="labelContent"
+            >
+              Morbi id nulla
+            </span>
+          </label>
+        </li>
+        <li
+          className="radio"
+        >
+          <label
+            className="label"
+            htmlFor="option-nullam-ultrices"
+          >
+            <input
+              aria-checked={true}
+              checked={true}
+              className="input"
+              data-test-ref="selectedVariant"
+              id="option-nullam-ultrices"
+              name="sku"
+              onChange={[Function]}
+              tabIndex={0}
+              type="radio"
+              value="nullam-ultrices"
+            />
+            <span
+              className="pot"
+            />
+            <span
+              className="labelContent"
+            >
+              Nullam ultrices
+            </span>
+          </label>
+        </li>
+        <div
+          className="errorMessage"
+        >
+          
+        </div>
+      </ul>
+    </div>
+    <div
+      className="base"
+    >
+      <a
+        className="base blockStyle alternate center dark link center"
+        href="/"
+        target="_self"
+      >
+        Mauris volutpat molestie
+      </a>
+      <a
+        className="base blockStyle hasIcon center dark link center"
+        href="/"
+        target="_self"
+      >
+        Vestibulum ante ipsum
+        <i
+          aria-hidden="true"
+          className="icon"
+        >
+          <svg
+            className="base rightArrow dark"
+            data-ref=""
+            focusable="false"
+            height={15}
+            role="img"
+            style={
+              Object {
+                "height": "15px",
+                "width": "15px",
+              }
+            }
+            tabIndex={-1}
+            viewBox="0 0 50 50"
+            width={15}
+          >
+            <g>
+              <path
+                className="undefined"
+                d="M30.1,5.3L50,25.1L30.1,45h-6.6l18-17.6H0v-4.8h41.5l-18-17.6h6.6V5.3z"
+              />
+            </g>
+          </svg>
+        </i>
+      </a>
+    </div>
+  </div>
+</div>
+`;

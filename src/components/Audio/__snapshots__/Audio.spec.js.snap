@@ -9,12 +9,12 @@ exports[`<Audio /> renders base component correctly 1`] = `
     className="header"
   >
     <h3
-      className="base noMargin xXSmall dark artistName"
+      className="base flush xXSmall dark artistName"
     >
       Jesse Paris Smith
     </h3>
     <h4
-      className="base noMargin serifFont medium dark"
+      className="base flush serifFont medium dark"
     >
       Istros Imagined
     </h4>

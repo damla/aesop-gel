@@ -10,17 +10,17 @@ exports[`<BodyCopy /> renders base component correctly 1`] = `
     id="Anti-Oxidant"
   >
     <h2
-      className="base noTopMargin mediumWeightFont xXSmall dark eyebrow eyebrow"
+      className="base mediumWeightFont xXSmall dark eyebrow"
     >
       Recommended Nearby
     </h2>
     <h3
-      className="base noTopMargin xLarge dark heading heading"
+      className="base xLarge dark heading"
     >
       Aesop & The Paris Review: A Partnership Extended
     </h3>
     <h4
-      className="base noTopMargin mediumWeightFont xSmall dark subHeading subHeading"
+      className="base mediumWeightFont xSmall dark subHeading"
     >
       Active Nutrients
     </h4>
@@ -31,10 +31,10 @@ exports[`<BodyCopy /> renders base component correctly 1`] = `
     Parsley Seed Cream. [The Paris Review](http://theparisreview.org) Intensely soothing, nourishing and hydrating, this elegant formulation contains a potent blend of botanicals that offer fortification of the highest order against free radicals.
   </div>
   <div
-    className="base"
+    className="base flush"
   >
     <a
-      className="base center dark link center"
+      className="base center dark link flushLink center"
       href="https://aesop.com"
       target="_self"
     >
@@ -52,7 +52,7 @@ exports[`<BodyCopy /> renders promary title as an \`h2\` if no \`eyebrow\` or \`
     className="base"
   >
     <h2
-      className="base noTopMargin mediumWeightFont xSmall dark subHeading subHeading"
+      className="base mediumWeightFont xSmall dark subHeading"
     >
       Aesop & The Paris Review: A Partnership Extended
     </h2>
@@ -68,7 +68,7 @@ exports[`<BodyCopy /> renders promary title as an \`h2\` if no \`eyebrow\` prop 
     className="base"
   >
     <h2
-      className="base noTopMargin xLarge dark heading heading"
+      className="base xLarge dark heading"
     >
       Aesop & The Paris Review: A Partnership Extended
     </h2>

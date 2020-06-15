@@ -4,10 +4,17 @@
   padding: 0;
   border: 0;
   margin: 0;
-  color: var(--color-dark-copy);
   line-height: 1.5;
   outline: none;
   text-overflow: ellipsis;
+
+  &.dark {
+    color: var(--color-dark-copy);
+  }
+
+  &.light {
+    color: var(--color-light-copy);
+  }
 }
 
 .base {
@@ -15,7 +22,15 @@
   justify-content: center;
   padding: 0;
   margin: 0;
+  font-family: var(--font-family-sans-serif-regular);
+  font-size: rem(15px);
+  font-weight: var(--font-weight-normal);
   list-style: none;
+
+  &,
+  & * {
+    box-sizing: border-box;
+  }
 }
 
 .radio {
@@ -45,14 +60,34 @@
 .labelContent {
   padding-left: 10px;
 
-  .input:checked ~ & {
+  &.dark {
+    color: var(--color-dark-copy);
+  }
+
+  &.light {
+    color: var(--color-light-copy-alternate);
+  }
+
+  .input:checked ~ &.dark {
     color: var(--color-grey-10);
+  }
+
+  .input:checked ~ &.light {
+    color: var(--color-grey-90);
   }
 }
 
 .singleLabel {
   font-family: var(--font-family-sans-serif-medium);
   font-size: rem(14px);
+
+  &.dark {
+    color: var(--color-dark-copy);
+  }
+
+  &.light {
+    color: var(--color-light-copy);
+  }
 }
 
 .pot {
@@ -60,13 +95,22 @@
   z-index: 1;
   width: 13px;
   height: 13px;
-  border: 1px solid var(--color-grey-30);
+  border-width: 1px;
+  border-style: solid;
   background-color: transparent;
   border-radius: 100%;
   float: left;
   transform: translateY(3px);
   transition: all 0.5s ease;
   transition: border-color 0.2s var(--easing-ease-out-cubic);
+
+  &.dark {
+    border-color: var(--color-grey-30);
+  }
+
+  &.light {
+    border-color: var(--color-grey-60);
+  }
 
   &::after {
     position: absolute;
@@ -75,17 +119,25 @@
     bottom: 3px;
     left: 3px;
     display: block;
-    background: transparent;
+    background-color: transparent;
     border-radius: 100%;
     content: '';
     transition: background-color 0.2s var(--easing-ease-in-out-cubic);
   }
 
-  .input:hover ~ &::after {
+  .input:hover ~ &.dark::after {
     background-color: var(--color-grey-50);
   }
 
-  .input:checked ~ &::after {
+  .input:hover ~ &.light::after {
+    background-color: var(--color-grey-65);
+  }
+
+  .input:checked ~ &.dark::after {
     background-color: var(--color-grey-30);
+  }
+
+  .input:checked ~ &.light::after {
+    background-color: var(--color-grey-60);
   }
 }
