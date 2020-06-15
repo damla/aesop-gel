@@ -1803,9 +1803,20 @@ sans-serif;
   height: 2px;
   padding: 0;
   margin: 0 20px 20px;
-  background-color: #bcbbb4;
   list-style-type: none;
 }
+.Pagination-module_list__2Oj5X.Pagination-module_dark__2FCbX {
+    background-color: #4a4a4a;
+  }
+.Pagination-module_list__2Oj5X.Pagination-module_dark__2FCbX .slick-active {
+        background-color: #333;
+      }
+.Pagination-module_list__2Oj5X.Pagination-module_light__36LlY {
+    background-color: #bcbbb4;
+  }
+.Pagination-module_list__2Oj5X.Pagination-module_light__36LlY .slick-active {
+        background-color: #fffef0;
+      }
 @media (min-width: 640px) {
 .Pagination-module_list__2Oj5X {
     margin: 0 40px 20px
@@ -1816,9 +1827,6 @@ sans-serif;
     margin: 0 80px 40px
 }
   }
-.Pagination-module_list__2Oj5X .slick-active {
-      background-color: #333;
-    }
 .Pagination-module_list__2Oj5X li {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
@@ -1832,7 +1840,7 @@ sans-serif;
   height: 2px;
   padding: 0;
   margin: 0;
-  background-color: #333;
+  background-color: #fffef0;
   -webkit-transition: left 1000ms cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: left 1000ms cubic-bezier(0.215, 0.61, 0.355, 1);
 }
@@ -2062,11 +2070,16 @@ sans-serif;
 */
 .Slide-module_heading__2KIs0 {
   margin: 10px 0 10px 0;
-  color: #333;
   font-family: 'Suisse Medium'
 ,
 sans-serif;
 }
+.Slide-module_heading__2KIs0.Slide-module_dark__JMM6u {
+    color: #333;
+  }
+.Slide-module_heading__2KIs0.Slide-module_light__zaD4C {
+    color: #fffef0;
+  }
 a:hover .Slide-module_heading__2KIs0,
   a:focus .Slide-module_heading__2KIs0 {
     text-decoration: underline;
@@ -2075,12 +2088,17 @@ a:hover .Slide-module_heading__2KIs0,
   padding: 0 20px;
 }
 .Slide-module_description__1ZOKE {
-  color: #666;
   font-family: 'Suisse Regular'
 ,
 sans-serif;
   font-size: 14px;
 }
+.Slide-module_description__1ZOKE.Slide-module_dark__JMM6u {
+    color: #666;
+  }
+.Slide-module_description__1ZOKE.Slide-module_light__zaD4C {
+    color: #e0dfd6;
+  }
 .Slide-module_image__1j94t img {
     width: auto;
     max-width: 100%;
@@ -2184,45 +2202,6 @@ sans-serif;
 .Carousel-module_carousel__2ILZE .slick-slide > div {
         height: 100%;
       }
-/* .edges {
-  :global {
-    .slick-list {
-      &::before,
-      &::after {
-        position: absolute;
-        z-index: var(--z-index-carousel-edge);
-        top: 0;
-        width: 40px;
-        height: 100%;
-        content: '';
-      }
-
-      &::before {
-        left: -40px;
-        background:
-          -webkit-gradient(
-            linear,
-            left top,
-            right top,
-            from(rgb(255, 254, 240)),
-            to(rgba(0, 0, 0, 0))
-          );
-      }
-
-      &::after {
-        right: -40px;
-        background:
-          -webkit-gradient(
-            linear,
-            right top,
-            left top,
-            from(rgb(255, 254, 240)),
-            to(rgba(0, 0, 0, 0))
-          );
-      }
-    }
-  }
-} */
 .Carousel-module_item__2G_2x {
   display: -webkit-box;
   display: -ms-flexbox;
