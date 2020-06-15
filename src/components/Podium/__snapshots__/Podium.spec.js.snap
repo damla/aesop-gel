@@ -3,6 +3,11 @@
 exports[`<Podium /> renders base component correctly 1`] = `
 <section
   className="base nonePaddingTop nonePaddingBottom"
+  style={
+    Object {
+      "backgroundColor": undefined,
+    }
+  }
 >
   Content
 </section>
