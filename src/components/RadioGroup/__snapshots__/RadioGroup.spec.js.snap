@@ -24,10 +24,10 @@ exports[`<RadioGroup /> renders base component correctly 1`] = `
         value="morbi-id-nulla"
       />
       <span
-        className="pot"
+        className="pot dark"
       />
       <span
-        className="labelContent"
+        className="labelContent dark"
       >
         Morbi id nulla
       </span>
@@ -53,10 +53,10 @@ exports[`<RadioGroup /> renders base component correctly 1`] = `
         value="nullam-ultrices"
       />
       <span
-        className="pot"
+        className="pot dark"
       />
       <span
-        className="labelContent"
+        className="labelContent dark"
       >
         Nullam ultrices
       </span>
