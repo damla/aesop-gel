@@ -18,7 +18,7 @@ const Heading = ({
   const classSet = cx(
     styles.base,
     { [styles.noTopMargin]: !hasTopMargin },
-    { [styles.noMargin]: isFlush },
+    { [styles.flush]: isFlush },
     { [styles.serifFont]: hasSerifFont },
     { [styles.mediumWeightFont]: hasMediumWeightFont },
     styles[size],

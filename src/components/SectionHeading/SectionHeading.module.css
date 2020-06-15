@@ -2,10 +2,7 @@
 
 .base {
   position: relative;
-}
-
-.heading {
-  margin: 0 0 15px;
+  margin: 0 0 10px;
 }
 
 .offsetPageHeading {

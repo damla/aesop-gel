@@ -39,7 +39,7 @@
   transition: all 200ms var(--easing-ease-in-out-cubic);
 
   @media (--viewport-md) {
-    padding: 15px;
+    padding: 15px 20px;
   }
 
   &.hasIcon {
@@ -87,6 +87,18 @@
         }
       }
     }
+
+    &.alternate {
+      border-color: var(--color-dark-background);
+      background-color: var(--color-dark-background);
+      color: var(--color-light-link-hover);
+
+      &:hover,
+      &:focus {
+        border-color: var(--color-black);
+        background-color: var(--color-black);
+      }
+    }
   }
 }
 
@@ -123,6 +135,18 @@
             fill: var(--color-dark-copy);
           }
         }
+      }
+    }
+
+    &.alternate {
+      border-color: var(--color-light-link-hover);
+      background-color: var(--color-light-link-hover);
+      color: var(--color-dark-copy);
+
+      &:hover,
+      &:focus {
+        border-color: var(--color-white);
+        background-color: var(--color-white);
       }
     }
   }

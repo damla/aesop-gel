@@ -10,8 +10,8 @@ const Transition = ({
   children,
   hasCSSTransitionMountOnEnter,
   hasCSSTransitionUnmountOnExit,
-  isActiveOnMount,
   isActive,
+  isActiveOnMount,
   type,
 }) => {
   const hasMounted = useHasMounted();

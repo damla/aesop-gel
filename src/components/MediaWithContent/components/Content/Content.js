@@ -34,9 +34,9 @@ const Content = ({
           }}
           className={styles.header}
           eyebrow={copy.eyebrow}
-          hasHeadingTopMargin={false}
           hasSerifFontHeading={true}
           heading={copy.heading}
+          isFlush={true}
           subHeading={copy.subHeading}
           theme={theme}
         />

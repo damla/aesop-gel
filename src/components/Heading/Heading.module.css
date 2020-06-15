@@ -21,8 +21,8 @@
   margin-top: 0;
 }
 
-.noMargin {
-  margin: 0;
+.flush {
+  margin: 0 0 6px;
 }
 
 .serifFont {

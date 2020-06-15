@@ -2,18 +2,10 @@
 
 .base {
   display: flex;
-  width: calc(100% - 1px);
   max-width: 100%;
   flex-wrap: wrap;
-  margin-top: calc(var(--layout-sm-spacing) / -2);
-
-  @media (--viewport-md) {
-    margin-top: calc(var(--layout-md-spacing) / -2);
-  }
-
-  @media (--viewport-lg) {
-    margin-top: calc(var(--layout-lg-spacing) / -2);
-  }
+  margin-right: -2px;
+  margin-left: -2px;
 
   &,
   & * {
@@ -21,21 +13,28 @@
   }
 }
 
+.flush {
+  width: calc(100% - 1px);
+  margin-right: 0;
+  margin-left: 0;
+}
+
 .link {
   display: inline-block;
   width: auto;
   flex: 1 1 auto;
-  margin-top: calc(var(--layout-sm-spacing) / 2);
-  margin-right: -0.5px;
-  margin-left: -0.5px;
-
-  @media (--viewport-md) {
-    margin-top: calc(var(--layout-md-spacing) / 2);
-  }
+  margin-right: 2px;
+  margin-bottom: calc(var(--layout-md-spacing) / 2);
+  margin-left: 2px;
 
   @media (--viewport-lg) {
-    margin-top: calc(var(--layout-lg-spacing) / 2);
+    margin-bottom: calc(var(--layout-lg-spacing) / 2);
   }
+}
+
+.flushLink {
+  margin-right: -0.5px;
+  margin-left: -0.5px;
 }
 
 .fitContent {

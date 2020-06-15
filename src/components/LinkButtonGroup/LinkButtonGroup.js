@@ -8,6 +8,7 @@ const LinkButtonGroup = ({
   className,
   link,
   hasFitContent,
+  isFlush,
   secondaryLink,
   textAlign,
   theme,
@@ -18,6 +19,7 @@ const LinkButtonGroup = ({
   const classSet = cx(
     styles.base,
     { [styles.fitContent]: hasFitContent },
+    { [styles.flush]: isFlush },
     className,
   );
 
@@ -25,7 +27,12 @@ const LinkButtonGroup = ({
     <div className={classSet}>
       {link.text && (
         <Hyperlink
-          className={cx(styles.link, styles[textAlign])}
+          className={cx(
+            styles.link,
+            { [styles.flushLink]: isFlush },
+            styles[textAlign],
+          )}
+          isAlternate={link.isAlternate}
           openInANewWindow={link.openInANewWindow}
           style={link.style}
           textAlign={textAlign}
@@ -38,7 +45,12 @@ const LinkButtonGroup = ({
 
       {secondaryLink && secondaryLink.text && (
         <Hyperlink
-          className={cx(styles.link, styles[textAlign])}
+          className={cx(
+            styles.link,
+            { [styles.flushLink]: isFlush },
+            styles[textAlign],
+          )}
+          isAlternate={secondaryLink.isAlternate}
           openInANewWindow={secondaryLink.openInANewWindow}
           style={secondaryLink.style}
           textAlign={textAlign}
@@ -55,6 +67,7 @@ const LinkButtonGroup = ({
 LinkButtonGroup.propTypes = {
   className: PropTypes.string,
   hasFitContent: PropTypes.bool,
+  isFlush: PropTypes.bool,
   link: PropTypes.object,
   secondaryLink: PropTypes.object,
   textAlign: PropTypes.oneOf(['center', 'left', 'right']),
@@ -64,6 +77,7 @@ LinkButtonGroup.propTypes = {
 LinkButtonGroup.defaultProps = {
   className: undefined,
   hasFitContent: false,
+  isFlush: true,
   link: undefined,
   secondaryLink: undefined,
   textAlign: 'center',
