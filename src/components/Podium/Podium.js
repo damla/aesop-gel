@@ -6,6 +6,7 @@ import styles from './Podium.module.css';
 
 const Podium = forwardRef(function PodiumRef(
   {
+    backgroundColor,
     children,
     className,
     isActive,
@@ -25,7 +26,7 @@ const Podium = forwardRef(function PodiumRef(
 
   return (
     <Transition isActive={isActive} type={transition}>
-      <section className={classSet} ref={ref}>
+      <section className={classSet} ref={ref} style={{ backgroundColor }}>
         {children}
       </section>
     </Transition>
@@ -33,6 +34,7 @@ const Podium = forwardRef(function PodiumRef(
 });
 
 Podium.propTypes = {
+  backgroundColor: PropTypes.string,
   children: PropTypes.node,
   className: PropTypes.string,
   isActive: PropTypes.bool,
@@ -51,6 +53,7 @@ Podium.propTypes = {
 };
 
 Podium.defaultProps = {
+  backgroundColor: undefined,
   children: undefined,
   className: undefined,
   isActive: true,

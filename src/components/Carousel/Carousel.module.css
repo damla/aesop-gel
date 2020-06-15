@@ -59,46 +59,6 @@
   }
 }
 
-/* .edges {
-  :global {
-    .slick-list {
-      &::before,
-      &::after {
-        position: absolute;
-        z-index: var(--z-index-carousel-edge);
-        top: 0;
-        width: 40px;
-        height: 100%;
-        content: '';
-      }
-
-      &::before {
-        left: -40px;
-        background:
-          -webkit-gradient(
-            linear,
-            left top,
-            right top,
-            from(rgb(255, 254, 240)),
-            to(rgba(0, 0, 0, 0))
-          );
-      }
-
-      &::after {
-        right: -40px;
-        background:
-          -webkit-gradient(
-            linear,
-            right top,
-            left top,
-            from(rgb(255, 254, 240)),
-            to(rgba(0, 0, 0, 0))
-          );
-      }
-    }
-  }
-} */
-
 .item {
   display: flex;
   flex-direction: column-reverse;

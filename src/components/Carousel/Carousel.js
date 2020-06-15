@@ -91,6 +91,7 @@ const Carousel = forwardRef(function CarouselRef(
     Pagination,
     NextButton,
     PreviousButton,
+    theme,
   });
 
   const hasIntroSlide =
@@ -126,6 +127,7 @@ const Carousel = forwardRef(function CarouselRef(
             description={introduction.description}
             eyebrow={introduction.eyebrow}
             heading={introduction.heading}
+            theme={theme}
           />
         </aside>
       )}
@@ -141,6 +143,7 @@ const Carousel = forwardRef(function CarouselRef(
             description={introduction.description}
             eyebrow={introduction.eyebrow}
             heading={introduction.heading}
+            theme={theme}
           />
         )}
 
@@ -149,14 +152,23 @@ const Carousel = forwardRef(function CarouselRef(
             {url ? (
               <Hyperlink
                 className={cx(styles.item, styles.link)}
+                theme={theme}
                 title={`Link to ${slide.heading}`}
                 url={url}
               >
-                <Slide {...slide} isFullWidthSlide={hasFullWidthSlides} />
+                <Slide
+                  {...slide}
+                  isFullWidthSlide={hasFullWidthSlides}
+                  theme={theme}
+                />
               </Hyperlink>
             ) : (
               <div className={styles.item} key={index}>
-                <Slide {...slide} isFullWidthSlide={hasFullWidthSlides} />
+                <Slide
+                  {...slide}
+                  isFullWidthSlide={hasFullWidthSlides}
+                  theme={theme}
+                />
               </div>
             )}
           </div>
