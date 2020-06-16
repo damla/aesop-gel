@@ -1,14 +1,21 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import find from 'lodash/find';
-import { P } from '~/components/Paragraph';
+import { AddToCartContextProvider } from '~/contexts/AddToCart.context';
+import { VariantSelectContextProvider } from '~/contexts/VariantSelect.context';
+import useAddToCart from '~/customHooks/useAddToCart';
+import useVariantSelect from '~/customHooks/useVariantSelect';
+import useProductImageTransition from '~/customHooks/useProductImageTransition';
+import AddToCartButton from '~/components/AddToCartButton';
 import Heading from '~/components/Heading';
+import Hyperlink from '~/components/Hyperlink';
 import Image from '~/components/Image';
 import LinkButtonGroup from '~/components/LinkButtonGroup';
 import Loading from '~/components/Loading';
 import RadioGroup from '~/components/RadioGroup/RadioGroup';
 import SectionHeading from '~/components/SectionHeading';
+import Transition from '~/components/Transition';
+import { P } from '~/components/Paragraph';
 import styles from './ProductCommerce.module.css';
 
 const ProductCommerce = ({
@@ -17,32 +24,21 @@ const ProductCommerce = ({
   eyebrow,
   heading,
   id,
-  selectedVariant,
-  onVariantSelect,
   theme,
   variants,
 }) => {
-  const classSet = cx(styles.base, className);
+  const addToCart = useAddToCart();
+  const variantSelect = useVariantSelect(variants);
+  const imageRef = React.useRef();
 
-  useEffect(() => {
-    onVariantSelect(variants[0]);
-  }, [variants, onVariantSelect]);
+  const { currentImage, isImageActive } = useProductImageTransition(
+    variantSelect.selectedVariant.image,
+    imageRef,
+  );
 
-  if (!selectedVariant) {
+  if (!variantSelect.selectedVariant) {
     return <Loading isLoading={true} />;
   }
-
-  const handleVariantSelect = event => {
-    event.persist();
-
-    const {
-      target: { value: value },
-    } = event;
-
-    const currentSelectedVariant = find(variants, { sku: value }) || {};
-
-    onVariantSelect(currentSelectedVariant);
-  };
 
   const variantRadioOptions = variants
     .filter(({ size, sku }) => size && sku)
@@ -51,70 +47,80 @@ const ProductCommerce = ({
       value: sku,
     }));
 
-  const { image, sku: value } = selectedVariant;
+  const { sku: value } = variantSelect.selectedVariant;
+  const classSet = cx(styles.base, className);
 
   return (
-    <div className={classSet} id={id}>
-      <div className={styles.imageWrapper}>
-        {image && (
-          <Image
-            altText={image.altText}
-            className={styles.image}
-            large={image.sizes?.large}
-            medium={image.sizes?.medium}
-            small={image.sizes?.small}
-          />
-        )}
-      </div>
+    <AddToCartContextProvider value={addToCart}>
+      <VariantSelectContextProvider value={variantSelect}>
+        <div className={classSet} id={id}>
+          <div className={styles.imageWrapper}>
+            <Transition isActive={isImageActive} name="fade">
+              <Image
+                altText={currentImage.altText}
+                className={styles.image}
+                large={currentImage.sizes?.large}
+                medium={currentImage.sizes?.medium}
+                ref={imageRef}
+                small={currentImage.sizes?.small}
+              />
+            </Transition>
+          </div>
 
-      <div className={styles.contentWrapper}>
-        <SectionHeading
-          eyebrow={eyebrow}
-          heading={heading}
-          isFlush={true}
-          theme={theme}
-        />
-        <P theme={theme}>{description}</P>
-        <div className={styles.variantsWrapper}>
-          <Heading
-            hasMediumWeightFont={true}
-            isFlush={true}
-            level="4"
-            size="xXSmall"
-            theme={theme}
-          >
-            Sizes
-          </Heading>
-          <RadioGroup
-            className={styles.variants}
-            name="sku"
-            onChange={handleVariantSelect}
-            options={variantRadioOptions}
-            testReference="selectedVariant"
-            theme={theme}
-            value={value}
-          />
+          <div className={styles.contentWrapper}>
+            <SectionHeading
+              eyebrow={eyebrow}
+              heading={heading}
+              isFlush={true}
+              theme={theme}
+            />
+            <P theme={theme}>{description}</P>
+            <div className={styles.variantsWrapper}>
+              <Heading
+                hasMediumWeightFont={true}
+                isFlush={true}
+                level="4"
+                size="xXSmall"
+                theme={theme}
+              >
+                Sizes
+              </Heading>
+
+              <RadioGroup
+                className={styles.variants}
+                name="sku"
+                onChange={e => variantSelect.onVariantChange(e, variants)}
+                options={variantRadioOptions}
+                testReference="selectedVariant"
+                theme={theme}
+                value={value}
+              />
+            </div>
+
+            <LinkButtonGroup
+              hasFitContent={false}
+              isFlush={false}
+              textAlign="center"
+              theme={theme}
+            >
+              <AddToCartButton
+                dataTestRef="ADD_TO_CART_SMALL_CTA"
+                isFullWidth={false}
+                productName="Product Name"
+                theme={theme}
+              />
+              <Hyperlink
+                isAlternate={false}
+                style="Internal Button Link"
+                url="/"
+              >
+                Mauris volutpat molestie
+              </Hyperlink>
+            </LinkButtonGroup>
+          </div>
         </div>
-
-        <LinkButtonGroup
-          hasFitContent={false}
-          isFlush={false}
-          link={{
-            isAlternate: true,
-            text: 'Mauris volutpat molestie',
-            url: '/',
-            style: 'Internal No Icon Button Link',
-          }}
-          secondaryLink={{
-            text: 'Vestibulum ante ipsum',
-            url: '/',
-            style: 'Internal Button Link',
-          }}
-          textAlign="center"
-          theme={theme}
-        />
-      </div>
-    </div>
+      </VariantSelectContextProvider>
+    </AddToCartContextProvider>
   );
 };
 
@@ -124,22 +130,22 @@ ProductCommerce.propTypes = {
   eyebrow: PropTypes.string,
   heading: PropTypes.string,
   id: PropTypes.string,
-  onVariantSelect: PropTypes.func.isRequired,
-  selectedVariant: PropTypes.shape({
-    size: PropTypes.string.isRequired,
-    sku: PropTypes.string.isRequired,
-    price: PropTypes.string.isRequired,
-    image: PropTypes.shape({
-      altText: PropTypes.string,
-      sizes: PropTypes.shape({
-        large: PropTypes.string,
-        medium: PropTypes.string,
-        small: PropTypes.string,
+  theme: PropTypes.oneOf(['dark', 'light']),
+  variants: PropTypes.arrayOf(
+    PropTypes.shape({
+      size: PropTypes.string.isRequired,
+      sku: PropTypes.string.isRequired,
+      price: PropTypes.string.isRequired,
+      image: PropTypes.shape({
+        altText: PropTypes.string,
+        sizes: PropTypes.shape({
+          large: PropTypes.string,
+          medium: PropTypes.string,
+          small: PropTypes.string,
+        }),
       }),
     }),
-  }),
-  theme: PropTypes.oneOf(['dark', 'light']),
-  variants: PropTypes.array,
+  ),
 };
 
 ProductCommerce.defaultProps = {
@@ -148,10 +154,36 @@ ProductCommerce.defaultProps = {
   eyebrow: undefined,
   heading: undefined,
   id: undefined,
-  onVariantSelect: undefined,
-  selectedVariant: undefined,
   theme: 'dark',
   variants: undefined,
 };
 
 export default ProductCommerce;
+
+// <LinkButtonGroup
+//   hasFitContent={false}
+//   isFlush={false}
+//   link={{
+//     isAlternate: true,
+//     text: 'Mauris volutpat molestie',
+//     url: '/',
+//     style: 'Internal No Icon Button Link',
+//   }}
+//   secondaryLink={{
+//     text: 'Vestibulum ante ipsum',
+//     url: '/',
+//     style: 'Internal Button Link',
+//   }}
+//   textAlign="center"
+//   theme={theme}
+// />
+
+// <Hyperlink
+//   isAlternate={true}
+//   style="Internal No Icon Button Link"
+//   url="/"
+// >
+//   Mauris volutpat molestie
+// </Hyperlink>
+//
+// <Button>This is a button</Button>

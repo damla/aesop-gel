@@ -21,11 +21,15 @@
 
 .link {
   display: inline-block;
-  width: auto;
+  min-width: auto;
+  max-width: 100%;
   flex: 1 1 auto;
+  padding: 12px;
   margin-right: 2px;
   margin-bottom: calc(var(--layout-md-spacing) / 2);
   margin-left: 2px;
+  font-size: rem(15px);
+  line-height: 1.2;
 
   @media (--viewport-lg) {
     margin-bottom: calc(var(--layout-lg-spacing) / 2);
@@ -38,5 +42,6 @@
 }
 
 .fitContent {
+  width: fit-content;
   max-width: fit-content;
 }

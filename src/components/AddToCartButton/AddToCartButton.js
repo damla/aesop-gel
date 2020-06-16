@@ -12,7 +12,9 @@ const AddToCartButton = ({
   copy,
   dataTestRef,
   isEnabled,
+  isFullWidth,
   productName,
+  theme,
 }) => {
   const {
     isLoading,
@@ -22,12 +24,11 @@ const AddToCartButton = ({
   } = useAddToCartContext();
   const { selectedVariant } = useVariantSelectContext();
 
-  const classSet = cx(styles.base, className);
-
-  const outOfStock = {
-    label: 'Out of Stock',
-    title: 'Out of stock',
-  };
+  const classSet = cx(
+    styles.base,
+    { [styles.fullWidth]: isFullWidth },
+    className,
+  );
 
   if (!selectedVariant) {
     return (
@@ -37,9 +38,10 @@ const AddToCartButton = ({
         isAlternate={true}
         isEnabled={false}
         onClick={() => {}}
-        title={outOfStock.title}
+        theme={theme}
+        title={copy.outOfStock?.title}
       >
-        {outOfStock.label}
+        {copy.outOfStock?.label}
       </Button>
     );
   }
@@ -67,14 +69,15 @@ const AddToCartButton = ({
       isAlternate={true}
       isEnabled={!isLoading && price && sku && isEnabled}
       onClick={handleOnClick}
-      title="Add to cart button"
+      theme={theme}
+      title={cartActionLabel}
     >
       {isLoading && (
         <Loading
           className={styles.loading}
           data-test-ref={`${dataTestRef}_UPDATING`}
           isLoading={true}
-          theme="light"
+          theme={theme === 'dark' ? 'light' : 'dark'}
         />
       )}
       <span
@@ -95,10 +98,16 @@ AddToCartButton.propTypes = {
   copy: PropTypes.shape({
     cartAction: PropTypes.string,
     updateNotification: PropTypes.string,
+    outOfStock: PropTypes.shape({
+      label: PropTypes.string,
+      title: PropTypes.string,
+    }),
   }),
   dataTestRef: PropTypes.string,
   isEnabled: PropTypes.bool,
+  isFullWidth: PropTypes.bool,
   productName: PropTypes.string,
+  theme: PropTypes.oneOf(['dark', 'light']),
 };
 
 AddToCartButton.defaultProps = {
@@ -106,10 +115,16 @@ AddToCartButton.defaultProps = {
   copy: {
     cartAction: 'Add to your cart',
     updateNotification: 'added to your cart',
+    outOfStock: {
+      label: 'Out of Stock',
+      title: 'Out of stock',
+    },
   },
   dataTestRef: undefined,
   isEnabled: true,
+  isFullWidth: true,
   productName: undefined,
+  theme: 'dark',
 };
 
 export default AddToCartButton;

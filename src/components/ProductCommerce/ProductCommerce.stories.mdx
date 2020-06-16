@@ -9,21 +9,13 @@ import ProductCommerceFixture from './ProductCommerce.fixture';
 
 <Preview>
   <Story name="Base component">
-    {(() => {
-      const [ selectedVariant, setSelectedVariant ] = React.useState(null);
-      const theme = knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation');
-      return (
-        <ProductCommerce
-          description={knobs.text('description', ProductCommerceFixture.description, 'Content')}
-          eyebrow={knobs.text('eyebrow', ProductCommerceFixture.eyebrow, 'Content')}
-          heading={knobs.text('heading', ProductCommerceFixture.heading, 'Content')}
-          onVariantSelect={setSelectedVariant}
-          selectedVariant={selectedVariant}
-          theme={theme}
-          variants={knobs.object('variants', ProductCommerceFixture.variantOptions, 'Content')}
-        />
-      )
-    })()}
+    <ProductCommerce
+      description={knobs.text('description', ProductCommerceFixture.description, 'Content')}
+      eyebrow={knobs.text('eyebrow', ProductCommerceFixture.eyebrow, 'Content')}
+      heading={knobs.text('heading', ProductCommerceFixture.heading, 'Content')}
+      theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
+      variants={knobs.object('variants', ProductCommerceFixture.variantOptions, 'Content')}
+    />
   </Story>
 </Preview>
 
