@@ -9,14 +9,14 @@ exports[`<Carousel /> renders base component correctly 1`] = `
     dir="ltr"
   >
     <button
-      className="base inlineStyle light base hidden"
+      className="base inlineStyle dark base hidden"
       disabled={false}
       onClick={null}
       title="next slide"
       type="button"
     >
       <svg
-        className="base chevron light"
+        className="base chevron dark"
         data-ref=""
         focusable="false"
         height={16}
@@ -178,7 +178,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                   className="information dark"
                 >
                   <h5
-                    className="base xXSmall dark heading"
+                    className="base xXSmall dark heading dark"
                   >
                     Quisque non enim efficitur
                   </h5>
@@ -249,7 +249,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                   className="information dark"
                 >
                   <h5
-                    className="base xXSmall dark heading"
+                    className="base xXSmall dark heading dark"
                   >
                     Phasellus posuere porta varius
                   </h5>
@@ -320,7 +320,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                   className="information dark"
                 >
                   <h5
-                    className="base xXSmall dark heading"
+                    className="base xXSmall dark heading dark"
                   >
                     Etiam at pharetra nisl
                   </h5>
@@ -391,7 +391,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                   className="information dark"
                 >
                   <h5
-                    className="base xXSmall dark heading"
+                    className="base xXSmall dark heading dark"
                   >
                     Phasellus posuere porta varius
                   </h5>
@@ -431,14 +431,14 @@ exports[`<Carousel /> renders base component correctly 1`] = `
       </div>
     </div>
     <button
-      className="base inlineStyle light base"
+      className="base inlineStyle dark base"
       disabled={false}
       onClick={[Function]}
       title="next slide"
       type="button"
     >
       <svg
-        className="base chevron light"
+        className="base chevron dark"
         data-ref=""
         focusable="false"
         height={16}
@@ -548,7 +548,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                   className="information dark"
                 >
                   <h5
-                    className="base xXSmall dark heading"
+                    className="base xXSmall dark heading dark"
                   >
                     Quisque non enim efficitur
                   </h5>
@@ -619,7 +619,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                   className="information dark"
                 >
                   <h5
-                    className="base xXSmall dark heading"
+                    className="base xXSmall dark heading dark"
                   >
                     Phasellus posuere porta varius
                   </h5>
@@ -690,7 +690,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                   className="information dark"
                 >
                   <h5
-                    className="base xXSmall dark heading"
+                    className="base xXSmall dark heading dark"
                   >
                     Etiam at pharetra nisl
                   </h5>
@@ -761,7 +761,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                   className="information dark"
                 >
                   <h5
-                    className="base xXSmall dark heading"
+                    className="base xXSmall dark heading dark"
                   >
                     Phasellus posuere porta varius
                   </h5>
@@ -864,7 +864,7 @@ exports[`<Carousel /> renders component correctly if no \`url\` member is provid
                   className="information dark"
                 >
                   <h5
-                    className="base xXSmall dark heading"
+                    className="base xXSmall dark heading dark"
                   >
                     Quisque non enim efficitur
                   </h5>

@@ -21,36 +21,31 @@ Presented here with both `paddingTop` and `paddingBottom` set to `small`, and fa
 
 <Preview>
   <Story name="Base component">
-    {() => {
-      const ref = useRef();
-      const isOnScreen = useOnScreen(ref);
-      return (
-        <div style={{ border: '1px solid #333', margin: '20px'}}>
-          <Podium
-            paddingTop={knobs.select(
-              'paddingTop',
-              ['none', 'small', 'medium', 'large'],
-              'small',
-              'Presentation',
-            )}
-            paddingBottom={knobs.select(
-              'paddingBottom',
-              ['none', 'small', 'medium', 'large'],
-              'small',
-              'Presentation',
-            )}
-            isActive={isOnScreen}
-            transition="fade"
-            ref={ref}
-          >
-            <Carousel
-              introduction={CarouselFixture.introduction}
-              slides={CarouselFixture.slides}
-            />
-          </Podium>
-        </div>
-      )
-    }}
+    <div style={{ border: '1px solid #333', margin: '20px'}}>
+      <Podium
+        backgroundColor={knobs.text('backgroundColor', '', 'Presentation')}
+        isActive={knobs.boolean('isActive', true, 'Presentation')}
+        paddingTop={knobs.select(
+          'paddingTop',
+          ['none', 'small', 'medium', 'large'],
+          'small',
+          'Presentation',
+        )}
+        paddingBottom={knobs.select(
+          'paddingBottom',
+          ['none', 'small', 'medium', 'large'],
+          'small',
+          'Presentation',
+        )}
+        transition="fade"
+      >
+        <Carousel
+          introduction={CarouselFixture.introduction}
+          slides={CarouselFixture.slides}
+          theme={knobs.select('Carousel theme', ['dark', 'light'], 'dark', 'Presentation')}
+        />
+      </Podium>
+    </div>
   </Story>
 </Preview>
 
