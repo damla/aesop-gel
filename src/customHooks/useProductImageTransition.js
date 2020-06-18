@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 
 const windowIsDefined = typeof window !== 'undefined';
-const TRANSITION_TIMEOUT = 800;
+const TRANSITION_TIMEOUT = 600;
 
 const useProductImageTransition = (image, ref) => {
   const [currentImage, setCurrentImage] = useState({});

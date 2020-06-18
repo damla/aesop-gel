@@ -5,11 +5,11 @@ exports[`<ProductDetailBody /> renders base component correctly 1`] = `
   className="base dark fixture-classname"
 >
   <button
-    className="base alternate blockStyle dark base"
+    className="base alternate blockStyle dark base fullWidth"
     data-test-ref="ADD_TO_CART_SMALL_CTA"
     disabled={false}
     onClick={[Function]}
-    title="Add to cart button"
+    title="Add to your cart — undefined"
     type="button"
   >
     <span
@@ -107,11 +107,11 @@ exports[`<ProductDetailBody /> renders base component correctly 1`] = `
     </dd>
   </dl>
   <button
-    className="base alternate blockStyle dark base"
+    className="base alternate blockStyle dark base fullWidth"
     data-test-ref="ADD_TO_CART_SMALL_CTA"
     disabled={false}
     onClick={[Function]}
-    title="Add to cart button"
+    title="Add to your cart — undefined"
     type="button"
   >
     <span

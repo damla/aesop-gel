@@ -7,6 +7,8 @@ import AddToCartButtonFixture from './AddToCartButton.fixture';
 
 configure({ adapter: new Adapter() });
 
+const mockFn = jest.fn();
+
 describe('<AddToCartButton />', () => {
   it('should be defined', () => {
     expect(AddToCartButton).toBeDefined();
@@ -19,7 +21,11 @@ describe('<AddToCartButton />', () => {
           className={AddToCartButtonFixture.className}
           copy={AddToCartButtonFixture.copy}
           dataTestRef={AddToCartButtonFixture.dataTestRef}
+          hasError={false}
           isEnabled={AddToCartButtonFixture.isEnabled}
+          isLoading={false}
+          isUpdateSuccessful={false}
+          onClick={mockFn}
           productName={AddToCartButtonFixture.productName}
         />,
       )

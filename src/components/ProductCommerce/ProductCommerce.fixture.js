@@ -11,6 +11,7 @@ export default {
       small: '/assets/images/Product/variant-one-small.png',
     },
   },
+  productName: 'Product Name',
   theme: 'dark',
   variants: [
     {

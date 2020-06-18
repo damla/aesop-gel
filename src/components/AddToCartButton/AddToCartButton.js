@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { useAddToCartContext } from '~/contexts/AddToCart.context';
 import { useVariantSelectContext } from '~/contexts/VariantSelect.context';
 import Button from '~/components/Button';
 import Loading from '~/components/Loading';
@@ -11,24 +10,27 @@ const AddToCartButton = ({
   className,
   copy,
   dataTestRef,
+  hasError,
   isEnabled,
   isFullWidth,
+  isLoading,
+  isUpdateSuccessful,
+  onClick,
   productName,
   theme,
 }) => {
-  const {
-    isLoading,
-    isUpdateSuccessful,
-    handleOnClick,
-    updateError,
-  } = useAddToCartContext();
   const { selectedVariant } = useVariantSelectContext();
+  const { price, sku } = selectedVariant;
 
   const classSet = cx(
     styles.base,
     { [styles.fullWidth]: isFullWidth },
     className,
   );
+
+  const handleOnClick = () => {
+    onClick(selectedVariant.sku);
+  };
 
   if (!selectedVariant) {
     return (
@@ -46,7 +48,6 @@ const AddToCartButton = ({
     );
   }
 
-  const { price, sku } = selectedVariant;
   const cartActionLabel = `${copy.cartAction} — ${price}`;
   const updateNotificationLabel = `${productName} ${copy.updateNotification}`;
   const showUpdateSuccessMessage = !isLoading && isUpdateSuccessful;
@@ -57,9 +58,9 @@ const AddToCartButton = ({
     { [styles.showSuccessMessage]: showUpdateSuccessMessage },
   );
 
-  if (updateError) {
+  if (hasError) {
     /** @TODO Handle errors thrown by handleOnClick */
-    console.error(updateError); // eslint-disable-line
+    console.error('updateError'); // eslint-disable-line
   }
 
   return (
@@ -104,8 +105,12 @@ AddToCartButton.propTypes = {
     }),
   }),
   dataTestRef: PropTypes.string,
+  hasError: PropTypes.bool,
   isEnabled: PropTypes.bool,
   isFullWidth: PropTypes.bool,
+  isLoading: PropTypes.bool,
+  isUpdateSuccessful: PropTypes.bool,
+  onClick: PropTypes.func,
   productName: PropTypes.string,
   theme: PropTypes.oneOf(['dark', 'light']),
 };
@@ -121,8 +126,12 @@ AddToCartButton.defaultProps = {
     },
   },
   dataTestRef: undefined,
+  hasError: false,
   isEnabled: true,
   isFullWidth: true,
+  isLoading: false,
+  isUpdateSuccessful: false,
+  onClick: undefined,
   productName: undefined,
   theme: 'dark',
 };

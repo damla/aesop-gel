@@ -1,5 +1,7 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import * as knobs from '@storybook/addon-knobs';
+import Podium from '~/components/Podium';
+import AddToCartButtonFixture from '~/components/AddToCartButton/AddToCartButton.fixture';
 import ProductCommerce from './ProductCommerce';
 import ProductCommerceFixture from './ProductCommerce.fixture';
 
@@ -7,15 +9,21 @@ import ProductCommerceFixture from './ProductCommerce.fixture';
 
 # ProductCommerce
 
+Presented in a [Podium](?path=/docs/components-podium--base-component) component with `verticalPadding` and `horizontalPadding` set to *small*.
+
 <Preview>
   <Story name="Base component">
-    <ProductCommerce
-      description={knobs.text('description', ProductCommerceFixture.description, 'Content')}
-      eyebrow={knobs.text('eyebrow', ProductCommerceFixture.eyebrow, 'Content')}
-      heading={knobs.text('heading', ProductCommerceFixture.heading, 'Content')}
-      theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
-      variants={knobs.object('variants', ProductCommerceFixture.variantOptions, 'Content')}
-    />
+    <Podium horizontalPadding="small" verticalPadding="small">
+      <ProductCommerce
+        description={knobs.text('description', ProductCommerceFixture.description, 'Content')}
+        eyebrow={knobs.text('eyebrow', ProductCommerceFixture.eyebrow, 'Content')}
+        heading={knobs.text('heading', ProductCommerceFixture.heading, 'Content')}
+        onAddToCartClick={AddToCartButtonFixture.mockOnClick}
+        productName={knobs.text('productName', ProductCommerceFixture.productName, 'Content')}
+        theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
+        variants={knobs.object('variants', ProductCommerceFixture.variantOptions, 'Content')}
+      />
+    </Podium>
   </Story>
 </Preview>
 

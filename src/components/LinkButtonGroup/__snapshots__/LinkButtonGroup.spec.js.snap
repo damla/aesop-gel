@@ -3,13 +3,5 @@
 exports[`<LinkButtonGroup /> renders base component correctly 1`] = `
 <div
   className="base flush"
->
-  <a
-    className="base blockStyle center dark link flushLink center"
-    href="/"
-    target="_self"
-  >
-    Lorem ipsum
-  </a>
-</div>
+/>
 `;

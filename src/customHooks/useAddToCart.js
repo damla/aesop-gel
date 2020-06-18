@@ -1,32 +1,45 @@
-import { useCallback, useState } from 'react';
+import { useReducer } from 'react';
+
+export const ADD_TO_CART_ACTION_TYPES = {
+  FAIL: 'FAIL',
+  FETCHING: 'FETCHING',
+  SUCCESS: 'SUCCESS',
+};
+
+const initialState = {
+  hasError: false,
+  isLoading: false,
+  isUpdateSuccessful: false,
+};
+
+function reducer(state, action) {
+  if (action.type === ADD_TO_CART_ACTION_TYPES.FETCHING) {
+    return {
+      hasError: false,
+      isLoading: true,
+      isUpdateSuccessful: false,
+    };
+  } else if (action.type === ADD_TO_CART_ACTION_TYPES.SUCCESS) {
+    return {
+      hasError: false,
+      isLoading: false,
+      isUpdateSuccessful: true,
+    };
+  } else if (action.type === ADD_TO_CART_ACTION_TYPES.FAIL) {
+    return {
+      hasError: true,
+      isLoading: false,
+      isUpdateSuccessful: false,
+    };
+  }
+
+  throw new Error();
+}
 
 const useAddToCart = () => {
-  const [isLoading, updateIsLoading] = useState(false);
-  const [isUpdateSuccessful, updateIsUpdateSuccessful] = useState(false);
+  const [state, dispatch] = useReducer(reducer, initialState);
 
-  const setIsLoading = useCallback(currentIsLoading => {
-    updateIsLoading(currentIsLoading);
-  }, []);
-
-  const setIsUpdateSuccessful = useCallback(currentIsLoading => {
-    updateIsUpdateSuccessful(currentIsLoading);
-  }, []);
-
-  const handleOnClick = () => {
-    setIsLoading(true);
-
-    /** @TODO handle passing in success and error callbacks */
-    window.setTimeout(function mockNetworkRequest() {
-      setIsLoading(false);
-      setIsUpdateSuccessful(true);
-    }, 2000);
-  };
-
-  return {
-    handleOnClick,
-    isLoading,
-    isUpdateSuccessful,
-  };
+  return [state, dispatch, ADD_TO_CART_ACTION_TYPES];
 };
 
 export default useAddToCart;

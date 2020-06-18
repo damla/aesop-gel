@@ -32,15 +32,7 @@ exports[`<BodyCopy /> renders base component correctly 1`] = `
   </div>
   <div
     className="base flush"
-  >
-    <a
-      className="base center dark link flushLink center"
-      href="https://aesop.com"
-      target="_self"
-    >
-      Read more
-    </a>
-  </div>
+  />
 </article>
 `;
 
@@ -57,6 +49,9 @@ exports[`<BodyCopy /> renders promary title as an \`h2\` if no \`eyebrow\` or \`
       Aesop & The Paris Review: A Partnership Extended
     </h2>
   </header>
+  <div
+    className="base flush"
+  />
 </article>
 `;
 
@@ -73,5 +68,8 @@ exports[`<BodyCopy /> renders promary title as an \`h2\` if no \`eyebrow\` prop 
       Aesop & The Paris Review: A Partnership Extended
     </h2>
   </header>
+  <div
+    className="base flush"
+  />
 </article>
 `;

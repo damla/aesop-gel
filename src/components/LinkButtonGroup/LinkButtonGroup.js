@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import styles from './LinkButtonGroup.module.css';
+
+const isReactFragment = component => {
+  if (component.type) return component.type === Fragment;
+  return component === Fragment;
+};
 
 const LinkButtonGroup = ({
   children,
@@ -25,10 +30,14 @@ const LinkButtonGroup = ({
     styles[textAlign],
   );
 
+  const childComponents = isReactFragment(children)
+    ? children.props.children
+    : children;
+
   return (
     <div className={classSet}>
       <>
-        {React.Children.map(children, child =>
+        {React.Children.map(childComponents, child =>
           React.cloneElement(child, {
             className: `${child.props.className} ${childrenClassSet}`,
             textAlign,

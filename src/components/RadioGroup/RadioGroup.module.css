@@ -53,7 +53,7 @@
 
 .label {
   cursor: pointer;
-  font-family: var(--font-family-sans-serif-medium);
+  font-family: var(--font-family-sans-serif-regular);
   font-size: rem(14px);
 }
 
@@ -61,11 +61,11 @@
   padding-left: 10px;
 
   &.dark {
-    color: var(--color-dark-copy);
+    color: var(--color-dark-label);
   }
 
   &.light {
-    color: var(--color-light-copy-alternate);
+    color: var(--color-light-label);
   }
 
   .input:checked ~ &.dark {
@@ -78,7 +78,7 @@
 }
 
 .singleLabel {
-  font-family: var(--font-family-sans-serif-medium);
+  font-family: var(--font-family-sans-serif-regular);
   font-size: rem(14px);
 
   &.dark {
