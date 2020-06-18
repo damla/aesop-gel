@@ -6,7 +6,7 @@ Array [
     className="information dark"
   >
     <h5
-      className="base xXSmall dark heading"
+      className="base xXSmall dark heading dark"
     >
       Quisque non enim efficitur
     </h5>
@@ -80,7 +80,7 @@ Array [
     className="information dark"
   >
     <h5
-      className="base xXSmall dark heading"
+      className="base xXSmall dark heading dark"
     >
       Quisque non enim efficitur
     </h5>

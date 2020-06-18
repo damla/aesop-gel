@@ -10,16 +10,19 @@ export const getCarouselSettings = ({
   Pagination,
   NextButton,
   PreviousButton,
+  theme,
 }) => ({
-  appendDots: dots => <Pagination dots={dots} fullWidth={hasFullWidthSlides} />,
+  appendDots: dots => (
+    <Pagination dots={dots} fullWidth={hasFullWidthSlides} theme={theme} />
+  ),
   centerMode: false,
   className,
   customPaging: () => <div />,
   dots: true,
   infinite: hasFullWidthSlides,
   initialSlide: initialSlideIndex,
-  nextArrow: <NextButton isActive={isNextButtonActive} theme="light" />,
-  prevArrow: <PreviousButton isActive={isPreviousButtonActive} theme="light" />,
+  nextArrow: <NextButton isActive={isNextButtonActive} theme={theme} />,
+  prevArrow: <PreviousButton isActive={isPreviousButtonActive} theme={theme} />,
   responsive: [
     {
       breakpoint: BREAKPOINTS.SMALL.MAX_WIDTH,
