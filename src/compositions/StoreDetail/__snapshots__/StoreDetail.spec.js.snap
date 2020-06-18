@@ -6,6 +6,11 @@ exports[`<StoreDetail /> renders base component correctly 1`] = `
 >
   <section
     className="base smallPaddingTop smallPaddingBottom smallPaddingLeft smallPaddingRight"
+    style={
+      Object {
+        "backgroundColor": undefined,
+      }
+    }
   >
     <div
       className="base reverse contentOnly dark"
@@ -84,6 +89,11 @@ exports[`<StoreDetail /> renders base component correctly 1`] = `
   </section>
   <section
     className="base smallPaddingTop smallPaddingBottom nonePaddingLeft nonePaddingRight"
+    style={
+      Object {
+        "backgroundColor": undefined,
+      }
+    }
   >
     <a
       className="base left dark base"
@@ -113,6 +123,11 @@ exports[`<StoreDetail /> renders base component correctly 1`] = `
   </section>
   <section
     className="base smallPaddingTop smallPaddingBottom smallPaddingLeft smallPaddingRight"
+    style={
+      Object {
+        "backgroundColor": undefined,
+      }
+    }
   >
     <div
       className="base reverse dark"
@@ -141,6 +156,11 @@ exports[`<StoreDetail /> renders base component correctly 1`] = `
   </section>
   <section
     className="base smallPaddingTop smallPaddingBottom smallPaddingLeft smallPaddingRight"
+    style={
+      Object {
+        "backgroundColor": undefined,
+      }
+    }
   >
     <div
       className="base dark"
@@ -195,6 +215,11 @@ exports[`<StoreDetail /> renders base component correctly 1`] = `
   </section>
   <section
     className="base smallPaddingTop smallPaddingBottom smallPaddingLeft smallPaddingRight"
+    style={
+      Object {
+        "backgroundColor": undefined,
+      }
+    }
   >
     <div
       className="base reverse contentOnly dark"
@@ -213,6 +238,11 @@ exports[`<StoreDetail /> renders base component correctly 1`] = `
   </section>
   <section
     className="base smallPaddingTop smallPaddingBottom smallPaddingLeft smallPaddingRight"
+    style={
+      Object {
+        "backgroundColor": undefined,
+      }
+    }
   >
     <div
       className="base fullWidthSlides dark"
@@ -222,14 +252,14 @@ exports[`<StoreDetail /> renders base component correctly 1`] = `
         dir="ltr"
       >
         <button
-          className="base inlineStyle light base"
+          className="base inlineStyle dark base"
           disabled={false}
           onClick={[Function]}
           title="next slide"
           type="button"
         >
           <svg
-            className="base chevron light"
+            className="base chevron dark"
             data-ref=""
             focusable="false"
             height={16}
@@ -659,14 +689,14 @@ exports[`<StoreDetail /> renders base component correctly 1`] = `
           </div>
         </div>
         <button
-          className="base inlineStyle light base"
+          className="base inlineStyle dark base"
           disabled={false}
           onClick={[Function]}
           title="next slide"
           type="button"
         >
           <svg
-            className="base chevron light"
+            className="base chevron dark"
             data-ref=""
             focusable="false"
             height={16}
@@ -737,6 +767,11 @@ exports[`<StoreDetail /> renders base component correctly 1`] = `
   </section>
   <section
     className="base smallPaddingTop smallPaddingBottom smallPaddingLeft smallPaddingRight"
+    style={
+      Object {
+        "backgroundColor": undefined,
+      }
+    }
   >
     <div
       className="base"
