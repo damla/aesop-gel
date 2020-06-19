@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import find from 'lodash/find';
 import { HEADING } from '~/constants';
 import Heading from '~/components/Heading';
 import styles from './StoreHoursList.module.css';
@@ -11,9 +12,10 @@ const StoreHoursList = ({
   hoursList,
   alternateHoursNote,
 }) => {
-  const classSet = cx(styles.base, className);
-
   if (hoursList.length === 0) return null;
+
+  const classSet = cx(styles.base, className);
+  const hasAlternateHours = !!find(hoursList, 'isAlternate');
 
   return (
     <div className={classSet}>
@@ -42,7 +44,9 @@ const StoreHoursList = ({
           </li>
         ))}
       </ul>
-      <div className={styles.alternateHoursNote}>{alternateHoursNote}</div>
+      {alternateHoursNote && hasAlternateHours && (
+        <div className={styles.alternateHoursNote}>{alternateHoursNote}</div>
+      )}
     </div>
   );
 };
