@@ -3,16 +3,18 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import Image from '~/components/Image';
 import DoubleImage from '~/components/DoubleImage';
+import GoogleMap from '~/components/GoogleMap';
 import Heading from '~/components/Heading';
 import ImageCarousel from '~/components/ImageCarousel';
-import Map from '~/components/Map';
 import { P } from '~/components/Paragraph';
 import Podium from '~/components/Podium';
+import StoreHoursList from '~/components/StoreHoursList';
 import TwoColumnLayout from '~/components/TwoColumnLayout';
 import styles from './StoreDetail.module.css';
 
-import MapFixture from '~/components/Map/Map.fixture';
+import GoogleMapFixture from '~/components/GoogleMap/GoogleMap.fixture';
 import StoreDetailFixture from './StoreDetail.fixture';
+import StoreHoursListFixture from '~/components/StoreHoursList/StoreHoursList.fixture';
 
 const StoreDetail = ({ className }) => {
   const classSet = cx(styles.base, className);
@@ -48,7 +50,7 @@ const StoreDetail = ({ className }) => {
                     Email
                   </Heading>
                   <div className={styles.detailContent}>
-                    consectetur.adipiscing.elit@aesop.com
+                    consectetur.elit@aesop.com
                   </div>
                 </div>
                 <div className={styles.detail}>
@@ -70,9 +72,12 @@ const StoreDetail = ({ className }) => {
                     Opening hours
                   </Heading>
                   <div className={styles.detailContent}>
-                    Quisque ac massa in ante vehicula elementum ac non magna. Ut
-                    a ullamcorper metus, sed rutrum nunc. Suspendisse maximus
-                    quam non tincidunt gravida. Sed porttitor vel mi a egestas.
+                    <StoreHoursList
+                      alternateHoursNote={
+                        StoreHoursListFixture.alternateHoursNote
+                      }
+                      hoursList={StoreHoursListFixture.hoursList}
+                    />
                   </div>
                 </div>
               </div>
@@ -163,13 +168,13 @@ const StoreDetail = ({ className }) => {
       </Podium>
 
       <Podium horizontalPadding="small" verticalPadding="small">
-        <Map
+        <GoogleMap
           center={{
-            lat: MapFixture.places[0].lat,
-            lng: MapFixture.places[0].lng,
+            lat: GoogleMapFixture.places[0].lat,
+            lng: GoogleMapFixture.places[0].lng,
           }}
           id="store-detail-map"
-          places={[MapFixture.places[0]]}
+          places={[GoogleMapFixture.places[0]]}
         />
       </Podium>
     </div>

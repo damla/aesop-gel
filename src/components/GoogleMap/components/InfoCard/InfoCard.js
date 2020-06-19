@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { HEADING, HYPERLINK_STYLE_TYPES, MAP } from '~/constants';
+import { HEADING, HYPERLINK_STYLE_TYPES, GOOGLE_MAPS } from '~/constants';
 import Heading from '~/components/Heading';
 import Hyperlink from '~/components/Hyperlink';
+import StoreHoursList from '~/components/StoreHoursList';
 import styles from './InfoCard.module.css';
 
 const DATA_TEST_REF = 'DIRECTION_URL';
@@ -34,44 +35,18 @@ const InfoCard = ({
             hasTargetInNewWindow={true}
             style={HYPERLINK_STYLE_TYPES.EXTERNAL_TEXT_LINK}
             title={`${copy.directions} ${address}`}
-            url={`${MAP.DIRECTIONS_URL_PREFIX}${address}`}
+            url={`${GOOGLE_MAPS.DIRECTIONS_URL_PREFIX}${address}`}
           >
             {address}
           </Hyperlink>
         </div>
       )}
       {phoneNumber && <div className={styles.phoneNumber}>{phoneNumber}</div>}
-
-      {openingHours.length !== 0 && (
-        <>
-          <Heading
-            className={styles.openingHoursHeading}
-            hasTopMargin={false}
-            level={HEADING.LEVEL.FOUR}
-            size={HEADING.SIZE.X_X_SMALL}
-          >
-            {copy.openingHours.heading}
-          </Heading>
-
-          <ul className={styles.openingHoursList}>
-            {openingHours.map(item => (
-              <li className={styles.openingHoursItem} key={item.id}>
-                <span className={styles.dayName}>{item.dayName}</span>
-                <span
-                  className={cx(styles.hours, {
-                    [styles.alternateHours]: item.isAlternate,
-                  })}
-                >
-                  {item.hours}
-                </span>
-              </li>
-            ))}
-          </ul>
-          <div className={styles.alternateHoursNote}>
-            {copy.openingHours?.alternateHoursNote}
-          </div>
-        </>
-      )}
+      <StoreHoursList
+        alternateHoursNote={copy.openingHours.alternateHoursNote}
+        heading={copy.openingHours.heading}
+        hoursList={openingHours}
+      />
     </div>
   );
 };

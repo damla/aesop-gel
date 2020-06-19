@@ -1,11 +1,11 @@
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import StoreDetail from './StoreDetail';
+import GoogleMap from './GoogleMap';
 
 configure({ adapter: new Adapter() });
 
-describe('<StoreDetail />', () => {
+describe('<GoogleMap />', () => {
   it('should be defined', () => {
-    expect(StoreDetail).toBeDefined();
+    expect(GoogleMap).toBeDefined();
   });
 });

@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StoreHoursList /> renders base component correctly 1`] = `
+<div
+  className="base"
+>
+  <h4
+    className="base noTopMargin xXSmall dark heading"
+  >
+    Opening hours
+  </h4>
+  <ul
+    className="list"
+  >
+    <li
+      className="item"
+    >
+      <span
+        className="dayName"
+      >
+        Monday
+      </span>
+      <span
+        className="hours"
+      >
+        11am - 4pm
+      </span>
+    </li>
+    <li
+      className="item"
+    >
+      <span
+        className="dayName"
+      >
+        Tuesday
+      </span>
+      <span
+        className="hours alternateHours"
+      >
+        10am - 3pm
+      </span>
+    </li>
+    <li
+      className="item"
+    >
+      <span
+        className="dayName"
+      >
+        Wednesday
+      </span>
+      <span
+        className="hours"
+      >
+        10am - 3pm
+      </span>
+    </li>
+    <li
+      className="item"
+    >
+      <span
+        className="dayName"
+      >
+        Thursday
+      </span>
+      <span
+        className="hours"
+      >
+        10am - 3pm
+      </span>
+    </li>
+    <li
+      className="item"
+    >
+      <span
+        className="dayName"
+      >
+        Friday
+      </span>
+      <span
+        className="hours"
+      >
+        10am - 3pm
+      </span>
+    </li>
+    <li
+      className="item"
+    >
+      <span
+        className="dayName"
+      >
+        Saturday
+      </span>
+      <span
+        className="hours alternateHours"
+      >
+        10am - 3pm
+      </span>
+    </li>
+    <li
+      className="item"
+    >
+      <span
+        className="dayName"
+      >
+        Sunday
+      </span>
+      <span
+        className="hours"
+      >
+        10am - 3pm
+      </span>
+    </li>
+  </ul>
+  <div
+    className="alternateHoursNote"
+  >
+    Special opening hours
+  </div>
+</div>
+`;

@@ -1,11 +1,16 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { Loader } from 'google-maps';
 import isFunction from 'lodash/isFunction';
 import ReactDOMServer from 'react-dom/server';
 import MarkerClusterer from '@google/markerclustererplus';
-import { HYPERLINK_STYLE_TYPES, MAP, STORES, TRANSITIONS } from '~/constants';
+import {
+  HYPERLINK_STYLE_TYPES,
+  GOOGLE_MAPS,
+  STORES,
+  TRANSITIONS,
+} from '~/constants';
+import { useGoogleMapsContext } from '~/contexts/GoogleMaps.context';
 import useWindowHasResized from '~/customHooks/useWindowHasResized';
 import {
   ascertainIsSmallOnlyViewport,
@@ -14,18 +19,11 @@ import {
 import Hyperlink from '~/components/Hyperlink';
 import Loading from '~/components/Loading';
 import Transition from '~/components/Transition';
-import MapOptions from './Map.options';
+import GoogleMapOptions from './GoogleMap.options';
 import InfoCard from './components/InfoCard';
-import styles from './Map.module.css';
+import styles from './GoogleMap.module.css';
 
-/** @TODO store and fetch this key via an API */
-const GOOGLE_MAP_API_KEY = 'AIzaSyC8XkoYL8hh3iWiHhMWV07qmFerF3DO1W0';
-
-const loader = new Loader(GOOGLE_MAP_API_KEY, {
-  libraries: ['places'],
-});
-
-const Map = ({
+const GoogleMap = ({
   center,
   className,
   copy,
@@ -35,9 +33,9 @@ const Map = ({
   initialZoom,
   places,
 }) => {
+  const { googleMap, isLoading } = useGoogleMapsContext();
   const mapContainerRef = useRef();
   const mapRef = useRef();
-  const google = useRef(null);
   const activeInfoCard = useRef(null);
   const handleMapClick = useRef(null);
   const isIsSmallOnlyViewport = useRef(ascertainIsSmallOnlyViewport());
@@ -45,7 +43,6 @@ const Map = ({
   const [activeInfoBlockData, setActiveInfoBlockData] = useState(null);
   const [markers, setMarkers] = useState([]);
   const [markerCluster, setMarkerCluster] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
 
   useWindowHasResized(() => {
     if (activeInfoCard.current) {
@@ -54,6 +51,19 @@ const Map = ({
 
     setActiveInfoBlockData(null);
   });
+
+  const createGoogleMap = useCallback(() => {
+    if (googleMap) {
+      return new googleMap.maps.Map(mapContainerRef.current, {
+        center,
+        mapTypeControl: GoogleMapOptions.SHOW_MAP_TYPE_CONTROL,
+        scrollwheel: GoogleMapOptions.SCROLL_WHEEL_ENABLED,
+        styles: GoogleMapOptions.MAP_STYLES,
+        zoom: initialZoom,
+        clickableIcons: false,
+      });
+    }
+  }, [center, initialZoom, googleMap]);
 
   isIsSmallOnlyViewport.current = ascertainIsSmallOnlyViewport();
   isIsMediumViewport.current = ascertainIsMediumViewport();
@@ -72,13 +82,10 @@ const Map = ({
   };
 
   useEffect(() => {
-    (async () => {
-      setIsLoading(true);
+    mapRef.current = createGoogleMap();
 
-      google.current = await loader.load();
-      mapRef.current = createGoogleMap();
-
-      handleMapClick.current = google.current.maps.event.addListener(
+    if (googleMap) {
+      handleMapClick.current = googleMap.maps.event.addListener(
         mapRef.current,
         'click',
         () => {
@@ -92,31 +99,29 @@ const Map = ({
         [customMarker, ...places]
           .filter(item => item?.lat !== undefined && item?.lng !== undefined)
           .map((marker, index) =>
-            marker.type === MAP.MARKER_TYPE.PIN
+            marker.type === GOOGLE_MAPS.MARKER_TYPE.PIN
               ? createPinMarker(marker, index)
               : createPlaceMarker(marker, index, index === 0),
           ),
       );
-
-      setIsLoading(false);
-    })();
+    }
 
     return function cleanup() {
-      if (google.current) {
-        google.current.maps.event.removeListener(handleMapClick.current);
+      if (googleMap) {
+        googleMap.maps.event.removeListener(handleMapClick.current);
         clearMapMarkers();
       }
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [customMarker, hasMarkerIndexes, places]);
+  }, [createGoogleMap, customMarker, places, googleMap]);
 
   useEffect(() => {
-    if (google.current) {
+    if (googleMap) {
       setMarkerCluster(
         () =>
           new MarkerClusterer(mapRef.current, markers, {
             imageExtension: 'png',
-            imagePath: MAP.CLUSTER_IMAGE_PATH,
+            imagePath: GOOGLE_MAPS.CLUSTER_IMAGE_PATH,
           }),
       );
     }
@@ -126,41 +131,33 @@ const Map = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [markers]);
 
-  const createGoogleMap = useCallback(() => {
-    return new google.current.maps.Map(mapContainerRef.current, {
-      center,
-      mapTypeControl: MapOptions.SHOW_MAP_TYPE_CONTROL,
-      scrollwheel: MapOptions.SCROLL_WHEEL_ENABLED,
-      styles: MapOptions.MAP_STYLES,
-      zoom: initialZoom,
-      clickableIcons: false,
-    });
-  }, [center, initialZoom]);
-
   const createPinMarker = useCallback(
     (pin, index) => {
-      return new google.current.maps.Marker({
-        position: new google.current.maps.LatLng(pin.lat, pin.lng),
+      return new googleMap.maps.Marker({
+        position: new googleMap.maps.LatLng(
+          parseFloat(pin.lat),
+          parseFloat(pin.lng),
+        ),
         clickable: false,
         map: mapRef.current,
         icon: {
-          anchor: new google.current.maps.Point(
-            MapOptions.MAP_MARKER_ANCHOR_X,
-            MapOptions.MAP_MARKER_ANCHOR_Y,
+          anchor: new googleMap.maps.Point(
+            GoogleMapOptions.MAP_MARKER_ANCHOR_X,
+            GoogleMapOptions.MAP_MARKER_ANCHOR_Y,
           ),
-          labelOrigin: new google.current.maps.Point(
-            MapOptions.MAP_LABEL_ORIGIN_X,
-            MapOptions.MAP_LABEL_ORIGIN_Y,
+          labelOrigin: new googleMap.maps.Point(
+            GoogleMapOptions.MAP_LABEL_ORIGIN_X,
+            GoogleMapOptions.MAP_LABEL_ORIGIN_Y,
           ),
-          ...MapOptions.MAP_MARKER,
+          ...GoogleMapOptions.MAP_MARKER,
         },
         label: {
           text: hasMarkerIndexes ? `${index + 1}` : ' ',
-          ...MapOptions.MAP_LABEL,
+          ...GoogleMapOptions.MAP_LABEL,
         },
       });
     },
-    [hasMarkerIndexes],
+    [hasMarkerIndexes, googleMap],
   );
 
   const createPlaceMarker = useCallback(
@@ -175,31 +172,31 @@ const Map = ({
 
       const markerType =
         !custom && (customMarker || isStockistMarker)
-          ? MapOptions.STOCKIST_MAP_MARKER
-          : MapOptions.MAP_MARKER;
+          ? GoogleMapOptions.STOCKIST_MAP_MARKER
+          : GoogleMapOptions.MAP_MARKER;
 
-      const marker = new google.current.maps.Marker({
-        position: new google.current.maps.LatLng(lat, lng),
+      const marker = new googleMap.maps.Marker({
+        position: new googleMap.maps.LatLng(parseFloat(lat), parseFloat(lng)),
         map: mapRef.current,
         icon: {
-          anchor: new google.current.maps.Point(
-            MapOptions.MAP_MARKER_ANCHOR_X,
-            MapOptions.MAP_MARKER_ANCHOR_Y,
+          anchor: new googleMap.maps.Point(
+            GoogleMapOptions.MAP_MARKER_ANCHOR_X,
+            GoogleMapOptions.MAP_MARKER_ANCHOR_Y,
           ),
-          labelOrigin: new google.current.maps.Point(
-            MapOptions.MAP_LABEL_ORIGIN_X,
-            MapOptions.MAP_LABEL_ORIGIN_Y,
+          labelOrigin: new googleMap.maps.Point(
+            GoogleMapOptions.MAP_LABEL_ORIGIN_X,
+            GoogleMapOptions.MAP_LABEL_ORIGIN_Y,
           ),
           ...markerType,
         },
         title: storeName,
         label: {
           text: hasMarkerIndexes ? `${index + 1}` : ' ',
-          ...MapOptions.MAP_LABEL,
+          ...GoogleMapOptions.MAP_LABEL,
         },
       });
 
-      const infoCard = new google.current.maps.InfoWindow({
+      const infoCard = new googleMap.maps.InfoWindow({
         content: ReactDOMServer.renderToString(
           <InfoCard
             address={address}
@@ -239,6 +236,7 @@ const Map = ({
       return marker;
     },
     [
+      googleMap,
       copy,
       customMarker,
       hasMarkerIndexes,
@@ -294,7 +292,7 @@ const Map = ({
   );
 };
 
-Map.propTypes = {
+GoogleMap.propTypes = {
   center: PropTypes.shape({
     lat: PropTypes.number,
     lng: PropTypes.number,
@@ -335,7 +333,7 @@ Map.propTypes = {
   ),
 };
 
-Map.defaultProps = {
+GoogleMap.defaultProps = {
   center: {},
   className: undefined,
   copy: {
@@ -354,8 +352,8 @@ Map.defaultProps = {
   customMarker: undefined,
   hasMarkerIndexes: true,
   id: undefined,
-  initialZoom: MapOptions.MAP_INITIAL_ZOOM,
+  initialZoom: GoogleMapOptions.MAP_INITIAL_ZOOM,
   places: [],
 };
 
-export default Map;
+export default GoogleMap;
