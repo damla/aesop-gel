@@ -26,6 +26,7 @@ const Carousel = forwardRef(function CarouselRef(
     hasFullWidthSlides,
     hasShowCaption,
     hasSlideCounter,
+    id,
     initialSlideIndex,
     introduction,
     slides,
@@ -119,7 +120,7 @@ const Carousel = forwardRef(function CarouselRef(
   };
 
   return (
-    <div className={classSet} ref={ref}>
+    <div className={classSet} id={id} ref={ref}>
       {!hasIntroSlide && introduction && (
         <aside className={styles.mobileCarouselIntroductionWrapper}>
           <CarouselIntroduction
@@ -197,6 +198,7 @@ Carousel.propTypes = {
   hasFullWidthSlides: PropTypes.bool,
   hasShowCaption: PropTypes.bool,
   hasSlideCounter: PropTypes.bool,
+  id: PropTypes.string,
   initialSlideIndex: PropTypes.number,
   introduction: PropTypes.shape({
     cta: PropTypes.shape({
@@ -227,6 +229,7 @@ Carousel.defaultProps = {
   hasFullWidthSlides: false,
   hasShowCaption: false,
   hasSlideCounter: false,
+  id: undefined,
   initialSlideIndex: 0,
   introduction: undefined,
   slides: [],
