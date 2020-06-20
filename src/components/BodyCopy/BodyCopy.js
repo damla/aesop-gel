@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import LinkButtonGroup from '~/components/LinkButtonGroup';
+import Hyperlink from '~/components/Hyperlink';
 import SectionHeading from '~/components/SectionHeading';
 import styles from './BodyCopy.module.css';
 
@@ -39,7 +40,18 @@ const BodyCopy = ({
 
       {copy && <div className={cx(styles.copy, styles[theme])}>{copy}</div>}
 
-      <LinkButtonGroup link={cta} secondaryLink={secondaryCta} theme={theme} />
+      <LinkButtonGroup theme={theme}>
+        {cta && (
+          <Hyperlink style={cta.style} url={cta.url}>
+            {cta.text}
+          </Hyperlink>
+        )}
+        {secondaryCta && (
+          <Hyperlink style={secondaryCta.style} url={secondaryCta.url}>
+            {secondaryCta.text}
+          </Hyperlink>
+        )}
+      </LinkButtonGroup>
     </article>
   );
 };
