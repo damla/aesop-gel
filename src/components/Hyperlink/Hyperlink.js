@@ -54,9 +54,12 @@ const Hyperlink = ({
     >
       {children}
       {hasIcon && (
-        <i aria-hidden="true" className={styles.icon}>
-          <Icon height={15} name={iconName} width={15} />
-        </i>
+        <>
+          {` `}
+          <i aria-hidden="true" className={styles.icon}>
+            <Icon height={10} name={iconName} width={10} />
+          </i>
+        </>
       )}
     </a>
   );

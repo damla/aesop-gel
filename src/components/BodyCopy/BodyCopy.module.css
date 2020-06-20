@@ -13,9 +13,9 @@
     }
   }
 
-  @media (--viewport-ld) {
+  @media (--viewport-lg) {
     &:not(:last-child) {
-      margin-bottom: var(--layout-ld-spacing);
+      margin-bottom: var(--layout-lg-spacing);
     }
   }
 }
@@ -28,7 +28,7 @@
   }
 
   @media (--viewport-lg) {
-    margin-top: calc(var(--layout-md-spacing) / 2);
+    margin-top: calc(var(--layout-lg-spacing) / 2);
   }
 
   a {
@@ -40,7 +40,7 @@
     }
 
     @media (--viewport-lg) {
-      margin-top: calc(var(--layout-md-spacing) / 2);
+      margin-top: calc(var(--layout-lg-spacing) / 2);
     }
   }
 }

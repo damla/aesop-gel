@@ -52,6 +52,10 @@
     max-width: 1300px !important;
   }
 
+  .sb-show-main {
+    margin: 0;
+  }
+
   div[class^='css-'][scale='1'] {
     transform: none;
   }

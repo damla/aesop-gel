@@ -9,6 +9,8 @@ import replace from 'rollup-plugin-replace';
 import resolve from 'rollup-plugin-node-resolve';
 import pkg from './package.json';
 
+import copy from 'rollup-plugin-copy-assets';
+
 /** @TODO set up actual env vars */
 const NODE_ENV = 'development';
 
@@ -21,6 +23,9 @@ export default {
   },
   external: [...Object.keys(pkg.peerDependencies || {})],
   plugins: [
+    copy({
+      assets: ['src/assets'],
+    }),
     alias({
       entries: [{ find: '~', replacement: path.resolve(__dirname, 'src') }],
     }),

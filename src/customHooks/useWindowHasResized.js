@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import debounce from 'lodash/debounce';
 
-export const useWindowHasResized = () => {
+export const useWindowHasResized = callback => {
   const [windowSize, setWindowSize] = useState({
     height: 0,
     width: 0,
@@ -15,7 +15,9 @@ export const useWindowHasResized = () => {
         height: windowIsDefined ? window.innerHeight : 0,
         width: windowIsDefined ? window.innerWidth : 0,
       });
-    }, 400);
+
+      if (callback) callback();
+    }, 200);
 
     if (windowIsDefined) {
       window.addEventListener('resize', handleResize);
