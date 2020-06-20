@@ -3,6 +3,7 @@ import { BREAKPOINTS } from '~/constants';
 
 export const getCarouselSettings = ({
   className,
+  hasFlushPagination,
   hasFullWidthSlides,
   initialSlideIndex,
   isNextButtonActive,
@@ -13,7 +14,12 @@ export const getCarouselSettings = ({
   theme,
 }) => ({
   appendDots: dots => (
-    <Pagination dots={dots} fullWidth={hasFullWidthSlides} theme={theme} />
+    <Pagination
+      dots={dots}
+      fullWidth={hasFullWidthSlides}
+      hasFlushPagination={hasFlushPagination}
+      theme={theme}
+    />
   ),
   centerMode: false,
   className,

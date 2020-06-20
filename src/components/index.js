@@ -1,4 +1,6 @@
 import Accordion from './Accordion';
+import AddToCartButton from './AddToCartButton';
+import Audio from './Audio';
 import BodyCopy from './BodyCopy';
 import Breadcrumbs from './Breadcrumbs';
 import Button from './Button';
@@ -9,7 +11,9 @@ import DialogBanner from './DialogBanner';
 import DoubleImage from './DoubleImage';
 import Figure from './Figure';
 import FlyinPanel from './FlyinPanel';
+import GoogleMap from './GoogleMap';
 import Heading from './Heading';
+import Hidden from './Hidden';
 import Hyperlink from './Hyperlink';
 import Icon from './Icon';
 import Image from './Image';
@@ -24,7 +28,10 @@ import Overlay from './Overlay';
 import Paragraph, { P, ParagraphSet } from './Paragraph';
 import Podium from './Podium';
 import Quote from './Quote';
+import RadioGroup from './RadioGroup';
 import SectionHeading from './SectionHeading';
+import Select from './Select';
+import StoreHoursList from './StoreHoursList';
 import SubNav from './SubNav';
 import Transition from './Transition';
 import TwoColumnLayout from './TwoColumnLayout';
@@ -33,6 +40,8 @@ import Video from './Video';
 
 export default {
   Accordion,
+  AddToCartButton,
+  Audio,
   BodyCopy,
   Breadcrumbs,
   Button,
@@ -43,7 +52,9 @@ export default {
   DoubleImage,
   Figure,
   FlyinPanel,
+  GoogleMap,
   Heading,
+  Hidden,
   Hyperlink,
   Icon,
   Image,
@@ -60,7 +71,10 @@ export default {
   ParagraphSet,
   Podium,
   Quote,
+  RadioGroup,
   SectionHeading,
+  Select,
+  StoreHoursList,
   SubNav,
   Transition,
   TwoColumnLayout,

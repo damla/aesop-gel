@@ -1,5 +1,6 @@
 import useAddToCart from './useAddToCart';
 import useEscapeKeyListener from './useEscapeKeyListener';
+import useGoogleMaps from './useGoogleMaps';
 import useHasMounted from './useHasMounted';
 import useOnScreen from './useOnScreen';
 import useOverflowHidden from './useOverflowHidden';
@@ -12,6 +13,7 @@ import useWindowHasResized from './useWindowHasResized';
 
 export { useAddToCart };
 export { useEscapeKeyListener };
+export { useGoogleMaps };
 export { useHasMounted };
 export { useOnScreen };
 export { useOverflowHidden };
@@ -25,6 +27,7 @@ export { useWindowHasResized };
 export default {
   useEscapeKeyListener,
   useHasMounted,
+  useGoogleMaps,
   useOnScreen,
   useOverflowHidden,
   useProductDetail,

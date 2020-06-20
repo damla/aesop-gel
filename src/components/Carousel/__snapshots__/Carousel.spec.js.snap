@@ -110,6 +110,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                   title="Aenean ac tortor"
                 >
                   Aenean ac tortor
+                   
                   <i
                     aria-hidden="true"
                     className="icon"
@@ -118,17 +119,17 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                       className="base rightArrow dark"
                       data-ref=""
                       focusable="false"
-                      height={15}
+                      height={10}
                       role="img"
                       style={
                         Object {
-                          "height": "15px",
-                          "width": "15px",
+                          "height": "10px",
+                          "width": "10px",
                         }
                       }
                       tabIndex={-1}
                       viewBox="0 0 50 50"
-                      width={15}
+                      width={10}
                     >
                       <g>
                         <path

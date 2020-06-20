@@ -47,6 +47,11 @@
   }
 }
 
+.flush {
+  margin-right: 0;
+  margin-left: 0;
+}
+
 .bar {
   position: absolute;
   height: 2px;
