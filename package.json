@@ -21,6 +21,7 @@
     "prettier-stylelint": "prettier-stylelint  --write './src/**/*.css' --config .stylelintrc --quiet",
     "pretty": "npm run prettier-eslint && npm run prettier-stylelint",
     "release": "npm run build:dev && npm run build:prod",
+    "sanity-check": "npm run pretty && npm run lint && npm run test -- -u",
     "start": "webpack-dev-server --config ./webpack.config.js --mode development --watch",
     "storybook": "start-storybook -p 6006  -s ./public",
     "stylelint": "stylelint 'src/**/*.css'",

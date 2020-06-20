@@ -5,6 +5,7 @@ import useVariantSelect from '~/customHooks/useVariantSelect';
 import ProductDetailImageFixture from '~/components/ProductDetailHeader/components/ProductDetailImage/ProductDetailImage.fixture';
 import AddToCartButton from './AddToCartButton';
 import AddToCartButtonFixture from './AddToCartButton.fixture';
+import mockAddToCartButtonOnClick from './__mocks__/AddToCartButton.onClick';
 import useAddToCart from '~/customHooks/useAddToCart';
 
 <Meta title="Components/AddToCartButton" component={AddToCartButton} />
@@ -22,7 +23,7 @@ import useAddToCart from '~/customHooks/useAddToCart';
           <AddToCartButton
             dataTestRef="ADD_TO_CART_SMALL_CTA"
             productName="Product"
-            onClick={(sku) => AddToCartButtonFixture.mockOnClick(sku, addToCartDispatch, ADD_TO_CART_ACTION_TYPES)}
+            onClick={(sku) => mockAddToCartButtonOnClick(sku, addToCartDispatch, ADD_TO_CART_ACTION_TYPES)}
             hasError={addToCartState.hasError}
             isLoading={addToCartState.isLoading}
             isUpdateSuccessful={addToCartState.isUpdateSuccessful}

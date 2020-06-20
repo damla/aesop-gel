@@ -2,11 +2,11 @@
 
 exports[`<AddToCartButton /> renders base component correctly 1`] = `
 <button
-  className="base alternate blockStyle dark base"
+  className="base alternate blockStyle dark base fullWidth"
   data-test-ref="DATA_TEST_REF"
   disabled={false}
   onClick={[Function]}
-  title="Add to cart button"
+  title="Add to your cart — undefined"
   type="button"
 >
   <span

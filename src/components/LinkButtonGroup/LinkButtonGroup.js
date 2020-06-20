@@ -16,6 +16,10 @@ const LinkButtonGroup = ({
   textAlign,
   theme,
 }) => {
+  if (!children || typeof children === 'string' || children instanceof String) {
+    return null;
+  }
+
   const classSet = cx(
     styles.base,
     { [styles.fitContent]: hasFitContent },
@@ -37,20 +41,25 @@ const LinkButtonGroup = ({
   return (
     <div className={classSet}>
       <>
-        {React.Children.map(childComponents, child =>
-          React.cloneElement(child, {
-            className: `${child.props.className} ${childrenClassSet}`,
+        {React.Children.map(childComponents, child => {
+          if (child === null) return child;
+
+          return React.cloneElement(child, {
+            className: `${child.props?.className} ${childrenClassSet}`,
             textAlign,
             theme,
-          }),
-        )}
+          });
+        })}
       </>
     </div>
   );
 };
 
 LinkButtonGroup.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.arrayOf(PropTypes.element),
+  ]),
   className: PropTypes.string,
   hasFitContent: PropTypes.bool,
   isFlush: PropTypes.bool,

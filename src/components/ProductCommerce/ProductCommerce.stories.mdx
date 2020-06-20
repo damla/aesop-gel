@@ -2,6 +2,7 @@ import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import * as knobs from '@storybook/addon-knobs';
 import Podium from '~/components/Podium';
 import AddToCartButtonFixture from '~/components/AddToCartButton/AddToCartButton.fixture';
+import mockAddToCartButtonOnClick from '~/components/AddToCartButton/__mocks__/AddToCartButton.onClick';
 import ProductCommerce from './ProductCommerce';
 import ProductCommerceFixture from './ProductCommerce.fixture';
 
@@ -18,7 +19,7 @@ Presented in a [Podium](?path=/docs/components-podium--base-component) component
         description={knobs.text('description', ProductCommerceFixture.description, 'Content')}
         eyebrow={knobs.text('eyebrow', ProductCommerceFixture.eyebrow, 'Content')}
         heading={knobs.text('heading', ProductCommerceFixture.heading, 'Content')}
-        onAddToCartClick={AddToCartButtonFixture.mockOnClick}
+        onAddToCartClick={mockAddToCartButtonOnClick}
         productName={knobs.text('productName', ProductCommerceFixture.productName, 'Content')}
         theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
         variants={knobs.object('variants', ProductCommerceFixture.variantOptions, 'Content')}
