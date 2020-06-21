@@ -35,6 +35,7 @@ const ProductCommerce = ({
     addToCartDispatch,
     ADD_TO_CART_ACTION_TYPES,
   ] = useAddToCart();
+
   const variantSelect = useVariantSelect(variants);
   const imageRef = React.useRef();
   const { selectedVariant } = variantSelect;
@@ -47,6 +48,8 @@ const ProductCommerce = ({
   if (!selectedVariant) {
     return <Loading isLoading={true} />;
   }
+
+  const { hasError, isLoading, isUpdateSuccessful } = addToCartState;
 
   const variantRadioOptions = getVariantRadioOptions(variants);
   const { sku: value } = selectedVariant;
@@ -96,7 +99,7 @@ const ProductCommerce = ({
               name="sku"
               onChange={e => variantSelect.onVariantChange(e, variants)}
               options={variantRadioOptions}
-              testReference="PRODUCT_VARIANT_SELECT"
+              testReference="PRODUCT_COMMERCE_VARIANT_SELECT"
               theme={theme}
               value={value}
             />
@@ -109,11 +112,11 @@ const ProductCommerce = ({
             theme={theme}
           >
             <AddToCartButton
-              dataTestRef="ADD_TO_CART_SMALL_CTA"
-              hasError={addToCartState.hasError}
+              dataTestRef="PRODUCT_COMMERCE_ADD_TO_CART_CTA"
+              hasError={hasError}
               isFullWidth={false}
-              isLoading={addToCartState.isLoading}
-              isUpdateSuccessful={addToCartState.isUpdateSuccessful}
+              isLoading={isLoading}
+              isUpdateSuccessful={isUpdateSuccessful}
               onClick={handleOnAddToCartClick}
               productName={productName}
               theme={theme}
