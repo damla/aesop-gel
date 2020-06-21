@@ -5,7 +5,7 @@ import { HYPERLINK_STYLE_TYPES } from '~/constants';
 import { VariantSelectContextProvider } from '~/contexts/VariantSelect.context';
 import useAddToCart from '~/customHooks/useAddToCart';
 import useVariantSelect from '~/customHooks/useVariantSelect';
-import useProductImageTransition from '~/customHooks/useProductImageTransition';
+import useImageTransition from '~/customHooks/useImageTransition';
 import AddToCartButton from '~/components/AddToCartButton';
 import Heading from '~/components/Heading';
 import Hyperlink from '~/components/Hyperlink';
@@ -39,7 +39,7 @@ const ProductCommerce = ({
   const imageRef = React.useRef();
   const { selectedVariant } = variantSelect;
 
-  const { currentImage, isImageActive } = useProductImageTransition(
+  const [currentImage, isImageActive] = useImageTransition(
     selectedVariant?.image,
     imageRef,
   );

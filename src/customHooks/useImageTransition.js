@@ -1,9 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 
 const windowIsDefined = typeof window !== 'undefined';
-const TRANSITION_TIMEOUT = 600;
 
-const useProductImageTransition = (image, ref) => {
+const useImageTransition = (image, ref, duration = 600) => {
   const [currentImage, setCurrentImage] = useState({});
   const [isImageActive, setIsImageActive] = useState(false);
   const timeout = useRef(null);
@@ -25,7 +24,7 @@ const useProductImageTransition = (image, ref) => {
         } else {
           currentRef.addEventListener('load', handleOnImageLoad);
         }
-      }, TRANSITION_TIMEOUT);
+      }, duration);
     }
 
     return function cleanup() {
@@ -35,12 +34,9 @@ const useProductImageTransition = (image, ref) => {
 
       currentRef.removeEventListener('load', handleOnImageLoad);
     };
-  }, [image, ref]);
+  }, [duration, image, ref]);
 
-  return {
-    currentImage,
-    isImageActive,
-  };
+  return [currentImage, isImageActive];
 };
 
-export default useProductImageTransition;
+export default useImageTransition;
