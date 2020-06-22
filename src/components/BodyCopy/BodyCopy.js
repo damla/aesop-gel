@@ -13,14 +13,13 @@ const BodyCopy = ({
   cta,
   eyebrow,
   id,
-  parent,
   hasSerifFontHeading,
   heading,
   secondaryCta,
   subHeading,
   theme,
 }) => {
-  const classSet = cx(styles.base, styles[theme], styles[parent], className);
+  const classSet = cx(styles.base, styles[theme], className);
 
   return (
     <article className={classSet} id={id}>
@@ -41,15 +40,9 @@ const BodyCopy = ({
       {copy && <div className={cx(styles.copy, styles[theme])}>{copy}</div>}
 
       <LinkButtonGroup theme={theme}>
-        {cta && (
-          <Hyperlink style={cta.style} url={cta.url}>
-            {cta.text}
-          </Hyperlink>
-        )}
+        {cta && <Hyperlink {...cta}>{cta.text}</Hyperlink>}
         {secondaryCta && (
-          <Hyperlink style={secondaryCta.style} url={secondaryCta.url}>
-            {secondaryCta.text}
-          </Hyperlink>
+          <Hyperlink {...secondaryCta}>{secondaryCta.text}</Hyperlink>
         )}
       </LinkButtonGroup>
     </article>
@@ -69,7 +62,6 @@ BodyCopy.propTypes = {
   hasSerifFontHeading: PropTypes.bool,
   heading: PropTypes.string,
   id: PropTypes.string,
-  parent: PropTypes.oneOf(['HeroWithContent', 'HalfWidthFullBleed']),
   secondaryCta: PropTypes.object,
   subHeading: PropTypes.string,
   theme: PropTypes.oneOf(['dark', 'light']),
@@ -88,7 +80,6 @@ BodyCopy.defaultProps = {
   hasSerifFontHeading: false,
   heading: undefined,
   id: undefined,
-  parent: undefined,
   secondaryCta: undefined,
   subHeading: undefined,
   theme: 'dark',

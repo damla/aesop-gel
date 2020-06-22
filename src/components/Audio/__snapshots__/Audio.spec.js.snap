@@ -81,11 +81,9 @@ exports[`<Audio /> renders base component correctly 1`] = `
         >
           <g>
             <path
-              className="undefined"
               d="M19.996,11.991 L9.999,5.990 L19.996,-0.012"
             />
             <path
-              className="undefined"
               d="M9.996,11.991 L-0.001,5.990 L9.996,-0.012"
             />
           </g>
@@ -174,11 +172,9 @@ exports[`<Audio /> renders base component correctly 1`] = `
         >
           <g>
             <path
-              className="undefined"
               d="M19.996,11.991 L9.999,5.990 L19.996,-0.012"
             />
             <path
-              className="undefined"
               d="M9.996,11.991 L-0.001,5.990 L9.996,-0.012"
             />
           </g>
@@ -214,11 +210,9 @@ exports[`<Audio /> renders base component correctly 1`] = `
         >
           <g>
             <path
-              className="undefined"
               d="M10.992,6.125 L6.125,10.782 L6.125,0.001 L4.848,0.001 L4.848,10.768 L-0.004,6.125 L-0.004,7.819 L5.495,13.011 L10.992,7.819 L10.992,6.125 Z"
             />
             <path
-              className="undefined"
               d="M-0.000,12.999 L11.000,12.999 L11.000,14.000 L-0.000,14.000 L-0.000,12.999 Z"
             />
           </g>

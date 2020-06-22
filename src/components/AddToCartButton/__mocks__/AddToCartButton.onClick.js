@@ -5,6 +5,7 @@ export const mockOnClick = async (
   ADD_TO_CART_ACTION_TYPES,
 ) => {
   addToCartDispatch({ type: ADD_TO_CART_ACTION_TYPES.FETCHING });
+
   try {
     const result = await (() =>
       new Promise((resolve, reject) => {
@@ -16,10 +17,14 @@ export const mockOnClick = async (
           3000,
         );
       }))();
+
     addToCartDispatch({ type: ADD_TO_CART_ACTION_TYPES.SUCCESS });
+
     console.log('API result from AddToCart:', result); // eslint-disable-line no-console
-  } catch (e) {
+  } catch (error) {
     addToCartDispatch({ type: ADD_TO_CART_ACTION_TYPES.FAIL });
+
+    console.error('API error from AddToCart:', error); // eslint-disable-line no-console
   }
 };
 

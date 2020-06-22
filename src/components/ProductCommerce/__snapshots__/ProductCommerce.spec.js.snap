@@ -31,7 +31,7 @@ exports[`<ProductCommerce /> renders base component correctly 1`] = `
       </h3>
     </header>
     <p
-      className="base dark"
+      className="base dark description"
     >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris volutpat molestie lobortis. Nunc vel aliquam odio.
     </p>
@@ -162,7 +162,6 @@ exports[`<ProductCommerce /> renders base component correctly 1`] = `
           >
             <g>
               <path
-                className="undefined"
                 d="M30.1,5.3L50,25.1L30.1,45h-6.6l18-17.6H0v-4.8h41.5l-18-17.6h6.6V5.3z"
               />
             </g>

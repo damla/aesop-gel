@@ -27,8 +27,10 @@ const MediaWithContent = forwardRef(function MediaWithContentRef(
     className,
   );
 
+  const style = backgroundColor ? { backgroundColor } : undefined;
+
   return (
-    <section className={classSet} ref={ref} style={{ backgroundColor }}>
+    <section className={classSet} ref={ref} style={style}>
       <Media
         className={styles.media}
         foregroundImage={foregroundImage}

@@ -45,7 +45,7 @@ const LinkButtonGroup = ({
           if (child === null) return child;
 
           return React.cloneElement(child, {
-            className: `${child.props?.className} ${childrenClassSet}`,
+            className: `${child.props?.className || ''} ${childrenClassSet}`,
             textAlign,
             theme,
           });

@@ -33,7 +33,9 @@ function reducer(state, action) {
     };
   }
 
-  throw new Error();
+  throw new Error(
+    `useAddToCart: Dispatch action type "${action.type}" not found.`,
+  );
 }
 
 const useAddToCart = () => {

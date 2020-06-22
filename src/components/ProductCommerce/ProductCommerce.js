@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { HYPERLINK_STYLE_TYPES } from '~/constants';
-import { VariantSelectContextProvider } from '~/contexts/VariantSelect.context';
 import useAddToCart from '~/customHooks/useAddToCart';
 import useVariantSelect from '~/customHooks/useVariantSelect';
 import useImageTransition from '~/customHooks/useImageTransition';

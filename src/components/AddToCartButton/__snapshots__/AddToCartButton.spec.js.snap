@@ -6,7 +6,7 @@ exports[`<AddToCartButton /> renders base component correctly 1`] = `
   data-test-ref="DATA_TEST_REF"
   disabled={false}
   onClick={[Function]}
-  title="Add to your cart — undefined"
+  title="Add to your cart — $50.00"
   type="button"
 >
   <span
@@ -16,7 +16,7 @@ exports[`<AddToCartButton /> renders base component correctly 1`] = `
       Lorem ipsum dolor added to your cart
     </span>
     <span>
-      Add to your cart — undefined
+      Add to your cart — $50.00
     </span>
   </span>
 </button>

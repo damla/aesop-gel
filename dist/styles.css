@@ -1458,7 +1458,6 @@ sans-serif;
   color: #333;
     }
 .BodyCopy-module_dark__1kIgR.BodyCopy-module_copy__2K-qP a {
-      /* @extend %font-theme-dark-link; */
       color: #4a4a4a
     }
 .BodyCopy-module_dark__1kIgR.BodyCopy-module_copy__2K-qP a:hover,
@@ -1470,71 +1469,12 @@ sans-serif;
   color: #fffef0;
     }
 .BodyCopy-module_light__1BpzV.BodyCopy-module_light__1BpzV.BodyCopy-module_copy__2K-qP a {
-      /* @extend %font-theme-light-link; */
       color: #fffef0
     }
 .BodyCopy-module_light__1BpzV.BodyCopy-module_light__1BpzV.BodyCopy-module_copy__2K-qP a:hover,
       .BodyCopy-module_light__1BpzV.BodyCopy-module_light__1BpzV.BodyCopy-module_copy__2K-qP a:focus {
         color: #f6f5e8;
       }
-/* .HeroWithContent {
-  .heading,
-  .subHeading {
-    margin: 0;
-  }
-
-  .subHeading {
-    padding-top: 5px;
-  }
-
-  .copy.copy {
-    margin: 30px 0 0;
-
-    a {
-      width: 100%;
-      margin-top: 30px;
-
-      @media (--viewport-md) {
-        width: auto;
-      }
-    }
-  }
-}
-
-.TwoColumn {
-  .heading {
-    font-family: var(--font-family-zapf-serif);
-  }
-}
-
-.HalfWidthFullBleedHero {
-  .eyebrow {
-    padding: 0 0 19px;
-
-    @media (--viewport-lg) {
-      padding: 0 0 14px;
-      margin-top: 60px;
-    }
-
-    @media (--viewport-xl) {
-      padding: 0 0 19px;
-    }
-  }
-
-  .heading {
-    padding: 0 0 17px 0;
-    border-bottom: 2px solid var(--color-grey-10);
-    font-family: var(--font-family-zapf-serif);
-
-    @media (--viewport-md) {
-      padding: 0 0 12px;
-    }
-
-    @media (--viewport-xl) {
-      padding: 0 0 17px;
-    }
-  }
-} */
 
 /* @import './key-frame.css'; */
 /* @import './font-face.css'; */
