@@ -83,7 +83,9 @@ const ProductCommerce = ({
             isFlush={true}
             theme={theme}
           />
-          <P theme={theme}>{description}</P>
+          <P className={styles.description} theme={theme}>
+            {description}
+          </P>
           <div className={styles.variantsWrapper}>
             <Heading
               hasMediumWeightFont={true}
