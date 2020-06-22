@@ -40,6 +40,7 @@ const ProductCommerce = ({
   const variantSelect = useVariantSelect(variants);
   const imageRef = React.useRef();
   const { selectedVariant } = variantSelect;
+  const { price, sku } = selectedVariant;
 
   const [currentImage, isImageActive] = useImageTransition(
     selectedVariant?.image,
@@ -53,92 +54,91 @@ const ProductCommerce = ({
   const { hasError, isLoading, isUpdateSuccessful } = addToCartState;
 
   const variantRadioOptions = getVariantRadioOptions(variants);
-  const { sku } = selectedVariant;
   const classSet = cx(styles.base, className);
 
-  const handleOnAddToCartClick = () => {
-    onAddToCartClick(sku, addToCartDispatch, ADD_TO_CART_ACTION_TYPES);
+  const handleOnAddToCartClick = variantSku => {
+    onAddToCartClick(variantSku, addToCartDispatch, ADD_TO_CART_ACTION_TYPES);
   };
 
   return (
-    <VariantSelectContextProvider value={variantSelect}>
-      <div className={classSet} id={id}>
-        <div className={styles.imageWrapper}>
-          <Transition isActive={isImageActive} name="fade">
-            <Image
-              altText={currentImage.altText}
-              className={styles.image}
-              large={currentImage.sizes?.large}
-              medium={currentImage.sizes?.medium}
-              ref={imageRef}
-              small={currentImage.sizes?.small}
-            />
-          </Transition>
-        </div>
-
-        <div className={styles.contentWrapper}>
-          <SectionHeading
-            eyebrow={eyebrow}
-            heading={heading}
-            isFlush={true}
-            theme={theme}
+    <div className={classSet} id={id}>
+      <div className={styles.imageWrapper}>
+        <Transition isActive={isImageActive} name="fade">
+          <Image
+            altText={currentImage.altText}
+            className={styles.image}
+            large={currentImage.sizes?.large}
+            medium={currentImage.sizes?.medium}
+            ref={imageRef}
+            small={currentImage.sizes?.small}
           />
-          <P className={styles.description} theme={theme}>
-            {description}
-          </P>
-          <div className={styles.variantsWrapper}>
-            <Heading
-              hasMediumWeightFont={true}
-              isFlush={true}
-              level="4"
-              size="xXSmall"
-              theme={theme}
-            >
-              Sizes
-            </Heading>
+        </Transition>
+      </div>
 
-            <RadioGroup
-              className={styles.variants}
-              name="sku"
-              onChange={e => variantSelect.onVariantChange(e, variants)}
-              options={variantRadioOptions}
-              testReference="PRODUCT_COMMERCE_VARIANT_SELECT"
-              theme={theme}
-              value={sku}
-            />
-          </div>
-
-          <LinkButtonGroup
-            hasFitContent={false}
-            isFlush={false}
-            textAlign="center"
+      <div className={styles.contentWrapper}>
+        <SectionHeading
+          eyebrow={eyebrow}
+          heading={heading}
+          isFlush={true}
+          theme={theme}
+        />
+        <P className={styles.description} theme={theme}>
+          {description}
+        </P>
+        <div className={styles.variantsWrapper}>
+          <Heading
+            hasMediumWeightFont={true}
+            isFlush={true}
+            level="4"
+            size="xXSmall"
             theme={theme}
           >
-            <AddToCartButton
-              className={styles.addToCartButton}
-              dataTestRef="PRODUCT_COMMERCE_ADD_TO_CART_CTA"
-              hasError={hasError}
-              isFullWidth={false}
-              isLoading={isLoading}
-              isUpdateSuccessful={isUpdateSuccessful}
-              onClick={handleOnAddToCartClick}
-              productName={productName}
-              theme={theme}
-            />
-            {cta && (
-              <Hyperlink
-                className={styles.cta}
-                isAlternate={false}
-                style={HYPERLINK_STYLE_TYPES.INTERNAL_BUTTON_LINK}
-                url={cta.url}
-              >
-                {cta.text}
-              </Hyperlink>
-            )}
-          </LinkButtonGroup>
+            Sizes
+          </Heading>
+
+          <RadioGroup
+            className={styles.variants}
+            name="sku"
+            onChange={e => variantSelect.onVariantChange(e, variants)}
+            options={variantRadioOptions}
+            testReference="PRODUCT_COMMERCE_VARIANT_SELECT"
+            theme={theme}
+            value={sku}
+          />
         </div>
+
+        <LinkButtonGroup
+          hasFitContent={false}
+          isFlush={false}
+          textAlign="center"
+          theme={theme}
+        >
+          <AddToCartButton
+            className={styles.addToCartButton}
+            dataTestRef="PRODUCT_COMMERCE_ADD_TO_CART_CTA"
+            hasError={hasError}
+            isFullWidth={false}
+            isLoading={isLoading}
+            isUpdateSuccessful={isUpdateSuccessful}
+            onClick={handleOnAddToCartClick}
+            price={price}
+            productName={productName}
+            sku={sku}
+            theme={theme}
+          />
+          {cta && (
+            <Hyperlink
+              className={styles.cta}
+              isAlternate={false}
+              style={HYPERLINK_STYLE_TYPES.INTERNAL_BUTTON_LINK}
+              url={cta.url}
+            >
+              {cta.text}
+            </Hyperlink>
+          )}
+        </LinkButtonGroup>
       </div>
-    </VariantSelectContextProvider>
+    </div>
   );
 };
 

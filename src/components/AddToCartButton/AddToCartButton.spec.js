@@ -26,7 +26,9 @@ describe('<AddToCartButton />', () => {
           isLoading={false}
           isUpdateSuccessful={false}
           onClick={mockFn}
+          price={AddToCartButtonFixture.price}
           productName={AddToCartButtonFixture.productName}
+          sku={AddToCartButtonFixture.sku}
         />,
       )
       .toJSON();

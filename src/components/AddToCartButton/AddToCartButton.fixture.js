@@ -11,6 +11,8 @@ export default {
   dataTestRef: 'DATA_TEST_REF',
   isEnabled: true,
   isFullWidth: true,
+  price: '$50.00',
   productName: 'Lorem ipsum dolor',
+  sku: 'AES80',
   theme: 'dark',
 };

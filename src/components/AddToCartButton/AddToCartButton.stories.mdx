@@ -1,7 +1,5 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { State } from '~.storybook/State';
-import { VariantSelectContextProvider } from '~/contexts/VariantSelect.context';
-import useVariantSelect from '~/customHooks/useVariantSelect';
+import * as knobs from '@storybook/addon-knobs';
 import ProductDetailImageFixture from '~/components/ProductDetailHeader/components/ProductDetailImage/ProductDetailImage.fixture';
 import AddToCartButton from './AddToCartButton';
 import AddToCartButtonFixture from './AddToCartButton.fixture';
@@ -17,18 +15,16 @@ import useAddToCart from '~/customHooks/useAddToCart';
     {(() => {
       const [ addToCartState, addToCartDispatch, ADD_TO_CART_ACTION_TYPES ] = useAddToCart();
       return (
-        <VariantSelectContextProvider
-          value={useVariantSelect(ProductDetailImageFixture.variantOptions)}
-        >
-          <AddToCartButton
-            dataTestRef="ADD_TO_CART_SMALL_CTA"
-            productName="Product"
-            onClick={(sku) => mockAddToCartButtonOnClick(sku, addToCartDispatch, ADD_TO_CART_ACTION_TYPES)}
-            hasError={addToCartState.hasError}
-            isLoading={addToCartState.isLoading}
-            isUpdateSuccessful={addToCartState.isUpdateSuccessful}
-          />
-        </VariantSelectContextProvider>
+        <AddToCartButton
+          dataTestRef="ADD_TO_CART_SMALL_CTA"
+          productName={knobs.text('productName', AddToCartButtonFixture.productName, 'Content')}
+          onClick={(sku) => mockAddToCartButtonOnClick(sku, addToCartDispatch, ADD_TO_CART_ACTION_TYPES)}
+          hasError={addToCartState.hasError}
+          isLoading={addToCartState.isLoading}
+          isUpdateSuccessful={addToCartState.isUpdateSuccessful}
+          price={knobs.text('price', AddToCartButtonFixture.price, 'Content')}
+          sku={knobs.text('sku', AddToCartButtonFixture.sku, 'Content')}
+        />
       )
     })()}
   </Story>

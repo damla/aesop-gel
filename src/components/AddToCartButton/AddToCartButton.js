@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { useVariantSelectContext } from '~/contexts/VariantSelect.context';
 import Button from '~/components/Button';
 import Loading from '~/components/Loading';
 import styles from './AddToCartButton.module.css';
@@ -16,12 +15,11 @@ const AddToCartButton = ({
   isLoading,
   isUpdateSuccessful,
   onClick,
+  price,
   productName,
+  sku,
   theme,
 }) => {
-  const { selectedVariant } = useVariantSelectContext();
-  const { price, sku } = selectedVariant;
-
   const classSet = cx(
     styles.base,
     { [styles.fullWidth]: isFullWidth },
@@ -29,10 +27,10 @@ const AddToCartButton = ({
   );
 
   const handleOnClick = () => {
-    onClick(selectedVariant.sku);
+    onClick(sku);
   };
 
-  if (!selectedVariant) {
+  if (!sku || !price) {
     return (
       <Button
         className={classSet}
@@ -110,8 +108,10 @@ AddToCartButton.propTypes = {
   isFullWidth: PropTypes.bool,
   isLoading: PropTypes.bool,
   isUpdateSuccessful: PropTypes.bool,
-  onClick: PropTypes.func,
+  onClick: PropTypes.func.isRequired,
+  price: PropTypes.string,
   productName: PropTypes.string,
+  sku: PropTypes.string,
   theme: PropTypes.oneOf(['dark', 'light']),
 };
 
@@ -132,7 +132,9 @@ AddToCartButton.defaultProps = {
   isLoading: false,
   isUpdateSuccessful: false,
   onClick: undefined,
+  price: undefined,
   productName: undefined,
+  sku: undefined,
   theme: 'dark',
 };
 
