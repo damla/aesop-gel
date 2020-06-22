@@ -1,8 +1,12 @@
 export default {
+  cta: {
+    text: 'Lorem ipsum dolor ante ipsum primis',
+    url: '/',
+  },
   description:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris volutpat molestie lobortis. Nunc vel aliquam odio.',
   eyebrow: 'Vestibulum ante ipsum primis',
-  heading: 'Lorem ipsum dolor',
+  heading: 'Lorem ipsum dolor ',
   image: {
     altText: 'alt-tag',
     sizes: {

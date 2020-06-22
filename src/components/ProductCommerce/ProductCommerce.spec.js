@@ -17,6 +17,7 @@ describe('<ProductCommerce />', () => {
     const tree = renderer
       .create(
         <ProductCommerce
+          cta={ProductCommerceFixture.cta}
           description={ProductCommerceFixture.description}
           eyebrow={ProductCommerceFixture.eyebrow}
           heading={ProductCommerceFixture.heading}

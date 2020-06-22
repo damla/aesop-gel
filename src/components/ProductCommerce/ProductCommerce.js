@@ -21,6 +21,7 @@ import styles from './ProductCommerce.module.css';
 
 const ProductCommerce = ({
   className,
+  cta,
   description,
   eyebrow,
   heading,
@@ -52,11 +53,11 @@ const ProductCommerce = ({
   const { hasError, isLoading, isUpdateSuccessful } = addToCartState;
 
   const variantRadioOptions = getVariantRadioOptions(variants);
-  const { sku: value } = selectedVariant;
+  const { sku } = selectedVariant;
   const classSet = cx(styles.base, className);
 
   const handleOnAddToCartClick = () => {
-    onAddToCartClick(value, addToCartDispatch, ADD_TO_CART_ACTION_TYPES);
+    onAddToCartClick(sku, addToCartDispatch, ADD_TO_CART_ACTION_TYPES);
   };
 
   return (
@@ -101,7 +102,7 @@ const ProductCommerce = ({
               options={variantRadioOptions}
               testReference="PRODUCT_COMMERCE_VARIANT_SELECT"
               theme={theme}
-              value={value}
+              value={sku}
             />
           </div>
 
@@ -112,6 +113,7 @@ const ProductCommerce = ({
             theme={theme}
           >
             <AddToCartButton
+              className={styles.addToCartButton}
               dataTestRef="PRODUCT_COMMERCE_ADD_TO_CART_CTA"
               hasError={hasError}
               isFullWidth={false}
@@ -121,13 +123,16 @@ const ProductCommerce = ({
               productName={productName}
               theme={theme}
             />
-            <Hyperlink
-              isAlternate={false}
-              style={HYPERLINK_STYLE_TYPES.INTERNAL_BUTTON_LINK}
-              url="/"
-            >
-              Mauris volutpat molestie
-            </Hyperlink>
+            {cta && (
+              <Hyperlink
+                className={styles.cta}
+                isAlternate={false}
+                style={HYPERLINK_STYLE_TYPES.INTERNAL_BUTTON_LINK}
+                url={cta.url}
+              >
+                {cta.text}
+              </Hyperlink>
+            )}
           </LinkButtonGroup>
         </div>
       </div>
@@ -137,6 +142,10 @@ const ProductCommerce = ({
 
 ProductCommerce.propTypes = {
   className: PropTypes.string,
+  cta: PropTypes.shape({
+    text: PropTypes.string,
+    url: PropTypes.string,
+  }),
   description: PropTypes.string,
   eyebrow: PropTypes.string,
   heading: PropTypes.string,
@@ -163,6 +172,7 @@ ProductCommerce.propTypes = {
 
 ProductCommerce.defaultProps = {
   className: undefined,
+  cta: undefined,
   description: undefined,
   eyebrow: undefined,
   heading: undefined,

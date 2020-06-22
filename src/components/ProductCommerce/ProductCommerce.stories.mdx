@@ -16,6 +16,7 @@ Presented in a [Podium](?path=/docs/components-podium--base-component) component
   <Story name="Base component">
     <Podium horizontalPadding="small" verticalPadding="small">
       <ProductCommerce
+        cta={knobs.object('cta', ProductCommerceFixture.cta, 'Content')}
         description={knobs.text('description', ProductCommerceFixture.description, 'Content')}
         eyebrow={knobs.text('eyebrow', ProductCommerceFixture.eyebrow, 'Content')}
         heading={knobs.text('heading', ProductCommerceFixture.heading, 'Content')}

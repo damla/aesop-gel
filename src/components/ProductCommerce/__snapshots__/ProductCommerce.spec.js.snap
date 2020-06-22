@@ -27,7 +27,7 @@ exports[`<ProductCommerce /> renders base component correctly 1`] = `
       <h3
         className="base flush xLarge dark"
       >
-        Lorem ipsum dolor
+        Lorem ipsum dolor 
       </h3>
     </header>
     <p
@@ -57,7 +57,7 @@ exports[`<ProductCommerce /> renders base component correctly 1`] = `
               aria-checked={true}
               checked={true}
               className="input"
-              data-test-ref="PRODUCT_VARIANT_SELECT"
+              data-test-ref="PRODUCT_COMMERCE_VARIANT_SELECT"
               id="option-ARD33"
               name="sku"
               onChange={[Function]}
@@ -86,7 +86,7 @@ exports[`<ProductCommerce /> renders base component correctly 1`] = `
               aria-checked={false}
               checked={false}
               className="input"
-              data-test-ref="PRODUCT_VARIANT_SELECT"
+              data-test-ref="PRODUCT_COMMERCE_VARIANT_SELECT"
               id="option-ARD32"
               name="sku"
               onChange={[Function]}
@@ -115,8 +115,8 @@ exports[`<ProductCommerce /> renders base component correctly 1`] = `
       className="base"
     >
       <button
-        className="base alternate blockStyle dark base undefined link center"
-        data-test-ref="ADD_TO_CART_SMALL_CTA"
+        className="base alternate blockStyle dark base addToCartButton link center"
+        data-test-ref="PRODUCT_COMMERCE_ADD_TO_CART_CTA"
         disabled={false}
         onClick={[Function]}
         title="Add to your cart — $56.45"
@@ -134,11 +134,11 @@ exports[`<ProductCommerce /> renders base component correctly 1`] = `
         </span>
       </button>
       <a
-        className="base blockStyle hasIcon center dark undefined link center"
+        className="base blockStyle hasIcon center dark cta link center"
         href="/"
         target="_self"
       >
-        Mauris volutpat molestie
+        Lorem ipsum dolor ante ipsum primis
          
         <i
           aria-hidden="true"
