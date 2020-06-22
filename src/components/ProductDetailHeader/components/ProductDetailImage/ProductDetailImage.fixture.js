@@ -10,9 +10,9 @@ export default {
       image: {
         altText: 'ATL TAG',
         sizes: {
-          large: '/assets/images/Product/variant-one-large.png',
-          medium: '/assets/images/Product/variant-one-medium.png',
-          small: '/assets/images/Product/variant-one-small.png',
+          large: './assets/images/Product/variant-one-large.png',
+          medium: './assets/images/Product/variant-one-medium.png',
+          small: './assets/images/Product/variant-one-small.png',
         },
       },
     },
@@ -23,9 +23,9 @@ export default {
       image: {
         altText: 'ATL TAG',
         sizes: {
-          large: '/assets/images/Product/variant-two-large.png',
-          medium: '/assets/images/Product/variant-two-medium.png',
-          small: '/assets/images/Product/variant-two-small.png',
+          large: './assets/images/Product/variant-two-large.png',
+          medium: './assets/images/Product/variant-two-medium.png',
+          small: './assets/images/Product/variant-two-small.png',
         },
       },
     },
