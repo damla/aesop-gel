@@ -152,7 +152,13 @@ ProductCommerce.propTypes = {
   eyebrow: PropTypes.string,
   heading: PropTypes.string,
   id: PropTypes.string,
+  /**
+    A callback function that takes `sku<string>`, `addToCartDispatch<function>`, `ADD_TO_CART_ACTION_TYPES<[string]>`
+    as arguments. See [AddToCartButton.onClick.js mock](https://github.com/aesop/aesop-gel/tree/develop/src/components/AddToCartButton/__mocks__/AddToCartButton.onClick.js)
+    for an example. ___Required___
+   */
   onAddToCartClick: PropTypes.func.isRequired,
+  /** ___Required___ */
   productName: PropTypes.string.isRequired,
   theme: PropTypes.oneOf(['dark', 'light']),
   variants: PropTypes.arrayOf(

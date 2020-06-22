@@ -59,4 +59,24 @@
   div[class^='css-'][scale='1'] {
     transform: none;
   }
+
+  .docblock-propstable-body a,
+  .sbdocs a {
+    color: #1ea7fd;
+    text-decoration: none;
+  }
+
+  .docblock-propstable-body a:hover,
+  .sbdocs a:hover {
+    text-decoration: underline;
+  }
+
+  .docblock-propstable-body strong em {
+    padding: 0 4px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    color: #888;
+    font-size: 12px;
+    font-style: normal;
+  }
 }
