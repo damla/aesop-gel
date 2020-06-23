@@ -2,7 +2,7 @@
 
 .base {
   font-family: var(--font-family-sans-serif-regular);
-  font-size: var(15px);
+  font-size: rem(15px);
 
   &,
   & * {
