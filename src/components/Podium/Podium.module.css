@@ -10,7 +10,11 @@
 }
 
 .mediumPaddingTop {
-  padding-top: 100px;
+  padding-top: 80px;
+
+  @media (--viewport-md-only) {
+    padding-top: 100px;
+  }
 
   @media (--viewport-lg) {
     padding-top: 150px;
@@ -30,7 +34,11 @@
 }
 
 .mediumPaddingBottom {
-  padding-bottom: 100px;
+  padding-bottom: 80px;
+
+  @media (--viewport-md-only) {
+    padding-top: 100px;
+  }
 
   @media (--viewport-lg) {
     padding-bottom: 150px;

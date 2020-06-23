@@ -90,10 +90,15 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                 className="base heading"
               >
                 <h2
+                  className="base noTopMargin mediumWeightFont xXSmall dark eyebrow"
+                >
+                  Aenean ac tortor consectetur
+                </h2>
+                <h3
                   className="base noTopMargin serifFont xLarge dark heading"
                 >
                   Maecenas elementum
-                </h2>
+                </h3>
               </header>
               <p
                 className="base dark description hasFooter"
