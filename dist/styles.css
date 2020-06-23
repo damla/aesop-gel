@@ -4517,8 +4517,13 @@ sans-serif;
   padding-top: 50px;
 }
 .Podium-module_mediumPaddingTop__1dN90 {
-  padding-top: 100px;
+  padding-top: 80px;
 }
+@media (min-width: 640px) and (max-width: 1024px) {
+.Podium-module_mediumPaddingTop__1dN90 {
+    padding-top: 100px
+}
+  }
 @media (min-width: 1025px) {
 .Podium-module_mediumPaddingTop__1dN90 {
     padding-top: 150px
@@ -4536,8 +4541,13 @@ sans-serif;
   padding-bottom: 50px;
 }
 .Podium-module_mediumPaddingBottom__2Mu5C {
-  padding-bottom: 100px;
+  padding-bottom: 80px;
 }
+@media (min-width: 640px) and (max-width: 1024px) {
+.Podium-module_mediumPaddingBottom__2Mu5C {
+    padding-top: 100px
+}
+  }
 @media (min-width: 1025px) {
 .Podium-module_mediumPaddingBottom__2Mu5C {
     padding-bottom: 150px
