@@ -90,12 +90,12 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                 className="base heading"
               >
                 <h2
-                  className="base noTopMargin mediumWeightFont xXSmall dark eyebrow"
+                  className="base flush mediumWeightFont xXSmall dark"
                 >
                   Aenean ac tortor consectetur
                 </h2>
                 <h3
-                  className="base noTopMargin serifFont xLarge dark heading"
+                  className="base flush serifFont xLarge dark"
                 >
                   Maecenas elementum
                 </h3>
@@ -138,7 +138,6 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                     >
                       <g>
                         <path
-                          className="undefined"
                           d="M30.1,5.3L50,25.1L30.1,45h-6.6l18-17.6H0v-4.8h41.5l-18-17.6h6.6V5.3z"
                         />
                       </g>

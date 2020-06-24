@@ -27,9 +27,11 @@ const Podium = forwardRef(function PodiumRef(
     className,
   );
 
+  const style = backgroundColor ? { backgroundColor } : undefined;
+
   return (
     <Transition isActive={isActive} type={transition}>
-      <section className={classSet} ref={ref} style={{ backgroundColor }}>
+      <section className={classSet} ref={ref} style={style}>
         {children}
       </section>
     </Transition>

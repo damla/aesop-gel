@@ -1,0 +1,174 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProductCommerce /> renders base component correctly 1`] = `
+<div
+  className="base"
+>
+  <div
+    className="imageWrapper"
+  >
+    <picture
+      className="base picture dark image fadeEnter"
+    >
+      <img />
+    </picture>
+  </div>
+  <div
+    className="contentWrapper"
+  >
+    <header
+      className="base"
+    >
+      <h2
+        className="base flush mediumWeightFont xXSmall dark"
+      >
+        Vestibulum ante ipsum primis
+      </h2>
+      <h3
+        className="base flush xLarge dark"
+      >
+        Lorem ipsum dolor 
+      </h3>
+    </header>
+    <p
+      className="base dark description"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris volutpat molestie lobortis. Nunc vel aliquam odio.
+    </p>
+    <div
+      className="variantsWrapper"
+    >
+      <h4
+        className="base flush mediumWeightFont xXSmall dark"
+      >
+        Sizes
+      </h4>
+      <ul
+        className="base variants"
+      >
+        <li
+          className="radio"
+        >
+          <label
+            className="label"
+            htmlFor="option-ARD33"
+          >
+            <input
+              aria-checked={true}
+              checked={true}
+              className="input"
+              data-test-ref="PRODUCT_COMMERCE_VARIANT_SELECT"
+              id="option-ARD33"
+              name="sku"
+              onChange={[Function]}
+              tabIndex={0}
+              type="radio"
+              value="ARD33"
+            />
+            <span
+              className="pot dark"
+            />
+            <span
+              className="labelContent dark"
+            >
+              50 mL
+            </span>
+          </label>
+        </li>
+        <li
+          className="radio"
+        >
+          <label
+            className="label"
+            htmlFor="option-ARD32"
+          >
+            <input
+              aria-checked={false}
+              checked={false}
+              className="input"
+              data-test-ref="PRODUCT_COMMERCE_VARIANT_SELECT"
+              id="option-ARD32"
+              name="sku"
+              onChange={[Function]}
+              tabIndex={0}
+              type="radio"
+              value="ARD32"
+            />
+            <span
+              className="pot dark"
+            />
+            <span
+              className="labelContent dark"
+            >
+              100 mL
+            </span>
+          </label>
+        </li>
+        <div
+          className="errorMessage"
+        >
+          
+        </div>
+      </ul>
+    </div>
+    <div
+      className="base"
+    >
+      <button
+        className="base alternate blockStyle dark base addToCartButton link center"
+        data-test-ref="PRODUCT_COMMERCE_ADD_TO_CART_CTA"
+        disabled={false}
+        onClick={[Function]}
+        title="Add to your cart — $56.45"
+        type="button"
+      >
+        <span
+          className="label"
+        >
+          <span>
+            Product Name added to your cart
+          </span>
+          <span>
+            Add to your cart — $56.45
+          </span>
+        </span>
+      </button>
+      <a
+        className="base blockStyle hasIcon center dark cta link center"
+        href="/"
+        target="_self"
+      >
+        Lorem ipsum dolor ante ipsum primis
+         
+        <i
+          aria-hidden="true"
+          className="icon"
+        >
+          <svg
+            className="base rightArrow dark"
+            data-ref=""
+            focusable="false"
+            height={10}
+            role="img"
+            style={
+              Object {
+                "height": "10px",
+                "width": "10px",
+              }
+            }
+            tabIndex={-1}
+            viewBox="0 0 50 50"
+            width={10}
+          >
+            <g>
+              <path
+                d="M30.1,5.3L50,25.1L30.1,45h-6.6l18-17.6H0v-4.8h41.5l-18-17.6h6.6V5.3z"
+              />
+            </g>
+          </svg>
+        </i>
+      </a>
+    </div>
+  </div>
+</div>
+`;

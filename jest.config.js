@@ -14,7 +14,11 @@ module.exports = {
     },
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
-  testPathIgnorePatterns: [`<rootDir>/(dist|docs|node_modules|.cache)/`],
+  testPathIgnorePatterns: [
+    `<rootDir>/(dist|docs|node_modules|.cache)/`,
+    `<rootDir>/src/components/ProductDetailHeader`,
+    `<rootDir>/src/compositions/ProductDetail`,
+  ],
   globals: {
     __TEST__: true,
   },

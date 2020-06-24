@@ -4,6 +4,7 @@ const defaultValues = {
   onVariantChange: () => {},
   selectedVariant: {},
   setSelectedVariant: () => {},
+  variantOptions: [],
 };
 
 const VariantSelectContext = createContext(defaultValues);

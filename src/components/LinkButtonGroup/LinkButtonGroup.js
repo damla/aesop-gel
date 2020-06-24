@@ -1,71 +1,77 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import Hyperlink from '~/components/Hyperlink';
 import styles from './LinkButtonGroup.module.css';
 
+const isReactFragment = component => {
+  if (component.type) return component.type === Fragment;
+  return component === Fragment;
+};
+
 const LinkButtonGroup = ({
+  children,
   className,
-  link,
   hasFitContent,
-  secondaryLink,
+  isFlush,
   textAlign,
   theme,
 }) => {
-  if (!link && !secondaryLink) {
+  if (!children || typeof children === 'string' || children instanceof String) {
     return null;
   }
+
   const classSet = cx(
     styles.base,
     { [styles.fitContent]: hasFitContent },
+    { [styles.flush]: isFlush },
     className,
   );
 
+  const childrenClassSet = cx(
+    styles.link,
+    { [styles.flushLink]: isFlush },
+    { [styles.fitContent]: hasFitContent },
+    styles[textAlign],
+  );
+
+  const childComponents = isReactFragment(children)
+    ? children.props.children
+    : children;
+
   return (
     <div className={classSet}>
-      {link.text && (
-        <Hyperlink
-          className={cx(styles.link, styles[textAlign])}
-          openInANewWindow={link.openInANewWindow}
-          style={link.style}
-          textAlign={textAlign}
-          theme={theme}
-          url={link.url}
-        >
-          {link.text}
-        </Hyperlink>
-      )}
+      <>
+        {React.Children.map(childComponents, child => {
+          if (child === null) return child;
 
-      {secondaryLink && secondaryLink.text && (
-        <Hyperlink
-          className={cx(styles.link, styles[textAlign])}
-          openInANewWindow={secondaryLink.openInANewWindow}
-          style={secondaryLink.style}
-          textAlign={textAlign}
-          theme={theme}
-          url={secondaryLink.url}
-        >
-          {secondaryLink.text}
-        </Hyperlink>
-      )}
+          return React.cloneElement(child, {
+            className: `${child.props?.className || ''} ${childrenClassSet}`,
+            textAlign,
+            theme,
+          });
+        })}
+      </>
     </div>
   );
 };
 
 LinkButtonGroup.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.arrayOf(PropTypes.element),
+  ]),
   className: PropTypes.string,
   hasFitContent: PropTypes.bool,
-  link: PropTypes.object,
-  secondaryLink: PropTypes.object,
+  isFlush: PropTypes.bool,
   textAlign: PropTypes.oneOf(['center', 'left', 'right']),
   theme: PropTypes.oneOf(['dark', 'light']),
 };
 
 LinkButtonGroup.defaultProps = {
+  children: undefined,
   className: undefined,
   hasFitContent: false,
-  link: undefined,
-  secondaryLink: undefined,
+  isFlush: true,
   textAlign: 'center',
   theme: 'dark',
 };

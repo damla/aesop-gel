@@ -1,7 +1,7 @@
 import { createContext, useContext } from 'react';
 
 const defaultValues = {
-  handleOnClick: () => {},
+  onClick: () => {},
   isLoading: false,
   isUpdateSuccessful: false,
 };

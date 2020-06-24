@@ -1,3 +1,5 @@
+import React from 'react';
+import Hyperlink from '~/components/Hyperlink';
 import { HYPERLINK_STYLE_TYPES } from '~/constants';
 
 const { EXTERNAL_NO_ICON_TEXT_LINK } = HYPERLINK_STYLE_TYPES;
@@ -113,16 +115,16 @@ export default {
     ],
   },
   linkButtonGroup: {
-    link: {
-      text: 'Proin vulputate',
-      url: 'https://aesop.com',
-      style: 'Internal No Icon Button Link',
-    },
-    secondaryLink: {
-      text: 'Quisque lacus',
-      url: 'https://aesop.com',
-      style: 'Internal No Icon Button Link',
-    },
+    children: (
+      <>
+        <Hyperlink style="Internal No Icon Button Link" url="/">
+          Proin vulputate
+        </Hyperlink>
+        <Hyperlink style="Internal No Icon Button Link" url="Quisque lacus">
+          Quisque lacus
+        </Hyperlink>
+      </>
+    ),
   },
   hyperlinkButtonDark: {
     style: 'Internal Button Link',
