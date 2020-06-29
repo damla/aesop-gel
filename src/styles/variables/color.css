@@ -47,7 +47,8 @@
 
   /* System colours */
   --color-error: #ea6956;
-  --color-adjustment: #965d34;
+  --color-dark-adjustment: #965d34;
+  --color-light-adjustment: #ce9273;
   --color-highlight-orange: #c67330;
   --color-highlight-green: #007544;
   --color-highlight-blue: #114094;

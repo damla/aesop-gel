@@ -7,14 +7,15 @@ import Heading from '~/components/Heading';
 import styles from './StoreHoursList.module.css';
 
 const StoreHoursList = ({
+  alternateHoursNote,
   className,
   heading,
   hoursList,
-  alternateHoursNote,
+  theme,
 }) => {
   if (hoursList.length === 0) return null;
 
-  const classSet = cx(styles.base, className);
+  const classSet = cx(styles.base, styles[theme], className);
   const hasAlternateHours = !!find(hoursList, 'isAlternate');
 
   return (
@@ -25,6 +26,7 @@ const StoreHoursList = ({
           hasTopMargin={false}
           level={HEADING.LEVEL.FOUR}
           size={HEADING.SIZE.X_X_SMALL}
+          theme={theme}
         >
           {heading}
         </Heading>
@@ -52,6 +54,7 @@ const StoreHoursList = ({
 };
 
 StoreHoursList.propTypes = {
+  alternateHoursNote: PropTypes.string,
   className: PropTypes.string,
   heading: PropTypes.string,
   hoursList: PropTypes.arrayOf(
@@ -62,14 +65,15 @@ StoreHoursList.propTypes = {
       isAlternate: PropTypes.bool,
     }),
   ),
-  alternateHoursNote: PropTypes.string,
+  theme: PropTypes.oneOf(['dark', 'light']),
 };
 
 StoreHoursList.defaultProps = {
+  alternateHoursNote: undefined,
   className: undefined,
   heading: undefined,
   hoursList: [],
-  alternateHoursNote: undefined,
+  theme: 'dark',
 };
 
 export default StoreHoursList;

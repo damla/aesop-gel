@@ -8,13 +8,13 @@ import Heading from '~/components/Heading';
 import ImageCarousel from '~/components/ImageCarousel';
 import { P } from '~/components/Paragraph';
 import Podium from '~/components/Podium';
-import StoreHoursList from '~/components/StoreHoursList';
 import TwoColumnLayout from '~/components/TwoColumnLayout';
 import styles from './StoreDetail.module.css';
-
+import StoreDetailHeader from '~/components/StoreDetailHeader';
 import GoogleMapFixture from '~/components/GoogleMap/GoogleMap.fixture';
-import StoreDetailFixture from './StoreDetail.fixture';
 import StoreHoursListFixture from '~/components/StoreHoursList/StoreHoursList.fixture';
+import StoreDetailHeaderFixture from '~/components/StoreDetailHeader/StoreDetailHeader.fixture';
+import StoreDetailFixture from './StoreDetail.fixture';
 
 const StoreDetail = ({ className }) => {
   const classSet = cx(styles.base, className);
@@ -22,69 +22,19 @@ const StoreDetail = ({ className }) => {
   return (
     <div className={classSet}>
       <Podium horizontalPadding="small" verticalPadding="small">
-        <TwoColumnLayout
-          content={
-            <>
-              <Heading level="1" size="large">
-                Lorem ipsum dolor
-              </Heading>
-              <div className={styles.detailBlock}>
-                <div className={styles.detail}>
-                  <Heading
-                    className={styles.detailHeading}
-                    level="3"
-                    size="xXSmall"
-                  >
-                    Location
-                  </Heading>
-                  <div className={styles.detailContent}>
-                    Duis in massa sed, Suspendisse hendrerit
-                  </div>
-                </div>
-                <div className={styles.detail}>
-                  <Heading
-                    className={styles.detailHeading}
-                    level="3"
-                    size="xXSmall"
-                  >
-                    Email
-                  </Heading>
-                  <div className={styles.detailContent}>
-                    consectetur.elit@aesop.com
-                  </div>
-                </div>
-                <div className={styles.detail}>
-                  <Heading
-                    className={styles.detailHeading}
-                    level="3"
-                    size="xXSmall"
-                  >
-                    Phone
-                  </Heading>
-                  <div className={styles.detailContent}>+61 5555 1234</div>
-                </div>
-                <div className={styles.detail}>
-                  <Heading
-                    className={styles.detailHeading}
-                    level="3"
-                    size="xXSmall"
-                  >
-                    Opening hours
-                  </Heading>
-                  <div className={styles.detailContent}>
-                    <StoreHoursList
-                      alternateHoursNote={
-                        StoreHoursListFixture.alternateHoursNote
-                      }
-                      hoursList={StoreHoursListFixture.hoursList}
-                    />
-                  </div>
-                </div>
-              </div>
-            </>
-          }
-          hasRightPadding={false}
-          isReversed={true}
+        <StoreDetailHeader
+          alternateHoursNote={StoreHoursListFixture.alternateHoursNote}
+          copy={{
+            location: StoreDetailHeaderFixture.copy.location,
+            openingHours: StoreDetailHeaderFixture.copy.openingHours,
+            phone: StoreDetailHeaderFixture.copy.phone,
+            email: StoreDetailHeaderFixture.copy.email,
+          }}
+          email={StoreDetailHeaderFixture.email}
+          location={StoreDetailHeaderFixture.location}
+          openingHours={StoreHoursListFixture.hoursList}
+          phone={StoreDetailHeaderFixture.phone}
+          storeName={StoreDetailHeaderFixture.storeName}
         />
       </Podium>
 
