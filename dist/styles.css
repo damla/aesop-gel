@@ -3467,6 +3467,12 @@ sans-serif;
   margin: 0;
   margin-bottom: 4px;
 }
+.StoreHoursList-module_dark__1Ri68 .StoreHoursList-module_item__2tt42 {
+    color: #666;
+  }
+.StoreHoursList-module_light__pXExk .StoreHoursList-module_item__2tt42 {
+    color: #e0dfd6;
+  }
 .StoreHoursList-module_dayName__2GHDo {
   font-family: 'Suisse Medium'
 ,
@@ -3482,17 +3488,25 @@ sans-serif;
 sans-serif;
   font-size: 13px;
 }
-.StoreHoursList-module_alternateHours__KdRt3 {
-  color: #965d34;
-}
+.StoreHoursList-module_dark__1Ri68 .StoreHoursList-module_alternateHours__KdRt3 {
+    color: #965d34;
+  }
+.StoreHoursList-module_light__pXExk .StoreHoursList-module_alternateHours__KdRt3 {
+    color: #ce9273;
+  }
 .StoreHoursList-module_alternateHours__KdRt3::after {
     content: '*';
   }
 .StoreHoursList-module_alternateHoursNote__-5uP2 {
   margin-bottom: 15px;
-  color: #965d34;
   font-size: 13px;
 }
+.StoreHoursList-module_dark__1Ri68 .StoreHoursList-module_alternateHoursNote__-5uP2 {
+    color: #965d34;
+  }
+.StoreHoursList-module_light__pXExk .StoreHoursList-module_alternateHoursNote__-5uP2 {
+    color: #ce9273;
+  }
 .StoreHoursList-module_alternateHoursNote__-5uP2::before {
     content: '*';
   }

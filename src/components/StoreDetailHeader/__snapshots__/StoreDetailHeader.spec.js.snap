@@ -1,0 +1,174 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StoreDetailHeader /> renders base component correctly 1`] = `
+<div
+  className="base reverse contentOnly dark base dark"
+>
+  <div
+    className="content fullWidth"
+    id="mainColumn"
+  >
+    <h1
+      className="base large dark"
+    >
+      Lorem ipsum dolor
+    </h1>
+    <div
+      className="detailBlock"
+    >
+      <div
+        className="detail"
+      >
+        <h3
+          className="base xXSmall dark detailHeading"
+        >
+          Location
+        </h3>
+        <div
+          className="detailContent"
+        >
+          Duis in massa sed, Suspendisse hendrerit
+        </div>
+      </div>
+      <div
+        className="detail"
+      >
+        <h3
+          className="base xXSmall dark detailHeading"
+        >
+          Phone
+        </h3>
+        <div
+          className="detailContent"
+        >
+          +61 5555 1234
+        </div>
+      </div>
+      <div
+        className="detail"
+      >
+        <h3
+          className="base xXSmall dark detailHeading"
+        >
+          Opening hours
+        </h3>
+        <div
+          className="detailContent"
+        >
+          <div
+            className="base dark"
+          >
+            <ul
+              className="list"
+            >
+              <li
+                className="item"
+              >
+                <span
+                  className="dayName"
+                >
+                  Monday
+                </span>
+                <span
+                  className="hours"
+                >
+                  11am - 4pm
+                </span>
+              </li>
+              <li
+                className="item"
+              >
+                <span
+                  className="dayName"
+                >
+                  Tuesday
+                </span>
+                <span
+                  className="hours alternateHours"
+                >
+                  10am - 3pm
+                </span>
+              </li>
+              <li
+                className="item"
+              >
+                <span
+                  className="dayName"
+                >
+                  Wednesday
+                </span>
+                <span
+                  className="hours"
+                >
+                  10am - 3pm
+                </span>
+              </li>
+              <li
+                className="item"
+              >
+                <span
+                  className="dayName"
+                >
+                  Thursday
+                </span>
+                <span
+                  className="hours"
+                >
+                  10am - 3pm
+                </span>
+              </li>
+              <li
+                className="item"
+              >
+                <span
+                  className="dayName"
+                >
+                  Friday
+                </span>
+                <span
+                  className="hours"
+                >
+                  10am - 3pm
+                </span>
+              </li>
+              <li
+                className="item"
+              >
+                <span
+                  className="dayName"
+                >
+                  Saturday
+                </span>
+                <span
+                  className="hours alternateHours"
+                >
+                  10am - 3pm
+                </span>
+              </li>
+              <li
+                className="item"
+              >
+                <span
+                  className="dayName"
+                >
+                  Sunday
+                </span>
+                <span
+                  className="hours"
+                >
+                  10am - 3pm
+                </span>
+              </li>
+            </ul>
+            <div
+              className="alternateHoursNote"
+            >
+              Special opening hours
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
