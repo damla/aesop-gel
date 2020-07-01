@@ -48,3 +48,13 @@
     color: var(--color-light-label);
   }
 }
+
+.hyperlink {
+  .dark & {
+    color: var(--color-dark-label);
+  }
+
+  .light & {
+    color: var(--color-light-label);
+  }
+}

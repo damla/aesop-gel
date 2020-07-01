@@ -27,7 +27,91 @@ exports[`<StoreDetailHeader /> renders base component correctly 1`] = `
         <div
           className="detailContent"
         >
-          Duis in massa sed, Suspendisse hendrerit
+          <a
+            className="base hasIcon left dark hyperlink"
+            data-test-ref="STORE_DETAILS_DIRECTION_LINK"
+            href="https://www.google.com/maps?saddr=Current+Location&daddr=Duis in massa sed, Suspendisse hendrerit"
+            target="_blank"
+            title="Location: Duis in massa sed, Suspendisse hendrerit"
+          >
+            Duis in massa sed, Suspendisse hendrerit
+             
+            <i
+              aria-hidden="true"
+              className="icon"
+            >
+              <svg
+                className="base rightUpArrow dark"
+                data-ref=""
+                focusable="false"
+                height={10}
+                role="img"
+                style={
+                  Object {
+                    "height": "10px",
+                    "width": "10px",
+                  }
+                }
+                tabIndex={-1}
+                viewBox="0 0 50 50"
+                width={10}
+              >
+                <g>
+                  <path
+                    d="M21.8,0.2l28.1-0.1v28.1l-4.5,0l0.1-20.5L16.2,37.1l-3.4-3.4L42.1,4.4L21.8,4.4L21.8,0.2L21.8,0.2z"
+                  />
+                </g>
+              </svg>
+            </i>
+          </a>
+        </div>
+      </div>
+      <div
+        className="detail"
+      >
+        <h3
+          className="base xXSmall dark detailHeading"
+        >
+          Email
+        </h3>
+        <div
+          className="detailContent"
+        >
+          <a
+            className="base hasIcon left dark hyperlink"
+            data-test-ref="STORE_DETAILS_DIRECTION_EMAIL"
+            href="mailto:undefined"
+            target="_blank"
+          >
+             
+            <i
+              aria-hidden="true"
+              className="icon"
+            >
+              <svg
+                className="base rightUpArrow dark"
+                data-ref=""
+                focusable="false"
+                height={10}
+                role="img"
+                style={
+                  Object {
+                    "height": "10px",
+                    "width": "10px",
+                  }
+                }
+                tabIndex={-1}
+                viewBox="0 0 50 50"
+                width={10}
+              >
+                <g>
+                  <path
+                    d="M21.8,0.2l28.1-0.1v28.1l-4.5,0l0.1-20.5L16.2,37.1l-3.4-3.4L42.1,4.4L21.8,4.4L21.8,0.2L21.8,0.2z"
+                  />
+                </g>
+              </svg>
+            </i>
+          </a>
         </div>
       </div>
       <div
@@ -41,7 +125,15 @@ exports[`<StoreDetailHeader /> renders base component correctly 1`] = `
         <div
           className="detailContent"
         >
-          +61 5555 1234
+          <a
+            className="base left dark hyperlink"
+            data-test-ref="STORE_DETAILS_DIRECTION_PHONE"
+            href="tel:+61 5555 1234"
+            target="_self"
+            title="tel: +61 5555 1234"
+          >
+            +61 5555 1234
+          </a>
         </div>
       </div>
       <div

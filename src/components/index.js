@@ -31,6 +31,7 @@ import Quote from './Quote';
 import RadioGroup from './RadioGroup';
 import SectionHeading from './SectionHeading';
 import Select from './Select';
+import StoreDetailHeader from './StoreDetailHeader';
 import StoreHoursList from './StoreHoursList';
 import SubNav from './SubNav';
 import Transition from './Transition';
@@ -74,6 +75,7 @@ export default {
   RadioGroup,
   SectionHeading,
   Select,
+  StoreDetailHeader,
   StoreHoursList,
   SubNav,
   Transition,
