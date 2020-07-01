@@ -10,6 +10,7 @@ import styles from './StoreDetailHeader.module.css';
 
 const DATA_TEST_REF_LOCATION = 'STORE_DETAILS_DIRECTION_LINK';
 const DATA_TEST_REF_EMAIL = 'STORE_DETAILS_DIRECTION_EMAIL';
+const DATA_TEST_REF_PHONE = 'STORE_DETAILS_DIRECTION_PHONE';
 
 const StoreDetailHeader = ({
   alternateHoursNote,
@@ -59,7 +60,18 @@ const StoreDetailHeader = ({
     },
     {
       label: copy.phone,
-      content: phone,
+      content: (
+        <Hyperlink
+          className={styles.hyperlink}
+          dataTestRef={DATA_TEST_REF_PHONE}
+          hasTargetInNewWindow={false}
+          style={HYPERLINK_STYLE_TYPES.EXTERNAL_NO_ICON_TEXT_LINK}
+          title={`tel: ${phone}`}
+          url={`tel:${phone}`}
+        >
+          {phone}
+        </Hyperlink>
+      ),
       id: 'phone',
     },
     {
