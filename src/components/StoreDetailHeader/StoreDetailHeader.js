@@ -34,6 +34,7 @@ const StoreDetailHeader = ({
           dataTestRef={DATA_TEST_REF_LOCATION}
           hasTargetInNewWindow={true}
           style={HYPERLINK_STYLE_TYPES.EXTERNAL_TEXT_LINK}
+          theme={theme}
           title={`${copy.location}: ${location}`}
           url={`${GOOGLE_MAPS.DIRECTIONS_URL_PREFIX}${location}`}
         >
@@ -50,6 +51,7 @@ const StoreDetailHeader = ({
           dataTestRef={DATA_TEST_REF_EMAIL}
           hasTargetInNewWindow={true}
           style={HYPERLINK_STYLE_TYPES.EXTERNAL_TEXT_LINK}
+          theme={theme}
           title={email}
           url={`mailto:${email}`}
         >
@@ -66,6 +68,7 @@ const StoreDetailHeader = ({
           dataTestRef={DATA_TEST_REF_PHONE}
           hasTargetInNewWindow={false}
           style={HYPERLINK_STYLE_TYPES.EXTERNAL_NO_ICON_TEXT_LINK}
+          theme={theme}
           title={`tel: ${phone}`}
           url={`tel:${phone}`}
         >

@@ -59,7 +59,7 @@ const Hyperlink = ({
         <>
           {` `}
           <i aria-hidden="true" className={styles.icon}>
-            <Icon height={10} name={iconName} width={10} />
+            <Icon height={10} name={iconName} theme={theme} width={10} />
           </i>
         </>
       )}
