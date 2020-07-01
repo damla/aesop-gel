@@ -1,10 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import { HEADING, HYPERLINK_STYLE_TYPES, GOOGLE_MAPS } from '~/constants';
 import Heading from '~/components/Heading';
+import Hyperlink from '~/components/Hyperlink';
 import StoreHoursList from '~/components/StoreHoursList';
 import TwoColumnLayout from '~/components/TwoColumnLayout';
 import styles from './StoreDetailHeader.module.css';
+
+console.log('HEADING', HEADING.LEVEL, HEADING.SIZE);
+
+const DATA_TEST_REF_LOCATION = 'STORE_DETAILS_DIRECTION_LINK';
+const DATA_TEST_REF_EMAIL = 'STORE_DETAILS_DIRECTION_EMAIL';
 
 const StoreDetailHeader = ({
   alternateHoursNote,
@@ -22,12 +29,34 @@ const StoreDetailHeader = ({
   const contentBlocks = [
     {
       label: copy.location,
-      content: location,
+      content: (
+        <Hyperlink
+          className={styles.hyperlink}
+          dataTestRef={DATA_TEST_REF_LOCATION}
+          hasTargetInNewWindow={true}
+          style={HYPERLINK_STYLE_TYPES.EXTERNAL_TEXT_LINK}
+          title={`${copy.location}: ${location}`}
+          url={`${GOOGLE_MAPS.DIRECTIONS_URL_PREFIX}${location}`}
+        >
+          {location}
+        </Hyperlink>
+      ),
       id: 'location',
     },
     {
       label: copy.email,
-      content: email,
+      content: (
+        <Hyperlink
+          className={styles.hyperlink}
+          dataTestRef={DATA_TEST_REF_EMAIL}
+          hasTargetInNewWindow={true}
+          style={HYPERLINK_STYLE_TYPES.EXTERNAL_TEXT_LINK}
+          title={email}
+          url={`mailto:${email}`}
+        >
+          {email}
+        </Hyperlink>
+      ),
       id: 'email',
     },
     {
@@ -53,7 +82,11 @@ const StoreDetailHeader = ({
       className={classSet}
       content={
         <>
-          <Heading level="1" size="large" theme={theme}>
+          <Heading
+            level={HEADING.LEVEL.ONE}
+            size={HEADING.SIZE.LARGE}
+            theme={theme}
+          >
             {storeName}
           </Heading>
           <div className={styles.detailBlock}>
@@ -63,8 +96,8 @@ const StoreDetailHeader = ({
                 <div className={styles.detail} key={id}>
                   <Heading
                     className={styles.detailHeading}
-                    level="3"
-                    size="xXSmall"
+                    level={HEADING.LEVEL.THREE}
+                    size={HEADING.SIZE.X_X_SMALL}
                     theme={theme}
                   >
                     {label}
