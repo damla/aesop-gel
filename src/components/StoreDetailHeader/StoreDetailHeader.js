@@ -8,8 +8,6 @@ import StoreHoursList from '~/components/StoreHoursList';
 import TwoColumnLayout from '~/components/TwoColumnLayout';
 import styles from './StoreDetailHeader.module.css';
 
-console.log('HEADING', HEADING.LEVEL, HEADING.SIZE);
-
 const DATA_TEST_REF_LOCATION = 'STORE_DETAILS_DIRECTION_LINK';
 const DATA_TEST_REF_EMAIL = 'STORE_DETAILS_DIRECTION_EMAIL';
 
