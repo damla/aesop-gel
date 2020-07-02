@@ -27,10 +27,10 @@ const SectionHeading = ({
   );
   const eyebrowClassSet = cx(childrenClassNames.eyebrow);
   const headingClassSet = cx(
-    childrenClassNames.heading, 
+    childrenClassNames.heading,
     paddingBottom && styles[`${paddingBottom}PaddingBottom`],
     fontFamily && styles[`${fontFamily}FontFamily`],
-    );
+  );
   const subHeadingClassSet = cx(childrenClassNames.subHeading);
 
   return (
