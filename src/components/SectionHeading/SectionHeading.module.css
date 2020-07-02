@@ -34,10 +34,11 @@
     padding-bottom: 250px;
   }
 }
+
 .SuisseFontFamily {
- font-family: var(--font-family-sans-serif-regular);
+  font-family: var(--font-family-sans-serif-regular);
 }
 
 .ZapfFontFamily {
- font-family: var(--font-family-zapf-serif);
+  font-family: var(--font-family-zapf-serif);
 }

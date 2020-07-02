@@ -59,11 +59,11 @@ describe('<SectionHeading />', () => {
       .create(
         <SectionHeading
           eyebrow="Eyebrow: Offers fortification of the highest order against free radicals."
+          fontFamily="Zapf"
           heading="Heading: Fortification of the highest order. Parsley Seed Anti-Oxidant Facial Hydrating Cream."
           id="Anti-Oxidant"
-          subHeading="SubHeading: Parsley Seed Cream. Intensely soothing, nourishing and hydrating, this elegant formulation contains a potent blend of botanicals that offer fortification of the highest order against free radicals."
           paddingBottom="large"
-          fontFamily="Zapf"
+          subHeading="SubHeading: Parsley Seed Cream. Intensely soothing, nourishing and hydrating, this elegant formulation contains a potent blend of botanicals that offer fortification of the highest order against free radicals."
         />,
       )
       .toJSON();
