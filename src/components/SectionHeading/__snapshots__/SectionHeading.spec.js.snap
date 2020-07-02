@@ -53,3 +53,26 @@ exports[`<SectionHeading /> renders with subHeading variation correctly 1`] = `
   </h3>
 </header>
 `;
+
+exports[`<SectionHeading /> renders with subHeading, eyebrow variation, font family and padding bottom correctly 1`] = `
+<header
+  className="base"
+  id="Anti-Oxidant"
+>
+  <h2
+    className="base mediumWeightFont xXSmall dark"
+  >
+    Eyebrow: Offers fortification of the highest order against free radicals.
+  </h2>
+  <h3
+    className="base xLarge dark largePaddingBottom ZapfFontFamily"
+  >
+    Heading: Fortification of the highest order. Parsley Seed Anti-Oxidant Facial Hydrating Cream.
+  </h3>
+  <h4
+    className="base mediumWeightFont xSmall dark"
+  >
+    SubHeading: Parsley Seed Cream. Intensely soothing, nourishing and hydrating, this elegant formulation contains a potent blend of botanicals that offer fortification of the highest order against free radicals.
+  </h4>
+</header>
+`;

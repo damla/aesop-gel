@@ -53,6 +53,23 @@ describe('<SectionHeading />', () => {
 
     expect(tree).toMatchSnapshot();
   });
+
+  it('renders with subHeading, eyebrow variation, font family and padding bottom correctly', () => {
+    const tree = renderer
+      .create(
+        <SectionHeading
+          eyebrow="Eyebrow: Offers fortification of the highest order against free radicals."
+          heading="Heading: Fortification of the highest order. Parsley Seed Anti-Oxidant Facial Hydrating Cream."
+          id="Anti-Oxidant"
+          subHeading="SubHeading: Parsley Seed Cream. Intensely soothing, nourishing and hydrating, this elegant formulation contains a potent blend of botanicals that offer fortification of the highest order against free radicals."
+          paddingBottom="large"
+          fontFamily="Zapf"
+        />,
+      )
+      .toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
 });
 
 describe('SectionHeading.utils', () => {

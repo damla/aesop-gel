@@ -1354,6 +1354,40 @@ sans-serif;
     margin-left: 33%
 }
   }
+.SectionHeading-module_smallPaddingBottom__1q0TK {
+  padding-bottom: 50px;
+}
+.SectionHeading-module_mediumPaddingBottom__3i-w6 {
+  padding-bottom: 80px;
+}
+@media (min-width: 640px) and (max-width: 1024px) {
+.SectionHeading-module_mediumPaddingBottom__3i-w6 {
+    padding-bottom: 100px
+}
+  }
+@media (min-width: 1025px) {
+.SectionHeading-module_mediumPaddingBottom__3i-w6 {
+    padding-bottom: 150px
+}
+  }
+.SectionHeading-module_largePaddingBottom__2FjaN {
+  padding-bottom: 150px;
+}
+@media (min-width: 1025px) {
+.SectionHeading-module_largePaddingBottom__2FjaN {
+    padding-bottom: 250px
+}
+  }
+.SectionHeading-module_SuisseFontFamily__2G2wX {
+ font-family: 'Suisse Regular'
+,
+sans-serif;
+}
+.SectionHeading-module_ZapfFontFamily__1nkAY {
+ font-family: 'Zapf Humanist'
+,
+serif;
+}
 
 /* @import './key-frame.css'; */
 /* @import './font-face.css'; */
