@@ -28,10 +28,12 @@ const SectionHeading = ({
   const eyebrowClassSet = cx(childrenClassNames.eyebrow);
   const headingClassSet = cx(
     childrenClassNames.heading,
-    paddingBottom && styles[`${paddingBottom}PaddingBottom`],
     fontFamily && styles[`${fontFamily}FontFamily`],
   );
-  const subHeadingClassSet = cx(childrenClassNames.subHeading);
+  const subHeadingClassSet = cx(
+    childrenClassNames.subHeading,
+    paddingBottom && styles[`${paddingBottom}PaddingBottom`],
+  );
 
   return (
     <header className={classSet} id={id}>
