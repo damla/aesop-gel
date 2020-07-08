@@ -35,10 +35,10 @@
   }
 }
 
-.SuisseFontFamily {
+.SuisseTitleFont {
   font-family: var(--font-family-sans-serif-regular);
 }
 
-.ZapfFontFamily {
+.ZapfTitleFont {
   font-family: var(--font-family-zapf-serif);
 }

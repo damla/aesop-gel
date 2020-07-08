@@ -18,7 +18,7 @@ const SectionHeading = ({
   subHeading,
   theme,
   paddingBottom,
-  fontFamily,
+  titleFont,
 }) => {
   const classSet = cx(
     styles.base,
@@ -28,7 +28,7 @@ const SectionHeading = ({
   const eyebrowClassSet = cx(childrenClassNames.eyebrow);
   const headingClassSet = cx(
     childrenClassNames.heading,
-    fontFamily && styles[`${fontFamily}FontFamily`],
+    titleFont && styles[`${titleFont}TitleFont`],
   );
   const subHeadingClassSet = cx(
     childrenClassNames.subHeading,
@@ -94,7 +94,7 @@ SectionHeading.propTypes = {
   subHeading: PropTypes.string,
   theme: PropTypes.oneOf(['dark', 'light']),
   paddingBottom: PropTypes.oneOf(['none', 'small', 'medium', 'large']),
-  fontFamily: PropTypes.oneOf(['Suisse', 'Zapf']),
+  titleFont: PropTypes.oneOf(['Suisse', 'Zapf']),
 };
 
 SectionHeading.defaultProps = {
@@ -114,7 +114,7 @@ SectionHeading.defaultProps = {
   subHeading: undefined,
   theme: 'dark',
   paddingBottom: undefined,
-  fontFamily: undefined,
+  titleFont: undefined,
 };
 
 export default SectionHeading;

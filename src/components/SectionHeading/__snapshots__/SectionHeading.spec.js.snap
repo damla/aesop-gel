@@ -65,7 +65,7 @@ exports[`<SectionHeading /> renders with subHeading, eyebrow variation, font fam
     Eyebrow: Offers fortification of the highest order against free radicals.
   </h2>
   <h3
-    className="base xLarge dark ZapfFontFamily"
+    className="base xLarge dark ZapfTitleFont"
   >
     Heading: Fortification of the highest order. Parsley Seed Anti-Oxidant Facial Hydrating Cream.
   </h3>
