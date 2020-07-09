@@ -14,8 +14,6 @@ import mockAddToCartButtonOnClick from './__mocks__/AddToCartButton.onClick';
 
 configure({ adapter: new Adapter() });
 
-const mockFn = jest.fn();
-
 describe('<AddToCartButton />', () => {
   it('should be defined', () => {
     expect(AddToCartButton).toBeDefined();
