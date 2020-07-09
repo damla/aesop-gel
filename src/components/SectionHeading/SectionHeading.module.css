@@ -10,3 +10,11 @@
     margin-left: 33%;
   }
 }
+
+.SuisseTitleFont {
+  font-family: var(--font-family-sans-serif-regular);
+}
+
+.ZapfTitleFont {
+  font-family: var(--font-family-zapf-serif);
+}
