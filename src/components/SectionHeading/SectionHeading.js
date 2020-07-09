@@ -17,7 +17,6 @@ const SectionHeading = ({
   isPageHeading,
   subHeading,
   theme,
-  paddingBottom,
   titleFont,
 }) => {
   const classSet = cx(
@@ -30,10 +29,7 @@ const SectionHeading = ({
     childrenClassNames.heading,
     titleFont && styles[`${titleFont}TitleFont`],
   );
-  const subHeadingClassSet = cx(
-    childrenClassNames.subHeading,
-    paddingBottom && styles[`${paddingBottom}PaddingBottom`],
-  );
+  const subHeadingClassSet = cx(childrenClassNames.subHeading);
 
   return (
     <header className={classSet} id={id}>
@@ -93,7 +89,6 @@ SectionHeading.propTypes = {
   isPageHeading: PropTypes.bool,
   subHeading: PropTypes.string,
   theme: PropTypes.oneOf(['dark', 'light']),
-  paddingBottom: PropTypes.oneOf(['none', 'small', 'medium', 'large']),
   titleFont: PropTypes.oneOf(['Suisse', 'Zapf']),
 };
 
@@ -113,7 +108,6 @@ SectionHeading.defaultProps = {
   isPageHeading: false,
   subHeading: undefined,
   theme: 'dark',
-  paddingBottom: undefined,
   titleFont: undefined,
 };
 

@@ -54,7 +54,7 @@ exports[`<SectionHeading /> renders with subHeading variation correctly 1`] = `
 </header>
 `;
 
-exports[`<SectionHeading /> renders with subHeading, eyebrow variation, font family and padding bottom correctly 1`] = `
+exports[`<SectionHeading /> renders with subHeading, eyebrow variation, font family correctly 1`] = `
 <header
   className="base"
   id="Anti-Oxidant"
@@ -70,7 +70,7 @@ exports[`<SectionHeading /> renders with subHeading, eyebrow variation, font fam
     Heading: Fortification of the highest order. Parsley Seed Anti-Oxidant Facial Hydrating Cream.
   </h3>
   <h4
-    className="base mediumWeightFont xSmall dark largePaddingBottom"
+    className="base mediumWeightFont xSmall dark"
   >
     SubHeading: Parsley Seed Cream. Intensely soothing, nourishing and hydrating, this elegant formulation contains a potent blend of botanicals that offer fortification of the highest order against free radicals.
   </h4>

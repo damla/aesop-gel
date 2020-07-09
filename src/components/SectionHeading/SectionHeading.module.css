@@ -11,30 +11,6 @@
   }
 }
 
-.smallPaddingBottom {
-  padding-bottom: 50px;
-}
-
-.mediumPaddingBottom {
-  padding-bottom: 80px;
-
-  @media (--viewport-md-only) {
-    padding-bottom: 100px;
-  }
-
-  @media (--viewport-lg) {
-    padding-bottom: 150px;
-  }
-}
-
-.largePaddingBottom {
-  padding-bottom: 150px;
-
-  @media (--viewport-lg) {
-    padding-bottom: 250px;
-  }
-}
-
 .SuisseTitleFont {
   font-family: var(--font-family-sans-serif-regular);
 }

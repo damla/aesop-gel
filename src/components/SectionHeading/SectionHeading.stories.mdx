@@ -8,31 +8,28 @@ import SectionHeading from './SectionHeading';
 
 <Preview>
   <Story name="Base component">
-    <div style={{ border: '1px solid #333', margin: '20px'}}>
-      <SectionHeading
-        eyebrow={knobs.text(
-          'eyebrow',
-          'Eyebrow: Offers fortification of the highest order against free radicals.',
-          'Copy',
-        )}
-        heading={knobs.text(
-          'heading',
-          'Heading: Fortification of the highest order. Parsley Seed Anti-Oxidant Facial Hydrating Cream.',
-          'Copy',
-        )}
-        isFlush={knobs.boolean('isFlush', false, 'Presentation')}
-        id="Anti-Oxidant"
-        isPageHeading={knobs.boolean('isPageHeading', false, 'Presentation')}
-        subHeading={knobs.text(
-          'subHeading',
-          'SubHeading: Parsley Seed Cream. Intensely soothing, nourishing and hydrating, this elegant formulation contains a potent blend of botanicals that offer fortification of the highest order against free radicals.',
-          'Copy',
-        )}
-        theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
-        titleFont={knobs.select('titleFont', ['Suisse', 'Zapf'], 'Zapf', 'Presentation')}
-        paddingBottom={knobs.select('paddingBottom', ['none', 'small', 'medium', 'large'], 'none', 'Presentation')}
-      />
-    </div>
+    <SectionHeading
+      eyebrow={knobs.text(
+        'eyebrow',
+        'Eyebrow: Offers fortification of the highest order against free radicals.',
+        'Copy',
+      )}
+      heading={knobs.text(
+        'heading',
+        'Heading: Fortification of the highest order. Parsley Seed Anti-Oxidant Facial Hydrating Cream.',
+        'Copy',
+      )}
+      isFlush={knobs.boolean('isFlush', false, 'Presentation')}
+      id="Anti-Oxidant"
+      isPageHeading={knobs.boolean('isPageHeading', false, 'Presentation')}
+      subHeading={knobs.text(
+        'subHeading',
+        'SubHeading: Parsley Seed Cream. Intensely soothing, nourishing and hydrating, this elegant formulation contains a potent blend of botanicals that offer fortification of the highest order against free radicals.',
+        'Copy',
+      )}
+      theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
+      titleFont={knobs.select('titleFont', ['Suisse', 'Zapf'], 'Zapf', 'Presentation')}
+    />
     <p>SubHeading: Parsley Seed Cream. Intensely soothing, nourishing and hydrating, this elegant formulation cont</p>
   </Story>
 </Preview>
