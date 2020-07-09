@@ -1354,6 +1354,16 @@ sans-serif;
     margin-left: 33%
 }
   }
+.SectionHeading-module_SuisseTitleFont__D854J {
+  font-family: 'Suisse Regular'
+,
+sans-serif;
+}
+.SectionHeading-module_ZapfTitleFont__74AFB {
+  font-family: 'Zapf Humanist'
+,
+serif;
+}
 
 /* @import './key-frame.css'; */
 /* @import './font-face.css'; */
