@@ -1,6 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import {
+  useAddToCartContext,
+  useProductDetailContext,
+  useVariantSelectContext,
+} from 'contexts';
 import Button from '~/components/Button';
 import Loading from '~/components/Loading';
 import styles from './AddToCartButton.module.css';
@@ -9,17 +14,19 @@ const AddToCartButton = ({
   className,
   copy,
   dataTestRef,
-  hasError,
   isEnabled,
   isFullWidth,
-  isLoading,
-  isUpdateSuccessful,
-  onClick,
-  price,
-  productName,
-  sku,
   theme,
 }) => {
+  const addToCart = useAddToCartContext();
+  const { productDetail } = useProductDetailContext();
+  const { selectedVariant } = useVariantSelectContext();
+
+  if (!productDetail) return null;
+
+  const { productName } = productDetail;
+  const { price, sku } = selectedVariant;
+
   const classSet = cx(
     styles.base,
     { [styles.fullWidth]: isFullWidth },
@@ -27,7 +34,9 @@ const AddToCartButton = ({
   );
 
   const handleOnClick = () => {
-    onClick(sku);
+    const { actionTypes, dispatch, onClick } = addToCart;
+
+    onClick(sku, dispatch, actionTypes);
   };
 
   if (!sku || !price) {
@@ -46,6 +55,7 @@ const AddToCartButton = ({
     );
   }
 
+  const { hasError, isLoading, isUpdateSuccessful } = addToCart;
   const cartActionLabel = `${copy.cartAction} — ${price}`;
   const updateNotificationLabel = `${productName} ${copy.updateNotification}`;
   const showUpdateSuccessMessage = !isLoading && isUpdateSuccessful;
@@ -103,15 +113,8 @@ AddToCartButton.propTypes = {
     }),
   }),
   dataTestRef: PropTypes.string,
-  hasError: PropTypes.bool,
   isEnabled: PropTypes.bool,
   isFullWidth: PropTypes.bool,
-  isLoading: PropTypes.bool,
-  isUpdateSuccessful: PropTypes.bool,
-  onClick: PropTypes.func.isRequired,
-  price: PropTypes.string,
-  productName: PropTypes.string,
-  sku: PropTypes.string,
   theme: PropTypes.oneOf(['dark', 'light']),
 };
 
@@ -126,15 +129,8 @@ AddToCartButton.defaultProps = {
     },
   },
   dataTestRef: undefined,
-  hasError: false,
   isEnabled: true,
   isFullWidth: true,
-  isLoading: false,
-  isUpdateSuccessful: false,
-  onClick: undefined,
-  price: undefined,
-  productName: undefined,
-  sku: undefined,
   theme: 'dark',
 };
 

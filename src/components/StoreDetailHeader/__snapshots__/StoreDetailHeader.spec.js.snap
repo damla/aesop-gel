@@ -80,9 +80,11 @@ exports[`<StoreDetailHeader /> renders base component correctly 1`] = `
           <a
             className="base hasIcon left dark hyperlink"
             data-test-ref="STORE_DETAILS_DIRECTION_EMAIL"
-            href="mailto:undefined"
+            href="mailto:consectetur.elit@aesop.com"
             target="_blank"
+            title="consectetur.elit@aesop.com"
           >
+            consectetur.elit@aesop.com
              
             <i
               aria-hidden="true"

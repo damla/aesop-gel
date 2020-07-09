@@ -1,4 +1,7 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import * as knobs from '@storybook/addon-knobs';
+import { ProductDetailContextProvider } from '~/contexts/ProductDetail.context';
+import ProductDetailHeaderFixture from '~/components/ProductDetailHeader/ProductDetailHeader.fixture';
 import ProductDetailTitle from './ProductDetailTitle';
 import ProductDetailTitleFixture from './ProductDetailTitle.fixture';
 
@@ -11,13 +14,24 @@ import ProductDetailTitleFixture from './ProductDetailTitle.fixture';
 
 <Preview>
   <Story name="Base component">
-    <ProductDetailTitle
-      className={ProductDetailTitleFixture.className}
-      description={ProductDetailTitleFixture.description}
-      id={ProductDetailTitleFixture.id}
-      productName={ProductDetailTitleFixture.productName}
-      theme={ProductDetailTitleFixture.theme}
-    />
+    {(() => {
+      const theme = knobs.select('theme', ['dark', 'light'], ProductDetailTitleFixture.theme, 'Presentation');
+      const { productName, description, ...productRest } = ProductDetailHeaderFixture.product;
+      const productDetails = {
+        productName: knobs.text('productName', productName, 'Content'),
+        description: knobs.text('description', description, 'Content'),
+        ...productRest,
+      }
+      return (
+        <ProductDetailContextProvider product={productDetails}>
+          <ProductDetailTitle
+            className={ProductDetailTitleFixture.className}
+            id={ProductDetailTitleFixture.id}
+            theme={theme}
+          />
+        </ProductDetailContextProvider>
+      )
+    })()}
   </Story>
 </Preview>
 

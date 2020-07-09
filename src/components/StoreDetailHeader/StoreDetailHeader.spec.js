@@ -24,7 +24,7 @@ describe('<StoreDetailHeader />', () => {
             phone: StoreDetailHeaderFixture.copy.phone,
             email: StoreDetailHeaderFixture.copy.email,
           }}
-          email={StoreDetailHeaderFixture.emai}
+          email={StoreDetailHeaderFixture.email}
           location={StoreDetailHeaderFixture.location}
           openingHours={StoreHoursListFixture.hoursList}
           phone={StoreDetailHeaderFixture.phone}

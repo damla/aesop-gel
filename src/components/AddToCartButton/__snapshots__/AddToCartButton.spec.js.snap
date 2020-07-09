@@ -6,7 +6,7 @@ exports[`<AddToCartButton /> renders base component correctly 1`] = `
   data-test-ref="DATA_TEST_REF"
   disabled={false}
   onClick={[Function]}
-  title="Add to your cart — $50.00"
+  title="Add to your cart — $56.45"
   type="button"
 >
   <span
@@ -16,7 +16,29 @@ exports[`<AddToCartButton /> renders base component correctly 1`] = `
       Lorem ipsum dolor added to your cart
     </span>
     <span>
-      Add to your cart — $50.00
+      Add to your cart — $56.45
+    </span>
+  </span>
+</button>
+`;
+
+exports[`<AddToCartButton /> renders out of stock button correctly 1`] = `
+<button
+  className="base alternate blockStyle dark base fullWidth"
+  data-test-ref="DATA_TEST_REF"
+  disabled={false}
+  onClick={[Function]}
+  title="Add to your cart — $56.45"
+  type="button"
+>
+  <span
+    className="label"
+  >
+    <span>
+      Lorem ipsum dolor added to your cart
+    </span>
+    <span>
+      Add to your cart — $56.45
     </span>
   </span>
 </button>

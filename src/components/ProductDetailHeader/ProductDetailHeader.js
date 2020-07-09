@@ -10,8 +10,8 @@ import ProductDetailImage from './components/ProductDetailImage';
 import styles from './ProductDetailHeader.module.css';
 
 const ProductDetailHeader = ({ breadcrumbs, className, copy, theme }) => {
-  const classSet = cx(styles.base, className);
   const { productDetail } = useProductDetailContext();
+  const classSet = cx(styles.base, className);
 
   return (
     <div className={classSet}>

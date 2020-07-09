@@ -1,11 +1,15 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { AddToCartContextProvider } from '~/contexts/AddToCart.context';
-import { VariantSelectContextProvider } from '~/contexts/VariantSelect.context';
-import useAddToCart from '~/customHooks/useAddToCart';
-import useVariantSelect from '~/customHooks/useVariantSelect';
-import ProductDetailImage from '~/components/ProductDetailHeader/components/ProductDetailImage/ProductDetailImage.fixture';
+import * as knobs from '@storybook/addon-knobs';
+import {
+  AddToCartContextProvider,
+  ProductDetailContextProvider,
+  VariantSelectContextProvider,
+} from '~/contexts';
+import ProductDetailImageFixture from '~/components/ProductDetailHeader/components/ProductDetailImage/ProductDetailImage.fixture';
+import ProductDetailHeaderFixture from '~/components/ProductDetailHeader/ProductDetailHeader.fixture';
 import ProductDetailBody from './ProductDetailBody';
 import ProductDetailBodyFixture from './ProductDetailBody.fixture';
+import mockAddToCartButtonOnClick from '~/components/AddToCartButton/__mocks__/AddToCartButton.onClick';
 
 <Meta
   title="Components/ProductDetailHeader/ProductDetailBody"
@@ -16,21 +20,27 @@ import ProductDetailBodyFixture from './ProductDetailBody.fixture';
 
 <Preview>
   <Story name="Base component">
-    <AddToCartContextProvider value={useAddToCart()}>
-      <VariantSelectContextProvider
-        value={useVariantSelect(ProductDetailImage.variantOptions)}
-      >
-        <ProductDetailBody
-          className={ProductDetailBodyFixture.className}
-          copy={ProductDetailBodyFixture.copy}
-          definitionList={ProductDetailBodyFixture.definitionList}
-          ingredients={ProductDetailBodyFixture.ingredients}
-          keyIngredient={ProductDetailBodyFixture.keyIngredient}
-          productName={ProductDetailBodyFixture.productName}
-          theme={ProductDetailBodyFixture.theme}
-        />
-      </VariantSelectContextProvider>
-    </AddToCartContextProvider>
+    {(() => {
+      const theme = knobs.select('theme', ['dark', 'light'], ProductDetailBodyFixture.theme, 'Presentation')
+      const { productName, description, ...productRest } = ProductDetailHeaderFixture.product;
+      const productDetails = {
+        productName: knobs.text('productName', productName, 'Content'),
+        ...productRest,
+      }
+      return (
+        <ProductDetailContextProvider product={productDetails}>
+          <AddToCartContextProvider onClick={mockAddToCartButtonOnClick}>
+            <VariantSelectContextProvider variants={ProductDetailImageFixture.variantOptions}>
+              <ProductDetailBody
+                className={ProductDetailBodyFixture.className}
+                copy={ProductDetailBodyFixture.copy}
+                theme={theme}
+              />
+            </VariantSelectContextProvider>
+          </AddToCartContextProvider>
+        </ProductDetailContextProvider>
+      )
+    })()}
   </Story>
 </Preview>
 

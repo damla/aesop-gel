@@ -1,6 +1,6 @@
 export default {
   cta: {
-    text: 'Lorem ipsum dolor ante ipsum primis',
+    text: 'Lorem ipsum dolor',
     url: '/',
   },
   description:
@@ -15,18 +15,7 @@ export default {
       small: './assets/images/Product/variant-one-small.png',
     },
   },
-  productName: 'Product Name',
   theme: 'dark',
-  variants: [
-    {
-      value: 'morbi-id-nulla',
-      label: 'Morbi id nulla',
-    },
-    {
-      value: 'nullam-ultrices',
-      label: 'Nullam ultrices',
-    },
-  ],
   variantOptions: [
     {
       size: '50 mL',
