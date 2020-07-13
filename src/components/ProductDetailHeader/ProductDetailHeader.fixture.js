@@ -62,4 +62,19 @@ export default {
       },
     ],
   },
+  variantOutOfStock: [
+    {
+      size: '50 mL',
+      sku: 'ARD33',
+      price: '$56.45',
+      image: {
+        altText: 'ATL TAG',
+        sizes: {
+          large: './assets/images/Product/variant-one-large.png',
+          medium: './assets/images/Product/variant-one-medium.png',
+          small: './assets/images/Product/variant-one-small.png',
+        },
+      },
+    },
+  ],
 };

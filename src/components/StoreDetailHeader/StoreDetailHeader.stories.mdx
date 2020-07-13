@@ -11,18 +11,18 @@ import StoreDetailHeaderFixture from './StoreDetailHeader.fixture';
 <Preview>
   <Story name="Base component">
     <StoreDetailHeader
+      alternateHoursNote={StoreHoursListFixture.alternateHoursNote}
       copy={{
         location: knobs.text('location', StoreDetailHeaderFixture.copy.location, 'Copy'),
         openingHours: knobs.text('openingHours', StoreDetailHeaderFixture.copy.openingHours, 'Copy'),
         phone: knobs.text('phone', StoreDetailHeaderFixture.copy.phone, 'Copy'),
         email: knobs.text('email', StoreDetailHeaderFixture.copy.email, 'Copy'),
       }}
-      alternateHoursNote={StoreHoursListFixture.alternateHoursNote}
-      openingHours={StoreHoursListFixture.hoursList}
-      storeName={knobs.text('storeName', StoreDetailHeaderFixture.storeName, 'Content')}
       email={knobs.text('email', StoreDetailHeaderFixture.email, 'Content')}
       location={knobs.text('location', StoreDetailHeaderFixture.location, 'Content')}
+      openingHours={StoreHoursListFixture.hoursList}
       phone={knobs.text('phone', StoreDetailHeaderFixture.phone, 'Content')}
+      storeName={knobs.text('storeName', StoreDetailHeaderFixture.storeName, 'Content')}
       theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
     />
   </Story>

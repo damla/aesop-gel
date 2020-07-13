@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import { useProductDetailContext } from '~/contexts';
 import { ParagraphSet } from '~/components/Paragraph';
-import AddToCartButton from '~/components/AddToCartButton';
+import AddToCartButton from '~/components/AddToCartButton/AddToCartButton';
 import DefinitionList from '~/components/DefinitionList';
 import FlyinPanel from '~/components/FlyinPanel';
 import Hidden from '~/components/Hidden';
@@ -12,16 +13,14 @@ import styles from './ProductDetailBody.module.css';
 
 import Button from '~/components/Button';
 
-const ProductDetailBody = ({
-  className,
-  copy,
-  definitionList,
-  ingredients,
-  keyIngredient,
-  productName,
-  theme,
-}) => {
+const ProductDetailBody = ({ className, copy, theme }) => {
   const [isFlyinPanelVisible, setIsFlyinPanelVisible] = React.useState(false);
+  const { productDetail } = useProductDetailContext();
+
+  if (!productDetail) return null;
+
+  const { definitionList, ingredients, keyIngredient } = productDetail;
+
   const classSet = cx(styles.base, styles[theme], className);
 
   const definitionListItems = [
@@ -61,8 +60,7 @@ const ProductDetailBody = ({
         <Transition isActiveOnMount={true} type="shiftInDown">
           <>
             <AddToCartButton
-              dataTestRef="ADD_TO_CART_SMALL_CTA"
-              productName={productName}
+              dataTestRef="PRODUCT_COMMERCE_ADD_TO_CART_CTA"
               theme={theme}
             />
             {copy.cart && <div className={styles.cartMessage}>{copy.cart}</div>}
@@ -82,8 +80,7 @@ const ProductDetailBody = ({
         <Transition isActiveOnMount={true} type="shiftInDown">
           <>
             <AddToCartButton
-              dataTestRef="ADD_TO_CART_SMALL_CTA"
-              productName={productName}
+              dataTestRef="PRODUCT_COMMERCE_ADD_TO_CART_CTA"
               theme={theme}
             />
             {copy.cart && <div className={styles.cartMessage}>{copy.cart}</div>}
@@ -137,10 +134,6 @@ ProductDetailBody.defaultProps = {
       title: 'See ingredients',
     },
   },
-  definitionList: [],
-  ingredients: undefined,
-  keyIngredient: undefined,
-  productName: undefined,
   theme: 'dark',
 };
 

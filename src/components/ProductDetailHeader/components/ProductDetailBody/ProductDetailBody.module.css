@@ -80,7 +80,14 @@
 
 .cartMessage {
   margin-top: 18px;
-  color: var(--color-dark-label);
   font-size: rem(13px);
   line-height: 1.6;
+
+  .dark & {
+    color: var(--color-dark-label);
+  }
+
+  .light & {
+    color: var(--color-light-label);
+  }
 }

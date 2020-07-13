@@ -1,35 +1,17 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { useVariantSelectContext } from '~/contexts/VariantSelect.context';
 import Image from '~/components/Image';
-import RadioGroup from '~/components/RadioGroup';
 import Transition from '~/components/Transition';
 import styles from './ProductDetailImage.module.css';
 
 const ProductDetailImage = ({ className, id, theme }) => {
-  const {
-    onVariantChange,
-    selectedVariant,
-    setSelectedVariant,
-    variantOptions,
-  } = useVariantSelectContext();
+  const { selectedVariant } = useVariantSelectContext();
 
-  useEffect(() => {
-    setSelectedVariant(variantOptions[0]);
-  }, [variantOptions, setSelectedVariant]);
-
-  if (!selectedVariant || !selectedVariant.image) {
-    return null;
-  }
+  if (!selectedVariant || !selectedVariant.image) return null;
 
   const classSet = cx(styles.base, styles[theme], className);
-
-  const variantRadioOptions = variantOptions.map(option => ({
-    label: option.size || '',
-    value: option.sku,
-  }));
-
   const { altText, sizes } = selectedVariant.image;
 
   return (
@@ -41,14 +23,6 @@ const ProductDetailImage = ({ className, id, theme }) => {
           large={sizes?.large}
           medium={sizes?.medium}
           small={sizes?.small}
-        />
-        <RadioGroup
-          className={styles.variants}
-          name="sku"
-          onChange={e => onVariantChange(e, variantOptions)}
-          options={variantRadioOptions}
-          testReference="selectedVariant"
-          value={selectedVariant.sku || variantRadioOptions[0].value}
         />
       </div>
     </Transition>

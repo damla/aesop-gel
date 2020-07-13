@@ -8,7 +8,7 @@ const useImageTransition = (image, ref, duration = 600) => {
   const timeout = useRef(null);
 
   useEffect(() => {
-    const currentRef = ref.current;
+    const currentRef = ref.current || {};
     setIsImageActive(false);
 
     const handleOnImageLoad = () => {

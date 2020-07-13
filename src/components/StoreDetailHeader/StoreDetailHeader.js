@@ -28,7 +28,7 @@ const StoreDetailHeader = ({
   const contentBlocks = [
     {
       label: copy.location,
-      content: (
+      content: location ? (
         <Hyperlink
           className={styles.hyperlink}
           dataTestRef={DATA_TEST_REF_LOCATION}
@@ -40,12 +40,12 @@ const StoreDetailHeader = ({
         >
           {location}
         </Hyperlink>
-      ),
+      ) : null,
       id: 'location',
     },
     {
       label: copy.email,
-      content: (
+      content: email ? (
         <Hyperlink
           className={styles.hyperlink}
           dataTestRef={DATA_TEST_REF_EMAIL}
@@ -57,12 +57,12 @@ const StoreDetailHeader = ({
         >
           {email}
         </Hyperlink>
-      ),
+      ) : null,
       id: 'email',
     },
     {
       label: copy.phone,
-      content: (
+      content: phone ? (
         <Hyperlink
           className={styles.hyperlink}
           dataTestRef={DATA_TEST_REF_PHONE}
@@ -74,7 +74,7 @@ const StoreDetailHeader = ({
         >
           {phone}
         </Hyperlink>
-      ),
+      ) : null,
       id: 'phone',
     },
     {

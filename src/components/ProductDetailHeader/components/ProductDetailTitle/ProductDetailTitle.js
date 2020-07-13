@@ -1,25 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import { useProductDetailContext } from '~/contexts';
 import Heading from '~/components/Heading';
 import Paragraph from '~/components/Paragraph';
 import Transition from '~/components/Transition';
 import styles from './ProductDetailTitle.module.css';
 
-const ProductDetailTitle = ({
-  className,
-  description,
-  id,
-  productName,
-  theme,
-}) => {
+const ProductDetailTitle = ({ className, id, theme }) => {
+  const { productDetail } = useProductDetailContext();
+
+  if (!productDetail) return null;
+
+  const { description, productName } = productDetail;
   const classSet = cx(styles.base, className);
 
   return (
     <Transition isActiveOnMount={true} type="slowFade">
-      <header className={classSet} id={`product-description-header-${id}`}>
+      <header className={classSet} id={`product-detail-header-${id}`}>
         <Heading
-          className={styles.productName}
+          className={cx(styles.productName, {
+            [styles.isOnlyChild]: !description,
+          })}
           level="1"
           size="xLarge"
           theme={theme}
@@ -39,17 +41,13 @@ const ProductDetailTitle = ({
 
 ProductDetailTitle.propTypes = {
   className: PropTypes.string,
-  description: PropTypes.string.isRequired,
   id: PropTypes.string,
-  productName: PropTypes.string.isRequired,
   theme: PropTypes.oneOf(['dark', 'light']),
 };
 
 ProductDetailTitle.defaultProps = {
   className: undefined,
-  description: undefined,
   id: undefined,
-  productName: undefined,
   theme: 'dark',
 };
 

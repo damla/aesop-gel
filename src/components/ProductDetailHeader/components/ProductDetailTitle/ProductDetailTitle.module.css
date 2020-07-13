@@ -34,6 +34,10 @@
 .productName {
   margin-top: 0;
 
+  &.isOnlyChild {
+    margin-bottom: 0;
+  }
+
   @media (--viewport-md-only) {
     width: 46%;
   }

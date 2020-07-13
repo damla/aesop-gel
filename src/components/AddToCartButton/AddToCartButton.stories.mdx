@@ -1,30 +1,43 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import * as knobs from '@storybook/addon-knobs';
-import ProductDetailImageFixture from '~/components/ProductDetailHeader/components/ProductDetailImage/ProductDetailImage.fixture';
+import {
+  AddToCartContextProvider,
+  ProductDetailContextProvider,
+  VariantSelectContextProvider,
+} from '~/contexts';
+import ProductDetailHeaderFixture from '~/components/ProductDetailHeader/ProductDetailHeader.fixture';
 import AddToCartButton from './AddToCartButton';
 import AddToCartButtonFixture from './AddToCartButton.fixture';
 import mockAddToCartButtonOnClick from './__mocks__/AddToCartButton.onClick';
-import useAddToCart from '~/customHooks/useAddToCart';
 
 <Meta title="Components/AddToCartButton" component={AddToCartButton} />
 
 # AddToCartButton
 
+Requires `AddToCartContextProvider`, with a prop of `onClick`, which is a callback function that takes `sku<string>`, `addToCartDispatch<function>`, `ADD_TO_CART_ACTION_TYPES<array[string]>`
+as arguments. See [AddToCartButton.onClick.js mock](https://github.com/aesop/aesop-gel/tree/develop/src/components/AddToCartButton/__mocks__/AddToCartButton.onClick.js)
+for an example.
+
 <Preview>
   <Story name="Base component">
     {(() => {
-      const [ addToCartState, addToCartDispatch, ADD_TO_CART_ACTION_TYPES ] = useAddToCart();
+      const theme = knobs.select('theme', ['dark', 'light'], AddToCartButtonFixture.theme, 'Presentation')
+      const { productName, description, ...productRest } = ProductDetailHeaderFixture.product;
+      const productDetails = {
+        productName: knobs.text('productName', productName, 'Content'),
+        ...productRest,
+      }
       return (
-        <AddToCartButton
-          dataTestRef="ADD_TO_CART_SMALL_CTA"
-          productName={knobs.text('productName', AddToCartButtonFixture.productName, 'Content')}
-          onClick={(sku) => mockAddToCartButtonOnClick(sku, addToCartDispatch, ADD_TO_CART_ACTION_TYPES)}
-          hasError={addToCartState.hasError}
-          isLoading={addToCartState.isLoading}
-          isUpdateSuccessful={addToCartState.isUpdateSuccessful}
-          price={knobs.text('price', AddToCartButtonFixture.price, 'Content')}
-          sku={knobs.text('sku', AddToCartButtonFixture.sku, 'Content')}
-        />
+        <AddToCartContextProvider onClick={mockAddToCartButtonOnClick}>
+          <ProductDetailContextProvider product={productDetails}>
+            <VariantSelectContextProvider variants={ProductDetailHeaderFixture.product.variantOptions}>
+              <AddToCartButton
+                dataTestRef="ADD_TO_CART_SMALL_CTA"
+                theme={theme}
+              />
+            </VariantSelectContextProvider>
+          </ProductDetailContextProvider>
+        </AddToCartContextProvider>
       )
     })()}
   </Story>

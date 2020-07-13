@@ -38,10 +38,18 @@ function reducer(state, action) {
   );
 }
 
-const useAddToCart = () => {
+const useAddToCart = onClick => {
   const [state, dispatch] = useReducer(reducer, initialState);
+  const { isLoading, hasError, isUpdateSuccessful } = state;
 
-  return [state, dispatch, ADD_TO_CART_ACTION_TYPES];
+  return {
+    actionTypes: ADD_TO_CART_ACTION_TYPES,
+    dispatch,
+    hasError,
+    isLoading,
+    isUpdateSuccessful,
+    onClick,
+  };
 };
 
 export default useAddToCart;

@@ -2,10 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { HYPERLINK_STYLE_TYPES } from '~/constants';
-import useAddToCart from '~/customHooks/useAddToCart';
-import useVariantSelect from '~/customHooks/useVariantSelect';
-import useImageTransition from '~/customHooks/useImageTransition';
-import AddToCartButton from '~/components/AddToCartButton';
+import { useVariantSelectContext } from '~/contexts';
+import { useImageTransition } from '~/customHooks';
+import AddToCartButton from '~/components/AddToCartButton/AddToCartButton';
 import Heading from '~/components/Heading';
 import Hyperlink from '~/components/Hyperlink';
 import Image from '~/components/Image';
@@ -25,21 +24,15 @@ const ProductCommerce = ({
   eyebrow,
   heading,
   id,
-  onAddToCartClick,
-  productName,
   theme,
-  variants,
 }) => {
-  const [
-    addToCartState,
-    addToCartDispatch,
-    ADD_TO_CART_ACTION_TYPES,
-  ] = useAddToCart();
+  const {
+    selectedVariant,
+    onVariantChange,
+    variants,
+  } = useVariantSelectContext();
 
-  const variantSelect = useVariantSelect(variants);
   const imageRef = React.useRef();
-  const { selectedVariant } = variantSelect;
-  const { price, sku } = selectedVariant;
 
   const [currentImage, isImageActive] = useImageTransition(
     selectedVariant?.image,
@@ -50,14 +43,8 @@ const ProductCommerce = ({
     return <Loading isLoading={true} />;
   }
 
-  const { hasError, isLoading, isUpdateSuccessful } = addToCartState;
-
   const variantRadioOptions = getVariantRadioOptions(variants);
   const classSet = cx(styles.base, className);
-
-  const handleOnAddToCartClick = variantSku => {
-    onAddToCartClick(variantSku, addToCartDispatch, ADD_TO_CART_ACTION_TYPES);
-  };
 
   return (
     <div className={classSet} id={id}>
@@ -98,14 +85,13 @@ const ProductCommerce = ({
           <RadioGroup
             className={styles.variants}
             name="sku"
-            onChange={e => variantSelect.onVariantChange(e, variants)}
+            onChange={e => onVariantChange(e, variants)}
             options={variantRadioOptions}
             testReference="PRODUCT_COMMERCE_VARIANT_SELECT"
             theme={theme}
-            value={sku}
+            value={selectedVariant.sku}
           />
         </div>
-
         <LinkButtonGroup
           hasFitContent={false}
           isFlush={false}
@@ -115,14 +101,7 @@ const ProductCommerce = ({
           <AddToCartButton
             className={styles.addToCartButton}
             dataTestRef="PRODUCT_COMMERCE_ADD_TO_CART_CTA"
-            hasError={hasError}
             isFullWidth={false}
-            isLoading={isLoading}
-            isUpdateSuccessful={isUpdateSuccessful}
-            onClick={handleOnAddToCartClick}
-            price={price}
-            productName={productName}
-            sku={sku}
             theme={theme}
           />
           {cta && (
@@ -151,30 +130,7 @@ ProductCommerce.propTypes = {
   eyebrow: PropTypes.string,
   heading: PropTypes.string,
   id: PropTypes.string,
-  /**
-    A callback function that takes `sku<string>`, `addToCartDispatch<function>`, `ADD_TO_CART_ACTION_TYPES<[string]>`
-    as arguments. See [AddToCartButton.onClick.js mock](https://github.com/aesop/aesop-gel/tree/develop/src/components/AddToCartButton/__mocks__/AddToCartButton.onClick.js)
-    for an example. ___Required___
-   */
-  onAddToCartClick: PropTypes.func.isRequired,
-  /** ___Required___ */
-  productName: PropTypes.string.isRequired,
   theme: PropTypes.oneOf(['dark', 'light']),
-  variants: PropTypes.arrayOf(
-    PropTypes.shape({
-      size: PropTypes.string.isRequired,
-      sku: PropTypes.string.isRequired,
-      price: PropTypes.string.isRequired,
-      image: PropTypes.shape({
-        altText: PropTypes.string,
-        sizes: PropTypes.shape({
-          large: PropTypes.string,
-          medium: PropTypes.string,
-          small: PropTypes.string,
-        }),
-      }),
-    }),
-  ),
 };
 
 ProductCommerce.defaultProps = {
@@ -184,10 +140,7 @@ ProductCommerce.defaultProps = {
   eyebrow: undefined,
   heading: undefined,
   id: undefined,
-  onAddToCartClick: undefined,
-  productName: undefined,
   theme: 'dark',
-  variants: undefined,
 };
 
 export default ProductCommerce;
