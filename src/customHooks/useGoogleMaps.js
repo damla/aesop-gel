@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import GoogleMapsLoader from 'google-maps';
+import Loader from 'google-maps';
 
 const loadGoogleMapsAsync = loader =>
   new Promise(resolve => {
@@ -18,18 +18,18 @@ export const useGoogleMap = (apiKey, options = { libraries: ['places'] }) => {
 
       const { languageCode, libraries, regionCode } = options;
 
-      GoogleMapsLoader.KEY = apiKey;
-      GoogleMapsLoader.LIBRARIES = libraries;
+      Loader.KEY = apiKey;
+      Loader.LIBRARIES = libraries;
 
       if (languageCode) {
-        GoogleMapsLoader.LANGUAGE = languageCode;
+        Loader.LANGUAGE = languageCode;
       }
 
       if (regionCode) {
-        GoogleMapsLoader.REGION = regionCode;
+        Loader.REGION = regionCode;
       }
 
-      setGoogleMap(await loadGoogleMapsAsync(GoogleMapsLoader));
+      setGoogleMap(await loadGoogleMapsAsync(Loader));
       setIsLoading(false);
     };
 
