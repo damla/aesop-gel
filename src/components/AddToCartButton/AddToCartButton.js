@@ -25,7 +25,7 @@ const AddToCartButton = ({
   if (!productDetail) return null;
 
   const { productName } = productDetail;
-  const { price, sku } = selectedVariant;
+  const { isInStock, price, sku } = selectedVariant;
 
   const classSet = cx(
     styles.base,
@@ -39,7 +39,7 @@ const AddToCartButton = ({
     onClick(sku, dispatch, actionTypes);
   };
 
-  if (!sku || !price) {
+  if (!isInStock || !sku || !price) {
     return (
       <Button
         className={classSet}

@@ -21,6 +21,7 @@ export default {
       size: '50 mL',
       sku: 'ARD33',
       price: '$56.45',
+      isInStock: false,
       image: {
         altText: 'alt-tag-ARD33',
         sizes: {
@@ -34,6 +35,7 @@ export default {
       size: '100 mL',
       sku: 'ARD32',
       price: '$86.97',
+      isInStock: true,
       image: {
         altText: 'alt-tag-ARD32',
         sizes: {
