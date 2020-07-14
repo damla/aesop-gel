@@ -16,6 +16,8 @@ export const useGoogleMap = (apiKey, options = { libraries: ['places'] }) => {
     const loadGoogleMap = async () => {
       setIsLoading(true);
 
+      if (window && window.google) return;
+
       const { languageCode, libraries, regionCode } = options;
 
       Loader.KEY = apiKey;
