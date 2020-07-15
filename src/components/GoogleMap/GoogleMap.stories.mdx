@@ -37,7 +37,7 @@ Presented as with `customPinMarker`.
 
 <Preview>
   <Story name="With Place Marker Indexes">
-    <GoogleMapsContextProvider value={useGoogleMaps(constants.GOOGLE_MAPS.DEVELOPMENT_API_KEY)}>
+    <GoogleMapsContextProvider apiKey={constants.GOOGLE_MAPS.DEVELOPMENT_API_KEY}>
       <GoogleMap
         center={GoogleMapFixture.center}
         hasMarkerIndexes={true}
@@ -52,7 +52,7 @@ Presented as with `customPinMarker`.
 
 <Preview>
   <Story name="With Custom Place Marker">
-    <GoogleMapsContextProvider value={useGoogleMaps(constants.GOOGLE_MAPS.DEVELOPMENT_API_KEY)}>
+    <GoogleMapsContextProvider apiKey={constants.GOOGLE_MAPS.DEVELOPMENT_API_KEY}>
       <GoogleMap
         center={GoogleMapFixture.customPlaceMarkerCenter}
         customMarker={GoogleMapFixture.customPlaceMarker}
