@@ -1,0 +1,25 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import * as knobs from '@storybook/addon-knobs';
+import Podium from '~/components/Podium';
+import ContentHubArticleList from './ContentHubArticleList';
+import ContentHubArticleListFixture from './ContentHubArticleList.fixture';
+
+<Meta title="Components/ContentHubArticleList" component={ContentHubArticleList} />
+
+# ContentHubArticleList
+
+<Preview>
+  <Story name="Base component">
+    <Podium>
+       <ContentHubArticleList
+          articles={ContentHubArticleListFixture.articles.slice(0, knobs.select('number', [1, 2, 3, 4], 4, 'Presentation'))}
+          pattern={knobs.select('pattern', [0, 1], 0, 'Presentation')}
+        >
+        </ContentHubArticleList>
+    </Podium>
+  </Story>
+</Preview>
+
+## API
+
+<Props of={ContentHubArticleList} />
