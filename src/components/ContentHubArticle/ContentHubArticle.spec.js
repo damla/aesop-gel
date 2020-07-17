@@ -16,11 +16,17 @@ describe('<ContentHubArticle />', () => {
     const tree = renderer
       .create(
         <ContentHubArticle
-          paddingBottom={ContentHubArticleFixture.paddingBottom}
-          paddingTop={ContentHubArticleFixture.paddingTop}
-        >
-          Content
-        </ContentHubArticle>,
+          category={ContentHubArticleFixture.category}
+          copy={ContentHubArticleFixture.copy}
+          horizontalThumbnail={ContentHubArticleFixture.horizontalThumbnail}
+          id={ContentHubArticleFixture.id}
+          isHorizontal={true}
+          isMenuItem={false}
+          isReadMore={false}
+          title={ContentHubArticleFixture.title}
+          url={ContentHubArticleFixture.url}
+          verticalThumbnail={ContentHubArticleFixture.verticalThumbnail}
+        />,
       )
       .toJSON();
 
