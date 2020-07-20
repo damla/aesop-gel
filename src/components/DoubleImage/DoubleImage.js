@@ -6,7 +6,14 @@ import Hyperlink from '~/components/Hyperlink';
 import Image from '~/components/Image';
 import styles from './DoubleImage.module.css';
 
-const DoubleImage = ({ className, imageOne, imageTwo, theme, link1, link2, }) => {
+const DoubleImage = ({
+  className,
+  imageOne,
+  imageTwo,
+  theme,
+  link1,
+  link2,
+}) => {
   const classSet = cx(styles.base, styles[theme], className);
 
   const Image1 = () => (
