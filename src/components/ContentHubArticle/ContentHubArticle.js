@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useRef } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import Transition from '~/components/Transition';
@@ -6,6 +6,7 @@ import Image from '~/components/Image';
 import Heading from '~/components/Heading';
 import Hyperlink from '~/components/Hyperlink';
 import styles from './ContentHubArticle.module.css';
+import { useOnScreen } from '~/customHooks/useOnScreen';
 
 const ContentHubArticle = forwardRef(function ContentHubArticleRef({
   id,
@@ -32,9 +33,12 @@ const ContentHubArticle = forwardRef(function ContentHubArticleRef({
 
   const imageClassSet = cx(styles.link);
 
+  const ref = useRef(null);
+  const isOnScreen = useOnScreen(ref, 0.4);
+
   return (
-    <Transition isActiveOnMount={true} type="fade">
-      <div className={classSet} id={id}>
+    <Transition isActive={isOnScreen} type="fade">
+      <div className={classSet} id={id} ref={ref}>
         {isReadMore && !isMenuItem && (
           <Hyperlink
             className={imageClassSet}

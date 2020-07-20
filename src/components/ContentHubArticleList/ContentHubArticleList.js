@@ -25,7 +25,7 @@ const ContentHubArticleList = forwardRef(function ContentHubArticleListRef({
   const count = articles && articles.length;
 
   return (
-    <Transition isActiveOnMount={true} type="fade">
+    <section>
       <Fragment>
         {ascertainIsSmallOnlyViewport() ? (
           articles.map(article => (
@@ -136,7 +136,7 @@ const ContentHubArticleList = forwardRef(function ContentHubArticleListRef({
           </div>
         )}
       </Fragment>
-    </Transition>
+    </section>
   );
 });
 

@@ -10,7 +10,7 @@ import ContentHubArticleListFixture from './ContentHubArticleList.fixture';
 
 <Preview>
   <Story name="Base component">
-    <Podium>
+    <Podium transition="fade">
        <ContentHubArticleList
           articles={ContentHubArticleListFixture.articles.slice(0, knobs.select('number', [1, 2, 3, 4], 4, 'Presentation'))}
           pattern={knobs.select('pattern', [0, 1], 0, 'Presentation')}
