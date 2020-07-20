@@ -25,6 +25,8 @@ import DoubleImageFixture from './DoubleImage.fixture';
         small: DoubleImageFixture.imageTwo.small,
       }}
       theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
+      link1={knobs.object('Link 1', DoubleImageFixture.link, 'Links')}
+      link2={knobs.object('Link 2', DoubleImageFixture.link, 'Links')}
     />
   </Story>
 </Preview>

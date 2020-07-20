@@ -17,4 +17,10 @@ export default {
     medium: './assets/images/DoubleImage/image-two-medium.jpg',
     small: './assets/images/DoubleImage/image-two-small.jpg',
   },
+  link: {
+    text: 'Cleanse',
+    url: '/au/c/skin/cleanse',
+    hasTargetInNewWindow: null,
+    type: 'Relative',
+  },
 };
