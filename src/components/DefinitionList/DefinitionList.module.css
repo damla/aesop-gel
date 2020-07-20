@@ -106,4 +106,8 @@
   &:not(:last-child) {
     border-bottom: 1px solid var(--color-grey-65);
   }
+
+  .hasBottomBorder &:last-child {
+    border-bottom: 1px solid var(--color-grey-65);
+  }
 }

@@ -62,54 +62,22 @@ export default {
           },
         },
       },
+    ],
+    variantOutOfStock: [
       {
-        size: '180 mL - In stock',
-        sku: 'ARD30',
-        price: '$96.97',
-        isInStock: true,
+        size: '50 ml',
+        sku: 'ARD33',
+        price: '$26.45',
+        isInStock: false,
         image: {
-          altText: 'alt-tag-ARD32',
+          altText: 'alt-tag-ARD33',
           sizes: {
-            large: './assets/images/Product/variant-two-large.png',
-            medium: './assets/images/Product/variant-two-medium.png',
-            small: './assets/images/Product/variant-two-small.png',
-          },
-        },
-      },
-      {
-        alternateAction: {
-          url: '/?searchMenu=open',
-          label: 'Visit Store - $89.45',
-        },
-        size: '500 mL - Alternate action',
-        sku: 'ARD31',
-        price: '$109.45',
-        isInStock: true,
-        image: {
-          altText: 'alt-tag-ARD31',
-          sizes: {
-            large: './assets/images/Product/variant-two-large.png',
-            medium: './assets/images/Product/variant-two-medium.png',
-            small: './assets/images/Product/variant-two-small.png',
+            large: './assets/images/Product/variant-one-large.png',
+            medium: './assets/images/Product/variant-one-medium.png',
+            small: './assets/images/Product/variant-one-small.png',
           },
         },
       },
     ],
   },
-  variantOutOfStock: [
-    {
-      size: '50 mL',
-      sku: 'ARD33',
-      price: '$56.45',
-      isInStock: false,
-      image: {
-        altText: 'ATL TAG',
-        sizes: {
-          large: './assets/images/Product/variant-one-large.png',
-          medium: './assets/images/Product/variant-one-medium.png',
-          small: './assets/images/Product/variant-one-small.png',
-        },
-      },
-    },
-  ],
 };

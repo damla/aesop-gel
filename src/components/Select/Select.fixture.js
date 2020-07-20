@@ -1,5 +1,6 @@
 export default {
   className: '',
+  dataTestRef: 'SELECT_TEST_REF',
   errorMessage: 'Test Error Messsage',
   label: 'Vestibulum accumsan',
   name: 'select',
@@ -18,7 +19,6 @@ export default {
       value: 'nullam-ultrices',
     },
   ],
-  testReference: 'SELECT_TEST_REF',
   theme: 'dark',
   value: 'morbi-id-nulla',
 };

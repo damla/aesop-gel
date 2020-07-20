@@ -1,5 +1,6 @@
 export default {
   className: '',
+  dataTestRef: 'RADIO_GROUP_TEST_REF',
   errorMessage: 'Test Error Messsage',
   name: 'radio-group',
   onChange: () => {},
@@ -13,6 +14,5 @@ export default {
       label: 'Nullam ultrices',
     },
   ],
-  testReference: 'RADIO_GROUP_TEST_REF',
   value: 'morbi-id-nulla',
 };

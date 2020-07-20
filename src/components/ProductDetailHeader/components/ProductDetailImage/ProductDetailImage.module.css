@@ -2,13 +2,13 @@
 
 .base {
   padding: 25px 0 28px;
-
-  @media (--viewport-md) {
-    padding-bottom: 73px;
-  }
+  font-family: var(--font-family-sans-serif-regular);
+  font-size: rem(15px);
+  font-weight: var(--font-weight-normal);
+  line-height: 1.4;
 
   @media (--viewport-lg) {
-    padding: 0;
+    padding: 0 60px 0 0;
   }
 
   &,

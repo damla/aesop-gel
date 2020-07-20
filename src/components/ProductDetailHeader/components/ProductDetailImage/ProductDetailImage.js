@@ -5,7 +5,7 @@ import { useProductDetailContext, useVariantSelectContext } from '~/contexts';
 import { Hidden, Image, Transition } from '~/components';
 import styles from './ProductDetailImage.module.css';
 
-export const ProductDetailImage = ({ className, id, theme }) => {
+const ProductDetailImage = ({ className, theme }) => {
   const { selectedVariant } = useVariantSelectContext();
   const { productDetail } = useProductDetailContext();
 
@@ -18,7 +18,7 @@ export const ProductDetailImage = ({ className, id, theme }) => {
 
   return (
     <Transition isActiveOnMount={true} type="shiftInLeft">
-      <div className={classSet} id={`product-${id}`}>
+      <div className={classSet}>
         <Image
           altText={altText}
           className={styles.image}
@@ -36,13 +36,11 @@ export const ProductDetailImage = ({ className, id, theme }) => {
 
 ProductDetailImage.propTypes = {
   className: PropTypes.string,
-  id: PropTypes.string,
   theme: PropTypes.oneOf(['dark', 'light']),
 };
 
 ProductDetailImage.defaultProps = {
   className: undefined,
-  id: undefined,
   theme: 'dark',
 };
 

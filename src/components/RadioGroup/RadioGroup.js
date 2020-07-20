@@ -5,11 +5,11 @@ import styles from './RadioGroup.module.css';
 
 const RadioGroup = ({
   className,
+  dataTestRef,
   errorMessage,
   name,
   onChange,
   options,
-  testReference,
   theme,
   value,
 }) => {
@@ -38,7 +38,7 @@ const RadioGroup = ({
               aria-checked={optionValue === value}
               checked={optionValue === value}
               className={styles.input}
-              data-test-ref={testReference}
+              data-test-ref={dataTestRef}
               id={`option-${optionValue}`}
               name={name}
               onChange={onChange}
@@ -60,6 +60,7 @@ const RadioGroup = ({
 
 RadioGroup.propTypes = {
   className: PropTypes.string,
+  dataTestRef: PropTypes.string,
   errorMessage: PropTypes.string,
   name: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
@@ -69,18 +70,17 @@ RadioGroup.propTypes = {
       value: PropTypes.string,
     }),
   ),
-  testReference: PropTypes.string,
   theme: PropTypes.oneOf(['dark', 'light']),
   value: PropTypes.string,
 };
 
 RadioGroup.defaultProps = {
   className: undefined,
+  dataTestRef: undefined,
   errorMessage: '',
   name: undefined,
   onChange: undefined,
   options: [],
-  testReference: undefined,
   theme: 'dark',
   value: undefined,
 };

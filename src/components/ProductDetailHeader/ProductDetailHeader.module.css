@@ -55,3 +55,10 @@
     width: auto;
   }
 }
+
+.breadcrumbs {
+  @media (--viewport-md-only) {
+    margin: 0;
+    transform: translateY(20px);
+  }
+}

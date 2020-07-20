@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import { HEADING } from '~/constants';
 import { useProductDetailContext, useVariantSelectContext } from '~/contexts';
-import Paragraph, { ParagraphSet } from '~/components/Paragraph';
-import AddToCartButton from '~/components/AddToCartButton';
+import { getVariantRadioOptions } from '~/utils/product';
+import { AddToCartButton, Paragraph } from '~/components';
 import Heading from '~/components/Heading';
 import Button from '~/components/Button';
 import DefinitionList from '~/components/DefinitionList';
@@ -13,8 +14,6 @@ import Hidden from '~/components/Hidden';
 import Icon from '~/components/Icon';
 import Transition from '~/components/Transition';
 import styles from './ProductDetailBody.module.css';
-
-import { getVariantRadioOptions } from '~/components/ProductCommerce/ProductCommerce.utils.js';
 
 const ProductDetailBody = ({ className, copy, theme }) => {
   const [isFlyinPanelVisible, setIsFlyinPanelVisible] = React.useState(false);
@@ -37,6 +36,7 @@ const ProductDetailBody = ({ className, copy, theme }) => {
   } = productDetail;
   const classSet = cx(styles.base, styles[theme], className);
   const variantRadioOptions = getVariantRadioOptions(variants);
+  const radioGroupName = 'sku';
 
   const definitionListItems = [
     ...definitionList,
@@ -78,8 +78,8 @@ const ProductDetailBody = ({ className, copy, theme }) => {
               <>
                 <Heading
                   className={styles.productName}
-                  level="1"
-                  size="xLarge"
+                  level={HEADING.LEVEL.ONE}
+                  size={HEADING.SIZE.X_LARGE}
                   theme={theme}
                 >
                   {productName}
@@ -92,10 +92,6 @@ const ProductDetailBody = ({ className, copy, theme }) => {
               </>
             </Transition>
           </header>
-        </Hidden>
-
-        <Hidden isSmall={true} isMedium={true}>
-          <div className={styles.breadcrumbs}>breadcrumbs</div>
         </Hidden>
 
         <Hidden isLarge={true} isMedium={true} isXLarge={true}>
@@ -114,8 +110,8 @@ const ProductDetailBody = ({ className, copy, theme }) => {
               <Heading
                 hasMediumWeightFont={true}
                 isFlush={true}
-                level="4"
-                size="xXSmall"
+                level={HEADING.LEVEL.FOUR}
+                size={HEADING.SIZE.X_X_SMALL}
                 theme={theme}
               >
                 {copy?.size}
@@ -123,10 +119,10 @@ const ProductDetailBody = ({ className, copy, theme }) => {
 
               <RadioGroup
                 className={styles.variants}
-                name="sku"
+                dataTestRef="PRODUCT_COMMERCE_VARIANT_SELECT"
+                name={radioGroupName}
                 onChange={e => onVariantChange(e, variants)}
                 options={variantRadioOptions}
-                testReference="PRODUCT_COMMERCE_VARIANT_SELECT"
                 theme={theme}
                 value={selectedVariant.sku}
               />
@@ -139,7 +135,7 @@ const ProductDetailBody = ({ className, copy, theme }) => {
           </Transition>
         </div>
 
-        <Hidden isMedium={true}>
+        <Hidden isLarge={true} isMedium={true}>
           <div className={styles.cartDisclaimer}>{cartDisclaimer}</div>
         </Hidden>
 
@@ -147,19 +143,19 @@ const ProductDetailBody = ({ className, copy, theme }) => {
           <Transition isActiveOnMount={true} type="shiftInDown">
             <DefinitionList
               className={styles.definitionList}
+              hasBottomBorder={true}
               items={definitionListItems}
               theme={theme}
             />
           </Transition>
         </div>
 
-        <div className={styles.upSell}>Upsell Component</div>
+        <div className={styles.upSell} />
       </div>
 
       <Hidden isLarge={true} isSmall={true} isXLarge={true}>
         <div className={styles.mediumSidebar}>
           <header className={styles.mediumHeader}>
-            <div className={styles.mediumBreadcrumbs}>breadcrumbs</div>
             <Heading
               className={styles.mediumProductName}
               level="1"
@@ -182,7 +178,7 @@ const ProductDetailBody = ({ className, copy, theme }) => {
           isVisible={isFlyinPanelVisible}
           onClose={() => setIsFlyinPanelVisible(false)}
         >
-          <ParagraphSet>{ingredients}</ParagraphSet>
+          {ingredients}
         </FlyinPanel>
       )}
     </div>
@@ -193,22 +189,12 @@ ProductDetailBody.propTypes = {
   className: PropTypes.string,
   copy: PropTypes.shape({
     size: PropTypes.string,
-    cart: PropTypes.string,
     ingredients: PropTypes.shape({
       heading: PropTypes.string,
       label: PropTypes.string,
       title: PropTypes.string,
     }),
   }),
-  definitionList: PropTypes.arrayOf(
-    PropTypes.shape({
-      term: PropTypes.string,
-      description: PropTypes.string,
-    }),
-  ),
-  ingredients: PropTypes.string,
-  keyIngredient: PropTypes.string,
-  productName: PropTypes.string,
   theme: PropTypes.oneOf(['dark', 'light']),
 };
 
@@ -216,7 +202,6 @@ ProductDetailBody.defaultProps = {
   className: undefined,
   copy: {
     size: undefined,
-    cart: undefined,
     ingredients: {
       heading: undefined,
       label: undefined,
