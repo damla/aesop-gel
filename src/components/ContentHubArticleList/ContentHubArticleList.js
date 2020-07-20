@@ -2,7 +2,6 @@ import React, { forwardRef, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import ContentHubArticle from '~/components/ContentHubArticle';
-import Transition from '~/components/Transition';
 import styles from './ContentHubArticleList.module.css';
 import { ascertainIsSmallOnlyViewport } from '~/utils/viewports';
 
