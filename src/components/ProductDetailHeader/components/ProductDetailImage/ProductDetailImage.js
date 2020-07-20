@@ -1,15 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { useVariantSelectContext } from '~/contexts/VariantSelect.context';
-import Image from '~/components/Image';
-import Transition from '~/components/Transition';
+import { useProductDetailContext, useVariantSelectContext } from '~/contexts';
+import { Hidden, Image, Transition } from '~/components';
 import styles from './ProductDetailImage.module.css';
 
-const ProductDetailImage = ({ className, id, theme }) => {
+export const ProductDetailImage = ({ className, id, theme }) => {
   const { selectedVariant } = useVariantSelectContext();
+  const { productDetail } = useProductDetailContext();
 
   if (!selectedVariant || !selectedVariant.image) return null;
+
+  const { cartDisclaimer } = productDetail;
 
   const classSet = cx(styles.base, styles[theme], className);
   const { altText, sizes } = selectedVariant.image;
@@ -24,6 +26,9 @@ const ProductDetailImage = ({ className, id, theme }) => {
           medium={sizes?.medium}
           small={sizes?.small}
         />
+        <Hidden isMedium={true} isSmall={true}>
+          <div className={styles.cartDisclaimer}>{cartDisclaimer}</div>
+        </Hidden>
       </div>
     </Transition>
   );

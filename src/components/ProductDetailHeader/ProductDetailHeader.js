@@ -4,7 +4,6 @@ import cx from 'classnames';
 import { useProductDetailContext } from '~/contexts/ProductDetail.context';
 import Breadcrumbs from '~/components/Breadcrumbs';
 import Hidden from '~/components/Hidden';
-import ProductDetailTitle from './components/ProductDetailTitle';
 import ProductDetailBody from './components/ProductDetailBody';
 import ProductDetailImage from './components/ProductDetailImage';
 import styles from './ProductDetailHeader.module.css';
@@ -31,28 +30,25 @@ const ProductDetailHeader = ({ breadcrumbs, className, copy, theme }) => {
               theme={theme}
             />
           </Hidden>
-          <ProductDetailTitle
-            description={productDetail?.description}
-            productName={productDetail?.productName}
-            theme={theme}
-          />
           <ProductDetailBody
             copy={{
-              cart: productDetail?.cartDisclaimer,
+              size: copy?.size,
               ingredients: {
                 heading: copy?.ingredients?.heading,
                 label: copy?.ingredients?.label,
                 title: copy?.ingredients?.title,
               },
             }}
-            definitionList={productDetail?.definitionList}
-            ingredients={productDetail?.ingredients}
-            keyIngredient={productDetail?.keyIngredient}
-            productName={productDetail?.productName}
             theme={theme}
           />
         </div>
-        <ProductDetailImage className={styles.image} theme={theme} />
+        <ProductDetailImage
+          className={styles.image}
+          copy={{
+            cart: productDetail?.cartDisclaimer,
+          }}
+          theme={theme}
+        />
       </div>
     </div>
   );
@@ -62,6 +58,7 @@ ProductDetailHeader.propTypes = {
   breadcrumbs: PropTypes.object,
   className: PropTypes.string,
   copy: PropTypes.shape({
+    size: PropTypes.string,
     ingredients: PropTypes.shape({
       heading: PropTypes.string,
       label: PropTypes.string,

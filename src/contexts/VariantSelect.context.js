@@ -22,6 +22,10 @@ VariantSelectContextProvider.propTypes = {
   children: PropTypes.any,
   variants: PropTypes.arrayOf(
     PropTypes.shape({
+      alternateAction: PropTypes.shape({
+        url: PropTypes.string,
+        label: PropTypes.string,
+      }),
       isInStock: PropTypes.bool.isRequired,
       image: PropTypes.shape({
         altText: PropTypes.string,

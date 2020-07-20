@@ -36,3 +36,19 @@
     }
   }
 }
+
+.cartDisclaimer {
+  max-width: 300px;
+  margin: 18px auto;
+  font-size: rem(13px);
+  line-height: 1.6;
+  text-align: center;
+
+  .dark & {
+    color: var(--color-dark-label);
+  }
+
+  .light & {
+    color: var(--color-light-label);
+  }
+}

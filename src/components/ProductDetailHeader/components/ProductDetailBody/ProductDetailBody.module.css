@@ -1,15 +1,20 @@
 @import 'styles/index';
 
 .base {
+  display: flex;
   margin: 0 0 28px;
-
-  @media (--viewport-md) {
-    margin-top: 20px;
-  }
+  font-family: var(--font-family-sans-serif-regular);
+  font-size: rem(15px);
+  font-weight: var(--font-weight-normal);
+  line-height: 1.4;
 
   @media (--viewport-md-only) {
-    width: 50%;
-    margin-left: 50%;
+    flex-flow: row-reverse;
+  }
+
+  &,
+  & * {
+    box-sizing: border-box;
   }
 
   @media (--viewport-lg) {
@@ -17,69 +22,120 @@
     margin: 0 0 5px;
     transition: opacity 1300ms 300ms var(--easing-ease-out-cubic);
   }
+}
 
-  &,
-  & * {
-    box-sizing: border-box;
+.content {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+
+  @media (--viewport-md-only) {
+    width: 50%;
   }
 }
 
-.isActiveButton {
-  :nth-child(2) {
-    opacity: 0;
+.breadcrumbs {
+  order: 1;
+
+  @media (--viewport-md) {
+    order: 1;
   }
 
-  :nth-child(3) {
-    opacity: 1;
+  @media (--viewport-lg) {
+    order: 1;
+  }
+
+  @media (--viewport-sm-only) {
+    margin-bottom: 0;
+  }
+
+  @media (--viewport-lg) {
+    margin-bottom: 0;
   }
 }
 
-.ingredientsTrigger {
-  position: absolute;
-  top: 14px;
-  right: 0;
-  outline: none;
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  order: 2;
 
-  &.isActiveButton,
-  &:hover,
-  &:focus {
-    g {
-      :nth-child(1) {
-        fill: var(--color-secondary);
-      }
+  @media (--viewport-md) {
+    order: 2;
+  }
 
-      :nth-child(2) {
-        fill: var(--color-white);
-        stroke: var(--color-white);
-      }
+  @media (--viewport-lg) {
+    order: 2;
+  }
+
+  @media (--viewport-md-only) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (--viewport-lg) {
+    max-width: 470px;
+  }
+
+  .productName {
+    margin-top: 0;
+
+    &.isOnlyChild {
+      margin-bottom: 0;
+    }
+
+    @media (--viewport-md-only) {
+      width: 46%;
     }
   }
 }
 
-.definitionList {
-  padding-top: 18px !important;
-  margin-top: 54px;
+.description {
+  order: 4;
+  margin: 15px 0;
 
   @media (--viewport-md) {
-    padding-top: 14px !important;
-    margin-top: 38px;
+    order: 3;
   }
 
-  @media (--viewport-md) {
-    margin-top: 24px;
+  @media (--viewport-lg) {
+    order: 3;
   }
 
-  .dark & {
-    border-top: 2px solid var(--color-grey-20);
+  @media (--viewport-md-only) {
+    margin-top: 4px;
   }
 
-  .light & {
-    border-top: 2px solid var(--color-light-copy);
+  .descriptionCopy {
+    font-size: rem(16px);
+    line-height: 1.7;
+
+    @media (--viewport-lg) {
+      font-size: rem(15px);
+    }
   }
 }
 
-.cartMessage {
-  margin-top: 18px;
+.purchase {
+  order: 3;
+
+  @media (--viewport-md) {
+    order: 4;
+  }
+
+  @media (--viewport-lg) {
+    order: 4;
+  }
+
+  .variants {
+    justify-content: left;
+    margin-bottom: 24px;
+  }
+}
+
+.cartDisclaimer {
+  order: 5;
+  margin: 18px 0;
   font-size: rem(13px);
   line-height: 1.6;
 
@@ -89,5 +145,99 @@
 
   .light & {
     color: var(--color-light-label);
+  }
+
+  @media (--viewport-md) {
+    order: 5;
+  }
+
+  @media (--viewport-lg) {
+    order: 5;
+  }
+}
+
+.details {
+  order: 6;
+
+  @media (--viewport-md) {
+    order: 6;
+  }
+
+  @media (--viewport-lg) {
+    order: 6;
+  }
+
+  .definitionList {
+    padding-top: 18px !important;
+    margin-top: 54px;
+    margin-bottom: 15px;
+
+    @media (--viewport-md) {
+      padding-top: 14px !important;
+      margin-top: 38px;
+    }
+
+    @media (--viewport-md) {
+      margin-top: 24px;
+    }
+
+    .dark & {
+      border-top: 2px solid var(--color-grey-20);
+    }
+
+    .light & {
+      border-top: 2px solid var(--color-light-copy);
+    }
+  }
+
+  .isActiveButton {
+    :nth-child(2) {
+      opacity: 0;
+    }
+
+    :nth-child(3) {
+      opacity: 1;
+    }
+  }
+
+  .ingredientsTrigger {
+    position: absolute;
+    top: 14px;
+    right: 0;
+    outline: none;
+
+    &.isActiveButton,
+    &:hover,
+    &:focus {
+      g {
+        :nth-child(1) {
+          fill: var(--color-secondary);
+        }
+
+        :nth-child(2) {
+          fill: var(--color-white);
+          stroke: var(--color-white);
+        }
+      }
+    }
+  }
+}
+
+.upSell {
+  order: 7;
+
+  @media (--viewport-md) {
+    order: 7;
+  }
+
+  @media (--viewport-lg) {
+    order: 7;
+  }
+}
+
+.mediumSidebar {
+  @media (--viewport-md-only) {
+    width: 50%;
+    padding-right: 40px;
   }
 }

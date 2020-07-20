@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import isFunction from 'lodash/isFunction';
 import ReactDOMServer from 'react-dom/server';
-import MarkerClusterer from '@google/markerclustererplus';
+import MarkerClusterer from '@google/markerclusterer';
 import {
   HYPERLINK_STYLE_TYPES,
   GOOGLE_MAPS,

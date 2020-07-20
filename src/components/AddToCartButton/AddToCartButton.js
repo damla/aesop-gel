@@ -8,6 +8,7 @@ import {
 } from 'contexts';
 import Button from '~/components/Button';
 import Loading from '~/components/Loading';
+import Hyperlink from '~/components/Hyperlink';
 import styles from './AddToCartButton.module.css';
 
 const AddToCartButton = ({
@@ -25,7 +26,7 @@ const AddToCartButton = ({
   if (!productDetail) return null;
 
   const { productName } = productDetail;
-  const { isInStock, price, sku } = selectedVariant;
+  const { isInStock, price, sku, alternateAction } = selectedVariant;
 
   const classSet = cx(
     styles.base,
@@ -38,6 +39,21 @@ const AddToCartButton = ({
 
     onClick(sku, dispatch, actionTypes);
   };
+
+  if (!!alternateAction?.url && !!alternateAction?.label) {
+    return (
+      <Hyperlink
+        className={classSet}
+        isAlternate={true}
+        style={'Internal No Icon Button Link'}
+        theme={theme}
+        title={alternateAction?.label}
+        url={alternateAction?.url}
+      >
+        {alternateAction?.label}
+      </Hyperlink>
+    );
+  }
 
   if (!isInStock || !sku || !price) {
     return (

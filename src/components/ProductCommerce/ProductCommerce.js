@@ -19,6 +19,7 @@ import styles from './ProductCommerce.module.css';
 
 const ProductCommerce = ({
   className,
+  copy,
   cta,
   description,
   eyebrow,
@@ -79,7 +80,7 @@ const ProductCommerce = ({
             size="xXSmall"
             theme={theme}
           >
-            Sizes
+            {copy?.size}
           </Heading>
 
           <RadioGroup
@@ -122,6 +123,9 @@ const ProductCommerce = ({
 
 ProductCommerce.propTypes = {
   className: PropTypes.string,
+  copy: PropTypes.shape({
+    size: PropTypes.string,
+  }),
   cta: PropTypes.shape({
     text: PropTypes.string,
     url: PropTypes.string,
@@ -135,6 +139,9 @@ ProductCommerce.propTypes = {
 
 ProductCommerce.defaultProps = {
   className: undefined,
+  copy: {
+    size: 'Size',
+  },
   cta: undefined,
   description: undefined,
   eyebrow: undefined,

@@ -1,27 +1,42 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { useProductDetailContext } from '~/contexts';
-import { ParagraphSet } from '~/components/Paragraph';
-import AddToCartButton from '~/components/AddToCartButton/AddToCartButton';
+import { useProductDetailContext, useVariantSelectContext } from '~/contexts';
+import Paragraph, { ParagraphSet } from '~/components/Paragraph';
+import AddToCartButton from '~/components/AddToCartButton';
+import Heading from '~/components/Heading';
+import Button from '~/components/Button';
 import DefinitionList from '~/components/DefinitionList';
+import RadioGroup from '~/components/RadioGroup';
 import FlyinPanel from '~/components/FlyinPanel';
 import Hidden from '~/components/Hidden';
 import Icon from '~/components/Icon';
 import Transition from '~/components/Transition';
 import styles from './ProductDetailBody.module.css';
 
-import Button from '~/components/Button';
+import { getVariantRadioOptions } from '~/components/ProductCommerce/ProductCommerce.utils.js';
 
 const ProductDetailBody = ({ className, copy, theme }) => {
   const [isFlyinPanelVisible, setIsFlyinPanelVisible] = React.useState(false);
   const { productDetail } = useProductDetailContext();
+  const {
+    selectedVariant,
+    onVariantChange,
+    variants,
+  } = useVariantSelectContext();
 
   if (!productDetail) return null;
 
-  const { definitionList, ingredients, keyIngredient } = productDetail;
-
+  const {
+    definitionList,
+    ingredients,
+    keyIngredient,
+    productName,
+    description,
+    cartDisclaimer,
+  } = productDetail;
   const classSet = cx(styles.base, styles[theme], className);
+  const variantRadioOptions = getVariantRadioOptions(variants);
 
   const definitionListItems = [
     ...definitionList,
@@ -56,36 +71,109 @@ const ProductDetailBody = ({ className, copy, theme }) => {
 
   return (
     <div className={classSet}>
-      <Hidden isLarge={true} isXLarge={true}>
-        <Transition isActiveOnMount={true} type="shiftInDown">
-          <>
-            <AddToCartButton
-              dataTestRef="PRODUCT_COMMERCE_ADD_TO_CART_CTA"
+      <div className={styles.content}>
+        <Hidden isMedium={true}>
+          <header className={styles.header}>
+            <Transition isActiveOnMount={true} type="slowFade">
+              <>
+                <Heading
+                  className={styles.productName}
+                  level="1"
+                  size="xLarge"
+                  theme={theme}
+                >
+                  {productName}
+                </Heading>
+                <Hidden isMedium={true} isSmall={true}>
+                  <Paragraph className={styles.descriptionCopy} theme={theme}>
+                    {description}
+                  </Paragraph>
+                </Hidden>
+              </>
+            </Transition>
+          </header>
+        </Hidden>
+
+        <Hidden isSmall={true} isMedium={true}>
+          <div className={styles.breadcrumbs}>breadcrumbs</div>
+        </Hidden>
+
+        <Hidden isLarge={true} isMedium={true} isXLarge={true}>
+          <div className={styles.description}>
+            <Transition isActiveOnMount={true} type="slowFade">
+              <Paragraph className={styles.descriptionCopy} theme={theme}>
+                {description}
+              </Paragraph>
+            </Transition>
+          </div>
+        </Hidden>
+
+        <div className={styles.purchase}>
+          <Transition isActiveOnMount={true} type="shiftInDown">
+            <>
+              <Heading
+                hasMediumWeightFont={true}
+                isFlush={true}
+                level="4"
+                size="xXSmall"
+                theme={theme}
+              >
+                {copy?.size}
+              </Heading>
+
+              <RadioGroup
+                className={styles.variants}
+                name="sku"
+                onChange={e => onVariantChange(e, variants)}
+                options={variantRadioOptions}
+                testReference="PRODUCT_COMMERCE_VARIANT_SELECT"
+                theme={theme}
+                value={selectedVariant.sku}
+              />
+
+              <AddToCartButton
+                dataTestRef="PRODUCT_COMMERCE_ADD_TO_CART_CTA"
+                theme={theme}
+              />
+            </>
+          </Transition>
+        </div>
+
+        <Hidden isMedium={true}>
+          <div className={styles.cartDisclaimer}>{cartDisclaimer}</div>
+        </Hidden>
+
+        <div className={styles.details}>
+          <Transition isActiveOnMount={true} type="shiftInDown">
+            <DefinitionList
+              className={styles.definitionList}
+              items={definitionListItems}
               theme={theme}
             />
-            {copy.cart && <div className={styles.cartMessage}>{copy.cart}</div>}
-          </>
-        </Transition>
-      </Hidden>
+          </Transition>
+        </div>
 
-      <Transition isActiveOnMount={true} type="shiftInDown">
-        <DefinitionList
-          className={styles.definitionList}
-          items={definitionListItems}
-          theme={theme}
-        />
-      </Transition>
+        <div className={styles.upSell}>Upsell Component</div>
+      </div>
 
-      <Hidden isMedium={true} isSmall={true}>
-        <Transition isActiveOnMount={true} type="shiftInDown">
-          <>
-            <AddToCartButton
-              dataTestRef="PRODUCT_COMMERCE_ADD_TO_CART_CTA"
+      <Hidden isLarge={true} isSmall={true} isXLarge={true}>
+        <div className={styles.mediumSidebar}>
+          <header className={styles.mediumHeader}>
+            <div className={styles.mediumBreadcrumbs}>breadcrumbs</div>
+            <Heading
+              className={styles.mediumProductName}
+              level="1"
+              size="xLarge"
               theme={theme}
-            />
-            {copy.cart && <div className={styles.cartMessage}>{copy.cart}</div>}
-          </>
-        </Transition>
+            >
+              {productName}
+            </Heading>
+            <Paragraph className={styles.mediumDescriptionCopy} theme={theme}>
+              {description}
+            </Paragraph>
+            <div className={styles.cartDisclaimer}>{cartDisclaimer}</div>
+          </header>
+        </div>
       </Hidden>
 
       {ingredients && (
@@ -104,6 +192,7 @@ const ProductDetailBody = ({ className, copy, theme }) => {
 ProductDetailBody.propTypes = {
   className: PropTypes.string,
   copy: PropTypes.shape({
+    size: PropTypes.string,
     cart: PropTypes.string,
     ingredients: PropTypes.shape({
       heading: PropTypes.string,
@@ -126,12 +215,12 @@ ProductDetailBody.propTypes = {
 ProductDetailBody.defaultProps = {
   className: undefined,
   copy: {
-    cart:
-      'The 500 mL bottle containing this formulation is made from 99.7% recycled PET.',
+    size: undefined,
+    cart: undefined,
     ingredients: {
-      heading: 'Ingredients',
-      label: 'Key ingredients',
-      title: 'See ingredients',
+      heading: undefined,
+      label: undefined,
+      title: undefined,
     },
   },
   theme: 'dark',
