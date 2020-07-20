@@ -8,7 +8,6 @@ import postcss from 'rollup-plugin-postcss';
 import replace from 'rollup-plugin-replace';
 import resolve from 'rollup-plugin-node-resolve';
 import pkg from './package.json';
-
 import copy from 'rollup-plugin-copy-assets';
 
 /** @TODO set up actual env vars */

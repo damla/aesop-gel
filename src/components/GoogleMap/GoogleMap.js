@@ -116,13 +116,18 @@ const GoogleMap = ({
   }, [createGoogleMap, customMarker, places, googleMap]);
 
   useEffect(() => {
+    const options = {
+      styles: [
+        {
+          url: GOOGLE_MAPS.CLUSTER_IMAGE_PATH, // https://www.aesop.com/_ui/responsive/common/images/icons/map-cluster-icon.svg
+          ...GoogleMapOptions.MAP_MARKER_CLUSTER,
+        },
+      ],
+    };
+
     if (googleMap) {
       setMarkerCluster(
-        () =>
-          new MarkerClusterer(mapRef.current, markers, {
-            imageExtension: 'png',
-            imagePath: GOOGLE_MAPS.CLUSTER_IMAGE_PATH,
-          }),
+        () => new MarkerClusterer(mapRef.current, markers, options),
       );
     }
     return function cleanup() {
