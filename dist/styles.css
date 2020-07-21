@@ -1349,9 +1349,21 @@ sans-serif;
   position: relative;
   margin: 0 0 10px;
 }
+@media (max-width: 639px) {
+.SectionHeading-module_offsetPageHeading__1Bcrq {
+    padding: 0 20px
+}
+  }
 @media (min-width: 640px) {
 .SectionHeading-module_offsetPageHeading__1Bcrq {
-    margin-left: 33%
+    width: 40%;
+    margin-top: -25px;
+    margin-left: 30%
+}
+  }
+@media (min-width: 1025px) {
+.SectionHeading-module_offsetPageHeading__1Bcrq {
+    padding-top: 125px
 }
   }
 .SectionHeading-module_SuisseTitleFont__D854J {
