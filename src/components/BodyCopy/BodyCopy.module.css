@@ -45,6 +45,10 @@
   }
 }
 
+.ctaInset {
+  margin-right: -1px;
+}
+
 .copy {
   &,
   p {
@@ -67,7 +71,7 @@
 }
 
 .dark {
-  .copy {
+  &.copy {
     &,
     p {
       @extend %font-theme-dark-copy;
@@ -85,7 +89,7 @@
 }
 
 .light.light {
-  .copy {
+  &.copy {
     &,
     p {
       @extend %font-theme-light-copy;

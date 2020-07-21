@@ -6,7 +6,6 @@ import {
   VariantSelectContextProvider,
 } from '~/contexts';
 import Podium from '~/components/Podium';
-import AddToCartButtonFixture from '~/components/AddToCartButton/AddToCartButton.fixture';
 import mockAddToCartButtonOnClick from '~/components/AddToCartButton/__mocks__/AddToCartButton.onClick';
 import ProductDetailHeaderFixture from '~/components/ProductDetailHeader/ProductDetailHeader.fixture';
 import ProductCommerce from './ProductCommerce';
@@ -27,10 +26,6 @@ Requires `AddToCartContextProvider`, `ProductDetailContextProvider` and `Variant
         <ProductDetailContextProvider product={ProductDetailHeaderFixture.product}>
           <VariantSelectContextProvider variants={ProductCommerceFixture.variantOptions}>
             <ProductCommerce
-              copy={{
-                addToCart: AddToCartButtonFixture.copy,
-                ...ProductCommerceFixture.copy,
-              }}
               cta={knobs.object('cta', ProductCommerceFixture.cta, 'Content')}
               description={knobs.text('description', ProductCommerceFixture.description, 'Content')}
               eyebrow={knobs.text('eyebrow', ProductCommerceFixture.eyebrow, 'Content')}

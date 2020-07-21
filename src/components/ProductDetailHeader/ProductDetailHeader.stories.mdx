@@ -8,7 +8,6 @@ import {
 import ProductDetailBodyFixture from '~/components/ProductDetailHeader/components/ProductDetailBody/ProductDetailBody.fixture';
 import ProductDetailHeader from './ProductDetailHeader';
 import ProductDetailHeaderFixture from './ProductDetailHeader.fixture';
-import AddToCartButtonFixture from '~/components/AddToCartButton/AddToCartButton.fixture';
 import mockAddToCartButtonOnClick from '~/components/AddToCartButton/__mocks__/AddToCartButton.onClick';
 
 <Meta title="Components/ProductDetailHeader" component={ProductDetailHeader} />
@@ -33,8 +32,6 @@ import mockAddToCartButtonOnClick from '~/components/AddToCartButton/__mocks__/A
                 breadcrumbs={ProductDetailHeaderFixture.breadcrumbs}
                 className={ProductDetailHeaderFixture.className}
                 copy={{
-                  addToCart: AddToCartButtonFixture.copy,
-                  size: ProductDetailBodyFixture.copy.size,
                   ingredients: ProductDetailBodyFixture.copy.ingredients,
                 }}
                 theme={theme}

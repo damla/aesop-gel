@@ -1,8 +1,7 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import { VariantSelectContextProvider } from '~/contexts';
-import ProductDetailHeaderFixture from '~/components/ProductDetailHeader/ProductDetailHeader.fixture';
-import ProductDetailImageFixture from '~/components/ProductDetailHeader/components/ProductDetailImage/ProductDetailImage.fixture';
-import ProductDetailImage from '~/components/ProductDetailHeader/components/ProductDetailImage';
+import ProductDetailImage from './ProductDetailImage';
+import ProductDetailImageFixture from './ProductDetailImage.fixture';
 
 <Meta
   title="Components/ProductDetailHeader/ProductDetailImage"
@@ -14,13 +13,11 @@ import ProductDetailImage from '~/components/ProductDetailHeader/components/Prod
 <Preview>
   <Story name="Base component">
     <VariantSelectContextProvider variants={ProductDetailImageFixture.variantOptions}>
-      <ProductDetailContextProvider product={ProductDetailHeaderFixture.product}>
-        <ProductDetailImage
-          className={ProductDetailImageFixture.className}
-          id={ProductDetailImageFixture.id}
-          theme={ProductDetailImageFixture.theme}
-        />
-      </ProductDetailContextProvider>
+      <ProductDetailImage
+        className={ProductDetailImageFixture.className}
+        id={ProductDetailImageFixture.id}
+        theme={ProductDetailImageFixture.theme}
+      />
     </VariantSelectContextProvider>
   </Story>
 </Preview>

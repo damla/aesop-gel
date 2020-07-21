@@ -7,7 +7,6 @@ export default {
       size: '50 mL',
       sku: 'ARD33',
       price: '$56.45',
-      isInStock: true,
       image: {
         altText: 'ATL TAG',
         sizes: {
@@ -21,7 +20,6 @@ export default {
       size: '100 mL',
       sku: 'ARD32',
       price: '$86.97',
-      isInStock: true,
       image: {
         altText: 'ATL TAG',
         sizes: {

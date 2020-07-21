@@ -1,7 +1,6 @@
 export default {
   className: 'fixture-classname',
   copy: {
-    size: 'Size',
     cart:
       ' Quisque in felis id tellus condimentum scelerisque. Aliquam quis vestibulum felis, quis porta tellus',
     ingredients: {

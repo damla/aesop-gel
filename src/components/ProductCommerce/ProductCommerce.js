@@ -1,27 +1,24 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { HEADING, HYPERLINK_STYLE_TYPES } from '~/constants';
+import { HYPERLINK_STYLE_TYPES } from '~/constants';
 import { useVariantSelectContext } from '~/contexts';
 import { useImageTransition } from '~/customHooks';
-import { getVariantRadioOptions } from '~/utils/product';
-import {
-  AddToCartButton,
-  Heading,
-  Hyperlink,
-  Image,
-  LinkButtonGroup,
-  Loading,
-  RadioGroup,
-  SectionHeading,
-  Transition,
-  P,
-} from '~/components';
+import AddToCartButton from '~/components/AddToCartButton/AddToCartButton';
+import Heading from '~/components/Heading';
+import Hyperlink from '~/components/Hyperlink';
+import Image from '~/components/Image';
+import LinkButtonGroup from '~/components/LinkButtonGroup';
+import Loading from '~/components/Loading';
+import RadioGroup from '~/components/RadioGroup/RadioGroup';
+import SectionHeading from '~/components/SectionHeading';
+import Transition from '~/components/Transition';
+import { P } from '~/components/Paragraph';
+import { getVariantRadioOptions } from './ProductCommerce.utils.js';
 import styles from './ProductCommerce.module.css';
 
 const ProductCommerce = ({
   className,
-  copy,
   cta,
   description,
   eyebrow,
@@ -29,12 +26,13 @@ const ProductCommerce = ({
   id,
   theme,
 }) => {
-  const imageRef = useRef();
   const {
     selectedVariant,
     onVariantChange,
     variants,
   } = useVariantSelectContext();
+
+  const imageRef = React.useRef();
 
   const [currentImage, isImageActive] = useImageTransition(
     selectedVariant?.image,
@@ -47,9 +45,6 @@ const ProductCommerce = ({
 
   const variantRadioOptions = getVariantRadioOptions(variants);
   const classSet = cx(styles.base, className);
-  const RADIO_GROUP_NAME = 'sku';
-  const RADIO_GROUP_DATA_TEST_REF = 'PRODUCT_COMMERCE_VARIANT_SELECT';
-  const ADD_TO_CART_BUTTON_DATA_TEST_REF = 'PRODUCT_COMMERCE_ADD_TO_CART_CTA';
 
   return (
     <div className={classSet} id={id}>
@@ -80,19 +75,19 @@ const ProductCommerce = ({
           <Heading
             hasMediumWeightFont={true}
             isFlush={true}
-            level={HEADING.LEVEL.FOUR}
-            size={HEADING.SIZE.X_X_SMALL}
+            level="4"
+            size="xXSmall"
             theme={theme}
           >
-            {copy?.size}
+            Sizes
           </Heading>
 
           <RadioGroup
             className={styles.variants}
-            dataTestRef={RADIO_GROUP_DATA_TEST_REF}
-            name={RADIO_GROUP_NAME}
+            name="sku"
             onChange={e => onVariantChange(e, variants)}
             options={variantRadioOptions}
+            testReference="PRODUCT_COMMERCE_VARIANT_SELECT"
             theme={theme}
             value={selectedVariant.sku}
           />
@@ -105,8 +100,7 @@ const ProductCommerce = ({
         >
           <AddToCartButton
             className={styles.addToCartButton}
-            copy={copy.addToCart}
-            dataTestRef={ADD_TO_CART_BUTTON_DATA_TEST_REF}
+            dataTestRef="PRODUCT_COMMERCE_ADD_TO_CART_CTA"
             isFullWidth={false}
             theme={theme}
           />
@@ -128,17 +122,6 @@ const ProductCommerce = ({
 
 ProductCommerce.propTypes = {
   className: PropTypes.string,
-  copy: PropTypes.shape({
-    addToCart: PropTypes.shape({
-      cartAction: PropTypes.string,
-      updateNotification: PropTypes.string,
-      outOfStock: PropTypes.shape({
-        label: PropTypes.string,
-        title: PropTypes.string,
-      }),
-    }),
-    size: PropTypes.string,
-  }),
   cta: PropTypes.shape({
     text: PropTypes.string,
     url: PropTypes.string,
@@ -152,17 +135,6 @@ ProductCommerce.propTypes = {
 
 ProductCommerce.defaultProps = {
   className: undefined,
-  copy: {
-    addToCart: {
-      cartAction: undefined,
-      updateNotification: undefined,
-      outOfStock: {
-        label: undefined,
-        title: undefined,
-      },
-    },
-    size: undefined,
-  },
   cta: undefined,
   description: undefined,
   eyebrow: undefined,

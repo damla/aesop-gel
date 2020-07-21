@@ -2,13 +2,13 @@
 
 .base {
   padding: 25px 0 28px;
-  font-family: var(--font-family-sans-serif-regular);
-  font-size: rem(15px);
-  font-weight: var(--font-weight-normal);
-  line-height: 1.4;
+
+  @media (--viewport-md) {
+    padding-bottom: 73px;
+  }
 
   @media (--viewport-lg) {
-    padding: 0 60px 0 0;
+    padding: 0;
   }
 
   &,
@@ -34,21 +34,5 @@
     @media (--viewport-xl) {
       max-height: 600px;
     }
-  }
-}
-
-.cartDisclaimer {
-  max-width: 300px;
-  margin: 18px auto;
-  font-size: rem(13px);
-  line-height: 1.6;
-  text-align: center;
-
-  .dark & {
-    color: var(--color-dark-label);
-  }
-
-  .light & {
-    color: var(--color-light-label);
   }
 }

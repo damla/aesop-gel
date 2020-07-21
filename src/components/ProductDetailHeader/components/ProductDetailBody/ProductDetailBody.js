@@ -1,54 +1,27 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { HEADING, TRANSITIONS } from '~/constants';
-import { useProductDetailContext, useVariantSelectContext } from '~/contexts';
-import { getVariantRadioOptions } from '~/utils/product';
-import {
-  AddToCartButton,
-  Button,
-  DefinitionList,
-  FlyinPanel,
-  Heading,
-  Hidden,
-  Icon,
-  Paragraph,
-  RadioGroup,
-  Transition,
-} from '~/components';
+import { useProductDetailContext } from '~/contexts';
+import { ParagraphSet } from '~/components/Paragraph';
+import AddToCartButton from '~/components/AddToCartButton/AddToCartButton';
+import DefinitionList from '~/components/DefinitionList';
+import FlyinPanel from '~/components/FlyinPanel';
+import Hidden from '~/components/Hidden';
+import Icon from '~/components/Icon';
+import Transition from '~/components/Transition';
 import styles from './ProductDetailBody.module.css';
 
+import Button from '~/components/Button';
+
 const ProductDetailBody = ({ className, copy, theme }) => {
-  const [isFlyinPanelVisible, setIsFlyinPanelVisible] = useState(false);
+  const [isFlyinPanelVisible, setIsFlyinPanelVisible] = React.useState(false);
   const { productDetail } = useProductDetailContext();
-  const {
-    selectedVariant,
-    onVariantChange,
-    variants,
-  } = useVariantSelectContext();
 
   if (!productDetail) return null;
 
-  const {
-    definitionList,
-    ingredients,
-    keyIngredient,
-    productName,
-    description,
-    cartDisclaimer,
-  } = productDetail;
+  const { definitionList, ingredients, keyIngredient } = productDetail;
 
-  const variantRadioOptions = getVariantRadioOptions(variants);
-  const handleOnVariantChange = e => onVariantChange(e, variants);
-  const handleOnIngredientsTriggerClick = () => setIsFlyinPanelVisible(true);
-  const handleOnCloseClick = () => setIsFlyinPanelVisible(false);
   const classSet = cx(styles.base, styles[theme], className);
-  const ingredientsTriggerClassSet = cx(styles.ingredientsTrigger, {
-    [styles.isActiveButton]: isFlyinPanelVisible,
-  });
-  const RADIO_GROUP_NAME = 'sku';
-  const RADIO_GROUP_DATA_TEST_REF = 'PRODUCT_DETAIL_VARIANT_SELECT';
-  const ADD_TO_CART_BUTTON_DATA_TEST_REF = 'PRODUCT_DETAIL_ADD_TO_CART_CTA';
 
   const definitionListItems = [
     ...definitionList,
@@ -58,9 +31,11 @@ const ProductDetailBody = ({ className, copy, theme }) => {
           <span>{copy.ingredients.label}</span>
           {ingredients && (
             <Button
-              className={ingredientsTriggerClassSet}
+              className={cx(styles.ingredientsTrigger, {
+                [styles.isActiveButton]: isFlyinPanelVisible,
+              })}
               isInline={true}
-              onClick={handleOnIngredientsTriggerClick}
+              onClick={() => setIsFlyinPanelVisible(true)}
               theme={theme}
               title={copy.ingredients.title}
             >
@@ -81,116 +56,45 @@ const ProductDetailBody = ({ className, copy, theme }) => {
 
   return (
     <div className={classSet}>
-      <div className={styles.content}>
-        <Hidden isMedium={true}>
-          <header className={styles.header}>
-            <Transition isActiveOnMount={true} type={TRANSITIONS.TYPE.FADE}>
-              <Heading
-                className={styles.productName}
-                level={HEADING.LEVEL.ONE}
-                size={HEADING.SIZE.X_LARGE}
-                theme={theme}
-              >
-                {productName}
-              </Heading>
-            </Transition>
-          </header>
-        </Hidden>
-
-        <Hidden isMedium={true}>
-          <div className={styles.description}>
-            <Transition isActiveOnMount={true} type={TRANSITIONS.TYPE.FADE}>
-              <Paragraph className={styles.descriptionCopy} theme={theme}>
-                {description}
-              </Paragraph>
-            </Transition>
-          </div>
-        </Hidden>
-
-        <div className={styles.purchase}>
-          <Transition
-            isActiveOnMount={true}
-            type={TRANSITIONS.TYPE.SHIFT_IN_DOWN}
-          >
-            <Heading
-              hasMediumWeightFont={true}
-              isFlush={true}
-              level={HEADING.LEVEL.FOUR}
-              size={HEADING.SIZE.X_X_SMALL}
-              theme={theme}
-            >
-              {copy?.size}
-            </Heading>
-          </Transition>
-          <Transition
-            isActiveOnMount={true}
-            type={TRANSITIONS.TYPE.SHIFT_IN_DOWN}
-          >
-            <RadioGroup
-              className={styles.variants}
-              dataTestRef={RADIO_GROUP_DATA_TEST_REF}
-              name={RADIO_GROUP_NAME}
-              onChange={handleOnVariantChange}
-              options={variantRadioOptions}
-              theme={theme}
-              value={selectedVariant.sku}
-            />
-          </Transition>
-
-          <AddToCartButton
-            copy={copy?.addToCart}
-            dataTestRef={ADD_TO_CART_BUTTON_DATA_TEST_REF}
-            theme={theme}
-          />
-        </div>
-
-        <Hidden isLarge={true} isMedium={true} isXLarge={true}>
-          <div className={styles.cartDisclaimer}>{cartDisclaimer}</div>
-        </Hidden>
-
-        <div className={styles.details}>
-          <Transition
-            isActiveOnMount={true}
-            type={TRANSITIONS.TYPE.SHIFT_IN_DOWN}
-          >
-            <DefinitionList
-              className={styles.definitionList}
-              hasBottomBorder={true}
-              items={definitionListItems}
+      <Hidden isLarge={true} isXLarge={true}>
+        <Transition isActiveOnMount={true} type="shiftInDown">
+          <>
+            <AddToCartButton
+              dataTestRef="PRODUCT_COMMERCE_ADD_TO_CART_CTA"
               theme={theme}
             />
-          </Transition>
-        </div>
+            {copy.cart && <div className={styles.cartMessage}>{copy.cart}</div>}
+          </>
+        </Transition>
+      </Hidden>
 
-        <div className={styles.upSell} />
-      </div>
+      <Transition isActiveOnMount={true} type="shiftInDown">
+        <DefinitionList
+          className={styles.definitionList}
+          items={definitionListItems}
+          theme={theme}
+        />
+      </Transition>
 
-      <Hidden isLarge={true} isSmall={true} isXLarge={true}>
-        <div className={styles.mediumSidebar}>
-          <header className={styles.mediumHeader}>
-            <Heading
-              className={styles.mediumProductName}
-              level={HEADING.LEVEL.ONE}
-              size={HEADING.SIZE.X_LARGE}
+      <Hidden isMedium={true} isSmall={true}>
+        <Transition isActiveOnMount={true} type="shiftInDown">
+          <>
+            <AddToCartButton
+              dataTestRef="PRODUCT_COMMERCE_ADD_TO_CART_CTA"
               theme={theme}
-            >
-              {productName}
-            </Heading>
-            <Paragraph className={styles.mediumDescriptionCopy} theme={theme}>
-              {description}
-            </Paragraph>
-            <div className={styles.cartDisclaimer}>{cartDisclaimer}</div>
-          </header>
-        </div>
+            />
+            {copy.cart && <div className={styles.cartMessage}>{copy.cart}</div>}
+          </>
+        </Transition>
       </Hidden>
 
       {ingredients && (
         <FlyinPanel
           heading={copy.ingredients.heading}
           isVisible={isFlyinPanelVisible}
-          onClose={handleOnCloseClick}
+          onClose={() => setIsFlyinPanelVisible(false)}
         >
-          {ingredients}
+          <ParagraphSet>{ingredients}</ParagraphSet>
         </FlyinPanel>
       )}
     </div>
@@ -200,40 +104,34 @@ const ProductDetailBody = ({ className, copy, theme }) => {
 ProductDetailBody.propTypes = {
   className: PropTypes.string,
   copy: PropTypes.shape({
-    addToCart: PropTypes.shape({
-      cartAction: PropTypes.string,
-      updateNotification: PropTypes.string,
-      outOfStock: PropTypes.shape({
-        label: PropTypes.string,
-        title: PropTypes.string,
-      }),
-    }),
-    size: PropTypes.string,
+    cart: PropTypes.string,
     ingredients: PropTypes.shape({
       heading: PropTypes.string,
       label: PropTypes.string,
       title: PropTypes.string,
     }),
   }),
+  definitionList: PropTypes.arrayOf(
+    PropTypes.shape({
+      term: PropTypes.string,
+      description: PropTypes.string,
+    }),
+  ),
+  ingredients: PropTypes.string,
+  keyIngredient: PropTypes.string,
+  productName: PropTypes.string,
   theme: PropTypes.oneOf(['dark', 'light']),
 };
 
 ProductDetailBody.defaultProps = {
   className: undefined,
   copy: {
-    addToCart: {
-      cartAction: undefined,
-      updateNotification: undefined,
-      outOfStock: {
-        label: undefined,
-        title: undefined,
-      },
-    },
-    size: undefined,
+    cart:
+      'The 500 mL bottle containing this formulation is made from 99.7% recycled PET.',
     ingredients: {
-      heading: undefined,
-      label: undefined,
-      title: undefined,
+      heading: 'Ingredients',
+      label: 'Key ingredients',
+      title: 'See ingredients',
     },
   },
   theme: 'dark',
