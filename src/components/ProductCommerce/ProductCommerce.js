@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { HYPERLINK_STYLE_TYPES } from '~/constants';
+import { HEADING, HYPERLINK_STYLE_TYPES } from '~/constants';
 import { useVariantSelectContext } from '~/contexts';
 import { useImageTransition } from '~/customHooks';
 import { getVariantRadioOptions } from '~/utils/product';
@@ -29,13 +29,12 @@ const ProductCommerce = ({
   id,
   theme,
 }) => {
+  const imageRef = useRef();
   const {
     selectedVariant,
     onVariantChange,
     variants,
   } = useVariantSelectContext();
-
-  const imageRef = useRef();
 
   const [currentImage, isImageActive] = useImageTransition(
     selectedVariant?.image,
@@ -48,6 +47,9 @@ const ProductCommerce = ({
 
   const variantRadioOptions = getVariantRadioOptions(variants);
   const classSet = cx(styles.base, className);
+  const RADIO_GROUP_NAME = 'sku';
+  const RADIO_GROUP_DATA_TEST_REF = 'PRODUCT_COMMERCE_VARIANT_SELECT';
+  const ADD_TO_CART_BUTTON_DATA_TEST_REF = 'PRODUCT_COMMERCE_ADD_TO_CART_CTA';
 
   return (
     <div className={classSet} id={id}>
@@ -78,8 +80,8 @@ const ProductCommerce = ({
           <Heading
             hasMediumWeightFont={true}
             isFlush={true}
-            level="4"
-            size="xXSmall"
+            level={HEADING.LEVEL.FOUR}
+            size={HEADING.SIZE.X_X_SMALL}
             theme={theme}
           >
             {copy?.size}
@@ -87,8 +89,8 @@ const ProductCommerce = ({
 
           <RadioGroup
             className={styles.variants}
-            dataTestRef="PRODUCT_COMMERCE_VARIANT_SELECT"
-            name="sku"
+            dataTestRef={RADIO_GROUP_DATA_TEST_REF}
+            name={RADIO_GROUP_NAME}
             onChange={e => onVariantChange(e, variants)}
             options={variantRadioOptions}
             theme={theme}
@@ -104,7 +106,7 @@ const ProductCommerce = ({
           <AddToCartButton
             className={styles.addToCartButton}
             copy={copy.addToCart}
-            dataTestRef="PRODUCT_COMMERCE_ADD_TO_CART_CTA"
+            dataTestRef={ADD_TO_CART_BUTTON_DATA_TEST_REF}
             isFullWidth={false}
             theme={theme}
           />

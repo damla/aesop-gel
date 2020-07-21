@@ -1,22 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { HEADING } from '~/constants';
+import { HEADING, TRANSITIONS } from '~/constants';
 import { useProductDetailContext, useVariantSelectContext } from '~/contexts';
 import { getVariantRadioOptions } from '~/utils/product';
-import { AddToCartButton, Paragraph } from '~/components';
-import Heading from '~/components/Heading';
-import Button from '~/components/Button';
-import DefinitionList from '~/components/DefinitionList';
-import RadioGroup from '~/components/RadioGroup';
-import FlyinPanel from '~/components/FlyinPanel';
-import Hidden from '~/components/Hidden';
-import Icon from '~/components/Icon';
-import Transition from '~/components/Transition';
+import {
+  AddToCartButton,
+  Button,
+  DefinitionList,
+  FlyinPanel,
+  Heading,
+  Hidden,
+  Icon,
+  Paragraph,
+  RadioGroup,
+  Transition,
+} from '~/components';
 import styles from './ProductDetailBody.module.css';
 
 const ProductDetailBody = ({ className, copy, theme }) => {
-  const [isFlyinPanelVisible, setIsFlyinPanelVisible] = React.useState(false);
+  const [isFlyinPanelVisible, setIsFlyinPanelVisible] = useState(false);
   const { productDetail } = useProductDetailContext();
   const {
     selectedVariant,
@@ -34,9 +37,18 @@ const ProductDetailBody = ({ className, copy, theme }) => {
     description,
     cartDisclaimer,
   } = productDetail;
-  const classSet = cx(styles.base, styles[theme], className);
+
   const variantRadioOptions = getVariantRadioOptions(variants);
-  const radioGroupName = 'sku';
+  const handleOnVariantChange = e => onVariantChange(e, variants);
+  const handleOnIngredientsTriggerClick = () => setIsFlyinPanelVisible(true);
+  const handleOnCloseClick = () => setIsFlyinPanelVisible(false);
+  const classSet = cx(styles.base, styles[theme], className);
+  const ingredientsTriggerClassSet = cx(styles.ingredientsTrigger, {
+    [styles.isActiveButton]: isFlyinPanelVisible,
+  });
+  const RADIO_GROUP_NAME = 'sku';
+  const RADIO_GROUP_DATA_TEST_REF = 'PRODUCT_DETAIL_VARIANT_SELECT';
+  const ADD_TO_CART_BUTTON_DATA_TEST_REF = 'PRODUCT_DETAIL_ADD_TO_CART_CTA';
 
   const definitionListItems = [
     ...definitionList,
@@ -46,11 +58,9 @@ const ProductDetailBody = ({ className, copy, theme }) => {
           <span>{copy.ingredients.label}</span>
           {ingredients && (
             <Button
-              className={cx(styles.ingredientsTrigger, {
-                [styles.isActiveButton]: isFlyinPanelVisible,
-              })}
+              className={ingredientsTriggerClassSet}
               isInline={true}
-              onClick={() => setIsFlyinPanelVisible(true)}
+              onClick={handleOnIngredientsTriggerClick}
               theme={theme}
               title={copy.ingredients.title}
             >
@@ -74,7 +84,7 @@ const ProductDetailBody = ({ className, copy, theme }) => {
       <div className={styles.content}>
         <Hidden isMedium={true}>
           <header className={styles.header}>
-            <Transition isActiveOnMount={true} type="fade">
+            <Transition isActiveOnMount={true} type={TRANSITIONS.TYPE.FADE}>
               <Heading
                 className={styles.productName}
                 level={HEADING.LEVEL.ONE}
@@ -89,7 +99,7 @@ const ProductDetailBody = ({ className, copy, theme }) => {
 
         <Hidden isMedium={true}>
           <div className={styles.description}>
-            <Transition isActiveOnMount={true} type="fade">
+            <Transition isActiveOnMount={true} type={TRANSITIONS.TYPE.FADE}>
               <Paragraph className={styles.descriptionCopy} theme={theme}>
                 {description}
               </Paragraph>
@@ -98,7 +108,10 @@ const ProductDetailBody = ({ className, copy, theme }) => {
         </Hidden>
 
         <div className={styles.purchase}>
-          <Transition isActiveOnMount={true} type="shiftInDown">
+          <Transition
+            isActiveOnMount={true}
+            type={TRANSITIONS.TYPE.SHIFT_IN_DOWN}
+          >
             <Heading
               hasMediumWeightFont={true}
               isFlush={true}
@@ -109,24 +122,26 @@ const ProductDetailBody = ({ className, copy, theme }) => {
               {copy?.size}
             </Heading>
           </Transition>
-          <Transition isActiveOnMount={true} type="shiftInDown">
+          <Transition
+            isActiveOnMount={true}
+            type={TRANSITIONS.TYPE.SHIFT_IN_DOWN}
+          >
             <RadioGroup
               className={styles.variants}
-              dataTestRef="PRODUCT_COMMERCE_VARIANT_SELECT"
-              name={radioGroupName}
-              onChange={e => onVariantChange(e, variants)}
+              dataTestRef={RADIO_GROUP_DATA_TEST_REF}
+              name={RADIO_GROUP_NAME}
+              onChange={handleOnVariantChange}
               options={variantRadioOptions}
               theme={theme}
               value={selectedVariant.sku}
             />
           </Transition>
-          <Transition isActiveOnMount={true} type="shiftInDown">
-            <AddToCartButton
-              copy={copy?.addToCart}
-              dataTestRef="PRODUCT_COMMERCE_ADD_TO_CART_CTA"
-              theme={theme}
-            />
-          </Transition>
+
+          <AddToCartButton
+            copy={copy?.addToCart}
+            dataTestRef={ADD_TO_CART_BUTTON_DATA_TEST_REF}
+            theme={theme}
+          />
         </div>
 
         <Hidden isLarge={true} isMedium={true} isXLarge={true}>
@@ -134,7 +149,10 @@ const ProductDetailBody = ({ className, copy, theme }) => {
         </Hidden>
 
         <div className={styles.details}>
-          <Transition isActiveOnMount={true} type="shiftInDown">
+          <Transition
+            isActiveOnMount={true}
+            type={TRANSITIONS.TYPE.SHIFT_IN_DOWN}
+          >
             <DefinitionList
               className={styles.definitionList}
               hasBottomBorder={true}
@@ -152,8 +170,8 @@ const ProductDetailBody = ({ className, copy, theme }) => {
           <header className={styles.mediumHeader}>
             <Heading
               className={styles.mediumProductName}
-              level="1"
-              size="xLarge"
+              level={HEADING.LEVEL.ONE}
+              size={HEADING.SIZE.X_LARGE}
               theme={theme}
             >
               {productName}
@@ -170,7 +188,7 @@ const ProductDetailBody = ({ className, copy, theme }) => {
         <FlyinPanel
           heading={copy.ingredients.heading}
           isVisible={isFlyinPanelVisible}
-          onClose={() => setIsFlyinPanelVisible(false)}
+          onClose={handleOnCloseClick}
         >
           {ingredients}
         </FlyinPanel>

@@ -77,7 +77,11 @@ ProductDetailHeader.propTypes = {
 ProductDetailHeader.defaultProps = {
   breadcrumbs: undefined,
   className: undefined,
-  copy: undefined,
+  copy: {
+    addToCart: undefined,
+    size: undefined,
+    ingredients: undefined,
+  },
   theme: 'dark',
 };
 

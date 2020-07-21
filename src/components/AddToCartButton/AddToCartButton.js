@@ -6,6 +6,7 @@ import {
   useProductDetailContext,
   useVariantSelectContext,
 } from 'contexts';
+import { HYPERLINK_STYLE_TYPES } from '~/constants';
 import Button from '~/components/Button';
 import Loading from '~/components/Loading';
 import Hyperlink from '~/components/Hyperlink';
@@ -46,7 +47,7 @@ const AddToCartButton = ({
         className={classSet}
         dataTestRef={dataTestRef}
         isAlternate={true}
-        style={'Internal No Icon Button Link'}
+        style={HYPERLINK_STYLE_TYPES.INTERNAL_NO_ICON_BUTTON_LINK}
         theme={theme}
         title={alternateAction?.label}
         url={alternateAction?.url}
