@@ -23,4 +23,6 @@ export default {
     hasTargetInNewWindow: null,
     type: 'Relative',
   },
+  caption:
+    '<p>Our passion for <b>creativity</b> in form and function, extends to the setting of a meal among staff.</p>',
 };

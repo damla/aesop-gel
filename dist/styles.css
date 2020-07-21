@@ -3294,6 +3294,32 @@ sans-serif;
             flex: 0 0 calc(50% - 40px / 4)
 }
   }
+.DoubleImage-module_figcaption__1F45P {
+  padding-right: 16px;
+}
+.DoubleImage-module_dark__PS73P .DoubleImage-module_figcaption__1F45P {
+    color: #333;
+  }
+.DoubleImage-module_light__NfoUy .DoubleImage-module_figcaption__1F45P {
+    color: #fffef0;
+  }
+@media (min-width: 640px) {
+.DoubleImage-module_figcaption__1F45P {
+    padding-right: 34px
+}
+  }
+@media (min-width: 1025px) {
+.DoubleImage-module_figcaption__1F45P {
+    padding-right: 40px
+}
+  }
+.DoubleImage-module_caption__22gCy {
+  font-family: 'Suisse Regular'
+,
+sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
 
 :root {
   /* Base colours */
