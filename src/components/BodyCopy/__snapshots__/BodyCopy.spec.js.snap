@@ -26,12 +26,12 @@ exports[`<BodyCopy /> renders base component correctly 1`] = `
     </h4>
   </header>
   <div
-    className="copy dark"
+    className="copy"
   >
     Parsley Seed Cream. [The Paris Review](http://theparisreview.org) Intensely soothing, nourishing and hydrating, this elegant formulation contains a potent blend of botanicals that offer fortification of the highest order against free radicals.
   </div>
   <div
-    className="base flush"
+    className="base flush ctaWrapper"
   >
     <a
       className="base blockStyle hasIcon center dark  link flushLink center"
@@ -48,17 +48,17 @@ exports[`<BodyCopy /> renders base component correctly 1`] = `
           className="base rightUpArrow dark"
           data-ref=""
           focusable="false"
-          height={10}
+          height={15}
           role="img"
           style={
             Object {
-              "height": "10px",
-              "width": "10px",
+              "height": "15px",
+              "width": "15px",
             }
           }
           tabIndex={-1}
           viewBox="0 0 50 50"
-          width={10}
+          width={15}
         >
           <g>
             <path
@@ -86,7 +86,7 @@ exports[`<BodyCopy /> renders promary title as an \`h2\` if no \`eyebrow\` or \`
     </h2>
   </header>
   <div
-    className="base flush"
+    className="base flush ctaWrapper"
   />
 </article>
 `;
@@ -105,7 +105,7 @@ exports[`<BodyCopy /> renders promary title as an \`h2\` if no \`eyebrow\` prop 
     </h2>
   </header>
   <div
-    className="base flush"
+    className="base flush ctaWrapper"
   />
 </article>
 `;

@@ -57,7 +57,7 @@ exports[`<Audio /> renders base component correctly 1`] = `
       className="controls"
     >
       <button
-        className="base disabled inlineStyle dark seekForward"
+        className="base inlineStyle dark disabled seekForward"
         disabled={true}
         onClick={[Function]}
         title="Seek Forward"
@@ -90,7 +90,7 @@ exports[`<Audio /> renders base component correctly 1`] = `
         </svg>
       </button>
       <button
-        className="base disabled inlineStyle dark playPauseButton disabled"
+        className="base inlineStyle dark disabled playPauseButton disabled"
         disabled={true}
         onClick={[Function]}
         title="Loading audio file"
@@ -148,7 +148,7 @@ exports[`<Audio /> renders base component correctly 1`] = `
         </svg>
       </button>
       <button
-        className="base disabled inlineStyle dark seekBackward"
+        className="base inlineStyle dark disabled seekBackward"
         disabled={true}
         onClick={[Function]}
         title="Seek Backward"
