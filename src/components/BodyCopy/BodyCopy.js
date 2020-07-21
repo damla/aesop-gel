@@ -37,9 +37,9 @@ const BodyCopy = ({
         theme={theme}
       />
 
-      {copy && <div className={styles.copy}>{copy}</div>}
+      {copy && <div className={cx(styles.copy, styles[theme])}>{copy}</div>}
 
-      <LinkButtonGroup className={styles.ctaWrapper} theme={theme}>
+      <LinkButtonGroup theme={theme}>
         {cta && <Hyperlink {...cta}>{cta.text}</Hyperlink>}
         {secondaryCta && (
           <Hyperlink {...secondaryCta}>{secondaryCta.text}</Hyperlink>

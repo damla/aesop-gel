@@ -17,11 +17,11 @@ describe('<RadioGroup />', () => {
       .create(
         <RadioGroup
           className={RadioGroupFixture.className}
-          dataTestRef={RadioGroupFixture.dataTestRef}
           errorMessage={RadioGroupFixture.errorMessage}
           name={RadioGroupFixture.name}
           onChange={RadioGroupFixture.onChange}
           options={RadioGroupFixture.options}
+          testReference={RadioGroupFixture.testReference}
           value={RadioGroupFixture.value}
         />,
       )

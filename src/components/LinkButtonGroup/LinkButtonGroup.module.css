@@ -21,11 +21,10 @@
 
 .link {
   display: inline-block;
-  width: auto;
   min-width: auto;
-  max-width: 380px;
+  max-width: 100%;
   flex: 1 1 auto;
-  padding: 15px;
+  padding: 12px;
   margin-right: 2px;
   margin-bottom: calc(var(--layout-md-spacing) / 2);
   margin-left: 2px;

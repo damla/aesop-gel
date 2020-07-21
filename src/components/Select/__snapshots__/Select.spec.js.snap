@@ -12,6 +12,7 @@ exports[`<Select /> renders base component correctly 1`] = `
   </label>
   <select
     className="input"
+    data-test-ref="SELECT_TEST_REF"
     id="select"
     name="select"
     onBlur={[Function]}

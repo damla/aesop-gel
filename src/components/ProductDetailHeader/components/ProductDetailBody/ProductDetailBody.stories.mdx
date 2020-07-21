@@ -5,12 +5,11 @@ import {
   ProductDetailContextProvider,
   VariantSelectContextProvider,
 } from '~/contexts';
-import mockAddToCartButtonOnClick from '~/components/AddToCartButton/__mocks__/AddToCartButton.onClick';
-import AddToCartButtonFixture from '~/components/AddToCartButton/AddToCartButton.fixture';
-import ProductDetailBodyFixture from './ProductDetailBody.fixture';
-import ProductDetailHeaderFixture from '~/components/ProductDetailHeader/ProductDetailHeader.fixture';
 import ProductDetailImageFixture from '~/components/ProductDetailHeader/components/ProductDetailImage/ProductDetailImage.fixture';
+import ProductDetailHeaderFixture from '~/components/ProductDetailHeader/ProductDetailHeader.fixture';
 import ProductDetailBody from './ProductDetailBody';
+import ProductDetailBodyFixture from './ProductDetailBody.fixture';
+import mockAddToCartButtonOnClick from '~/components/AddToCartButton/__mocks__/AddToCartButton.onClick';
 
 <Meta
   title="Components/ProductDetailHeader/ProductDetailBody"
@@ -26,7 +25,6 @@ import ProductDetailBody from './ProductDetailBody';
       const { productName, description, ...productRest } = ProductDetailHeaderFixture.product;
       const productDetails = {
         productName: knobs.text('productName', productName, 'Content'),
-        description: knobs.text('description', description, 'Content'),
         ...productRest,
       }
       return (
@@ -35,10 +33,7 @@ import ProductDetailBody from './ProductDetailBody';
             <VariantSelectContextProvider variants={ProductDetailImageFixture.variantOptions}>
               <ProductDetailBody
                 className={ProductDetailBodyFixture.className}
-                copy={{
-                  addToCart: AddToCartButtonFixture.copy,
-                  ...ProductDetailBodyFixture.copy,
-                }}
+                copy={ProductDetailBodyFixture.copy}
                 theme={theme}
               />
             </VariantSelectContextProvider>
