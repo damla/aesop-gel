@@ -36,7 +36,7 @@ const ContentHubArticleList = forwardRef(function ContentHubArticleListRef({
               isHorizontal={true}
               key={article.id}
               title={article.title}
-              url={article.url}
+              uri={article.uri}
               verticalThumbnail={article.verticalThumbnail}
             />
           ))
@@ -52,7 +52,7 @@ const ContentHubArticleList = forwardRef(function ContentHubArticleListRef({
                   isHorizontal={!pattern}
                   key={articles[0].id}
                   title={articles[0].title}
-                  url={articles[0].url}
+                  uri={articles[0].uri}
                   verticalThumbnail={articles[0].verticalThumbnail}
                 />
               )}
@@ -67,7 +67,7 @@ const ContentHubArticleList = forwardRef(function ContentHubArticleListRef({
                   isHorizontal={pattern}
                   key={articles[1].id}
                   title={articles[1].title}
-                  url={articles[1].url}
+                  uri={articles[1].uri}
                   verticalThumbnail={articles[1].verticalThumbnail}
                 />
               )}
@@ -83,7 +83,7 @@ const ContentHubArticleList = forwardRef(function ContentHubArticleListRef({
                   id={(articles[count - 2] || articles[0]).id}
                   isHorizontal={pattern}
                   title={(articles[count - 2] || articles[0]).title}
-                  url={(articles[count - 2] || articles[0]).url}
+                  uri={(articles[count - 2] || articles[0]).uri}
                   verticalThumbnail={
                     (articles[count - 2] || articles[0]).verticalThumbnail
                   }
@@ -119,10 +119,10 @@ const ContentHubArticleList = forwardRef(function ContentHubArticleListRef({
                       ? articles[count - 1].title
                       : articles[1].title
                   }
-                  url={
+                  uri={
                     articles[count - 1]
-                      ? articles[count - 1].url
-                      : articles[1].url
+                      ? articles[count - 1].uri
+                      : articles[1].uri
                   }
                   verticalThumbnail={
                     articles[count - 1]

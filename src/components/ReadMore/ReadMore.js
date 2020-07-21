@@ -22,7 +22,7 @@ const ReadMore = forwardRef(function ReadMoreRef({ articles, className }) {
             isReadMore={true}
             key={article.id}
             title={article.title}
-            url={article.url}
+            uri={article.uri}
             verticalThumbnail={article.verticalThumbnail}
           />
         ))}

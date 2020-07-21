@@ -19,7 +19,7 @@ const ContentHubArticle = forwardRef(function ContentHubArticleRef({
   copy,
   category,
   className,
-  url,
+  uri,
 }) {
   const classSet = cx(styles.base, className);
 
@@ -43,7 +43,7 @@ const ContentHubArticle = forwardRef(function ContentHubArticleRef({
           <Hyperlink
             className={imageClassSet}
             title={`Link to ${title}`}
-            url={url}
+            url={uri}
           >
             <Image
               altText={currentImage.altText}
@@ -59,7 +59,7 @@ const ContentHubArticle = forwardRef(function ContentHubArticleRef({
             {category}
           </Heading>
         )}
-        <Hyperlink title={`Link to ${title}`} url={url}>
+        <Hyperlink title={`Link to ${title}`} url={uri}>
           <span className={titleClassSet}>{title}</span>
         </Hyperlink>
         {copy && (
@@ -72,7 +72,7 @@ const ContentHubArticle = forwardRef(function ContentHubArticleRef({
           <Hyperlink
             className={imageClassSet}
             title={`Link to ${title}`}
-            url={url}
+            url={uri}
           >
             <Image
               altText={currentImage.altText}
@@ -99,7 +99,7 @@ ContentHubArticle.propTypes = {
   copy: PropTypes.object,
   category: PropTypes.string,
   className: PropTypes.string,
-  url: PropTypes.string,
+  uri: PropTypes.string,
 };
 
 ContentHubArticle.defaultProps = {
@@ -113,7 +113,7 @@ ContentHubArticle.defaultProps = {
   copy: undefined,
   category: undefined,
   className: undefined,
-  url: undefined,
+  uri: undefined,
 };
 
 export default ContentHubArticle;

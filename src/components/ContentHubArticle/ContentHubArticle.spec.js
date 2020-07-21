@@ -24,7 +24,7 @@ describe('<ContentHubArticle />', () => {
           isMenuItem={false}
           isReadMore={false}
           title={ContentHubArticleFixture.title}
-          url={ContentHubArticleFixture.url}
+          uri={ContentHubArticleFixture.uri}
           verticalThumbnail={ContentHubArticleFixture.verticalThumbnail}
         />,
       )

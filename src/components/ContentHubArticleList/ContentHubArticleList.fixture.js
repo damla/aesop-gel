@@ -4,7 +4,7 @@ export default {
       id: 'test_1',
       category: 'Product',
       title: '1. Senorial consectetur adipiscing elit.',
-      url: 'https://www.aesop.com/au/r/careers',
+      uri: 'https://www.aesop.com/au/r/careers',
       verticalThumbnail: {
         altText: 'vertical_hub',
         large: './assets/images/ContentHubArticle/vertical_hub.jpg',
@@ -26,7 +26,7 @@ export default {
       category: 'Product',
       title:
         '2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante.',
-      url: 'https://www.aesop.com/au/r/careers',
+      uri: 'https://www.aesop.com/au/r/careers',
       verticalThumbnail: {
         altText: 'vertical_hub',
         large: './assets/images/ContentHubArticle/vertical_hub.jpg',
@@ -48,7 +48,7 @@ export default {
       category: 'Culture',
       title:
         '3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare, id dictum ante. Suspendisse et ornare mauris, id dictum ante.',
-      url: 'https://www.aesop.com/au/r/careers',
+      uri: 'https://www.aesop.com/au/r/careers',
       verticalThumbnail: {
         altText: 'vertical_hub',
         large: './assets/images/ContentHubArticle/vertical_hub.jpg',
@@ -70,7 +70,7 @@ export default {
       category: 'Aesop Spotify',
       title:
         '4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante. Suspendisse et ornare mauris, id dictum ante.',
-      url: 'https://www.aesop.com/au/r/careers',
+      uri: 'https://www.aesop.com/au/r/careers',
       verticalThumbnail: {
         altText: 'vertical_hub',
         large: './assets/images/ContentHubArticle/vertical_hub.jpg',
