@@ -44,6 +44,7 @@ const AddToCartButton = ({
     return (
       <Hyperlink
         className={classSet}
+        dataTestRef={dataTestRef}
         isAlternate={true}
         style={'Internal No Icon Button Link'}
         theme={theme}
@@ -128,7 +129,7 @@ AddToCartButton.propTypes = {
       title: PropTypes.string,
     }),
   }),
-  dataTestRef: PropTypes.string,
+  dataTestRef: PropTypes.string.isRequired,
   isEnabled: PropTypes.bool,
   isFullWidth: PropTypes.bool,
   theme: PropTypes.oneOf(['dark', 'light']),
@@ -137,11 +138,11 @@ AddToCartButton.propTypes = {
 AddToCartButton.defaultProps = {
   className: undefined,
   copy: {
-    cartAction: 'Add to your cart',
-    updateNotification: 'added to your cart',
+    cartAction: undefined,
+    updateNotification: undefined,
     outOfStock: {
-      label: 'Out of Stock',
-      title: 'Out of stock',
+      label: undefined,
+      title: undefined,
     },
   },
   dataTestRef: undefined,
