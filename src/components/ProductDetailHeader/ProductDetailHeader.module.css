@@ -39,10 +39,6 @@
   @media (--viewport-lg) {
     width: 40%;
   }
-
-  @media (--viewport-xl) {
-    width: auto;
-  }
 }
 
 .image {
@@ -53,5 +49,12 @@
 
   @media (--viewport-xl) {
     width: auto;
+  }
+}
+
+.breadcrumbs {
+  @media (--viewport-md-only) {
+    margin: 0;
+    transform: translateY(20px);
   }
 }
