@@ -24,22 +24,13 @@ exports[`<AddToCartButton /> renders base component correctly 1`] = `
 
 exports[`<AddToCartButton /> renders out of stock button correctly 1`] = `
 <button
-  className="base alternate blockStyle dark base fullWidth"
+  className="base alternate blockStyle dark disabled base fullWidth"
   data-test-ref="DATA_TEST_REF"
-  disabled={false}
+  disabled={true}
   onClick={[Function]}
-  title="Add to your cart — $56.45"
+  title="Out of stock"
   type="button"
 >
-  <span
-    className="label"
-  >
-    <span>
-      Lorem ipsum dolor added to your cart
-    </span>
-    <span>
-      Add to your cart — $56.45
-    </span>
-  </span>
+  Out of Stock
 </button>
 `;

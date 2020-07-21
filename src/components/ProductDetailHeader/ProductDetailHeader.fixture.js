@@ -63,21 +63,21 @@ export default {
         },
       },
     ],
-    variantOutOfStock: [
-      {
-        size: '50 ml',
-        sku: 'ARD33',
-        price: '$26.45',
-        isInStock: false,
-        image: {
-          altText: 'alt-tag-ARD33',
-          sizes: {
-            large: './assets/images/Product/variant-one-large.png',
-            medium: './assets/images/Product/variant-one-medium.png',
-            small: './assets/images/Product/variant-one-small.png',
-          },
+  },
+  variantOutOfStock: [
+    {
+      size: '50 ml',
+      sku: 'ARD33',
+      price: '$26.45',
+      isInStock: false,
+      image: {
+        altText: 'alt-tag-ARD33',
+        sizes: {
+          large: './assets/images/Product/variant-one-large.png',
+          medium: './assets/images/Product/variant-one-medium.png',
+          small: './assets/images/Product/variant-one-small.png',
         },
       },
-    ],
-  },
+    },
+  ],
 };
