@@ -16,14 +16,14 @@ describe('<DoubleImage />', () => {
     const tree = renderer
       .create(
         <DoubleImage
-          imageOne={{
+          imageVideo1={{
             altText: DoubleImageFixture.imageOne.altText,
             caption: DoubleImageFixture.imageOne.caption,
             large: DoubleImageFixture.imageOne.large,
             medium: DoubleImageFixture.imageOne.medium,
             small: DoubleImageFixture.imageOne.small,
           }}
-          imageTwo={{
+          imageVideo2={{
             altText: DoubleImageFixture.imageTwo.altText,
             caption: DoubleImageFixture.imageTwo.caption,
             large: DoubleImageFixture.imageTwo.large,

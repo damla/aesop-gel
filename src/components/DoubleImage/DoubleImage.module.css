@@ -23,6 +23,10 @@
   }
 }
 
+.imageLinkWrapper {
+  display: block;
+}
+
 .figcaption {
   padding-right: var(--layout-sm-spacing);
 

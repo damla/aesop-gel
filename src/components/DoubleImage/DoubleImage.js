@@ -5,14 +5,15 @@ import Figure from '~/components/Figure';
 import Heading from '~/components/Heading';
 import Hyperlink from '~/components/Hyperlink';
 import Image from '~/components/Image';
+import Video from '~/components/Video';
 import styles from './DoubleImage.module.css';
 
 const DoubleImage = ({
   caption1,
   caption2,
   className,
-  imageOne,
-  imageTwo,
+  imageVideo1,
+  imageVideo2,
   link1,
   link2,
   theme,
@@ -21,38 +22,68 @@ const DoubleImage = ({
 }) => {
   const classSet = cx(styles.base, styles[theme], className);
 
-  const Image1 = () => (
-    <Image
-      altText={imageOne.altText}
-      large={imageOne.large}
-      medium={imageOne.medium}
-      small={imageOne.small}
-    />
-  );
+  const ImageVideoBlock1 = () => {
+    return imageVideo1.type === 'video' ? (
+      <Video
+        hasAllowAudio={false}
+        hasAutoplay={true}
+        hasControls={false}
+        hasLoop={true}
+        hasPlayInFullScreen={false}
+        isFullWidth={true}
+        large={imageVideo1.large}
+        medium={imageVideo1.medium}
+        poster={imageVideo1.poster}
+        small={imageVideo1.small}
+      />
+    ) : (
+      <Image
+        altText={imageVideo1.altText}
+        large={imageVideo1.large}
+        medium={imageVideo1.medium}
+        small={imageVideo1.small}
+      />
+    );
+  };
 
-  const Image2 = () => (
-    <Image
-      altText={imageTwo.altText}
-      large={imageTwo.large}
-      medium={imageTwo.medium}
-      small={imageTwo.small}
-    />
-  );
+  const ImageVideoBlock2 = () => {
+    return imageVideo2.type === 'video' ? (
+      <Video
+        hasAllowAudio={false}
+        hasAutoplay={true}
+        hasControls={false}
+        hasLoop={true}
+        hasPlayInFullScreen={false}
+        isFullWidth={true}
+        large={imageVideo2.large}
+        medium={imageVideo2.medium}
+        poster={imageVideo2.poster}
+        small={imageVideo2.small}
+      />
+    ) : (
+      <Image
+        altText={imageVideo2.altText}
+        large={imageVideo2.large}
+        medium={imageVideo2.medium}
+        small={imageVideo2.small}
+      />
+    );
+  };
 
   return (
     <div className={classSet}>
       <Figure
-        caption={!title1 && !caption1 && imageOne.caption}
+        caption={!title1 && !caption1 && imageVideo1.caption}
         className={styles.figure}
         hasCaptionBorder={false}
         theme={theme}
       >
         {link1 ? (
-          <Hyperlink {...link1}>
-            <Image1 />
+          <Hyperlink {...link1} className={styles.imageLinkWrapper}>
+            <ImageVideoBlock1 />
           </Hyperlink>
         ) : (
-          <Image1 />
+          <ImageVideoBlock1 />
         )}
         {(title1 || caption1) && (
           <figcaption className={styles.figcaption}>
@@ -77,17 +108,17 @@ const DoubleImage = ({
         )}
       </Figure>
       <Figure
-        caption={!title2 && !caption2 && imageTwo.caption}
+        caption={!title2 && !caption2 && imageVideo2.caption}
         className={styles.figure}
         hasCaptionBorder={false}
         theme={theme}
       >
         {link2 ? (
-          <Hyperlink {...link2}>
-            <Image2 />
+          <Hyperlink {...link2} className={styles.imageLinkWrapper}>
+            <ImageVideoBlock2 />
           </Hyperlink>
         ) : (
-          <Image2 />
+          <ImageVideoBlock2 />
         )}
         {(title2 || caption2) && (
           <figcaption className={styles.figcaption}>
@@ -124,20 +155,40 @@ const linkType = PropTypes.shape({
 
 DoubleImage.propTypes = {
   className: PropTypes.string,
-  imageOne: PropTypes.shape({
-    altText: PropTypes.string,
-    caption: PropTypes.string,
-    large: PropTypes.string,
-    medium: PropTypes.string,
-    small: PropTypes.string,
-  }),
-  imageTwo: PropTypes.shape({
-    altText: PropTypes.string,
-    caption: PropTypes.string,
-    large: PropTypes.string,
-    medium: PropTypes.string,
-    small: PropTypes.string,
-  }),
+  imageVideo1: PropTypes.oneOfType([
+    PropTypes.shape({
+      type: PropTypes.string,
+      altText: PropTypes.string,
+      caption: PropTypes.string,
+      large: PropTypes.string,
+      medium: PropTypes.string,
+      small: PropTypes.string,
+    }),
+    PropTypes.shape({
+      type: PropTypes.string,
+      large: PropTypes.string,
+      medium: PropTypes.string,
+      small: PropTypes.string,
+      poster: PropTypes.object,
+    }),
+  ]),
+  imageVideo2: PropTypes.oneOfType([
+    PropTypes.shape({
+      type: PropTypes.string,
+      altText: PropTypes.string,
+      caption: PropTypes.string,
+      large: PropTypes.string,
+      medium: PropTypes.string,
+      small: PropTypes.string,
+    }),
+    PropTypes.shape({
+      type: PropTypes.string,
+      large: PropTypes.string,
+      medium: PropTypes.string,
+      small: PropTypes.string,
+      poster: PropTypes.object,
+    }),
+  ]),
   link1: linkType,
   link2: linkType,
   theme: PropTypes.oneOf(['dark', 'light']),
@@ -149,8 +200,8 @@ DoubleImage.propTypes = {
 
 DoubleImage.defaultProps = {
   className: undefined,
-  imageOne: undefined,
-  imageTwo: undefined,
+  imageVideo1: undefined,
+  imageVideo2: undefined,
   theme: 'dark',
   link1: undefined,
   link2: undefined,

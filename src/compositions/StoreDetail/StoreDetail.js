@@ -80,13 +80,15 @@ const StoreDetail = ({ className }) => {
 
       <Podium horizontalPadding="small" verticalPadding="small">
         <DoubleImage
-          imageOne={{
+          imageVideo1={{
+            type: StoreDetailFixture.doubleImage.imageOne.type,
             altText: StoreDetailFixture.doubleImage.imageOne.altText,
             large: StoreDetailFixture.doubleImage.imageOne.large,
             medium: StoreDetailFixture.doubleImage.imageOne.medium,
             small: StoreDetailFixture.doubleImage.imageOne.small,
           }}
-          imageTwo={{
+          imageVideo2={{
+            type: StoreDetailFixture.doubleImage.imageOne.type,
             altText: StoreDetailFixture.doubleImage.imageTwo.altText,
             large: StoreDetailFixture.doubleImage.imageTwo.large,
             medium: StoreDetailFixture.doubleImage.imageTwo.medium,
