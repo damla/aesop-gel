@@ -1,5 +1,12 @@
 import { useEffect, useState } from 'react';
-import { Loader } from 'google-maps';
+import Loader from 'google-maps';
+
+const loadGoogleMapsAsync = loader =>
+  new Promise(resolve => {
+    loader.load(google => {
+      resolve(google);
+    });
+  });
 
 export const useGoogleMap = (apiKey, options = { libraries: ['places'] }) => {
   const [googleMap, setGoogleMap] = useState(null);
@@ -9,9 +16,20 @@ export const useGoogleMap = (apiKey, options = { libraries: ['places'] }) => {
     const loadGoogleMap = async () => {
       setIsLoading(true);
 
-      const loader = new Loader(apiKey, options);
+      const { languageCode, libraries, regionCode } = options;
 
-      setGoogleMap(await loader.load());
+      Loader.KEY = apiKey;
+      Loader.LIBRARIES = libraries;
+
+      if (languageCode) {
+        Loader.LANGUAGE = languageCode;
+      }
+
+      if (regionCode) {
+        Loader.REGION = regionCode;
+      }
+
+      setGoogleMap(await loadGoogleMapsAsync(Loader));
       setIsLoading(false);
     };
 

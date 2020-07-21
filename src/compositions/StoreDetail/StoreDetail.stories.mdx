@@ -2,7 +2,6 @@ import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import * as knobs from '@storybook/addon-knobs';
 import constants from '~.storybook/constants';
 import { GoogleMapsContextProvider } from '~/contexts';
-import { useGoogleMaps } from '~/customHooks';
 import StoreDetail from './StoreDetail';
 import StoreDetailFixture from './StoreDetail.fixture';
 
@@ -12,7 +11,7 @@ import StoreDetailFixture from './StoreDetail.fixture';
 
 <Preview>
   <Story name="Base component">
-    <GoogleMapsContextProvider value={useGoogleMaps(constants.GOOGLE_MAPS.DEVELOPMENT_API_KEY)}>
+    <GoogleMapsContextProvider apiKey={constants.GOOGLE_MAPS.DEVELOPMENT_API_KEY}>
       <StoreDetail />
     </GoogleMapsContextProvider>
   </Story>
