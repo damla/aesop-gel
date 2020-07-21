@@ -74,29 +74,22 @@ const ProductDetailBody = ({ className, copy, theme }) => {
       <div className={styles.content}>
         <Hidden isMedium={true}>
           <header className={styles.header}>
-            <Transition isActiveOnMount={true} type="slowFade">
-              <>
-                <Heading
-                  className={styles.productName}
-                  level={HEADING.LEVEL.ONE}
-                  size={HEADING.SIZE.X_LARGE}
-                  theme={theme}
-                >
-                  {productName}
-                </Heading>
-                <Hidden isMedium={true} isSmall={true}>
-                  <Paragraph className={styles.descriptionCopy} theme={theme}>
-                    {description}
-                  </Paragraph>
-                </Hidden>
-              </>
+            <Transition isActiveOnMount={true} type="fade">
+              <Heading
+                className={styles.productName}
+                level={HEADING.LEVEL.ONE}
+                size={HEADING.SIZE.X_LARGE}
+                theme={theme}
+              >
+                {productName}
+              </Heading>
             </Transition>
           </header>
         </Hidden>
 
-        <Hidden isLarge={true} isMedium={true} isXLarge={true}>
+        <Hidden isMedium={true}>
           <div className={styles.description}>
-            <Transition isActiveOnMount={true} type="slowFade">
+            <Transition isActiveOnMount={true} type="fade">
               <Paragraph className={styles.descriptionCopy} theme={theme}>
                 {description}
               </Paragraph>
@@ -106,36 +99,36 @@ const ProductDetailBody = ({ className, copy, theme }) => {
 
         <div className={styles.purchase}>
           <Transition isActiveOnMount={true} type="shiftInDown">
-            <>
-              <Heading
-                hasMediumWeightFont={true}
-                isFlush={true}
-                level={HEADING.LEVEL.FOUR}
-                size={HEADING.SIZE.X_X_SMALL}
-                theme={theme}
-              >
-                {copy?.size}
-              </Heading>
-
-              <RadioGroup
-                className={styles.variants}
-                dataTestRef="PRODUCT_COMMERCE_VARIANT_SELECT"
-                name={radioGroupName}
-                onChange={e => onVariantChange(e, variants)}
-                options={variantRadioOptions}
-                theme={theme}
-                value={selectedVariant.sku}
-              />
-
-              <AddToCartButton
-                dataTestRef="PRODUCT_COMMERCE_ADD_TO_CART_CTA"
-                theme={theme}
-              />
-            </>
+            <Heading
+              hasMediumWeightFont={true}
+              isFlush={true}
+              level={HEADING.LEVEL.FOUR}
+              size={HEADING.SIZE.X_X_SMALL}
+              theme={theme}
+            >
+              {copy?.size}
+            </Heading>
+          </Transition>
+          <Transition isActiveOnMount={true} type="shiftInDown">
+            <RadioGroup
+              className={styles.variants}
+              dataTestRef="PRODUCT_COMMERCE_VARIANT_SELECT"
+              name={radioGroupName}
+              onChange={e => onVariantChange(e, variants)}
+              options={variantRadioOptions}
+              theme={theme}
+              value={selectedVariant.sku}
+            />
+          </Transition>
+          <Transition isActiveOnMount={true} type="shiftInDown">
+            <AddToCartButton
+              dataTestRef="PRODUCT_COMMERCE_ADD_TO_CART_CTA"
+              theme={theme}
+            />
           </Transition>
         </div>
 
-        <Hidden isLarge={true} isMedium={true}>
+        <Hidden isLarge={true} isMedium={true} isXLarge={true}>
           <div className={styles.cartDisclaimer}>{cartDisclaimer}</div>
         </Hidden>
 

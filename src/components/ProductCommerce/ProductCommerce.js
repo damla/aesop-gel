@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { HYPERLINK_STYLE_TYPES } from '~/constants';
@@ -35,7 +35,7 @@ const ProductCommerce = ({
     variants,
   } = useVariantSelectContext();
 
-  const imageRef = React.useRef();
+  const imageRef = useRef();
 
   const [currentImage, isImageActive] = useImageTransition(
     selectedVariant?.image,
