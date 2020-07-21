@@ -6,9 +6,13 @@
 }
 
 .category {
-  padding: 10px 10px 10px 0;
+  /* padding: 10px 10px 10px 0; */
   border-bottom: 1px solid #bcbbb4;
-  font-weight: var(--font-weight-bold);
+  font-size: 16px;
+  font-weight: var(--font-weight-semi-bold);
+  letter-spacing: 0;
+  line-height: 24px;
+
   &::after {
     display: inline-block;
     padding: 0 10px;
@@ -22,8 +26,7 @@
 
 .title {
   border-bottom: 1px solid transparent;
-
-  /* color: var(--color-dark-label); */
+  color: var(--color-grey-20);
   font-family: var(--font-family-zapf-serif);
   font-size: rem(30px);
   letter-spacing: 0;
@@ -36,5 +39,5 @@
 }
 
 .note {
-  color: var(--color-dark-label);
+  color: var(--color-grey-30);
 }
