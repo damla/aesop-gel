@@ -103,6 +103,7 @@ const ProductCommerce = ({
         >
           <AddToCartButton
             className={styles.addToCartButton}
+            copy={copy.addToCart}
             dataTestRef="PRODUCT_COMMERCE_ADD_TO_CART_CTA"
             isFullWidth={false}
             theme={theme}
@@ -126,6 +127,14 @@ const ProductCommerce = ({
 ProductCommerce.propTypes = {
   className: PropTypes.string,
   copy: PropTypes.shape({
+    addToCart: PropTypes.shape({
+      cartAction: PropTypes.string,
+      updateNotification: PropTypes.string,
+      outOfStock: PropTypes.shape({
+        label: PropTypes.string,
+        title: PropTypes.string,
+      }),
+    }),
     size: PropTypes.string,
   }),
   cta: PropTypes.shape({
@@ -142,7 +151,15 @@ ProductCommerce.propTypes = {
 ProductCommerce.defaultProps = {
   className: undefined,
   copy: {
-    size: 'Size',
+    addToCart: {
+      cartAction: undefined,
+      updateNotification: undefined,
+      outOfStock: {
+        label: undefined,
+        title: undefined,
+      },
+    },
+    size: undefined,
   },
   cta: undefined,
   description: undefined,

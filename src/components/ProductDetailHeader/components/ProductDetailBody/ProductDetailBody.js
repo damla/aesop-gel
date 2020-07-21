@@ -122,6 +122,7 @@ const ProductDetailBody = ({ className, copy, theme }) => {
           </Transition>
           <Transition isActiveOnMount={true} type="shiftInDown">
             <AddToCartButton
+              copy={copy?.addToCart}
               dataTestRef="PRODUCT_COMMERCE_ADD_TO_CART_CTA"
               theme={theme}
             />
@@ -181,6 +182,14 @@ const ProductDetailBody = ({ className, copy, theme }) => {
 ProductDetailBody.propTypes = {
   className: PropTypes.string,
   copy: PropTypes.shape({
+    addToCart: PropTypes.shape({
+      cartAction: PropTypes.string,
+      updateNotification: PropTypes.string,
+      outOfStock: PropTypes.shape({
+        label: PropTypes.string,
+        title: PropTypes.string,
+      }),
+    }),
     size: PropTypes.string,
     ingredients: PropTypes.shape({
       heading: PropTypes.string,
@@ -194,6 +203,14 @@ ProductDetailBody.propTypes = {
 ProductDetailBody.defaultProps = {
   className: undefined,
   copy: {
+    addToCart: {
+      cartAction: undefined,
+      updateNotification: undefined,
+      outOfStock: {
+        label: undefined,
+        title: undefined,
+      },
+    },
     size: undefined,
     ingredients: {
       heading: undefined,

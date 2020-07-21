@@ -39,10 +39,6 @@
   @media (--viewport-lg) {
     width: 40%;
   }
-
-  @media (--viewport-xl) {
-    width: auto;
-  }
 }
 
 .image {

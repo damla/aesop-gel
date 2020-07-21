@@ -24,12 +24,9 @@ const ProductDetailHeader = ({ breadcrumbs, className, copy, theme }) => {
           </Hidden>
           <ProductDetailBody
             copy={{
+              addToCart: copy?.addToCart,
               size: copy?.size,
-              ingredients: {
-                heading: copy?.ingredients?.heading,
-                label: copy?.ingredients?.label,
-                title: copy?.ingredients?.title,
-              },
+              ingredients: copy?.ingredients,
             }}
             theme={theme}
           />
@@ -59,6 +56,14 @@ ProductDetailHeader.propTypes = {
   breadcrumbs: PropTypes.object,
   className: PropTypes.string,
   copy: PropTypes.shape({
+    addToCart: PropTypes.shape({
+      cartAction: PropTypes.string,
+      updateNotification: PropTypes.string,
+      outOfStock: PropTypes.shape({
+        label: PropTypes.string,
+        title: PropTypes.string,
+      }),
+    }),
     size: PropTypes.string,
     ingredients: PropTypes.shape({
       heading: PropTypes.string,
