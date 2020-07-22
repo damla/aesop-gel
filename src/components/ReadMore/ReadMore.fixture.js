@@ -17,9 +17,7 @@ export default {
         medium: './assets/images/ContentHubArticle/horizontal_hub.jpg',
         small: './assets/images/ContentHubArticle/horizontal_hub.jpg',
       },
-      copy: {
-        note: '15 minute read',
-      },
+      readingTime: '5 minute read',
     },
     {
       id: 'test_2',
@@ -39,9 +37,7 @@ export default {
         medium: './assets/images/ContentHubArticle/horizontal_hub.jpg',
         small: './assets/images/ContentHubArticle/horizontal_hub.jpg',
       },
-      copy: {
-        note: '5 minute read',
-      },
+      readingTime: '5 minute read',
     },
     {
       id: 'test_3',
@@ -61,9 +57,7 @@ export default {
         medium: './assets/images/ContentHubArticle/horizontal_hub.jpg',
         small: './assets/images/ContentHubArticle/horizontal_hub.jpg',
       },
-      copy: {
-        note: '5 minute read',
-      },
+      readingTime: '5 minute read',
     },
   ],
 };

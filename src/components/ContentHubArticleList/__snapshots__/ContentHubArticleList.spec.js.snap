@@ -89,7 +89,7 @@ exports[`<ContentHubArticleList /> renders base component correctly 1`] = `
         <h3
           className="base xSmall dark note"
         >
-          5 minute read
+          15 minute read
         </h3>
         <a
           className="base left dark link"
@@ -146,7 +146,7 @@ exports[`<ContentHubArticleList /> renders base component correctly 1`] = `
         <h3
           className="base xSmall dark note"
         >
-          5 minute read
+          15 minute read
         </h3>
         <a
           className="base left dark link"
@@ -203,7 +203,7 @@ exports[`<ContentHubArticleList /> renders base component correctly 1`] = `
         <h3
           className="base xSmall dark note"
         >
-          5 minute read
+          15 minute read
         </h3>
         <a
           className="base left dark link"

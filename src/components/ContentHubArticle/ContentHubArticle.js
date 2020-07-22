@@ -16,7 +16,7 @@ const ContentHubArticle = forwardRef(function ContentHubArticleRef({
   isReadMore, // if it's displayed in ReadMore section
   isMenuItem, // if it's displayed in Read Menu Navigation
   title,
-  copy,
+  readingTime,
   category,
   className,
   uri,
@@ -62,9 +62,9 @@ const ContentHubArticle = forwardRef(function ContentHubArticleRef({
         <Hyperlink title={`Link to ${title}`} url={uri}>
           <span className={titleClassSet}>{title}</span>
         </Hyperlink>
-        {copy && (
+        {readingTime && (
           <Heading className={noteClassSet} level={'3'} size="xSmall">
-            {copy.note}
+            {readingTime}
           </Heading>
         )}
 
@@ -96,7 +96,7 @@ ContentHubArticle.propTypes = {
   isReadMore: PropTypes.bool,
   isMenuItem: PropTypes.bool,
   title: PropTypes.string,
-  copy: PropTypes.object,
+  readingTime: PropTypes.string,
   category: PropTypes.string,
   className: PropTypes.string,
   uri: PropTypes.string,
@@ -110,7 +110,7 @@ ContentHubArticle.defaultProps = {
   isReadMore: false,
   isMenuItem: false,
   title: undefined,
-  copy: undefined,
+  readingTime: undefined,
   category: undefined,
   className: undefined,
   uri: undefined,

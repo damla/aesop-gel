@@ -54,7 +54,7 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
     <h3
       className="base xSmall dark note"
     >
-      15 minute read
+      5 minute read
     </h3>
   </div>
   <div

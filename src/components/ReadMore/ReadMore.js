@@ -15,12 +15,12 @@ const ReadMore = forwardRef(function ReadMoreRef({ articles, className }) {
         {articles.map(article => (
           <ContentHubArticle
             category={article.category}
-            copy={article.copy}
             horizontalThumbnail={article.horizontalThumbnail}
             id={article.id}
             isHorizontal={true}
             isReadMore={true}
             key={article.id}
+            readingTime={article.readingTime}
             title={article.title}
             uri={article.uri}
             verticalThumbnail={article.verticalThumbnail}

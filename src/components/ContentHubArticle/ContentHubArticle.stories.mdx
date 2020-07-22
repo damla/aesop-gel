@@ -16,7 +16,7 @@ import ContentHubArticleFixture from './ContentHubArticle.fixture';
         isHorizontal={knobs.select('isHorizontal', [true, false], true, 'Content')}
         isReadMore={knobs.select('isReadMore', [true, false], false, 'Content')}
         isMenuItem={knobs.select('isMenuItem', [true, false], false, 'Content')}
-        copy={knobs.object('copy', ContentHubArticleFixture.copy, 'Content')}
+        readingTime={knobs.object('readingTime', ContentHubArticleFixture.readingTime, 'Content')}
         verticalThumbnail={ContentHubArticleFixture.verticalThumbnail}
         horizontalThumbnail={ContentHubArticleFixture.horizontalThumbnail}
         title={knobs.text('title', ContentHubArticleFixture.title, 'Content')}

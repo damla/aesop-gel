@@ -16,7 +16,5 @@ export default {
     small: './assets/images/ContentHubArticle/horizontal_hub.jpg',
   },
   uri: 'https://www.aesop.com/au/r/careers',
-  copy: {
-    note: '5 minute read',
-  },
+  readingTime: '5 minute read',
 };

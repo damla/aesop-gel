@@ -17,12 +17,12 @@ describe('<ContentHubArticle />', () => {
       .create(
         <ContentHubArticle
           category={ContentHubArticleFixture.category}
-          copy={ContentHubArticleFixture.copy}
           horizontalThumbnail={ContentHubArticleFixture.horizontalThumbnail}
           id={ContentHubArticleFixture.id}
           isHorizontal={true}
           isMenuItem={false}
           isReadMore={false}
+          readingTime={ContentHubArticleFixture.readingTime}
           title={ContentHubArticleFixture.title}
           uri={ContentHubArticleFixture.uri}
           verticalThumbnail={ContentHubArticleFixture.verticalThumbnail}
