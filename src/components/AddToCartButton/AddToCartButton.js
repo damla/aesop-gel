@@ -6,8 +6,10 @@ import {
   useProductDetailContext,
   useVariantSelectContext,
 } from 'contexts';
+import { HYPERLINK_STYLE_TYPES } from '~/constants';
 import Button from '~/components/Button';
 import Loading from '~/components/Loading';
+import Hyperlink from '~/components/Hyperlink';
 import styles from './AddToCartButton.module.css';
 
 const AddToCartButton = ({
@@ -25,7 +27,7 @@ const AddToCartButton = ({
   if (!productDetail) return null;
 
   const { productName } = productDetail;
-  const { price, sku } = selectedVariant;
+  const { isInStock, price, sku, alternateAction } = selectedVariant;
 
   const classSet = cx(
     styles.base,
@@ -39,7 +41,23 @@ const AddToCartButton = ({
     onClick(sku, dispatch, actionTypes);
   };
 
-  if (!sku || !price) {
+  if (!!alternateAction?.url && !!alternateAction?.label) {
+    return (
+      <Hyperlink
+        className={classSet}
+        dataTestRef={dataTestRef}
+        isAlternate={true}
+        style={HYPERLINK_STYLE_TYPES.INTERNAL_NO_ICON_BUTTON_LINK}
+        theme={theme}
+        title={alternateAction?.label}
+        url={alternateAction?.url}
+      >
+        {alternateAction?.label}
+      </Hyperlink>
+    );
+  }
+
+  if (!isInStock || !sku || !price) {
     return (
       <Button
         className={classSet}
@@ -112,7 +130,7 @@ AddToCartButton.propTypes = {
       title: PropTypes.string,
     }),
   }),
-  dataTestRef: PropTypes.string,
+  dataTestRef: PropTypes.string.isRequired,
   isEnabled: PropTypes.bool,
   isFullWidth: PropTypes.bool,
   theme: PropTypes.oneOf(['dark', 'light']),
@@ -121,11 +139,11 @@ AddToCartButton.propTypes = {
 AddToCartButton.defaultProps = {
   className: undefined,
   copy: {
-    cartAction: 'Add to your cart',
-    updateNotification: 'added to your cart',
+    cartAction: undefined,
+    updateNotification: undefined,
     outOfStock: {
-      label: 'Out of Stock',
-      title: 'Out of stock',
+      label: undefined,
+      title: undefined,
     },
   },
   dataTestRef: undefined,
