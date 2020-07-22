@@ -2,7 +2,9 @@ import React from 'react';
 import { BREAKPOINTS } from '~/constants';
 
 export const getCarouselSettings = ({
+  autoplaySpeed,
   className,
+  hasAutoplay,
   hasFlushPagination,
   hasFullWidthSlides,
   initialSlideIndex,
@@ -13,6 +15,8 @@ export const getCarouselSettings = ({
   PreviousButton,
   theme,
 }) => ({
+  autoplay: hasAutoplay,
+  autoplaySpeed: autoplaySpeed,
   appendDots: dots => (
     <Pagination
       dots={dots}
