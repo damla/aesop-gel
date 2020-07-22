@@ -2054,6 +2054,7 @@ serif;
 */
 .ContentHubArticleList-module_base__3EQb3 {
   display: grid;
+  max-width: 1440px;
   margin: 0 auto;
   grid-column-gap: 1rem;
   -webkit-column-gap: 1rem;
@@ -2063,6 +2064,18 @@ serif;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: auto 1fr;
 }
+@media (min-width: 640px) {
+.ContentHubArticleList-module_base__3EQb3 {
+    padding-right: 15px;
+    padding-left: 15px
+}
+  }
+@media (min-width: 1025px) {
+.ContentHubArticleList-module_base__3EQb3 {
+    padding-right: 35px;
+    padding-left: 35px
+}
+  }
 .ContentHubArticleList-module_article__3gPI4 {
   margin-bottom: 1rem;
 }
