@@ -33,3 +33,17 @@ import ImageCarouselFixture from './ImageCarousel.fixture';
 ## API
 
 <Props of={ImageCarousel} />
+
+## Variations
+
+### With Autoplay
+
+<Preview>
+  <Story name="With Autoplay">
+    <ImageCarousel
+      autoplaySpeed={knobs.number('autoplaySpeed', 3000, 'Presentation')}
+      hasAutoplay={true}
+      slides={ImageCarouselFixture.slides}
+    />
+  </Story>
+</Preview>
