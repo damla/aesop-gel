@@ -98,12 +98,7 @@ const DoubleImage = ({
                 )}
               </Heading>
             )}
-            {caption1 && (
-              <div
-                className={styles.caption}
-                dangerouslySetInnerHTML={{ __html: caption1 }}
-              />
-            )}
+            {caption1 && <div className={styles.caption}>{caption1}</div>}
           </figcaption>
         )}
       </Figure>
@@ -133,12 +128,7 @@ const DoubleImage = ({
                 )}
               </Heading>
             )}
-            {caption2 && (
-              <div
-                className={styles.caption}
-                dangerouslySetInnerHTML={{ __html: caption2 }}
-              />
-            )}
+            {caption2 && <div className={styles.caption}>{caption2}</div>}
           </figcaption>
         )}
       </Figure>
@@ -194,8 +184,8 @@ DoubleImage.propTypes = {
   theme: PropTypes.oneOf(['dark', 'light']),
   title1: PropTypes.string,
   title2: PropTypes.string,
-  caption1: PropTypes.string,
-  caption2: PropTypes.string,
+  caption1: PropTypes.node,
+  caption2: PropTypes.node,
 };
 
 DoubleImage.defaultProps = {

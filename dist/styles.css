@@ -3800,12 +3800,19 @@ sans-serif;
 }
   }
 .DoubleImage-module_caption__22gCy {
+  margin-top: 16px;
   font-family: 'Suisse Regular'
 ,
 sans-serif;
   font-size: 14px;
   line-height: 1.6;
 }
+.DoubleImage-module_caption__22gCy > :first-child {
+    margin-top: 0;
+  }
+.DoubleImage-module_caption__22gCy > :last-child {
+    margin-bottom: 0;
+  }
 
 :root {
   /* Base colours */

@@ -48,7 +48,16 @@
 }
 
 .caption {
+  margin-top: var(--layout-sm-spacing);
   font-family: var(--font-family-sans-serif-regular);
   font-size: rem(14px);
   line-height: 1.6;
+
+  & > :first-child {
+    margin-top: 0;
+  }
+
+  & > :last-child {
+    margin-bottom: 0;
+  }
 }

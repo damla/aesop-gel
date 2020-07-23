@@ -26,7 +26,7 @@ export default {
     type: 'Relative',
   },
   caption:
-    '<p>Our passion for <b>creativity</b> in form and function, extends to the setting of a meal among staff.</p>',
+    'Our passion for creativity in form and function, extends to the setting of a meal among staff.',
   video: {
     type: 'video',
     large:
