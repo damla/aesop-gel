@@ -2,10 +2,11 @@ import React from 'react';
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import renderer from 'react-test-renderer';
-import { ProductDetailContextProvider } from '~/contexts/ProductDetail.context';
+import { ProductDetailContextProvider } from '~/contexts';
+import AddToCartButtonFixture from '~/components/AddToCartButton/AddToCartButton.fixture';
 import ProductDetailBodyFixture from '~/components/ProductDetailHeader/components/ProductDetailBody/ProductDetailBody.fixture';
-import ProductDetailHeader from './ProductDetailHeader';
 import ProductDetailHeaderFixture from './ProductDetailHeader.fixture';
+import ProductDetailHeader from './ProductDetailHeader';
 
 configure({ adapter: new Adapter() });
 
@@ -28,6 +29,8 @@ describe('<ProductDetailHeader />', () => {
               breadcrumbs={ProductDetailHeaderFixture.breadcrumbs}
               className={ProductDetailHeaderFixture.className}
               copy={{
+                addToCart: AddToCartButtonFixture.copy,
+                size: ProductDetailBodyFixture.copy.size,
                 ingredients: ProductDetailBodyFixture.copy.ingredients,
               }}
               theme={ProductDetailHeaderFixture.theme}

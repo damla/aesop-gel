@@ -22,9 +22,11 @@ VariantSelectContextProvider.propTypes = {
   children: PropTypes.any,
   variants: PropTypes.arrayOf(
     PropTypes.shape({
-      size: PropTypes.string.isRequired,
-      sku: PropTypes.string.isRequired,
-      price: PropTypes.string.isRequired,
+      alternateAction: PropTypes.shape({
+        url: PropTypes.string,
+        label: PropTypes.string,
+      }),
+      isInStock: PropTypes.bool.isRequired,
       image: PropTypes.shape({
         altText: PropTypes.string,
         sizes: PropTypes.shape({
@@ -33,6 +35,9 @@ VariantSelectContextProvider.propTypes = {
           small: PropTypes.string,
         }),
       }),
+      price: PropTypes.string.isRequired,
+      size: PropTypes.string.isRequired,
+      sku: PropTypes.string.isRequired,
     }),
   ),
 };

@@ -35,11 +35,12 @@ export default {
     productName: 'Lorem ipsum dolor',
     variantOptions: [
       {
-        size: '50 mL',
+        size: '50 mL - In stock',
         sku: 'ARD33',
-        price: '$56.45',
+        price: '$26.45',
+        isInStock: true,
         image: {
-          altText: 'ATL TAG',
+          altText: 'alt-tag-ARD33',
           sizes: {
             large: './assets/images/Product/variant-one-large.png',
             medium: './assets/images/Product/variant-one-medium.png',
@@ -48,11 +49,12 @@ export default {
         },
       },
       {
-        size: '100 mL',
+        size: '100 mL - Not in stock',
         sku: 'ARD32',
         price: '$86.97',
+        isInStock: false,
         image: {
-          altText: 'ATL TAG',
+          altText: 'alt-tag-ARD32',
           sizes: {
             large: './assets/images/Product/variant-two-large.png',
             medium: './assets/images/Product/variant-two-medium.png',
@@ -64,11 +66,12 @@ export default {
   },
   variantOutOfStock: [
     {
-      size: '50 mL',
+      size: '50 ml',
       sku: 'ARD33',
-      price: '$56.45',
+      price: '$26.45',
+      isInStock: false,
       image: {
-        altText: 'ATL TAG',
+        altText: 'alt-tag-ARD33',
         sizes: {
           large: './assets/images/Product/variant-one-large.png',
           medium: './assets/images/Product/variant-one-medium.png',

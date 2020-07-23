@@ -22,7 +22,7 @@ for an example.
   <Story name="Base component">
     {(() => {
       const theme = knobs.select('theme', ['dark', 'light'], AddToCartButtonFixture.theme, 'Presentation')
-      const { productName, description, ...productRest } = ProductDetailHeaderFixture.product;
+      const { productName, ...productRest } = ProductDetailHeaderFixture.product;
       const productDetails = {
         productName: knobs.text('productName', productName, 'Content'),
         ...productRest,
@@ -34,6 +34,7 @@ for an example.
               <AddToCartButton
                 dataTestRef="ADD_TO_CART_SMALL_CTA"
                 theme={theme}
+                copy={AddToCartButtonFixture.copy}
               />
             </VariantSelectContextProvider>
           </ProductDetailContextProvider>

@@ -5,11 +5,12 @@ import {
   ProductDetailContextProvider,
   VariantSelectContextProvider,
 } from '~/contexts';
-import ProductDetailImageFixture from '~/components/ProductDetailHeader/components/ProductDetailImage/ProductDetailImage.fixture';
-import ProductDetailHeaderFixture from '~/components/ProductDetailHeader/ProductDetailHeader.fixture';
-import ProductDetailBody from './ProductDetailBody';
-import ProductDetailBodyFixture from './ProductDetailBody.fixture';
 import mockAddToCartButtonOnClick from '~/components/AddToCartButton/__mocks__/AddToCartButton.onClick';
+import AddToCartButtonFixture from '~/components/AddToCartButton/AddToCartButton.fixture';
+import ProductDetailBodyFixture from './ProductDetailBody.fixture';
+import ProductDetailHeaderFixture from '~/components/ProductDetailHeader/ProductDetailHeader.fixture';
+import ProductDetailImageFixture from '~/components/ProductDetailHeader/components/ProductDetailImage/ProductDetailImage.fixture';
+import ProductDetailBody from './ProductDetailBody';
 
 <Meta
   title="Components/ProductDetailHeader/ProductDetailBody"
@@ -25,6 +26,7 @@ import mockAddToCartButtonOnClick from '~/components/AddToCartButton/__mocks__/A
       const { productName, description, ...productRest } = ProductDetailHeaderFixture.product;
       const productDetails = {
         productName: knobs.text('productName', productName, 'Content'),
+        description: knobs.text('description', description, 'Content'),
         ...productRest,
       }
       return (
@@ -33,7 +35,10 @@ import mockAddToCartButtonOnClick from '~/components/AddToCartButton/__mocks__/A
             <VariantSelectContextProvider variants={ProductDetailImageFixture.variantOptions}>
               <ProductDetailBody
                 className={ProductDetailBodyFixture.className}
-                copy={ProductDetailBodyFixture.copy}
+                copy={{
+                  addToCart: AddToCartButtonFixture.copy,
+                  ...ProductDetailBodyFixture.copy,
+                }}
                 theme={theme}
               />
             </VariantSelectContextProvider>
