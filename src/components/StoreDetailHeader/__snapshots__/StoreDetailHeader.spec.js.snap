@@ -44,17 +44,17 @@ exports[`<StoreDetailHeader /> renders base component correctly 1`] = `
                 className="base rightUpArrow dark"
                 data-ref=""
                 focusable="false"
-                height={10}
+                height={15}
                 role="img"
                 style={
                   Object {
-                    "height": "10px",
-                    "width": "10px",
+                    "height": "15px",
+                    "width": "15px",
                   }
                 }
                 tabIndex={-1}
                 viewBox="0 0 50 50"
-                width={10}
+                width={15}
               >
                 <g>
                   <path
@@ -94,17 +94,17 @@ exports[`<StoreDetailHeader /> renders base component correctly 1`] = `
                 className="base rightUpArrow dark"
                 data-ref=""
                 focusable="false"
-                height={10}
+                height={15}
                 role="img"
                 style={
                   Object {
-                    "height": "10px",
-                    "width": "10px",
+                    "height": "15px",
+                    "width": "15px",
                   }
                 }
                 tabIndex={-1}
                 viewBox="0 0 50 50"
-                width={10}
+                width={15}
               >
                 <g>
                   <path

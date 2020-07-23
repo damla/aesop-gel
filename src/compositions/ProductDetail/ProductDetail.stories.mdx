@@ -6,6 +6,7 @@ import {
   VariantSelectContextProvider,
 } from '~/contexts';
 import mockAddToCartButtonOnClick from '~/components/AddToCartButton/__mocks__/AddToCartButton.onClick';
+import AddToCartButtonFixture from '~/components/AddToCartButton/AddToCartButton.fixture';
 import CarouselFixture from '~/components/Carousel/Carousel.fixture';
 import MediaWithContentFixture from '~/components/MediaWithContent/MediaWithContent.fixture';
 import ProductDetailHeaderFixture from '~/components/ProductDetailHeader/ProductDetailHeader.fixture';
@@ -50,6 +51,8 @@ import ProductDetailFixture from './ProductDetail.fixture';
                 className={ProductDetailFixture.className}
                 copy={{
                   productHeader: {
+                    addToCart: AddToCartButtonFixture.copy,
+                    size: ProductDetailBodyFixture.copy.size,
                     ingredients: ProductDetailBodyFixture.copy.ingredients,
                   },
                 }}

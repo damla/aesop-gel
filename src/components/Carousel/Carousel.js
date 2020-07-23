@@ -22,7 +22,9 @@ import styles from './Carousel.module.css';
 
 const Carousel = forwardRef(function CarouselRef(
   {
+    autoplaySpeed,
     className,
+    hasAutoplay,
     hasFlushPagination,
     hasFullWidthSlides,
     hasShowCaption,
@@ -85,7 +87,9 @@ const Carousel = forwardRef(function CarouselRef(
   );
 
   const settings = getCarouselSettings({
+    autoplaySpeed,
     className: styles.carousel,
+    hasAutoplay,
     hasFlushPagination,
     hasFullWidthSlides,
     initialSlideIndex,
@@ -198,7 +202,9 @@ const Carousel = forwardRef(function CarouselRef(
 });
 
 Carousel.propTypes = {
+  autoplaySpeed: PropTypes.number,
   className: PropTypes.string,
+  hasAutoplay: PropTypes.bool,
   hasFlushPagination: PropTypes.bool,
   hasFullWidthSlides: PropTypes.bool,
   hasShowCaption: PropTypes.bool,
@@ -230,7 +236,9 @@ Carousel.propTypes = {
 };
 
 Carousel.defaultProps = {
+  autoplaySpeed: 3000,
   className: undefined,
+  hasAutoplay: false,
   hasFlushPagination: false,
   hasFullWidthSlides: false,
   hasShowCaption: false,

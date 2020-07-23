@@ -10,6 +10,7 @@ import DefinitionListFixture from './DefinitionList.fixture';
 <Preview>
   <Story name="Base component">
     <DefinitionList
+      hasBottomBorder={knobs.boolean('hasBottomBorder', false, 'Presentation')}
       isVisible={knobs.boolean('isActive', true, 'Presentation')}
       items={knobs.object(
         'items',

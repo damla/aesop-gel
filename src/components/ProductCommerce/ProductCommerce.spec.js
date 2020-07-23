@@ -2,6 +2,7 @@ import React from 'react';
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import renderer from 'react-test-renderer';
+import AddToCartButtonFixture from '~/components/AddToCartButton/AddToCartButton.fixture';
 import mockAddToCartButtonOnClick from '~/components/AddToCartButton/__mocks__/AddToCartButton.onClick';
 import ProductCommerce from './ProductCommerce';
 import ProductCommerceFixture from './ProductCommerce.fixture';
@@ -17,6 +18,10 @@ describe('<ProductCommerce />', () => {
     const tree = renderer
       .create(
         <ProductCommerce
+          copy={{
+            addToCart: AddToCartButtonFixture.copy,
+            ...ProductCommerceFixture.copy,
+          }}
           cta={ProductCommerceFixture.cta}
           description={ProductCommerceFixture.description}
           eyebrow={ProductCommerceFixture.eyebrow}

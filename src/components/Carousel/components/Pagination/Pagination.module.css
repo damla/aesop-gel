@@ -13,7 +13,7 @@
   list-style-type: none;
 
   &.dark {
-    background-color: var(--color-grey-20);
+    background-color: var(--color-grey-63);
 
     :global {
       .slick-active {
@@ -23,7 +23,7 @@
   }
 
   &.light {
-    background-color: var(--color-grey-60);
+    background-color: var(--color-grey-40);
 
     :global {
       .slick-active {

@@ -1,4 +1,6 @@
 export default {
+  autoplaySpeed: 3000,
+  hasAutoplay: false,
   slides: [
     {
       caption:
