@@ -1,9 +1,9 @@
 import React, { forwardRef, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import { ascertainIsSmallOnlyViewport } from '~/utils/viewports';
 import ContentHubArticle from '~/components/ContentHubArticle';
 import styles from './ContentHubArticleList.module.css';
-import { ascertainIsSmallOnlyViewport } from '~/utils/viewports';
 
 const ContentHubArticleList = forwardRef(function ContentHubArticleListRef({
   articles,
@@ -11,14 +11,17 @@ const ContentHubArticleList = forwardRef(function ContentHubArticleListRef({
   pattern, // 0 means first image is horizontal
 }) {
   const classSet = cx(styles.base, className);
-  const topLeftClassSet = cx(styles[`topLeft-${pattern}`], styles[`article`]);
-  const topRightClassSet = cx(styles[`topRight-${pattern}`], styles[`article`]);
+  const topLeftClassSet = cx(styles[`top-left-${pattern}`], styles[`article`]);
+  const topRightClassSet = cx(
+    styles[`top-right-${pattern}`],
+    styles[`article`],
+  );
   const bottomLeftClassSet = cx(
-    styles[`bottomLeft-${pattern}`],
+    styles[`bottom-left-${pattern}`],
     styles[`article`],
   );
   const bottomRightClassSet = cx(
-    styles[`bottomRight-${pattern}`],
+    styles[`bottom-right-${pattern}`],
     styles[`article`],
   );
   const count = articles && articles.length;

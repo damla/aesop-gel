@@ -14,7 +14,7 @@ exports[`<ContentHubArticle /> renders base component correctly 1`] = `
     className="base left dark"
     href="https://www.aesop.com/au/r/careers"
     target="_self"
-    title="Link to Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante."
+    title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante."
   >
     <span
       className="title link"
@@ -31,7 +31,7 @@ exports[`<ContentHubArticle /> renders base component correctly 1`] = `
     className="base left dark link"
     href="https://www.aesop.com/au/r/careers"
     target="_self"
-    title="Link to Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante."
+    title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante."
   >
     <picture
       className="base picture dark image"

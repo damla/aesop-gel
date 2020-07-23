@@ -1,50 +1,40 @@
 import React, { forwardRef, useRef } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import Transition from '~/components/Transition';
+import { useOnScreen } from '~/customHooks/useOnScreen';
 import Image from '~/components/Image';
 import Heading from '~/components/Heading';
 import Hyperlink from '~/components/Hyperlink';
+import Transition from '~/components/Transition';
 import styles from './ContentHubArticle.module.css';
-import { useOnScreen } from '~/customHooks/useOnScreen';
 
 const ContentHubArticle = forwardRef(function ContentHubArticleRef({
-  id,
-  verticalThumbnail,
-  horizontalThumbnail,
-  isHorizontal, // use horizontal or vertical thumbnail
-  isReadMore, // if it's displayed in ReadMore section
-  isMenuItem, // if it's displayed in Read Menu Navigation
-  title,
-  readingTime,
   category,
   className,
+  horizontalThumbnail,
+  isHorizontal, // use horizontal or vertical thumbnail
+  isMenuItem, // if it's displayed in Read Menu Navigation
+  isReadMore, // if it's displayed in ReadMore section
+  readingTime,
+  title,
   uri,
+  verticalThumbnail,
+  id,
 }) {
-  const classSet = cx(styles.base, className);
-
-  const categoryClassSet = cx(styles.category);
-
-  const titleClassSet = cx(styles.title, styles.link);
-
-  const noteClassSet = cx(styles.note);
-
-  const currentImage = isHorizontal ? horizontalThumbnail : verticalThumbnail;
-
-  const imageClassSet = cx(styles.link);
-
   const ref = useRef(null);
   const isOnScreen = useOnScreen(ref, 0.4);
+  const currentImage = isHorizontal ? horizontalThumbnail : verticalThumbnail;
+  const classSet = cx(styles.base, className);
+  const categoryClassSet = cx(styles.category);
+  const imageClassSet = cx(styles.link);
+  const noteClassSet = cx(styles.note);
+  const titleClassSet = cx(styles.title, styles.link);
 
   return (
     <Transition isActive={isOnScreen} type="fade">
       <div className={classSet} id={id} ref={ref}>
         {isReadMore && !isMenuItem && (
-          <Hyperlink
-            className={imageClassSet}
-            title={`Link to ${title}`}
-            url={uri}
-          >
+          <Hyperlink className={imageClassSet} title={title} url={uri}>
             <Image
               altText={currentImage.altText}
               className={styles.image}
@@ -55,25 +45,21 @@ const ContentHubArticle = forwardRef(function ContentHubArticleRef({
           </Hyperlink>
         )}
         {!isMenuItem && (
-          <Heading className={categoryClassSet} level={'3'} size="xSmall">
+          <Heading className={categoryClassSet} level="3" size="xSmall">
             {category}
           </Heading>
         )}
-        <Hyperlink title={`Link to ${title}`} url={uri}>
+        <Hyperlink title={title} url={uri}>
           <span className={titleClassSet}>{title}</span>
         </Hyperlink>
         {readingTime && (
-          <Heading className={noteClassSet} level={'3'} size="xSmall">
+          <Heading className={noteClassSet} level="3" size="xSmall">
             {readingTime}
           </Heading>
         )}
 
         {!isReadMore && !isMenuItem && (
-          <Hyperlink
-            className={imageClassSet}
-            title={`Link to ${title}`}
-            url={uri}
-          >
+          <Hyperlink className={imageClassSet} title={title} url={uri}>
             <Image
               altText={currentImage.altText}
               className={styles.image}

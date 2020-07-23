@@ -39,11 +39,11 @@ const LoadMoreButton = ({ className, copy, isEnabled }) => {
       isAlternate={true}
       isEnabled={!isLoading && isEnabled}
       onClick={handleOnClick}
-      theme={'light'}
+      theme="light"
       title={actionLabel}
     >
       {isLoading && (
-        <Loading className={styles.loading} isLoading={true} theme={'dark'} />
+        <Loading className={styles.loading} isLoading={true} theme="dark" />
       )}
       <span className={labelClassName}>
         <span>{updateNotification}</span>
