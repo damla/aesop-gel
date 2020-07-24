@@ -24,7 +24,8 @@ Presented here with both `paddingTop` and `paddingBottom` set to `small`, and fa
     <div style={{ border: '1px solid #333', margin: '20px'}}>
       <Podium
         backgroundColor={knobs.text('backgroundColor', '', 'Presentation')}
-        isActive={knobs.boolean('isActive', true, 'Presentation')}
+        isActive={knobs.boolean('isActive', false, 'Presentation')}
+        isActiveOnMount={knobs.boolean('isActiveOnMount', true, 'Presentation')}
         paddingTop={knobs.select(
           'paddingTop',
           ['none', 'small', 'medium', 'large'],
@@ -34,6 +35,30 @@ Presented here with both `paddingTop` and `paddingBottom` set to `small`, and fa
         paddingBottom={knobs.select(
           'paddingBottom',
           ['none', 'small', 'medium', 'large'],
+          'small',
+          'Presentation',
+        )}
+        paddingLeft={knobs.select(
+          'paddingLeft',
+          ['none', 'small'],
+          'small',
+          'Presentation',
+        )}
+        paddingRight={knobs.select(
+          'paddingRight',
+          ['none', 'small'],
+          'small',
+          'Presentation',
+        )}
+        verticalPadding={knobs.select(
+          'verticalPadding',
+          ['none', 'small'],
+          'small',
+          'Presentation',
+        )}
+        horizontalPadding={knobs.select(
+          'horizontalPadding',
+          ['none', 'small'],
           'small',
           'Presentation',
         )}

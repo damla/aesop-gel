@@ -57,7 +57,7 @@ Wrapped in a `Podium` component. The `ImageCarousel` component has `hasAutoplay`
 
 <Preview>
   <Story name="Rendered in Two Column Layout">
-    <Podium verticalPadding="small">
+    <Podium verticalPadding="small" paddingRight="small" isHorizontalFlushOnSmall={true} isHorizontalFlushOnMedium={true}>
       <TwoColumnLayout
         hasFullWidthContent={knobs.boolean(
           'hasFullWidthContent',
@@ -65,6 +65,11 @@ Wrapped in a `Podium` component. The `ImageCarousel` component has `hasAutoplay`
           'Presentation',
         )}
         id="TwoColumn-id"
+        isFlushOnSmall={knobs.boolean(
+          'isFlushOnSmall',
+          true,
+          'Presentation',
+        )}
         isReversed={knobs.boolean('isReversed', true, 'Presentation')}
         sidebar={(
           <BodyCopy

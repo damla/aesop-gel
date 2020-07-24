@@ -64,6 +64,14 @@
     padding-left: var(--layout-sm-spacing);
   }
 
+  @media (--viewport-sm-only) {
+    &.fullWidth.flushOnSmall,
+    .reverse &.fullWidth.flushOnSmall {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
   .reverse & {
     margin-bottom: 0;
   }
@@ -106,7 +114,7 @@
 
     .reverse.contentOnly & {
       width: 100%;
-      padding-left: calc((100% ) * 5 / 12);
+      padding-left: calc((100%) * 5 / 12);
     }
   }
 }
