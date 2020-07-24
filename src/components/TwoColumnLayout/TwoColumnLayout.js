@@ -7,7 +7,7 @@ const TwoColumnLayout = ({
   childrenClassNames,
   className,
   content,
-  hasRightPadding,
+  hasFullWidthContent,
   id,
   isReversed,
   sidebar,
@@ -22,7 +22,7 @@ const TwoColumnLayout = ({
   );
   const contentClassSet = cx(
     styles.content,
-    { [styles.fullWidth]: !hasRightPadding },
+    { [styles.fullWidth]: hasFullWidthContent },
     childrenClassNames.content,
   );
   const sidebarClassSet = cx(styles.sidebar, childrenClassNames.sidebar);
@@ -48,7 +48,7 @@ TwoColumnLayout.propTypes = {
   }),
   className: PropTypes.string,
   content: PropTypes.any.isRequired,
-  hasRightPadding: PropTypes.bool,
+  hasFullWidthContent: PropTypes.bool,
   id: PropTypes.string,
   isReversed: PropTypes.bool,
   sidebar: PropTypes.any,
@@ -59,7 +59,7 @@ TwoColumnLayout.defaultProps = {
   childrenClassNames: { sidebar: undefined, content: undefined },
   className: undefined,
   content: undefined,
-  hasRightPadding: true,
+  hasFullWidthContent: false,
   id: undefined,
   isReversed: true,
   sidebar: undefined,

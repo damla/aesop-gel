@@ -1,5 +1,8 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import * as knobs from '@storybook/addon-knobs';
+import TwoColumnLayout from '~/components/TwoColumnLayout';
+import BodyCopy from '~/components/BodyCopy';
+import Podium from '~/components/Podium'
 import ImageCarousel from './ImageCarousel';
 import ImageCarouselFixture from './ImageCarousel.fixture';
 
@@ -33,3 +36,55 @@ import ImageCarouselFixture from './ImageCarousel.fixture';
 ## API
 
 <Props of={ImageCarousel} />
+
+## Variations
+
+### With Autoplay
+
+<Preview>
+  <Story name="With Autoplay">
+    <ImageCarousel
+      autoplaySpeed={knobs.number('autoplaySpeed', 3000, 'Presentation')}
+      hasAutoplay={true}
+      slides={ImageCarouselFixture.slides}
+    />
+  </Story>
+</Preview>
+
+### Rendered in Two Column Layout
+
+Wrapped in a `Podium` component.
+
+<Preview>
+  <Story name="Rendered in Two Column Layout">
+    <Podium verticalPadding="small">
+      <TwoColumnLayout
+        hasFullWidthContent={knobs.boolean(
+          'hasFullWidthContent',
+          true,
+          'Presentation',
+        )}
+        id="TwoColumn-id"
+        isReversed={knobs.boolean('isReversed', true, 'Presentation')}
+        sidebar={(
+          <BodyCopy
+            cta={{
+              text: 'Quisque non enim',
+              url: '/',
+              style: 'Internal Button Link',
+            }}
+            ctaTextAlign="left"
+            heading="Nunc dignissim quis"
+            copy="Nunc dignissim quis arcu a lobortis. Nullam auctor id nulla non sagittis. Quisque non enim efficitur quam mattis."
+          />
+        )}
+        content={(
+          <ImageCarousel
+            hasAutoplay={true}
+            slides={ImageCarouselFixture.slides}
+          />
+        )}
+      />
+    </Podium>
+  </Story>
+</Preview>
