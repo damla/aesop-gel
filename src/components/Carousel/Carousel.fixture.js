@@ -1,4 +1,6 @@
 export default {
+  autoplaySpeed: 3000,
+  hasAutoplay: false,
   introduction: {
     cta: {
       style: 'Internal Text Link',

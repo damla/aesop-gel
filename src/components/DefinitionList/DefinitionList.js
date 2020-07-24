@@ -26,7 +26,7 @@ const DefinitionList = forwardRef(function DefinitionListRef(
   return (
     <dl className={classSet} ref={ref}>
       {items
-        .filter(({ description, term }) => description && term)
+        .filter(({ description, term }) => description || term)
         .map(({ description, id, term }) => (
           <Fragment key={id}>
             <dt className={termClassSet}>{term}</dt>
@@ -43,9 +43,9 @@ DefinitionList.propTypes = {
   isVisible: PropTypes.bool,
   items: PropTypes.arrayOf(
     PropTypes.shape({
-      description: PropTypes.node.isRequired,
+      description: PropTypes.node,
       id: PropTypes.string.isRequired,
-      term: PropTypes.node.isRequired,
+      term: PropTypes.node,
     }),
   ),
   theme: PropTypes.oneOf(['dark', 'light']),
