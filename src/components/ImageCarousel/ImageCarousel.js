@@ -2,9 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Carousel from '~/components/Carousel';
 
-const ImageCarousel = ({ className, slides }) => (
+const ImageCarousel = ({ autoplaySpeed, className, hasAutoplay, slides }) => (
   <Carousel
+    autoplaySpeed={autoplaySpeed}
     className={className}
+    hasAutoplay={hasAutoplay}
     hasFlushPagination={true}
     hasFullWidthSlides={true}
     hasShowCaption={true}
@@ -14,7 +16,9 @@ const ImageCarousel = ({ className, slides }) => (
 );
 
 ImageCarousel.propTypes = {
+  autoplaySpeed: PropTypes.number,
   className: PropTypes.string,
+  hasAutoplay: PropTypes.bool,
   slides: PropTypes.arrayOf(
     PropTypes.shape({
       caption: PropTypes.string,
@@ -26,7 +30,9 @@ ImageCarousel.propTypes = {
 };
 
 ImageCarousel.defaultProps = {
+  autoplaySpeed: 3000,
   className: undefined,
+  hasAutoplay: false,
   slides: [],
   theme: 'dark',
 };

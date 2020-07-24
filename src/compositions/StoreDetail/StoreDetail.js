@@ -63,7 +63,7 @@ const StoreDetail = ({ className }) => {
               tortor in ipsum congue bibendum id nec erat.
             </P>
           }
-          hasRightPadding={false}
+          hasFullWidthContent={true}
           isReversed={true}
           sidebar={
             <Heading

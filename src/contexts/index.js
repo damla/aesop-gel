@@ -7,6 +7,10 @@ import {
   useGoogleMapsContext,
 } from './GoogleMaps.context';
 import {
+  LoadMoreContextProvider,
+  useLoadMoreContext,
+} from './LoadMore.context';
+import {
   ProductDetailContextProvider,
   useProductDetailContext,
 } from './ProductDetail.context';
@@ -20,6 +24,8 @@ export { AddToCartContextProvider };
 export { useAddToCartContext };
 export { GoogleMapsContextProvider };
 export { useGoogleMapsContext };
+export { LoadMoreContextProvider };
+export { useLoadMoreContext };
 export { ProductDetailContextProvider };
 export { useProductDetailContext };
 export { ThemeContextProvider };
@@ -32,6 +38,8 @@ export default {
   useAddToCartContext,
   GoogleMapsContextProvider,
   useGoogleMapsContext,
+  LoadMoreContextProvider,
+  useLoadMoreContext,
   ProductDetailContextProvider,
   useProductDetailContext,
   ThemeContextProvider,

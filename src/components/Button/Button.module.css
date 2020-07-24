@@ -33,7 +33,7 @@
   @extend %font-theme-dark-link;
 
   &.blockStyle {
-    border-color: var(--color-dark-background);
+    border-color: var(--color-grey-60);
 
     &:hover,
     &:focus {

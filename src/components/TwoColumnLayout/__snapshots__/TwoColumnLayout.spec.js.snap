@@ -6,7 +6,7 @@ exports[`<TwoColumnLayout /> renders base component correctly 1`] = `
   id="TwoColumnLayout"
 >
   <div
-    className="content content"
+    className="content fullWidth content"
     id="mainColumn"
   >
     <div>
