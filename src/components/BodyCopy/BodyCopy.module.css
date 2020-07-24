@@ -21,28 +21,7 @@
 }
 
 .ctaWrapper {
-  margin-top: calc(var(--layout-sm-spacing) / 2);
-
-  @media (--viewport-md) {
-    margin-top: calc(var(--layout-md-spacing) / 2);
-  }
-
-  @media (--viewport-lg) {
-    margin-top: calc(var(--layout-lg-spacing) / 2);
-  }
-
-  a {
-    display: inline-block;
-    margin-top: calc(var(--layout-sm-spacing) / 2);
-
-    @media (--viewport-md) {
-      margin-top: calc(var(--layout-md-spacing) / 2);
-    }
-
-    @media (--viewport-lg) {
-      margin-top: calc(var(--layout-lg-spacing) / 2);
-    }
-  }
+  margin-top: 20px;
 }
 
 .copy {

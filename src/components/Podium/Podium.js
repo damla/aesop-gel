@@ -11,7 +11,13 @@ const Podium = forwardRef(function PodiumRef(
     className,
     horizontalPadding,
     isActive,
+    isActiveOnMount,
+    isHorizontalFlushOnLarge,
+    isHorizontalFlushOnMedium,
+    isHorizontalFlushOnSmall,
     paddingBottom,
+    paddingLeft,
+    paddingRight,
     paddingTop,
     transition,
     verticalPadding,
@@ -20,17 +26,24 @@ const Podium = forwardRef(function PodiumRef(
 ) {
   const classSet = cx(
     styles.base,
-    styles[`${paddingTop ? paddingTop : verticalPadding}PaddingTop`],
     styles[`${paddingBottom ? paddingBottom : verticalPadding}PaddingBottom`],
-    styles[`${horizontalPadding}PaddingLeft`],
-    styles[`${horizontalPadding}PaddingRight`],
+    styles[`${paddingLeft ? paddingLeft : horizontalPadding}PaddingLeft`],
+    styles[`${paddingRight ? paddingRight : horizontalPadding}PaddingRight`],
+    styles[`${paddingTop ? paddingTop : verticalPadding}PaddingTop`],
+    { [styles.horizontalFlushOnSmall]: isHorizontalFlushOnSmall },
+    { [styles.horizontalFlushOnMedium]: isHorizontalFlushOnMedium },
+    { [styles.horizontalFlushOnLarge]: isHorizontalFlushOnLarge },
     className,
   );
 
   const style = backgroundColor ? { backgroundColor } : undefined;
 
   return (
-    <Transition isActive={isActive} type={transition}>
+    <Transition
+      isActive={isActive}
+      isActiveOnMount={isActiveOnMount}
+      type={transition}
+    >
       <section className={classSet} ref={ref} style={style}>
         {children}
       </section>
@@ -44,8 +57,14 @@ Podium.propTypes = {
   className: PropTypes.string,
   horizontalPadding: PropTypes.oneOf(['none', 'small']),
   isActive: PropTypes.bool,
-  paddingTop: PropTypes.oneOf(['none', 'small', 'medium', 'large']),
+  isActiveOnMount: PropTypes.bool,
+  isHorizontalFlushOnLarge: PropTypes.bool,
+  isHorizontalFlushOnMedium: PropTypes.bool,
+  isHorizontalFlushOnSmall: PropTypes.bool,
   paddingBottom: PropTypes.oneOf(['none', 'small', 'medium', 'large']),
+  paddingLeft: PropTypes.oneOf(['none', 'small']),
+  paddingRight: PropTypes.oneOf(['none', 'small']),
+  paddingTop: PropTypes.oneOf(['none', 'small', 'medium', 'large']),
   transition: PropTypes.oneOf([
     'fade',
     'shiftInDown',
@@ -64,9 +83,15 @@ Podium.defaultProps = {
   className: undefined,
   horizontalPadding: 'none',
   isActive: true,
-  paddingTop: undefined,
+  isActiveOnMount: undefined,
+  isHorizontalFlushOnLarge: undefined,
+  isHorizontalFlushOnMedium: undefined,
+  isHorizontalFlushOnSmall: undefined,
   paddingBottom: undefined,
-  transition: 'fade',
+  paddingLeft: undefined,
+  paddingRight: undefined,
+  paddingTop: undefined,
+  transition: undefined,
   verticalPadding: 'none',
 };
 

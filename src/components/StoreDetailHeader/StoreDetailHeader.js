@@ -121,7 +121,7 @@ const StoreDetailHeader = ({
           </div>
         </>
       }
-      hasRightPadding={false}
+      hasFullWidthContent={true}
       isReversed={true}
     />
   );

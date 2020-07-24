@@ -11,6 +11,7 @@ const BodyCopy = ({
   className,
   copy,
   cta,
+  ctaTextAlign,
   eyebrow,
   id,
   hasSerifFontHeading,
@@ -39,7 +40,11 @@ const BodyCopy = ({
 
       {copy && <div className={styles.copy}>{copy}</div>}
 
-      <LinkButtonGroup className={styles.ctaWrapper} theme={theme}>
+      <LinkButtonGroup
+        className={styles.ctaWrapper}
+        textAlign={ctaTextAlign}
+        theme={theme}
+      >
         {cta && <Hyperlink {...cta}>{cta.text}</Hyperlink>}
         {secondaryCta && (
           <Hyperlink {...secondaryCta}>{secondaryCta.text}</Hyperlink>
@@ -58,6 +63,7 @@ BodyCopy.propTypes = {
   className: PropTypes.string,
   copy: PropTypes.node,
   cta: PropTypes.object,
+  ctaTextAlign: PropTypes.string,
   eyebrow: PropTypes.string,
   hasSerifFontHeading: PropTypes.bool,
   heading: PropTypes.string,
@@ -76,6 +82,7 @@ BodyCopy.defaultProps = {
   className: undefined,
   copy: undefined,
   cta: undefined,
+  ctaTextAlign: undefined,
   eyebrow: undefined,
   hasSerifFontHeading: false,
   heading: undefined,
