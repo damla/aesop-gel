@@ -23,6 +23,7 @@ const DoubleImage = ({
   const classSet = cx(styles.base, styles[theme], className);
 
   const ImageVideoBlock1 = () => {
+    if (!imageVideo1) return null;
     return imageVideo1.type === 'video' ? (
       <Video
         hasAllowAudio={false}
@@ -47,6 +48,7 @@ const DoubleImage = ({
   };
 
   const ImageVideoBlock2 = () => {
+    if (!imageVideo2) return null;
     return imageVideo2.type === 'video' ? (
       <Video
         hasAllowAudio={false}
@@ -72,12 +74,7 @@ const DoubleImage = ({
 
   return (
     <div className={classSet}>
-      <Figure
-        caption={!title1 && !caption1 && imageVideo1.caption}
-        className={styles.figure}
-        hasCaptionBorder={false}
-        theme={theme}
-      >
+      <Figure className={styles.figure} hasCaptionBorder={false} theme={theme}>
         {link1 ? (
           <Hyperlink {...link1} className={styles.imageLinkWrapper}>
             <ImageVideoBlock1 />
@@ -102,12 +99,7 @@ const DoubleImage = ({
           </figcaption>
         )}
       </Figure>
-      <Figure
-        caption={!title2 && !caption2 && imageVideo2.caption}
-        className={styles.figure}
-        hasCaptionBorder={false}
-        theme={theme}
-      >
+      <Figure className={styles.figure} hasCaptionBorder={false} theme={theme}>
         {link2 ? (
           <Hyperlink {...link2} className={styles.imageLinkWrapper}>
             <ImageVideoBlock2 />

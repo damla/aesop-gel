@@ -44,4 +44,5 @@ export default {
       small: './assets/images/MediaWithContent/video-poster.png',
     },
   },
+  title: 'Aesop favourites',
 };

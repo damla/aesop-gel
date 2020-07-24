@@ -27,12 +27,19 @@ exports[`<DoubleImage /> renders base component correctly 1`] = `
       />
     </picture>
     <figcaption
-      className="captionWrapper"
+      className="figcaption"
     >
+      <h3
+        className="base xSmall dark"
+      >
+        Aesop favourites
+      </h3>
       <div
         className="caption"
       >
-        Our passion for creativity in form and function, extends to the setting of a meal among staff.
+        <p>
+          Our passion for creativity in form and function, extends to the setting of a meal among staff.
+        </p>
       </div>
     </figcaption>
   </figure>
@@ -59,12 +66,19 @@ exports[`<DoubleImage /> renders base component correctly 1`] = `
       />
     </picture>
     <figcaption
-      className="captionWrapper"
+      className="figcaption"
     >
+      <h3
+        className="base xSmall dark"
+      >
+        Aesop favourites
+      </h3>
       <div
         className="caption"
       >
-        Our passion for creativity in form and function, extends to the setting of a meal among staff.
+        <p>
+          Our passion for creativity in form and function, extends to the setting of a meal among staff.
+        </p>
       </div>
     </figcaption>
   </figure>

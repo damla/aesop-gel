@@ -16,6 +16,8 @@ describe('<DoubleImage />', () => {
     const tree = renderer
       .create(
         <DoubleImage
+          caption1={<p>{DoubleImageFixture.caption}</p>}
+          caption2={<p>{DoubleImageFixture.caption}</p>}
           imageVideo1={{
             altText: DoubleImageFixture.imageOne.altText,
             caption: DoubleImageFixture.imageOne.caption,
@@ -30,6 +32,8 @@ describe('<DoubleImage />', () => {
             medium: DoubleImageFixture.imageTwo.medium,
             small: DoubleImageFixture.imageTwo.small,
           }}
+          title1={DoubleImageFixture.title}
+          title2={DoubleImageFixture.title}
         />,
       )
       .toJSON();
