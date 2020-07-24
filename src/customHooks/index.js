@@ -3,6 +3,7 @@ import useEscapeKeyListener from './useEscapeKeyListener';
 import useGoogleMaps from './useGoogleMaps';
 import useHasMounted from './useHasMounted';
 import useImageTransition from './useImageTransition';
+import useLoadMore from './useLoadMore';
 import useOnScreen from './useOnScreen';
 import useOverflowHidden from './useOverflowHidden';
 import useProductDetail from './useProductDetail';
@@ -16,6 +17,7 @@ export { useEscapeKeyListener };
 export { useGoogleMaps };
 export { useHasMounted };
 export { useImageTransition };
+export { useLoadMore };
 export { useOnScreen };
 export { useOverflowHidden };
 export { useProductDetail };
@@ -32,6 +34,7 @@ export default {
   useOverflowHidden,
   useProductDetail,
   useImageTransition,
+  useLoadMore,
   useScript,
   useTheme,
   useVariantSelect,

@@ -2,6 +2,8 @@ import Accordion from './Accordion';
 import AddToCartButton from './AddToCartButton';
 import Audio from './Audio';
 import BodyCopy from './BodyCopy';
+import ContentHubArticle from './ContentHubArticle';
+import ContentHubArticleList from './ContentHubArticleList';
 import Breadcrumbs from './Breadcrumbs';
 import Button from './Button';
 import BynderWidget from './BynderWidget';
@@ -22,6 +24,7 @@ import KitList from './KitList';
 import LinkButtonGroup from './LinkButtonGroup';
 import List from './List';
 import Loading from './Loading';
+import LoadMoreButton from './LoadMoreButton';
 import MediaWithContent from './MediaWithContent';
 import Modal from './Modal';
 import Overlay from './Overlay';
@@ -29,6 +32,7 @@ import Paragraph, { P, ParagraphSet } from './Paragraph';
 import Podium from './Podium';
 import Quote from './Quote';
 import RadioGroup from './RadioGroup';
+import ReadMore from './ReadMore';
 import SectionHeading from './SectionHeading';
 import Select from './Select';
 import StoreDetailHeader from './StoreDetailHeader';
@@ -91,6 +95,8 @@ export default {
   Button,
   BynderWidget,
   Carousel,
+  ContentHubArticle,
+  ContentHubArticleList,
   DefinitionList,
   DialogBanner,
   DoubleImage,
@@ -107,6 +113,7 @@ export default {
   LinkButtonGroup,
   List,
   Loading,
+  LoadMoreButton,
   MediaWithContent,
   Modal,
   Overlay,
@@ -116,6 +123,7 @@ export default {
   Podium,
   Quote,
   RadioGroup,
+  ReadMore,
   SectionHeading,
   Select,
   StoreDetailHeader,

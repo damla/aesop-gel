@@ -1,0 +1,32 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import * as knobs from '@storybook/addon-knobs';
+import Podium from '~/components/Podium';
+import ContentHubArticle from './ContentHubArticle';
+import ContentHubArticleFixture from './ContentHubArticle.fixture';
+
+<Meta title="Components/ContentHubArticle" component={ContentHubArticle} />
+
+# ContentHubArticle
+
+<Preview>
+  <Story name="Base component">
+    <Podium horizontalPadding="small" verticalPadding="small">
+      <ContentHubArticle
+        id={ContentHubArticleFixture.id}
+        isHorizontal={knobs.select('isHorizontal', [true, false], true, 'Content')}
+        isReadMore={knobs.select('isReadMore', [true, false], false, 'Content')}
+        isMenuItem={knobs.select('isMenuItem', [true, false], false, 'Content')}
+        readingTime={knobs.object('readingTime', ContentHubArticleFixture.readingTime, 'Content')}
+        verticalThumbnail={ContentHubArticleFixture.verticalThumbnail}
+        horizontalThumbnail={ContentHubArticleFixture.horizontalThumbnail}
+        title={knobs.text('title', ContentHubArticleFixture.title, 'Content')}
+        category={knobs.select('category', ['Culture', 'Product', 'The Weekly', 'Aesop Spotify'], 'Culture', 'Content')}
+        uri={ContentHubArticleFixture.uri}
+      />
+    </Podium>
+  </Story>
+</Preview>
+
+## API
+
+<Props of={ContentHubArticle} />

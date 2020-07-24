@@ -1,0 +1,43 @@
+@import 'styles/index';
+
+.base {
+  display: block;
+  padding: 15px;
+}
+
+.category {
+  /* padding: 10px 10px 10px 0; */
+  border-bottom: 1px solid var(--color-grey-60);
+  font-size: rem(16px);
+  font-weight: var(--font-weight-semi-bold);
+  letter-spacing: 0;
+  line-height: 1.5;
+
+  &::after {
+    display: inline-block;
+    padding: 0 10px;
+    border-bottom-color: var(--color-dark-copy);
+    content: '\2022';
+    font-size: rem(20px);
+    line-height: 1;
+    transform: translateY(3px);
+  }
+}
+
+.title {
+  border-bottom: 1px solid transparent;
+  color: var(--color-grey-20);
+  font-family: var(--font-family-zapf-serif);
+  font-size: rem(30px);
+  letter-spacing: 0;
+  line-height: 1.2;
+  transition: all 500ms var(--easing-ease-in-cubic);
+}
+
+.title:hover {
+  border-bottom: 1px solid var(--color-secondary);
+}
+
+.note {
+  color: var(--color-grey-30);
+}
