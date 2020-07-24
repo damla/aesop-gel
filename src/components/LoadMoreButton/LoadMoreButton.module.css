@@ -3,7 +3,6 @@
 .base {
   min-width: auto;
   max-width: 100%;
-  border: 1px solid var(--color-grey-60) !important;
   font-size: rem(15px);
 
   @media (--viewport-lg) {

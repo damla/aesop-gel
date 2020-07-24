@@ -2,7 +2,7 @@
 
 exports[`<LoadMoreButton /> renders base component correctly 1`] = `
 <button
-  className="base alternate blockStyle light base blockStyle"
+  className="base blockStyle dark base blockStyle"
   disabled={false}
   onClick={[Function]}
   title="Load More"

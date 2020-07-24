@@ -36,10 +36,8 @@ const LoadMoreButton = ({ className, copy, isEnabled }) => {
   return (
     <Button
       className={classSet}
-      isAlternate={true}
       isEnabled={!isLoading && isEnabled}
       onClick={handleOnClick}
-      theme="light"
       title={actionLabel}
     >
       {isLoading && (
