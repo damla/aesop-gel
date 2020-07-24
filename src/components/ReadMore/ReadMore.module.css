@@ -1,9 +1,11 @@
 @import 'styles/index';
 
 .base {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  @media (--viewport-md) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 
   /* max-width: 1440px; */
 }

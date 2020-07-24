@@ -27,7 +27,9 @@ const ContentHubArticle = forwardRef(function ContentHubArticleRef({
   const classSet = cx(styles.base, className);
   const categoryClassSet = cx(styles.category);
   const imageClassSet = cx(styles.link);
+  const nonMobileImageClassSet = cx(styles.link, styles[`non-mobile`]);
   const noteClassSet = cx(styles.note);
+  const mobileImageClassSet = cx(styles.link, styles[`mobile`]);
   const titleClassSet = cx(styles.title, styles.link);
 
   return (
@@ -59,13 +61,24 @@ const ContentHubArticle = forwardRef(function ContentHubArticleRef({
         )}
 
         {!isReadMore && !isMenuItem && (
-          <Hyperlink className={imageClassSet} title={title} url={uri}>
+          <Hyperlink className={nonMobileImageClassSet} title={title} url={uri}>
             <Image
               altText={currentImage.altText}
               className={styles.image}
               large={currentImage.large}
               medium={currentImage.medium}
               small={currentImage.small}
+            />
+          </Hyperlink>
+        )}
+        {!isReadMore && !isMenuItem && (
+          <Hyperlink className={mobileImageClassSet} title={title} url={uri}>
+            <Image
+              altText={horizontalThumbnail.altText}
+              className={styles.image}
+              large={horizontalThumbnail.large}
+              medium={horizontalThumbnail.medium}
+              small={horizontalThumbnail.small}
             />
           </Hyperlink>
         )}

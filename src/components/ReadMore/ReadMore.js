@@ -1,7 +1,6 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { ascertainIsSmallOrMediumOnlyViewport } from '~/utils/viewports';
 import ContentHubArticle from '~/components/ContentHubArticle';
 import Transition from '~/components/Transition';
 import styles from './ReadMore.module.css';
@@ -11,7 +10,7 @@ const ReadMore = forwardRef(function ReadMoreRef({ articles, className }) {
 
   return (
     <Transition isActiveOnMount={true} type="fade">
-      <div className={!ascertainIsSmallOrMediumOnlyViewport() && classSet}>
+      <div className={classSet}>
         {articles.map(article => (
           <ContentHubArticle
             category={article.category}

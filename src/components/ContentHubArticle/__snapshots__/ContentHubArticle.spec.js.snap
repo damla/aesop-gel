@@ -28,7 +28,33 @@ exports[`<ContentHubArticle /> renders base component correctly 1`] = `
     5 minute read
   </h3>
   <a
-    className="base left dark link"
+    className="base left dark link non-mobile"
+    href="https://www.aesop.com/au/r/careers"
+    target="_self"
+    title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante."
+  >
+    <picture
+      className="base picture dark image"
+    >
+      <source
+        media="(min-width: 1025px)"
+        srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+      />
+      <source
+        media="(min-width: 640px)"
+        srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+      />
+      <source
+        media="(min-width: 0px)"
+        srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+      />
+      <img
+        alt="horizontal_hub"
+      />
+    </picture>
+  </a>
+  <a
+    className="base left dark link mobile"
     href="https://www.aesop.com/au/r/careers"
     target="_self"
     title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante."
