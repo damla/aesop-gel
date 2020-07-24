@@ -12,6 +12,7 @@ const ContentHubArticle = forwardRef(function ContentHubArticleRef({
   category,
   className,
   horizontalThumbnail,
+  id,
   isHorizontal, // use horizontal or vertical thumbnail
   isMenuItem, // if it's displayed in Read Menu Navigation
   isReadMore, // if it's displayed in ReadMore section
@@ -19,7 +20,6 @@ const ContentHubArticle = forwardRef(function ContentHubArticleRef({
   title,
   uri,
   verticalThumbnail,
-  id,
 }) {
   const ref = useRef(null);
   const isOnScreen = useOnScreen(ref, 0.4);
@@ -75,31 +75,31 @@ const ContentHubArticle = forwardRef(function ContentHubArticleRef({
 });
 
 ContentHubArticle.propTypes = {
-  id: PropTypes.string,
-  verticalThumbnail: PropTypes.object,
-  horizontalThumbnail: PropTypes.object,
-  isHorizontal: PropTypes.bool,
-  isReadMore: PropTypes.bool,
-  isMenuItem: PropTypes.bool,
-  title: PropTypes.string,
-  readingTime: PropTypes.string,
   category: PropTypes.string,
   className: PropTypes.string,
+  horizontalThumbnail: PropTypes.object,
+  id: PropTypes.string,
+  isHorizontal: PropTypes.bool,
+  isMenuItem: PropTypes.bool,
+  isReadMore: PropTypes.bool,
+  readingTime: PropTypes.string,
+  title: PropTypes.string,
   uri: PropTypes.string,
+  verticalThumbnail: PropTypes.object,
 };
 
 ContentHubArticle.defaultProps = {
-  id: undefined,
-  verticalThumbnail: undefined,
-  horizontalThumbnail: undefined,
-  isHorizontal: undefined,
-  isReadMore: false,
-  isMenuItem: false,
-  title: undefined,
-  readingTime: undefined,
   category: undefined,
   className: undefined,
+  horizontalThumbnail: undefined,
+  id: undefined,
+  isHorizontal: undefined,
+  isMenuItem: false,
+  isReadMore: false,
+  readingTime: undefined,
+  title: undefined,
   uri: undefined,
+  verticalThumbnail: undefined,
 };
 
 export default ContentHubArticle;
