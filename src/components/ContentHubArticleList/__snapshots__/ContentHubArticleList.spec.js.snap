@@ -35,7 +35,7 @@ exports[`<ContentHubArticleList /> renders base component correctly 1`] = `
           15 minute read
         </h3>
         <a
-          className="base left dark link"
+          className="base left dark link non-mobile"
           href="https://www.aesop.com/au/r/careers"
           target="_self"
           title="1. Senorial consectetur adipiscing elit."
@@ -57,6 +57,32 @@ exports[`<ContentHubArticleList /> renders base component correctly 1`] = `
             />
             <img
               alt="vertical_hub"
+            />
+          </picture>
+        </a>
+        <a
+          className="base left dark link mobile"
+          href="https://www.aesop.com/au/r/careers"
+          target="_self"
+          title="1. Senorial consectetur adipiscing elit."
+        >
+          <picture
+            className="base picture dark image"
+          >
+            <source
+              media="(min-width: 1025px)"
+              srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+            />
+            <source
+              media="(min-width: 640px)"
+              srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+            />
+            <source
+              media="(min-width: 0px)"
+              srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+            />
+            <img
+              alt="horizontal_hub"
             />
           </picture>
         </a>
@@ -92,7 +118,33 @@ exports[`<ContentHubArticleList /> renders base component correctly 1`] = `
           15 minute read
         </h3>
         <a
-          className="base left dark link"
+          className="base left dark link non-mobile"
+          href="https://www.aesop.com/au/r/careers"
+          target="_self"
+          title="2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante."
+        >
+          <picture
+            className="base picture dark image"
+          >
+            <source
+              media="(min-width: 1025px)"
+              srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+            />
+            <source
+              media="(min-width: 640px)"
+              srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+            />
+            <source
+              media="(min-width: 0px)"
+              srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+            />
+            <img
+              alt="horizontal_hub"
+            />
+          </picture>
+        </a>
+        <a
+          className="base left dark link mobile"
           href="https://www.aesop.com/au/r/careers"
           target="_self"
           title="2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante."
@@ -149,7 +201,33 @@ exports[`<ContentHubArticleList /> renders base component correctly 1`] = `
           15 minute read
         </h3>
         <a
-          className="base left dark link"
+          className="base left dark link non-mobile"
+          href="https://www.aesop.com/au/r/careers"
+          target="_self"
+          title="3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare, id dictum ante. Suspendisse et ornare mauris, id dictum ante."
+        >
+          <picture
+            className="base picture dark image"
+          >
+            <source
+              media="(min-width: 1025px)"
+              srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+            />
+            <source
+              media="(min-width: 640px)"
+              srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+            />
+            <source
+              media="(min-width: 0px)"
+              srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+            />
+            <img
+              alt="horizontal_hub"
+            />
+          </picture>
+        </a>
+        <a
+          className="base left dark link mobile"
           href="https://www.aesop.com/au/r/careers"
           target="_self"
           title="3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare, id dictum ante. Suspendisse et ornare mauris, id dictum ante."
@@ -206,7 +284,7 @@ exports[`<ContentHubArticleList /> renders base component correctly 1`] = `
           15 minute read
         </h3>
         <a
-          className="base left dark link"
+          className="base left dark link non-mobile"
           href="https://www.aesop.com/au/r/careers"
           target="_self"
           title="4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante. Suspendisse et ornare mauris, id dictum ante."
@@ -228,6 +306,32 @@ exports[`<ContentHubArticleList /> renders base component correctly 1`] = `
             />
             <img
               alt="vertical_hub"
+            />
+          </picture>
+        </a>
+        <a
+          className="base left dark link mobile"
+          href="https://www.aesop.com/au/r/careers"
+          target="_self"
+          title="4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante. Suspendisse et ornare mauris, id dictum ante."
+        >
+          <picture
+            className="base picture dark image"
+          >
+            <source
+              media="(min-width: 1025px)"
+              srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+            />
+            <source
+              media="(min-width: 640px)"
+              srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+            />
+            <source
+              media="(min-width: 0px)"
+              srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+            />
+            <img
+              alt="horizontal_hub"
             />
           </picture>
         </a>

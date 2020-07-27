@@ -41,3 +41,19 @@
 .note {
   color: var(--color-grey-30);
 }
+
+.non-mobile {
+  display: none;
+  @media (--viewport-md) {
+    display: block;
+  }
+}
+
+.mobile {
+  @media (--viewport-sm) {
+    display: block;
+  }
+  @media (--viewport-md) {
+    display: none;
+  }
+}
