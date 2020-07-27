@@ -1,4 +1,4 @@
-import React, { forwardRef, useRef } from 'react';
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { useOnScreen } from '~/customHooks/useOnScreen';
@@ -8,7 +8,7 @@ import Hyperlink from '~/components/Hyperlink';
 import Transition from '~/components/Transition';
 import styles from './ContentHubArticle.module.css';
 
-const ContentHubArticle = forwardRef(function ContentHubArticleRef({
+const ContentHubArticle = ({
   category,
   className,
   horizontalThumbnail,
@@ -20,14 +20,16 @@ const ContentHubArticle = forwardRef(function ContentHubArticleRef({
   title,
   uri,
   verticalThumbnail,
-}) {
+}) => {
   const ref = useRef(null);
   const isOnScreen = useOnScreen(ref, 0.4);
   const currentImage = isHorizontal ? horizontalThumbnail : verticalThumbnail;
   const classSet = cx(styles.base, className);
   const categoryClassSet = cx(styles.category);
   const imageClassSet = cx(styles.link);
+  const nonMobileImageClassSet = cx(styles.link, styles[`non-mobile`]);
   const noteClassSet = cx(styles.note);
+  const mobileImageClassSet = cx(styles.link, styles[`mobile`]);
   const titleClassSet = cx(styles.title, styles.link);
 
   return (
@@ -59,7 +61,7 @@ const ContentHubArticle = forwardRef(function ContentHubArticleRef({
         )}
 
         {!isReadMore && !isMenuItem && (
-          <Hyperlink className={imageClassSet} title={title} url={uri}>
+          <Hyperlink className={nonMobileImageClassSet} title={title} url={uri}>
             <Image
               altText={currentImage.altText}
               className={styles.image}
@@ -69,10 +71,21 @@ const ContentHubArticle = forwardRef(function ContentHubArticleRef({
             />
           </Hyperlink>
         )}
+        {!isReadMore && !isMenuItem && (
+          <Hyperlink className={mobileImageClassSet} title={title} url={uri}>
+            <Image
+              altText={horizontalThumbnail.altText}
+              className={styles.image}
+              large={horizontalThumbnail.large}
+              medium={horizontalThumbnail.medium}
+              small={horizontalThumbnail.small}
+            />
+          </Hyperlink>
+        )}
       </div>
     </Transition>
   );
-});
+};
 
 ContentHubArticle.propTypes = {
   category: PropTypes.string,
