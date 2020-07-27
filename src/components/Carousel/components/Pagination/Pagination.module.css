@@ -15,20 +15,16 @@
   &.dark {
     background-color: var(--color-grey-63);
 
-    :global {
-      .slick-active {
-        background-color: var(--color-dark-copy);
-      }
+    :global(.slick-active) {
+      background-color: var(--color-dark-copy);
     }
   }
 
   &.light {
     background-color: var(--color-grey-40);
 
-    :global {
-      .slick-active {
-        background-color: var(--color-light-copy);
-      }
+    :global(.slick-active) {
+      background-color: var(--color-light-copy);
     }
   }
 
