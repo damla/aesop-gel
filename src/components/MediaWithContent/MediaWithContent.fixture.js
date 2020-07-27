@@ -20,6 +20,10 @@ export default {
         'Aliquam lectus purus, gravida id metus dignissim, efficitur tempus lacus. Maecenas a cursus diam. Vivamus ultrices nisi non ex placerat, vel elementum sapien condimentum.',
     },
   },
+  foregroundImageLink: {
+    url: '/',
+    title: 'Fusce et dui nisi',
+  },
   image: {
     default: {
       altText: 'alt image',
