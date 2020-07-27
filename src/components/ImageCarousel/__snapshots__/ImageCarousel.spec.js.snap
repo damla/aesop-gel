@@ -83,6 +83,7 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
         >
           <div>
             <div
+              className="slideWrapper"
               style={
                 Object {
                   "display": "inline-block",
@@ -91,9 +92,33 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
               }
               tabIndex={-1}
             >
-              <h3>
-                6
-              </h3>
+              <div
+                className="item"
+              >
+                <div
+                  className="imageContainer"
+                >
+                  <picture
+                    className="base picture dark image fullWidthSlide"
+                  >
+                    <source
+                      media="(min-width: 1025px)"
+                      srcSet="./assets/images/ImageCarousel/image-three-large.jpg"
+                    />
+                    <source
+                      media="(min-width: 640px)"
+                      srcSet="./assets/images/ImageCarousel/image-three-medium.jpg"
+                    />
+                    <source
+                      media="(min-width: 0px)"
+                      srcSet="./assets/images/ImageCarousel/image-three-small.jpg"
+                    />
+                    <img
+                      alt="Vivamus sollicitudin"
+                    />
+                  </picture>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -112,6 +137,7 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
         >
           <div>
             <div
+              className="slideWrapper"
               style={
                 Object {
                   "display": "inline-block",
@@ -120,9 +146,33 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
               }
               tabIndex={-1}
             >
-              <h3>
-                1
-              </h3>
+              <div
+                className="item"
+              >
+                <div
+                  className="imageContainer"
+                >
+                  <picture
+                    className="base picture dark image fullWidthSlide"
+                  >
+                    <source
+                      media="(min-width: 1025px)"
+                      srcSet="./assets/images/ImageCarousel/image-two-large.jpg"
+                    />
+                    <source
+                      media="(min-width: 640px)"
+                      srcSet="./assets/images/ImageCarousel/image-two-medium.jpg"
+                    />
+                    <source
+                      media="(min-width: 0px)"
+                      srcSet="./assets/images/ImageCarousel/image-two-small.jpg"
+                    />
+                    <img
+                      alt="Nunc dignissim"
+                    />
+                  </picture>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -141,6 +191,7 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
         >
           <div>
             <div
+              className="slideWrapper"
               style={
                 Object {
                   "display": "inline-block",
@@ -149,20 +200,43 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
               }
               tabIndex={-1}
             >
-              <h3>
-                2
-              </h3>
+              <div
+                className="item"
+              >
+                <div
+                  className="imageContainer"
+                >
+                  <picture
+                    className="base picture dark image fullWidthSlide"
+                  >
+                    <source
+                      media="(min-width: 1025px)"
+                      srcSet="./assets/images/ImageCarousel/image-three-large.jpg"
+                    />
+                    <source
+                      media="(min-width: 640px)"
+                      srcSet="./assets/images/ImageCarousel/image-three-medium.jpg"
+                    />
+                    <source
+                      media="(min-width: 0px)"
+                      srcSet="./assets/images/ImageCarousel/image-three-small.jpg"
+                    />
+                    <img
+                      alt="Vivamus sollicitudin"
+                    />
+                  </picture>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <div
           aria-hidden={true}
-          className="slick-slide"
+          className="slick-slide slick-cloned"
           data-index={2}
           onClick={[Function]}
           style={
             Object {
-              "outline": "none",
               "width": 0,
             }
           }
@@ -170,6 +244,7 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
         >
           <div>
             <div
+              className="slideWrapper"
               style={
                 Object {
                   "display": "inline-block",
@@ -178,20 +253,43 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
               }
               tabIndex={-1}
             >
-              <h3>
-                3
-              </h3>
+              <div
+                className="item"
+              >
+                <div
+                  className="imageContainer"
+                >
+                  <picture
+                    className="base picture dark image fullWidthSlide"
+                  >
+                    <source
+                      media="(min-width: 1025px)"
+                      srcSet="./assets/images/ImageCarousel/image-two-large.jpg"
+                    />
+                    <source
+                      media="(min-width: 640px)"
+                      srcSet="./assets/images/ImageCarousel/image-two-medium.jpg"
+                    />
+                    <source
+                      media="(min-width: 0px)"
+                      srcSet="./assets/images/ImageCarousel/image-two-small.jpg"
+                    />
+                    <img
+                      alt="Nunc dignissim"
+                    />
+                  </picture>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <div
           aria-hidden={true}
-          className="slick-slide"
+          className="slick-slide slick-cloned"
           data-index={3}
           onClick={[Function]}
           style={
             Object {
-              "outline": "none",
               "width": 0,
             }
           }
@@ -199,6 +297,7 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
         >
           <div>
             <div
+              className="slideWrapper"
               style={
                 Object {
                   "display": "inline-block",
@@ -207,235 +306,33 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
               }
               tabIndex={-1}
             >
-              <h3>
-                4
-              </h3>
-            </div>
-          </div>
-        </div>
-        <div
-          aria-hidden={true}
-          className="slick-slide"
-          data-index={4}
-          onClick={[Function]}
-          style={
-            Object {
-              "outline": "none",
-              "width": 0,
-            }
-          }
-          tabIndex="-1"
-        >
-          <div>
-            <div
-              style={
-                Object {
-                  "display": "inline-block",
-                  "width": "100%",
-                }
-              }
-              tabIndex={-1}
-            >
-              <h3>
-                5
-              </h3>
-            </div>
-          </div>
-        </div>
-        <div
-          aria-hidden={true}
-          className="slick-slide"
-          data-index={5}
-          onClick={[Function]}
-          style={
-            Object {
-              "outline": "none",
-              "width": 0,
-            }
-          }
-          tabIndex="-1"
-        >
-          <div>
-            <div
-              style={
-                Object {
-                  "display": "inline-block",
-                  "width": "100%",
-                }
-              }
-              tabIndex={-1}
-            >
-              <h3>
-                6
-              </h3>
-            </div>
-          </div>
-        </div>
-        <div
-          aria-hidden={true}
-          className="slick-slide slick-cloned"
-          data-index={6}
-          onClick={[Function]}
-          style={
-            Object {
-              "width": 0,
-            }
-          }
-          tabIndex="-1"
-        >
-          <div>
-            <div
-              style={
-                Object {
-                  "display": "inline-block",
-                  "width": "100%",
-                }
-              }
-              tabIndex={-1}
-            >
-              <h3>
-                1
-              </h3>
-            </div>
-          </div>
-        </div>
-        <div
-          aria-hidden={true}
-          className="slick-slide slick-cloned"
-          data-index={7}
-          onClick={[Function]}
-          style={
-            Object {
-              "width": 0,
-            }
-          }
-          tabIndex="-1"
-        >
-          <div>
-            <div
-              style={
-                Object {
-                  "display": "inline-block",
-                  "width": "100%",
-                }
-              }
-              tabIndex={-1}
-            >
-              <h3>
-                2
-              </h3>
-            </div>
-          </div>
-        </div>
-        <div
-          aria-hidden={true}
-          className="slick-slide slick-cloned"
-          data-index={8}
-          onClick={[Function]}
-          style={
-            Object {
-              "width": 0,
-            }
-          }
-          tabIndex="-1"
-        >
-          <div>
-            <div
-              style={
-                Object {
-                  "display": "inline-block",
-                  "width": "100%",
-                }
-              }
-              tabIndex={-1}
-            >
-              <h3>
-                3
-              </h3>
-            </div>
-          </div>
-        </div>
-        <div
-          aria-hidden={true}
-          className="slick-slide slick-cloned"
-          data-index={9}
-          onClick={[Function]}
-          style={
-            Object {
-              "width": 0,
-            }
-          }
-          tabIndex="-1"
-        >
-          <div>
-            <div
-              style={
-                Object {
-                  "display": "inline-block",
-                  "width": "100%",
-                }
-              }
-              tabIndex={-1}
-            >
-              <h3>
-                4
-              </h3>
-            </div>
-          </div>
-        </div>
-        <div
-          aria-hidden={true}
-          className="slick-slide slick-cloned"
-          data-index={10}
-          onClick={[Function]}
-          style={
-            Object {
-              "width": 0,
-            }
-          }
-          tabIndex="-1"
-        >
-          <div>
-            <div
-              style={
-                Object {
-                  "display": "inline-block",
-                  "width": "100%",
-                }
-              }
-              tabIndex={-1}
-            >
-              <h3>
-                5
-              </h3>
-            </div>
-          </div>
-        </div>
-        <div
-          aria-hidden={true}
-          className="slick-slide slick-cloned"
-          data-index={11}
-          onClick={[Function]}
-          style={
-            Object {
-              "width": 0,
-            }
-          }
-          tabIndex="-1"
-        >
-          <div>
-            <div
-              style={
-                Object {
-                  "display": "inline-block",
-                  "width": "100%",
-                }
-              }
-              tabIndex={-1}
-            >
-              <h3>
-                6
-              </h3>
+              <div
+                className="item"
+              >
+                <div
+                  className="imageContainer"
+                >
+                  <picture
+                    className="base picture dark image fullWidthSlide"
+                  >
+                    <source
+                      media="(min-width: 1025px)"
+                      srcSet="./assets/images/ImageCarousel/image-three-large.jpg"
+                    />
+                    <source
+                      media="(min-width: 640px)"
+                      srcSet="./assets/images/ImageCarousel/image-three-medium.jpg"
+                    />
+                    <source
+                      media="(min-width: 0px)"
+                      srcSet="./assets/images/ImageCarousel/image-three-small.jpg"
+                    />
+                    <img
+                      alt="Vivamus sollicitudin"
+                    />
+                  </picture>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -480,34 +377,6 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
       >
         <li
           className="slick-active"
-        >
-          <div
-            onClick={[Function]}
-          />
-        </li>
-        <li
-          className=""
-        >
-          <div
-            onClick={[Function]}
-          />
-        </li>
-        <li
-          className=""
-        >
-          <div
-            onClick={[Function]}
-          />
-        </li>
-        <li
-          className=""
-        >
-          <div
-            onClick={[Function]}
-          />
-        </li>
-        <li
-          className=""
         >
           <div
             onClick={[Function]}

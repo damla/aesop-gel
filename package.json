@@ -64,7 +64,7 @@
     "react-accessible-accordion": "3.0.1",
     "react-collapse": "5.0.1",
     "react-dom": "^16.8.0",
-    "react-slick": "^0.25.2",
+    "react-slick": "0.25.2",
     "react-transition-group": "4.4.1",
     "uuid": "3.4.0",
     "wavesurfer.js": "3.3.3"
