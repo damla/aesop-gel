@@ -1,4 +1,4 @@
-import React, { forwardRef, useRef } from 'react';
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { useOnScreen } from '~/customHooks/useOnScreen';
@@ -8,7 +8,7 @@ import Hyperlink from '~/components/Hyperlink';
 import Transition from '~/components/Transition';
 import styles from './ContentHubArticle.module.css';
 
-const ContentHubArticle = forwardRef(function ContentHubArticleRef({
+const ContentHubArticle = ({
   category,
   className,
   horizontalThumbnail,
@@ -20,7 +20,7 @@ const ContentHubArticle = forwardRef(function ContentHubArticleRef({
   title,
   uri,
   verticalThumbnail,
-}) {
+}) => {
   const ref = useRef(null);
   const isOnScreen = useOnScreen(ref, 0.4);
   const currentImage = isHorizontal ? horizontalThumbnail : verticalThumbnail;
@@ -85,7 +85,7 @@ const ContentHubArticle = forwardRef(function ContentHubArticleRef({
       </div>
     </Transition>
   );
-});
+};
 
 ContentHubArticle.propTypes = {
   category: PropTypes.string,

@@ -1,14 +1,14 @@
-import React, { forwardRef, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import ContentHubArticle from '~/components/ContentHubArticle';
 import styles from './ContentHubArticleList.module.css';
 
-const ContentHubArticleList = forwardRef(function ContentHubArticleListRef({
+const ContentHubArticleList = ({
   articles,
   className,
   pattern, // 0 means first image is horizontal
-}) {
+}) => {
   const classSet = cx(styles.base, className);
   const topLeftClassSet = cx(styles[`top-left-${pattern}`], styles[`article`]);
   const topRightClassSet = cx(
@@ -35,7 +35,7 @@ const ContentHubArticleList = forwardRef(function ContentHubArticleListRef({
                 category={articles[0].category}
                 horizontalThumbnail={articles[0].horizontalThumbnail}
                 id={articles[0].id}
-                isHorizontal={!pattern}
+                isHorizontal={Boolean(!pattern)}
                 key={articles[0].id}
                 readingTime={articles[0].readingTime}
                 title={articles[0].title}
@@ -50,7 +50,7 @@ const ContentHubArticleList = forwardRef(function ContentHubArticleListRef({
                 category={articles[1].category}
                 horizontalThumbnail={articles[1].horizontalThumbnail}
                 id={articles[1].id}
-                isHorizontal={pattern}
+                isHorizontal={Boolean(pattern)}
                 key={articles[1].id}
                 readingTime={articles[1].readingTime}
                 title={articles[1].title}
@@ -67,7 +67,7 @@ const ContentHubArticleList = forwardRef(function ContentHubArticleListRef({
                   (articles[count - 2] || articles[0]).horizontalThumbnail
                 }
                 id={(articles[count - 2] || articles[0]).id}
-                isHorizontal={pattern}
+                isHorizontal={Boolean(pattern)}
                 readingTime={(articles[count - 2] || articles[0]).readingTime}
                 title={(articles[count - 2] || articles[0]).title}
                 uri={(articles[count - 2] || articles[0]).uri}
@@ -93,7 +93,7 @@ const ContentHubArticleList = forwardRef(function ContentHubArticleListRef({
                 id={
                   articles[count - 1] ? articles[count - 1].id : articles[1].id
                 }
-                isHorizontal={!pattern}
+                isHorizontal={Boolean(!pattern)}
                 readingTime={
                   articles[count - 1]
                     ? articles[count - 1].readingTime
@@ -121,7 +121,7 @@ const ContentHubArticleList = forwardRef(function ContentHubArticleListRef({
       </Fragment>
     </section>
   );
-});
+};
 
 ContentHubArticleList.propTypes = {
   articles: PropTypes.array,
