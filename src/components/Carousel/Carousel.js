@@ -1,4 +1,4 @@
-import React, { forwardRef, useState } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'lodash/get';
@@ -20,23 +20,20 @@ import PreviousButton from './components/PreviousButton';
 import Slide from './components/Slide';
 import styles from './Carousel.module.css';
 
-const Carousel = forwardRef(function CarouselRef(
-  {
-    autoplaySpeed,
-    className,
-    hasAutoplay,
-    hasFlushPagination,
-    hasFullWidthSlides,
-    hasShowCaption,
-    hasSlideCounter,
-    id,
-    initialSlideIndex,
-    introduction,
-    slides,
-    theme,
-  },
-  ref,
-) {
+const Carousel = ({
+  autoplaySpeed,
+  className,
+  hasAutoplay,
+  hasFlushPagination,
+  hasFullWidthSlides,
+  hasShowCaption,
+  hasSlideCounter,
+  id,
+  initialSlideIndex,
+  introduction,
+  slides,
+  theme,
+}) => {
   const slidesLength = slides.length;
   const [isCaptionActive, setIsCaptionActive] = useState(true);
   const [isNextButtonActive, setIsNextButtonActive] = useState(true);
@@ -126,7 +123,7 @@ const Carousel = forwardRef(function CarouselRef(
   };
 
   return (
-    <div className={classSet} id={id} ref={ref}>
+    <div className={classSet} id={id}>
       {!hasIntroSlide && introduction && (
         <aside className={styles.mobileCarouselIntroductionWrapper}>
           <CarouselIntroduction
@@ -199,7 +196,7 @@ const Carousel = forwardRef(function CarouselRef(
       )}
     </div>
   );
-});
+};
 
 Carousel.propTypes = {
   autoplaySpeed: PropTypes.number,
