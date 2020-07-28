@@ -16,29 +16,59 @@ const Transition = ({
 }) => {
   const hasMounted = useHasMounted();
 
-  console.log('CSSTransition', CSSTransition); // eslint-disable-line
-
   if (!isValidElement(children)) {
     return null;
   }
 
   const isVisible = isActiveOnMount ? !!hasMounted : !!isActive;
 
+  /* eslint-disable */
+  console.log('CSSTransition Props', {
+    type: data[type],
+    typeEnter: get(data[type], 'classNames.enter', ''),
+    classNames: get(data[type], 'classNames', ''),
+    in: isVisible,
+    mountOnEnter: !!hasCSSTransitionMountOnEnter,
+    timeout: get(data[type], 'timeout', 300),
+    unmountOnExit: !!hasCSSTransitionUnmountOnExit,
+    childClassNames: cx(
+      'console.log className',
+      get(children, 'props.className', ''),
+      isVisible ? '' : get(data[type], 'classNames.enter', ''),
+    ),
+    childClassNamesPrev: get(children, 'props.className', ''),
+    childClassNamesIsVisible: isVisible
+      ? ''
+      : get(data[type], 'classNames.enter', ''),
+  });
+  /* eslint-enable */
+
   return (
-    <CSSTransition
-      classNames={get(data[type], 'classNames', '')}
-      in={isVisible}
-      mountOnEnter={!!hasCSSTransitionMountOnEnter}
-      timeout={get(data[type], 'timeout', 300)}
-      unmountOnExit={!!hasCSSTransitionUnmountOnExit}
-    >
-      {React.cloneElement(children, {
-        className: cx(
-          get(children, 'props.className', ''),
-          isVisible ? '' : get(data[type], 'classNames.enter', ''),
-        ),
-      })}
-    </CSSTransition>
+    <>
+      <CSSTransition
+        classNames={get(data[type], 'classNames', '')}
+        in={isVisible}
+        mountOnEnter={!!hasCSSTransitionMountOnEnter}
+        timeout={get(data[type], 'timeout', 300)}
+        unmountOnExit={!!hasCSSTransitionUnmountOnExit}
+      >
+        {React.cloneElement(children, {
+          className: cx(
+            get(children, 'props.className', ''),
+            isVisible ? '' : get(data[type], 'classNames.enter', ''),
+          ),
+        })}
+      </CSSTransition>
+      <CSSTransition
+        classNames={get(data[type], 'classNames', '')}
+        in={isVisible}
+        mountOnEnter={!!hasCSSTransitionMountOnEnter}
+        timeout={get(data[type], 'timeout', 300)}
+        unmountOnExit={!!hasCSSTransitionUnmountOnExit}
+      >
+        {children}
+      </CSSTransition>
+    </>
   );
 };
 
