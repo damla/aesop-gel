@@ -45,51 +45,6 @@ import TwoColumnLayout from './TwoColumnLayout';
 import TwoColumnList from './TwoColumnList';
 import Video from './Video';
 
-export { Accordion };
-export { AddToCartButton };
-export { Audio };
-export { BodyCopy };
-export { Breadcrumbs };
-export { Button };
-export { BynderWidget };
-export { Carousel };
-export { DefinitionList };
-export { DialogBanner };
-export { DoubleImage };
-export { Figure };
-export { FlyinPanel };
-export { GoogleMap };
-export { Heading };
-export { Hidden };
-export { Hyperlink };
-export { Icon };
-export { Image };
-export { ImageCarousel };
-export { KitList };
-export { LinkButtonGroup };
-export { List };
-export { Loading };
-export { MediaWithContent };
-export { Modal };
-export { Overlay };
-export { P };
-export { Paragraph };
-export { ParagraphSet };
-export { Podium };
-export { ProductCommerce };
-export { ProductDetailHeader };
-export { Quote };
-export { RadioGroup };
-export { SectionHeading };
-export { Select };
-export { StoreDetailHeader };
-export { StoreHoursList };
-export { SubNav };
-export { Transition };
-export { TwoColumnLayout };
-export { TwoColumnList };
-export { Video };
-
 export default {
   Accordion,
   AddToCartButton,
