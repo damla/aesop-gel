@@ -33,28 +33,26 @@
     line-height: 1.7;
   }
 
-  :global {
-    .slick-track {
-      display: flex;
+  :global(.slick-track) {
+    display: flex;
+  }
+
+  :global(.slick-list) {
+    position: relative;
+    margin: 0 0 24px;
+
+    @media (--viewport-md) {
+      margin: 0 40px 24px;
     }
 
-    .slick-list {
-      position: relative;
-      margin: 0 0 24px;
-
-      @media (--viewport-md) {
-        margin: 0 40px 24px;
-      }
-
-      @media (--viewport-lg) {
-        margin: 0 80px 48px;
-      }
+    @media (--viewport-lg) {
+      margin: 0 80px 48px;
     }
+  }
 
-    .slick-slide {
-      & > div {
-        height: 100%;
-      }
+  :global(.slick-slide) {
+    & > div {
+      height: 100%;
     }
   }
 }
@@ -103,11 +101,9 @@
     }
   }
 
-  :global {
-    .slick-list {
-      margin-right: 0;
-      margin-left: 0;
-    }
+  :global(.slick-list) {
+    margin-right: 0;
+    margin-left: 0;
   }
 }
 
