@@ -16,6 +16,8 @@ const Transition = ({
 }) => {
   const hasMounted = useHasMounted();
 
+  console.log('CSSTransition', CSSTransition); // eslint-disable-line
+
   if (!isValidElement(children)) {
     return null;
   }
