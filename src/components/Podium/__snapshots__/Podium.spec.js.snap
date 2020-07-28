@@ -1,9 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Podium /> renders base component correctly 1`] = `
-<section
-  className="base nonePaddingBottom nonePaddingLeft nonePaddingRight nonePaddingTop"
->
-  Content
-</section>
+Array [
+  <section
+    className="base nonePaddingBottom nonePaddingLeft nonePaddingRight nonePaddingTop"
+  >
+    Content
+  </section>,
+  <section
+    className="base nonePaddingBottom nonePaddingLeft nonePaddingRight nonePaddingTop"
+  >
+    Content
+  </section>,
+]
 `;
