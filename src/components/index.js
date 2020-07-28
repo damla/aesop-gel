@@ -2,12 +2,12 @@ import Accordion from './Accordion';
 import AddToCartButton from './AddToCartButton';
 import Audio from './Audio';
 import BodyCopy from './BodyCopy';
-import ContentHubArticle from './ContentHubArticle';
-import ContentHubArticleList from './ContentHubArticleList';
 import Breadcrumbs from './Breadcrumbs';
 import Button from './Button';
 import BynderWidget from './BynderWidget';
 import Carousel from './Carousel';
+import ContentHubArticle from './ContentHubArticle';
+import ContentHubArticleList from './ContentHubArticleList';
 import DefinitionList from './DefinitionList';
 import DialogBanner from './DialogBanner';
 import DoubleImage from './DoubleImage';
@@ -23,13 +23,15 @@ import ImageCarousel from './ImageCarousel';
 import KitList from './KitList';
 import LinkButtonGroup from './LinkButtonGroup';
 import List from './List';
-import Loading from './Loading';
 import LoadMoreButton from './LoadMoreButton';
+import Loading from './Loading';
 import MediaWithContent from './MediaWithContent';
 import Modal from './Modal';
 import Overlay from './Overlay';
 import Paragraph, { P, ParagraphSet } from './Paragraph';
 import Podium from './Podium';
+import ProductCommerce from './ProductCommerce';
+import ProductDetailHeader from './ProductDetailHeader';
 import Quote from './Quote';
 import RadioGroup from './RadioGroup';
 import ReadMore from './ReadMore';
@@ -70,10 +72,12 @@ export { Loading };
 export { MediaWithContent };
 export { Modal };
 export { Overlay };
-export { Paragraph };
 export { P };
+export { Paragraph };
 export { ParagraphSet };
 export { Podium };
+export { ProductCommerce };
+export { ProductDetailHeader };
 export { Quote };
 export { RadioGroup };
 export { SectionHeading };
@@ -112,8 +116,8 @@ export default {
   KitList,
   LinkButtonGroup,
   List,
-  Loading,
   LoadMoreButton,
+  Loading,
   MediaWithContent,
   Modal,
   Overlay,
@@ -121,6 +125,8 @@ export default {
   Paragraph,
   ParagraphSet,
   Podium,
+  ProductCommerce,
+  ProductDetailHeader,
   Quote,
   RadioGroup,
   ReadMore,
