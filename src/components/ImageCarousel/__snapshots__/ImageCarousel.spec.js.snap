@@ -9,7 +9,7 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
     dir="ltr"
   >
     <button
-      className="base inlineStyle dark base"
+      className="base dark base"
       disabled={false}
       onClick={[Function]}
       title="next slide"
@@ -339,7 +339,7 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
       </div>
     </div>
     <button
-      className="base inlineStyle dark base"
+      className="base dark base"
       disabled={false}
       onClick={[Function]}
       title="next slide"
@@ -399,6 +399,11 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
       className="slideCounter"
     >
       1 / 2
+    </div>
+    <div
+      className="caption"
+    >
+      Nunc dignissim quis arcu a lobortis. Nullam auctor id nulla non sagittis. Quisque non enim efficitur quam mattis semper a nec arcu.
     </div>
     <div
       className="caption"

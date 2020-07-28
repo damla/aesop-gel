@@ -4,18 +4,16 @@ import cx from 'classnames';
 import { HEADING, TRANSITIONS } from '~/constants';
 import { useProductDetailContext, useVariantSelectContext } from '~/contexts';
 import { getVariantRadioOptions } from '~/utils/product';
-import {
-  AddToCartButton,
-  Button,
-  DefinitionList,
-  FlyinPanel,
-  Heading,
-  Hidden,
-  Icon,
-  Paragraph,
-  RadioGroup,
-  Transition,
-} from '~/components';
+import AddToCartButton from '~/components/AddToCartButton';
+import Button from '~/components/Button';
+import DefinitionList from '~/components/DefinitionList';
+import FlyinPanel from '~/components/FlyinPanel';
+import Heading from '~/components/Heading';
+import Hidden from '~/components/Hidden';
+import Icon from '~/components/Icon';
+import Paragraph from '~/components/Paragraph';
+import RadioGroup from '~/components/RadioGroup';
+import Transition from '~/components/Transition';
 import styles from './ProductDetailBody.module.css';
 
 const ProductDetailBody = ({ className, copy, theme }) => {
