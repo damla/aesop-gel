@@ -42,7 +42,7 @@ const LinkButtonGroup = ({
     <div className={classSet}>
       <>
         {React.Children.map(childComponents, child => {
-          if (child === null) return child;
+          if (child === null) return null;
 
           return React.cloneElement(child, {
             className: `${child.props?.className || ''} ${childrenClassSet}`,
