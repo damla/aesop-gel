@@ -1,8 +1,10 @@
 @import 'styles/index';
 
 .base {
+  display: block;
   min-width: auto;
   max-width: 100%;
+  margin: 0 auto;
   font-size: rem(15px);
 
   @media (--viewport-lg) {
@@ -14,12 +16,6 @@
   position: absolute;
   top: calc(50% - 5.5px);
   left: calc(0% - 5px);
-}
-
-.showSuccessMessage {
-  span {
-    animation: slide-up 2000ms var(--easing-ease-in-out-cubic) forwards;
-  }
 }
 
 .label {

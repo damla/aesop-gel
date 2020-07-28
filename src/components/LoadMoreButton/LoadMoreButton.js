@@ -17,16 +17,11 @@ const LoadMoreButton = ({ className, copy, isEnabled }) => {
     onClick(dispatch, actionTypes);
   };
 
-  const { hasError, isLoading, isUpdateSuccessful } = loadMore;
+  const { hasError, isLoading } = loadMore;
   const actionLabel = `${copy.actionLabel}`;
   const updateNotification = `${copy.updateNotification}`;
-  const showUpdateSuccessMessage = !isLoading && isUpdateSuccessful;
 
-  const labelClassName = cx(
-    styles.label,
-    { [styles.hideLabel]: isLoading },
-    { [styles.showSuccessMessage]: showUpdateSuccessMessage },
-  );
+  const labelClassName = cx(styles.label, { [styles.hideLabel]: isLoading });
 
   if (hasError) {
     /** @TODO Handle errors thrown by handleOnClick */
@@ -64,7 +59,6 @@ LoadMoreButton.defaultProps = {
   className: undefined,
   copy: {
     actionLabel: 'Load More',
-    updateNotification: 'Successfully',
   },
   isEnabled: true,
 };

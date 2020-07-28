@@ -12,7 +12,7 @@ exports[`<LoadMoreButton /> renders base component correctly 1`] = `
     className="label"
   >
     <span>
-      Successfully
+      undefined
     </span>
     <span>
       Load More
