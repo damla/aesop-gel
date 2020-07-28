@@ -1,83 +1,164 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ContentHubArticle /> renders base component correctly 1`] = `
-<div
-  className="base fadeEnter"
-  id="test_id"
->
-  <h3
-    className="base xSmall dark category"
+Array [
+  <div
+    className="base fadeEnter"
+    id="test_id"
   >
-    Product
-  </h3>
-  <a
-    className="base left dark"
-    href="https://www.aesop.com/au/r/careers"
-    target="_self"
-    title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante."
-  >
-    <span
-      className="title link"
+    <h3
+      className="base xSmall dark category"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante.
-    </span>
-  </a>
-  <h3
-    className="base xSmall dark note"
-  >
-    5 minute read
-  </h3>
-  <a
-    className="base left dark link non-mobile"
-    href="https://www.aesop.com/au/r/careers"
-    target="_self"
-    title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante."
-  >
-    <picture
-      className="base picture dark image"
+      Product
+    </h3>
+    <a
+      className="base left dark"
+      href="https://www.aesop.com/au/r/careers"
+      target="_self"
+      title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante."
     >
-      <source
-        media="(min-width: 1025px)"
-        srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
-      />
-      <source
-        media="(min-width: 640px)"
-        srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
-      />
-      <source
-        media="(min-width: 0px)"
-        srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
-      />
-      <img
-        alt="horizontal_hub"
-      />
-    </picture>
-  </a>
-  <a
-    className="base left dark link mobile"
-    href="https://www.aesop.com/au/r/careers"
-    target="_self"
-    title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante."
-  >
-    <picture
-      className="base picture dark image"
+      <span
+        className="title link"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante.
+      </span>
+    </a>
+    <h3
+      className="base xSmall dark note"
     >
-      <source
-        media="(min-width: 1025px)"
-        srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
-      />
-      <source
-        media="(min-width: 640px)"
-        srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
-      />
-      <source
-        media="(min-width: 0px)"
-        srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
-      />
-      <img
-        alt="horizontal_hub"
-      />
-    </picture>
-  </a>
-</div>
+      5 minute read
+    </h3>
+    <a
+      className="base left dark link non-mobile"
+      href="https://www.aesop.com/au/r/careers"
+      target="_self"
+      title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante."
+    >
+      <picture
+        className="base picture dark image"
+      >
+        <source
+          media="(min-width: 1025px)"
+          srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+        />
+        <source
+          media="(min-width: 640px)"
+          srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+        />
+        <source
+          media="(min-width: 0px)"
+          srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+        />
+        <img
+          alt="horizontal_hub"
+        />
+      </picture>
+    </a>
+    <a
+      className="base left dark link mobile"
+      href="https://www.aesop.com/au/r/careers"
+      target="_self"
+      title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante."
+    >
+      <picture
+        className="base picture dark image"
+      >
+        <source
+          media="(min-width: 1025px)"
+          srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+        />
+        <source
+          media="(min-width: 640px)"
+          srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+        />
+        <source
+          media="(min-width: 0px)"
+          srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+        />
+        <img
+          alt="horizontal_hub"
+        />
+      </picture>
+    </a>
+  </div>,
+  <div
+    className="base"
+    id="test_id"
+  >
+    <h3
+      className="base xSmall dark category"
+    >
+      Product
+    </h3>
+    <a
+      className="base left dark"
+      href="https://www.aesop.com/au/r/careers"
+      target="_self"
+      title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante."
+    >
+      <span
+        className="title link"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante.
+      </span>
+    </a>
+    <h3
+      className="base xSmall dark note"
+    >
+      5 minute read
+    </h3>
+    <a
+      className="base left dark link non-mobile"
+      href="https://www.aesop.com/au/r/careers"
+      target="_self"
+      title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante."
+    >
+      <picture
+        className="base picture dark image"
+      >
+        <source
+          media="(min-width: 1025px)"
+          srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+        />
+        <source
+          media="(min-width: 640px)"
+          srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+        />
+        <source
+          media="(min-width: 0px)"
+          srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+        />
+        <img
+          alt="horizontal_hub"
+        />
+      </picture>
+    </a>
+    <a
+      className="base left dark link mobile"
+      href="https://www.aesop.com/au/r/careers"
+      target="_self"
+      title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante."
+    >
+      <picture
+        className="base picture dark image"
+      >
+        <source
+          media="(min-width: 1025px)"
+          srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+        />
+        <source
+          media="(min-width: 640px)"
+          srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+        />
+        <source
+          media="(min-width: 0px)"
+          srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+        />
+        <img
+          alt="horizontal_hub"
+        />
+      </picture>
+    </a>
+  </div>,
+]
 `;

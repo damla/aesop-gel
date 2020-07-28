@@ -1,9 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Transition /> renders base component correctly 1`] = `
-<div
-  className=""
->
-  Content
-</div>
+Array [
+  <div
+    className=""
+  >
+    Content
+  </div>,
+  <div>
+    Content
+  </div>,
+]
 `;
