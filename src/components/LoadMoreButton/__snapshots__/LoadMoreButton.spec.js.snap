@@ -2,7 +2,7 @@
 
 exports[`<LoadMoreButton /> renders base component correctly 1`] = `
 <button
-  className="base blockStyle dark base blockStyle"
+  className="base blockStyle dark base"
   disabled={false}
   onClick={[Function]}
   title="Load More"
@@ -11,9 +11,6 @@ exports[`<LoadMoreButton /> renders base component correctly 1`] = `
   <span
     className="label"
   >
-    <span>
-      undefined
-    </span>
     <span>
       Load More
     </span>

@@ -9,7 +9,7 @@ import styles from './LoadMoreButton.module.css';
 const LoadMoreButton = ({ className, copy, isEnabled }) => {
   const loadMore = useLoadMoreContext();
 
-  const classSet = cx(styles.base, styles.blockStyle, className);
+  const classSet = cx(styles.base, className);
 
   const handleOnClick = () => {
     const { actionTypes, dispatch, onClick } = loadMore;
@@ -19,7 +19,6 @@ const LoadMoreButton = ({ className, copy, isEnabled }) => {
 
   const { hasError, isLoading } = loadMore;
   const actionLabel = `${copy.actionLabel}`;
-  const updateNotification = `${copy.updateNotification}`;
 
   const labelClassName = cx(styles.label, { [styles.hideLabel]: isLoading });
 
@@ -39,7 +38,6 @@ const LoadMoreButton = ({ className, copy, isEnabled }) => {
         <Loading className={styles.loading} isLoading={true} theme="dark" />
       )}
       <span className={labelClassName}>
-        <span>{updateNotification}</span>
         <span>{actionLabel}</span>
       </span>
     </Button>
@@ -50,7 +48,6 @@ LoadMoreButton.propTypes = {
   className: PropTypes.string,
   copy: PropTypes.shape({
     actionLabel: PropTypes.string,
-    updateNotification: PropTypes.string,
   }),
   isEnabled: PropTypes.bool,
 };
