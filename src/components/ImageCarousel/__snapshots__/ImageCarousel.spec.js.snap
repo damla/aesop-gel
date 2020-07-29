@@ -405,11 +405,6 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
     >
       Nunc dignissim quis arcu a lobortis. Nullam auctor id nulla non sagittis. Quisque non enim efficitur quam mattis semper a nec arcu.
     </div>
-    <div
-      className="caption"
-    >
-      Nunc dignissim quis arcu a lobortis. Nullam auctor id nulla non sagittis. Quisque non enim efficitur quam mattis semper a nec arcu.
-    </div>
   </footer>
 </div>
 `;

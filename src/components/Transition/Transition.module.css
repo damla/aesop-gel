@@ -1,0 +1,233 @@
+@import 'styles/variables/index';
+
+.fadeEnter {
+  opacity: 0;
+}
+
+.fadeEnterActive {
+  opacity: 1;
+  transition: opacity 500ms var(--easing-ease-out-cubic);
+}
+
+.fadeEnterDone {
+  opacity: 1;
+}
+
+.fadeExit {
+  opacity: 1;
+}
+
+.fadeExitActive {
+  opacity: 0;
+  transition: opacity 500ms var(--easing-ease-out-cubic);
+}
+
+.fadeExitDone {
+  opacity: 0;
+}
+
+.shiftInDownEnter {
+  opacity: 0;
+  transform: translate3d(0, -20px, 0);
+}
+
+.shiftInDownEnterActive {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition:
+    transform 1500ms var(--easing-ease-out-cubic),
+    opacity 1500ms var(--easing-ease-in-cubic);
+}
+
+.shiftInDownEnterDone {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.shiftInDownExit {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.shiftInDownExitActive {
+  opacity: 0;
+  transform: translate3d(0, -20px, 0);
+  transition:
+    transform 1500ms var(--easing-ease-out-cubic),
+    opacity 1500ms var(--easing-ease-in-cubic);
+}
+
+.shiftInDownExitDone {
+  opacity: 0;
+  transform: translate3d(0, -20px, 0);
+}
+
+.shiftInLeftEnter {
+  opacity: 0;
+  transform: translate3d(20px, 0, 0);
+}
+
+.shiftInLeftEnterActive {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition:
+    transform 1500ms var(--easing-ease-out-cubic),
+    opacity 1000ms var(--easing-ease-in-cubic);
+}
+
+.shiftInLeftEnterDone {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.shiftInLeftExit {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.shiftInLeftExitActive {
+  opacity: 0;
+  transform: translate3d(20px, 0, 0);
+  transition:
+    transform 1500ms var(--easing-ease-out-cubic),
+    opacity 1000ms var(--easing-ease-in-cubic);
+}
+
+.shiftInLeftExitDone {
+  opacity: 0;
+  transform: translate3d(20px, 0, 0);
+}
+
+.slideDownEnter {
+  transform: translate3d(0, -100%, 0);
+  visibility: hidden;
+}
+
+.slideDownEnterActive {
+  transform: translate3d(0, 0, 0);
+  transition:
+    transform 500ms var(--easing-ease-out-cubic),
+    visibility 500ms var(--easing-ease-out-cubic);
+  visibility: visible;
+}
+
+.slideDownEnterDone {
+  transform: translate3d(0, 0, 0);
+  visibility: visible;
+}
+
+.slideDownExit {
+  transform: translate3d(0, 0, 0);
+  visibility: visible;
+}
+
+.slideDownExitActive {
+  transform: translate3d(0, -100%, 0);
+  transition:
+    transform 500ms var(--easing-ease-out-cubic),
+    visibility 500ms var(--easing-ease-out-cubic);
+  visibility: hidden;
+}
+
+.slideDownExitDone {
+  transform: translate3d(0, -100%, 0);
+  visibility: hidden;
+}
+
+.slideRightEnter {
+  transform: translate3d(-100%, 0, 0);
+  visibility: hidden;
+}
+
+.slideRightEnterActive {
+  transform: translate3d(0, 0, 0);
+  transition:
+    transform 500ms var(--easing-ease-out-cubic),
+    visibility 500ms var(--easing-ease-out-cubic);
+  visibility: visible;
+}
+
+.slideRightEnterDone {
+  transform: translate3d(0, 0, 0);
+  visibility: visible;
+}
+
+.slideRightExit {
+  transform: translate3d(0, 0, 0);
+  visibility: visible;
+}
+
+.slideRightExitActive {
+  transform: translate3d(-100%, 0, 0);
+  transition:
+    transform 500ms var(--easing-ease-out-cubic),
+    visibility 500ms var(--easing-ease-out-cubic);
+  visibility: hidden;
+}
+
+.slideRightExitDone {
+  transform: translate3d(-100%, 0, 0);
+  visibility: hidden;
+}
+
+.slowFadeEnter {
+  opacity: 0;
+}
+
+.slowFadeEnterActive {
+  opacity: 1;
+  transition: opacity 1500ms var(--easing-ease-out-cubic);
+}
+
+.slowFadeEnterDone {
+  opacity: 1;
+}
+
+.slowFadeExit {
+  opacity: 1;
+}
+
+.slowFadeExitActive {
+  opacity: 0;
+  transition: opacity 1500ms var(--easing-ease-out-cubic);
+}
+
+.slowFadeExitDone {
+  opacity: 0;
+}
+
+.zoomEnter {
+  opacity: 0;
+  transform: scale3d(0.9, 0.9, 0.9);
+}
+
+.zoomEnterActive {
+  opacity: 1;
+  transform: scale3d(1, 1, 1);
+  transition:
+    transform 500ms var(--easing-ease-out-cubic),
+    opacity 500ms var(--easing-ease-out-cubic);
+}
+
+.zoomEnterDone {
+  opacity: 1;
+  transform: scale3d(1, 1, 1);
+}
+
+.zoomExit {
+  opacity: 1;
+  transform: scale3d(1, 1, 1);
+}
+
+.zoomExitActive {
+  opacity: 0;
+  transform: scale3d(0.9, 0.9, 0.9);
+  transition:
+    transform 500ms var(--easing-ease-out-cubic),
+    opacity 500ms var(--easing-ease-out-cubic);
+}
+
+.zoomExitDone {
+  opacity: 0;
+  transform: scale3d(0.9, 0.9, 0.9);
+}
