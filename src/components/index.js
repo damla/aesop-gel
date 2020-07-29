@@ -10,7 +10,7 @@ import ContentHubArticle from './ContentHubArticle';
 import ContentHubArticleList from './ContentHubArticleList';
 import DefinitionList from './DefinitionList';
 import DialogBanner from './DialogBanner';
-import DoubleImage from './DoubleImage';
+import DoubleMedia from './DoubleMedia';
 import Figure from './Figure';
 import FlyinPanel from './FlyinPanel';
 import GoogleMap from './GoogleMap';
@@ -58,7 +58,7 @@ export default {
   ContentHubArticleList,
   DefinitionList,
   DialogBanner,
-  DoubleImage,
+  DoubleMedia,
   Figure,
   FlyinPanel,
   GoogleMap,

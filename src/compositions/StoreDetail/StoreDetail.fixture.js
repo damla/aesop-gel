@@ -5,7 +5,7 @@ export default {
     medium: './assets/images/StoreDetail/image-medium.jpg',
     small: './assets/images/StoreDetail/image-small.jpg',
   },
-  doubleImage: {
+  doubleMedia: {
     imageOne: {
       type: 'image',
       altText: '',

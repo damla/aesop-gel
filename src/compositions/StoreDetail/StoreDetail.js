@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import Image from '~/components/Image';
-import DoubleImage from '~/components/DoubleImage';
+import DoubleMedia from '~/components/DoubleMedia';
 import GoogleMap from '~/components/GoogleMap';
 import Heading from '~/components/Heading';
 import ImageCarousel from '~/components/ImageCarousel';
@@ -79,20 +79,20 @@ const StoreDetail = ({ className }) => {
       </Podium>
 
       <Podium horizontalPadding="small" verticalPadding="small">
-        <DoubleImage
+        <DoubleMedia
           mediaOne={{
-            type: StoreDetailFixture.doubleImage.imageOne.type,
-            altText: StoreDetailFixture.doubleImage.imageOne.altText,
-            large: StoreDetailFixture.doubleImage.imageOne.large,
-            medium: StoreDetailFixture.doubleImage.imageOne.medium,
-            small: StoreDetailFixture.doubleImage.imageOne.small,
+            type: StoreDetailFixture.doubleMedia.imageOne.type,
+            altText: StoreDetailFixture.doubleMedia.imageOne.altText,
+            large: StoreDetailFixture.doubleMedia.imageOne.large,
+            medium: StoreDetailFixture.doubleMedia.imageOne.medium,
+            small: StoreDetailFixture.doubleMedia.imageOne.small,
           }}
           mediaTwo={{
-            type: StoreDetailFixture.doubleImage.imageOne.type,
-            altText: StoreDetailFixture.doubleImage.imageTwo.altText,
-            large: StoreDetailFixture.doubleImage.imageTwo.large,
-            medium: StoreDetailFixture.doubleImage.imageTwo.medium,
-            small: StoreDetailFixture.doubleImage.imageTwo.small,
+            type: StoreDetailFixture.doubleMedia.imageOne.type,
+            altText: StoreDetailFixture.doubleMedia.imageTwo.altText,
+            large: StoreDetailFixture.doubleMedia.imageTwo.large,
+            medium: StoreDetailFixture.doubleMedia.imageTwo.medium,
+            small: StoreDetailFixture.doubleMedia.imageTwo.small,
           }}
         />
       </Podium>

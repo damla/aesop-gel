@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import MediaBlock from './components/MediaBlock';
-import styles from './DoubleImage.module.css';
+import styles from './DoubleMedia.module.css';
 
-const DoubleImage = ({ mediaOne, mediaTwo, className, theme }) => {
+const DoubleMedia = ({ mediaOne, mediaTwo, className, theme }) => {
   const classSet = cx(styles.base, styles[theme], className);
 
   return (
@@ -32,18 +32,18 @@ const mediaBlockType = PropTypes.shape({
   type: PropTypes.oneOf(['video', 'image']),
 });
 
-DoubleImage.propTypes = {
+DoubleMedia.propTypes = {
   className: PropTypes.string,
   mediaOne: mediaBlockType,
   mediaTwo: mediaBlockType,
   theme: PropTypes.oneOf(['dark', 'light']),
 };
 
-DoubleImage.defaultProps = {
+DoubleMedia.defaultProps = {
   className: undefined,
   mediaOne: undefined,
   mediaTwo: undefined,
   theme: 'dark',
 };
 
-export default DoubleImage;
+export default DoubleMedia;
