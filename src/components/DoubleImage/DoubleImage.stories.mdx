@@ -10,7 +10,9 @@ import DoubleImageFixture from './DoubleImage.fixture';
 <Preview>
   <Story name="Base component">
     <DoubleImage
-      imageVideo1={{
+      mediaOne={{
+        heading: knobs.text('Title 1', 'Title 1', 'Content'),
+        link: knobs.object('Link 1', DoubleImageFixture.link, 'Links'),
         type: DoubleImageFixture.imageOne.type,
         altText: DoubleImageFixture.imageOne.altText,
         caption: DoubleImageFixture.imageOne.caption,
@@ -18,7 +20,9 @@ import DoubleImageFixture from './DoubleImage.fixture';
         medium: DoubleImageFixture.imageOne.medium,
         small: DoubleImageFixture.imageOne.small,
       }}
-      imageVideo2={{
+      mediaTwo={{
+        heading: knobs.text('Title 2', 'Title 2', 'Content'),
+        link: knobs.object('Link 2', DoubleImageFixture.link, 'Links'),
         type: DoubleImageFixture.imageTwo.type,
         altText: DoubleImageFixture.imageTwo.altText,
         caption: DoubleImageFixture.imageTwo.caption,
@@ -27,12 +31,6 @@ import DoubleImageFixture from './DoubleImage.fixture';
         small: DoubleImageFixture.imageTwo.small,
       }}
       theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
-      link1={knobs.object('Link 1', DoubleImageFixture.link, 'Links')}
-      link2={knobs.object('Link 2', DoubleImageFixture.link, 'Links')}
-      title1={knobs.text('Title 1', 'Title 1', 'Content')}
-      title2={knobs.text('Title 2', 'Title 2', 'Content')}
-      caption1={<p>Our passion for <b>creativity</b>.</p>}
-      caption2={<p>Our passion for <b>creativity</b>.</p>}
     />
   </Story>
 </Preview>
@@ -44,26 +42,27 @@ import DoubleImageFixture from './DoubleImage.fixture';
 <Preview>
   <Story name="Contains videos">
     <DoubleImage
-      imageVideo1={{
+      mediaOne={{
+        heading: knobs.text('Title 1', 'Title 1', 'Content'),
+        link: knobs.object('Link 1', DoubleImageFixture.link, 'Links'),
         type: DoubleImageFixture.video.type,
+        caption: DoubleImageFixture.caption,
+        poster: DoubleImageFixture.video.poster,
         large: DoubleImageFixture.video.large,
         medium: DoubleImageFixture.video.medium,
         small: DoubleImageFixture.video.small,
-        poster: DoubleImageFixture.video.poster,
       }}
-      imageVideo2={{
+      mediaTwo={{
+        heading: knobs.text('Title 2', 'Title 2', 'Content'),
+        link: knobs.object('Link 2', DoubleImageFixture.link, 'Links'),
         type: DoubleImageFixture.video.type,
+        caption: DoubleImageFixture.caption,
+        poster: DoubleImageFixture.video.poster,
         large: DoubleImageFixture.video.large,
         medium: DoubleImageFixture.video.medium,
         small: DoubleImageFixture.video.small,
-        poster: DoubleImageFixture.video.poster,
       }}
       theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
-      link1={knobs.object('Link 1', DoubleImageFixture.link, 'Links')}
-      link2={knobs.object('Link 2', DoubleImageFixture.link, 'Links')}
-      title1={knobs.text('Title 1', 'Title 1', 'Content')}
-      title2={knobs.text('Title 2', 'Title 2', 'Content')}
-      caption1={DoubleImageFixture.caption}
     />
   </Story>
 </Preview>

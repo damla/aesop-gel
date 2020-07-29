@@ -16,24 +16,25 @@ describe('<DoubleImage />', () => {
     const tree = renderer
       .create(
         <DoubleImage
-          caption1={<p>{DoubleImageFixture.caption}</p>}
-          caption2={<p>{DoubleImageFixture.caption}</p>}
-          imageVideo1={{
+          mediaOne={{
+            heading: DoubleImageFixture.title,
+            type: DoubleImageFixture.imageOne.type,
             altText: DoubleImageFixture.imageOne.altText,
             caption: DoubleImageFixture.imageOne.caption,
             large: DoubleImageFixture.imageOne.large,
             medium: DoubleImageFixture.imageOne.medium,
             small: DoubleImageFixture.imageOne.small,
           }}
-          imageVideo2={{
+          mediaTwo={{
+            heading: DoubleImageFixture.title,
+            link: DoubleImageFixture.link,
+            type: DoubleImageFixture.imageTwo.type,
             altText: DoubleImageFixture.imageTwo.altText,
             caption: DoubleImageFixture.imageTwo.caption,
             large: DoubleImageFixture.imageTwo.large,
             medium: DoubleImageFixture.imageTwo.medium,
             small: DoubleImageFixture.imageTwo.small,
           }}
-          title1={DoubleImageFixture.title}
-          title2={DoubleImageFixture.title}
         />,
       )
       .toJSON();

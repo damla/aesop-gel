@@ -37,48 +37,56 @@ exports[`<DoubleImage /> renders base component correctly 1`] = `
       <div
         className="caption"
       >
-        <p>
-          Our passion for creativity in form and function, extends to the setting of a meal among staff.
-        </p>
+        Our passion for creativity in form and function, extends to the setting of a meal among staff.
       </div>
     </figcaption>
   </figure>
   <figure
     className="base dark figure"
   >
-    <picture
-      className="base picture dark"
+    <a
+      className="base left dark imageLinkWrapper"
+      href="/au/c/skin/cleanse"
+      target="_self"
     >
-      <source
-        media="(min-width: 1025px)"
-        srcSet="./assets/images/DoubleImage/image-two-large.jpg"
-      />
-      <source
-        media="(min-width: 640px)"
-        srcSet="./assets/images/DoubleImage/image-two-medium.jpg"
-      />
-      <source
-        media="(min-width: 0px)"
-        srcSet="./assets/images/DoubleImage/image-two-small.jpg"
-      />
-      <img
-        alt="Image of: Our passion for creativity in form and function, extends to the setting of a meal among staff."
-      />
-    </picture>
+      <picture
+        className="base picture dark"
+      >
+        <source
+          media="(min-width: 1025px)"
+          srcSet="./assets/images/DoubleImage/image-two-large.jpg"
+        />
+        <source
+          media="(min-width: 640px)"
+          srcSet="./assets/images/DoubleImage/image-two-medium.jpg"
+        />
+        <source
+          media="(min-width: 0px)"
+          srcSet="./assets/images/DoubleImage/image-two-small.jpg"
+        />
+        <img
+          alt="Image of: Our passion for creativity in form and function, extends to the setting of a meal among staff."
+        />
+      </picture>
+    </a>
     <figcaption
       className="figcaption"
     >
       <h3
         className="base xSmall dark"
       >
-        Aesop favourites
+        <a
+          className="base left dark"
+          href="/au/c/skin/cleanse"
+          target="_self"
+        >
+          Aesop favourites
+        </a>
       </h3>
       <div
         className="caption"
       >
-        <p>
-          Our passion for creativity in form and function, extends to the setting of a meal among staff.
-        </p>
+        Our passion for creativity in form and function, extends to the setting of a meal among staff.
       </div>
     </figcaption>
   </figure>
