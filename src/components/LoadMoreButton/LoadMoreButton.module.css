@@ -32,17 +32,3 @@
 .hideLabel {
   opacity: 0;
 }
-
-@keyframes slide-up {
-  0% {
-    transform: translateY(0);
-  }
-
-  80% {
-    transform: translateY(0);
-  }
-
-  100% {
-    transform: translateY(-18px);
-  }
-}

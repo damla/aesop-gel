@@ -9,48 +9,55 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
     id="test_1"
   >
     <a
-      className="base left dark link"
+      className="base left dark image"
       href="https://www.aesop.com/au/r/careers"
       target="_self"
       title="1. Senorial consectetur adipiscing elit."
     >
-      <picture
-        className="base picture dark image"
+      <div
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
       >
-        <source
-          media="(min-width: 1025px)"
-          srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
-        />
-        <source
-          media="(min-width: 640px)"
-          srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
-        />
-        <source
-          media="(min-width: 0px)"
-          srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
-        />
-        <img
-          alt="horizontal_hub"
-        />
-      </picture>
+        <picture
+          className="base picture dark"
+        >
+          <source
+            media="(min-width: 1025px)"
+            srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+          />
+          <source
+            media="(min-width: 640px)"
+            srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+          />
+          <source
+            media="(min-width: 0px)"
+            srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+          />
+          <img
+            alt="horizontal_hub"
+          />
+        </picture>
+      </div>
     </a>
     <h3
       className="base xSmall dark category"
     >
       Product
     </h3>
-    <a
-      className="base left dark"
-      href="https://www.aesop.com/au/r/careers"
-      target="_self"
-      title="1. Senorial consectetur adipiscing elit."
-    >
-      <span
-        className="title link"
+    <div>
+      <a
+        className="base left dark"
+        href="https://www.aesop.com/au/r/careers"
+        target="_self"
+        title="1. Senorial consectetur adipiscing elit."
       >
-        1. Senorial consectetur adipiscing elit.
-      </span>
-    </a>
+        <span
+          className="title"
+        >
+          1. Senorial consectetur adipiscing elit.
+        </span>
+      </a>
+    </div>
     <h3
       className="base xSmall dark note"
     >
@@ -62,48 +69,55 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
     id="test_2"
   >
     <a
-      className="base left dark link"
+      className="base left dark image"
       href="https://www.aesop.com/au/r/careers"
       target="_self"
       title="2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante."
     >
-      <picture
-        className="base picture dark image"
+      <div
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
       >
-        <source
-          media="(min-width: 1025px)"
-          srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
-        />
-        <source
-          media="(min-width: 640px)"
-          srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
-        />
-        <source
-          media="(min-width: 0px)"
-          srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
-        />
-        <img
-          alt="horizontal_hub"
-        />
-      </picture>
+        <picture
+          className="base picture dark"
+        >
+          <source
+            media="(min-width: 1025px)"
+            srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+          />
+          <source
+            media="(min-width: 640px)"
+            srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+          />
+          <source
+            media="(min-width: 0px)"
+            srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+          />
+          <img
+            alt="horizontal_hub"
+          />
+        </picture>
+      </div>
     </a>
     <h3
       className="base xSmall dark category"
     >
       Product
     </h3>
-    <a
-      className="base left dark"
-      href="https://www.aesop.com/au/r/careers"
-      target="_self"
-      title="2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante."
-    >
-      <span
-        className="title link"
+    <div>
+      <a
+        className="base left dark"
+        href="https://www.aesop.com/au/r/careers"
+        target="_self"
+        title="2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante."
       >
-        2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante.
-      </span>
-    </a>
+        <span
+          className="title"
+        >
+          2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante.
+        </span>
+      </a>
+    </div>
     <h3
       className="base xSmall dark note"
     >
@@ -115,48 +129,55 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
     id="test_3"
   >
     <a
-      className="base left dark link"
+      className="base left dark image"
       href="https://www.aesop.com/au/r/careers"
       target="_self"
       title="3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare, id dictum ante. Suspendisse et ornare mauris, id dictum ante."
     >
-      <picture
-        className="base picture dark image"
+      <div
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
       >
-        <source
-          media="(min-width: 1025px)"
-          srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
-        />
-        <source
-          media="(min-width: 640px)"
-          srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
-        />
-        <source
-          media="(min-width: 0px)"
-          srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
-        />
-        <img
-          alt="horizontal_hub"
-        />
-      </picture>
+        <picture
+          className="base picture dark"
+        >
+          <source
+            media="(min-width: 1025px)"
+            srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+          />
+          <source
+            media="(min-width: 640px)"
+            srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+          />
+          <source
+            media="(min-width: 0px)"
+            srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+          />
+          <img
+            alt="horizontal_hub"
+          />
+        </picture>
+      </div>
     </a>
     <h3
       className="base xSmall dark category"
     >
       Culture
     </h3>
-    <a
-      className="base left dark"
-      href="https://www.aesop.com/au/r/careers"
-      target="_self"
-      title="3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare, id dictum ante. Suspendisse et ornare mauris, id dictum ante."
-    >
-      <span
-        className="title link"
+    <div>
+      <a
+        className="base left dark"
+        href="https://www.aesop.com/au/r/careers"
+        target="_self"
+        title="3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare, id dictum ante. Suspendisse et ornare mauris, id dictum ante."
       >
-        3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare, id dictum ante. Suspendisse et ornare mauris, id dictum ante.
-      </span>
-    </a>
+        <span
+          className="title"
+        >
+          3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare, id dictum ante. Suspendisse et ornare mauris, id dictum ante.
+        </span>
+      </a>
+    </div>
     <h3
       className="base xSmall dark note"
     >
