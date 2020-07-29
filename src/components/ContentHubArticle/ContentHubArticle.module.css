@@ -46,7 +46,8 @@
 }
 
 .image:hover img {
-  filter: grayscale(50%);
+  filter: grayscale(100%);
+  transition: all 500ms var(--easing-ease-in-cubic);
 }
 
 .note {

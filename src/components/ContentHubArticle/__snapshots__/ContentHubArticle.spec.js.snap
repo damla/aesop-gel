@@ -36,8 +36,8 @@ exports[`<ContentHubArticle /> renders base component correctly 1`] = `
     title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante."
   >
     <div
+      onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={[Function]}
     >
       <picture
         className="base picture dark image"
@@ -67,8 +67,8 @@ exports[`<ContentHubArticle /> renders base component correctly 1`] = `
     title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante."
   >
     <div
+      onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={[Function]}
     >
       <picture
         className="base picture dark image"

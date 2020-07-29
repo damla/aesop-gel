@@ -43,8 +43,8 @@ exports[`<ContentHubArticleList /> renders base component correctly 1`] = `
           title="1. Senorial consectetur adipiscing elit."
         >
           <div
+            onMouseEnter={[Function]}
             onMouseLeave={[Function]}
-            onMouseOver={[Function]}
           >
             <picture
               className="base picture dark image"
@@ -74,8 +74,8 @@ exports[`<ContentHubArticleList /> renders base component correctly 1`] = `
           title="1. Senorial consectetur adipiscing elit."
         >
           <div
+            onMouseEnter={[Function]}
             onMouseLeave={[Function]}
-            onMouseOver={[Function]}
           >
             <picture
               className="base picture dark image"
@@ -138,8 +138,8 @@ exports[`<ContentHubArticleList /> renders base component correctly 1`] = `
           title="2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante."
         >
           <div
+            onMouseEnter={[Function]}
             onMouseLeave={[Function]}
-            onMouseOver={[Function]}
           >
             <picture
               className="base picture dark image"
@@ -169,8 +169,8 @@ exports[`<ContentHubArticleList /> renders base component correctly 1`] = `
           title="2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante."
         >
           <div
+            onMouseEnter={[Function]}
             onMouseLeave={[Function]}
-            onMouseOver={[Function]}
           >
             <picture
               className="base picture dark image"
@@ -233,8 +233,8 @@ exports[`<ContentHubArticleList /> renders base component correctly 1`] = `
           title="3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare, id dictum ante. Suspendisse et ornare mauris, id dictum ante."
         >
           <div
+            onMouseEnter={[Function]}
             onMouseLeave={[Function]}
-            onMouseOver={[Function]}
           >
             <picture
               className="base picture dark image"
@@ -264,8 +264,8 @@ exports[`<ContentHubArticleList /> renders base component correctly 1`] = `
           title="3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare, id dictum ante. Suspendisse et ornare mauris, id dictum ante."
         >
           <div
+            onMouseEnter={[Function]}
             onMouseLeave={[Function]}
-            onMouseOver={[Function]}
           >
             <picture
               className="base picture dark image"
@@ -328,8 +328,8 @@ exports[`<ContentHubArticleList /> renders base component correctly 1`] = `
           title="4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante. Suspendisse et ornare mauris, id dictum ante."
         >
           <div
+            onMouseEnter={[Function]}
             onMouseLeave={[Function]}
-            onMouseOver={[Function]}
           >
             <picture
               className="base picture dark image"
@@ -359,8 +359,8 @@ exports[`<ContentHubArticleList /> renders base component correctly 1`] = `
           title="4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante. Suspendisse et ornare mauris, id dictum ante."
         >
           <div
+            onMouseEnter={[Function]}
             onMouseLeave={[Function]}
-            onMouseOver={[Function]}
           >
             <picture
               className="base picture dark image"
