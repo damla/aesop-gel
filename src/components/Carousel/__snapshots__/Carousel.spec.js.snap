@@ -9,7 +9,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
     dir="ltr"
   >
     <button
-      className="base inlineStyle dark base hidden"
+      className="base dark base hidden"
       disabled={false}
       onClick={null}
       title="next slide"
@@ -435,7 +435,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
       </div>
     </div>
     <button
-      className="base inlineStyle dark base"
+      className="base dark base"
       disabled={false}
       onClick={[Function]}
       title="next slide"

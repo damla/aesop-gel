@@ -5,18 +5,17 @@ import { HEADING, HYPERLINK_STYLE_TYPES } from '~/constants';
 import { useVariantSelectContext } from '~/contexts';
 import { useImageTransition } from '~/customHooks';
 import { getVariantRadioOptions } from '~/utils/product';
-import {
-  AddToCartButton,
-  Heading,
-  Hyperlink,
-  Image,
-  LinkButtonGroup,
-  Loading,
-  RadioGroup,
-  SectionHeading,
-  Transition,
-  P,
-} from '~/components';
+import AddToCartButton from '~/components/AddToCartButton';
+import Heading from '~/components/Heading';
+import Hyperlink from '~/components/Hyperlink';
+import Image from '~/components/Image';
+import LinkButtonGroup from '~/components/LinkButtonGroup';
+import Loading from '~/components/Loading';
+import RadioGroup from '~/components/RadioGroup';
+import SectionHeading from '~/components/SectionHeading';
+import Transition from '~/components/Transition';
+import { P } from '~/components/Paragraph';
+
 import styles from './ProductCommerce.module.css';
 
 const ProductCommerce = ({

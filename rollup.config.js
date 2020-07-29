@@ -1,13 +1,13 @@
 import alias from '@rollup/plugin-alias';
-import { terser } from 'rollup-plugin-terser';
-import commonjs from '@rollup/plugin-commonjs';
-import json from '@rollup/plugin-json';
 import babel from '@rollup/plugin-babel';
-import replace from '@rollup/plugin-replace';
-import { nodeResolve } from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
+import copy from 'rollup-plugin-copy-assets';
+import json from '@rollup/plugin-json';
 import path from 'path';
 import postcss from 'rollup-plugin-postcss';
-import copy from 'rollup-plugin-copy-assets';
+import replace from '@rollup/plugin-replace';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
+import { terser } from 'rollup-plugin-terser';
 import pkg from './package.json';
 
 /** @TODO set up actual env vars */

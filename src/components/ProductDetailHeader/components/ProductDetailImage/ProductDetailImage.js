@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { useProductDetailContext, useVariantSelectContext } from '~/contexts';
 import { useImageTransition } from '~/customHooks';
-import { Hidden, Image, Transition } from '~/components';
+import Hidden from '~/components/Hidden';
+import Image from '~/components/Image';
+import Transition from '~/components/Transition';
 import styles from './ProductDetailImage.module.css';
 
 const ProductDetailImage = ({ className, theme }) => {
