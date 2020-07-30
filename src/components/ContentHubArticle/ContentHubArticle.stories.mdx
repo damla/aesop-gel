@@ -13,6 +13,7 @@ import ContentHubArticleFixture from './ContentHubArticle.fixture';
     <Podium horizontalPadding="small" verticalPadding="small">
       <ContentHubArticle
         id={ContentHubArticleFixture.id}
+        dataTestRef={ContentHubArticleFixture.dataTestRef}
         isHorizontal={knobs.select('isHorizontal', [true, false], true, 'Content')}
         isReadMore={knobs.select('isReadMore', [true, false], false, 'Content')}
         isMenuItem={knobs.select('isMenuItem', [true, false], false, 'Content')}

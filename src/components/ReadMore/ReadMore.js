@@ -14,6 +14,7 @@ const ReadMore = ({ articles, className }) => {
         {articles.map(article => (
           <ContentHubArticle
             category={article.category}
+            dataTestRef={article.id}
             horizontalThumbnail={article.horizontalThumbnail}
             id={article.id}
             isHorizontal={true}

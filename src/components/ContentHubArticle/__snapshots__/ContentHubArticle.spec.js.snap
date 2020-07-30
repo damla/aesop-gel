@@ -13,6 +13,7 @@ exports[`<ContentHubArticle /> renders base component correctly 1`] = `
   <div>
     <a
       className="base left dark"
+      data-test-ref="test_id_TITLE"
       href="https://www.aesop.com/au/r/careers"
       target="_self"
       title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante."
@@ -31,6 +32,7 @@ exports[`<ContentHubArticle /> renders base component correctly 1`] = `
   </h3>
   <a
     className="base left dark image non-mobile"
+    data-test-ref="test_id_NON_MOBILE_THUMBNAIL"
     href="https://www.aesop.com/au/r/careers"
     target="_self"
     title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante."
@@ -62,6 +64,7 @@ exports[`<ContentHubArticle /> renders base component correctly 1`] = `
   </a>
   <a
     className="base left dark image mobile"
+    data-test-ref="test_id_MOBILE_THUMBNAIL"
     href="https://www.aesop.com/au/r/careers"
     target="_self"
     title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante."

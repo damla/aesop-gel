@@ -11,6 +11,7 @@ import styles from './ContentHubArticle.module.css';
 const ContentHubArticle = ({
   category,
   className,
+  dataTestRef,
   horizontalThumbnail,
   id,
   isHorizontal, // use horizontal or vertical thumbnail
@@ -50,7 +51,12 @@ const ContentHubArticle = ({
     <Transition isActive={isOnScreen} type="fade">
       <div className={classSet} id={id} ref={ref}>
         {isReadMore && !isMenuItem && (
-          <Hyperlink className={imageClassSet} title={title} url={uri}>
+          <Hyperlink
+            className={imageClassSet}
+            dataTestRef={`${dataTestRef}_READMORE_THUMBNAIL`}
+            title={title}
+            url={uri}
+          >
             <div
               onMouseEnter={() => imageMouseEnter()}
               onMouseLeave={() => imageMouseLeave()}
@@ -70,7 +76,11 @@ const ContentHubArticle = ({
           </Heading>
         )}
         <div ref={titleRef}>
-          <Hyperlink title={title} url={uri}>
+          <Hyperlink
+            dataTestRef={`${dataTestRef}_TITLE`}
+            title={title}
+            url={uri}
+          >
             <span className={titleClassSet}>{title}</span>
           </Hyperlink>
         </div>
@@ -81,7 +91,12 @@ const ContentHubArticle = ({
         )}
 
         {!isReadMore && !isMenuItem && (
-          <Hyperlink className={nonMobileImageClassSet} title={title} url={uri}>
+          <Hyperlink
+            className={nonMobileImageClassSet}
+            dataTestRef={`${dataTestRef}_NON_MOBILE_THUMBNAIL`}
+            title={title}
+            url={uri}
+          >
             <div
               onMouseEnter={() => imageMouseEnter()}
               onMouseLeave={() => imageMouseLeave()}
@@ -97,7 +112,12 @@ const ContentHubArticle = ({
           </Hyperlink>
         )}
         {!isReadMore && !isMenuItem && (
-          <Hyperlink className={mobileImageClassSet} title={title} url={uri}>
+          <Hyperlink
+            className={mobileImageClassSet}
+            dataTestRef={`${dataTestRef}_MOBILE_THUMBNAIL`}
+            title={title}
+            url={uri}
+          >
             <div
               onMouseEnter={() => imageMouseEnter()}
               onMouseLeave={() => imageMouseLeave()}
@@ -120,6 +140,7 @@ const ContentHubArticle = ({
 ContentHubArticle.propTypes = {
   category: PropTypes.string,
   className: PropTypes.string,
+  dataTestRef: PropTypes.string.isRequired,
   horizontalThumbnail: PropTypes.object,
   id: PropTypes.string,
   isHorizontal: PropTypes.bool,
@@ -134,6 +155,7 @@ ContentHubArticle.propTypes = {
 ContentHubArticle.defaultProps = {
   category: undefined,
   className: undefined,
+  dataTestRef: undefined,
   horizontalThumbnail: undefined,
   id: undefined,
   isHorizontal: undefined,
