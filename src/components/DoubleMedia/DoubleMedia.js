@@ -15,27 +15,42 @@ const DoubleMedia = ({ mediaOne, mediaTwo, className, theme }) => {
   );
 };
 
-const mediaBlockType = PropTypes.shape({
-  altText: PropTypes.string,
-  caption: PropTypes.node,
-  heading: PropTypes.string,
-  large: PropTypes.string,
-  link: PropTypes.shape({
-    hasTargetInNewWindow: PropTypes.bool,
-    text: PropTypes.string,
-    type: PropTypes.string,
-    url: PropTypes.string,
-  }),
-  medium: PropTypes.string,
-  poster: PropTypes.object,
-  small: PropTypes.string,
-  type: PropTypes.oneOf(['video', 'image']),
-});
-
 DoubleMedia.propTypes = {
   className: PropTypes.string,
-  mediaOne: mediaBlockType,
-  mediaTwo: mediaBlockType,
+  mediaOne: PropTypes.shape({
+    altText: PropTypes.string,
+    caption: PropTypes.node,
+    fallbackImage: PropTypes.object,
+    heading: PropTypes.string,
+    large: PropTypes.string,
+    link: PropTypes.shape({
+      hasTargetInNewWindow: PropTypes.bool,
+      text: PropTypes.string,
+      type: PropTypes.string,
+      url: PropTypes.string,
+    }),
+    medium: PropTypes.string,
+    poster: PropTypes.object,
+    small: PropTypes.string,
+    type: PropTypes.oneOf(['video', 'image']),
+  }),
+  mediaTwo: PropTypes.shape({
+    altText: PropTypes.string,
+    caption: PropTypes.node,
+    fallbackImage: PropTypes.object,
+    heading: PropTypes.string,
+    large: PropTypes.string,
+    link: PropTypes.shape({
+      hasTargetInNewWindow: PropTypes.bool,
+      text: PropTypes.string,
+      type: PropTypes.string,
+      url: PropTypes.string,
+    }),
+    medium: PropTypes.string,
+    poster: PropTypes.object,
+    small: PropTypes.string,
+    type: PropTypes.oneOf(['video', 'image']),
+  }),
   theme: PropTypes.oneOf(['dark', 'light']),
 };
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import cx from 'classnames';
 import Figure from '~/components/Figure';
 import Heading from '~/components/Heading';
 import Hyperlink from '~/components/Hyperlink';
@@ -10,6 +11,7 @@ import styles from './MediaBlock.module.css';
 const MediaBlock = ({
   altText,
   caption,
+  fallbackImage,
   heading,
   large,
   link,
@@ -22,6 +24,7 @@ const MediaBlock = ({
   const Media = () => {
     return type === 'video' ? (
       <Video
+        fallbackImage={fallbackImage}
         hasAllowAudio={false}
         hasAutoplay={true}
         hasControls={false}
@@ -37,6 +40,8 @@ const MediaBlock = ({
       <Image altText={altText} large={large} medium={medium} small={small} />
     );
   };
+
+  const captionClassSet = cx(styles.caption, styles[theme]);
 
   return (
     <Figure className={styles.figure} hasCaptionBorder={false} theme={theme}>
@@ -61,7 +66,7 @@ const MediaBlock = ({
               )}
             </Heading>
           )}
-          {caption && <div className={styles.caption}>{caption}</div>}
+          {caption && <div className={captionClassSet}>{caption}</div>}
         </figcaption>
       )}
     </Figure>
@@ -71,6 +76,7 @@ const MediaBlock = ({
 MediaBlock.propTypes = {
   altText: PropTypes.string,
   caption: PropTypes.node,
+  fallbackImage: PropTypes.object,
   heading: PropTypes.string,
   large: PropTypes.string,
   link: PropTypes.shape({
@@ -89,6 +95,7 @@ MediaBlock.propTypes = {
 MediaBlock.defaultProps = {
   altText: undefined,
   caption: undefined,
+  fallbackImage: undefined,
   heading: undefined,
   large: undefined,
   link: undefined,
