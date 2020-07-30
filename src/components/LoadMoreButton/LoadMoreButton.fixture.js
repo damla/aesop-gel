@@ -3,6 +3,6 @@ export default {
   copy: {
     actionLabel: 'Load More',
   },
-  dataTestRef: 'LOAD_MORE_BUTTON',
+  dataTestRef: 'CONTENT_HUB_LOAD_MORE_BUTTON',
   isEnabled: true,
 };
