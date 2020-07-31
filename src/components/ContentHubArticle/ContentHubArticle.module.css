@@ -40,7 +40,7 @@
   border-bottom: 1px solid var(--color-secondary);
 }
 
-.title-active {
+.titleActive {
   border-bottom: 1px solid var(--color-secondary);
   transition: all 500ms var(--easing-ease-in-cubic);
 }
@@ -54,7 +54,7 @@
   color: var(--color-grey-30);
 }
 
-.non-mobile {
+.nonMobile {
   display: none;
   @media (--viewport-md) {
     display: block;

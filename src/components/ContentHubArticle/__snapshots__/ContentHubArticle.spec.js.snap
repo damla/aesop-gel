@@ -31,7 +31,7 @@ exports[`<ContentHubArticle /> renders base component correctly 1`] = `
     5 minute read
   </h3>
   <a
-    className="base left dark image non-mobile"
+    className="base left dark image nonMobile"
     data-test-ref="test_id_NON_MOBILE_THUMBNAIL"
     href="https://www.aesop.com/au/r/careers"
     target="_self"

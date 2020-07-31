@@ -38,7 +38,7 @@ exports[`<ContentHubArticleList /> renders base component correctly 1`] = `
           15 minute read
         </h3>
         <a
-          className="base left dark image non-mobile"
+          className="base left dark image nonMobile"
           data-test-ref="test_1_NON_MOBILE_THUMBNAIL"
           href="https://www.aesop.com/au/r/careers"
           target="_self"
@@ -136,7 +136,7 @@ exports[`<ContentHubArticleList /> renders base component correctly 1`] = `
           15 minute read
         </h3>
         <a
-          className="base left dark image non-mobile"
+          className="base left dark image nonMobile"
           data-test-ref="test_2_NON_MOBILE_THUMBNAIL"
           href="https://www.aesop.com/au/r/careers"
           target="_self"
@@ -234,7 +234,7 @@ exports[`<ContentHubArticleList /> renders base component correctly 1`] = `
           15 minute read
         </h3>
         <a
-          className="base left dark image non-mobile"
+          className="base left dark image nonMobile"
           data-test-ref="test_3_NON_MOBILE_THUMBNAIL"
           href="https://www.aesop.com/au/r/careers"
           target="_self"
@@ -332,7 +332,7 @@ exports[`<ContentHubArticleList /> renders base component correctly 1`] = `
           15 minute read
         </h3>
         <a
-          className="base left dark image non-mobile"
+          className="base left dark image nonMobile"
           data-test-ref="test_4_NON_MOBILE_THUMBNAIL"
           href="https://www.aesop.com/au/r/careers"
           target="_self"

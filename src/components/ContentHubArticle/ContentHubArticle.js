@@ -28,16 +28,16 @@ const ContentHubArticle = ({
   const classSet = cx(styles.base, className);
   const categoryClassSet = cx(styles.category);
   const imageClassSet = cx(styles.image);
-  const nonMobileImageClassSet = cx(styles.image, styles[`non-mobile`]);
+  const nonMobileImageClassSet = cx(styles.image, styles.nonMobile);
   const noteClassSet = cx(styles.note);
-  const mobileImageClassSet = cx(styles.image, styles[`mobile`]);
+  const mobileImageClassSet = cx(styles.image, styles.mobile);
   const titleClassSet = cx(styles.title);
   const titleRef = useRef(null);
 
   const imageMouseEnter = () => {
     titleRef.current.getElementsByClassName(titleClassSet)[0].className = cx(
       styles.title,
-      styles[`title-active`],
+      styles.titleActive,
     );
   };
 
