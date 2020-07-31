@@ -1351,13 +1351,13 @@ sans-serif;
 @media (min-width: 640px) {
 .SectionHeading-module_offsetPageHeading__1Bcrq {
     width: 40%;
-    margin-top: -25px;
+    margin-top: 85px;
     margin-left: 30%
 }
   }
 @media (min-width: 1025px) {
 .SectionHeading-module_offsetPageHeading__1Bcrq {
-    padding-top: 125px
+    margin-top: 110px
 }
   }
 .SectionHeading-module_SuisseTitleFont__D854J {
@@ -4776,7 +4776,7 @@ sans-serif;
 }
 @media (min-width: 640px) and (max-width: 1024px) {
 .Podium-module_mediumPaddingBottom__2Mu5C {
-    padding-top: 100px
+    padding-bottom: 100px
 }
   }
 @media (min-width: 1025px) {
