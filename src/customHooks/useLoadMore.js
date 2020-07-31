@@ -9,7 +9,6 @@ export const LOAD_MORE_ACTION_TYPES = {
 const initialState = {
   hasError: false,
   isLoading: false,
-  isUpdateSuccessful: false,
 };
 
 function reducer(state, action) {
@@ -17,19 +16,16 @@ function reducer(state, action) {
     return {
       hasError: false,
       isLoading: true,
-      isUpdateSuccessful: false,
     };
   } else if (action.type === LOAD_MORE_ACTION_TYPES.SUCCESS) {
     return {
       hasError: false,
       isLoading: false,
-      isUpdateSuccessful: true,
     };
   } else if (action.type === LOAD_MORE_ACTION_TYPES.FAIL) {
     return {
       hasError: true,
       isLoading: false,
-      isUpdateSuccessful: false,
     };
   }
 
@@ -40,14 +36,13 @@ function reducer(state, action) {
 
 const useLoadMore = onClick => {
   const [state, dispatch] = useReducer(reducer, initialState);
-  const { isLoading, hasError, isUpdateSuccessful } = state;
+  const { isLoading, hasError } = state;
 
   return {
     actionTypes: LOAD_MORE_ACTION_TYPES,
     dispatch,
     hasError,
     isLoading,
-    isUpdateSuccessful,
     onClick,
   };
 };

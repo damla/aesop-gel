@@ -21,6 +21,7 @@ describe('<LoadMoreButton />', () => {
           <LoadMoreButton
             className={LoadMoreButtonFixture.className}
             copy={LoadMoreButtonFixture.copy}
+            dataTestRef={LoadMoreButtonFixture.dataTestRef}
             isEnabled={LoadMoreButtonFixture.isEnabled}
           />
         </LoadMoreContextProvider>,

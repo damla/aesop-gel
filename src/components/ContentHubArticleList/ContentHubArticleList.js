@@ -33,6 +33,7 @@ const ContentHubArticleList = ({
             {count >= 3 && (
               <ContentHubArticle
                 category={articles[0].category}
+                dataTestRef={articles[0].id}
                 horizontalThumbnail={articles[0].horizontalThumbnail}
                 id={articles[0].id}
                 isHorizontal={Boolean(!pattern)}
@@ -48,6 +49,7 @@ const ContentHubArticleList = ({
             {count >= 4 && (
               <ContentHubArticle
                 category={articles[1].category}
+                dataTestRef={articles[1].id}
                 horizontalThumbnail={articles[1].horizontalThumbnail}
                 id={articles[1].id}
                 isHorizontal={Boolean(pattern)}
@@ -63,6 +65,7 @@ const ContentHubArticleList = ({
             {count >= 1 && (
               <ContentHubArticle
                 category={(articles[count - 2] || articles[0]).category}
+                dataTestRef={(articles[count - 2] || articles[0]).id}
                 horizontalThumbnail={
                   (articles[count - 2] || articles[0]).horizontalThumbnail
                 }
@@ -80,39 +83,18 @@ const ContentHubArticleList = ({
           <div className={bottomRightClassSet}>
             {count >= 2 && (
               <ContentHubArticle
-                category={
-                  articles[count - 1]
-                    ? articles[count - 1].category
-                    : articles[1].category
-                }
+                category={(articles[count - 1] || articles[1]).category}
+                dataTestRef={(articles[count - 1] || articles[1]).id}
                 horizontalThumbnail={
-                  articles[count - 1]
-                    ? articles[count - 1].horizontalThumbnail
-                    : articles[1].horizontalThumbnail
+                  (articles[count - 1] || articles[1]).horizontalThumbnail
                 }
-                id={
-                  articles[count - 1] ? articles[count - 1].id : articles[1].id
-                }
+                id={(articles[count - 1] || articles[1]).id}
                 isHorizontal={Boolean(!pattern)}
-                readingTime={
-                  articles[count - 1]
-                    ? articles[count - 1].readingTime
-                    : articles[1].readingTime
-                }
-                title={
-                  articles[count - 1]
-                    ? articles[count - 1].title
-                    : articles[1].title
-                }
-                uri={
-                  articles[count - 1]
-                    ? articles[count - 1].uri
-                    : articles[1].uri
-                }
+                readingTime={(articles[count - 1] || articles[1]).readingTime}
+                title={(articles[count - 1] || articles[1]).title}
+                uri={(articles[count - 1] || articles[1]).uri}
                 verticalThumbnail={
-                  articles[count - 1]
-                    ? articles[count - 1].verticalThumbnail
-                    : articles[1].verticalThumbnail
+                  (articles[count - 1] || articles[1]).verticalThumbnail
                 }
               />
             )}

@@ -8,7 +8,6 @@ const initialState = {
   dispatch: () => {},
   hasError: false,
   isLoading: false,
-  isUpdateSuccessful: false,
   onClick: () => {},
 };
 

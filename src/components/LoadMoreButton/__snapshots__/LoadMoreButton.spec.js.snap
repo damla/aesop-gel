@@ -2,7 +2,8 @@
 
 exports[`<LoadMoreButton /> renders base component correctly 1`] = `
 <button
-  className="base blockStyle dark base blockStyle"
+  className="base blockStyle dark base"
+  data-test-ref="CONTENT_HUB_LOAD_MORE_BUTTON"
   disabled={false}
   onClick={[Function]}
   title="Load More"
@@ -11,9 +12,6 @@ exports[`<LoadMoreButton /> renders base component correctly 1`] = `
   <span
     className="label"
   >
-    <span>
-      Successfully
-    </span>
     <span>
       Load More
     </span>

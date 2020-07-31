@@ -2,7 +2,7 @@ export default {
   className: '',
   copy: {
     actionLabel: 'Load More',
-    updateNotification: 'Successfully',
   },
+  dataTestRef: 'CONTENT_HUB_LOAD_MORE_BUTTON',
   isEnabled: true,
 };
