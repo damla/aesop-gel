@@ -17,6 +17,7 @@ describe('<ContentHubArticle />', () => {
       .create(
         <ContentHubArticle
           category={ContentHubArticleFixture.category}
+          dataTestRef={ContentHubArticleFixture.dataTestRef}
           horizontalThumbnail={ContentHubArticleFixture.horizontalThumbnail}
           id={ContentHubArticleFixture.id}
           isHorizontal={true}

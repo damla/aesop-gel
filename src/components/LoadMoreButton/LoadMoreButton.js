@@ -6,10 +6,10 @@ import Button from '~/components/Button';
 import Loading from '~/components/Loading';
 import styles from './LoadMoreButton.module.css';
 
-const LoadMoreButton = ({ className, copy, isEnabled }) => {
+const LoadMoreButton = ({ className, copy, dataTestRef, isEnabled }) => {
   const loadMore = useLoadMoreContext();
 
-  const classSet = cx(styles.base, styles.blockStyle, className);
+  const classSet = cx(styles.base, className);
 
   const handleOnClick = () => {
     const { actionTypes, dispatch, onClick } = loadMore;
@@ -17,16 +17,10 @@ const LoadMoreButton = ({ className, copy, isEnabled }) => {
     onClick(dispatch, actionTypes);
   };
 
-  const { hasError, isLoading, isUpdateSuccessful } = loadMore;
+  const { hasError, isLoading } = loadMore;
   const actionLabel = `${copy.actionLabel}`;
-  const updateNotification = `${copy.updateNotification}`;
-  const showUpdateSuccessMessage = !isLoading && isUpdateSuccessful;
 
-  const labelClassName = cx(
-    styles.label,
-    { [styles.hideLabel]: isLoading },
-    { [styles.showSuccessMessage]: showUpdateSuccessMessage },
-  );
+  const labelClassName = cx(styles.label, { [styles.hideLabel]: isLoading });
 
   if (hasError) {
     /** @TODO Handle errors thrown by handleOnClick */
@@ -36,15 +30,20 @@ const LoadMoreButton = ({ className, copy, isEnabled }) => {
   return (
     <Button
       className={classSet}
+      dataTestRef={dataTestRef}
       isEnabled={!isLoading && isEnabled}
       onClick={handleOnClick}
       title={actionLabel}
     >
       {isLoading && (
-        <Loading className={styles.loading} isLoading={true} theme="dark" />
+        <Loading
+          className={styles.loading}
+          data-test-ref={`${dataTestRef}_LOADING`}
+          isLoading={true}
+          theme="dark"
+        />
       )}
       <span className={labelClassName}>
-        <span>{updateNotification}</span>
         <span>{actionLabel}</span>
       </span>
     </Button>
@@ -55,8 +54,8 @@ LoadMoreButton.propTypes = {
   className: PropTypes.string,
   copy: PropTypes.shape({
     actionLabel: PropTypes.string,
-    updateNotification: PropTypes.string,
   }),
+  dataTestRef: PropTypes.string.isRequired,
   isEnabled: PropTypes.bool,
 };
 
@@ -64,8 +63,8 @@ LoadMoreButton.defaultProps = {
   className: undefined,
   copy: {
     actionLabel: 'Load More',
-    updateNotification: 'Successfully',
   },
+  dataTestRef: undefined,
   isEnabled: true,
 };
 

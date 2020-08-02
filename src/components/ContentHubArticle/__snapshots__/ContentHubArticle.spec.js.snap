@@ -10,74 +10,89 @@ exports[`<ContentHubArticle /> renders base component correctly 1`] = `
   >
     Product
   </h3>
-  <a
-    className="base left dark"
-    href="https://www.aesop.com/au/r/careers"
-    target="_self"
-    title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante."
-  >
-    <span
-      className="title link"
+  <div>
+    <a
+      className="base left dark"
+      data-test-ref="test_id_TITLE"
+      href="https://www.aesop.com/au/r/careers"
+      target="_self"
+      title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante."
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante.
-    </span>
-  </a>
+      <span
+        className="title"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante.
+      </span>
+    </a>
+  </div>
   <h3
     className="base xSmall dark note"
   >
     5 minute read
   </h3>
   <a
-    className="base left dark link non-mobile"
+    className="base left dark image nonMobile"
+    data-test-ref="test_id_NON_MOBILE_THUMBNAIL"
     href="https://www.aesop.com/au/r/careers"
     target="_self"
     title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante."
   >
-    <picture
-      className="base picture dark image"
+    <div
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
     >
-      <source
-        media="(min-width: 1025px)"
-        srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
-      />
-      <source
-        media="(min-width: 640px)"
-        srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
-      />
-      <source
-        media="(min-width: 0px)"
-        srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
-      />
-      <img
-        alt="horizontal_hub"
-      />
-    </picture>
+      <picture
+        className="base picture dark image"
+      >
+        <source
+          media="(min-width: 1025px)"
+          srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+        />
+        <source
+          media="(min-width: 640px)"
+          srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+        />
+        <source
+          media="(min-width: 0px)"
+          srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+        />
+        <img
+          alt="horizontal_hub"
+        />
+      </picture>
+    </div>
   </a>
   <a
-    className="base left dark link mobile"
+    className="base left dark image mobile"
+    data-test-ref="test_id_MOBILE_THUMBNAIL"
     href="https://www.aesop.com/au/r/careers"
     target="_self"
     title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante."
   >
-    <picture
-      className="base picture dark image"
+    <div
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
     >
-      <source
-        media="(min-width: 1025px)"
-        srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
-      />
-      <source
-        media="(min-width: 640px)"
-        srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
-      />
-      <source
-        media="(min-width: 0px)"
-        srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
-      />
-      <img
-        alt="horizontal_hub"
-      />
-    </picture>
+      <picture
+        className="base picture dark image"
+      >
+        <source
+          media="(min-width: 1025px)"
+          srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+        />
+        <source
+          media="(min-width: 640px)"
+          srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+        />
+        <source
+          media="(min-width: 0px)"
+          srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+        />
+        <img
+          alt="horizontal_hub"
+        />
+      </picture>
+    </div>
   </a>
 </div>
 `;
