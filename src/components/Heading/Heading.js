@@ -34,7 +34,7 @@ const Heading = ({
 };
 
 Heading.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
   className: PropTypes.string,
   hasMediumWeightFont: PropTypes.bool,
   hasSerifFont: PropTypes.bool,

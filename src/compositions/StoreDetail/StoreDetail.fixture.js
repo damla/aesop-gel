@@ -5,14 +5,16 @@ export default {
     medium: './assets/images/StoreDetail/image-medium.jpg',
     small: './assets/images/StoreDetail/image-small.jpg',
   },
-  doubleImage: {
+  doubleMedia: {
     imageOne: {
+      type: 'image',
       altText: '',
       large: './assets/images/StoreDetail/image-double-1-large.jpg',
       medium: './assets/images/StoreDetail/image-double-1-medium.jpg',
       small: './assets/images/StoreDetail/image-double-1-small.jpg',
     },
     imageTwo: {
+      type: 'image',
       altText: '',
       large: './assets/images/StoreDetail/image-double-2-large.jpg',
       medium: './assets/images/StoreDetail/image-double-2-medium.jpg',
