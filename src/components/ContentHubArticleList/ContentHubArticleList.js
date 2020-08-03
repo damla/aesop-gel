@@ -38,8 +38,8 @@ const ContentHubArticleList = ({
                 id={articles[0].id}
                 isHorizontal={Boolean(!pattern)}
                 key={articles[0].id}
+                longTitle={articles[0].longTitle}
                 readingTime={articles[0].readingTime}
-                title={articles[0].title}
                 uri={articles[0].uri}
                 verticalThumbnail={articles[0].verticalThumbnail}
               />
@@ -54,8 +54,8 @@ const ContentHubArticleList = ({
                 id={articles[1].id}
                 isHorizontal={Boolean(pattern)}
                 key={articles[1].id}
+                longTitle={articles[1].longTitle}
                 readingTime={articles[1].readingTime}
-                title={articles[1].title}
                 uri={articles[1].uri}
                 verticalThumbnail={articles[1].verticalThumbnail}
               />
@@ -71,8 +71,8 @@ const ContentHubArticleList = ({
                 }
                 id={(articles[count - 2] || articles[0]).id}
                 isHorizontal={Boolean(pattern)}
+                longTitle={(articles[count - 2] || articles[0]).longTitle}
                 readingTime={(articles[count - 2] || articles[0]).readingTime}
-                title={(articles[count - 2] || articles[0]).title}
                 uri={(articles[count - 2] || articles[0]).uri}
                 verticalThumbnail={
                   (articles[count - 2] || articles[0]).verticalThumbnail
@@ -90,8 +90,8 @@ const ContentHubArticleList = ({
                 }
                 id={(articles[count - 1] || articles[1]).id}
                 isHorizontal={Boolean(!pattern)}
+                longTitle={(articles[count - 1] || articles[1]).longTitle}
                 readingTime={(articles[count - 1] || articles[1]).readingTime}
-                title={(articles[count - 1] || articles[1]).title}
                 uri={(articles[count - 1] || articles[1]).uri}
                 verticalThumbnail={
                   (articles[count - 1] || articles[1]).verticalThumbnail

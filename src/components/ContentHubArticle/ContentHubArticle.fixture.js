@@ -2,7 +2,7 @@ export default {
   id: 'test_id',
   category: 'Product',
   dataTestRef: 'test_id',
-  title:
+  longTitle:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante.',
   verticalThumbnail: {
     altText: 'vertical_hub',

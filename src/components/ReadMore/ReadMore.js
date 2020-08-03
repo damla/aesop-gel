@@ -22,8 +22,8 @@ const ReadMore = ({ articles, className }) => {
             isHorizontal={true}
             isReadMore={true}
             key={article.id}
+            longTitle={article.longTitle}
             readingTime={article.readingTime}
-            title={article.title}
             uri={article.uri}
             verticalThumbnail={article.verticalThumbnail}
           />

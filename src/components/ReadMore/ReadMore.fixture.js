@@ -3,7 +3,7 @@ export default {
     {
       id: 'test_1',
       category: 'Product',
-      title: '1. Senorial consectetur adipiscing elit.',
+      longTitle: '1. Senorial consectetur adipiscing elit.',
       uri: 'https://www.aesop.com/au/r/careers',
       verticalThumbnail: {
         altText: 'vertical_hub',
@@ -22,7 +22,7 @@ export default {
     {
       id: 'test_2',
       category: 'Product',
-      title:
+      longTitle:
         '2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante.',
       uri: 'https://www.aesop.com/au/r/careers',
       verticalThumbnail: {
@@ -42,7 +42,7 @@ export default {
     {
       id: 'test_3',
       category: 'Culture',
-      title:
+      longTitle:
         '3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare, id dictum ante. Suspendisse et ornare mauris, id dictum ante.',
       uri: 'https://www.aesop.com/au/r/careers',
       verticalThumbnail: {

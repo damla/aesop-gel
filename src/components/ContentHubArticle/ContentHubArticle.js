@@ -17,8 +17,8 @@ const ContentHubArticle = ({
   isHorizontal, // use horizontal or vertical thumbnail
   isMenuItem, // if it's displayed in Read Menu Navigation
   isReadMore, // if it's displayed in ReadMore section
+  longTitle,
   readingTime,
-  title,
   uri,
   verticalThumbnail,
 }) => {
@@ -54,7 +54,7 @@ const ContentHubArticle = ({
           <Hyperlink
             className={imageClassSet}
             dataTestRef={`${dataTestRef}_READMORE_THUMBNAIL`}
-            title={title}
+            title={longTitle}
             url={uri}
           >
             <div
@@ -78,10 +78,10 @@ const ContentHubArticle = ({
         <div ref={titleRef}>
           <Hyperlink
             dataTestRef={`${dataTestRef}_TITLE`}
-            title={title}
+            title={longTitle}
             url={uri}
           >
-            <span className={titleClassSet}>{title}</span>
+            <span className={titleClassSet}>{longTitle}</span>
           </Hyperlink>
         </div>
         {readingTime && (
@@ -94,7 +94,7 @@ const ContentHubArticle = ({
           <Hyperlink
             className={nonMobileImageClassSet}
             dataTestRef={`${dataTestRef}_NON_MOBILE_THUMBNAIL`}
-            title={title}
+            title={longTitle}
             url={uri}
           >
             <div
@@ -115,7 +115,7 @@ const ContentHubArticle = ({
           <Hyperlink
             className={mobileImageClassSet}
             dataTestRef={`${dataTestRef}_MOBILE_THUMBNAIL`}
-            title={title}
+            title={longTitle}
             url={uri}
           >
             <div
@@ -146,8 +146,8 @@ ContentHubArticle.propTypes = {
   isHorizontal: PropTypes.bool,
   isMenuItem: PropTypes.bool,
   isReadMore: PropTypes.bool,
+  longTitle: PropTypes.string,
   readingTime: PropTypes.string,
-  title: PropTypes.string,
   uri: PropTypes.string,
   verticalThumbnail: PropTypes.object,
 };
@@ -161,8 +161,8 @@ ContentHubArticle.defaultProps = {
   isHorizontal: undefined,
   isMenuItem: false,
   isReadMore: false,
+  longTitle: undefined,
   readingTime: undefined,
-  title: undefined,
   uri: undefined,
   verticalThumbnail: undefined,
 };
