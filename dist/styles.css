@@ -6344,6 +6344,16 @@ sans-serif;
         justify-content: space-around
 }
   }
+@media (max-width: 639px) {
+.ReadMore-module_readMoreArticle__OUIMr {
+    padding-bottom: 50px
+}
+  }
+@media (min-width: 640px) and (max-width: 1024px) {
+.ReadMore-module_readMoreArticle__OUIMr {
+    padding-bottom: 70px
+}
+  }
 
 /* @import './key-frame.css'; */
 /* @import './font-face.css'; */
