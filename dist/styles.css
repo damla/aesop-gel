@@ -6331,7 +6331,7 @@ sans-serif;
 
   /* max-width: 1440px; */
 }
-@media (min-width: 640px) {
+@media (min-width: 1025px) {
 .ReadMore-module_base__3paua {
     display: -webkit-box;
     display: -ms-flexbox;

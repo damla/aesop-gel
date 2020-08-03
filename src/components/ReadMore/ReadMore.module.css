@@ -1,7 +1,7 @@
 @import 'styles/index';
 
 .base {
-  @media (--viewport-md) {
+  @media (--viewport-lg) {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
