@@ -10,6 +10,8 @@ const ContentHubArticleList = ({
   pattern, // 0 means first image is horizontal
 }) => {
   const classSet = cx(styles.base, className);
+  const mobileSet = cx(styles.mobile, className);
+  const mobileMiddleSet = cx(styles.mobileMiddleRow, className);
   const topLeftClassSet = cx(styles[`top-left-${pattern}`], styles[`article`]);
   const topRightClassSet = cx(
     styles[`top-right-${pattern}`],
@@ -23,6 +25,9 @@ const ContentHubArticleList = ({
     styles[`bottom-right-${pattern}`],
     styles[`article`],
   );
+  const leftMiddleArticleClassSet = cx(styles.leftMiddleArticle);
+  const middleArticleClassSet = cx(styles.middleArticle);
+  const rightMiddleArticleClassSet = cx(styles.rightMiddleArticle);
   const count = articles && articles.length;
 
   return (
@@ -38,8 +43,8 @@ const ContentHubArticleList = ({
                 id={articles[0].id}
                 isHorizontal={Boolean(!pattern)}
                 key={articles[0].id}
+                longTitle={articles[0].longTitle}
                 readingTime={articles[0].readingTime}
-                title={articles[0].title}
                 uri={articles[0].uri}
                 verticalThumbnail={articles[0].verticalThumbnail}
               />
@@ -54,8 +59,8 @@ const ContentHubArticleList = ({
                 id={articles[1].id}
                 isHorizontal={Boolean(pattern)}
                 key={articles[1].id}
+                longTitle={articles[1].longTitle}
                 readingTime={articles[1].readingTime}
-                title={articles[1].title}
                 uri={articles[1].uri}
                 verticalThumbnail={articles[1].verticalThumbnail}
               />
@@ -71,8 +76,8 @@ const ContentHubArticleList = ({
                 }
                 id={(articles[count - 2] || articles[0]).id}
                 isHorizontal={Boolean(pattern)}
+                longTitle={(articles[count - 2] || articles[0]).longTitle}
                 readingTime={(articles[count - 2] || articles[0]).readingTime}
-                title={(articles[count - 2] || articles[0]).title}
                 uri={(articles[count - 2] || articles[0]).uri}
                 verticalThumbnail={
                   (articles[count - 2] || articles[0]).verticalThumbnail
@@ -90,8 +95,8 @@ const ContentHubArticleList = ({
                 }
                 id={(articles[count - 1] || articles[1]).id}
                 isHorizontal={Boolean(!pattern)}
+                longTitle={(articles[count - 1] || articles[1]).longTitle}
                 readingTime={(articles[count - 1] || articles[1]).readingTime}
-                title={(articles[count - 1] || articles[1]).title}
                 uri={(articles[count - 1] || articles[1]).uri}
                 verticalThumbnail={
                   (articles[count - 1] || articles[1]).verticalThumbnail
@@ -99,6 +104,77 @@ const ContentHubArticleList = ({
               />
             )}
           </div>
+        </div>
+
+        <div className={mobileSet}>
+          {count >= 4 && (
+            <ContentHubArticle
+              category={articles[0].category}
+              dataTestRef={articles[0].id}
+              horizontalThumbnail={articles[0].horizontalThumbnail}
+              id={articles[0].id}
+              isHorizontal={true}
+              key={articles[0].id}
+              longTitle={articles[0].longTitle}
+              readingTime={articles[0].readingTime}
+              uri={articles[0].uri}
+              verticalThumbnail={articles[0].verticalThumbnail}
+            />
+          )}
+          <div className={mobileMiddleSet}>
+            <div className={middleArticleClassSet}>
+              {count >= 3 && (
+                <ContentHubArticle
+                  category={(articles[count - 3] || articles[0]).category}
+                  className={leftMiddleArticleClassSet}
+                  dataTestRef={(articles[count - 3] || articles[0]).id}
+                  horizontalThumbnail={
+                    (articles[count - 3] || articles[0]).horizontalThumbnail
+                  }
+                  id={(articles[count - 3] || articles[0]).id}
+                  isHorizontal={false}
+                  key={(articles[count - 3] || articles[0]).id}
+                  longTitle={(articles[count - 3] || articles[0]).longTitle}
+                  readingTime={(articles[count - 3] || articles[0]).readingTime}
+                  uri={(articles[count - 3] || articles[0]).uri}
+                  verticalThumbnail={
+                    (articles[count - 3] || articles[0]).verticalThumbnail
+                  }
+                />
+              )}
+            </div>
+            <div className={middleArticleClassSet}>
+              {count >= 2 && (
+                <ContentHubArticle
+                  category={articles[count - 2].category}
+                  className={rightMiddleArticleClassSet}
+                  dataTestRef={articles[count - 2].id}
+                  horizontalThumbnail={articles[count - 2].horizontalThumbnail}
+                  id={articles[count - 2].id}
+                  isHorizontal={false}
+                  key={articles[count - 2].id}
+                  longTitle={articles[count - 2].longTitle}
+                  readingTime={articles[count - 2].readingTime}
+                  uri={articles[count - 2].uri}
+                  verticalThumbnail={articles[count - 2].verticalThumbnail}
+                />
+              )}
+            </div>
+          </div>
+          {count >= 1 && (
+            <ContentHubArticle
+              category={articles[count - 1].category}
+              dataTestRef={articles[count - 1].id}
+              horizontalThumbnail={articles[count - 1].horizontalThumbnail}
+              id={articles[count - 1].id}
+              isHorizontal={true}
+              key={articles[count - 1].id}
+              longTitle={articles[count - 1].longTitle}
+              readingTime={articles[count - 1].readingTime}
+              uri={articles[count - 1].uri}
+              verticalThumbnail={articles[count - 1].verticalThumbnail}
+            />
+          )}
         </div>
       </Fragment>
     </section>

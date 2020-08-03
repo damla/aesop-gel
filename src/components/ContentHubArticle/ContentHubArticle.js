@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { useOnScreen } from '~/customHooks/useOnScreen';
 import Image from '~/components/Image';
-import Heading from '~/components/Heading';
 import Hyperlink from '~/components/Hyperlink';
 import Transition from '~/components/Transition';
 import styles from './ContentHubArticle.module.css';
@@ -17,8 +16,8 @@ const ContentHubArticle = ({
   isHorizontal, // use horizontal or vertical thumbnail
   isMenuItem, // if it's displayed in Read Menu Navigation
   isReadMore, // if it's displayed in ReadMore section
+  longTitle,
   readingTime,
-  title,
   uri,
   verticalThumbnail,
 }) => {
@@ -28,9 +27,12 @@ const ContentHubArticle = ({
   const classSet = cx(styles.base, className);
   const categoryClassSet = cx(styles.category);
   const imageClassSet = cx(styles.image);
+  const readMoreThumbnailRef = useRef(null);
   const nonMobileImageClassSet = cx(styles.image, styles.nonMobile);
+  const nonMobileThumbnailRef = useRef(null);
   const noteClassSet = cx(styles.note);
   const mobileImageClassSet = cx(styles.image, styles.mobile);
+  const mobileThumbnailRef = useRef(null);
   const titleClassSet = cx(styles.title);
   const titleRef = useRef(null);
 
@@ -47,6 +49,24 @@ const ContentHubArticle = ({
     )[0].className = titleClassSet;
   };
 
+  const titleMouseEnter = () => {
+    [readMoreThumbnailRef, nonMobileThumbnailRef, mobileThumbnailRef].forEach(
+      imageRef => {
+        if (imageRef.current)
+          imageRef.current.className = cx(styles.imageActive);
+      },
+    );
+  };
+
+  const titleMouseLeave = () => {
+    [readMoreThumbnailRef, nonMobileThumbnailRef, mobileThumbnailRef].forEach(
+      imageRef => {
+        if (imageRef.current)
+          imageRef.current.className = cx(styles.imageUnactive);
+      },
+    );
+  };
+
   return (
     <Transition isActive={isOnScreen} type="fade">
       <div className={classSet} id={id} ref={ref}>
@@ -54,7 +74,7 @@ const ContentHubArticle = ({
           <Hyperlink
             className={imageClassSet}
             dataTestRef={`${dataTestRef}_READMORE_THUMBNAIL`}
-            title={title}
+            title={longTitle}
             url={uri}
           >
             <div
@@ -65,36 +85,33 @@ const ContentHubArticle = ({
                 altText={currentImage.altText}
                 large={currentImage.large}
                 medium={currentImage.medium}
+                ref={readMoreThumbnailRef}
                 small={currentImage.small}
               />
             </div>
           </Hyperlink>
         )}
-        {!isMenuItem && (
-          <Heading className={categoryClassSet} level="3" size="xSmall">
-            {category}
-          </Heading>
-        )}
-        <div ref={titleRef}>
+        {!isMenuItem && <div className={categoryClassSet}>{category}</div>}
+        <div
+          onMouseEnter={() => titleMouseEnter()}
+          onMouseLeave={() => titleMouseLeave()}
+          ref={titleRef}
+        >
           <Hyperlink
             dataTestRef={`${dataTestRef}_TITLE`}
-            title={title}
+            title={longTitle}
             url={uri}
           >
-            <span className={titleClassSet}>{title}</span>
+            <span className={titleClassSet}>{longTitle}</span>
           </Hyperlink>
         </div>
-        {readingTime && (
-          <Heading className={noteClassSet} level="3" size="xSmall">
-            {readingTime}
-          </Heading>
-        )}
+        {readingTime && <div className={noteClassSet}>{readingTime}</div>}
 
         {!isReadMore && !isMenuItem && (
           <Hyperlink
             className={nonMobileImageClassSet}
             dataTestRef={`${dataTestRef}_NON_MOBILE_THUMBNAIL`}
-            title={title}
+            title={longTitle}
             url={uri}
           >
             <div
@@ -106,6 +123,7 @@ const ContentHubArticle = ({
                 className={styles.image}
                 large={currentImage.large}
                 medium={currentImage.medium}
+                ref={nonMobileThumbnailRef}
                 small={currentImage.small}
               />
             </div>
@@ -115,7 +133,7 @@ const ContentHubArticle = ({
           <Hyperlink
             className={mobileImageClassSet}
             dataTestRef={`${dataTestRef}_MOBILE_THUMBNAIL`}
-            title={title}
+            title={longTitle}
             url={uri}
           >
             <div
@@ -123,11 +141,12 @@ const ContentHubArticle = ({
               onMouseLeave={() => imageMouseLeave()}
             >
               <Image
-                altText={horizontalThumbnail.altText}
+                altText={currentImage.altText}
                 className={styles.image}
-                large={horizontalThumbnail.large}
-                medium={horizontalThumbnail.medium}
-                small={horizontalThumbnail.small}
+                large={currentImage.large}
+                medium={currentImage.medium}
+                ref={mobileThumbnailRef}
+                small={currentImage.small}
               />
             </div>
           </Hyperlink>
@@ -146,8 +165,8 @@ ContentHubArticle.propTypes = {
   isHorizontal: PropTypes.bool,
   isMenuItem: PropTypes.bool,
   isReadMore: PropTypes.bool,
+  longTitle: PropTypes.string,
   readingTime: PropTypes.string,
-  title: PropTypes.string,
   uri: PropTypes.string,
   verticalThumbnail: PropTypes.object,
 };
@@ -161,8 +180,8 @@ ContentHubArticle.defaultProps = {
   isHorizontal: undefined,
   isMenuItem: false,
   isReadMore: false,
+  longTitle: undefined,
   readingTime: undefined,
-  title: undefined,
   uri: undefined,
   verticalThumbnail: undefined,
 };

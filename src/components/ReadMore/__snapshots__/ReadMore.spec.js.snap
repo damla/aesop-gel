@@ -5,7 +5,7 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
   className="base fadeEnter"
 >
   <div
-    className="base fadeEnter"
+    className="base readMoreArticle fadeEnter"
     id="test_1"
   >
     <a
@@ -40,12 +40,15 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
         </picture>
       </div>
     </a>
-    <h3
-      className="base xSmall dark category"
+    <div
+      className="category"
     >
       Product
-    </h3>
-    <div>
+    </div>
+    <div
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
       <a
         className="base left dark"
         data-test-ref="test_1_TITLE"
@@ -60,14 +63,14 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
         </span>
       </a>
     </div>
-    <h3
-      className="base xSmall dark note"
+    <div
+      className="note"
     >
       5 minute read
-    </h3>
+    </div>
   </div>
   <div
-    className="base fadeEnter"
+    className="base readMoreArticle fadeEnter"
     id="test_2"
   >
     <a
@@ -102,12 +105,15 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
         </picture>
       </div>
     </a>
-    <h3
-      className="base xSmall dark category"
+    <div
+      className="category"
     >
       Product
-    </h3>
-    <div>
+    </div>
+    <div
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
       <a
         className="base left dark"
         data-test-ref="test_2_TITLE"
@@ -122,14 +128,14 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
         </span>
       </a>
     </div>
-    <h3
-      className="base xSmall dark note"
+    <div
+      className="note"
     >
       5 minute read
-    </h3>
+    </div>
   </div>
   <div
-    className="base fadeEnter"
+    className="base readMoreArticle fadeEnter"
     id="test_3"
   >
     <a
@@ -164,12 +170,15 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
         </picture>
       </div>
     </a>
-    <h3
-      className="base xSmall dark category"
+    <div
+      className="category"
     >
       Culture
-    </h3>
-    <div>
+    </div>
+    <div
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
       <a
         className="base left dark"
         data-test-ref="test_3_TITLE"
@@ -184,11 +193,11 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
         </span>
       </a>
     </div>
-    <h3
-      className="base xSmall dark note"
+    <div
+      className="note"
     >
       5 minute read
-    </h3>
+    </div>
   </div>
 </div>
 `;

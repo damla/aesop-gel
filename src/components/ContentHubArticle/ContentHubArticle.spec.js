@@ -23,8 +23,8 @@ describe('<ContentHubArticle />', () => {
           isHorizontal={true}
           isMenuItem={false}
           isReadMore={false}
+          longTitle={ContentHubArticleFixture.longTitle}
           readingTime={ContentHubArticleFixture.readingTime}
-          title={ContentHubArticleFixture.title}
           uri={ContentHubArticleFixture.uri}
           verticalThumbnail={ContentHubArticleFixture.verticalThumbnail}
         />,
