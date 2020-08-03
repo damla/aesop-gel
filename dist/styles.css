@@ -2846,12 +2846,14 @@ sans-serif;
   padding: 15px;
 }
 .ContentHubArticle-module_category__2y6ZD {
-  height: 15px;
-  padding-bottom: 14px;
+  padding-bottom: 12px;
 
   /* padding: 10px 10px 10px 0; */
   border-bottom: 1px solid #bcbbb4;
   margin-bottom: 8px;
+  font-family: 'Suisse Regular'
+,
+sans-serif;
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 0;
@@ -2862,10 +2864,10 @@ sans-serif;
     padding: 0 10px;
     border-bottom-color: #333;
     content: '\2022';
-    font-size: 20px;
-    line-height: 1;
-    -webkit-transform: translateY(3px);
-            transform: translateY(3px);
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-transform: translateY(1px);
+            transform: translateY(1px);
   }
 .ContentHubArticle-module_title__1SnEp {
   border-bottom: 1px solid transparent;
@@ -2911,7 +2913,14 @@ serif;
   transition: all 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .ContentHubArticle-module_note__1a-VG {
+  margin: 15px 0;
   color: #666;
+  font-family: 'Suisse Regular'
+,
+sans-serif;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 1.5;
 }
 .ContentHubArticle-module_nonMobile__x7L9a {
   display: none;

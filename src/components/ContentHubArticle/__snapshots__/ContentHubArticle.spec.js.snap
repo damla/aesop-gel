@@ -28,11 +28,11 @@ exports[`<ContentHubArticle /> renders base component correctly 1`] = `
       </span>
     </a>
   </div>
-  <h3
-    className="base xSmall dark note"
+  <div
+    className="note"
   >
     5 minute read
-  </h3>
+  </div>
   <a
     className="base left dark image nonMobile"
     data-test-ref="test_id_NON_MOBILE_THUMBNAIL"

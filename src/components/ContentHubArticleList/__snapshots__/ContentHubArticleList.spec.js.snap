@@ -35,11 +35,11 @@ exports[`<ContentHubArticleList /> renders base component correctly with pattern
             </span>
           </a>
         </div>
-        <h3
-          className="base xSmall dark note"
+        <div
+          className="note"
         >
           15 minute read
-        </h3>
+        </div>
         <a
           className="base left dark image nonMobile"
           data-test-ref="test_1_NON_MOBILE_THUMBNAIL"
@@ -136,11 +136,11 @@ exports[`<ContentHubArticleList /> renders base component correctly with pattern
             </span>
           </a>
         </div>
-        <h3
-          className="base xSmall dark note"
+        <div
+          className="note"
         >
           15 minute read
-        </h3>
+        </div>
         <a
           className="base left dark image nonMobile"
           data-test-ref="test_2_NON_MOBILE_THUMBNAIL"
@@ -237,11 +237,11 @@ exports[`<ContentHubArticleList /> renders base component correctly with pattern
             </span>
           </a>
         </div>
-        <h3
-          className="base xSmall dark note"
+        <div
+          className="note"
         >
           15 minute read
-        </h3>
+        </div>
         <a
           className="base left dark image nonMobile"
           data-test-ref="test_3_NON_MOBILE_THUMBNAIL"
@@ -338,11 +338,11 @@ exports[`<ContentHubArticleList /> renders base component correctly with pattern
             </span>
           </a>
         </div>
-        <h3
-          className="base xSmall dark note"
+        <div
+          className="note"
         >
           15 minute read
-        </h3>
+        </div>
         <a
           className="base left dark image nonMobile"
           data-test-ref="test_4_NON_MOBILE_THUMBNAIL"
@@ -440,11 +440,11 @@ exports[`<ContentHubArticleList /> renders base component correctly with pattern
           </span>
         </a>
       </div>
-      <h3
-        className="base xSmall dark note"
+      <div
+        className="note"
       >
         15 minute read
-      </h3>
+      </div>
       <a
         className="base left dark image nonMobile"
         data-test-ref="test_1_NON_MOBILE_THUMBNAIL"
@@ -543,11 +543,11 @@ exports[`<ContentHubArticleList /> renders base component correctly with pattern
               </span>
             </a>
           </div>
-          <h3
-            className="base xSmall dark note"
+          <div
+            className="note"
           >
             15 minute read
-          </h3>
+          </div>
           <a
             className="base left dark image nonMobile"
             data-test-ref="test_2_NON_MOBILE_THUMBNAIL"
@@ -644,11 +644,11 @@ exports[`<ContentHubArticleList /> renders base component correctly with pattern
               </span>
             </a>
           </div>
-          <h3
-            className="base xSmall dark note"
+          <div
+            className="note"
           >
             15 minute read
-          </h3>
+          </div>
           <a
             className="base left dark image nonMobile"
             data-test-ref="test_3_NON_MOBILE_THUMBNAIL"
@@ -743,11 +743,11 @@ exports[`<ContentHubArticleList /> renders base component correctly with pattern
           </span>
         </a>
       </div>
-      <h3
-        className="base xSmall dark note"
+      <div
+        className="note"
       >
         15 minute read
-      </h3>
+      </div>
       <a
         className="base left dark image nonMobile"
         data-test-ref="test_4_NON_MOBILE_THUMBNAIL"
@@ -852,11 +852,11 @@ exports[`<ContentHubArticleList /> renders base component correctly with pattern
             </span>
           </a>
         </div>
-        <h3
-          className="base xSmall dark note"
+        <div
+          className="note"
         >
           15 minute read
-        </h3>
+        </div>
         <a
           className="base left dark image nonMobile"
           data-test-ref="test_1_NON_MOBILE_THUMBNAIL"
@@ -953,11 +953,11 @@ exports[`<ContentHubArticleList /> renders base component correctly with pattern
             </span>
           </a>
         </div>
-        <h3
-          className="base xSmall dark note"
+        <div
+          className="note"
         >
           15 minute read
-        </h3>
+        </div>
         <a
           className="base left dark image nonMobile"
           data-test-ref="test_2_NON_MOBILE_THUMBNAIL"
@@ -1054,11 +1054,11 @@ exports[`<ContentHubArticleList /> renders base component correctly with pattern
             </span>
           </a>
         </div>
-        <h3
-          className="base xSmall dark note"
+        <div
+          className="note"
         >
           15 minute read
-        </h3>
+        </div>
         <a
           className="base left dark image nonMobile"
           data-test-ref="test_3_NON_MOBILE_THUMBNAIL"
@@ -1155,11 +1155,11 @@ exports[`<ContentHubArticleList /> renders base component correctly with pattern
             </span>
           </a>
         </div>
-        <h3
-          className="base xSmall dark note"
+        <div
+          className="note"
         >
           15 minute read
-        </h3>
+        </div>
         <a
           className="base left dark image nonMobile"
           data-test-ref="test_4_NON_MOBILE_THUMBNAIL"
@@ -1257,11 +1257,11 @@ exports[`<ContentHubArticleList /> renders base component correctly with pattern
           </span>
         </a>
       </div>
-      <h3
-        className="base xSmall dark note"
+      <div
+        className="note"
       >
         15 minute read
-      </h3>
+      </div>
       <a
         className="base left dark image nonMobile"
         data-test-ref="test_1_NON_MOBILE_THUMBNAIL"
@@ -1360,11 +1360,11 @@ exports[`<ContentHubArticleList /> renders base component correctly with pattern
               </span>
             </a>
           </div>
-          <h3
-            className="base xSmall dark note"
+          <div
+            className="note"
           >
             15 minute read
-          </h3>
+          </div>
           <a
             className="base left dark image nonMobile"
             data-test-ref="test_2_NON_MOBILE_THUMBNAIL"
@@ -1461,11 +1461,11 @@ exports[`<ContentHubArticleList /> renders base component correctly with pattern
               </span>
             </a>
           </div>
-          <h3
-            className="base xSmall dark note"
+          <div
+            className="note"
           >
             15 minute read
-          </h3>
+          </div>
           <a
             className="base left dark image nonMobile"
             data-test-ref="test_3_NON_MOBILE_THUMBNAIL"
@@ -1560,11 +1560,11 @@ exports[`<ContentHubArticleList /> renders base component correctly with pattern
           </span>
         </a>
       </div>
-      <h3
-        className="base xSmall dark note"
+      <div
+        className="note"
       >
         15 minute read
-      </h3>
+      </div>
       <a
         className="base left dark image nonMobile"
         data-test-ref="test_4_NON_MOBILE_THUMBNAIL"

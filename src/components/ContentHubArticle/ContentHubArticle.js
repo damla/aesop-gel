@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { useOnScreen } from '~/customHooks/useOnScreen';
 import Image from '~/components/Image';
-import Heading from '~/components/Heading';
 import Hyperlink from '~/components/Hyperlink';
 import Transition from '~/components/Transition';
 import styles from './ContentHubArticle.module.css';
@@ -106,11 +105,7 @@ const ContentHubArticle = ({
             <span className={titleClassSet}>{longTitle}</span>
           </Hyperlink>
         </div>
-        {readingTime && (
-          <Heading className={noteClassSet} level="3" size="xSmall">
-            {readingTime}
-          </Heading>
-        )}
+        {readingTime && <div className={noteClassSet}>{readingTime}</div>}
 
         {!isReadMore && !isMenuItem && (
           <Hyperlink

@@ -63,11 +63,11 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
         </span>
       </a>
     </div>
-    <h3
-      className="base xSmall dark note"
+    <div
+      className="note"
     >
       5 minute read
-    </h3>
+    </div>
   </div>
   <div
     className="base readMoreArticle fadeEnter"
@@ -128,11 +128,11 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
         </span>
       </a>
     </div>
-    <h3
-      className="base xSmall dark note"
+    <div
+      className="note"
     >
       5 minute read
-    </h3>
+    </div>
   </div>
   <div
     className="base readMoreArticle fadeEnter"
@@ -193,11 +193,11 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
         </span>
       </a>
     </div>
-    <h3
-      className="base xSmall dark note"
+    <div
+      className="note"
     >
       5 minute read
-    </h3>
+    </div>
   </div>
 </div>
 `;
