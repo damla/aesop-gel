@@ -12,12 +12,25 @@ describe('<ContentHubArticleList />', () => {
     expect(ContentHubArticleList).toBeDefined();
   });
 
-  it('renders base component correctly', () => {
+  it('renders base component correctly with pattern 1', () => {
     const tree = renderer
       .create(
         <ContentHubArticleList
           articles={ContentHubArticleListFixture.articles}
           pattern={1}
+        />,
+      )
+      .toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders base component correctly with pattern 0', () => {
+    const tree = renderer
+      .create(
+        <ContentHubArticleList
+          articles={ContentHubArticleListFixture.articles}
+          pattern={0}
         />,
       )
       .toJSON();

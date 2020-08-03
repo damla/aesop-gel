@@ -40,12 +40,15 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
         </picture>
       </div>
     </a>
-    <h3
-      className="base xSmall dark category"
+    <div
+      className="category"
     >
       Product
-    </h3>
-    <div>
+    </div>
+    <div
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
       <a
         className="base left dark"
         data-test-ref="test_1_TITLE"
@@ -102,12 +105,15 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
         </picture>
       </div>
     </a>
-    <h3
-      className="base xSmall dark category"
+    <div
+      className="category"
     >
       Product
-    </h3>
-    <div>
+    </div>
+    <div
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
       <a
         className="base left dark"
         data-test-ref="test_2_TITLE"
@@ -164,12 +170,15 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
         </picture>
       </div>
     </a>
-    <h3
-      className="base xSmall dark category"
+    <div
+      className="category"
     >
       Culture
-    </h3>
-    <div>
+    </div>
+    <div
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
       <a
         className="base left dark"
         data-test-ref="test_3_TITLE"

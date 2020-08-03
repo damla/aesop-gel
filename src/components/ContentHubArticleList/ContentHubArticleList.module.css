@@ -1,6 +1,7 @@
 @import 'styles/index';
 
 .base {
+  display: none;
   @media (--viewport-md) {
     display: grid;
     max-width: 1440px;
@@ -15,6 +16,33 @@
     padding-right: 35px;
     padding-left: 35px;
   }
+}
+
+.mobile {
+  @media (--viewport-md) {
+    display: none;
+  }
+  @media (--viewport-lg) {
+    display: none;
+  }
+}
+
+.mobileMiddleRow {
+  display: flex;
+  flex: 2;
+  flex-direction: row;
+}
+
+.middleArticle {
+  flex: 1;
+}
+
+.leftMiddleArticle {
+  padding-right: 7.5px;
+}
+
+.rightMiddleArticle {
+  padding-left: 7.5px;
 }
 
 .article {

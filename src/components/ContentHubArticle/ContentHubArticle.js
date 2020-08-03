@@ -28,9 +28,12 @@ const ContentHubArticle = ({
   const classSet = cx(styles.base, className);
   const categoryClassSet = cx(styles.category);
   const imageClassSet = cx(styles.image);
+  const readMoreThumbnailRef = useRef(null);
   const nonMobileImageClassSet = cx(styles.image, styles.nonMobile);
+  const nonMobileThumbnailRef = useRef(null);
   const noteClassSet = cx(styles.note);
   const mobileImageClassSet = cx(styles.image, styles.mobile);
+  const mobileThumbnailRef = useRef(null);
   const titleClassSet = cx(styles.title);
   const titleRef = useRef(null);
 
@@ -45,6 +48,24 @@ const ContentHubArticle = ({
     titleRef.current.getElementsByClassName(
       titleClassSet,
     )[0].className = titleClassSet;
+  };
+
+  const titleMouseEnter = () => {
+    [readMoreThumbnailRef, nonMobileThumbnailRef, mobileThumbnailRef].forEach(
+      imageRef => {
+        if (imageRef.current)
+          imageRef.current.className = cx(styles.imageActive);
+      },
+    );
+  };
+
+  const titleMouseLeave = () => {
+    [readMoreThumbnailRef, nonMobileThumbnailRef, mobileThumbnailRef].forEach(
+      imageRef => {
+        if (imageRef.current)
+          imageRef.current.className = cx(styles.imageUnactive);
+      },
+    );
   };
 
   return (
@@ -65,17 +86,18 @@ const ContentHubArticle = ({
                 altText={currentImage.altText}
                 large={currentImage.large}
                 medium={currentImage.medium}
+                ref={readMoreThumbnailRef}
                 small={currentImage.small}
               />
             </div>
           </Hyperlink>
         )}
-        {!isMenuItem && (
-          <Heading className={categoryClassSet} level="3" size="xSmall">
-            {category}
-          </Heading>
-        )}
-        <div ref={titleRef}>
+        {!isMenuItem && <div className={categoryClassSet}>{category}</div>}
+        <div
+          onMouseEnter={() => titleMouseEnter()}
+          onMouseLeave={() => titleMouseLeave()}
+          ref={titleRef}
+        >
           <Hyperlink
             dataTestRef={`${dataTestRef}_TITLE`}
             title={longTitle}
@@ -106,6 +128,7 @@ const ContentHubArticle = ({
                 className={styles.image}
                 large={currentImage.large}
                 medium={currentImage.medium}
+                ref={nonMobileThumbnailRef}
                 small={currentImage.small}
               />
             </div>
@@ -123,11 +146,12 @@ const ContentHubArticle = ({
               onMouseLeave={() => imageMouseLeave()}
             >
               <Image
-                altText={horizontalThumbnail.altText}
+                altText={currentImage.altText}
                 className={styles.image}
-                large={horizontalThumbnail.large}
-                medium={horizontalThumbnail.medium}
-                small={horizontalThumbnail.small}
+                large={currentImage.large}
+                medium={currentImage.medium}
+                ref={mobileThumbnailRef}
+                small={currentImage.small}
               />
             </div>
           </Hyperlink>
