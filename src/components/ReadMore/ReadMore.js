@@ -7,6 +7,7 @@ import styles from './ReadMore.module.css';
 
 const ReadMore = ({ articles, className }) => {
   const classSet = cx(styles.base, className);
+  const readMoreArticleClassSet = cx(styles.readMoreArticle);
 
   return (
     <Transition isActiveOnMount={true} type="fade">
@@ -14,6 +15,7 @@ const ReadMore = ({ articles, className }) => {
         {articles.map(article => (
           <ContentHubArticle
             category={article.category}
+            className={readMoreArticleClassSet}
             dataTestRef={article.id}
             horizontalThumbnail={article.horizontalThumbnail}
             id={article.id}
