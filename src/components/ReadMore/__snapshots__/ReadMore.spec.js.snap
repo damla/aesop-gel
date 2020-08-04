@@ -50,15 +50,13 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
       onMouseLeave={[Function]}
     >
       <a
-        className="base left dark"
+        className="base left dark title"
         data-test-ref="test_1_TITLE"
         href="https://www.aesop.com/au/r/careers"
         target="_self"
         title="1. Senorial consectetur adipiscing elit."
       >
-        <span
-          className="title"
-        >
+        <span>
           1. Senorial consectetur adipiscing elit.
         </span>
       </a>
@@ -115,15 +113,13 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
       onMouseLeave={[Function]}
     >
       <a
-        className="base left dark"
+        className="base left dark title"
         data-test-ref="test_2_TITLE"
         href="https://www.aesop.com/au/r/careers"
         target="_self"
         title="2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante."
       >
-        <span
-          className="title"
-        >
+        <span>
           2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante.
         </span>
       </a>
@@ -180,15 +176,13 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
       onMouseLeave={[Function]}
     >
       <a
-        className="base left dark"
+        className="base left dark title"
         data-test-ref="test_3_TITLE"
         href="https://www.aesop.com/au/r/careers"
         target="_self"
         title="3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare, id dictum ante. Suspendisse et ornare mauris, id dictum ante."
       >
-        <span
-          className="title"
-        >
+        <span>
           3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare, id dictum ante. Suspendisse et ornare mauris, id dictum ante.
         </span>
       </a>
