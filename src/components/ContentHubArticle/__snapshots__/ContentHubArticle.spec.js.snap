@@ -15,15 +15,13 @@ exports[`<ContentHubArticle /> renders base component correctly 1`] = `
     onMouseLeave={[Function]}
   >
     <a
-      className="base left dark"
+      className="base left dark title"
       data-test-ref="test_id_TITLE"
       href="https://www.aesop.com/au/r/careers"
       target="_self"
       title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante."
     >
-      <span
-        className="title"
-      >
+      <span>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante.
       </span>
     </a>

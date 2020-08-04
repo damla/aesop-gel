@@ -28,7 +28,7 @@
   }
 }
 
-.title {
+.title span {
   border-bottom: 1px solid transparent;
   color: var(--color-grey-20);
   font-family: var(--font-family-zapf-serif);
@@ -41,13 +41,13 @@
   }
 }
 
-.title:hover {
+.title:hover span {
   border-bottom: 1px solid var(--color-secondary);
 }
 
 .titleActive {
-  border-bottom: 1px solid var(--color-secondary);
-  transition: all 500ms var(--easing-ease-in-cubic);
+  border-bottom: 1px solid var(--color-secondary) !important;
+  transition: all 500ms var(--easing-ease-in-cubic) !important;
 }
 
 .image:hover img {

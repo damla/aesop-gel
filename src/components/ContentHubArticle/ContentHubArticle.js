@@ -22,7 +22,7 @@ const ContentHubArticle = ({
   verticalThumbnail,
 }) => {
   const ref = useRef(null);
-  const isOnScreen = useOnScreen(ref, 0.4);
+  const isOnScreen = useOnScreen(ref, 0.5);
   const currentImage = isHorizontal ? horizontalThumbnail : verticalThumbnail;
   const classSet = cx(styles.base, className);
   const categoryClassSet = cx(styles.category);
@@ -37,16 +37,17 @@ const ContentHubArticle = ({
   const titleRef = useRef(null);
 
   const imageMouseEnter = () => {
-    titleRef.current.getElementsByClassName(titleClassSet)[0].className = cx(
-      styles.title,
-      styles.titleActive,
-    );
+    const titleSpan = titleRef.current
+      .getElementsByClassName(titleClassSet)[0]
+      .getElementsByTagName('span')[0];
+    titleSpan.className = cx(styles.title, styles.titleActive);
   };
 
   const imageMouseLeave = () => {
-    titleRef.current.getElementsByClassName(
-      titleClassSet,
-    )[0].className = titleClassSet;
+    const titleSpan = titleRef.current
+      .getElementsByClassName(titleClassSet)[0]
+      .getElementsByTagName('span')[0];
+    titleSpan.className = '';
   };
 
   const titleMouseEnter = () => {
@@ -98,11 +99,12 @@ const ContentHubArticle = ({
           ref={titleRef}
         >
           <Hyperlink
+            className={titleClassSet}
             dataTestRef={`${dataTestRef}_TITLE`}
             title={longTitle}
             url={uri}
           >
-            <span className={titleClassSet}>{longTitle}</span>
+            <span>{longTitle}</span>
           </Hyperlink>
         </div>
         {readingTime && <div className={noteClassSet}>{readingTime}</div>}
