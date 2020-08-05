@@ -124,17 +124,17 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                       className="base rightArrow dark"
                       data-ref=""
                       focusable="false"
-                      height={15}
+                      height={12}
                       role="img"
                       style={
                         Object {
-                          "height": "15px",
-                          "width": "15px",
+                          "height": "12px",
+                          "width": "12px",
                         }
                       }
                       tabIndex={-1}
                       viewBox="0 0 50 50"
-                      width={15}
+                      width={12}
                     >
                       <g>
                         <path
@@ -187,7 +187,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                     Quisque non enim efficitur
                   </h5>
                   <div
-                    className="description"
+                    className="description dark"
                   >
                     Vivamus sollicitudin ac ligula
                   </div>
@@ -258,7 +258,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                     Phasellus posuere porta varius
                   </h5>
                   <div
-                    className="description"
+                    className="description dark"
                   >
                     Suspendisse elit mauris
                   </div>
@@ -329,7 +329,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                     Etiam at pharetra nisl
                   </h5>
                   <div
-                    className="description"
+                    className="description dark"
                   >
                     Aliquam metus enim, pellentesque eu
                   </div>
@@ -400,7 +400,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                     Phasellus posuere porta varius
                   </h5>
                   <div
-                    className="description"
+                    className="description dark"
                   >
                     Suspendisse elit
                   </div>
@@ -557,7 +557,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                     Quisque non enim efficitur
                   </h5>
                   <div
-                    className="description"
+                    className="description dark"
                   >
                     Vivamus sollicitudin ac ligula
                   </div>
@@ -628,7 +628,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                     Phasellus posuere porta varius
                   </h5>
                   <div
-                    className="description"
+                    className="description dark"
                   >
                     Suspendisse elit mauris
                   </div>
@@ -699,7 +699,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                     Etiam at pharetra nisl
                   </h5>
                   <div
-                    className="description"
+                    className="description dark"
                   >
                     Aliquam metus enim, pellentesque eu
                   </div>
@@ -770,7 +770,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                     Phasellus posuere porta varius
                   </h5>
                   <div
-                    className="description"
+                    className="description dark"
                   >
                     Suspendisse elit
                   </div>
@@ -873,7 +873,7 @@ exports[`<Carousel /> renders component correctly if no \`url\` member is provid
                     Quisque non enim efficitur
                   </h5>
                   <div
-                    className="description"
+                    className="description dark"
                   >
                     Vivamus sollicitudin ac ligula
                   </div>

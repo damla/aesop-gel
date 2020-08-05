@@ -43,7 +43,7 @@ Array [
     className="information dark"
   >
     <div
-      className="description"
+      className="description dark"
     >
       Vivamus sollicitudin ac ligula
     </div>
@@ -85,7 +85,7 @@ Array [
       Quisque non enim efficitur
     </h5>
     <div
-      className="description"
+      className="description dark"
     >
       Vivamus sollicitudin ac ligula
     </div>
