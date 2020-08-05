@@ -14,8 +14,8 @@
   display: inline-block;
 
   svg {
-    width: 15px;
-    max-height: 15px;
+    width: 12px;
+    max-height: 12px;
 
     path {
       transition: fill 150ms var(--easing-ease-in-out-cubic);

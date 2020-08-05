@@ -27,12 +27,6 @@
     }
   }
 
-  p {
-    font-size: rem(15px);
-    font-weight: 400;
-    line-height: 1.7;
-  }
-
   :global(.slick-track) {
     display: flex;
   }

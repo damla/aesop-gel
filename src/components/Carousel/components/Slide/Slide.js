@@ -25,7 +25,11 @@ const Slide = ({
             {heading}
           </Heading>
         )}
-        {description && <div className={styles.description}>{description}</div>}
+        {description && (
+          <div className={cx(styles.description, styles[theme])}>
+            {description}
+          </div>
+        )}
       </div>
     )}
     <div className={styles.imageContainer}>
