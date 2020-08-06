@@ -3,6 +3,19 @@
 .heading {
   margin: 10px 0 10px 0;
   font-family: var(--font-family-sans-serif-medium);
+  font-size: rem(14px);
+
+  @media (--viewport-sm) {
+    font-size: rem(14px);
+  }
+
+  @media (--viewport-md) {
+    font-size: rem(14px);
+  }
+
+  @media (--viewport-lg) {
+    font-size: rem(14px);
+  }
 
   &.dark {
     color: var(--color-dark-copy);
@@ -27,7 +40,7 @@
   font-size: rem(14px);
 
   &.dark {
-    color: var(--color-dark-label);
+    color: var(--color-secondary);
   }
 
   &.light {

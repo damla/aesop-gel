@@ -65,8 +65,8 @@
     margin: auto;
 
     .hero & {
-      padding-top: 0;
-      margin-top: var(--layout-logo-vertical-offset-lg);
+      padding-top: var(--layout-logo-vertical-offset-lg);
+      margin-top: 0;
     }
 
     .hero.reverse & {
@@ -110,6 +110,20 @@
 }
 
 .content {
+  font-size: rem(16px);
+
+  @media (--viewport-lg) {
+    font-size: rem(15px);
+  }
+
+  p {
+    font-size: rem(16px);
+
+    @media (--viewport-lg) {
+      font-size: rem(15px);
+    }
+  }
+
   @media (--viewport-md-only) {
     width: 48%;
     flex-basis: auto;
@@ -142,7 +156,11 @@
 
 .description {
   margin: 20px 0 20px;
-  font-size: rem(15px);
+  font-size: rem(16px);
+
+  @media (--viewport-lg) {
+    font-size: rem(15px);
+  }
 
   .hero & {
     margin-top: 0;
