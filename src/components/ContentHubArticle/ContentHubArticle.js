@@ -76,7 +76,7 @@ const ContentHubArticle = ({
             className={imageClassSet}
             dataTestRef={`${dataTestRef}_READMORE_THUMBNAIL`}
             title={longTitle}
-            url={uri + '/?contentful=true'} // @TODO Need to remove the query
+            url={uri + '?contentful=true'} // @TODO Need to remove the query
           >
             <div
               onMouseEnter={() => imageMouseEnter()}
@@ -102,7 +102,7 @@ const ContentHubArticle = ({
             className={titleClassSet}
             dataTestRef={`${dataTestRef}_TITLE`}
             title={longTitle}
-            url={uri + '/?contentful=true'} // @TODO Need to remove the query
+            url={uri + '?contentful=true'} // @TODO Need to remove the query
           >
             <span>{longTitle}</span>
           </Hyperlink>
@@ -114,7 +114,7 @@ const ContentHubArticle = ({
             className={nonMobileImageClassSet}
             dataTestRef={`${dataTestRef}_NON_MOBILE_THUMBNAIL`}
             title={longTitle}
-            url={uri + '/?contentful=true'} // @TODO Need to remove the query
+            url={uri + '?contentful=true'} // @TODO Need to remove the query
           >
             <div
               onMouseEnter={() => imageMouseEnter()}
@@ -136,7 +136,7 @@ const ContentHubArticle = ({
             className={mobileImageClassSet}
             dataTestRef={`${dataTestRef}_MOBILE_THUMBNAIL`}
             title={longTitle}
-            url={uri + '/?contentful=true'} // @TODO Need to remove the query
+            url={uri + '?contentful=true'} // @TODO Need to remove the query
           >
             <div
               onMouseEnter={() => imageMouseEnter()}
