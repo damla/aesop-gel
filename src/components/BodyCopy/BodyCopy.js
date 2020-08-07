@@ -28,9 +28,7 @@ const BodyCopy = ({
   const LinkBlock = () => {
     return renderCtaAsSubnav ? (
       <SubNav
-        links={[cta && { ...cta }, secondaryCta && { ...secondaryCta }].filter(
-          Boolean
-        )}
+        links={[cta && { ...cta }, secondaryCta && { ...secondaryCta }].filter(Boolean)}
         theme={theme}
       />
     ) : (
