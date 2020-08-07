@@ -3,7 +3,7 @@
 .base {
   z-index: var(--z-index-forground-content);
   font-family: var(--font-family-sans-serif-regular);
-  font-size: rem(15px);
+  font-size: rem(14px);
   line-height: 1.6;
 
   @media (--viewport-lg) {
@@ -107,20 +107,24 @@
 
 .eyebrow {
   margin-bottom: 10px;
+
+  @media (--viewport-lg) {
+    font-size: rem(14px);
+  }
 }
 
 .content {
   font-size: rem(16px);
 
   @media (--viewport-lg) {
-    font-size: rem(15px);
+    font-size: rem(14px);
   }
 
   p {
     font-size: rem(16px);
 
     @media (--viewport-lg) {
-      font-size: rem(15px);
+      font-size: rem(14px);
     }
   }
 
@@ -159,7 +163,7 @@
   font-size: rem(16px);
 
   @media (--viewport-lg) {
-    font-size: rem(15px);
+    font-size: rem(14px);
   }
 
   .hero & {
