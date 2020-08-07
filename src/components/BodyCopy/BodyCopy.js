@@ -4,6 +4,8 @@ import cx from 'classnames';
 import LinkButtonGroup from '~/components/LinkButtonGroup';
 import Hyperlink from '~/components/Hyperlink';
 import SectionHeading from '~/components/SectionHeading';
+import SubNav from '~/components/SubNav';
+import List from '~/components/List';
 import styles from './BodyCopy.module.css';
 
 const BodyCopy = ({
@@ -13,14 +15,38 @@ const BodyCopy = ({
   cta,
   ctaTextAlign,
   eyebrow,
-  id,
   hasSerifFontHeading,
   heading,
+  id,
+  links,
+  renderCtaAsSubnav,
   secondaryCta,
   subHeading,
   theme,
 }) => {
   const classSet = cx(styles.base, styles[theme], className);
+
+  const LinkBlock = () => {
+    return renderCtaAsSubnav ? (
+      <SubNav
+        links={[cta && { ...cta }, secondaryCta && { ...secondaryCta }].filter(
+          Boolean
+        )}
+        theme={theme}
+      />
+    ) : (
+      <LinkButtonGroup
+        className={styles.ctaWrapper}
+        textAlign={ctaTextAlign}
+        theme={theme}
+      >
+        {cta && <Hyperlink {...cta}>{cta.text}</Hyperlink>}
+        {secondaryCta && (
+          <Hyperlink {...secondaryCta}>{secondaryCta.text}</Hyperlink>
+        )}
+      </LinkButtonGroup>
+    );
+  };
 
   return (
     <article className={classSet} id={id}>
@@ -40,16 +66,7 @@ const BodyCopy = ({
 
       {copy && <div className={styles.copy}>{copy}</div>}
 
-      <LinkButtonGroup
-        className={styles.ctaWrapper}
-        textAlign={ctaTextAlign}
-        theme={theme}
-      >
-        {cta && <Hyperlink {...cta}>{cta.text}</Hyperlink>}
-        {secondaryCta && (
-          <Hyperlink {...secondaryCta}>{secondaryCta.text}</Hyperlink>
-        )}
-      </LinkButtonGroup>
+      {links ? <SubNav links={links} theme={theme} /> : <LinkBlock />}
     </article>
   );
 };
@@ -68,6 +85,8 @@ BodyCopy.propTypes = {
   hasSerifFontHeading: PropTypes.bool,
   heading: PropTypes.string,
   id: PropTypes.string,
+  links: PropTypes.arrayOf(PropTypes.object),
+  renderCtaAsSubnav: PropTypes.bool,
   secondaryCta: PropTypes.object,
   subHeading: PropTypes.string,
   theme: PropTypes.oneOf(['dark', 'light']),
@@ -87,6 +106,8 @@ BodyCopy.defaultProps = {
   hasSerifFontHeading: false,
   heading: undefined,
   id: undefined,
+  links: undefined,
+  renderCtaAsSubnav: false,
   secondaryCta: undefined,
   subHeading: undefined,
   theme: 'dark',
