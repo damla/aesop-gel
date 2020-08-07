@@ -5,7 +5,6 @@ import LinkButtonGroup from '~/components/LinkButtonGroup';
 import Hyperlink from '~/components/Hyperlink';
 import SectionHeading from '~/components/SectionHeading';
 import SubNav from '~/components/SubNav';
-import List from '~/components/List';
 import styles from './BodyCopy.module.css';
 
 const BodyCopy = ({
