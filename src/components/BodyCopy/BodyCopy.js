@@ -25,12 +25,14 @@ const BodyCopy = ({
 }) => {
   const classSet = cx(styles.base, styles[theme], className);
 
+  const subNavLinks = [
+    cta && { ...cta },
+    secondaryCta && { ...secondaryCta },
+  ].filter(Boolean);
+
   const LinkBlock = () => {
     return renderCtaAsSubnav ? (
-      <SubNav
-        links={[cta && { ...cta }, secondaryCta && { ...secondaryCta }].filter(Boolean)}
-        theme={theme}
-      />
+      <SubNav links={subNavLinks} theme={theme} />
     ) : (
       <LinkButtonGroup
         className={styles.ctaWrapper}
