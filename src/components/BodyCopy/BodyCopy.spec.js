@@ -16,8 +16,8 @@ describe('<BodyCopy />', () => {
     const tree = renderer
       .create(
         <BodyCopy
+          content={<p>{BodyCopyFixture.heading}</p>}
           copy="Parsley Seed Cream. [The Paris Review](http://theparisreview.org) Intensely soothing, nourishing and hydrating, this elegant formulation contains a potent blend of botanicals that offer fortification of the highest order against free radicals."
-          cta={BodyCopyFixture.cta}
           eyebrow="Recommended Nearby"
           heading="Aesop & The Paris Review: A Partnership Extended"
           id="Anti-Oxidant"
