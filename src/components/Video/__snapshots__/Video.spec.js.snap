@@ -6,6 +6,16 @@ exports[`<Video /> renders base component correctly 1`] = `
   id="video"
   role="group"
 >
+  <figure
+    className="fallbackImageFigure"
+    id="video"
+  >
+    <picture
+      className="base picture dark fallbackImage"
+    >
+      <img />
+    </picture>
+  </figure>
   <video
     autoPlay={true}
     className="base"
