@@ -102,7 +102,7 @@ export const Video = forwardRef(function VideoRef(
 
   return (
     <div className={classSet} id={id} ref={ref} role="group">
-      {fallbackImage && (!hasVideo || hasAutoplay) && (
+      {!!fallbackImage && (!hasVideo || hasAutoplay) && (
         <figure className={styles.fallbackImageFigure} id={id} ref={ref}>
           <Image
             altText={fallbackImage.copy?.altText}
@@ -222,15 +222,7 @@ Video.defaultProps = {
     pauseButtonTitle: 'Pause video',
     unmuteButtonTitle: 'Unmute video',
   },
-  fallbackImage: {
-    className: undefined,
-    copy: {
-      altText: undefined,
-    },
-    large: undefined,
-    medium: undefined,
-    small: undefined,
-  },
+  fallbackImage: undefined,
   hasControls: true,
   hasAllowAudio: false,
   hasAutoplay: false,
