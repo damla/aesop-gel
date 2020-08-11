@@ -3,7 +3,6 @@ import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import renderer from 'react-test-renderer';
 import BodyCopy from './BodyCopy';
-import BodyCopyFixture from './BodyCopy.fixture';
 
 configure({ adapter: new Adapter() });
 
@@ -13,11 +12,18 @@ describe('<BodyCopy />', () => {
   });
 
   it('renders base component correctly', () => {
+    const button = {
+      id: 'button-id',
+      text: 'Read more',
+      url: 'https://aesop.com',
+      openInANewWindow: true,
+    };
+
     const tree = renderer
       .create(
         <BodyCopy
-          content={<p>{BodyCopyFixture.heading}</p>}
           copy="Parsley Seed Cream. [The Paris Review](http://theparisreview.org) Intensely soothing, nourishing and hydrating, this elegant formulation contains a potent blend of botanicals that offer fortification of the highest order against free radicals."
+          cta={button}
           eyebrow="Recommended Nearby"
           heading="Aesop & The Paris Review: A Partnership Extended"
           id="Anti-Oxidant"

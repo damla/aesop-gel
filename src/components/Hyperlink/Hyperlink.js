@@ -15,7 +15,6 @@ const Hyperlink = ({
   className,
   dataTestRef,
   hasTargetInNewWindow,
-  isAlternate,
   isDownload,
   style,
   textAlign,
@@ -31,7 +30,6 @@ const Hyperlink = ({
     styles.base,
     { [styles.blockStyle]: !isInline },
     { [styles.hasIcon]: hasIcon },
-    { [styles.alternate]: isAlternate },
     styles[textAlign],
     styles[theme],
     className,
@@ -56,12 +54,9 @@ const Hyperlink = ({
     >
       {children}
       {hasIcon && (
-        <>
-          {` `}
-          <i aria-hidden="true" className={styles.icon}>
-            <Icon height={12} name={iconName} theme={theme} width={12} />
-          </i>
-        </>
+        <i aria-hidden="true" className={styles.icon}>
+          <Icon height={15} name={iconName} width={15} />
+        </i>
       )}
     </a>
   );
@@ -73,7 +68,6 @@ Hyperlink.propTypes = {
   dataTestRef: PropTypes.string,
   hasTargetInNewWindow: PropTypes.bool,
   id: PropTypes.string,
-  isAlternate: PropTypes.bool,
   isDownload: PropTypes.bool,
   style: PropTypes.oneOf([
     'External Button Link',
@@ -98,7 +92,6 @@ Hyperlink.defaultProps = {
   dataTestRef: undefined,
   hasTargetInNewWindow: false,
   id: undefined,
-  isAlternate: undefined,
   isDownload: undefined,
   style: 'Internal No Icon Link',
   textAlign: 'left',

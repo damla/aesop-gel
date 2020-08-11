@@ -24,8 +24,9 @@ const Button = forwardRef(function ButtonRef(
     styles.base,
     { [styles.alternate]: isAlternate },
     { [styles.blockStyle]: !isInline },
-    styles[theme],
     { [styles.disabled]: !isEnabled },
+    { [styles.inlineStyle]: isInline },
+    styles[theme],
     className,
   );
 

@@ -7,11 +7,8 @@ export const generateSvgBlueprint = (svg, uuidKey) => {
       const tagName = Object.keys(item)[0];
       const { classes, data, ...props } = item[tagName];
 
+      props.className = styles[classes];
       props.key = `${uuidKey}${i}`;
-
-      if (classes !== undefined) {
-        props.className = styles[classes];
-      }
 
       if (tagName === 'g') {
         return React.createElement(tagName, props, mapSvgData(data));

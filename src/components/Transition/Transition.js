@@ -2,7 +2,7 @@ import React, { isValidElement } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'lodash/get';
-import { CSSTransition } from 'react-transition-group-npm';
+import { CSSTransition } from 'react-transition-group';
 import useHasMounted from '~/customHooks/useHasMounted';
 import data from './Transition.data';
 
@@ -10,8 +10,8 @@ const Transition = ({
   children,
   hasCSSTransitionMountOnEnter,
   hasCSSTransitionUnmountOnExit,
-  isActive,
   isActiveOnMount,
+  isActive,
   type,
 }) => {
   const hasMounted = useHasMounted();

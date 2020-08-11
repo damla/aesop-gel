@@ -2,13 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import Figure from '~/components/Figure';
-import Hyperlink from '~/components/Hyperlink';
 import styles from './Media.module.css';
 
 const Media = ({
   className,
   foregroundImage,
-  foregroundImageLink,
   hasFullWidthImage,
   isHero,
   media,
@@ -24,18 +22,7 @@ const Media = ({
     <div className={classSet}>
       <Figure className={styles.media}>{media}</Figure>
       {foregroundImage && (
-        <Figure className={styles.foregroundImage}>
-          {foregroundImageLink ? (
-            <Hyperlink
-              title={foregroundImageLink.title}
-              url={foregroundImageLink.url}
-            >
-              {foregroundImage}
-            </Hyperlink>
-          ) : (
-            foregroundImage
-          )}
-        </Figure>
+        <Figure className={styles.foregroundImage}>{foregroundImage}</Figure>
       )}
     </div>
   );
@@ -44,10 +31,6 @@ const Media = ({
 Media.propTypes = {
   className: PropTypes.string,
   foregroundImage: PropTypes.element,
-  foregroundImageLink: PropTypes.shape({
-    url: PropTypes.string,
-    title: PropTypes,
-  }),
   hasFullWidthImage: PropTypes.bool,
   isHero: PropTypes.bool,
   media: PropTypes.element.isRequired,
@@ -56,7 +39,6 @@ Media.propTypes = {
 Media.defaultProps = {
   className: undefined,
   foregroundImage: undefined,
-  foregroundImageLink: undefined,
   hasFullWidthImage: false,
   isHero: false,
   media: undefined,

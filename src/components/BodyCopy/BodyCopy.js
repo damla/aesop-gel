@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import LinkButtonGroup from '~/components/LinkButtonGroup';
 import SectionHeading from '~/components/SectionHeading';
 import styles from './BodyCopy.module.css';
 
@@ -8,15 +9,17 @@ const BodyCopy = ({
   childrenClassNames,
   className,
   copy,
+  cta,
   eyebrow,
+  id,
+  parent,
   hasSerifFontHeading,
   heading,
-  id,
+  secondaryCta,
   subHeading,
   theme,
-  content,
 }) => {
-  const classSet = cx(styles.base, styles[theme], className);
+  const classSet = cx(styles.base, styles[theme], styles[parent], className);
 
   return (
     <article className={classSet} id={id}>
@@ -34,9 +37,9 @@ const BodyCopy = ({
         theme={theme}
       />
 
-      {copy && <div className={styles.copy}>{copy}</div>}
+      {copy && <div className={cx(styles.copy, styles[theme])}>{copy}</div>}
 
-      {content && <div className={styles.contentWrapper}>{content}</div>}
+      <LinkButtonGroup link={cta} secondaryLink={secondaryCta} theme={theme} />
     </article>
   );
 };
@@ -48,12 +51,14 @@ BodyCopy.propTypes = {
     subHeading: PropTypes.string,
   }),
   className: PropTypes.string,
-  content: PropTypes.any,
   copy: PropTypes.node,
+  cta: PropTypes.object,
   eyebrow: PropTypes.string,
   hasSerifFontHeading: PropTypes.bool,
   heading: PropTypes.string,
   id: PropTypes.string,
+  parent: PropTypes.oneOf(['HeroWithContent', 'HalfWidthFullBleed']),
+  secondaryCta: PropTypes.object,
   subHeading: PropTypes.string,
   theme: PropTypes.oneOf(['dark', 'light']),
 };
@@ -65,12 +70,14 @@ BodyCopy.defaultProps = {
     subHeading: undefined,
   },
   className: undefined,
-  content: undefined,
   copy: undefined,
+  cta: undefined,
   eyebrow: undefined,
   hasSerifFontHeading: false,
   heading: undefined,
   id: undefined,
+  parent: undefined,
+  secondaryCta: undefined,
   subHeading: undefined,
   theme: 'dark',
 };

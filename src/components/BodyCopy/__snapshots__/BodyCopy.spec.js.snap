@@ -2,7 +2,7 @@
 
 exports[`<BodyCopy /> renders base component correctly 1`] = `
 <article
-  className="base dark"
+  className="base dark undefined"
   id="Anti-Oxidant"
 >
   <header
@@ -10,45 +10,49 @@ exports[`<BodyCopy /> renders base component correctly 1`] = `
     id="Anti-Oxidant"
   >
     <h2
-      className="base mediumWeightFont xXSmall dark eyebrow"
+      className="base noTopMargin mediumWeightFont xXSmall dark eyebrow eyebrow"
     >
       Recommended Nearby
     </h2>
     <h3
-      className="base xLarge dark heading"
+      className="base noTopMargin xLarge dark heading heading"
     >
       Aesop & The Paris Review: A Partnership Extended
     </h3>
     <h4
-      className="base mediumWeightFont xSmall dark subHeading"
+      className="base noTopMargin mediumWeightFont xSmall dark subHeading subHeading"
     >
       Active Nutrients
     </h4>
   </header>
   <div
-    className="copy"
+    className="copy dark"
   >
     Parsley Seed Cream. [The Paris Review](http://theparisreview.org) Intensely soothing, nourishing and hydrating, this elegant formulation contains a potent blend of botanicals that offer fortification of the highest order against free radicals.
   </div>
   <div
-    className="contentWrapper"
+    className="base"
   >
-    <p>
-      Lorem ipsum dolor sit amet
-    </p>
+    <a
+      className="base center dark link center"
+      href="https://aesop.com"
+      target="_self"
+    >
+      Read more
+    </a>
   </div>
 </article>
 `;
 
 exports[`<BodyCopy /> renders promary title as an \`h2\` if no \`eyebrow\` or \`primaryTitle\` prop are passed 1`] = `
 <article
-  className="base dark"
+  className="base dark undefined"
 >
   <header
     className="base"
   >
     <h2
-      className="base mediumWeightFont xSmall dark subHeading"
+      className="base noTopMargin mediumWeightFont xSmall dark subHeading subHeading"
     >
       Aesop & The Paris Review: A Partnership Extended
     </h2>
@@ -58,13 +62,13 @@ exports[`<BodyCopy /> renders promary title as an \`h2\` if no \`eyebrow\` or \`
 
 exports[`<BodyCopy /> renders promary title as an \`h2\` if no \`eyebrow\` prop is passed 1`] = `
 <article
-  className="base dark"
+  className="base dark undefined"
 >
   <header
     className="base"
   >
     <h2
-      className="base xLarge dark heading"
+      className="base noTopMargin xLarge dark heading heading"
     >
       Aesop & The Paris Review: A Partnership Extended
     </h2>

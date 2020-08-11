@@ -1,5 +1,5 @@
 import React from 'react';
-import { configure } from 'enzyme';
+import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import renderer from 'react-test-renderer';
 import CarouselFixture from './Carousel.fixture';
@@ -51,9 +51,8 @@ describe('<Carousel />', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  // @TODO Address hooks + version of react + testing suite
-  // it('should return `null` if the length of the `slides` prop is 0', () => {
-  //   const component = shallow(<Carousel slides={[]} />);
-  //   expect(component.type()).toEqual(null);
-  // });
+  it('should return `null` if the length of the `slides` prop is 0', () => {
+    const component = shallow(<Carousel slides={[]} />);
+    expect(component.type()).toEqual(null);
+  });
 });

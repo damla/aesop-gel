@@ -1,15 +1,13 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import * as knobs from '@storybook/addon-knobs';
-import {
-  AddToCartContextProvider,
-  ProductDetailContextProvider,
-  VariantSelectContextProvider,
-} from '~/contexts';
+import { AddToCartContextProvider } from '~/contexts/AddToCart.context';
+import { ProductDetailContextProvider } from '~/contexts/ProductDetail.context';
+import { VariantSelectContextProvider } from '~/contexts/VariantSelect.context';
+import useAddToCart from '~/customHooks/useAddToCart';
+import useProductDetail from '~/customHooks/useProductDetail';
+import useVariantSelect from '~/customHooks/useVariantSelect';
 import ProductDetailBodyFixture from '~/components/ProductDetailHeader/components/ProductDetailBody/ProductDetailBody.fixture';
 import ProductDetailHeader from './ProductDetailHeader';
 import ProductDetailHeaderFixture from './ProductDetailHeader.fixture';
-import AddToCartButtonFixture from '~/components/AddToCartButton/AddToCartButton.fixture';
-import mockAddToCartButtonOnClick from '~/components/AddToCartButton/__mocks__/AddToCartButton.onClick';
 
 <Meta title="Components/ProductDetailHeader" component={ProductDetailHeader} />
 
@@ -17,33 +15,26 @@ import mockAddToCartButtonOnClick from '~/components/AddToCartButton/__mocks__/A
 
 <Preview>
   <Story name="Base component">
-    {(() => {
-      const theme = knobs.select('theme', ['dark', 'light'], ProductDetailHeaderFixture.theme, 'Presentation')
-      const { productName, description, ...productRest } = ProductDetailHeaderFixture.product;
-      const productDetails = {
-        productName: knobs.text('productName', productName, 'Content'),
-        description: knobs.text('description', description, 'Content'),
-        ...productRest,
-      }
-      return (
-        <AddToCartContextProvider onClick={mockAddToCartButtonOnClick}>
-          <ProductDetailContextProvider product={productDetails}>
-            <VariantSelectContextProvider variants={ProductDetailHeaderFixture.product.variantOptions}>
-              <ProductDetailHeader
-                breadcrumbs={ProductDetailHeaderFixture.breadcrumbs}
-                className={ProductDetailHeaderFixture.className}
-                copy={{
-                  addToCart: AddToCartButtonFixture.copy,
-                  size: ProductDetailBodyFixture.copy.size,
-                  ingredients: ProductDetailBodyFixture.copy.ingredients,
-                }}
-                theme={theme}
-              />
-            </VariantSelectContextProvider>
-          </ProductDetailContextProvider>
-        </AddToCartContextProvider>
-      )
-    })()}
+    <AddToCartContextProvider value={useAddToCart()}>
+      <ProductDetailContextProvider
+        value={useProductDetail(ProductDetailHeaderFixture.product)}
+      >
+        <VariantSelectContextProvider
+          value={useVariantSelect(
+            ProductDetailHeaderFixture.product.variantOptions,
+          )}
+        >
+          <ProductDetailHeader
+            breadcrumbs={ProductDetailHeaderFixture.breadcrumbs}
+            className={ProductDetailHeaderFixture.className}
+            copy={{
+              ingredients: ProductDetailBodyFixture.copy.ingredients,
+            }}
+            theme={ProductDetailHeaderFixture.theme}
+          />
+        </VariantSelectContextProvider>
+      </ProductDetailContextProvider>
+    </AddToCartContextProvider>
   </Story>
 </Preview>
 

@@ -192,11 +192,6 @@ Video.propTypes = {
   hasSpanContent: PropTypes.bool,
   hasPlayInFullScreen: PropTypes.bool,
   id: PropTypes.string,
-  /**
-    `isFullWidth` is set true by default and this will allow videos to display at the correct aspect ratio.
-    In the event that a different, more fluid ratio is required, set this prop to false, this will collase the hieght of th Video,
-    but it will react to the height of the surrounding element.
-  */
   isFullWidth: PropTypes.bool,
   large: PropTypes.string,
   medium: PropTypes.string,

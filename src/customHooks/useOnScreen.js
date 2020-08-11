@@ -10,8 +10,6 @@ export const useOnScreen = (ref, threshold = 0, rootMargin = '0px') => {
   const [isOnScreen, setIsOnScreen] = useState(false);
 
   useEffect(() => {
-    if (!ref?.current) return;
-
     let observer = null;
     const currentRef = ref.current;
 

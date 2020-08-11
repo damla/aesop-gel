@@ -1,35 +1,18 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import { createContext, useContext } from 'react';
-import { useAddToCart } from '~/customHooks';
 
-const initialState = {
-  actionTypes: {},
-  dispatch: () => {},
-  hasError: false,
+const defaultValues = {
+  handleOnClick: () => {},
   isLoading: false,
   isUpdateSuccessful: false,
-  onClick: () => {},
 };
 
-const AddToCartContext = createContext(initialState);
+const AddToCartContext = createContext(defaultValues);
+
+export const AddToCartContextProvider = AddToCartContext.Provider;
 
 export const useAddToCartContext = () => useContext(AddToCartContext);
 
-export const AddToCartContextProvider = ({ children, onClick }) => (
-  <AddToCartContext.Provider value={useAddToCart(onClick)}>
-    {children}
-  </AddToCartContext.Provider>
-);
-
-AddToCartContextProvider.propTypes = {
-  children: PropTypes.any,
-  /**
-    A callback function that takes `sku<string>`, `addToCartDispatch<function>`, `ADD_TO_CART_ACTION_TYPES<array[string]>`
-    as arguments. See [AddToCartButton.onClick.js mock](https://github.com/aesop/aesop-gel/tree/develop/src/components/AddToCartButton/__mocks__/AddToCartButton.onClick.js)
-    for an example. ___Required___
-   */
-  onClick: PropTypes.func,
+export default {
+  AddToCartContextProvider,
+  useAddToCartContext,
 };
-
-export default AddToCartContextProvider;

@@ -1,15 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import {
-  useAddToCartContext,
-  useProductDetailContext,
-  useVariantSelectContext,
-} from 'contexts';
-import { HYPERLINK_STYLE_TYPES } from '~/constants';
+import { useAddToCartContext } from '~/contexts/AddToCart.context';
+import { useVariantSelectContext } from '~/contexts/VariantSelect.context';
 import Button from '~/components/Button';
 import Loading from '~/components/Loading';
-import Hyperlink from '~/components/Hyperlink';
 import styles from './AddToCartButton.module.css';
 
 const AddToCartButton = ({
@@ -17,47 +12,24 @@ const AddToCartButton = ({
   copy,
   dataTestRef,
   isEnabled,
-  isFullWidth,
-  theme,
+  productName,
 }) => {
-  const addToCart = useAddToCartContext();
-  const { productDetail } = useProductDetailContext();
+  const {
+    isLoading,
+    isUpdateSuccessful,
+    handleOnClick,
+    updateError,
+  } = useAddToCartContext();
   const { selectedVariant } = useVariantSelectContext();
 
-  if (!productDetail) return null;
+  const classSet = cx(styles.base, className);
 
-  const { productName } = productDetail;
-  const { isInStock, price, sku, alternateAction } = selectedVariant;
-
-  const classSet = cx(
-    styles.base,
-    { [styles.fullWidth]: isFullWidth },
-    className,
-  );
-
-  const handleOnClick = () => {
-    const { actionTypes, dispatch, onClick } = addToCart;
-
-    onClick(sku, dispatch, actionTypes);
+  const outOfStock = {
+    label: 'Out of Stock',
+    title: 'Out of stock',
   };
 
-  if (!!alternateAction?.url && !!alternateAction?.label) {
-    return (
-      <Hyperlink
-        className={classSet}
-        dataTestRef={dataTestRef}
-        isAlternate={true}
-        style={HYPERLINK_STYLE_TYPES.INTERNAL_NO_ICON_BUTTON_LINK}
-        theme={theme}
-        title={alternateAction?.label}
-        url={alternateAction?.url}
-      >
-        {alternateAction?.label}
-      </Hyperlink>
-    );
-  }
-
-  if (!isInStock || !sku || !price) {
+  if (!selectedVariant) {
     return (
       <Button
         className={classSet}
@@ -65,15 +37,14 @@ const AddToCartButton = ({
         isAlternate={true}
         isEnabled={false}
         onClick={() => {}}
-        theme={theme}
-        title={copy.outOfStock?.title}
+        title={outOfStock.title}
       >
-        {copy.outOfStock?.label}
+        {outOfStock.label}
       </Button>
     );
   }
 
-  const { hasError, isLoading, isUpdateSuccessful } = addToCart;
+  const { price, sku } = selectedVariant;
   const cartActionLabel = `${copy.cartAction} — ${price}`;
   const updateNotificationLabel = `${productName} ${copy.updateNotification}`;
   const showUpdateSuccessMessage = !isLoading && isUpdateSuccessful;
@@ -84,9 +55,9 @@ const AddToCartButton = ({
     { [styles.showSuccessMessage]: showUpdateSuccessMessage },
   );
 
-  if (hasError) {
+  if (updateError) {
     /** @TODO Handle errors thrown by handleOnClick */
-    console.error('updateError'); // eslint-disable-line
+    console.error(updateError); // eslint-disable-line
   }
 
   return (
@@ -96,15 +67,14 @@ const AddToCartButton = ({
       isAlternate={true}
       isEnabled={!isLoading && price && sku && isEnabled}
       onClick={handleOnClick}
-      theme={theme}
-      title={cartActionLabel}
+      title="Add to cart button"
     >
       {isLoading && (
         <Loading
           className={styles.loading}
           data-test-ref={`${dataTestRef}_UPDATING`}
           isLoading={true}
-          theme={theme === 'dark' ? 'light' : 'dark'}
+          theme="light"
         />
       )}
       <span
@@ -125,31 +95,21 @@ AddToCartButton.propTypes = {
   copy: PropTypes.shape({
     cartAction: PropTypes.string,
     updateNotification: PropTypes.string,
-    outOfStock: PropTypes.shape({
-      label: PropTypes.string,
-      title: PropTypes.string,
-    }),
   }),
-  dataTestRef: PropTypes.string.isRequired,
+  dataTestRef: PropTypes.string,
   isEnabled: PropTypes.bool,
-  isFullWidth: PropTypes.bool,
-  theme: PropTypes.oneOf(['dark', 'light']),
+  productName: PropTypes.string,
 };
 
 AddToCartButton.defaultProps = {
   className: undefined,
   copy: {
-    cartAction: undefined,
-    updateNotification: undefined,
-    outOfStock: {
-      label: undefined,
-      title: undefined,
-    },
+    cartAction: 'Add to your cart',
+    updateNotification: 'added to your cart',
   },
   dataTestRef: undefined,
   isEnabled: true,
-  isFullWidth: true,
-  theme: 'dark',
+  productName: undefined,
 };
 
 export default AddToCartButton;

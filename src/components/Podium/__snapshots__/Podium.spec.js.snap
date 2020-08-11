@@ -2,7 +2,7 @@
 
 exports[`<Podium /> renders base component correctly 1`] = `
 <section
-  className="base nonePaddingBottom nonePaddingLeft nonePaddingRight nonePaddingTop"
+  className="base nonePaddingTop nonePaddingBottom"
 >
   Content
 </section>

@@ -1,6 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import { AddToCartContextProvider } from '~/contexts/AddToCart.context';
+import { ProductDetailContextProvider } from '~/contexts/ProductDetail.context';
+import { VariantSelectContextProvider } from '~/contexts/VariantSelect.context';
+import useAddToCart from '~/customHooks/useAddToCart';
+import useProductDetail from '~/customHooks/useProductDetail';
+import useVariantSelect from '~/customHooks/useVariantSelect';
 import Carousel from '~/components/Carousel';
 import DefinitionList from '~/components/DefinitionList';
 import Image from '~/components/Image';
@@ -17,17 +23,27 @@ const ProductDetail = ({
   breadcrumbs,
   className,
   copy,
+  product,
   quote,
   relatedProducts,
 }) => {
   const classSet = cx(styles.base, className);
+  const addToCart = useAddToCart();
+  const productDetail = useProductDetail(product);
+  const variantSelect = useVariantSelect(product.variantOptions);
 
   return (
     <div className={classSet} style={{ backgroundColor: '#fffeef' }}>
-      <ProductDetailHeader
-        breadcrumbs={breadcrumbs}
-        copy={copy?.productHeader}
-      />
+      <AddToCartContextProvider value={addToCart}>
+        <VariantSelectContextProvider value={variantSelect}>
+          <ProductDetailContextProvider value={productDetail}>
+            <ProductDetailHeader
+              breadcrumbs={breadcrumbs}
+              copy={copy?.productHeader}
+            />
+          </ProductDetailContextProvider>
+        </VariantSelectContextProvider>
+      </AddToCartContextProvider>
 
       <MediaWithContent
         backgroundColor="#fffeef"

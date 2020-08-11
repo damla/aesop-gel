@@ -13,6 +13,6 @@ export default {
   },
   hasAutoPlay: false,
   id: 'Istros Imagined',
-  progressColor: 'orange',
+  progressColour: 'orange',
   trackTitle: 'Istros Imagined',
 };

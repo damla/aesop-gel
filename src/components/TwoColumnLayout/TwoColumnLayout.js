@@ -7,9 +7,8 @@ const TwoColumnLayout = ({
   childrenClassNames,
   className,
   content,
-  hasFullWidthContent,
+  hasRightPadding,
   id,
-  isFlushOnSmall,
   isReversed,
   sidebar,
   theme,
@@ -23,8 +22,7 @@ const TwoColumnLayout = ({
   );
   const contentClassSet = cx(
     styles.content,
-    { [styles.fullWidth]: hasFullWidthContent },
-    { [styles.flushOnSmall]: isFlushOnSmall },
+    { [styles.fullWidth]: !hasRightPadding },
     childrenClassNames.content,
   );
   const sidebarClassSet = cx(styles.sidebar, childrenClassNames.sidebar);
@@ -50,9 +48,8 @@ TwoColumnLayout.propTypes = {
   }),
   className: PropTypes.string,
   content: PropTypes.any.isRequired,
-  hasFullWidthContent: PropTypes.bool,
+  hasRightPadding: PropTypes.bool,
   id: PropTypes.string,
-  isFlushOnSmall: PropTypes.bool,
   isReversed: PropTypes.bool,
   sidebar: PropTypes.any,
   theme: PropTypes.oneOf(['dark', 'light']),
@@ -62,9 +59,8 @@ TwoColumnLayout.defaultProps = {
   childrenClassNames: { sidebar: undefined, content: undefined },
   className: undefined,
   content: undefined,
-  hasFullWidthContent: false,
+  hasRightPadding: true,
   id: undefined,
-  isFlushOnSmall: false,
   isReversed: true,
   sidebar: undefined,
   theme: 'dark',

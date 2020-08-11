@@ -9,16 +9,12 @@ module.exports = {
     global: {
       branches: 50,
       functions: 50,
-      lines: 65,
-      statements: 65,
+      lines: 70,
+      statements: 70,
     },
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
-  testPathIgnorePatterns: [
-    `<rootDir>/(dist|docs|node_modules|.cache)/`,
-    `<rootDir>/src/components/ProductDetailHeader`,
-    `<rootDir>/src/compositions/ProductDetail`,
-  ],
+  testPathIgnorePatterns: [`<rootDir>/(dist|docs|node_modules|.cache)/`],
   globals: {
     __TEST__: true,
   },
@@ -26,7 +22,6 @@ module.exports = {
     '.+\\.(css|styl|less|sass|scss)$': `identity-obj-proxy`,
     '.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': `<rootDir>/__mocks__/file-mock.js`,
     'src/(.*)': '<rootDir>/src/$1',
-    '^~.storybook(.*)$': '<rootDir>/.storybook$1',
     '^~(.*)$': '<rootDir>/src$1',
   },
   transform: {

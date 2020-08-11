@@ -23,7 +23,7 @@ const Image = forwardRef(function ImageRef(
   );
 
   const picture = (
-    <picture className={classSet}>
+    <picture className={classSet} ref={ref}>
       {large && (
         <source
           media={`(min-width: ${get(
@@ -54,7 +54,7 @@ const Image = forwardRef(function ImageRef(
         />
       )}
 
-      <img alt={altText} ref={ref} />
+      <img alt={altText} />
     </picture>
   );
 

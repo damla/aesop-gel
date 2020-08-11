@@ -1,0 +1,26 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import ProductDetailTitle from './ProductDetailTitle';
+import ProductDetailTitleFixture from './ProductDetailTitle.fixture';
+
+<Meta
+  title="Components/ProductDetailHeader/ProductDetailTitle"
+  component={ProductDetailTitle}
+/>
+
+# ProductDetailTitle
+
+<Preview>
+  <Story name="Base component">
+    <ProductDetailTitle
+      className={ProductDetailTitleFixture.className}
+      description={ProductDetailTitleFixture.description}
+      id={ProductDetailTitleFixture.id}
+      productName={ProductDetailTitleFixture.productName}
+      theme={ProductDetailTitleFixture.theme}
+    />
+  </Story>
+</Preview>
+
+## API
+
+<Props of={ProductDetailTitle} />

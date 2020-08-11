@@ -1,3 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<LinkButtonGroup /> renders base component correctly 1`] = `null`;
+exports[`<LinkButtonGroup /> renders base component correctly 1`] = `
+<div
+  className="base"
+>
+  <a
+    className="base blockStyle center dark link center"
+    href="/"
+    target="_self"
+  >
+    Lorem ipsum
+  </a>
+</div>
+`;

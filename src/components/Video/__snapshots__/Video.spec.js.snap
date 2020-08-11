@@ -31,7 +31,7 @@ exports[`<Video /> renders base component correctly 1`] = `
     />
   </video>
   <button
-    className="base dark base fadeEnter"
+    className="base inlineStyle dark base fadeEnter"
     disabled={false}
     onClick={[Function]}
     title="View video"
@@ -55,7 +55,7 @@ exports[`<Video /> renders base component correctly 1`] = `
         className="fullScreenControlsHeader"
       >
         <button
-          className="base dark close"
+          className="base inlineStyle dark close"
           disabled={false}
           onClick={[Function]}
           title="Close"
@@ -86,7 +86,7 @@ exports[`<Video /> renders base component correctly 1`] = `
           </svg>
         </button>
         <button
-          className="base dark fullScreenPlayPauseButton"
+          className="base inlineStyle dark fullScreenPlayPauseButton"
           disabled={false}
           onClick={[Function]}
           title="Pause video"
@@ -123,7 +123,7 @@ exports[`<Video /> renders base component correctly 1`] = `
       </div>
     </div>
     <button
-      className="base dark playPauseButton activePlayPauseButton"
+      className="base inlineStyle dark playPauseButton activePlayPauseButton"
       disabled={false}
       onClick={[Function]}
       title="Pause video"

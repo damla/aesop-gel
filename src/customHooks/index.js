@@ -1,9 +1,6 @@
 import useAddToCart from './useAddToCart';
 import useEscapeKeyListener from './useEscapeKeyListener';
-import useGoogleMaps from './useGoogleMaps';
 import useHasMounted from './useHasMounted';
-import useImageTransition from './useImageTransition';
-import useLoadMore from './useLoadMore';
 import useOnScreen from './useOnScreen';
 import useOverflowHidden from './useOverflowHidden';
 import useProductDetail from './useProductDetail';
@@ -14,10 +11,7 @@ import useWindowHasResized from './useWindowHasResized';
 
 export { useAddToCart };
 export { useEscapeKeyListener };
-export { useGoogleMaps };
 export { useHasMounted };
-export { useImageTransition };
-export { useLoadMore };
 export { useOnScreen };
 export { useOverflowHidden };
 export { useProductDetail };
@@ -29,12 +23,9 @@ export { useWindowHasResized };
 export default {
   useEscapeKeyListener,
   useHasMounted,
-  useGoogleMaps,
   useOnScreen,
   useOverflowHidden,
   useProductDetail,
-  useImageTransition,
-  useLoadMore,
   useScript,
   useTheme,
   useVariantSelect,

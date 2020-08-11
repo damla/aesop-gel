@@ -13,15 +13,40 @@
     }
   }
 
-  @media (--viewport-lg) {
+  @media (--viewport-ld) {
     &:not(:last-child) {
-      margin-bottom: var(--layout-lg-spacing);
+      margin-bottom: var(--layout-ld-spacing);
     }
   }
 }
 
-.contentWrapper {
-  margin-top: 20px;
+.ctaWrapper {
+  margin-top: calc(var(--layout-sm-spacing) / 2);
+
+  @media (--viewport-md) {
+    margin-top: calc(var(--layout-md-spacing) / 2);
+  }
+
+  @media (--viewport-lg) {
+    margin-top: calc(var(--layout-md-spacing) / 2);
+  }
+
+  a {
+    display: inline-block;
+    margin-top: calc(var(--layout-sm-spacing) / 2);
+
+    @media (--viewport-md) {
+      margin-top: calc(var(--layout-md-spacing) / 2);
+    }
+
+    @media (--viewport-lg) {
+      margin-top: calc(var(--layout-md-spacing) / 2);
+    }
+  }
+}
+
+.ctaInset {
+  margin-right: -1px;
 }
 
 .copy {
@@ -46,13 +71,14 @@
 }
 
 .dark {
-  .copy {
+  &.copy {
     &,
     p {
       @extend %font-theme-dark-copy;
     }
 
     a {
+      /* @extend %font-theme-dark-link; */
       color: var(--color-dark-link);
 
       &:hover,
@@ -64,13 +90,14 @@
 }
 
 .light.light {
-  .copy {
+  &.copy {
     &,
     p {
       @extend %font-theme-light-copy;
     }
 
     a {
+      /* @extend %font-theme-light-link; */
       color: var(--color-light-link);
 
       &:hover,
@@ -80,3 +107,62 @@
     }
   }
 }
+
+/* .HeroWithContent {
+  .heading,
+  .subHeading {
+    margin: 0;
+  }
+
+  .subHeading {
+    padding-top: 5px;
+  }
+
+  .copy.copy {
+    margin: 30px 0 0;
+
+    a {
+      width: 100%;
+      margin-top: 30px;
+
+      @media (--viewport-md) {
+        width: auto;
+      }
+    }
+  }
+}
+
+.TwoColumn {
+  .heading {
+    font-family: var(--font-family-zapf-serif);
+  }
+}
+
+.HalfWidthFullBleedHero {
+  .eyebrow {
+    padding: 0 0 19px;
+
+    @media (--viewport-lg) {
+      padding: 0 0 14px;
+      margin-top: 60px;
+    }
+
+    @media (--viewport-xl) {
+      padding: 0 0 19px;
+    }
+  }
+
+  .heading {
+    padding: 0 0 17px 0;
+    border-bottom: 2px solid var(--color-grey-10);
+    font-family: var(--font-family-zapf-serif);
+
+    @media (--viewport-md) {
+      padding: 0 0 12px;
+    }
+
+    @media (--viewport-xl) {
+      padding: 0 0 17px;
+    }
+  }
+} */

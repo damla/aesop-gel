@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { forwardRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'lodash/get';
@@ -20,20 +20,19 @@ import PreviousButton from './components/PreviousButton';
 import Slide from './components/Slide';
 import styles from './Carousel.module.css';
 
-const Carousel = ({
-  autoplaySpeed,
-  className,
-  hasAutoplay,
-  hasFlushPagination,
-  hasFullWidthSlides,
-  hasShowCaption,
-  hasSlideCounter,
-  id,
-  initialSlideIndex,
-  introduction,
-  slides,
-  theme,
-}) => {
+const Carousel = forwardRef(function CarouselRef(
+  {
+    className,
+    hasFullWidthSlides,
+    hasShowCaption,
+    hasSlideCounter,
+    initialSlideIndex,
+    introduction,
+    slides,
+    theme,
+  },
+  ref,
+) {
   const slidesLength = slides.length;
   const [isCaptionActive, setIsCaptionActive] = useState(true);
   const [isNextButtonActive, setIsNextButtonActive] = useState(true);
@@ -84,10 +83,7 @@ const Carousel = ({
   );
 
   const settings = getCarouselSettings({
-    autoplaySpeed,
     className: styles.carousel,
-    hasAutoplay,
-    hasFlushPagination,
     hasFullWidthSlides,
     initialSlideIndex,
     isNextButtonActive,
@@ -95,7 +91,6 @@ const Carousel = ({
     Pagination,
     NextButton,
     PreviousButton,
-    theme,
   });
 
   const hasIntroSlide =
@@ -123,7 +118,7 @@ const Carousel = ({
   };
 
   return (
-    <div className={classSet} id={id}>
+    <div className={classSet} ref={ref}>
       {!hasIntroSlide && introduction && (
         <aside className={styles.mobileCarouselIntroductionWrapper}>
           <CarouselIntroduction
@@ -131,7 +126,6 @@ const Carousel = ({
             description={introduction.description}
             eyebrow={introduction.eyebrow}
             heading={introduction.heading}
-            theme={theme}
           />
         </aside>
       )}
@@ -147,7 +141,6 @@ const Carousel = ({
             description={introduction.description}
             eyebrow={introduction.eyebrow}
             heading={introduction.heading}
-            theme={theme}
           />
         )}
 
@@ -156,32 +149,21 @@ const Carousel = ({
             {url ? (
               <Hyperlink
                 className={cx(styles.item, styles.link)}
-                theme={theme}
                 title={`Link to ${slide.heading}`}
                 url={url}
               >
-                <Slide
-                  {...slide}
-                  isFullWidthSlide={hasFullWidthSlides}
-                  theme={theme}
-                />
+                <Slide {...slide} isFullWidthSlide={hasFullWidthSlides} />
               </Hyperlink>
             ) : (
               <div className={styles.item} key={index}>
-                <Slide
-                  {...slide}
-                  isFullWidthSlide={hasFullWidthSlides}
-                  theme={theme}
-                />
+                <Slide {...slide} isFullWidthSlide={hasFullWidthSlides} />
               </div>
             )}
           </div>
         ))}
       </Slider>
       {(hasShowCaption || hasSlideCounter) && (
-        <footer
-          className={cx(styles.footer, { [styles.flush]: hasFlushPagination })}
-        >
+        <footer className={styles.footer}>
           {hasSlideCounter && (
             <div className={styles.slideCounter}>
               {totalSlidesCount > 1 && slideCounter}
@@ -196,17 +178,13 @@ const Carousel = ({
       )}
     </div>
   );
-};
+});
 
 Carousel.propTypes = {
-  autoplaySpeed: PropTypes.number,
   className: PropTypes.string,
-  hasAutoplay: PropTypes.bool,
-  hasFlushPagination: PropTypes.bool,
   hasFullWidthSlides: PropTypes.bool,
   hasShowCaption: PropTypes.bool,
   hasSlideCounter: PropTypes.bool,
-  id: PropTypes.string,
   initialSlideIndex: PropTypes.number,
   introduction: PropTypes.shape({
     cta: PropTypes.shape({
@@ -233,14 +211,10 @@ Carousel.propTypes = {
 };
 
 Carousel.defaultProps = {
-  autoplaySpeed: 3000,
   className: undefined,
-  hasAutoplay: false,
-  hasFlushPagination: false,
   hasFullWidthSlides: false,
   hasShowCaption: false,
   hasSlideCounter: false,
-  id: undefined,
   initialSlideIndex: 0,
   introduction: undefined,
   slides: [],

@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useState } from 'react';
 
 const useProductDetail = product => {
   const [productDetail, updateProductDetail] = useState(product);
@@ -27,10 +27,6 @@ const useProductDetail = product => {
     },
     [],
   );
-
-  useEffect(() => {
-    setProductDetail(product);
-  }, [product, setProductDetail]);
 
   return {
     productDetail,

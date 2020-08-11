@@ -5,12 +5,11 @@ import styles from './RadioGroup.module.css';
 
 const RadioGroup = ({
   className,
-  dataTestRef,
   errorMessage,
   name,
   onChange,
   options,
-  theme,
+  testReference,
   value,
 }) => {
   const classSet = cx(styles.base, className);
@@ -22,9 +21,7 @@ const RadioGroup = ({
   if (options.length === 1) {
     return (
       <div className={classSet}>
-        <span className={cx(styles.singleLabel, styles[theme])}>
-          {options[0].label}
-        </span>
+        <span className={styles.singleLabel}>{options[0].label}</span>
       </div>
     );
   }
@@ -38,7 +35,7 @@ const RadioGroup = ({
               aria-checked={optionValue === value}
               checked={optionValue === value}
               className={styles.input}
-              data-test-ref={dataTestRef}
+              data-test-ref={testReference}
               id={`option-${optionValue}`}
               name={name}
               onChange={onChange}
@@ -46,10 +43,8 @@ const RadioGroup = ({
               type="radio"
               value={optionValue}
             />
-            <span className={cx(styles.pot, styles[theme])} />
-            <span className={cx(styles.labelContent, styles[theme])}>
-              {optionLabel}
-            </span>
+            <span className={styles.pot} />
+            <span className={cx(styles.labelContent)}>{optionLabel}</span>
           </label>
         </li>
       ))}
@@ -60,7 +55,6 @@ const RadioGroup = ({
 
 RadioGroup.propTypes = {
   className: PropTypes.string,
-  dataTestRef: PropTypes.string,
   errorMessage: PropTypes.string,
   name: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
@@ -70,18 +64,17 @@ RadioGroup.propTypes = {
       value: PropTypes.string,
     }),
   ),
-  theme: PropTypes.oneOf(['dark', 'light']),
+  testReference: PropTypes.string,
   value: PropTypes.string,
 };
 
 RadioGroup.defaultProps = {
   className: undefined,
-  dataTestRef: undefined,
   errorMessage: '',
   name: undefined,
   onChange: undefined,
   options: [],
-  theme: 'dark',
+  testReference: undefined,
   value: undefined,
 };
 

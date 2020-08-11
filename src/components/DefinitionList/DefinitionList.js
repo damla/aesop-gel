@@ -5,15 +5,10 @@ import { isObjectPopulatedArray } from '~/utils/objects';
 import styles from './DefinitionList.module.css';
 
 const DefinitionList = forwardRef(function DefinitionListRef(
-  { className, hasBottomBorder, isVisible, items, theme },
+  { className, isVisible, items, theme },
   ref,
 ) {
-  const classSet = cx(
-    styles.base,
-    styles[theme],
-    { [styles.hasBottomBorder]: hasBottomBorder },
-    className,
-  );
+  const classSet = cx(styles.base, styles[theme], className);
   const termClassSet = cx(styles.term, { [styles.slideIn]: isVisible });
   const descriptionClassSet = cx(styles.description, {
     [styles.slideIn]: isVisible,
@@ -26,7 +21,7 @@ const DefinitionList = forwardRef(function DefinitionListRef(
   return (
     <dl className={classSet} ref={ref}>
       {items
-        .filter(({ description, term }) => description || term)
+        .filter(({ description, term }) => description && term)
         .map(({ description, id, term }) => (
           <Fragment key={id}>
             <dt className={termClassSet}>{term}</dt>
@@ -39,13 +34,12 @@ const DefinitionList = forwardRef(function DefinitionListRef(
 
 DefinitionList.propTypes = {
   className: PropTypes.string,
-  hasBottomBorder: PropTypes.bool,
   isVisible: PropTypes.bool,
   items: PropTypes.arrayOf(
     PropTypes.shape({
-      description: PropTypes.node,
+      description: PropTypes.node.isRequired,
       id: PropTypes.string.isRequired,
-      term: PropTypes.node,
+      term: PropTypes.node.isRequired,
     }),
   ),
   theme: PropTypes.oneOf(['dark', 'light']),
@@ -53,7 +47,6 @@ DefinitionList.propTypes = {
 
 DefinitionList.defaultProps = {
   className: undefined,
-  hasBottomBorder: false,
   isVisible: true,
   items: [],
   theme: 'dark',

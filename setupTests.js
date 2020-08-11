@@ -1,5 +1,3 @@
-import 'regenerator-runtime/runtime';
-
 window.matchMedia =
   window.matchMedia ||
   (() => ({

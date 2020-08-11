@@ -1,4 +1,4 @@
-import transitions from './Transition.module.css';
+import transitions from './css/transitions.module.css';
 
 const fade = {
   classNames: {

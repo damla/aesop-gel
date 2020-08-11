@@ -1,6 +1,5 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import * as knobs from '@storybook/addon-knobs';
-import Hyperlink from '~/components/Hyperlink';
 import LinkButtonGroup from './LinkButtonGroup';
 import LinkButtonGroupFixture from './LinkButtonGroup.fixture';
 
@@ -19,10 +18,14 @@ import LinkButtonGroupFixture from './LinkButtonGroup.fixture';
         'center',
         'Presentation',
       )}
-    >
-      <Hyperlink
-        url={knobs.text('url', LinkButtonGroupFixture.link.url, 'First link')}
-        style={knobs.select(
+      link={{
+        text: knobs.text(
+          'text',
+          LinkButtonGroupFixture.link.text,
+          'First link',
+        ),
+        url: knobs.text('url', LinkButtonGroupFixture.link.url, 'First link'),
+        style: knobs.select(
           'style',
           [
             'External Button Link',
@@ -32,17 +35,20 @@ import LinkButtonGroupFixture from './LinkButtonGroup.fixture';
           ],
           LinkButtonGroupFixture.link.style,
           'First link',
-        )}
-      >
-        {knobs.text(
-          'children',
-          LinkButtonGroupFixture.link.text,
-          'First link',
-        )}
-      </Hyperlink>
-      <Hyperlink
-        url={knobs.text('url', LinkButtonGroupFixture.secondaryLink.url, 'First link')}
-        style={knobs.select(
+        ),
+      }}
+      secondaryLink={{
+        text: knobs.text(
+          'text',
+          LinkButtonGroupFixture.secondaryLink.text,
+          'Second link',
+        ),
+        url: knobs.text(
+          'url',
+          LinkButtonGroupFixture.secondaryLink.url,
+          'Second link',
+        ),
+        style: knobs.select(
           'style',
           [
             'External Button Link',
@@ -51,16 +57,10 @@ import LinkButtonGroupFixture from './LinkButtonGroup.fixture';
             'Internal No Icon Button Link',
           ],
           LinkButtonGroupFixture.secondaryLink.style,
-          'First link',
-        )}
-      >
-        {knobs.text(
-          'children',
-          LinkButtonGroupFixture.secondaryLink.text,
-          'First link',
-        )}
-      </Hyperlink>
-    </LinkButtonGroup>
+          'Second link',
+        ),
+      }}
+    />
   </Story>
 </Preview>
 

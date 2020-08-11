@@ -6,7 +6,6 @@ import styles from './Select.module.css';
 
 const Select = ({
   className,
-  dataTestRef,
   errorMessage,
   isBlock,
   label,
@@ -15,6 +14,7 @@ const Select = ({
   onChange,
   onFocus,
   options,
+  testReference,
   theme,
   value,
 }) => {
@@ -52,7 +52,7 @@ const Select = ({
       </label>
       <select
         className={cx(styles.input, { [styles.isBlock]: isBlock })}
-        data-test-ref={dataTestRef}
+        data-test-ref={testReference}
         id={name}
         name={name}
         onBlur={handleBlur}
@@ -81,7 +81,6 @@ const Select = ({
 
 Select.propTypes = {
   className: PropTypes.string,
-  dataTestRef: PropTypes.string,
   errorMessage: PropTypes.string,
   isBlock: PropTypes.bool,
   label: PropTypes.string,
@@ -96,13 +95,13 @@ Select.propTypes = {
       value: PropTypes.string,
     }),
   ),
+  testReference: PropTypes.string,
   theme: PropTypes.oneOf(['dark', 'light']),
   value: PropTypes.string,
 };
 
 Select.defaultProps = {
   className: undefined,
-  dataTestRef: undefined,
   errorMessage: '',
   isBlock: false,
   label: undefined,
@@ -111,6 +110,7 @@ Select.defaultProps = {
   onChange: undefined,
   onFocus: undefined,
   options: [],
+  testReference: undefined,
   theme: 'dark',
   value: undefined,
 };

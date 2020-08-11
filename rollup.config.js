@@ -1,13 +1,12 @@
 import alias from '@rollup/plugin-alias';
-import babel from '@rollup/plugin-babel';
-import commonjs from '@rollup/plugin-commonjs';
-import copy from 'rollup-plugin-copy-assets';
+import babel from 'rollup-plugin-babel';
+import commonjs from 'rollup-plugin-commonjs';
 import json from '@rollup/plugin-json';
+import minify from 'rollup-plugin-babel-minify';
 import path from 'path';
 import postcss from 'rollup-plugin-postcss';
-import replace from '@rollup/plugin-replace';
-import { nodeResolve } from '@rollup/plugin-node-resolve';
-import { terser } from 'rollup-plugin-terser';
+import replace from 'rollup-plugin-replace';
+import resolve from 'rollup-plugin-node-resolve';
 import pkg from './package.json';
 
 /** @TODO set up actual env vars */
@@ -22,9 +21,6 @@ export default {
   },
   external: [...Object.keys(pkg.peerDependencies || {})],
   plugins: [
-    copy({
-      assets: ['src/assets'],
-    }),
     alias({
       entries: [{ find: '~', replacement: path.resolve(__dirname, 'src') }],
     }),
@@ -38,12 +34,11 @@ export default {
       'process.env.NODE_ENV': JSON.stringify(NODE_ENV),
     }),
     babel({
-      babelHelpers: 'bundled',
       exclude: 'node_modules/**',
     }),
     json(),
     commonjs(),
-    nodeResolve(),
-    terser(),
+    resolve(),
+    minify({}),
   ],
 };

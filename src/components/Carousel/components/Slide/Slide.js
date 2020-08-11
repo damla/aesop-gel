@@ -18,18 +18,15 @@ const Slide = ({
       <div className={cx(styles.information, styles[theme])} id={id}>
         {heading && (
           <Heading
-            className={cx(styles.heading, styles[theme])}
+            className={styles.heading}
             level="5"
             size="xXSmall"
+            theme={theme}
           >
             {heading}
           </Heading>
         )}
-        {description && (
-          <div className={cx(styles.description, styles[theme])}>
-            {description}
-          </div>
-        )}
+        {description && <div className={styles.description}>{description}</div>}
       </div>
     )}
     <div className={styles.imageContainer}>

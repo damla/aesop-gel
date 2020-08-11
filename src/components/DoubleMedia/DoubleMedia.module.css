@@ -1,8 +1,0 @@
-@import 'styles/index';
-
-.base {
-  @media (--viewport-md) {
-    display: flex;
-    justify-content: space-between;
-  }
-}

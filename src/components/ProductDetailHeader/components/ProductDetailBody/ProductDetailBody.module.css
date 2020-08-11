@@ -1,20 +1,15 @@
 @import 'styles/index';
 
 .base {
-  display: flex;
   margin: 0 0 28px;
-  font-family: var(--font-family-sans-serif-regular);
-  font-size: rem(15px);
-  font-weight: var(--font-weight-normal);
-  line-height: 1.4;
 
-  @media (--viewport-md-only) {
-    flex-flow: row-reverse;
+  @media (--viewport-md) {
+    margin-top: 20px;
   }
 
-  &,
-  & * {
-    box-sizing: border-box;
+  @media (--viewport-md-only) {
+    width: 50%;
+    margin-left: 50%;
   }
 
   @media (--viewport-lg) {
@@ -22,196 +17,70 @@
     margin: 0 0 5px;
     transition: opacity 1300ms 300ms var(--easing-ease-out-cubic);
   }
-}
 
-.content {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-
-  @media (--viewport-md-only) {
-    width: 50%;
+  &,
+  & * {
+    box-sizing: border-box;
   }
 }
 
-.header {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  order: 1;
-
-  @media (--viewport-sm-only) {
-    margin-bottom: 6px;
+.isActiveButton {
+  :nth-child(2) {
+    opacity: 0;
   }
 
-  @media (--viewport-md-only) {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  @media (--viewport-lg) {
-    max-width: 470px;
-  }
-
-  .productName {
-    margin-top: 0;
-
-    &.isOnlyChild {
-      margin-bottom: 0;
-    }
-
-    @media (--viewport-md-only) {
-      width: 46%;
-    }
+  :nth-child(3) {
+    opacity: 1;
   }
 }
 
-.description {
-  order: 3;
+.ingredientsTrigger {
+  position: absolute;
+  top: 14px;
+  right: 0;
+  outline: none;
 
-  @media (--viewport-sm-only) {
-    margin-top: 8px;
-    margin-bottom: 12px;
-  }
+  &.isActiveButton,
+  &:hover,
+  &:focus {
+    g {
+      :nth-child(1) {
+        fill: var(--color-secondary);
+      }
 
-  @media (--viewport-md) {
-    order: 3;
-  }
-
-  @media (--viewport-md-only) {
-    margin-top: 4px;
-  }
-
-  @media (--viewport-lg) {
-    order: 2;
-  }
-
-  .descriptionCopy {
-    font-size: rem(16px);
-    line-height: 1.7;
-
-    @media (--viewport-lg) {
-      font-size: rem(15px);
-    }
-  }
-}
-
-.purchase {
-  order: 2;
-  margin-bottom: 10px;
-
-  @media (--viewport-md) {
-    order: 1;
-    margin-bottom: 0;
-  }
-
-  @media (--viewport-lg) {
-    order: 4;
-  }
-
-  .variants {
-    justify-content: left;
-    margin-bottom: 24px;
-  }
-}
-
-.cartDisclaimer {
-  order: 4;
-  margin: 0 0 18px 0;
-  font-size: rem(13px);
-  line-height: 1.6;
-
-  .dark & {
-    color: var(--color-dark-label);
-  }
-
-  .light & {
-    color: var(--color-light-label);
-  }
-
-  @media (--viewport-md) {
-    margin: 18px 0;
-  }
-}
-
-.details {
-  order: 5;
-
-  @media (--viewport-md) {
-    order: 2;
-  }
-
-  @media (--viewport-lg) {
-    order: 3;
-  }
-
-  .definitionList {
-    padding-top: 18px !important;
-    margin-top: 0;
-    margin-bottom: 15px;
-
-    @media (--viewport-md) {
-      padding-top: 14px !important;
-      margin-top: 38px;
-    }
-
-    @media (--viewport-md) {
-      margin-top: 24px;
-    }
-
-    .dark & {
-      border-top: 2px solid var(--color-grey-20);
-    }
-
-    .light & {
-      border-top: 2px solid var(--color-light-copy);
-    }
-  }
-
-  .isActiveButton {
-    :nth-child(2) {
-      opacity: 0;
-    }
-
-    :nth-child(3) {
-      opacity: 1;
-    }
-  }
-
-  .ingredientsTrigger {
-    position: absolute;
-    top: 14px;
-    right: 0;
-    outline: none;
-
-    &.isActiveButton,
-    &:hover,
-    &:focus {
-      g {
-        :nth-child(1) {
-          fill: var(--color-secondary);
-        }
-
-        :nth-child(2) {
-          fill: var(--color-white);
-          stroke: var(--color-white);
-        }
+      :nth-child(2) {
+        fill: var(--color-white);
+        stroke: var(--color-white);
       }
     }
   }
 }
 
-.upSell {
-  order: 6;
-}
+.definitionList {
+  padding-top: 18px !important;
+  margin-top: 54px;
 
-.mediumSidebar {
-  @media (--viewport-md-only) {
-    width: 50%;
-    padding-right: 40px;
+  @media (--viewport-md) {
+    padding-top: 14px !important;
+    margin-top: 38px;
+  }
+
+  @media (--viewport-md) {
+    margin-top: 24px;
+  }
+
+  .dark & {
+    border-top: 2px solid var(--color-grey-20);
+  }
+
+  .light & {
+    border-top: 2px solid var(--color-light-copy);
   }
 }
 
-.mediumProductName {
-  margin-top: 40px;
+.cartMessage {
+  margin-top: 18px;
+  color: var(--color-dark-label);
+  font-size: rem(13px);
+  line-height: 1.6;
 }

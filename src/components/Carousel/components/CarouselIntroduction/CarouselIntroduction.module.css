@@ -14,7 +14,7 @@
 
 .heading {
   margin-top: 0;
-  margin-bottom: 9px;
+  margin-bottom: 0;
 
   @media (--viewport-md-only) {
     position: absolute;
@@ -26,13 +26,6 @@
 
 .description {
   max-width: 85%;
-
-  &,
-  & p {
-    font-size: rem(14px);
-    font-weight: 400;
-    line-height: 1.7;
-  }
 
   @media (--viewport-md-only) {
     width: 48%;

@@ -2,7 +2,7 @@
 
 exports[`<Carousel.NextButton /> renders base component correctly 1`] = `
 <button
-  className="base dark base"
+  className="base inlineStyle dark base"
   disabled={false}
   onClick={[Function]}
   title="next slide"

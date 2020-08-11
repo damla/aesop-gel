@@ -10,7 +10,6 @@ import CarouselFixture from './Carousel.fixture';
 <Preview>
   <Story name="Base component">
     <Carousel
-      theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
       introduction={{
         cta: {
           style: CarouselFixture.introduction.cta.style,
@@ -18,15 +17,10 @@ import CarouselFixture from './Carousel.fixture';
           url: CarouselFixture.introduction.cta.url,
           text: knobs.text(
             'cta text',
-            CarouselFixture.introduction.cta.text,
+            CarouselFixture.introduction.heading,
             'Indroduction copy',
           ),
         },
-        eyebrow: knobs.text(
-          'eyebrow',
-          CarouselFixture.introduction.eyebrow,
-          'Indroduction copy',
-        ),
         heading: knobs.text(
           'heading',
           CarouselFixture.introduction.heading,

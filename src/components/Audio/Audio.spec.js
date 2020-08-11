@@ -21,7 +21,7 @@ describe('<Audio />', () => {
           copy={AudioFixture.copy}
           hasAutoPlay={AudioFixture.hasAutoPlay}
           id={AudioFixture.id}
-          progressColor={AudioFixture.progressColor}
+          progressColour={AudioFixture.progressColour}
           trackTitle={AudioFixture.trackTitle}
         />,
       )

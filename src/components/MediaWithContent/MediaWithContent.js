@@ -12,7 +12,6 @@ const MediaWithContent = forwardRef(function MediaWithContentRef(
     content,
     copy,
     foregroundImage,
-    foregroundImageLink,
     hasFullWidthImage,
     isHero,
     isReverse,
@@ -28,14 +27,11 @@ const MediaWithContent = forwardRef(function MediaWithContentRef(
     className,
   );
 
-  const style = backgroundColor ? { backgroundColor } : undefined;
-
   return (
-    <section className={classSet} ref={ref} style={style}>
+    <section className={classSet} ref={ref} style={{ backgroundColor }}>
       <Media
         className={styles.media}
         foregroundImage={foregroundImage}
-        foregroundImageLink={foregroundImageLink}
         hasFullWidthImage={hasFullWidthImage}
         isHero={isHero}
         media={media}
@@ -63,7 +59,6 @@ MediaWithContent.propTypes = {
     subHeading: PropTypes.string,
   }).isRequired,
   foregroundImage: PropTypes.element,
-  foregroundImageLink: PropTypes.object,
   hasFullWidthImage: PropTypes.bool,
   isHero: PropTypes.bool,
   isReverse: PropTypes.bool,
@@ -82,7 +77,6 @@ MediaWithContent.defaultProps = {
     subHeading: undefined,
   },
   foregroundImage: undefined,
-  foregroundImageLink: undefined,
   hasFullWidthImage: false,
   isHero: false,
   isReverse: false,

@@ -10,23 +10,8 @@
   height: 2px;
   padding: 0;
   margin: 0 20px 20px;
+  background-color: var(--color-grey-60);
   list-style-type: none;
-
-  &.dark {
-    background-color: var(--color-grey-63);
-
-    :global(.slick-active) {
-      background-color: var(--color-dark-copy);
-    }
-  }
-
-  &.light {
-    background-color: var(--color-grey-40);
-
-    :global(.slick-active) {
-      background-color: var(--color-light-copy);
-    }
-  }
 
   @media (--viewport-md) {
     margin: 0 40px 20px;
@@ -36,6 +21,12 @@
     margin: 0 80px 40px;
   }
 
+  :global {
+    .slick-active {
+      background-color: var(--color-secondary);
+    }
+  }
+
   li {
     flex-grow: 1;
     margin: 0;
@@ -43,16 +34,11 @@
   }
 }
 
-.flush {
-  margin-right: 0;
-  margin-left: 0;
-}
-
 .bar {
   position: absolute;
   height: 2px;
   padding: 0;
   margin: 0;
-  background-color: var(--color-light-copy);
+  background-color: var(--color-secondary);
   transition: left 1000ms var(--easing-ease-out-cubic);
 }

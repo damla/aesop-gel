@@ -4,7 +4,7 @@ export default {
   childrenClassNames: { content: 'content', sidebar: 'sidebar' },
   className: 'TwoColumnLayout',
   content: <div>content</div>,
-  hasFullWidthContent: true,
+  hasRightPadding: true,
   id: 'TwoColumnLayout',
   isReversed: true,
   sidebar: <div>sidebar</div>,

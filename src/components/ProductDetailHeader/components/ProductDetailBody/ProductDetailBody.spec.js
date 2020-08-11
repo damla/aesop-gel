@@ -2,7 +2,6 @@ import React from 'react';
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import renderer from 'react-test-renderer';
-import AddToCartButtonFixture from '~/components/AddToCartButton/AddToCartButton.fixture';
 import ProductDetailBody from './ProductDetailBody';
 import ProductDetailBodyFixture from './ProductDetailBody.fixture';
 
@@ -18,10 +17,7 @@ describe('<ProductDetailBody />', () => {
       .create(
         <ProductDetailBody
           className={ProductDetailBodyFixture.className}
-          copy={{
-            addToCart: AddToCartButtonFixture.copy,
-            ...ProductDetailBodyFixture.copy,
-          }}
+          copy={ProductDetailBodyFixture.copy}
           definitionList={ProductDetailBodyFixture.definitionList}
           ingredients={ProductDetailBodyFixture.ingredients}
           keyIngredient={ProductDetailBodyFixture.keyIngredient}

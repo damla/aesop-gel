@@ -8,7 +8,7 @@ exports[`<Carousel.CarouselIntroduction /> renders base component correctly 1`] 
     className="base heading"
   >
     <h2
-      className="base flush serifFont xLarge dark"
+      className="base noTopMargin serifFont xLarge dark heading"
     >
       Maecenas elementum
     </h2>

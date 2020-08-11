@@ -2,10 +2,7 @@ import React from 'react';
 import { BREAKPOINTS } from '~/constants';
 
 export const getCarouselSettings = ({
-  autoplaySpeed,
   className,
-  hasAutoplay,
-  hasFlushPagination,
   hasFullWidthSlides,
   initialSlideIndex,
   isNextButtonActive,
@@ -13,26 +10,16 @@ export const getCarouselSettings = ({
   Pagination,
   NextButton,
   PreviousButton,
-  theme,
 }) => ({
-  autoplay: hasAutoplay,
-  autoplaySpeed: autoplaySpeed,
-  appendDots: dots => (
-    <Pagination
-      dots={dots}
-      fullWidth={hasFullWidthSlides}
-      hasFlushPagination={hasFlushPagination}
-      theme={theme}
-    />
-  ),
+  appendDots: dots => <Pagination dots={dots} fullWidth={hasFullWidthSlides} />,
   centerMode: false,
   className,
   customPaging: () => <div />,
   dots: true,
   infinite: hasFullWidthSlides,
   initialSlide: initialSlideIndex,
-  nextArrow: <NextButton isActive={isNextButtonActive} theme={theme} />,
-  prevArrow: <PreviousButton isActive={isPreviousButtonActive} theme={theme} />,
+  nextArrow: <NextButton isActive={isNextButtonActive} theme="light" />,
+  prevArrow: <PreviousButton isActive={isPreviousButtonActive} theme="light" />,
   responsive: [
     {
       breakpoint: BREAKPOINTS.SMALL.MAX_WIDTH,

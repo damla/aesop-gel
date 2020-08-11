@@ -1,22 +1,21 @@
 import { useCallback, useState } from 'react';
 import find from 'lodash/find';
 
-const useVariantSelect = (variants = []) => {
-  const [selectedVariant, updateSelectedVariant] = useState(variants[0]);
+const useVariantSelect = (variantOptions = []) => {
+  const [selectedVariant, updateSelectedVariant] = useState(variantOptions[0]);
 
   const setSelectedVariant = useCallback(currentSelectedVariant => {
     updateSelectedVariant(currentSelectedVariant);
   }, []);
 
-  const onVariantChange = (event, currentVariants) => {
+  const onVariantChange = (event, variants) => {
     event.persist();
 
     const {
       target: { value },
     } = event;
 
-    const currentSelectedVariant =
-      find(currentVariants, { sku: value }) || null;
+    const currentSelectedVariant = find(variants, { sku: value }) || {};
 
     setSelectedVariant(currentSelectedVariant);
   };
@@ -25,7 +24,7 @@ const useVariantSelect = (variants = []) => {
     onVariantChange,
     selectedVariant,
     setSelectedVariant,
-    variants,
+    variantOptions,
   };
 };
 

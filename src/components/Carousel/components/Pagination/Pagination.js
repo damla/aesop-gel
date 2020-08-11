@@ -4,20 +4,14 @@ import cx from 'classnames';
 import PropTypes from 'prop-types';
 import styles from './Pagination.module.css';
 
-const Pagination = ({ dots, hasFlushPagination, theme }) => {
+const Pagination = ({ dots, theme }) => {
   // const progress = findIndex(dots, ['props.className', 'slick-active']);
   // const width = `${100 / dots.length}%`;
   // const positionLeft = `${(100 / dots.length) * progress}%`;
 
   return (
     <div className={styles.base}>
-      <ul
-        className={cx(styles.list, styles[theme], {
-          [styles.flush]: hasFlushPagination,
-        })}
-      >
-        {dots}
-      </ul>
+      <ul className={cx(styles.list, styles[theme])}>{dots}</ul>
     </div>
   );
 };
@@ -28,13 +22,11 @@ const Pagination = ({ dots, hasFlushPagination, theme }) => {
 
 Pagination.propTypes = {
   dots: PropTypes.array,
-  hasFlushPagination: PropTypes.bool,
   theme: PropTypes.oneOf(['dark', 'light']),
 };
 
 Pagination.defaultProps = {
   dots: undefined,
-  hasFlushPagination: false,
   theme: 'dark',
 };
 

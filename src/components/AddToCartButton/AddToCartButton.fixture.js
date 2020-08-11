@@ -3,13 +3,8 @@ export default {
   copy: {
     cartAction: 'Add to your cart',
     updateNotification: 'added to your cart',
-    outOfStock: {
-      label: 'Out of Stock',
-      title: 'Out of stock',
-    },
   },
   dataTestRef: 'DATA_TEST_REF',
   isEnabled: true,
-  isFullWidth: true,
-  theme: 'dark',
+  productName: 'Lorem ipsum dolor',
 };

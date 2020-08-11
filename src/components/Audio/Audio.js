@@ -19,7 +19,7 @@ const Audio = ({
   copy,
   hasAutoPlay,
   id,
-  progressColor,
+  progressColour,
   trackTitle,
 }) => {
   const waveformRef = useRef(null);
@@ -31,10 +31,10 @@ const Audio = ({
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const getProgressColorHex = () => {
-      if (progressColor === 'green') {
+    const getProgressColourHex = () => {
+      if (progressColour === 'green') {
         return COLORS.HIGHLIGHT_GREEN;
-      } else if (progressColor === 'blue') {
+      } else if (progressColour === 'blue') {
         return COLORS.HIGHLIGHT_BLUE;
       }
 
@@ -50,7 +50,7 @@ const Audio = ({
         cursorColor: 'transparent',
         cursorWidth: 1,
         height: 80,
-        progressColor: getProgressColorHex(),
+        progressColor: getProgressColourHex(),
         responsive: true,
         skipLength: 30,
         waveColor: COLORS.GREY_60,
@@ -83,12 +83,12 @@ const Audio = ({
         wavesurfer.current.destroy();
       };
     }
-  }, [progressColor, hasAutoPlay]);
+  }, [progressColour, hasAutoPlay]);
 
   const classSet = cx(
     styles.base,
     { [styles.disabled]: isLoading },
-    styles[progressColor],
+    styles[progressColour],
     className,
   );
 
@@ -250,7 +250,7 @@ Audio.propTypes = {
   }),
   hasAutoPlay: PropTypes.bool,
   id: PropTypes.string,
-  progressColor: PropTypes.oneOf(['orange', 'green', 'blue']),
+  progressColour: PropTypes.oneOf(['orange', 'green', 'blue']),
   trackTitle: PropTypes.string,
 };
 
@@ -269,7 +269,7 @@ Audio.defaultProps = {
   },
   hasAutoPlay: false,
   id: undefined,
-  progressColor: 'orange',
+  progressColour: 'orange',
   trackTitle: undefined,
 };
 

@@ -9,14 +9,14 @@ exports[`<Carousel /> renders base component correctly 1`] = `
     dir="ltr"
   >
     <button
-      className="base dark base hidden"
+      className="base inlineStyle light base hidden"
       disabled={false}
       onClick={null}
       title="next slide"
       type="button"
     >
       <svg
-        className="base chevron dark"
+        className="base chevron light"
         data-ref=""
         focusable="false"
         height={16}
@@ -90,15 +90,10 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                 className="base heading"
               >
                 <h2
-                  className="base flush mediumWeightFont xXSmall dark"
-                >
-                  Aenean ac tortor consectetur
-                </h2>
-                <h3
-                  className="base flush serifFont xLarge dark"
+                  className="base noTopMargin serifFont xLarge dark heading"
                 >
                   Maecenas elementum
-                </h3>
+                </h2>
               </header>
               <p
                 className="base dark description hasFooter"
@@ -115,7 +110,6 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                   title="Aenean ac tortor"
                 >
                   Aenean ac tortor
-                   
                   <i
                     aria-hidden="true"
                     className="icon"
@@ -124,20 +118,21 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                       className="base rightArrow dark"
                       data-ref=""
                       focusable="false"
-                      height={12}
+                      height={15}
                       role="img"
                       style={
                         Object {
-                          "height": "12px",
-                          "width": "12px",
+                          "height": "15px",
+                          "width": "15px",
                         }
                       }
                       tabIndex={-1}
                       viewBox="0 0 50 50"
-                      width={12}
+                      width={15}
                     >
                       <g>
                         <path
+                          className="undefined"
                           d="M30.1,5.3L50,25.1L30.1,45h-6.6l18-17.6H0v-4.8h41.5l-18-17.6h6.6V5.3z"
                         />
                       </g>
@@ -182,12 +177,12 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                   className="information dark"
                 >
                   <h5
-                    className="base xXSmall dark heading dark"
+                    className="base xXSmall dark heading"
                   >
                     Quisque non enim efficitur
                   </h5>
                   <div
-                    className="description dark"
+                    className="description"
                   >
                     Vivamus sollicitudin ac ligula
                   </div>
@@ -253,12 +248,12 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                   className="information dark"
                 >
                   <h5
-                    className="base xXSmall dark heading dark"
+                    className="base xXSmall dark heading"
                   >
                     Phasellus posuere porta varius
                   </h5>
                   <div
-                    className="description dark"
+                    className="description"
                   >
                     Suspendisse elit mauris
                   </div>
@@ -324,12 +319,12 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                   className="information dark"
                 >
                   <h5
-                    className="base xXSmall dark heading dark"
+                    className="base xXSmall dark heading"
                   >
                     Etiam at pharetra nisl
                   </h5>
                   <div
-                    className="description dark"
+                    className="description"
                   >
                     Aliquam metus enim, pellentesque eu
                   </div>
@@ -395,12 +390,12 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                   className="information dark"
                 >
                   <h5
-                    className="base xXSmall dark heading dark"
+                    className="base xXSmall dark heading"
                   >
                     Phasellus posuere porta varius
                   </h5>
                   <div
-                    className="description dark"
+                    className="description"
                   >
                     Suspendisse elit
                   </div>
@@ -435,14 +430,14 @@ exports[`<Carousel /> renders base component correctly 1`] = `
       </div>
     </div>
     <button
-      className="base dark base"
+      className="base inlineStyle light base"
       disabled={false}
       onClick={[Function]}
       title="next slide"
       type="button"
     >
       <svg
-        className="base chevron dark"
+        className="base chevron light"
         data-ref=""
         focusable="false"
         height={16}
@@ -552,12 +547,12 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                   className="information dark"
                 >
                   <h5
-                    className="base xXSmall dark heading dark"
+                    className="base xXSmall dark heading"
                   >
                     Quisque non enim efficitur
                   </h5>
                   <div
-                    className="description dark"
+                    className="description"
                   >
                     Vivamus sollicitudin ac ligula
                   </div>
@@ -623,12 +618,12 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                   className="information dark"
                 >
                   <h5
-                    className="base xXSmall dark heading dark"
+                    className="base xXSmall dark heading"
                   >
                     Phasellus posuere porta varius
                   </h5>
                   <div
-                    className="description dark"
+                    className="description"
                   >
                     Suspendisse elit mauris
                   </div>
@@ -694,12 +689,12 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                   className="information dark"
                 >
                   <h5
-                    className="base xXSmall dark heading dark"
+                    className="base xXSmall dark heading"
                   >
                     Etiam at pharetra nisl
                   </h5>
                   <div
-                    className="description dark"
+                    className="description"
                   >
                     Aliquam metus enim, pellentesque eu
                   </div>
@@ -765,12 +760,12 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                   className="information dark"
                 >
                   <h5
-                    className="base xXSmall dark heading dark"
+                    className="base xXSmall dark heading"
                   >
                     Phasellus posuere porta varius
                   </h5>
                   <div
-                    className="description dark"
+                    className="description"
                   >
                     Suspendisse elit
                   </div>
@@ -868,12 +863,12 @@ exports[`<Carousel /> renders component correctly if no \`url\` member is provid
                   className="information dark"
                 >
                   <h5
-                    className="base xXSmall dark heading dark"
+                    className="base xXSmall dark heading"
                   >
                     Quisque non enim efficitur
                   </h5>
                   <div
-                    className="description dark"
+                    className="description"
                   >
                     Vivamus sollicitudin ac ligula
                   </div>

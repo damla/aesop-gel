@@ -5,32 +5,12 @@
   padding: 0;
 }
 
-.nonePaddingBottom {
-  padding-bottom: 0;
-}
-
-.nonePaddingTop {
-  padding-top: 0;
-}
-
-.nonePaddingRight {
-  padding-right: 0;
-}
-
-.nonePaddingLeft {
-  padding-left: 0;
-}
-
 .smallPaddingTop {
   padding-top: 50px;
 }
 
 .mediumPaddingTop {
-  padding-top: 80px;
-
-  @media (--viewport-md-only) {
-    padding-top: 100px;
-  }
+  padding-top: 100px;
 
   @media (--viewport-lg) {
     padding-top: 150px;
@@ -50,11 +30,7 @@
 }
 
 .mediumPaddingBottom {
-  padding-bottom: 80px;
-
-  @media (--viewport-md-only) {
-    padding-bottom: 100px;
-  }
+  padding-bottom: 100px;
 
   @media (--viewport-lg) {
     padding-bottom: 150px;
@@ -66,50 +42,5 @@
 
   @media (--viewport-lg) {
     padding-bottom: 250px;
-  }
-}
-
-.smallPaddingLeft {
-  padding-left: 20px;
-
-  @media (--viewport-md) {
-    padding-left: 34px;
-  }
-
-  @media (--viewport-lg) {
-    padding-left: 80px;
-  }
-}
-
-.smallPaddingRight {
-  padding-right: 20px;
-
-  @media (--viewport-md) {
-    padding-right: 34px;
-  }
-
-  @media (--viewport-lg) {
-    padding-right: 80px;
-  }
-}
-
-.horizontalFlushOnSmall {
-  @media (--viewport-sm-only) {
-    padding-right: 0;
-    padding-left: 0;
-  }
-}
-
-.horizontalFlushOnMedium {
-  @media (--viewport-md-only) {
-    padding-right: 0;
-    padding-left: 0;
-  }
-}
-
-.horizontalFlushOnLarge {
-  @media (--viewport-lg) {
-    padding-right: 0;
-    padding-left: 0;
   }
 }

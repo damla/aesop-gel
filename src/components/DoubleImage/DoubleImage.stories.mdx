@@ -1,0 +1,34 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import * as knobs from '@storybook/addon-knobs';
+import DoubleImage from './DoubleImage';
+import DoubleImageFixture from './DoubleImage.fixture';
+
+<Meta title="Components/DoubleImage" component={DoubleImage} />
+
+# DoubleImage
+
+<Preview>
+  <Story name="Base component">
+    <DoubleImage
+      imageOne={{
+        altText: DoubleImageFixture.imageOne.altText,
+        caption: DoubleImageFixture.imageOne.caption,
+        large: DoubleImageFixture.imageOne.large,
+        medium: DoubleImageFixture.imageOne.medium,
+        small: DoubleImageFixture.imageOne.small,
+      }}
+      imageTwo={{
+        altText: DoubleImageFixture.imageTwo.altText,
+        caption: DoubleImageFixture.imageTwo.caption,
+        large: DoubleImageFixture.imageTwo.large,
+        medium: DoubleImageFixture.imageTwo.medium,
+        small: DoubleImageFixture.imageTwo.small,
+      }}
+      theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
+    />
+  </Story>
+</Preview>
+
+## API
+
+<Props of={DoubleImage} />

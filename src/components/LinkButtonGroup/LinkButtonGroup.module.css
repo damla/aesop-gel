@@ -2,10 +2,18 @@
 
 .base {
   display: flex;
+  width: calc(100% - 1px);
   max-width: 100%;
   flex-wrap: wrap;
-  margin-right: -2px;
-  margin-left: -2px;
+  margin-top: calc(var(--layout-sm-spacing) / -2);
+
+  @media (--viewport-md) {
+    margin-top: calc(var(--layout-md-spacing) / -2);
+  }
+
+  @media (--viewport-lg) {
+    margin-top: calc(var(--layout-lg-spacing) / -2);
+  }
 
   &,
   & * {
@@ -13,36 +21,23 @@
   }
 }
 
-.flush {
-  width: calc(100% - 1px);
-  margin-right: 0;
-  margin-left: 0;
-}
-
 .link {
   display: inline-block;
   width: auto;
-  min-width: auto;
-  max-width: 320px;
   flex: 1 1 auto;
-  padding: 15px;
-  margin-right: 2px;
-  margin-bottom: calc(var(--layout-md-spacing) / 2);
-  margin-left: 2px;
-  font-size: rem(15px);
-  line-height: 1.2;
+  margin-top: calc(var(--layout-sm-spacing) / 2);
+  margin-right: -0.5px;
+  margin-left: -0.5px;
+
+  @media (--viewport-md) {
+    margin-top: calc(var(--layout-md-spacing) / 2);
+  }
 
   @media (--viewport-lg) {
-    margin-bottom: calc(var(--layout-lg-spacing) / 2);
+    margin-top: calc(var(--layout-lg-spacing) / 2);
   }
 }
 
-.flushLink {
-  margin-right: -0.5px;
-  margin-left: -0.5px;
-}
-
 .fitContent {
-  width: fit-content;
   max-width: fit-content;
 }
