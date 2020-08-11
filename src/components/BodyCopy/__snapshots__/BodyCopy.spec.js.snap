@@ -1,5 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<BodyCopy /> does not render content when no \`content\` prop supplied 1`] = `
+<article
+  className="base dark"
+  id="Anti-Oxidant"
+>
+  <header
+    className="base"
+    id="Anti-Oxidant"
+  >
+    <h2
+      className="base mediumWeightFont xXSmall dark eyebrow"
+    >
+      Recommended Nearby
+    </h2>
+    <h3
+      className="base xLarge dark heading"
+    >
+      Aesop & The Paris Review: A Partnership Extended
+    </h3>
+    <h4
+      className="base mediumWeightFont xSmall dark subHeading"
+    >
+      Active Nutrients
+    </h4>
+  </header>
+  <div
+    className="copy"
+  >
+    Parsley Seed Cream. [The Paris Review](http://theparisreview.org) Intensely soothing, nourishing and hydrating, this elegant formulation contains a potent blend of botanicals that offer fortification of the highest order against free radicals.
+  </div>
+</article>
+`;
+
 exports[`<BodyCopy /> renders base component correctly 1`] = `
 <article
   className="base dark"
@@ -33,9 +66,22 @@ exports[`<BodyCopy /> renders base component correctly 1`] = `
   <div
     className="contentWrapper"
   >
-    <p>
-      Lorem ipsum dolor sit amet
-    </p>
+    <div>
+      <a
+        className="base blockStyle left dark"
+        href="/"
+        target="_self"
+      >
+        Proin vulputate
+      </a>
+      <a
+        className="base blockStyle left dark"
+        href="Quisque lacus"
+        target="_self"
+      >
+        Quisque lacus
+      </a>
+    </div>
   </div>
 </article>
 `;
