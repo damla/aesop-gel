@@ -9,14 +9,14 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
     dir="ltr"
   >
     <button
-      className="base inlineStyle light base"
+      className="base dark base"
       disabled={false}
       onClick={[Function]}
       title="next slide"
       type="button"
     >
       <svg
-        className="base chevron light"
+        className="base chevron dark"
         data-ref=""
         focusable="false"
         height={16}
@@ -339,14 +339,14 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
       </div>
     </div>
     <button
-      className="base inlineStyle light base"
+      className="base dark base"
       disabled={false}
       onClick={[Function]}
       title="next slide"
       type="button"
     >
       <svg
-        className="base chevron light"
+        className="base chevron dark"
         data-ref=""
         focusable="false"
         height={16}
@@ -373,7 +373,7 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
       className="base"
     >
       <ul
-        className="list dark"
+        className="list dark flush"
       >
         <li
           className="slick-active"
@@ -393,7 +393,7 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
     </div>
   </div>
   <footer
-    className="footer"
+    className="footer flush"
   >
     <div
       className="slideCounter"

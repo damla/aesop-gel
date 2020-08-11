@@ -18,7 +18,7 @@ const Heading = ({
   const classSet = cx(
     styles.base,
     { [styles.noTopMargin]: !hasTopMargin },
-    { [styles.noMargin]: isFlush },
+    { [styles.flush]: isFlush },
     { [styles.serifFont]: hasSerifFont },
     { [styles.mediumWeightFont]: hasMediumWeightFont },
     styles[size],
@@ -34,7 +34,7 @@ const Heading = ({
 };
 
 Heading.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
   className: PropTypes.string,
   hasMediumWeightFont: PropTypes.bool,
   hasSerifFont: PropTypes.bool,

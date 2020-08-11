@@ -2,7 +2,7 @@ import React, { isValidElement } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'lodash/get';
-import { CSSTransition } from 'react-transition-group';
+import { CSSTransition } from 'react-transition-group-npm';
 import useHasMounted from '~/customHooks/useHasMounted';
 import data from './Transition.data';
 
@@ -10,8 +10,8 @@ const Transition = ({
   children,
   hasCSSTransitionMountOnEnter,
   hasCSSTransitionUnmountOnExit,
-  isActiveOnMount,
   isActive,
+  isActiveOnMount,
   type,
 }) => {
   const hasMounted = useHasMounted();
@@ -41,7 +41,7 @@ const Transition = ({
 };
 
 Transition.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.element]).isRequired,
+  children: PropTypes.element.isRequired,
   hasCSSTransitionMountOnEnter: PropTypes.bool,
   hasCSSTransitionUnmountOnExit: PropTypes.bool,
   isActive: PropTypes.bool,

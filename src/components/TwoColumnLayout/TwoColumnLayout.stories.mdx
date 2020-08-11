@@ -36,6 +36,7 @@ import TwoColumnLayout from './TwoColumnLayout';
                 theme={theme}
               />
               <Image
+                theme={theme}
                 altText="Lorem ipsum dolor sit amet"
                 cta={{
                   url: '/',
@@ -117,14 +118,15 @@ import TwoColumnLayout from './TwoColumnLayout';
                 )}
               />
               <BynderWidget
+                theme={theme}
                 heading="Media Releases"
                 id="6E8E63F9-7A54-442B-861E291124E19D94"
               />
             </React.Fragment>
           }
-          hasRightPadding={knobs.boolean(
-            'hasRightPadding',
-            true,
+          hasFullWidthContent={knobs.boolean(
+            'hasFullWidthContent',
+            false,
             'Presentation',
           )}
           id="TwoColumn-id"
@@ -155,6 +157,7 @@ import TwoColumnLayout from './TwoColumnLayout';
                 theme={theme}
               />
               <Image
+                theme={theme}
                 altText="Lorem ipsum dolor sit amet"
                 cta={{
                   url: '/',
@@ -164,6 +167,7 @@ import TwoColumnLayout from './TwoColumnLayout';
                 small="./assets/images/HeroWithContent/Large_JPG-Aesop_Combination_Skin_Range_Page_Primary_Image_640x456px_M.jpg"
               />
               <SubNav
+                theme={theme}
                 id="Navigation block"
                 isSelect={true}
                 links={SubNavFixture.links}

@@ -9,26 +9,27 @@ const SectionHeading = ({
   childrenClassNames,
   className,
   eyebrow,
-  hasHeadingTopMargin,
   hasSerifFontHeading,
   heading,
   id,
+  isFlush,
   isOffsetPageHeading,
   isPageHeading,
   subHeading,
   theme,
+  titleFont,
 }) => {
   const classSet = cx(
     styles.base,
     { [styles.offsetPageHeading]: isOffsetPageHeading },
     className,
   );
-  const eyebrowClassSet = cx(styles.eyebrow, childrenClassNames.eyebrow);
-  const headingClassSet = cx(styles.heading, childrenClassNames.heading);
-  const subHeadingClassSet = cx(
-    styles.subHeading,
-    childrenClassNames.subHeading,
+  const eyebrowClassSet = cx(childrenClassNames.eyebrow);
+  const headingClassSet = cx(
+    childrenClassNames.heading,
+    titleFont && styles[`${titleFont}TitleFont`],
   );
+  const subHeadingClassSet = cx(childrenClassNames.subHeading);
 
   return (
     <header className={classSet} id={id}>
@@ -36,7 +37,7 @@ const SectionHeading = ({
         <Heading
           className={eyebrowClassSet}
           hasMediumWeightFont={true}
-          hasTopMargin={hasHeadingTopMargin}
+          isFlush={isFlush}
           level={isPageHeading ? '1' : '2'}
           size="xXSmall"
           theme={theme}
@@ -48,7 +49,7 @@ const SectionHeading = ({
         <Heading
           className={headingClassSet}
           hasSerifFont={hasSerifFontHeading}
-          hasTopMargin={hasHeadingTopMargin}
+          isFlush={isFlush}
           level={getHeadingLevel(eyebrow, isPageHeading)}
           size="xLarge"
           theme={theme}
@@ -60,7 +61,7 @@ const SectionHeading = ({
         <Heading
           className={subHeadingClassSet}
           hasMediumWeightFont={true}
-          hasTopMargin={hasHeadingTopMargin}
+          isFlush={isFlush}
           level={getSubHeadingLevel(eyebrow, heading, isPageHeading)}
           size="xSmall"
           theme={theme}
@@ -81,13 +82,14 @@ SectionHeading.propTypes = {
   className: PropTypes.string,
   eyebrow: PropTypes.string,
   hasSerifFontHeading: PropTypes.bool,
-  hasHeadingTopMargin: PropTypes.bool,
   heading: PropTypes.string,
   id: PropTypes.string,
+  isFlush: PropTypes.bool,
   isOffsetPageHeading: PropTypes.bool,
   isPageHeading: PropTypes.bool,
   subHeading: PropTypes.string,
   theme: PropTypes.oneOf(['dark', 'light']),
+  titleFont: PropTypes.oneOf(['Suisse', 'Zapf']),
 };
 
 SectionHeading.defaultProps = {
@@ -99,13 +101,14 @@ SectionHeading.defaultProps = {
   className: undefined,
   eyebrow: undefined,
   hasSerifFontHeading: false,
-  hasHeadingTopMargin: false,
   heading: undefined,
   id: undefined,
+  isFlush: false,
   isOffsetPageHeading: false,
   isPageHeading: false,
   subHeading: undefined,
   theme: 'dark',
+  titleFont: undefined,
 };
 
 export default SectionHeading;

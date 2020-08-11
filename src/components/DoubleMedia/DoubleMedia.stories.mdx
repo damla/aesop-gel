@@ -1,0 +1,74 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import * as knobs from '@storybook/addon-knobs';
+import DoubleMedia from './DoubleMedia';
+import DoubleMediaFixture from './DoubleMedia.fixture';
+
+<Meta title="Components/DoubleMedia" component={DoubleMedia} />
+
+# DoubleMedia
+
+<Preview>
+  <Story name="Base component">
+    <DoubleMedia
+      mediaOne={{
+        heading: knobs.text('Title 1', 'Title 1', 'Content'),
+        link: knobs.object('Link 1', DoubleMediaFixture.link, 'Links'),
+        type: DoubleMediaFixture.imageOne.type,
+        altText: DoubleMediaFixture.imageOne.altText,
+        caption: DoubleMediaFixture.imageOne.caption,
+        large: DoubleMediaFixture.imageOne.large,
+        medium: DoubleMediaFixture.imageOne.medium,
+        small: DoubleMediaFixture.imageOne.small,
+      }}
+      mediaTwo={{
+        heading: knobs.text('Title 2', 'Title 2', 'Content'),
+        link: knobs.object('Link 2', DoubleMediaFixture.link, 'Links'),
+        type: DoubleMediaFixture.imageTwo.type,
+        altText: DoubleMediaFixture.imageTwo.altText,
+        caption: DoubleMediaFixture.imageTwo.caption,
+        large: DoubleMediaFixture.imageTwo.large,
+        medium: DoubleMediaFixture.imageTwo.medium,
+        small: DoubleMediaFixture.imageTwo.small,
+      }}
+      theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
+    />
+  </Story>
+</Preview>
+
+## Variations
+
+### Video in slots
+
+<Preview>
+  <Story name="Contains videos">
+    <DoubleMedia
+      mediaOne={{
+        heading: knobs.text('Title 1', 'Title 1', 'Content'),
+        link: knobs.object('Link 1', DoubleMediaFixture.link, 'Links'),
+        type: DoubleMediaFixture.video.type,
+        caption: DoubleMediaFixture.caption,
+        poster: DoubleMediaFixture.video.poster,
+        fallbackImage: DoubleMediaFixture.video.fallbackImage,
+        large: DoubleMediaFixture.video.large,
+        medium: DoubleMediaFixture.video.medium,
+        small: DoubleMediaFixture.video.small,
+      }}
+      mediaTwo={{
+        heading: knobs.text('Title 2', 'Title 2', 'Content'),
+        link: knobs.object('Link 2', DoubleMediaFixture.link, 'Links'),
+        type: DoubleMediaFixture.video.type,
+        caption: DoubleMediaFixture.caption,
+        poster: DoubleMediaFixture.video.poster,
+        fallbackImage: DoubleMediaFixture.video.fallbackImage,
+        large: DoubleMediaFixture.video.large,
+        medium: DoubleMediaFixture.video.medium,
+        small: DoubleMediaFixture.video.small,
+      }}
+      theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
+    />
+  </Story>
+</Preview>
+
+## API
+
+<Props of={DoubleMedia} />

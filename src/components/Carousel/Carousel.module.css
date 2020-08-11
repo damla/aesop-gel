@@ -27,77 +27,29 @@
     }
   }
 
-  p {
-    font-size: rem(15px);
-    font-weight: 400;
-    line-height: 1.7;
+  :global(.slick-track) {
+    display: flex;
   }
 
-  :global {
-    .slick-track {
-      display: flex;
+  :global(.slick-list) {
+    position: relative;
+    margin: 0 0 24px;
+
+    @media (--viewport-md) {
+      margin: 0 40px 24px;
     }
 
-    .slick-list {
-      position: relative;
-      margin: 0 0 24px;
-
-      @media (--viewport-md) {
-        margin: 0 40px 24px;
-      }
-
-      @media (--viewport-lg) {
-        margin: 0 80px 48px;
-      }
+    @media (--viewport-lg) {
+      margin: 0 80px 48px;
     }
+  }
 
-    .slick-slide {
-      & > div {
-        height: 100%;
-      }
+  :global(.slick-slide) {
+    & > div {
+      height: 100%;
     }
   }
 }
-
-/* .edges {
-  :global {
-    .slick-list {
-      &::before,
-      &::after {
-        position: absolute;
-        z-index: var(--z-index-carousel-edge);
-        top: 0;
-        width: 40px;
-        height: 100%;
-        content: '';
-      }
-
-      &::before {
-        left: -40px;
-        background:
-          -webkit-gradient(
-            linear,
-            left top,
-            right top,
-            from(rgb(255, 254, 240)),
-            to(rgba(0, 0, 0, 0))
-          );
-      }
-
-      &::after {
-        right: -40px;
-        background:
-          -webkit-gradient(
-            linear,
-            right top,
-            left top,
-            from(rgb(255, 254, 240)),
-            to(rgba(0, 0, 0, 0))
-          );
-      }
-    }
-  }
-} */
 
 .item {
   display: flex;
@@ -132,7 +84,7 @@
 
   p {
     max-width: 100%;
-    font-size: rem(15px);
+    font-size: rem(14px);
   }
 }
 
@@ -143,11 +95,9 @@
     }
   }
 
-  :global {
-    .slick-list {
-      margin-right: 0;
-      margin-left: 0;
-    }
+  :global(.slick-list) {
+    margin-right: 0;
+    margin-left: 0;
   }
 }
 
@@ -165,6 +115,11 @@
   @media (--viewport-lg) {
     margin: 0 80px;
   }
+}
+
+.flush {
+  margin-right: 0;
+  margin-left: 0;
 }
 
 .slideCounter {

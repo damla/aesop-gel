@@ -20,9 +20,9 @@ const CarouselIntroduction = ({
       <SectionHeading
         className={styles.heading}
         eyebrow={eyebrow}
-        hasHeadingTopMargin={false}
         hasSerifFontHeading={true}
         heading={heading}
+        isFlush={true}
         theme={theme}
       />
       {description && (

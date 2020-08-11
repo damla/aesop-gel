@@ -46,12 +46,12 @@ exports[`<MediaWithContent /> renders base component correctly 1`] = `
         className="base header"
       >
         <h2
-          className="base noTopMargin mediumWeightFont xXSmall dark eyebrow eyebrow"
+          className="base flush mediumWeightFont xXSmall dark eyebrow"
         >
           Quisque blandit est erat
         </h2>
         <h3
-          className="base noTopMargin serifFont xLarge dark heading"
+          className="base flush serifFont xLarge dark"
         >
           Fusce et dui nisi
         </h3>

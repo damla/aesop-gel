@@ -1,17 +1,41 @@
+import React from 'react';
+import { HYPERLINK_STYLE_TYPES } from '~/constants';
+import Hyperlink from '~/components/Hyperlink';
+
+const { EXTERNAL_NO_ICON_TEXT_LINK } = HYPERLINK_STYLE_TYPES;
+
 export default {
   eyebrow: 'Nullam id erat est',
   heading: 'Lorem ipsum dolor sit amet',
   subHeading: 'Nunc dignissim quis arcu a',
   theme: 'dark',
-  cta: {
-    style: 'External Button Link',
-    text: 'Nullam id erat est',
-    url: '/',
+  linkButtonGroup: {
+    children: (
+      <>
+        <Hyperlink style="Internal No Icon Button Link" url="/">
+          Proin vulputate
+        </Hyperlink>
+        <Hyperlink style="Internal No Icon Button Link" url="Quisque lacus">
+          Quisque lacus
+        </Hyperlink>
+      </>
+    ),
   },
-  secondaryCta: {
-    style: 'External Button Link',
-    text: 'Phasellus tempus',
-    url: '/',
+  links: {
+    links: [
+      {
+        id: 'Morbi-id-nulla',
+        style: EXTERNAL_NO_ICON_TEXT_LINK,
+        children: 'Morbi id nulla',
+        url: 'https://aesop.com/',
+      },
+      {
+        id: 'Nullam-ultrices',
+        style: EXTERNAL_NO_ICON_TEXT_LINK,
+        children: 'Nullam ultrices',
+        url: 'https://aesop.com/',
+      },
+    ],
   },
 
   copy:

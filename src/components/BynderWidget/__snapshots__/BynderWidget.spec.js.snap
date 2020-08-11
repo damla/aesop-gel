@@ -10,6 +10,19 @@ exports[`<BynderWidget /> renders base component correctly 1`] = `
   >
     Media Releases
   </h3>
+  <span
+    className="base isLoading dark"
+  >
+    <span
+      className="dot"
+    />
+    <span
+      className="dot"
+    />
+    <span
+      className="dot"
+    />
+  </span>
   <div
     data-bynder-widget="media-list"
     data-collection-id="6E8E63F9-7A54-442B-861E291124E19D94"

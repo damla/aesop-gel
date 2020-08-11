@@ -1,0 +1,58 @@
+@import 'styles/index';
+
+.base {
+  display: block;
+  width: 100%;
+  padding: 8px 16px 8px 48px;
+  font-family: var(--font-family-sans-serif-regular);
+  font-weight: var(--font-weight-normal);
+
+  @media (--viewport-md) {
+    width: 320px;
+    padding: 8px 16px;
+  }
+
+  &,
+  & * {
+    box-sizing: border-box;
+  }
+}
+
+.markerCount {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  display: flex;
+  width: 32px;
+  height: 32px;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid var(--color-dark-decoration);
+  border-radius: 100%;
+  font-size: rem(14px);
+  line-height: 0;
+
+  i {
+    font-style: normal;
+  }
+
+  @media (--viewport-md) {
+    display: none;
+  }
+}
+
+.address {
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.hyperlink {
+  font-size: rem(15px);
+}
+
+.phoneNumber {
+  margin-bottom: 15px;
+  color: var(--color-dark-label);
+  font-size: rem(15px);
+  line-height: 1.4;
+}

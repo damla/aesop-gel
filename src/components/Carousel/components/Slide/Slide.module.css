@@ -2,8 +2,28 @@
 
 .heading {
   margin: 10px 0 10px 0;
-  color: var(--color-dark-copy);
   font-family: var(--font-family-sans-serif-medium);
+  font-size: rem(14px);
+
+  @media (--viewport-sm) {
+    font-size: rem(14px);
+  }
+
+  @media (--viewport-md) {
+    font-size: rem(14px);
+  }
+
+  @media (--viewport-lg) {
+    font-size: rem(14px);
+  }
+
+  &.dark {
+    color: var(--color-dark-copy);
+  }
+
+  &.light {
+    color: var(--color-light-copy);
+  }
 
   a:hover &,
   a:focus & {
@@ -16,9 +36,16 @@
 }
 
 .description {
-  color: var(--color-grey-30);
   font-family: var(--font-family-sans-serif-regular);
   font-size: rem(14px);
+
+  &.dark {
+    color: var(--color-secondary);
+  }
+
+  &.light {
+    color: var(--color-light-label);
+  }
 }
 
 .image {
