@@ -41,7 +41,7 @@ const Transition = ({
 };
 
 Transition.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.element]).isRequired,
+  children: PropTypes.element.isRequired,
   hasCSSTransitionMountOnEnter: PropTypes.bool,
   hasCSSTransitionUnmountOnExit: PropTypes.bool,
   isActive: PropTypes.bool,

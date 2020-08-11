@@ -10,6 +10,8 @@ import ProductDetailHeader from './ProductDetailHeader';
 import ProductDetailHeaderFixture from './ProductDetailHeader.fixture';
 import AddToCartButtonFixture from '~/components/AddToCartButton/AddToCartButton.fixture';
 import mockAddToCartButtonOnClick from '~/components/AddToCartButton/__mocks__/AddToCartButton.onClick';
+import SecondaryMessage from '~/components/SecondaryMessage';
+import SecondaryMessageFixture from '~/components/SecondaryMessage/SecondaryMessage.fixture';
 
 <Meta title="Components/ProductDetailHeader" component={ProductDetailHeader} />
 
@@ -39,6 +41,7 @@ import mockAddToCartButtonOnClick from '~/components/AddToCartButton/__mocks__/A
                 }}
                 theme={theme}
               />
+              <SecondaryMessage {...SecondaryMessageFixture} />
             </VariantSelectContextProvider>
           </ProductDetailContextProvider>
         </AddToCartContextProvider>

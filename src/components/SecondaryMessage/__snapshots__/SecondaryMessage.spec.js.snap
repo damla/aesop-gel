@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SecondaryMessage /> renders base component correctly 1`] = `
+<aside
+  className="base exercitationCupidatat"
+  id="exercitationCupidatat"
+>
+  <div
+    className="base exercitationCupidatat multiple"
+  >
+    <a
+      className="base left dark link"
+      href="/"
+      target="_self"
+      title="Irure anim labore incididunt lorem occaecat"
+    >
+      <div
+        className="content"
+      >
+        <h4
+          className="base xXSmall dark heading"
+        >
+          Irure anim labore
+        </h4>
+        <div
+          className="copy"
+        >
+          Irure anim labore incididunt lorem occaecat Cillum reprehenderit Duis commodo ipsum sunt fugiat qui nulla dolor nostrud tempor quis non.
+        </div>
+      </div>
+    </a>
+  </div>
+  <div
+    className="base exercitationCupidatat multiple"
+  >
+    <div
+      className="content"
+    >
+      <h4
+        className="base xXSmall dark heading"
+      >
+        Proident et culpa
+      </h4>
+      <div
+        className="copy"
+      >
+        Proident et culpa mollit fugiat irure anim labore incididunt Lorem occaecat. Ut culpa laborum mollit sunt elit et id tempor.
+      </div>
+    </div>
+  </div>
+</aside>
+`;

@@ -1,0 +1,55 @@
+@import 'styles/index';
+
+.base {
+  width: 100%;
+  margin: 24px 20px;
+  font-family: var(--font-family-sans-serif-regular);
+  font-size: rem(15px);
+  line-height: 1.8;
+  text-align: left;
+
+  @media (--viewport-md) {
+    padding: 0 20px;
+    margin: 24px 0;
+    text-align: center;
+  }
+
+  &,
+  & * {
+    box-sizing: border-box;
+  }
+}
+
+.link {
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+
+  @media (--viewport-md) {
+    text-align: center;
+  }
+}
+
+.content {
+  @media (--viewport-md) {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+.heading {
+  margin-top: 0;
+  margin-bottom: 4px;
+  color: var(--color-secondary);
+  font-family: var(--font-family-sans-serif-medium);
+  font-size: rem(14px);
+
+  .link:hover & {
+    text-decoration: underline;
+  }
+}
+
+.copy {
+  color: var(--color-secondary);
+  font-size: rem(14px);
+}

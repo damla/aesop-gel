@@ -9,11 +9,13 @@
   @media (--viewport-sm-only) {
     padding: 0 20px;
   }
+
   @media (--viewport-md) {
     width: 40%;
     margin-top: 85px;
     margin-left: 30%;
   }
+
   @media (--viewport-lg) {
     margin-top: 110px;
   }
