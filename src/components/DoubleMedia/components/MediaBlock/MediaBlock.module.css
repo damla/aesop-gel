@@ -1,5 +1,13 @@
 @import 'styles/index';
 
+.dark {
+  color: var(--color-dark-copy);
+}
+
+.light {
+  color: var(--color-light-copy);
+}
+
 .figure {
   margin-bottom: calc(var(--layout-sm-spacing) * 2);
 
@@ -34,13 +42,6 @@
 .headingWrapper span {
   font-family: var(--font-family-sans-serif-medium);
   font-weight: var(--font-weight-normal);
-  &.dark {
-    color: var(--color-secondary);
-  }
-
-  &.light {
-    color: var(--color-light-copy);
-  }
 }
 
 .headingLink span:hover {
