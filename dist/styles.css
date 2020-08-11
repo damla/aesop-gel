@@ -6499,6 +6499,168 @@ sans-serif;
 --color-dark-decoration: var(--color-grey-30);
 --color-dark-disabled: var(--color-grey-60);
 */
+.Message-module_base__1Nwji {
+  width: 100%;
+  margin: 24px 20px;
+  font-family: 'Suisse Regular'
+,
+sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+  text-align: left;
+}
+@media (min-width: 640px) {
+.Message-module_base__1Nwji {
+    padding: 0 20px;
+    margin: 24px 0;
+    text-align: center
+}
+  }
+.Message-module_base__1Nwji,
+  .Message-module_base__1Nwji * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+.Message-module_link__3bdiD {
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+}
+@media (min-width: 640px) {
+.Message-module_link__3bdiD {
+    text-align: center
+}
+  }
+@media (min-width: 640px) {
+.Message-module_content__2XTZs {
+    max-width: 400px;
+    margin: 0 auto
+}
+  }
+.Message-module_heading__3xX0t {
+  margin-top: 0;
+  margin-bottom: 4px;
+  color: #333;
+  font-family: 'Suisse Medium'
+,
+sans-serif;
+  font-size: 14px;
+}
+.Message-module_link__3bdiD:hover .Message-module_heading__3xX0t {
+    text-decoration: underline;
+  }
+.Message-module_copy__tGB7L {
+  color: #333;
+  font-size: 14px;
+}
+
+/* @import './key-frame.css'; */
+/* @import './font-face.css'; */
+:root {
+  /* Base colours */
+
+  /* UI colours light theme */
+
+  /* UI colours dark theme */
+
+  /* Background colours */
+
+  /* System colours */
+}
+/* Dark theme UI elements */
+/* Light theme UI elements */
+/* UI colours light theme */
+/*
+--color-light-copy: var(--color-primary);
+--color-light-copy-alternate: var(--color-white-darker);
+--color-light-label: var(--color-white-darker);
+--color-light-link: var(--color-primary);
+--color-light-link-hover: var(--color-white-darker);
+--color-light-decoration: var(--color-white-darker);
+--color-light-disabled: var(--color-grey-60);
+*/
+/* UI colours dark theme */
+/*
+--color-dark-copy: var(--color-secondary);
+--color-dark-copy-alternate: var(--color-grey-63);
+--color-dark-label: var(--color-grey-30);
+--color-dark-link: var(--color-grey-20);
+--color-dark-link-hover: var(--color-grey-10);
+--color-dark-decoration: var(--color-grey-30);
+--color-dark-disabled: var(--color-grey-60);
+*/
+.SecondaryMessage-module_base__2yn2H {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-family: 'Suisse Regular'
+,
+sans-serif;
+}
+.SecondaryMessage-module_base__2yn2H,
+  .SecondaryMessage-module_base__2yn2H * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+@media (min-width: 640px) {
+.SecondaryMessage-module_multiple__29N-B {
+    width: 50%
+}
+  }
+@media (max-width: 639px) {
+.SecondaryMessage-module_multiple__29N-B:first-of-type {
+      padding-bottom: 20px;
+      border-bottom: 1px solid #8e8e8e;
+      margin-bottom: 0
+
+      /* border-image: linear-gradient(0.25turn, transparent, var(--color-grey-45), transparent) 10 20%; */
+  }
+    }
+@media (min-width: 640px) {
+.SecondaryMessage-module_multiple__29N-B:first-of-type {
+      border-right: 1px solid #8e8e8e
+
+      /* border-image: linear-gradient(transparent, var(--color-grey-45), transparent) 10 100%; */
+  }
+    }
+
+/* @import './key-frame.css'; */
+/* @import './font-face.css'; */
+:root {
+  /* Base colours */
+
+  /* UI colours light theme */
+
+  /* UI colours dark theme */
+
+  /* Background colours */
+
+  /* System colours */
+}
+/* Dark theme UI elements */
+/* Light theme UI elements */
+/* UI colours light theme */
+/*
+--color-light-copy: var(--color-primary);
+--color-light-copy-alternate: var(--color-white-darker);
+--color-light-label: var(--color-white-darker);
+--color-light-link: var(--color-primary);
+--color-light-link-hover: var(--color-white-darker);
+--color-light-decoration: var(--color-white-darker);
+--color-light-disabled: var(--color-grey-60);
+*/
+/* UI colours dark theme */
+/*
+--color-dark-copy: var(--color-secondary);
+--color-dark-copy-alternate: var(--color-grey-63);
+--color-dark-label: var(--color-grey-30);
+--color-dark-link: var(--color-grey-20);
+--color-dark-link-hover: var(--color-grey-10);
+--color-dark-decoration: var(--color-grey-30);
+--color-dark-disabled: var(--color-grey-60);
+*/
 .Select-module_base__2hN67 {
   position: relative;
   display: block;
