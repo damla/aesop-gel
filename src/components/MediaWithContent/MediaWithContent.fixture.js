@@ -165,6 +165,14 @@ export default {
     ],
   },
   video: {
+    fallbackImage: {
+      copy: {
+        altText: 'How to Use Video for Tea Tree Leaf Facial Exfoliant',
+      },
+      large: './assets/images/MediaWithContent/video-poster.png',
+      medium: './assets/images/MediaWithContent/video-poster.png',
+      small: './assets/images/MediaWithContent/video-poster.png',
+    },
     poster: {
       copy: {
         altText: 'How to Use Video for Tea Tree Leaf Facial Exfoliant',

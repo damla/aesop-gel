@@ -6,6 +6,30 @@ exports[`<Video /> renders base component correctly 1`] = `
   id="video"
   role="group"
 >
+  <figure
+    className="fallbackImageFigure"
+    id="video"
+  >
+    <picture
+      className="base picture dark fallbackImage"
+    >
+      <source
+        media="(min-width: 1025px)"
+        srcSet="./assets/images/MediaWithContent/video-poster.png"
+      />
+      <source
+        media="(min-width: 640px)"
+        srcSet="./assets/images/MediaWithContent/video-poster.png"
+      />
+      <source
+        media="(min-width: 0px)"
+        srcSet="./assets/images/MediaWithContent/video-poster.png"
+      />
+      <img
+        alt="How to Use Video for Tea Tree Leaf Facial Exfoliant"
+      />
+    </picture>
+  </figure>
   <video
     autoPlay={true}
     className="base"
