@@ -1,3 +1,5 @@
+import React from 'react';
+import Hyperlink from '~/components/Hyperlink';
 import { HYPERLINK_STYLE_TYPES } from '~/constants';
 
 const { EXTERNAL_NO_ICON_TEXT_LINK } = HYPERLINK_STYLE_TYPES;
@@ -17,6 +19,10 @@ export default {
       description:
         'Aliquam lectus purus, gravida id metus dignissim, efficitur tempus lacus. Maecenas a cursus diam. Vivamus ultrices nisi non ex placerat, vel elementum sapien condimentum.',
     },
+  },
+  foregroundImageLink: {
+    url: '/',
+    title: 'Fusce et dui nisi',
   },
   image: {
     default: {
@@ -113,16 +119,16 @@ export default {
     ],
   },
   linkButtonGroup: {
-    link: {
-      text: 'Proin vulputate',
-      url: 'https://aesop.com',
-      style: 'Internal No Icon Button Link',
-    },
-    secondaryLink: {
-      text: 'Quisque lacus',
-      url: 'https://aesop.com',
-      style: 'Internal No Icon Button Link',
-    },
+    children: (
+      <>
+        <Hyperlink style="Internal No Icon Button Link" url="/">
+          Proin vulputate
+        </Hyperlink>
+        <Hyperlink style="Internal No Icon Button Link" url="Quisque lacus">
+          Quisque lacus
+        </Hyperlink>
+      </>
+    ),
   },
   hyperlinkButtonDark: {
     style: 'Internal Button Link',

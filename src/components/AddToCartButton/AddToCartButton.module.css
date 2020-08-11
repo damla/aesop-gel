@@ -1,17 +1,26 @@
 @import 'styles/index';
 
 .base {
-  width: 100%;
-  max-width: none;
+  width: min-content;
+  min-width: auto;
+  max-width: 100%;
+  padding: 15px 15px 18px;
+  font-size: rem(15px);
+  text-align: center;
 
   @media (--viewport-lg) {
     max-width: 470px;
   }
 }
 
+.fullWidth {
+  width: 100%;
+}
+
 .loading {
   position: absolute;
   top: calc(50% - 3.5px);
+  left: 0;
 }
 
 .showSuccessMessage {
@@ -23,24 +32,24 @@
 .label {
   display: inline-block;
   overflow: hidden;
-  height: 22px;
-  line-height: 1.5;
+  max-width: min-content;
+  height: 16px;
+  line-height: 1;
   opacity: 1;
   transition: opacity 400ms var(--easing-ease-in-out-cubic);
+  vertical-align: middle;
 
   span {
     display: inline-block;
-    width: 100%;
-    line-height: 1.5;
+    overflow: hidden;
+    max-width: max-content;
+    height: 18px;
+    line-height: 1;
+    text-overflow: ellipsis;
+    transform: translateY(-18px);
     transition: all 300ms var(--easing-ease-in-out-cubic);
-
-    &:first-of-type {
-      transform: translateY(-20px);
-    }
-
-    &:last-of-type {
-      transform: translateY(-20px);
-    }
+    vertical-align: middle;
+    white-space: nowrap;
   }
 }
 
@@ -58,6 +67,6 @@
   }
 
   100% {
-    transform: translateY(-20px);
+    transform: translateY(-18px);
   }
 }

@@ -1,31 +1,54 @@
-import { useCallback, useState } from 'react';
+import { useReducer } from 'react';
 
-const useAddToCart = () => {
-  const [isLoading, updateIsLoading] = useState(false);
-  const [isUpdateSuccessful, updateIsUpdateSuccessful] = useState(false);
+export const ADD_TO_CART_ACTION_TYPES = {
+  FAIL: 'FAIL',
+  FETCHING: 'FETCHING',
+  SUCCESS: 'SUCCESS',
+};
 
-  const setIsLoading = useCallback(currentIsLoading => {
-    updateIsLoading(currentIsLoading);
-  }, []);
+const initialState = {
+  hasError: false,
+  isLoading: false,
+  isUpdateSuccessful: false,
+};
 
-  const setIsUpdateSuccessful = useCallback(currentIsLoading => {
-    updateIsUpdateSuccessful(currentIsLoading);
-  }, []);
+function reducer(state, action) {
+  if (action.type === ADD_TO_CART_ACTION_TYPES.FETCHING) {
+    return {
+      hasError: false,
+      isLoading: true,
+      isUpdateSuccessful: false,
+    };
+  } else if (action.type === ADD_TO_CART_ACTION_TYPES.SUCCESS) {
+    return {
+      hasError: false,
+      isLoading: false,
+      isUpdateSuccessful: true,
+    };
+  } else if (action.type === ADD_TO_CART_ACTION_TYPES.FAIL) {
+    return {
+      hasError: true,
+      isLoading: false,
+      isUpdateSuccessful: false,
+    };
+  }
 
-  const handleOnClick = () => {
-    setIsLoading(true);
+  throw new Error(
+    `useAddToCart: Dispatch action type "${action.type}" not found.`,
+  );
+}
 
-    /** @TODO handle passing in success and error callbacks */
-    window.setTimeout(function mockNetworkRequest() {
-      setIsLoading(false);
-      setIsUpdateSuccessful(true);
-    }, 2000);
-  };
+const useAddToCart = onClick => {
+  const [state, dispatch] = useReducer(reducer, initialState);
+  const { isLoading, hasError, isUpdateSuccessful } = state;
 
   return {
-    handleOnClick,
+    actionTypes: ADD_TO_CART_ACTION_TYPES,
+    dispatch,
+    hasError,
     isLoading,
     isUpdateSuccessful,
+    onClick,
   };
 };
 

@@ -1,29 +1,46 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { State } from '~.storybook/State';
-import { AddToCartContextProvider } from '~/contexts/AddToCart.context';
-import { VariantSelectContextProvider } from '~/contexts/VariantSelect.context';
-import useAddToCart from '~/customHooks/useAddToCart';
-import useVariantSelect from '~/customHooks/useVariantSelect';
-import ProductDetailImageFixture from '~/components/ProductDetailHeader/components/ProductDetailImage/ProductDetailImage.fixture';
+import * as knobs from '@storybook/addon-knobs';
+import {
+  AddToCartContextProvider,
+  ProductDetailContextProvider,
+  VariantSelectContextProvider,
+} from '~/contexts';
+import ProductDetailHeaderFixture from '~/components/ProductDetailHeader/ProductDetailHeader.fixture';
 import AddToCartButton from './AddToCartButton';
 import AddToCartButtonFixture from './AddToCartButton.fixture';
+import mockAddToCartButtonOnClick from './__mocks__/AddToCartButton.onClick';
 
 <Meta title="Components/AddToCartButton" component={AddToCartButton} />
 
 # AddToCartButton
 
+Requires `AddToCartContextProvider`, with a prop of `onClick`, which is a callback function that takes `sku<string>`, `addToCartDispatch<function>`, `ADD_TO_CART_ACTION_TYPES<array[string]>`
+as arguments. See [AddToCartButton.onClick.js mock](https://github.com/aesop/aesop-gel/tree/develop/src/components/AddToCartButton/__mocks__/AddToCartButton.onClick.js)
+for an example.
+
 <Preview>
   <Story name="Base component">
-    <AddToCartContextProvider value={useAddToCart()}>
-      <VariantSelectContextProvider
-        value={useVariantSelect(ProductDetailImageFixture.variantOptions)}
-      >
-        <AddToCartButton
-          dataTestRef="ADD_TO_CART_SMALL_CTA"
-          productName="Product"
-        />
-      </VariantSelectContextProvider>
-    </AddToCartContextProvider>
+    {(() => {
+      const theme = knobs.select('theme', ['dark', 'light'], AddToCartButtonFixture.theme, 'Presentation')
+      const { productName, ...productRest } = ProductDetailHeaderFixture.product;
+      const productDetails = {
+        productName: knobs.text('productName', productName, 'Content'),
+        ...productRest,
+      }
+      return (
+        <AddToCartContextProvider onClick={mockAddToCartButtonOnClick}>
+          <ProductDetailContextProvider product={productDetails}>
+            <VariantSelectContextProvider variants={ProductDetailHeaderFixture.product.variantOptions}>
+              <AddToCartButton
+                dataTestRef="ADD_TO_CART_SMALL_CTA"
+                theme={theme}
+                copy={AddToCartButtonFixture.copy}
+              />
+            </VariantSelectContextProvider>
+          </ProductDetailContextProvider>
+        </AddToCartContextProvider>
+      )
+    })()}
   </Story>
 </Preview>
 

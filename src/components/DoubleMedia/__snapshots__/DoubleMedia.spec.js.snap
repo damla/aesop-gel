@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DoubleMedia /> renders base component correctly 1`] = `
+<div
+  className="base dark"
+>
+  <figure
+    className="base dark figure"
+  >
+    <picture
+      className="base picture dark"
+    >
+      <source
+        media="(min-width: 1025px)"
+        srcSet="./assets/images/DoubleImage/image-one-large.jpg"
+      />
+      <source
+        media="(min-width: 640px)"
+        srcSet="./assets/images/DoubleImage/image-one-medium.jpg"
+      />
+      <source
+        media="(min-width: 0px)"
+        srcSet="./assets/images/DoubleImage/image-one-small.jpg"
+      />
+      <img
+        alt="A tactile approach infuses our work, from our product development to our retail service and visual merchandising."
+      />
+    </picture>
+    <figcaption
+      className="figcaption"
+    >
+      <h3
+        className="base xSmall dark"
+      >
+        Aesop favourites
+      </h3>
+      <div
+        className="caption dark"
+      >
+        Our passion for creativity in form and function, extends to the setting of a meal among staff.
+      </div>
+    </figcaption>
+  </figure>
+  <figure
+    className="base dark figure"
+  >
+    <a
+      className="base left dark imageLinkWrapper"
+      href="/au/c/skin/cleanse"
+      target="_self"
+    >
+      <picture
+        className="base picture dark"
+      >
+        <source
+          media="(min-width: 1025px)"
+          srcSet="./assets/images/DoubleImage/image-two-large.jpg"
+        />
+        <source
+          media="(min-width: 640px)"
+          srcSet="./assets/images/DoubleImage/image-two-medium.jpg"
+        />
+        <source
+          media="(min-width: 0px)"
+          srcSet="./assets/images/DoubleImage/image-two-small.jpg"
+        />
+        <img
+          alt="Image of: Our passion for creativity in form and function, extends to the setting of a meal among staff."
+        />
+      </picture>
+    </a>
+    <figcaption
+      className="figcaption"
+    >
+      <h3
+        className="base xSmall dark"
+      >
+        <a
+          className="base left dark"
+          href="/au/c/skin/cleanse"
+          target="_self"
+        >
+          Aesop favourites
+        </a>
+      </h3>
+      <div
+        className="caption dark"
+      >
+        Our passion for creativity in form and function, extends to the setting of a meal among staff.
+      </div>
+    </figcaption>
+  </figure>
+</div>
+`;

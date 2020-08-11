@@ -19,7 +19,9 @@ import SectionHeading from './SectionHeading';
         'Heading: Fortification of the highest order. Parsley Seed Anti-Oxidant Facial Hydrating Cream.',
         'Copy',
       )}
+      isFlush={knobs.boolean('isFlush', false, 'Presentation')}
       id="Anti-Oxidant"
+      isOffsetPageHeading={knobs.boolean('isOffsetPageHeading', false, 'Presentation')}
       isPageHeading={knobs.boolean('isPageHeading', false, 'Presentation')}
       subHeading={knobs.text(
         'subHeading',
@@ -27,7 +29,9 @@ import SectionHeading from './SectionHeading';
         'Copy',
       )}
       theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
+      titleFont={knobs.select('titleFont', ['Suisse', 'Zapf'], 'Zapf', 'Presentation')}
     />
+    <p>SubHeading: Parsley Seed Cream. Intensely soothing, nourishing and hydrating, this elegant formulation cont</p>
   </Story>
 </Preview>
 
@@ -43,6 +47,7 @@ import SectionHeading from './SectionHeading';
   <Story name="Page Heading">
     <SectionHeading
       heading="Page Heading: Fortification of the highest order. Parsley Seed Anti-Oxidant Facial Hydrating Cream."
+      isOffsetPageHeading={true}
       isPageHeading={true}
     />
   </Story>

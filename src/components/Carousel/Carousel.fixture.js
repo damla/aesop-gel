@@ -1,4 +1,6 @@
 export default {
+  autoplaySpeed: 3000,
+  hasAutoplay: false,
   introduction: {
     cta: {
       style: 'Internal Text Link',
@@ -6,6 +8,7 @@ export default {
       url: '/',
       text: 'Aenean ac tortor',
     },
+    eyebrow: 'Aenean ac tortor consectetur',
     heading: 'Maecenas elementum',
     description:
       'Maecenas elementum, metus id facilisis placerat, turpis diam sodales velit, quis sodales ipsum nunc nec velit. Aenean ac tortor consectetur, volutpat massa sed, ultricies orci.',

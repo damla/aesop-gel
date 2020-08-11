@@ -6,7 +6,7 @@ exports[`<ModalBody /> renders base component correctly 1`] = `
 >
   Body Content
   <button
-    className="base inlineStyle dark closeButton"
+    className="base dark closeButton"
     data-test-ref="MODAL_CLOSE_BUTTON"
     disabled={false}
     onClick={[MockFunction]}
