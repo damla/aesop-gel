@@ -28,13 +28,19 @@
 }
 
 .headingLink span {
-  transition: all 500ms var(--easing-ease-in-cubic);
+  transition: border 500ms var(--easing-ease-in-cubic);
 }
 
 .headingWrapper span {
-  color: var(--color-secondary);
   font-family: var(--font-family-sans-serif-medium);
   font-weight: var(--font-weight-normal);
+  &.dark {
+    color: var(--color-secondary);
+  }
+
+  &.light {
+    color: var(--color-light-copy);
+  }
 }
 
 .headingLink span:hover {

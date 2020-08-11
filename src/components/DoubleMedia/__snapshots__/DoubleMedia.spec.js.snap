@@ -33,7 +33,7 @@ exports[`<DoubleMedia /> renders base component correctly 1`] = `
         className="heading"
       >
         <span
-          className="headingWrapper"
+          className="headingWrapper dark"
         >
           Aesop favourites
         </span>
@@ -80,7 +80,7 @@ exports[`<DoubleMedia /> renders base component correctly 1`] = `
         className="heading headingLink"
       >
         <a
-          className="base left dark headingWrapper"
+          className="base left dark headingWrapper dark"
           href="/au/c/skin/cleanse"
           target="_self"
         >
