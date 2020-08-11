@@ -56,7 +56,7 @@ const MediaBlock = ({
       {(heading || caption) && (
         <figcaption className={styles.figcaption}>
           {heading && (
-            <div className={headingClassSet}>
+            <h3 className={headingClassSet}>
               {link ? (
                 <Hyperlink
                   {...link}
@@ -68,7 +68,7 @@ const MediaBlock = ({
               ) : (
                 <span className={styles.headingWrapper}>{heading}</span>
               )}
-            </div>
+            </h3>
           )}
           {caption && <div className={captionClassSet}>{caption}</div>}
         </figcaption>

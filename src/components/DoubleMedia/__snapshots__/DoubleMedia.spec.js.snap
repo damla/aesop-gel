@@ -29,7 +29,7 @@ exports[`<DoubleMedia /> renders base component correctly 1`] = `
     <figcaption
       className="figcaption"
     >
-      <div
+      <h3
         className="heading"
       >
         <span
@@ -37,7 +37,7 @@ exports[`<DoubleMedia /> renders base component correctly 1`] = `
         >
           Aesop favourites
         </span>
-      </div>
+      </h3>
       <div
         className="caption dark"
       >
@@ -76,7 +76,7 @@ exports[`<DoubleMedia /> renders base component correctly 1`] = `
     <figcaption
       className="figcaption"
     >
-      <div
+      <h3
         className="heading headingLink"
       >
         <a
@@ -88,7 +88,7 @@ exports[`<DoubleMedia /> renders base component correctly 1`] = `
             Aesop favourites
           </span>
         </a>
-      </div>
+      </h3>
       <div
         className="caption dark"
       >
