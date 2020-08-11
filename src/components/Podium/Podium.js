@@ -9,6 +9,7 @@ const Podium = forwardRef(function PodiumRef(
     backgroundColor,
     children,
     className,
+    'data-test-ref': dataTestRef,
     horizontalPadding,
     isActive,
     isActiveOnMount,
@@ -44,7 +45,12 @@ const Podium = forwardRef(function PodiumRef(
       isActiveOnMount={isActiveOnMount}
       type={transition}
     >
-      <section className={classSet} ref={ref} style={style}>
+      <section
+        className={classSet}
+        data-test-ref={dataTestRef}
+        ref={ref}
+        style={style}
+      >
         {children}
       </section>
     </Transition>
@@ -55,6 +61,7 @@ Podium.propTypes = {
   backgroundColor: PropTypes.string,
   children: PropTypes.node,
   className: PropTypes.string,
+  'data-test-ref': PropTypes.string,
   horizontalPadding: PropTypes.oneOf(['none', 'small']),
   isActive: PropTypes.bool,
   isActiveOnMount: PropTypes.bool,
@@ -81,6 +88,7 @@ Podium.defaultProps = {
   backgroundColor: undefined,
   children: undefined,
   className: undefined,
+  'data-test-ref': undefined,
   horizontalPadding: 'none',
   isActive: true,
   isActiveOnMount: undefined,
