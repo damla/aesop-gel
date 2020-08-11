@@ -3926,6 +3926,12 @@ sans-serif;
 --color-dark-decoration: var(--color-grey-30);
 --color-dark-disabled: var(--color-grey-60);
 */
+.MediaBlock-module_dark__GYi0R {
+  color: #333;
+}
+.MediaBlock-module_light___JgJ7 {
+  color: #fffef0;
+}
 .MediaBlock-module_figure__3ovYx {
   margin-bottom: calc(16px * 2);
 }
@@ -3968,12 +3974,6 @@ sans-serif;
 sans-serif;
   font-weight: 400;
 }
-.MediaBlock-module_headingWrapper__2czs- span.MediaBlock-module_dark__GYi0R {
-    color: #333;
-  }
-.MediaBlock-module_headingWrapper__2czs- span.MediaBlock-module_light___JgJ7 {
-    color: #fffef0;
-  }
 .MediaBlock-module_headingLink__2Z03Z span:hover {
   border-bottom: 1px solid #333;
 }
