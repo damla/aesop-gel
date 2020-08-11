@@ -29,7 +29,6 @@ describe('<BodyCopy />', () => {
     expect(tree).toMatchSnapshot();
   });
 
-
   it('does not render content when no `content` prop supplied', () => {
     const tree = renderer
       .create(
