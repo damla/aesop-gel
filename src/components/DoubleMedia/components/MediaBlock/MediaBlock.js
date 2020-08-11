@@ -41,7 +41,7 @@ const MediaBlock = ({
   };
 
   const captionClassSet = cx(styles.caption, styles[theme]);
-  const headingClassSet = cx(styles.heading);
+  const headingClassSet = cx(styles.heading, link && styles.headingLink);
 
   return (
     <Figure className={styles.figure} hasCaptionBorder={false} theme={theme}>
@@ -66,7 +66,7 @@ const MediaBlock = ({
                   <span>{heading}</span>
                 </Hyperlink>
               ) : (
-                heading
+                <span className={styles.headingWrapper}>{heading}</span>
               )}
             </div>
           )}

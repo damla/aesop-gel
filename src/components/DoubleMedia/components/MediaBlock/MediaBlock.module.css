@@ -25,10 +25,13 @@
   font-size: rem(16px);
   letter-spacing: 0;
   line-height: 1.6;
+}
+
+.headingLink span {
   transition: all 500ms var(--easing-ease-in-cubic);
 }
 
-.heading span:hover {
+.headingLink span:hover {
   border-bottom: 1px solid var(--color-secondary);
 }
 
@@ -41,7 +44,7 @@
   display: block;
 }
 
-.imageLinkWrapper:hover + .figcaption .heading span {
+.imageLinkWrapper:hover + .figcaption .headingLink span {
   border-bottom: 1px solid var(--color-secondary);
 }
 

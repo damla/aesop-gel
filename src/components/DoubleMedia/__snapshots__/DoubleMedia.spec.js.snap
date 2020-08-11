@@ -32,7 +32,11 @@ exports[`<DoubleMedia /> renders base component correctly 1`] = `
       <div
         className="heading"
       >
-        Aesop favourites
+        <span
+          className="headingWrapper"
+        >
+          Aesop favourites
+        </span>
       </div>
       <div
         className="caption dark"
@@ -73,7 +77,7 @@ exports[`<DoubleMedia /> renders base component correctly 1`] = `
       className="figcaption"
     >
       <div
-        className="heading"
+        className="heading headingLink"
       >
         <a
           className="base left dark headingWrapper"
