@@ -19,4 +19,16 @@ describe('<LinkButtonGroup />', () => {
 
     expect(tree).toMatchSnapshot();
   });
+
+  it('renders children correctly', () => {
+    const tree = renderer
+      .create(
+        <LinkButtonGroup theme="light">
+          <a href="/au/r/about">Link</a>
+        </LinkButtonGroup>,
+      )
+      .toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
 });
