@@ -29,11 +29,11 @@ exports[`<DoubleMedia /> renders base component correctly 1`] = `
     <figcaption
       className="figcaption"
     >
-      <h3
-        className="base xSmall dark"
+      <div
+        className="heading"
       >
         Aesop favourites
-      </h3>
+      </div>
       <div
         className="caption dark"
       >
@@ -72,17 +72,19 @@ exports[`<DoubleMedia /> renders base component correctly 1`] = `
     <figcaption
       className="figcaption"
     >
-      <h3
-        className="base xSmall dark"
+      <div
+        className="heading"
       >
         <a
-          className="base left dark"
+          className="base left dark headingWrapper"
           href="/au/c/skin/cleanse"
           target="_self"
         >
-          Aesop favourites
+          <span>
+            Aesop favourites
+          </span>
         </a>
-      </h3>
+      </div>
       <div
         className="caption dark"
       >

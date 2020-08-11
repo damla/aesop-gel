@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import Figure from '~/components/Figure';
-import Heading from '~/components/Heading';
 import Hyperlink from '~/components/Hyperlink';
 import Image from '~/components/Image';
 import Video from '~/components/Video';
@@ -42,6 +41,7 @@ const MediaBlock = ({
   };
 
   const captionClassSet = cx(styles.caption, styles[theme]);
+  const headingClassSet = cx(styles.heading);
 
   return (
     <Figure className={styles.figure} hasCaptionBorder={false} theme={theme}>
@@ -56,15 +56,19 @@ const MediaBlock = ({
       {(heading || caption) && (
         <figcaption className={styles.figcaption}>
           {heading && (
-            <Heading level="3" size="xSmall" theme={theme}>
+            <div className={headingClassSet}>
               {link ? (
-                <Hyperlink {...link} theme={theme}>
-                  {heading}
+                <Hyperlink
+                  {...link}
+                  className={styles.headingWrapper}
+                  theme={theme}
+                >
+                  <span>{heading}</span>
                 </Hyperlink>
               ) : (
                 heading
               )}
-            </Heading>
+            </div>
           )}
           {caption && <div className={captionClassSet}>{caption}</div>}
         </figcaption>
