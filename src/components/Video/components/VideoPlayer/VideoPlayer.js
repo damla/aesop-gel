@@ -1,6 +1,12 @@
 import React, { forwardRef } from 'react';
-import cx from 'classnames';
 import PropTypes from 'prop-types';
+import cx from 'classnames';
+import useWindowHasResized from '~/customHooks/useWindowHasResized';
+import {
+  ascertainIsSmallOnlyViewport,
+  ascertainIsMediumOnlyViewport,
+  ascertainIsLargeViewport,
+} from '~/utils/viewports';
 import Transition from '~/components/Transition';
 import styles from './VideoPlayer.module.css';
 
@@ -20,6 +26,8 @@ const VideoPlayer = forwardRef(function VideoPlayerRef(
   },
   ref,
 ) {
+  useWindowHasResized();
+
   const classSet = cx(
     styles.base,
     {
@@ -28,6 +36,16 @@ const VideoPlayer = forwardRef(function VideoPlayerRef(
     },
     className,
   );
+
+  const getVideoSrc = () => {
+    if (small && ascertainIsSmallOnlyViewport()) return small;
+
+    if (medium && ascertainIsMediumOnlyViewport()) return medium;
+
+    if (large && ascertainIsLargeViewport()) return large;
+
+    return small || medium || large || '';
+  };
 
   return (
     <Transition isActive={isActive} type="fade">
@@ -40,16 +58,7 @@ const VideoPlayer = forwardRef(function VideoPlayerRef(
         playsInline={true}
         ref={ref}
       >
-        {large && (
-          <source media="(min-width: 1025px)" src={large} type="video/mp4" />
-        )}
-        {medium && (
-          <source media="(min-width: 640px)" src={medium} type="video/mp4" />
-        )}
-
-        {small && (
-          <source media="(min-width: 0px)" src={small} type="video/mp4" />
-        )}
+        <source src={getVideoSrc()} type="video/mp4" />
       </video>
     </Transition>
   );
