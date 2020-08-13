@@ -9,7 +9,7 @@ exports[`<ContentHubArticleList /> renders base component correctly with pattern
       className="top-left-0 article"
     >
       <div
-        className="base fadeEnter"
+        className="base"
         id="test_1"
       >
         <div
@@ -108,7 +108,7 @@ exports[`<ContentHubArticleList /> renders base component correctly with pattern
       className="top-right-0 article"
     >
       <div
-        className="base fadeEnter"
+        className="base"
         id="test_2"
       >
         <div
@@ -207,7 +207,7 @@ exports[`<ContentHubArticleList /> renders base component correctly with pattern
       className="bottom-left-0 article"
     >
       <div
-        className="base fadeEnter"
+        className="base"
         id="test_3"
       >
         <div
@@ -306,7 +306,7 @@ exports[`<ContentHubArticleList /> renders base component correctly with pattern
       className="bottom-right-0 article"
     >
       <div
-        className="base fadeEnter"
+        className="base"
         id="test_4"
       >
         <div
@@ -406,7 +406,7 @@ exports[`<ContentHubArticleList /> renders base component correctly with pattern
     className="mobile"
   >
     <div
-      className="base fadeEnter"
+      className="base"
       id="test_1"
     >
       <div
@@ -507,7 +507,7 @@ exports[`<ContentHubArticleList /> renders base component correctly with pattern
         className="middleArticle"
       >
         <div
-          className="base leftMiddleArticle fadeEnter"
+          className="base leftMiddleArticle"
           id="test_2"
         >
           <div
@@ -606,7 +606,7 @@ exports[`<ContentHubArticleList /> renders base component correctly with pattern
         className="middleArticle"
       >
         <div
-          className="base rightMiddleArticle fadeEnter"
+          className="base rightMiddleArticle"
           id="test_3"
         >
           <div
@@ -703,7 +703,7 @@ exports[`<ContentHubArticleList /> renders base component correctly with pattern
       </div>
     </div>
     <div
-      className="base fadeEnter"
+      className="base"
       id="test_4"
     >
       <div
@@ -1207,8 +1207,114 @@ exports[`<ContentHubArticleList /> renders base component correctly with pattern
     className="mobile"
   >
     <div
+      className="mobileMiddleRow"
+    >
+      <div
+        className="middleArticle"
+      >
+        <div
+          className="base leftMiddleArticle fadeEnter"
+          id="test_1"
+        >
+          <div
+            className="category"
+          >
+            Product
+          </div>
+          <div
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+          >
+            <a
+              className="base left dark title"
+              data-test-ref="test_1_TITLE"
+              href="https://www.aesop.com/au/r/careers?contentful=true"
+              target="_self"
+              title="1. Senorial consectetur adipiscing elit."
+            >
+              <span>
+                1. Senorial consectetur adipiscing elit.
+              </span>
+            </a>
+          </div>
+          <div
+            className="note"
+          >
+            15 minute read
+          </div>
+          <a
+            className="base left dark image nonMobile"
+            data-test-ref="test_1_NON_MOBILE_THUMBNAIL"
+            href="https://www.aesop.com/au/r/careers?contentful=true"
+            target="_self"
+            title="1. Senorial consectetur adipiscing elit."
+          >
+            <div
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              <picture
+                className="base picture dark image"
+              >
+                <source
+                  media="(min-width: 1025px)"
+                  srcSet="./assets/images/ContentHubArticle/vertical_hub.jpg"
+                />
+                <source
+                  media="(min-width: 640px)"
+                  srcSet="./assets/images/ContentHubArticle/vertical_hub.jpg"
+                />
+                <source
+                  media="(min-width: 0px)"
+                  srcSet="./assets/images/ContentHubArticle/vertical_hub.jpg"
+                />
+                <img
+                  alt="vertical_hub"
+                />
+              </picture>
+            </div>
+          </a>
+          <a
+            className="base left dark image mobile"
+            data-test-ref="test_1_MOBILE_THUMBNAIL"
+            href="https://www.aesop.com/au/r/careers?contentful=true"
+            target="_self"
+            title="1. Senorial consectetur adipiscing elit."
+          >
+            <div
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              <picture
+                className="base picture dark image"
+              >
+                <source
+                  media="(min-width: 1025px)"
+                  srcSet="./assets/images/ContentHubArticle/vertical_hub.jpg"
+                />
+                <source
+                  media="(min-width: 640px)"
+                  srcSet="./assets/images/ContentHubArticle/vertical_hub.jpg"
+                />
+                <source
+                  media="(min-width: 0px)"
+                  srcSet="./assets/images/ContentHubArticle/vertical_hub.jpg"
+                />
+                <img
+                  alt="vertical_hub"
+                />
+              </picture>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div
+        className="middleArticle"
+      />
+    </div>
+    <div
       className="base fadeEnter"
-      id="test_1"
+      id="test_2"
     >
       <div
         className="category"
@@ -1221,13 +1327,13 @@ exports[`<ContentHubArticleList /> renders base component correctly with pattern
       >
         <a
           className="base left dark title"
-          data-test-ref="test_1_TITLE"
+          data-test-ref="test_2_TITLE"
           href="https://www.aesop.com/au/r/careers?contentful=true"
           target="_self"
-          title="1. Senorial consectetur adipiscing elit."
+          title="2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante."
         >
           <span>
-            1. Senorial consectetur adipiscing elit.
+            2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante.
           </span>
         </a>
       </div>
@@ -1238,10 +1344,10 @@ exports[`<ContentHubArticleList /> renders base component correctly with pattern
       </div>
       <a
         className="base left dark image nonMobile"
-        data-test-ref="test_1_NON_MOBILE_THUMBNAIL"
+        data-test-ref="test_2_NON_MOBILE_THUMBNAIL"
         href="https://www.aesop.com/au/r/careers?contentful=true"
         target="_self"
-        title="1. Senorial consectetur adipiscing elit."
+        title="2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante."
       >
         <div
           onMouseEnter={[Function]}
@@ -1270,10 +1376,105 @@ exports[`<ContentHubArticleList /> renders base component correctly with pattern
       </a>
       <a
         className="base left dark image mobile"
-        data-test-ref="test_1_MOBILE_THUMBNAIL"
+        data-test-ref="test_2_MOBILE_THUMBNAIL"
         href="https://www.aesop.com/au/r/careers?contentful=true"
         target="_self"
-        title="1. Senorial consectetur adipiscing elit."
+        title="2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante."
+      >
+        <div
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <picture
+            className="base picture dark image"
+          >
+            <source
+              media="(min-width: 1025px)"
+              srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+            />
+            <source
+              media="(min-width: 640px)"
+              srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+            />
+            <source
+              media="(min-width: 0px)"
+              srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+            />
+            <img
+              alt="horizontal_hub"
+            />
+          </picture>
+        </div>
+      </a>
+    </div>
+    <div
+      className="base fadeEnter"
+      id="test_3"
+    >
+      <div
+        className="category"
+      >
+        Culture
+      </div>
+      <div
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <a
+          className="base left dark title"
+          data-test-ref="test_3_TITLE"
+          href="https://www.aesop.com/au/r/careers?contentful=true"
+          target="_self"
+          title="3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare, id dictum ante. Suspendisse et ornare mauris, id dictum ante."
+        >
+          <span>
+            3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare, id dictum ante. Suspendisse et ornare mauris, id dictum ante.
+          </span>
+        </a>
+      </div>
+      <div
+        className="note"
+      >
+        15 minute read
+      </div>
+      <a
+        className="base left dark image nonMobile"
+        data-test-ref="test_3_NON_MOBILE_THUMBNAIL"
+        href="https://www.aesop.com/au/r/careers?contentful=true"
+        target="_self"
+        title="3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare, id dictum ante. Suspendisse et ornare mauris, id dictum ante."
+      >
+        <div
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <picture
+            className="base picture dark image"
+          >
+            <source
+              media="(min-width: 1025px)"
+              srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+            />
+            <source
+              media="(min-width: 640px)"
+              srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+            />
+            <source
+              media="(min-width: 0px)"
+              srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
+            />
+            <img
+              alt="horizontal_hub"
+            />
+          </picture>
+        </div>
+      </a>
+      <a
+        className="base left dark image mobile"
+        data-test-ref="test_3_MOBILE_THUMBNAIL"
+        href="https://www.aesop.com/au/r/careers?contentful=true"
+        target="_self"
+        title="3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare, id dictum ante. Suspendisse et ornare mauris, id dictum ante."
       >
         <div
           onMouseEnter={[Function]}
@@ -1306,114 +1507,18 @@ exports[`<ContentHubArticleList /> renders base component correctly with pattern
     >
       <div
         className="middleArticle"
-      >
-        <div
-          className="base leftMiddleArticle fadeEnter"
-          id="test_2"
-        >
-          <div
-            className="category"
-          >
-            Product
-          </div>
-          <div
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-          >
-            <a
-              className="base left dark title"
-              data-test-ref="test_2_TITLE"
-              href="https://www.aesop.com/au/r/careers?contentful=true"
-              target="_self"
-              title="2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante."
-            >
-              <span>
-                2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante.
-              </span>
-            </a>
-          </div>
-          <div
-            className="note"
-          >
-            15 minute read
-          </div>
-          <a
-            className="base left dark image nonMobile"
-            data-test-ref="test_2_NON_MOBILE_THUMBNAIL"
-            href="https://www.aesop.com/au/r/careers?contentful=true"
-            target="_self"
-            title="2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante."
-          >
-            <div
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-            >
-              <picture
-                className="base picture dark image"
-              >
-                <source
-                  media="(min-width: 1025px)"
-                  srcSet="./assets/images/ContentHubArticle/vertical_hub.jpg"
-                />
-                <source
-                  media="(min-width: 640px)"
-                  srcSet="./assets/images/ContentHubArticle/vertical_hub.jpg"
-                />
-                <source
-                  media="(min-width: 0px)"
-                  srcSet="./assets/images/ContentHubArticle/vertical_hub.jpg"
-                />
-                <img
-                  alt="vertical_hub"
-                />
-              </picture>
-            </div>
-          </a>
-          <a
-            className="base left dark image mobile"
-            data-test-ref="test_2_MOBILE_THUMBNAIL"
-            href="https://www.aesop.com/au/r/careers?contentful=true"
-            target="_self"
-            title="2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante."
-          >
-            <div
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-            >
-              <picture
-                className="base picture dark image"
-              >
-                <source
-                  media="(min-width: 1025px)"
-                  srcSet="./assets/images/ContentHubArticle/vertical_hub.jpg"
-                />
-                <source
-                  media="(min-width: 640px)"
-                  srcSet="./assets/images/ContentHubArticle/vertical_hub.jpg"
-                />
-                <source
-                  media="(min-width: 0px)"
-                  srcSet="./assets/images/ContentHubArticle/vertical_hub.jpg"
-                />
-                <img
-                  alt="vertical_hub"
-                />
-              </picture>
-            </div>
-          </a>
-        </div>
-      </div>
+      />
       <div
         className="middleArticle"
       >
         <div
           className="base rightMiddleArticle fadeEnter"
-          id="test_3"
+          id="test_4"
         >
           <div
             className="category"
           >
-            Culture
+            Aesop Spotify
           </div>
           <div
             onMouseEnter={[Function]}
@@ -1421,13 +1526,13 @@ exports[`<ContentHubArticleList /> renders base component correctly with pattern
           >
             <a
               className="base left dark title"
-              data-test-ref="test_3_TITLE"
+              data-test-ref="test_4_TITLE"
               href="https://www.aesop.com/au/r/careers?contentful=true"
               target="_self"
-              title="3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare, id dictum ante. Suspendisse et ornare mauris, id dictum ante."
+              title="4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante. Suspendisse et ornare mauris, id dictum ante."
             >
               <span>
-                3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare, id dictum ante. Suspendisse et ornare mauris, id dictum ante.
+                4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante. Suspendisse et ornare mauris, id dictum ante.
               </span>
             </a>
           </div>
@@ -1438,10 +1543,10 @@ exports[`<ContentHubArticleList /> renders base component correctly with pattern
           </div>
           <a
             className="base left dark image nonMobile"
-            data-test-ref="test_3_NON_MOBILE_THUMBNAIL"
+            data-test-ref="test_4_NON_MOBILE_THUMBNAIL"
             href="https://www.aesop.com/au/r/careers?contentful=true"
             target="_self"
-            title="3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare, id dictum ante. Suspendisse et ornare mauris, id dictum ante."
+            title="4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante. Suspendisse et ornare mauris, id dictum ante."
           >
             <div
               onMouseEnter={[Function]}
@@ -1470,10 +1575,10 @@ exports[`<ContentHubArticleList /> renders base component correctly with pattern
           </a>
           <a
             className="base left dark image mobile"
-            data-test-ref="test_3_MOBILE_THUMBNAIL"
+            data-test-ref="test_4_MOBILE_THUMBNAIL"
             href="https://www.aesop.com/au/r/careers?contentful=true"
             target="_self"
-            title="3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare, id dictum ante. Suspendisse et ornare mauris, id dictum ante."
+            title="4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante. Suspendisse et ornare mauris, id dictum ante."
           >
             <div
               onMouseEnter={[Function]}
@@ -1502,101 +1607,6 @@ exports[`<ContentHubArticleList /> renders base component correctly with pattern
           </a>
         </div>
       </div>
-    </div>
-    <div
-      className="base fadeEnter"
-      id="test_4"
-    >
-      <div
-        className="category"
-      >
-        Aesop Spotify
-      </div>
-      <div
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        <a
-          className="base left dark title"
-          data-test-ref="test_4_TITLE"
-          href="https://www.aesop.com/au/r/careers?contentful=true"
-          target="_self"
-          title="4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante. Suspendisse et ornare mauris, id dictum ante."
-        >
-          <span>
-            4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante. Suspendisse et ornare mauris, id dictum ante.
-          </span>
-        </a>
-      </div>
-      <div
-        className="note"
-      >
-        15 minute read
-      </div>
-      <a
-        className="base left dark image nonMobile"
-        data-test-ref="test_4_NON_MOBILE_THUMBNAIL"
-        href="https://www.aesop.com/au/r/careers?contentful=true"
-        target="_self"
-        title="4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante. Suspendisse et ornare mauris, id dictum ante."
-      >
-        <div
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-        >
-          <picture
-            className="base picture dark image"
-          >
-            <source
-              media="(min-width: 1025px)"
-              srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
-            />
-            <source
-              media="(min-width: 640px)"
-              srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
-            />
-            <source
-              media="(min-width: 0px)"
-              srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
-            />
-            <img
-              alt="horizontal_hub"
-            />
-          </picture>
-        </div>
-      </a>
-      <a
-        className="base left dark image mobile"
-        data-test-ref="test_4_MOBILE_THUMBNAIL"
-        href="https://www.aesop.com/au/r/careers?contentful=true"
-        target="_self"
-        title="4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante. Suspendisse et ornare mauris, id dictum ante."
-      >
-        <div
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-        >
-          <picture
-            className="base picture dark image"
-          >
-            <source
-              media="(min-width: 1025px)"
-              srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
-            />
-            <source
-              media="(min-width: 640px)"
-              srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
-            />
-            <source
-              media="(min-width: 0px)"
-              srcSet="./assets/images/ContentHubArticle/horizontal_hub.jpg"
-            />
-            <img
-              alt="horizontal_hub"
-            />
-          </picture>
-        </div>
-      </a>
     </div>
   </div>
 </section>

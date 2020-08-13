@@ -87,7 +87,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
               className="base dark"
             >
               <header
-                className="base heading"
+                className="heading base"
               >
                 <h2
                   className="base flush mediumWeightFont xXSmall dark"

@@ -13,6 +13,7 @@ import ContentHubArticleListFixture from './ContentHubArticleList.fixture';
     <Podium transition="fade">
        <ContentHubArticleList
           articles={ContentHubArticleListFixture.articles.slice(0, knobs.select('number', [1, 2, 3, 4], 4, 'Presentation'))}
+          isFirstGroup={true}
           pattern={knobs.select('pattern', [0, 1], 0, 'Presentation')}
         />
     </Podium>

@@ -20,6 +20,7 @@ const ReadMore = ({ articles, className }) => {
             horizontalThumbnail={article.horizontalThumbnail}
             id={article.id}
             isHorizontal={true}
+            isInFirstGroup={true}
             isReadMore={true}
             key={article.id}
             longTitle={article.longTitle}

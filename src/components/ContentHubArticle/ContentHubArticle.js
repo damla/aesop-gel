@@ -14,6 +14,7 @@ const ContentHubArticle = ({
   horizontalThumbnail,
   id,
   isHorizontal, // use horizontal or vertical thumbnail
+  isInFirstGroup,
   isMenuItem, // if it's displayed in Read Menu Navigation
   isReadMore, // if it's displayed in ReadMore section
   longTitle,
@@ -22,7 +23,7 @@ const ContentHubArticle = ({
   verticalThumbnail,
 }) => {
   const ref = useRef(null);
-  const isOnScreen = useOnScreen(ref, 0.5);
+  const isOnScreen = useOnScreen(ref, isHorizontal ? 0.6 : 0.4);
   const currentImage = isHorizontal ? horizontalThumbnail : verticalThumbnail;
   const classSet = cx(styles.base, className);
   const categoryClassSet = cx(styles.category);
@@ -69,7 +70,7 @@ const ContentHubArticle = ({
   };
 
   return (
-    <Transition isActive={isOnScreen} type="fade">
+    <Transition isActive={isInFirstGroup || isOnScreen} type="fade">
       <div className={classSet} id={id} ref={ref}>
         {isReadMore && !isMenuItem && (
           <Hyperlink
@@ -165,6 +166,7 @@ ContentHubArticle.propTypes = {
   horizontalThumbnail: PropTypes.object,
   id: PropTypes.string,
   isHorizontal: PropTypes.bool,
+  isInFirstGroup: PropTypes.bool,
   isMenuItem: PropTypes.bool,
   isReadMore: PropTypes.bool,
   longTitle: PropTypes.string,
@@ -180,6 +182,7 @@ ContentHubArticle.defaultProps = {
   horizontalThumbnail: undefined,
   id: undefined,
   isHorizontal: undefined,
+  isInFirstGroup: false,
   isMenuItem: false,
   isReadMore: false,
   longTitle: undefined,

@@ -21,6 +21,7 @@ describe('<ContentHubArticle />', () => {
           horizontalThumbnail={ContentHubArticleFixture.horizontalThumbnail}
           id={ContentHubArticleFixture.id}
           isHorizontal={true}
+          isInFirstGroup={true}
           isMenuItem={false}
           isReadMore={false}
           longTitle={ContentHubArticleFixture.longTitle}

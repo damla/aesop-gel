@@ -5,7 +5,7 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
   className="base fadeEnter"
 >
   <div
-    className="base readMoreArticle fadeEnter"
+    className="base readMoreArticle"
     id="test_1"
   >
     <a
@@ -68,7 +68,7 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
     </div>
   </div>
   <div
-    className="base readMoreArticle fadeEnter"
+    className="base readMoreArticle"
     id="test_2"
   >
     <a
@@ -131,7 +131,7 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
     </div>
   </div>
   <div
-    className="base readMoreArticle fadeEnter"
+    className="base readMoreArticle"
     id="test_3"
   >
     <a

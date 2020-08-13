@@ -43,7 +43,7 @@ exports[`<MediaWithContent /> renders base component correctly 1`] = `
       className="innerWrapper"
     >
       <header
-        className="base header"
+        className="header base"
       >
         <h2
           className="base flush mediumWeightFont xXSmall dark eyebrow"

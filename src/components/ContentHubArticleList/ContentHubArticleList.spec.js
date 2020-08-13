@@ -30,6 +30,7 @@ describe('<ContentHubArticleList />', () => {
       .create(
         <ContentHubArticleList
           articles={ContentHubArticleListFixture.articles}
+          isFirstGroup={true}
           pattern={0}
         />,
       )
