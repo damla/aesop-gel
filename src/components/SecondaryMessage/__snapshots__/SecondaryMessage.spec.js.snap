@@ -20,7 +20,9 @@ exports[`<SecondaryMessage /> renders base component correctly 1`] = `
         <h4
           className="base xXSmall dark heading"
         >
-          Irure anim labore
+          <span>
+            Irure anim labore
+          </span>
         </h4>
         <div
           className="copy"
@@ -39,7 +41,9 @@ exports[`<SecondaryMessage /> renders base component correctly 1`] = `
       <h4
         className="base xXSmall dark heading"
       >
-        Proident et culpa
+        <span>
+          Proident et culpa
+        </span>
       </h4>
       <div
         className="copy"
