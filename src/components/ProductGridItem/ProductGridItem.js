@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ProductGridItem = ({ prop }) => {
+const ProductGridItem = () => {
   return (
     <div>
       <p>Product grid item - mobile first</p>
