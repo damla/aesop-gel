@@ -22,6 +22,12 @@
 
 .contentWrapper {
   margin-top: 20px;
+  font-size: rem(16px);
+
+  a {
+    font-family: var(--font-family-sans-serif-medium);
+    font-size: rem(14px);
+  }
 }
 
 .copy {
