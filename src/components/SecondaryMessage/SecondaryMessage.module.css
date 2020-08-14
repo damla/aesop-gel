@@ -3,6 +3,7 @@
 .base {
   display: flex;
   flex-wrap: wrap;
+  background-color: #f3f1e4;
   font-family: var(--font-family-sans-serif-regular);
 
   &,
