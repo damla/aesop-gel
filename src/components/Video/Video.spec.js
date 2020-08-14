@@ -15,6 +15,14 @@ describe('<Video />', () => {
     const tree = renderer
       .create(
         <Video
+          fallbackImage={{
+            copy: {
+              altText: 'How to Use Video for Tea Tree Leaf Facial Exfoliant',
+            },
+            large: './assets/images/MediaWithContent/video-poster.png',
+            medium: './assets/images/MediaWithContent/video-poster.png',
+            small: './assets/images/MediaWithContent/video-poster.png',
+          }}
           hasAutoplay={true}
           hasLoop={true}
           id="video"
