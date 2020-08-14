@@ -37,7 +37,6 @@ const ProductGridItem = ({ className, copy, theme }) => {
         theme={theme}
       />
 
-
       <DefinitionList
         className={styles.definitionList}
         hasBottomBorder={true}
