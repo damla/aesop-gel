@@ -1,9 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import cx from 'classnames';
+import styles from './ProductGridItem.module.css';
 
-const ProductGridItem = () => {
+const ProductGridItem = ({ className }) => {
+  const classSet = cx(styles.base, className);
+
   return (
-    <div>
+    <div className={classSet}>
       <p>Product grid item - mobile first</p>
       <p>Image</p>
       <p>Product title</p>
@@ -14,8 +18,12 @@ const ProductGridItem = () => {
   );
 };
 
-ProductGridItem.propTypes = {};
+ProductGridItem.propTypes = {
+  className: PropTypes.string,
+};
 
-ProductGridItem.defaultProps = {};
+ProductGridItem.defaultProps = {
+  className: undefined,
+};
 
 export default ProductGridItem;
