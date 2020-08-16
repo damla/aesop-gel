@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { defaultValues } from '~/contexts/Theme.context';
+import { defaultValues } from '~/contexts/NavBarTheme.context';
 
-const useTheme = ({
+const useNavBarTheme = ({
   navigationAndLogoTheme: navigationAndLogo,
   loginAndCartTheme: loginAndCart,
 }) => {
@@ -12,6 +12,13 @@ const useTheme = ({
     navigationAndLogo || defaultValues.navigationAndLogoTheme,
   );
 
+  console.log('useNavBarTheme', {
+    loginAndCartTheme,
+    navigationAndLogoTheme,
+    setLoginAndCartTheme,
+    setNavigationAndLogoTheme,
+  })
+
   return {
     loginAndCartTheme,
     navigationAndLogoTheme,
@@ -20,4 +27,4 @@ const useTheme = ({
   };
 };
 
-export default useTheme;
+export default useNavBarTheme;
