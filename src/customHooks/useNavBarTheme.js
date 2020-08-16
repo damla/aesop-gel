@@ -12,13 +12,6 @@ const useNavBarTheme = ({
     navigationAndLogo || defaultValues.navigationAndLogoTheme,
   );
 
-  console.log('useNavBarTheme', {
-    loginAndCartTheme,
-    navigationAndLogoTheme,
-    setLoginAndCartTheme,
-    setNavigationAndLogoTheme,
-  })
-
   return {
     loginAndCartTheme,
     navigationAndLogoTheme,
