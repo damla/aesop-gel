@@ -4,19 +4,22 @@ import cx from 'classnames';
 
 import { HEADING } from '~/constants';
 import { useProductDetailContext, useVariantSelectContext } from '~/contexts';
+import { getVariantRadioOptions } from '~/utils/product';
+
 import AddToCartButton from '~/components/AddToCartButton';
-import Hyperlink from '~/components/Hyperlink';
-import Heading from '~/components/Heading';
 import DefinitionList from '~/components/DefinitionList';
+import Heading from '~/components/Heading';
+import Hyperlink from '~/components/Hyperlink';
+import RadioGroup from '~/components/RadioGroup';
 
 import styles from './ProductGridItem.module.css';
 
 const ProductGridItem = ({ className, copy, theme, url }) => {
-  // const {
-  //   selectedVariant,
-  //   onVariantChange,
-  //   variants,
-  // } = useVariantSelectContext();
+  const {
+    selectedVariant,
+    onVariantChange,
+    variants,
+  } = useVariantSelectContext();
 
   const { productDetail } = useProductDetailContext();
 
@@ -24,8 +27,11 @@ const ProductGridItem = ({ className, copy, theme, url }) => {
 
   const { definitionList, productName } = productDetail;
 
+  const variantRadioOptions = getVariantRadioOptions(variants);
   const classSet = cx(styles.base, className);
 
+  const RADIO_GROUP_NAME = 'sku';
+  const RADIO_GROUP_DATA_TEST_REF = 'PRODUCT_GRID_ITEM_VARIANT_SELECT';
   const ADD_TO_CART_BUTTON_DATA_TEST_REF = 'PRODUCT_GRID_ITEM_ADD_TO_CART_CTA';
 
   return (
@@ -34,7 +40,6 @@ const ProductGridItem = ({ className, copy, theme, url }) => {
       <p>Image</p>
 
       <Heading
-        className={styles.productName}
         hasMediumWeightFont={true}
         level={HEADING.LEVEL.FIVE}
         size={HEADING.SIZE.X_X_SMALL}
@@ -45,7 +50,15 @@ const ProductGridItem = ({ className, copy, theme, url }) => {
         </Hyperlink>
       </Heading>
 
-      <p>radio buttons</p>
+      <RadioGroup
+        className={styles.variants}
+        dataTestRef={RADIO_GROUP_DATA_TEST_REF}
+        name={RADIO_GROUP_NAME}
+        onChange={e => onVariantChange(e, variants)}
+        options={variantRadioOptions}
+        theme={theme}
+        value={selectedVariant.sku}
+      />
 
       <AddToCartButton
         className={styles.addToCartButton}

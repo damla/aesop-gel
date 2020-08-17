@@ -4,9 +4,12 @@
   background-color: papayawhip;
 }
 
-/* .productName { } */
 .productNameLink {
   color: currentColor;
+}
+
+.variants {
+  margin-bottom: 24px;
 }
 
 .definitionList {
