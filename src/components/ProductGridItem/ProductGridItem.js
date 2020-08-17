@@ -5,12 +5,13 @@ import cx from 'classnames';
 import { HEADING } from '~/constants';
 import { useProductDetailContext, useVariantSelectContext } from '~/contexts';
 import AddToCartButton from '~/components/AddToCartButton';
+import Hyperlink from '~/components/Hyperlink';
 import Heading from '~/components/Heading';
 import DefinitionList from '~/components/DefinitionList';
 
 import styles from './ProductGridItem.module.css';
 
-const ProductGridItem = ({ className, copy, theme }) => {
+const ProductGridItem = ({ className, copy, theme, url }) => {
   // const {
   //   selectedVariant,
   //   onVariantChange,
@@ -39,7 +40,9 @@ const ProductGridItem = ({ className, copy, theme }) => {
         size={HEADING.SIZE.X_X_SMALL}
         theme={theme}
       >
-        {productName}
+        <Hyperlink className={styles.productNameLink} url={url}>
+          {productName}
+        </Hyperlink>
       </Heading>
 
       <p>radio buttons</p>
@@ -75,6 +78,7 @@ ProductGridItem.propTypes = {
     }),
   }),
   theme: PropTypes.oneOf(['dark', 'light']),
+  url: PropTypes.string,
 };
 
 ProductGridItem.defaultProps = {
@@ -90,6 +94,7 @@ ProductGridItem.defaultProps = {
     },
   },
   theme: 'dark',
+  url: undefined,
 };
 
 export default ProductGridItem;

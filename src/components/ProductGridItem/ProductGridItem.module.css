@@ -5,6 +5,9 @@
 }
 
 /* .productName { } */
+.productNameLink {
+  color: currentColor;
+}
 
 .definitionList {
   display: grid;
