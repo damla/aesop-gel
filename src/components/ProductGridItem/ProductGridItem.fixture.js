@@ -1,4 +1,5 @@
 export default {
+  info: '4 Sizes / From $ 26.45',
   variantOptions: [
     {
       size: '50 mL - In stock',

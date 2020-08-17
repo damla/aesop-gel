@@ -10,14 +10,16 @@ import { getVariantRadioOptions } from '~/utils/product';
 import AddToCartButton from '~/components/AddToCartButton';
 import DefinitionList from '~/components/DefinitionList';
 import Heading from '~/components/Heading';
+import Hidden from '~/components/Hidden';
 import Hyperlink from '~/components/Hyperlink';
 import Image from '~/components/Image';
 import RadioGroup from '~/components/RadioGroup';
 import Transition from '~/components/Transition';
+import { P } from '~/components/Paragraph';
 
 import styles from './ProductGridItem.module.css';
 
-const ProductGridItem = ({ className, copy, theme, url }) => {
+const ProductGridItem = ({ className, copy, info, theme, url }) => {
   const imageRef = useRef();
   const {
     selectedVariant,
@@ -37,7 +39,7 @@ const ProductGridItem = ({ className, copy, theme, url }) => {
   const { definitionList, productName } = productDetail;
 
   const variantRadioOptions = getVariantRadioOptions(variants);
-  const classSet = cx(styles.base, className);
+  const classSet = cx(styles.base, styles[theme], className);
 
   const RADIO_GROUP_NAME = 'sku';
   const RADIO_GROUP_DATA_TEST_REF = 'PRODUCT_GRID_ITEM_VARIANT_SELECT';
@@ -68,23 +70,31 @@ const ProductGridItem = ({ className, copy, theme, url }) => {
         </Hyperlink>
       </Heading>
 
-      <RadioGroup
-        className={styles.variants}
-        dataTestRef={RADIO_GROUP_DATA_TEST_REF}
-        name={RADIO_GROUP_NAME}
-        onChange={e => onVariantChange(e, variants)}
-        options={variantRadioOptions}
-        theme={theme}
-        value={selectedVariant.sku}
-      />
+      <Hidden isMedium={true}>
+        <RadioGroup
+          className={styles.variants}
+          dataTestRef={RADIO_GROUP_DATA_TEST_REF}
+          name={RADIO_GROUP_NAME}
+          onChange={e => onVariantChange(e, variants)}
+          options={variantRadioOptions}
+          theme={theme}
+          value={selectedVariant.sku}
+        />
+      </Hidden>
 
-      <AddToCartButton
-        className={styles.addToCartButton}
-        copy={copy.addToCart}
-        dataTestRef={ADD_TO_CART_BUTTON_DATA_TEST_REF}
-        isFullWidth={true}
-        theme={theme}
-      />
+      <P className={styles.info} theme={theme}>
+        {info}
+      </P>
+
+      <Hidden isMedium={true}>
+        <AddToCartButton
+          className={styles.addToCartButton}
+          copy={copy.addToCart}
+          dataTestRef={ADD_TO_CART_BUTTON_DATA_TEST_REF}
+          isFullWidth={true}
+          theme={theme}
+        />
+      </Hidden>
 
       <DefinitionList
         className={styles.definitionList}
@@ -108,6 +118,7 @@ ProductGridItem.propTypes = {
       }),
     }),
   }),
+  info: PropTypes.string,
   theme: PropTypes.oneOf(['dark', 'light']),
   url: PropTypes.string,
 };
@@ -124,6 +135,7 @@ ProductGridItem.defaultProps = {
       },
     },
   },
+  info: undefined,
   theme: 'dark',
   url: undefined,
 };
