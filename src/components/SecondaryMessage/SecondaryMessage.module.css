@@ -3,12 +3,24 @@
 .base {
   display: flex;
   flex-wrap: wrap;
-  background-color: #f3f1e4;
   font-family: var(--font-family-sans-serif-regular);
 
   &,
   & * {
     box-sizing: border-box;
+  }
+
+  @media (--viewport-sm-only) {
+    background-color: var(--color-secondary-msg-bg);
+  }
+}
+
+.wrapper {
+  @media (--viewport-md) {
+    padding-bottom: 60px;
+  }
+  @media (--viewport-lg) {
+    padding-bottom: 100px;
   }
 }
 
