@@ -11,6 +11,10 @@ import {
   useLoadMoreContext,
 } from './LoadMore.context';
 import {
+  NavBarThemeContextProvider,
+  useNavBarThemeContext,
+} from './NavBarTheme.context';
+import {
   ProductDetailContextProvider,
   useProductDetailContext,
 } from './ProductDetail.context';
@@ -26,6 +30,8 @@ export { GoogleMapsContextProvider };
 export { useGoogleMapsContext };
 export { LoadMoreContextProvider };
 export { useLoadMoreContext };
+export { NavBarThemeContextProvider };
+export { useNavBarThemeContext };
 export { ProductDetailContextProvider };
 export { useProductDetailContext };
 export { ThemeContextProvider };
@@ -40,6 +46,8 @@ export default {
   useGoogleMapsContext,
   LoadMoreContextProvider,
   useLoadMoreContext,
+  NavBarThemeContextProvider,
+  useNavBarThemeContext,
   ProductDetailContextProvider,
   useProductDetailContext,
   ThemeContextProvider,

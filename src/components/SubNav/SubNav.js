@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import { useThemeContext } from '~/contexts';
 import useWindowHasResized from '~/customHooks/useWindowHasResized';
 import { ascertainIsSmallOrMediumOnlyViewport } from '~/utils/viewports';
 import Heading from '~/components/Heading';
@@ -30,7 +31,8 @@ const SubNav = ({
 }) => {
   useWindowHasResized();
 
-  const classSet = cx(styles.base, styles[theme], className);
+  const currentTheme = useThemeContext(theme, 'dark');
+  const classSet = cx(styles.base, styles[currentTheme], className);
   const isSmallOrMediumViewport = ascertainIsSmallOrMediumOnlyViewport();
   const onChange = event => {
     window.location.href = event.target.value;
@@ -44,7 +46,7 @@ const SubNav = ({
           level="3"
           noMargin={true}
           size="small"
-          theme={theme}
+          theme={currentTheme}
         >
           {heading}
         </Heading>
@@ -59,10 +61,10 @@ const SubNav = ({
             label: children,
             value: url,
           }))}
-          theme={theme}
+          theme={currentTheme}
         />
       ) : (
-        <List items={getLinkItems(links, theme)} theme={theme} />
+        <List items={getLinkItems(links, currentTheme)} theme={currentTheme} />
       )}
     </nav>
   );
@@ -86,7 +88,7 @@ SubNav.defaultProps = {
   links: undefined,
   heading: undefined,
   headingClassName: undefined,
-  theme: 'dark',
+  theme: undefined,
 };
 
 export default SubNav;
