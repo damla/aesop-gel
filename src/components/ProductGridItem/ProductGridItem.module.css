@@ -1,17 +1,22 @@
 @import 'styles/index';
 
 .base {
-  padding: 20px;
-  background-color: papayawhip;
+  @media (--viewport-sm-only) {
+    padding: 20px;
+  }
+
+  @media (--viewport-md-only) {
+    padding: var(--layout-md-spacing);
+  }
+
+  @media (--viewport-lg) {
+    padding: var(--layout-lg-spacing);
+  }
 }
 
 .image {
   display: flex;
   justify-content: center;
-
-  @media (--viewport-md) {
-    justify-content: flex-end;
-  }
 
   img {
     width: auto;
