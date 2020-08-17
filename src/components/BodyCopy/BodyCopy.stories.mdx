@@ -1,5 +1,6 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import * as knobs from '@storybook/addon-knobs';
+import { ThemeContextProvider } from '~/contexts';
 import LinkButtonGroup from '~/components/LinkButtonGroup';
 import SubNav from '~/components/SubNav';
 import BodyCopy from './BodyCopy';
@@ -11,38 +12,39 @@ import BodyCopyFixture from './BodyCopy.fixture';
 
 <Preview>
   <Story name="Base component">
-    <BodyCopy
-      copy={knobs.text('copy', BodyCopyFixture.copy, 'Copy')}
-      eyebrow={knobs.text('eyebrow', BodyCopyFixture.eyebrow, 'Copy')}
-      hasSerifFontHeading={knobs.boolean(
-        'hasSerifFontHeading',
-        false,
-        'Typography',
-      )}
-      heading={knobs.text('heading', BodyCopyFixture.heading, 'Copy')}
-      subHeading={knobs.text('subHeading', BodyCopyFixture.subHeading, 'Copy')}
-      theme={knobs.select(
-        'theme',
-        ['dark', 'light'],
-        BodyCopyFixture.theme,
-        'Presentation',
-      )}
-      content={(() => {
-        const options = {
-          SubNav: {
-            Component: SubNav,
-            props: BodyCopyFixture.links,
-          },
-          LinkButtonGroup: {
-            Component: LinkButtonGroup,
-            props: BodyCopyFixture.linkButtonGroup,
-          },
-        };
-        const componentName = knobs.select('content', Object.keys(options), 'LinkButtonGroup');
-        const { Component, props } = options[componentName];
-        return <Component {...props} theme="dark" />
-      })()}
-    />
+    {(() => {
+      const theme = knobs.select('theme', ['dark', 'light'], BodyCopyFixture.theme, 'Presentation')
+      return (
+        <ThemeContextProvider theme={theme}>
+          <BodyCopy
+            copy={knobs.text('copy', BodyCopyFixture.copy, 'Copy')}
+            eyebrow={knobs.text('eyebrow', BodyCopyFixture.eyebrow, 'Copy')}
+            hasSerifFontHeading={knobs.boolean(
+              'hasSerifFontHeading',
+              false,
+              'Typography',
+            )}
+            heading={knobs.text('heading', BodyCopyFixture.heading, 'Copy')}
+            subHeading={knobs.text('subHeading', BodyCopyFixture.subHeading, 'Copy')}
+            content={(() => {
+              const options = {
+                SubNav: {
+                  Component: SubNav,
+                  props: BodyCopyFixture.links,
+                },
+                LinkButtonGroup: {
+                  Component: LinkButtonGroup,
+                  props: BodyCopyFixture.linkButtonGroup,
+                },
+              };
+              const componentName = knobs.select('content', Object.keys(options), 'LinkButtonGroup');
+              const { Component, props } = options[componentName];
+              return <Component {...props} />
+            })()}
+          />
+        </ThemeContextProvider>
+      )
+    })()}
   </Story>
 </Preview>
 
