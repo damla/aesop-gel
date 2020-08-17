@@ -11,7 +11,7 @@
   }
 
   @media (--viewport-sm-only) {
-    background-color: var(--color-secondary-msg-bg-color);
+    background-color: var(--color-secondary-msg-bg);
   }
 }
 
