@@ -1,25 +1,34 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import { HEADING } from '~/constants';
 import { useProductDetailContext, useVariantSelectContext } from '~/contexts';
+import { useImageTransition } from '~/customHooks';
 import { getVariantRadioOptions } from '~/utils/product';
 
 import AddToCartButton from '~/components/AddToCartButton';
 import DefinitionList from '~/components/DefinitionList';
 import Heading from '~/components/Heading';
 import Hyperlink from '~/components/Hyperlink';
+import Image from '~/components/Image';
 import RadioGroup from '~/components/RadioGroup';
+import Transition from '~/components/Transition';
 
 import styles from './ProductGridItem.module.css';
 
 const ProductGridItem = ({ className, copy, theme, url }) => {
+  const imageRef = useRef();
   const {
     selectedVariant,
     onVariantChange,
     variants,
   } = useVariantSelectContext();
+
+  const [currentImage, isImageActive] = useImageTransition(
+    selectedVariant?.image,
+    imageRef,
+  );
 
   const { productDetail } = useProductDetailContext();
 
@@ -36,8 +45,16 @@ const ProductGridItem = ({ className, copy, theme, url }) => {
 
   return (
     <div className={classSet}>
-      <h3>Product grid item - mobile first</h3>
-      <p>Image</p>
+      <Transition isActive={isImageActive} name="fade">
+        <Image
+          altText={currentImage.altText}
+          className={styles.image}
+          large={currentImage.sizes?.large}
+          medium={currentImage.sizes?.medium}
+          ref={imageRef}
+          small={currentImage.sizes?.small}
+        />
+      </Transition>
 
       <Heading
         className={styles.productName}
