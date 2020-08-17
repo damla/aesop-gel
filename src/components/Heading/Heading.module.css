@@ -61,11 +61,11 @@
 }
 
 .xLarge {
-  font-size: rem(30px);
+  font-size: rem(24px);
   line-height: 1.33;
 
   &.serifFont {
-    font-size: rem(30px);
+    font-size: rem(25px);
   }
 
   @media (--viewport-md) {
@@ -77,10 +77,10 @@
   }
 
   @media (--viewport-lg) {
-    font-size: rem(24px);
+    font-size: rem(30px);
 
     &.serifFont {
-      font-size: rem(25px);
+      font-size: rem(30px);
     }
   }
 }
