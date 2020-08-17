@@ -11,8 +11,8 @@
   }
 
   @media (--viewport-sm-only) {
-      background-color: #f3f1e4;
-    }
+    background-color: #f3f1e4;
+  }
 }
 
 .wrapper {

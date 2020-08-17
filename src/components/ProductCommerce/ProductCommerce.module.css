@@ -70,5 +70,6 @@
 
 .addToCartButton,
 .cta {
-  max-width: 380px;
+  width: min-content;
+  max-width: none;
 }

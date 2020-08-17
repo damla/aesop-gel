@@ -10,12 +10,14 @@ export default {
   subHeading: 'Nunc dignissim quis arcu a',
   theme: 'dark',
   linkButtonGroup: {
+    textAlign: 'left',
+    hasFitContent: true,
     children: (
       <>
-        <Hyperlink style="Internal No Icon Button Link" url="/">
+        <Hyperlink style="Internal Button Link" url="/">
           Proin vulputate
         </Hyperlink>
-        <Hyperlink style="Internal No Icon Button Link" url="Quisque lacus">
+        <Hyperlink style="Internal Button Link" url="Quisque lacus">
           Quisque lacus
         </Hyperlink>
       </>

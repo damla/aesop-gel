@@ -100,22 +100,20 @@ export const Video = forwardRef(function VideoRef(
     [styles.fullWidth]: isFullWidth,
   });
 
-  if (!hasVideo && fallbackImage) {
-    return (
-      <figure className={classSet} id={id} ref={ref}>
-        <Image
-          altText={fallbackImage.copy?.altText}
-          className={cx(styles.fallbackImage, fallbackImage.className)}
-          large={fallbackImage.large}
-          medium={fallbackImage.medium}
-          small={fallbackImage.small}
-        />
-      </figure>
-    );
-  }
-
   return (
     <div className={classSet} id={id} ref={ref} role="group">
+      {!!fallbackImage && (!hasVideo || hasAutoplay) && (
+        <figure className={styles.fallbackImageFigure} id={id} ref={ref}>
+          <Image
+            altText={fallbackImage.copy?.altText}
+            className={cx(styles.fallbackImage, fallbackImage.className)}
+            large={fallbackImage.large}
+            medium={fallbackImage.medium}
+            small={fallbackImage.small}
+          />
+        </figure>
+      )}
+
       <VideoPlayer
         hasActiveVideo={hasActiveVideo}
         hasAllowAudio={hasAllowAudio}
@@ -224,15 +222,7 @@ Video.defaultProps = {
     pauseButtonTitle: 'Pause video',
     unmuteButtonTitle: 'Unmute video',
   },
-  fallbackImage: {
-    className: undefined,
-    copy: {
-      altText: undefined,
-    },
-    large: undefined,
-    medium: undefined,
-    small: undefined,
-  },
+  fallbackImage: undefined,
   hasControls: true,
   hasAllowAudio: false,
   hasAutoplay: false,
