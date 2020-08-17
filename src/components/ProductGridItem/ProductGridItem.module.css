@@ -4,6 +4,10 @@
   background-color: papayawhip;
 }
 
+.productName {
+  text-align: center;
+}
+
 .productNameLink {
   color: currentColor;
 }

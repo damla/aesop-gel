@@ -40,6 +40,7 @@ const ProductGridItem = ({ className, copy, theme, url }) => {
       <p>Image</p>
 
       <Heading
+        className={styles.productName}
         hasMediumWeightFont={true}
         level={HEADING.LEVEL.FIVE}
         size={HEADING.SIZE.X_X_SMALL}
