@@ -48,14 +48,16 @@ const ProductGridItem = ({ className, copy, info, theme, url }) => {
   return (
     <div className={classSet}>
       <Transition isActive={isImageActive} name="fade">
-        <Image
-          altText={currentImage.altText}
-          className={styles.image}
-          large={currentImage.sizes?.large}
-          medium={currentImage.sizes?.medium}
-          ref={imageRef}
-          small={currentImage.sizes?.small}
-        />
+        <Hyperlink className={styles.imageLink} url={url}>
+          <Image
+            altText={currentImage.altText}
+            className={styles.image}
+            large={currentImage.sizes?.large}
+            medium={currentImage.sizes?.medium}
+            ref={imageRef}
+            small={currentImage.sizes?.small}
+          />
+        </Hyperlink>
       </Transition>
 
       <Heading

@@ -5,8 +5,13 @@
     padding: var(--layout-lg-spacing) 20px;
   }
 
+  &,
+  & * {
+    box-sizing: border-box;
+  }
+
   @media (--viewport-md-only) {
-    width: 45%; /* Temporary for local development */
+    width: 50%; /* Temporary for local development */
     padding: 100px var(--layout-md-spacing) var(--layout-md-spacing);
   }
 
@@ -36,6 +41,10 @@
       max-height: 100%;
     }
   }
+}
+
+.imageLink {
+  display: block;
 }
 
 .productName {
