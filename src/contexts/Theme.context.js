@@ -1,17 +1,22 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import { createContext, useContext } from 'react';
 
-export const defaultValues = {
-  loginAndCartTheme: 'dark',
-  navigationAndLogoTheme: 'dark',
-  setLoginAndCartTheme: () => {},
-  setNavigationAndLogoTheme: () => {},
+const ThemeContext = createContext(undefined);
+
+export const ThemeContextProvider = ({ children, theme }) => (
+  <ThemeContext.Provider value={theme}>{children}</ThemeContext.Provider>
+);
+
+ThemeContextProvider.propTypes = {
+  children: PropTypes.any,
+  theme: PropTypes.oneOf(['dark', 'light']),
 };
 
-const ThemeContext = createContext(defaultValues);
-
-export const ThemeContextProvider = ThemeContext.Provider;
-
-export const useThemeContext = () => useContext(ThemeContext);
+export const useThemeContext = (propTheme, defaultTheme = 'dark') => {
+  const themeContext = useContext(ThemeContext);
+  return propTheme || themeContext || defaultTheme;
+};
 
 export default {
   ThemeContextProvider,

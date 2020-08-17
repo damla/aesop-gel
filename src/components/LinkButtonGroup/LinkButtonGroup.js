@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import { useThemeContext } from '~/contexts';
 import styles from './LinkButtonGroup.module.css';
 
 const isReactFragment = component => {
@@ -16,6 +17,8 @@ const LinkButtonGroup = ({
   textAlign,
   theme,
 }) => {
+  const currentTheme = useThemeContext(theme, 'dark');
+
   if (!children || typeof children === 'string' || children instanceof String) {
     return null;
   }
@@ -47,7 +50,7 @@ const LinkButtonGroup = ({
           return React.cloneElement(child, {
             className: `${child.props?.className || ''} ${childrenClassSet}`,
             textAlign,
-            theme,
+            theme: currentTheme,
           });
         })}
       </>
@@ -73,7 +76,7 @@ LinkButtonGroup.defaultProps = {
   hasFitContent: false,
   isFlush: true,
   textAlign: 'center',
-  theme: 'dark',
+  theme: undefined,
 };
 
 export default LinkButtonGroup;

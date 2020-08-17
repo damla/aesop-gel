@@ -3,6 +3,7 @@
 .base {
   display: flex;
   flex-wrap: wrap;
+  background-color: #f3f1e4;
   font-family: var(--font-family-sans-serif-regular);
 
   &,
@@ -19,14 +20,14 @@
   &:first-of-type {
     @media (--viewport-sm-only) {
       padding-bottom: 20px;
-      border-bottom: 1px solid var(--color-grey-45);
+      border-bottom: 1px solid var(--color-grey-57);
       margin-bottom: 0;
 
       /* border-image: linear-gradient(0.25turn, transparent, var(--color-grey-45), transparent) 10 20%; */
     }
 
     @media (--viewport-md) {
-      border-right: 1px solid var(--color-grey-45);
+      border-right: 1px solid var(--color-grey-57);
 
       /* border-image: linear-gradient(transparent, var(--color-grey-45), transparent) 10 100%; */
     }

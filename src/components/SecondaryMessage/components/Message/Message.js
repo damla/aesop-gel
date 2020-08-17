@@ -24,7 +24,7 @@ const Message = ({ className, copy, heading, id, link }) => {
             level={HEADING.LEVEL.FOUR}
             size={HEADING.SIZE.X_X_SMALL}
           >
-            {heading}
+            <span>{heading}</span>
           </Heading>
           <div className={styles.copy}>{copy}</div>
         </div>

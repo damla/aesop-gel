@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import { useThemeContext } from '~/contexts';
 import SectionHeading from '~/components/SectionHeading';
 import styles from './BodyCopy.module.css';
 
@@ -16,7 +17,8 @@ const BodyCopy = ({
   theme,
   content,
 }) => {
-  const classSet = cx(styles.base, styles[theme], className);
+  const currentTheme = useThemeContext(theme, 'dark');
+  const classSet = cx(styles.base, styles[currentTheme], className);
 
   return (
     <article className={classSet} id={id}>
@@ -31,7 +33,7 @@ const BodyCopy = ({
         heading={heading}
         id={id}
         subHeading={subHeading}
-        theme={theme}
+        theme={currentTheme}
       />
 
       {copy && <div className={styles.copy}>{copy}</div>}
@@ -72,7 +74,7 @@ BodyCopy.defaultProps = {
   heading: undefined,
   id: undefined,
   subHeading: undefined,
-  theme: 'dark',
+  theme: undefined,
 };
 
 export default BodyCopy;

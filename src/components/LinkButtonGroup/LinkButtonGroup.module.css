@@ -22,8 +22,8 @@
 .link {
   display: inline-block;
   width: auto;
-  min-width: auto;
-  max-width: 320px;
+  min-width: 220px;
+  max-width: 300px;
   flex: 1 1 auto;
   padding: 15px;
   margin-right: 2px;
