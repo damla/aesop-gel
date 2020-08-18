@@ -25,23 +25,22 @@ const ContentHubArticle = ({
   const ref = useRef(null);
   const isOnScreen = useOnScreen(ref, isHorizontal ? 0.6 : 0.4);
   const currentImage = isHorizontal ? horizontalThumbnail : verticalThumbnail;
-  const classSet = cx(
-    styles.base,
-    className,
-    isReadMore && styles.readMoreArticle,
-  );
-  const categoryClassSet = cx(
-    styles.category,
-    isReadMore && styles.readMoreCategory,
-  );
+  const classSet = cx(styles.base, className, {
+    [styles.readMoreArticle]: !!isReadMore,
+  });
+  const categoryClassSet = cx(styles.category, {
+    [styles.readMoreCategory]: !!isReadMore,
+  });
   const imageClassSet = cx(styles.image);
   const readMoreThumbnailRef = useRef(null);
   const nonMobileImageClassSet = cx(styles.image, styles.nonMobile);
   const nonMobileThumbnailRef = useRef(null);
-  const noteClassSet = cx(styles.note, isReadMore && styles.readMoreNote);
+  const noteClassSet = cx(styles.note, { [styles.readMoreNote]: !!isReadMore });
   const mobileImageClassSet = cx(styles.image, styles.mobile);
   const mobileThumbnailRef = useRef(null);
-  const titleClassSet = cx(styles.title, isReadMore && styles.readMoreTitle);
+  const titleClassSet = cx(styles.title, {
+    [styles.readMoreTitle]: !!isReadMore,
+  });
   const titleRef = useRef(null);
 
   const imageMouseEnter = () => {
