@@ -13,12 +13,7 @@ import styles from './SubNav.module.css';
 export const getLinkItems = (links, theme) =>
   links.map(({ id, style, children, url }) => ({
     content: (
-      <Hyperlink
-        className={styles.itemList}
-        style={style}
-        theme={theme}
-        url={url}
-      >
+      <Hyperlink className={styles.item} style={style} theme={theme} url={url}>
         {children}
       </Hyperlink>
     ),
@@ -37,7 +32,7 @@ const SubNav = ({
   useWindowHasResized();
 
   const currentTheme = useThemeContext(theme, 'dark');
-  const classSet = cx(styles.base, className);
+  const classSet = cx(styles.base, styles[currentTheme], className);
   const isSmallOrMediumViewport = ascertainIsSmallOrMediumOnlyViewport();
   const onChange = event => {
     window.location.href = event.target.value;

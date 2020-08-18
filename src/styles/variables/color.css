@@ -30,7 +30,7 @@
   --color-light-copy-alternate: var(--color-white-darker);
   --color-light-label: var(--color-white-darker);
   --color-light-link: var(--color-primary);
-  --color-light-link-hover: var(--color-white-dark);
+  --color-light-link-hover: var(--color-white-darker);
   --color-light-decoration: var(--color-white-darker);
   --color-light-disabled: var(--color-grey-40);
 
@@ -39,7 +39,7 @@
   --color-dark-copy-alternate: var(--color-grey-63);
   --color-dark-label: var(--color-grey-30);
   --color-dark-link: var(--color-grey-20);
-  --color-dark-link-hover: var(--color-grey-10);
+  --color-dark-link-hover: var(--color-secondary);
   --color-dark-decoration: var(--color-grey-30);
   --color-dark-disabled: var(--color-grey-57);
 
@@ -54,4 +54,7 @@
   --color-highlight-orange: #c67330;
   --color-highlight-green: #007544;
   --color-highlight-blue: #114094;
+
+  /* Secondary Message background colour */
+  --color-secondary-msg-bg: #f3f1e4;
 }

@@ -12,21 +12,23 @@ const SecondaryMessage = ({ className, id, items }) => {
   const classSet = cx(styles.base, className);
 
   return (
-    <aside className={classSet} id={id}>
-      {items.map((item, index) => {
-        const { className, id, ...props } = item;
+    <section className={styles.wrapper}>
+      <aside className={classSet} id={id}>
+        {items.map((item, index) => {
+          const { className, id, ...props } = item;
 
-        return (
-          <Message
-            className={cx(className, {
-              [styles.multiple]: hasMultipleMessages,
-            })}
-            key={id || index}
-            {...props}
-          />
-        );
-      })}
-    </aside>
+          return (
+            <Message
+              className={cx(className, {
+                [styles.multiple]: hasMultipleMessages,
+              })}
+              key={id || index}
+              {...props}
+            />
+          );
+        })}
+      </aside>
+    </section>
   );
 };
 

@@ -4,8 +4,8 @@
   width: 100%;
   margin: 24px 20px;
   font-family: var(--font-family-sans-serif-regular);
-  font-size: rem(15px);
-  line-height: 1.8;
+  font-size: rem(14px);
+  line-height: 1.4;
   text-align: left;
 
   @media (--viewport-md) {
@@ -45,7 +45,7 @@
   font-size: rem(14px);
   span {
     border-bottom: 1px solid transparent;
-    transition: all 500ms var(--easing-ease-in-sine);
+    transition: all 300ms var(--easing-ease-in-sine);
   }
 
   .link:hover & {
@@ -56,6 +56,6 @@
 }
 
 .copy {
-  color: var(--color-secondary);
+  color: var(--color-dark-label);
   font-size: rem(14px);
 }
