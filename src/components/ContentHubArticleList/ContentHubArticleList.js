@@ -15,20 +15,22 @@ const ContentHubArticleList = ({
   const classSet = cx(styles.base, className);
   const mobileSet = cx(styles.mobile, className);
   const mobileMiddleSet = cx(styles.mobileMiddleRow, className);
-  const topLeftClassSet = cx(
-    styles[`top-left-${pattern}`],
-    styles[`article`],
-    ((count < 3 && pattern === 0) || count < 2) && styles[`nonFirstRow`],
-  );
+  const topLeftClassSet = cx(styles[`top-left-${pattern}`], styles[`article`], {
+    [styles.nonFirstRow]: (count < 3 && pattern === 0) || count < 2,
+  });
   const topRightClassSet = cx(
     styles[`top-right-${pattern}`],
     styles[`article`],
-    ((count < 3 && pattern === 1) || count < 2) && styles[`nonFirstRow`],
+    {
+      [styles.nonFirstRow]: (count < 3 && pattern === 1) || count < 2,
+    },
   );
   const bottomLeftClassSet = cx(
     styles[`bottom-left-${pattern}`],
     styles[`article`],
-    count === 1 && pattern === 1 && styles[`nonFirstRow`],
+    {
+      [styles.nonFirstRow]: count === 1 && pattern === 1,
+    },
   );
   const bottomRightClassSet = cx(
     styles[`bottom-right-${pattern}`],
