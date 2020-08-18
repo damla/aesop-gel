@@ -42,6 +42,9 @@ const ProductGridItem = ({ className, copy, info, theme, url }) => {
 
   const variantRadioOptions = getVariantRadioOptions(variants);
   const classSet = cx(styles.base, styles[theme], className);
+  const classInfoHolderSet = cx(styles.infoHolder, {
+    [styles.hasOneVariant]: hasOneVariant,
+  });
 
   const RADIO_GROUP_NAME = 'sku';
   const RADIO_GROUP_DATA_TEST_REF = 'PRODUCT_GRID_ITEM_VARIANT_SELECT';
@@ -74,27 +77,29 @@ const ProductGridItem = ({ className, copy, info, theme, url }) => {
         </Hyperlink>
       </Heading>
 
-      {!hasOneVariant && (
-        <Hidden isMedium={true}>
-          <RadioGroup
-            className={styles.variants}
-            dataTestRef={RADIO_GROUP_DATA_TEST_REF}
-            name={RADIO_GROUP_NAME}
-            onChange={e => onVariantChange(e, variants)}
-            options={variantRadioOptions}
-            theme={theme}
-            value={selectedVariant.sku}
-          />
+      <div className={styles.infoVariantHolder}>
+        <Hidden isSmall={!hasOneVariant}>
+          <div className={classInfoHolderSet}>
+            <P className={styles.info} theme={theme}>
+              {info}
+            </P>
+          </div>
         </Hidden>
-      )}
 
-      <Hidden isSmall={!hasOneVariant}>
-        <div className={styles.infoHolder}>
-          <P className={styles.info} theme={theme}>
-            {info}
-          </P>
-        </div>
-      </Hidden>
+        {!hasOneVariant && (
+          <Hidden isMedium={true}>
+            <RadioGroup
+              className={styles.variants}
+              dataTestRef={RADIO_GROUP_DATA_TEST_REF}
+              name={RADIO_GROUP_NAME}
+              onChange={e => onVariantChange(e, variants)}
+              options={variantRadioOptions}
+              theme={theme}
+              value={selectedVariant.sku}
+            />
+          </Hidden>
+        )}
+      </div>
 
       <Hidden isMedium={true}>
         <AddToCartButton
