@@ -9,6 +9,7 @@ import styles from './ContentHubArticle.module.css';
 
 const ContentHubArticle = ({
   category,
+  childrenClassNames,
   className,
   dataTestRef,
   horizontalThumbnail,
@@ -26,15 +27,24 @@ const ContentHubArticle = ({
   const isOnScreen = useOnScreen(ref, isHorizontal ? 0.6 : 0.4);
   const currentImage = isHorizontal ? horizontalThumbnail : verticalThumbnail;
   const classSet = cx(styles.base, className);
-  const categoryClassSet = cx(styles.category);
+  const categoryClassSet = cx(
+    childrenClassNames && childrenClassNames.category,
+    styles.category,
+  );
   const imageClassSet = cx(styles.image);
   const readMoreThumbnailRef = useRef(null);
   const nonMobileImageClassSet = cx(styles.image, styles.nonMobile);
   const nonMobileThumbnailRef = useRef(null);
-  const noteClassSet = cx(styles.note);
+  const noteClassSet = cx(
+    childrenClassNames && childrenClassNames.note,
+    styles.note,
+  );
   const mobileImageClassSet = cx(styles.image, styles.mobile);
   const mobileThumbnailRef = useRef(null);
-  const titleClassSet = cx(styles.title);
+  const titleClassSet = cx(
+    childrenClassNames && childrenClassNames.title,
+    styles.title,
+  );
   const titleRef = useRef(null);
 
   const imageMouseEnter = () => {
@@ -161,6 +171,11 @@ const ContentHubArticle = ({
 
 ContentHubArticle.propTypes = {
   category: PropTypes.string,
+  childrenClassNames: PropTypes.shape({
+    category: PropTypes.string,
+    note: PropTypes.string,
+    title: PropTypes.string,
+  }),
   className: PropTypes.string,
   dataTestRef: PropTypes.string.isRequired,
   horizontalThumbnail: PropTypes.object,
@@ -177,6 +192,11 @@ ContentHubArticle.propTypes = {
 
 ContentHubArticle.defaultProps = {
   category: undefined,
+  childrenClassNames: {
+    category: undefined,
+    note: undefined,
+    title: undefined,
+  },
   className: undefined,
   dataTestRef: undefined,
   horizontalThumbnail: undefined,

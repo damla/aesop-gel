@@ -41,7 +41,7 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
       </div>
     </a>
     <div
-      className="category"
+      className="readMoreCategory category"
     >
       Product
     </div>
@@ -50,7 +50,7 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
       onMouseLeave={[Function]}
     >
       <a
-        className="base left dark title"
+        className="base left dark readMoreTitle title"
         data-test-ref="test_1_TITLE"
         href="https://www.aesop.com/au/r/careers?contentful=true"
         target="_self"
@@ -62,7 +62,7 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
       </a>
     </div>
     <div
-      className="note"
+      className="readMoreNote note"
     >
       5 minute read
     </div>
@@ -104,7 +104,7 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
       </div>
     </a>
     <div
-      className="category"
+      className="readMoreCategory category"
     >
       Product
     </div>
@@ -113,7 +113,7 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
       onMouseLeave={[Function]}
     >
       <a
-        className="base left dark title"
+        className="base left dark readMoreTitle title"
         data-test-ref="test_2_TITLE"
         href="https://www.aesop.com/au/r/careers?contentful=true"
         target="_self"
@@ -125,7 +125,7 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
       </a>
     </div>
     <div
-      className="note"
+      className="readMoreNote note"
     >
       5 minute read
     </div>
@@ -167,7 +167,7 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
       </div>
     </a>
     <div
-      className="category"
+      className="readMoreCategory category"
     >
       Culture
     </div>
@@ -176,7 +176,7 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
       onMouseLeave={[Function]}
     >
       <a
-        className="base left dark title"
+        className="base left dark readMoreTitle title"
         data-test-ref="test_3_TITLE"
         href="https://www.aesop.com/au/r/careers?contentful=true"
         target="_self"
@@ -188,7 +188,7 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
       </a>
     </div>
     <div
-      className="note"
+      className="readMoreNote note"
     >
       5 minute read
     </div>

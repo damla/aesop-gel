@@ -32,7 +32,6 @@
     content: '\2022';
     font-size: rem(14px);
     line-height: 1.7;
-    transform: translateY(1px);
   }
 }
 
