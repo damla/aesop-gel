@@ -49,7 +49,7 @@
   }
 }
 
-.empty-first {
+.nonFirstRow {
   grid-row: 1 / 3 !important;
 }
 

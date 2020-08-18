@@ -18,17 +18,17 @@ const ContentHubArticleList = ({
   const topLeftClassSet = cx(
     styles[`top-left-${pattern}`],
     styles[`article`],
-    ((count < 3 && pattern === 0) || count < 2) && styles[`empty-first`],
+    ((count < 3 && pattern === 0) || count < 2) && styles[`nonFirstRow`],
   );
   const topRightClassSet = cx(
     styles[`top-right-${pattern}`],
     styles[`article`],
-    ((count < 3 && pattern === 1) || count < 2) && styles[`empty-first`],
+    ((count < 3 && pattern === 1) || count < 2) && styles[`nonFirstRow`],
   );
   const bottomLeftClassSet = cx(
     styles[`bottom-left-${pattern}`],
     styles[`article`],
-    count === 1 && pattern === 1 && styles[`empty-first`],
+    count === 1 && pattern === 1 && styles[`nonFirstRow`],
   );
   const bottomRightClassSet = cx(
     styles[`bottom-right-${pattern}`],
