@@ -18,8 +18,6 @@
   @media (--viewport-lg) {
     padding: var(--layout-lg-spacing);
   }
-
-  background-color: papayawhip;
 }
 
 .image {
@@ -55,6 +53,10 @@
 
 .productNameLink {
   color: currentColor;
+}
+
+.infoHolder {
+  margin-bottom: var(--layout-sm-spacing);
 }
 
 .info {

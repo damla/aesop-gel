@@ -27,6 +27,8 @@ const ProductGridItem = ({ className, copy, info, theme, url }) => {
     variants,
   } = useVariantSelectContext();
 
+  const hasOneVariant = variants.length === 1;
+
   const [currentImage, isImageActive] = useImageTransition(
     selectedVariant?.image,
     imageRef,
@@ -72,21 +74,27 @@ const ProductGridItem = ({ className, copy, info, theme, url }) => {
         </Hyperlink>
       </Heading>
 
-      <Hidden isMedium={true}>
-        <RadioGroup
-          className={styles.variants}
-          dataTestRef={RADIO_GROUP_DATA_TEST_REF}
-          name={RADIO_GROUP_NAME}
-          onChange={e => onVariantChange(e, variants)}
-          options={variantRadioOptions}
-          theme={theme}
-          value={selectedVariant.sku}
-        />
-      </Hidden>
+      {!hasOneVariant && (
+        <Hidden isMedium={true}>
+          <RadioGroup
+            className={styles.variants}
+            dataTestRef={RADIO_GROUP_DATA_TEST_REF}
+            name={RADIO_GROUP_NAME}
+            onChange={e => onVariantChange(e, variants)}
+            options={variantRadioOptions}
+            theme={theme}
+            value={selectedVariant.sku}
+          />
+        </Hidden>
+      )}
 
-      <P className={styles.info} theme={theme}>
-        {info}
-      </P>
+      <Hidden isSmall={!hasOneVariant}>
+        <div className={styles.infoHolder}>
+          <P className={styles.info} theme={theme}>
+            {info}
+          </P>
+        </div>
+      </Hidden>
 
       <Hidden isMedium={true}>
         <AddToCartButton
