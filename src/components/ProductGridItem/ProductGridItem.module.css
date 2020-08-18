@@ -21,7 +21,6 @@
     position: relative;
     width: 460px; /* Temporary for local development */
     padding: var(--layout-lg-spacing) var(--layout-lg-spacing) 65px;
-    /* background-color: papayawhip; */
 
     &:hover {
       background-color: #f0efe1;
@@ -48,7 +47,6 @@
 
   @media (--viewport-md) {
     align-items: flex-end;
-    /* background-color: lightblue; */
   }
 
   @media (--viewport-lg) {
