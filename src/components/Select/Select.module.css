@@ -5,6 +5,7 @@
   display: block;
   padding-top: 25px;
   margin-bottom: 15px;
+  font-family: var(--font-family-sans-serif-regular);
 
   &,
   & * {
@@ -52,6 +53,14 @@
   right: 22px;
   bottom: calc(50% - 9px);
   pointer-events: none;
+
+  .dark & {
+    fill: var(--color-dark-label);
+  }
+
+  .light & {
+    fill: var(--color-light-label);
+  }
 }
 
 .label {

@@ -4,6 +4,7 @@
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
+  line-height: 1.4;
   list-style: none;
 }
 
@@ -16,7 +17,5 @@
 }
 
 .item {
-  &:not(:last-child) {
-    margin-bottom: var(--layout-sm-spacing);
-  }
+  margin-bottom: 15px;
 }
