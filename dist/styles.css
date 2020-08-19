@@ -6649,14 +6649,14 @@ sans-serif;
 }
 @media (min-width: 640px) {
 .Message-module_base__1Nwji {
-    padding: 0 20px;
-    margin: 34px 0;
+    padding: 0 34px;
+    margin: 24px 0;
     text-align: center
 }
   }
 @media (min-width: 1025px) {
 .Message-module_base__1Nwji {
-    margin: 24px 0
+    padding: 0 20px
 }
   }
 .Message-module_base__1Nwji,
