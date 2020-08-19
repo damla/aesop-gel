@@ -14,9 +14,7 @@
     text-align: center;
   }
   @media (--viewport-lg) {
-    padding: 0 20px;
     margin: 24px 0;
-    text-align: center;
   }
 
   &,
