@@ -27,7 +27,7 @@ const ProductGridItem = ({ className, copy, info, theme, url }) => {
     variants,
   } = useVariantSelectContext();
 
-  const hasOneVariant = variants.length === 1;
+  const hasOneVariant = variants?.length === 1;
 
   const [currentImage, isImageActive] = useImageTransition(
     selectedVariant?.image,
