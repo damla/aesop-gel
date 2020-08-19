@@ -13,17 +13,15 @@
   }
 
   @media (--viewport-md-only) {
-    width: 50%; /* Temporary for local development */
-    padding: 100px var(--layout-md-spacing) var(--layout-md-spacing);
+    padding: var(--layout-md-spacing);
   }
 
   @media (--viewport-lg) {
     position: relative;
-    width: 460px; /* Temporary for local development */
     padding: var(--layout-lg-spacing) var(--layout-lg-spacing) 65px;
 
     &:hover {
-      background-color: #f0efe1;
+      background-color: var(--color-white-darker-2);
 
       .variants,
       .addToCartButton {
@@ -42,7 +40,8 @@
   justify-content: center;
 
   @media (--viewport-md-only) {
-    height: 280px;
+    height: 330px;
+    padding-top: 80px;
   }
 
   @media (--viewport-md) {
@@ -50,8 +49,8 @@
   }
 
   @media (--viewport-lg) {
-    height: 440px;
-    padding-top: 80px;
+    height: 420px;
+    padding-top: 110px;
   }
 
   img {

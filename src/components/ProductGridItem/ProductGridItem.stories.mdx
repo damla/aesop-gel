@@ -10,6 +10,7 @@ import AddToCartButtonFixture from '~/components/AddToCartButton/AddToCartButton
 import mockAddToCartButtonOnClick from '~/components/AddToCartButton/__mocks__/AddToCartButton.onClick';
 import ProductGridItem from './ProductGridItem';
 import ProductGridItemFixture from './ProductGridItem.fixture';
+import styles from './ProductGridItemStorybook.module.css';
 
 <Meta title="Components/ProductGridItem" component={ProductGridItem} />
 
@@ -17,24 +18,26 @@ import ProductGridItemFixture from './ProductGridItem.fixture';
 
 <Preview>
   <Story name="Base component">
-    <AddToCartContextProvider onClick={mockAddToCartButtonOnClick}>
-      <ProductDetailContextProvider
-        product={ProductDetailHeaderFixture.product}
-      >
-        <VariantSelectContextProvider
-          variants={ProductGridItemFixture.variantOptions}
+    <div className={styles.holder}>
+      <AddToCartContextProvider onClick={mockAddToCartButtonOnClick}>
+        <ProductDetailContextProvider
+          product={ProductDetailHeaderFixture.product}
         >
-          <ProductGridItem
-            copy={{
-              addToCart: AddToCartButtonFixture.copy,
-              ...ProductGridItemFixture.copy,
-            }}
-            info={ProductGridItemFixture.info}
-            url={ProductGridItemFixture.url}
-          />
-        </VariantSelectContextProvider>
-      </ProductDetailContextProvider>
-    </AddToCartContextProvider>
+          <VariantSelectContextProvider
+            variants={ProductGridItemFixture.variantOptions}
+          >
+            <ProductGridItem
+              copy={{
+                addToCart: AddToCartButtonFixture.copy,
+                ...ProductGridItemFixture.copy,
+              }}
+              info={ProductGridItemFixture.info}
+              url={ProductGridItemFixture.url}
+            />
+          </VariantSelectContextProvider>
+        </ProductDetailContextProvider>
+      </AddToCartContextProvider>
+    </div>
   </Story>
 </Preview>
 
