@@ -119,12 +119,13 @@ export default {
     ],
   },
   linkButtonGroup: {
+    textAlign: 'left',
     children: (
       <>
-        <Hyperlink style="Internal No Icon Button Link" url="/">
+        <Hyperlink style="Internal Button Link" url="/">
           Proin vulputate
         </Hyperlink>
-        <Hyperlink style="Internal No Icon Button Link" url="Quisque lacus">
+        <Hyperlink style="Internal Button Link" url="Quisque lacus">
           Quisque lacus
         </Hyperlink>
       </>

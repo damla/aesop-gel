@@ -14,6 +14,7 @@ const MediaWithContent = forwardRef(function MediaWithContentRef(
     foregroundImage,
     foregroundImageLink,
     hasFullWidthImage,
+    hasTopOffset,
     isHero,
     isReverse,
     media,
@@ -25,6 +26,7 @@ const MediaWithContent = forwardRef(function MediaWithContentRef(
     styles.base,
     { [styles.reverse]: isReverse },
     { [styles.hero]: isHero },
+    { [styles.topOffest]: hasTopOffset },
     className,
   );
 
@@ -65,6 +67,7 @@ MediaWithContent.propTypes = {
   foregroundImage: PropTypes.element,
   foregroundImageLink: PropTypes.object,
   hasFullWidthImage: PropTypes.bool,
+  hasTopOffset: PropTypes.bool,
   isHero: PropTypes.bool,
   isReverse: PropTypes.bool,
   media: PropTypes.element.isRequired,
@@ -84,6 +87,7 @@ MediaWithContent.defaultProps = {
   foregroundImage: undefined,
   foregroundImageLink: undefined,
   hasFullWidthImage: false,
+  hasTopOffset: false,
   isHero: false,
   isReverse: false,
   media: undefined,
