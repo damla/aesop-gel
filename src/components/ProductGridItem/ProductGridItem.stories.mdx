@@ -16,23 +16,25 @@ import styles from './ProductGridItemStorybook.module.css';
 
 # ProductGridItem
 
+Requires `AddToCartContextProvider`, `ProductDetailContextProvider` and `VariantSelectContextProvider`.
+
 <Preview>
   <Story name="Base component">
     <div className={styles.holder}>
       <AddToCartContextProvider onClick={mockAddToCartButtonOnClick}>
         <ProductDetailContextProvider
-          product={ProductDetailHeaderFixture.product}
+          product={knobs.object('Product', ProductDetailHeaderFixture.product, 'Content')}
         >
           <VariantSelectContextProvider
-            variants={ProductGridItemFixture.variantOptions}
+            variants={knobs.object('Variant', ProductGridItemFixture.variantOptions, 'Content')}
           >
             <ProductGridItem
               copy={{
                 addToCart: AddToCartButtonFixture.copy,
                 ...ProductGridItemFixture.copy,
               }}
-              info={ProductGridItemFixture.info}
-              url={ProductGridItemFixture.url}
+              info={knobs.text('Info', ProductGridItemFixture.info, 'Content')}
+              url={knobs.text('URL', ProductGridItemFixture.url, 'Content')}
             />
           </VariantSelectContextProvider>
         </ProductDetailContextProvider>
@@ -40,6 +42,36 @@ import styles from './ProductGridItemStorybook.module.css';
     </div>
   </Story>
 </Preview>
+
+## Variations
+
+### Single variant
+
+<Preview>
+  <Story name="Single variant">
+    <div className={styles.holder}>
+      <AddToCartContextProvider onClick={mockAddToCartButtonOnClick}>
+        <ProductDetailContextProvider
+          product={knobs.object('Product', ProductDetailHeaderFixture.product, 'Content')}
+        >
+          <VariantSelectContextProvider
+            variants={knobs.object('Variant', ProductGridItemFixture.variantOptionsOneItem, 'Content')}
+          >
+            <ProductGridItem
+              copy={{
+                addToCart: AddToCartButtonFixture.copy,
+                ...ProductGridItemFixture.copy,
+              }}
+              info={knobs.text('Info', ProductGridItemFixture.info, 'Content')}
+              url={knobs.text('URL', ProductGridItemFixture.url, 'Content')}
+            />
+          </VariantSelectContextProvider>
+        </ProductDetailContextProvider>
+      </AddToCartContextProvider>
+    </div>
+  </Story>
+</Preview>
+
 
 ## API
 

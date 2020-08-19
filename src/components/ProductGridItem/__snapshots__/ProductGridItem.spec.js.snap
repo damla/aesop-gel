@@ -128,35 +128,6 @@ exports[`<ProductGridItem /> renders base component correctly 1`] = `
           </span>
         </label>
       </li>
-      <li
-        className="radio"
-      >
-        <label
-          className="label"
-          htmlFor="option-ARD31"
-        >
-          <input
-            aria-checked={false}
-            checked={false}
-            className="input"
-            data-test-ref="PRODUCT_GRID_ITEM_VARIANT_SELECT"
-            id="option-ARD31"
-            name="sku"
-            onChange={[Function]}
-            tabIndex={0}
-            type="radio"
-            value="ARD31"
-          />
-          <span
-            className="pot dark"
-          />
-          <span
-            className="labelContent dark"
-          >
-            500 mL - Alternate action
-          </span>
-        </label>
-      </li>
       <div
         className="errorMessage"
       >
