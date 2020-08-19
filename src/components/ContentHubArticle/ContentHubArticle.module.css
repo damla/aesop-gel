@@ -2,33 +2,52 @@
 
 .base {
   display: block;
-  padding: 15px;
+  @media (--viewport-sm-only) {
+    padding-bottom: 50px;
+  }
+  @media (--viewport-md-only) {
+    &.readMoreArticle {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+  @media (--viewport-lg) {
+    &.readMoreArticle {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+  }
 }
 
 .category {
-  padding-bottom: 12px;
-
-  /* padding: 10px 10px 10px 0; */
-  border-bottom: 1px solid var(--color-grey-60);
-  margin-bottom: 8px;
-  font-family: var(--font-family-sans-serif-regular);
-  font-size: rem(16px);
-  font-weight: var(--font-weight-semi-bold);
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--color-grey-rgba-20);
+  margin-bottom: 9px;
+  font-family: var(--font-family-sans-serif-medium);
+  font-size: rem(14px);
+  font-weight: medium;
   letter-spacing: 0;
-  line-height: 1.5;
+  line-height: 1.7;
+
+  &.readMoreCategory {
+    margin-top: 20px;
+    margin-bottom: 14px;
+    font-size: rem(16px);
+    line-height: 1.5;
+  }
 
   &::after {
     display: inline-block;
     padding: 0 10px;
     border-bottom-color: var(--color-dark-copy);
     content: '\2022';
-    font-size: rem(16px);
-    line-height: 1.5;
-    transform: translateY(1px);
+    font-size: rem(14px);
+    line-height: 1.7;
   }
 }
 
 .title span {
+  padding-bottom: 1.5px;
   border-bottom: 1px solid transparent;
   color: var(--color-grey-20);
   font-family: var(--font-family-zapf-serif);
@@ -39,6 +58,14 @@
   @media (--viewport-sm-only) {
     font-size: rem(20px);
   }
+  @media (--viewport-md-only) {
+    font-size: rem(26px);
+  }
+}
+
+.readMoreTitle span {
+  font-size: rem(24px);
+  line-height: 1.25;
 }
 
 .title:hover span {
@@ -68,10 +95,17 @@
 .note {
   margin: 15px 0;
   color: var(--color-grey-30);
-  font-family: var(--font-family-sans-serif-regular);
+  font-family: var(--font-family-sans-serif-medium);
   font-size: rem(16px);
   letter-spacing: 0;
   line-height: 1.5;
+
+  &.readMoreNote {
+    @media (--viewport-sm-only) {
+      font-size: rem(14px);
+      line-height: 1.7;
+    }
+  }
 }
 
 .nonMobile {

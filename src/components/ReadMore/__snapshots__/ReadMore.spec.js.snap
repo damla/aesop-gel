@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ReadMore /> renders base component correctly 1`] = `
-<div
+<section
   className="base fadeEnter"
 >
   <div
-    className="base readMoreArticle fadeEnter"
+    className="base readMoreArticle readMoreArticle"
     id="test_1"
   >
     <a
@@ -41,7 +41,7 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
       </div>
     </a>
     <div
-      className="category"
+      className="category readMoreCategory"
     >
       Product
     </div>
@@ -50,7 +50,7 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
       onMouseLeave={[Function]}
     >
       <a
-        className="base left dark title"
+        className="base left dark title readMoreTitle"
         data-test-ref="test_1_TITLE"
         href="https://www.aesop.com/au/r/careers?contentful=true"
         target="_self"
@@ -62,13 +62,13 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
       </a>
     </div>
     <div
-      className="note"
+      className="note readMoreNote"
     >
       5 minute read
     </div>
   </div>
   <div
-    className="base readMoreArticle fadeEnter"
+    className="base readMoreArticle readMoreArticle"
     id="test_2"
   >
     <a
@@ -104,7 +104,7 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
       </div>
     </a>
     <div
-      className="category"
+      className="category readMoreCategory"
     >
       Product
     </div>
@@ -113,7 +113,7 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
       onMouseLeave={[Function]}
     >
       <a
-        className="base left dark title"
+        className="base left dark title readMoreTitle"
         data-test-ref="test_2_TITLE"
         href="https://www.aesop.com/au/r/careers?contentful=true"
         target="_self"
@@ -125,13 +125,13 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
       </a>
     </div>
     <div
-      className="note"
+      className="note readMoreNote"
     >
       5 minute read
     </div>
   </div>
   <div
-    className="base readMoreArticle fadeEnter"
+    className="base readMoreArticle readMoreArticle"
     id="test_3"
   >
     <a
@@ -167,7 +167,7 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
       </div>
     </a>
     <div
-      className="category"
+      className="category readMoreCategory"
     >
       Culture
     </div>
@@ -176,7 +176,7 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
       onMouseLeave={[Function]}
     >
       <a
-        className="base left dark title"
+        className="base left dark title readMoreTitle"
         data-test-ref="test_3_TITLE"
         href="https://www.aesop.com/au/r/careers?contentful=true"
         target="_self"
@@ -188,10 +188,10 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
       </a>
     </div>
     <div
-      className="note"
+      className="note readMoreNote"
     >
       5 minute read
     </div>
   </div>
-</div>
+</section>
 `;

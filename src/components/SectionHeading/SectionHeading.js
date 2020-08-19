@@ -19,11 +19,9 @@ const SectionHeading = ({
   theme,
   titleFont,
 }) => {
-  const classSet = cx(
-    styles.base,
-    { [styles.offsetPageHeading]: isOffsetPageHeading },
-    className,
-  );
+  const classSet = cx(className, styles.base, {
+    [styles.offsetPageHeading]: isOffsetPageHeading,
+  });
   const eyebrowClassSet = cx(childrenClassNames.eyebrow);
   const headingClassSet = cx(
     childrenClassNames.heading,

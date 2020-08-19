@@ -1,21 +1,29 @@
 @import 'styles/index';
 
 .base {
-  @media (--viewport-lg) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+  @media (--viewport-md-only) {
+    width: 60%;
+    margin: 0 auto;
   }
 
-  /* max-width: 1440px; */
+  @media (--viewport-lg) {
+    display: flex;
+    max-width: 1440px;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-right: 60px;
+    margin-left: 60px;
+  }
 }
 
 .readMoreArticle {
   @media (--viewport-sm-only) {
+    padding-right: 20px;
     padding-bottom: 50px;
+    padding-left: 20px;
   }
 
   @media (--viewport-md-only) {
-    padding-bottom: 70px;
+    padding-bottom: 85px;
   }
 }
