@@ -7,16 +7,16 @@ export const parameters = {
     default: '#fff',
     values: [
       {
-          name: 'alabaster',
-          value: '#fffef0'
+        name: 'alabaster',
+        value: '#fffef0',
       },
       {
-          name: 'charcoal',
-          value: '#333'
+        name: 'charcoal',
+        value: '#333',
       },
     ],
-  }
-}
+  },
+};
 
 addDecorator(withA11y);
 addDecorator(withKnobs);
