@@ -6626,7 +6626,9 @@ sans-serif;
         -ms-flex-direction: row;
             flex-direction: row;
     -ms-flex-pack: distribute;
-        justify-content: space-around
+        justify-content: space-around;
+    margin-right: 60px;
+    margin-left: 60px
 }
   }
 @media (max-width: 639px) {

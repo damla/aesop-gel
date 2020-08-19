@@ -11,7 +11,7 @@ const ReadMore = ({ articles, className }) => {
 
   return (
     <Transition isActiveOnMount={true} type="fade">
-      <div className={classSet}>
+      <section className={classSet}>
         {articles.map(article => (
           <ContentHubArticle
             category={article.category}
@@ -29,7 +29,7 @@ const ReadMore = ({ articles, className }) => {
             verticalThumbnail={article.verticalThumbnail}
           />
         ))}
-      </div>
+      </section>
     </Transition>
   );
 };
