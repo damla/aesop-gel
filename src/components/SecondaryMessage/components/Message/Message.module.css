@@ -10,8 +10,11 @@
 
   @media (--viewport-md) {
     padding: 0 20px;
-    margin: 24px 0;
+    margin: var(--layout-md-spacing) 0;
     text-align: center;
+  }
+  @media (--viewport-lg) {
+    margin: 24px 0;
   }
 
   &,

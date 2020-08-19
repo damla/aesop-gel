@@ -6650,6 +6650,13 @@ sans-serif;
 @media (min-width: 640px) {
 .Message-module_base__1Nwji {
     padding: 0 20px;
+    margin: 34px 0;
+    text-align: center
+}
+  }
+@media (min-width: 1025px) {
+.Message-module_base__1Nwji {
+    padding: 0 20px;
     margin: 24px 0;
     text-align: center
 }
@@ -6772,7 +6779,7 @@ sans-serif;
 @media (max-width: 639px) {
 .SecondaryMessage-module_multiple__29N-B:first-of-type {
       padding-bottom: 20px;
-      border-bottom: 1px solid #999;
+      border-bottom: 1px solid rgba(51, 51, 51, 0.2);
       margin-bottom: 0
 
       /* border-image: linear-gradient(0.25turn, transparent, var(--color-grey-45), transparent) 10 20%; */
@@ -6780,7 +6787,7 @@ sans-serif;
     }
 @media (min-width: 640px) {
 .SecondaryMessage-module_multiple__29N-B:first-of-type {
-      border-right: 1px solid #999
+      border-right: 1px solid rgba(51, 51, 51, 0.2)
 
       /* border-image: linear-gradient(transparent, var(--color-grey-45), transparent) 10 100%; */
   }
