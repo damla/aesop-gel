@@ -9,12 +9,12 @@
   text-align: left;
 
   @media (--viewport-md) {
-    padding: 0 20px;
-    margin: var(--layout-md-spacing) 0;
+    padding: 0 var(--layout-md-spacing);
+    margin: 24px 0;
     text-align: center;
   }
   @media (--viewport-lg) {
-    margin: 24px 0;
+    padding: 0 20px;
   }
 
   &,
