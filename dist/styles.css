@@ -5116,6 +5116,10 @@ sans-serif;
         flex-basis: auto
 }
   }
+.Content-module_base__2wNf2.Content-module_topOffest__2ZSdY,
+  .Content-module_base__2wNf2.Content-module_topOffest__2ZSdY.Content-module_reverse__2G1Xa {
+    margin-top: 0;
+  }
 @media (min-width: 1025px) {
 .Content-module_hasFullWidthImage__3FSu5 {
     margin: auto 0 auto 50%
