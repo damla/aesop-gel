@@ -66,11 +66,7 @@ const StoreDetail = ({ className }) => {
           hasFullWidthContent={true}
           isReversed={true}
           sidebar={
-            <Heading
-              hasSerifFont={true}
-              level="2"
-              size="large"
-            >
+            <Heading hasSerifFont={true} level="2" size="large">
               Lorem ipsum dolor sit amet consectetur
             </Heading>
           }
