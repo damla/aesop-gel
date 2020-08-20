@@ -1,0 +1,182 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProductGridItem /> renders base component correctly 1`] = `
+<div
+  className="base dark"
+>
+  <a
+    className="base left dark imageLink fadeEnter"
+    href="/p/"
+    target="_self"
+  >
+    <picture
+      className="base picture dark image"
+    >
+      <img />
+    </picture>
+  </a>
+  <h5
+    className="base mediumWeightFont xXSmall dark productName"
+  >
+    <a
+      className="base left dark productNameLink"
+      href="/p/"
+      target="_self"
+    >
+      Lorem ipsum dolor
+    </a>
+  </h5>
+  <div
+    className="infoVariantHolder"
+  >
+    <div
+      className="infoHolder"
+    >
+      <p
+        className="base dark info"
+      >
+        4 Sizes / From $ 26.45
+      </p>
+    </div>
+    <ul
+      className="base variants"
+    >
+      <li
+        className="radio"
+      >
+        <label
+          className="label"
+          htmlFor="option-ARD33"
+        >
+          <input
+            aria-checked={true}
+            checked={true}
+            className="input"
+            data-test-ref="PRODUCT_GRID_ITEM_VARIANT_SELECT"
+            id="option-ARD33"
+            name="sku"
+            onChange={[Function]}
+            tabIndex={0}
+            type="radio"
+            value="ARD33"
+          />
+          <span
+            className="pot dark"
+          />
+          <span
+            className="labelContent dark"
+          >
+            50 mL - In stock
+          </span>
+        </label>
+      </li>
+      <li
+        className="radio"
+      >
+        <label
+          className="label"
+          htmlFor="option-ARD32"
+        >
+          <input
+            aria-checked={false}
+            checked={false}
+            className="input"
+            data-test-ref="PRODUCT_GRID_ITEM_VARIANT_SELECT"
+            id="option-ARD32"
+            name="sku"
+            onChange={[Function]}
+            tabIndex={0}
+            type="radio"
+            value="ARD32"
+          />
+          <span
+            className="pot dark"
+          />
+          <span
+            className="labelContent dark"
+          >
+            100 mL - Not in stock
+          </span>
+        </label>
+      </li>
+      <li
+        className="radio"
+      >
+        <label
+          className="label"
+          htmlFor="option-ARD30"
+        >
+          <input
+            aria-checked={false}
+            checked={false}
+            className="input"
+            data-test-ref="PRODUCT_GRID_ITEM_VARIANT_SELECT"
+            id="option-ARD30"
+            name="sku"
+            onChange={[Function]}
+            tabIndex={0}
+            type="radio"
+            value="ARD30"
+          />
+          <span
+            className="pot dark"
+          />
+          <span
+            className="labelContent dark"
+          >
+            180 mL - In stock
+          </span>
+        </label>
+      </li>
+      <div
+        className="errorMessage"
+      >
+        
+      </div>
+    </ul>
+  </div>
+  <button
+    className="base alternate blockStyle dark base fullWidth addToCartButton"
+    data-test-ref="PRODUCT_GRID_ITEM_ADD_TO_CART_CTA"
+    disabled={false}
+    onClick={[Function]}
+    title="Add to your cart — $26.45"
+    type="button"
+  >
+    <span
+      className="label"
+    >
+      <span>
+        Lorem ipsum dolor added to your cart
+      </span>
+      <span>
+        Add to your cart — $26.45
+      </span>
+    </span>
+  </button>
+  <dl
+    className="base dark hasBottomBorder definitionList"
+  >
+    <dt
+      className="term slideIn"
+    >
+      Lorem ipsum dolor
+    </dt>
+    <dd
+      className="description slideIn"
+    >
+      Lorem ipsum dolort, consectetur adipiscing elit.
+    </dd>
+    <dt
+      className="term slideIn"
+    >
+      Ut consectetur mi
+    </dt>
+    <dd
+      className="description slideIn"
+    >
+      Ut consectetur, vitae libero imperdiet id. 
+    </dd>
+  </dl>
+</div>
+`;
