@@ -136,7 +136,9 @@
 }
 
 .definitionList {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: auto minmax(0, 1fr);
   grid-template-columns: auto minmax(0, 1fr);
 
   @media (--viewport-lg) {
