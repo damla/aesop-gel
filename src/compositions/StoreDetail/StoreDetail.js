@@ -68,7 +68,6 @@ const StoreDetail = ({ className }) => {
           sidebar={
             <Heading
               hasSerifFont={true}
-              hasTopMargin={false}
               level="2"
               size="large"
             >

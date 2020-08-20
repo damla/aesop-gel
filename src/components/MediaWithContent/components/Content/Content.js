@@ -38,13 +38,17 @@ const Content = ({
           eyebrow={copy.eyebrow}
           hasSerifFontHeading={true}
           heading={copy.heading}
-          isFlush={true}
+          isFlush={!isHero}
           subHeading={copy.subHeading}
           theme={theme}
         />
         <div className={styles.content}>
           {copy.description && (
-            <ParagraphSet className={styles.description} theme={theme}>
+            <ParagraphSet
+              className={styles.description}
+              isLarge={isHero}
+              theme={theme}
+            >
               {copy.description}
             </ParagraphSet>
           )}

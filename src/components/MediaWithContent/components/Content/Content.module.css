@@ -119,19 +119,7 @@
 }
 
 .content {
-  font-size: rem(16px);
-
-  @media (--viewport-lg) {
-    font-size: rem(14px);
-  }
-
-  p {
-    font-size: rem(16px);
-
-    @media (--viewport-lg) {
-      font-size: rem(14px);
-    }
-  }
+  font-size: rem(14px);
 
   @media (--viewport-md-only) {
     width: 48%;
@@ -139,6 +127,8 @@
   }
 
   .hero & {
+    font-size: rem(16px);
+
     @media (--viewport-sm-only) {
       margin-top: 15px;
     }
@@ -149,6 +139,8 @@
   }
 
   .notHero & {
+    margin-top: 10px;
+
     @media (--viewport-md-only) {
       margin-left: var(--layout-md-spacing);
     }
@@ -164,14 +156,12 @@
 }
 
 .description {
-  margin: 20px 0 20px;
-  font-size: rem(16px);
-
-  @media (--viewport-lg) {
-    font-size: rem(14px);
-  }
+  margin: 10px 0 20px;
+  font-size: rem(14px);
 
   .hero & {
     margin-top: 0;
+    margin-bottom: 30px;
+    font-size: rem(16px);
   }
 }

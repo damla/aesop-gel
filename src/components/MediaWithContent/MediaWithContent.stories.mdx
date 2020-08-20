@@ -22,8 +22,8 @@ import MediaWithContentFixture from './MediaWithContent.fixture';
       const theme = knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation');
       return (
         <div style={{position: 'relative'}}>
-          <nav style={{position: 'relative', height: '40px', color: 'white', zIndex: '1000', padding:  '20px'}}>Shop  Read  Search  Stores</nav>
-          <span style={{position: 'absolute', top: '195px', color: 'white', zIndex: '1000', paddingLeft: '20px', fontSize: '30px' }}>Aesop</span>
+          {/* <nav style={{position: 'relative', height: '40px', color: 'white', zIndex: '1000', padding:  '20px', borderBottom: '1px solid white' }}>Shop  Read  Search  Stores</nav>
+          <span style={{position: 'absolute', top: '195px', color: 'white', zIndex: '1000', paddingLeft: '20px', fontSize: '30px' }}>Aesop</span> */}
           <MediaWithContent
             backgroundColor={knobs.text('backgroundColor', null, 'Presentation')}
             content={(() => {

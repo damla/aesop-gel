@@ -85,6 +85,7 @@ const ProductDetailBody = ({ className, copy, theme }) => {
             <Transition isActiveOnMount={true} type={TRANSITIONS.TYPE.FADE}>
               <Heading
                 className={styles.productName}
+                isFlush={true}
                 level={HEADING.LEVEL.ONE}
                 size={HEADING.SIZE.X_LARGE}
                 theme={theme}
@@ -98,7 +99,11 @@ const ProductDetailBody = ({ className, copy, theme }) => {
         <Hidden isMedium={true}>
           <div className={styles.description}>
             <Transition isActiveOnMount={true} type={TRANSITIONS.TYPE.FADE}>
-              <Paragraph className={styles.descriptionCopy} theme={theme}>
+              <Paragraph
+                className={styles.descriptionCopy}
+                isFlush={true}
+                theme={theme}
+              >
                 {description}
               </Paragraph>
             </Transition>

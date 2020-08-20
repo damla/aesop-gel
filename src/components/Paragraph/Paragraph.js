@@ -3,8 +3,14 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import styles from './Paragraph.module.css';
 
-const Paragraph = ({ children, className, theme }) => {
-  const classSet = cx(styles.base, styles[theme], className);
+const Paragraph = ({ children, className, isFlush, isLarge, theme }) => {
+  const classSet = cx(
+    styles.base,
+    styles[theme],
+    { [styles.flush]: isFlush },
+    { [styles.large]: isLarge },
+    className,
+  );
 
   return <p className={classSet}>{children}</p>;
 };
@@ -12,17 +18,26 @@ const Paragraph = ({ children, className, theme }) => {
 Paragraph.propTypes = {
   children: PropTypes.any,
   className: PropTypes.string,
+  isFlush: PropTypes.bool,
+  isLarge: PropTypes.bool,
   theme: PropTypes.oneOf(['dark', 'light']),
 };
 
 Paragraph.defaultProps = {
   children: undefined,
   className: undefined,
+  isFlush: false,
+  isLarge: false,
   theme: 'dark',
 };
 
-const ParagraphSet = ({ children, className, theme }) => {
-  const classSet = cx(styles.set, styles[theme], className);
+const ParagraphSet = ({ children, className, isLarge, theme }) => {
+  const classSet = cx(
+    styles.set,
+    styles[theme],
+    { [styles.large]: isLarge },
+    className,
+  );
 
   return <div className={classSet}>{children}</div>;
 };
@@ -30,12 +45,14 @@ const ParagraphSet = ({ children, className, theme }) => {
 ParagraphSet.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
+  isLarge: PropTypes.bool,
   theme: PropTypes.oneOf(['dark', 'light']),
 };
 
 ParagraphSet.defaultProps = {
   children: undefined,
   className: undefined,
+  isLarge: false,
   theme: 'dark',
 };
 
