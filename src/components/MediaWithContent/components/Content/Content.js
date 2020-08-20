@@ -10,6 +10,7 @@ const Content = ({
   content,
   copy,
   hasFullWidthImage,
+  hasTopOffset,
   isHero,
   isReverse,
   theme,
@@ -22,6 +23,7 @@ const Content = ({
     { [styles.notHero]: !isHero },
     { [styles.hasFullWidthImage]: hasFullWidthImage },
     { [styles.hasHalfWidthImage]: !hasFullWidthImage },
+    { [styles.topOffest]: hasTopOffset },
     styles[theme.toLowerCase()],
   );
 
@@ -63,6 +65,7 @@ Content.propTypes = {
     subHeading: PropTypes.string,
   }).isRequired,
   hasFullWidthImage: PropTypes.bool,
+  hasTopOffset: PropTypes.bool,
   isHero: PropTypes.bool,
   isReverse: PropTypes.bool,
   theme: PropTypes.oneOf(['dark', 'light']),
@@ -78,6 +81,7 @@ Content.defaultProps = {
     subHeading: undefined,
   },
   hasFullWidthImage: false,
+  hasTopOffset: false,
   isHero: false,
   isReverse: false,
   theme: 'dark',

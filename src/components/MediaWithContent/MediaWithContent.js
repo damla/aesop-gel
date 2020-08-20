@@ -46,6 +46,7 @@ const MediaWithContent = forwardRef(function MediaWithContentRef(
         content={content}
         copy={copy}
         hasFullWidthImage={hasFullWidthImage}
+        hasTopOffset={hasTopOffset}
         isHero={isHero}
         isReverse={isReverse}
         theme={theme}

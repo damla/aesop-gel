@@ -11,6 +11,11 @@
     width: 50%;
     flex-basis: auto;
   }
+
+  &.topOffest,
+  &.topOffest.reverse {
+    margin-top: 0;
+  }
 }
 
 .hasFullWidthImage {
