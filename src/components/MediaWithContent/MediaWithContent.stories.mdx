@@ -21,50 +21,57 @@ import MediaWithContentFixture from './MediaWithContent.fixture';
     {(() => {
       const theme = knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation');
       return (
-        <MediaWithContent
-          backgroundColor={knobs.text('backgroundColor', null, 'Presentation')}
-          content={(() => {
-            const options = {
-              DefinitionList: {
-                Component: DefinitionList,
-                props: MediaWithContentFixture.definitionList,
-              },
-              KitList: {
-                Component: KitList,
-                props: MediaWithContentFixture.kitList,
-              },
-              LinkButtonGroup: {
-                Component: LinkButtonGroup,
-                props: MediaWithContentFixture.linkButtonGroup,
-              },
-            };
-            const componentName = knobs.select('content', Object.keys(options), 'LinkButtonGroup', 'Content');
-            const { Component, props } = options[componentName];
-            return <Component {...props} theme={theme} />
-          })()}
-          copy={{
-            description: knobs.text(
-              'description',
-              MediaWithContentFixture.copy.default.description,
-              'Copy',
-            ),
-            eyebrow: knobs.text('eyebrow', MediaWithContentFixture.copy.default.eyebrow, 'Copy'),
-            heading: knobs.text('heading', MediaWithContentFixture.copy.default.heading, 'Copy'),
-            subHeading: knobs.text('subHeading', MediaWithContentFixture.copy.default.subHeading, 'Copy'),
-          }}
-          hasFullWidthImage={knobs.boolean('hasFullWidthImage', false, 'Presentation')}
-          isHero={knobs.boolean('isHero', false, 'Presentation')}
-          isReverse={knobs.boolean('isReverse', false, 'Presentation')}
-          media={
-            <Image
-              altText={MediaWithContentFixture.image.expectations.altText}
-              large={MediaWithContentFixture.image.expectations.large}
-              medium={MediaWithContentFixture.image.expectations.medium}
-              small={MediaWithContentFixture.image.expectations.small}
-            />
-          }
-          theme={theme}
-        />
+        <div style={{position: 'relative'}}>
+          {/*
+          <nav style={{position: 'relative', height: '40px', color: 'white', zIndex: '1000', padding:  '20px'}}>Shop  Read  Search  Stores</nav>
+          <span style={{position: 'absolute', top: '195px', color: 'white', zIndex: '1000', paddingLeft: '20px'}}>Aesop</span>
+          */}
+          <MediaWithContent
+            backgroundColor={knobs.text('backgroundColor', null, 'Presentation')}
+            content={(() => {
+              const options = {
+                DefinitionList: {
+                  Component: DefinitionList,
+                  props: MediaWithContentFixture.definitionList,
+                },
+                KitList: {
+                  Component: KitList,
+                  props: MediaWithContentFixture.kitList,
+                },
+                LinkButtonGroup: {
+                  Component: LinkButtonGroup,
+                  props: MediaWithContentFixture.linkButtonGroup,
+                },
+              };
+              const componentName = knobs.select('content', Object.keys(options), 'LinkButtonGroup', 'Content');
+              const { Component, props } = options[componentName];
+              return <Component {...props} theme={theme} />
+            })()}
+            copy={{
+              description: knobs.text(
+                'description',
+                MediaWithContentFixture.copy.default.description,
+                'Copy',
+              ),
+              eyebrow: knobs.text('eyebrow', MediaWithContentFixture.copy.default.eyebrow, 'Copy'),
+              heading: knobs.text('heading', MediaWithContentFixture.copy.default.heading, 'Copy'),
+              subHeading: knobs.text('subHeading', MediaWithContentFixture.copy.default.subHeading, 'Copy'),
+            }}
+            hasFullWidthImage={knobs.boolean('hasFullWidthImage', false, 'Presentation')}
+            hasTopOffset={knobs.boolean('hasTopOffset', false, 'Presentation')}
+            isHero={knobs.boolean('isHero', false, 'Presentation')}
+            isReverse={knobs.boolean('isReverse', false, 'Presentation')}
+            media={
+              <Image
+                altText={MediaWithContentFixture.image.expectations.altText}
+                large={MediaWithContentFixture.image.expectations.large}
+                medium={MediaWithContentFixture.image.expectations.medium}
+                small={MediaWithContentFixture.image.expectations.small}
+              />
+            }
+            theme={theme}
+          />
+        </div>
       )
     })()}
   </Story>
