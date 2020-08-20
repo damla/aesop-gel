@@ -80,7 +80,7 @@
 
 @media (--viewport-lg) {
   .infoVariantHolder {
-    height: 60px;
+    min-height: 60px;
 
     &:focus-within .infoHolder {
       opacity: 0;

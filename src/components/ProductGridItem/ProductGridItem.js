@@ -19,7 +19,7 @@ import { P } from '~/components/Paragraph';
 
 import styles from './ProductGridItem.module.css';
 
-const ProductGridItem = ({ className, copy, info, theme, url }) => {
+const ProductGridItem = ({ className, copy, id, info, theme, url }) => {
   const imageRef = useRef();
   const {
     selectedVariant,
@@ -51,7 +51,7 @@ const ProductGridItem = ({ className, copy, info, theme, url }) => {
   const ADD_TO_CART_BUTTON_DATA_TEST_REF = 'PRODUCT_GRID_ITEM_ADD_TO_CART_CTA';
 
   return (
-    <div className={classSet}>
+    <div className={classSet} id={id}>
       <Transition isActive={isImageActive} name="fade">
         <Hyperlink className={styles.imageLink} url={url}>
           <Image
@@ -133,6 +133,7 @@ ProductGridItem.propTypes = {
       }),
     }),
   }),
+  id: PropTypes.string,
   info: PropTypes.string,
   theme: PropTypes.oneOf(['dark', 'light']),
   url: PropTypes.string,
@@ -150,6 +151,7 @@ ProductGridItem.defaultProps = {
       },
     },
   },
+  id: undefined,
   info: undefined,
   theme: 'dark',
   url: undefined,
