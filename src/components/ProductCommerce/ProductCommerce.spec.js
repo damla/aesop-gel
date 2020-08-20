@@ -23,7 +23,7 @@ describe('<ProductCommerce />', () => {
             ...ProductCommerceFixture.copy,
           }}
           cta={ProductCommerceFixture.cta}
-          description={ProductCommerceFixture.description}
+          description={<p>ProductCommerceFixture.description</p>}
           eyebrow={ProductCommerceFixture.eyebrow}
           heading={ProductCommerceFixture.heading}
           onAddToCartClick={mockAddToCartButtonOnClick}

@@ -14,7 +14,6 @@ import Loading from '~/components/Loading';
 import RadioGroup from '~/components/RadioGroup';
 import SectionHeading from '~/components/SectionHeading';
 import Transition from '~/components/Transition';
-import { P } from '~/components/Paragraph';
 
 import styles from './ProductCommerce.module.css';
 
@@ -72,9 +71,7 @@ const ProductCommerce = ({
           isFlush={true}
           theme={theme}
         />
-        <P className={styles.description} theme={theme}>
-          {description}
-        </P>
+        {description && description}
         <div className={styles.variantsWrapper}>
           <Heading
             hasMediumWeightFont={true}
@@ -142,7 +139,7 @@ ProductCommerce.propTypes = {
     text: PropTypes.string,
     url: PropTypes.string,
   }),
-  description: PropTypes.string,
+  description: PropTypes.element,
   eyebrow: PropTypes.string,
   heading: PropTypes.string,
   id: PropTypes.string,
