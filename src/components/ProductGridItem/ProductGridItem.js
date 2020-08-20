@@ -78,7 +78,7 @@ const ProductGridItem = ({ className, copy, info, theme, url }) => {
       </Heading>
 
       <div className={styles.infoVariantHolder}>
-        <Hidden isSmall={!hasOneVariant}>
+        <Hidden isMedium={!hasOneVariant} isSmall={!hasOneVariant}>
           <div className={classInfoHolderSet}>
             <P className={styles.info} theme={theme}>
               {info}
@@ -87,7 +87,7 @@ const ProductGridItem = ({ className, copy, info, theme, url }) => {
         </Hidden>
 
         {!hasOneVariant && (
-          <Hidden isMedium={true}>
+          <Hidden isMedium={false}>
             <RadioGroup
               className={styles.variants}
               dataTestRef={RADIO_GROUP_DATA_TEST_REF}
@@ -101,7 +101,7 @@ const ProductGridItem = ({ className, copy, info, theme, url }) => {
         )}
       </div>
 
-      <Hidden isMedium={true}>
+      <Hidden isMedium={false}>
         <AddToCartButton
           className={styles.addToCartButton}
           copy={copy.addToCart}

@@ -139,7 +139,7 @@
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
 
-  @media (--viewport-md) {
+  @media (--viewport-lg) {
     .dark & {
       border-top: 2px solid var(--color-grey-20);
     }
@@ -162,13 +162,13 @@
   }
 
   dt:nth-of-type(1) {
-    @media (--viewport-md) {
+    @media (--viewport-lg) {
       padding-top: 14px;
     }
   }
 
   dd:nth-of-type(1) {
-    @media (--viewport-sm-only) {
+    @media (--viewport-sm-md-only) {
       padding-top: 0;
     }
   }
