@@ -11,8 +11,7 @@
     max-width: 1440px;
     flex-direction: row;
     justify-content: space-around;
-    margin-right: 60px;
-    margin-left: 60px;
+    margin: 0 auto;
   }
 }
 
