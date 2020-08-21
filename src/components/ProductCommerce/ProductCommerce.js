@@ -71,7 +71,7 @@ const ProductCommerce = ({
           isFlush={true}
           theme={theme}
         />
-        {description && description}
+        {description}
         <div className={styles.variantsWrapper}>
           <Heading
             hasMediumWeightFont={true}
