@@ -19,6 +19,11 @@ import BodyCopyFixture from './BodyCopy.fixture';
           <BodyCopy
             copy={knobs.text('copy', BodyCopyFixture.copy, 'Copy')}
             eyebrow={knobs.text('eyebrow', BodyCopyFixture.eyebrow, 'Copy')}
+            hasFlushHeading={knobs.boolean(
+              'hasFlushHeading',
+              false,
+              'Presentation',
+            )}
             hasSerifFontHeading={knobs.boolean(
               'hasSerifFontHeading',
               false,
