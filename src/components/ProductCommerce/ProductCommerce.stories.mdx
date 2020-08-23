@@ -6,6 +6,9 @@ import {
   VariantSelectContextProvider,
 } from '~/contexts';
 import Podium from '~/components/Podium';
+import { P } from '~/components/Paragraph';
+import { HYPERLINK_STYLE_TYPES } from '~/constants';
+import Hyperlink from '~/components/Hyperlink';
 import AddToCartButtonFixture from '~/components/AddToCartButton/AddToCartButton.fixture';
 import mockAddToCartButtonOnClick from '~/components/AddToCartButton/__mocks__/AddToCartButton.onClick';
 import ProductDetailHeaderFixture from '~/components/ProductDetailHeader/ProductDetailHeader.fixture';
@@ -24,18 +27,44 @@ Requires `AddToCartContextProvider`, `ProductDetailContextProvider` and `Variant
   <Story name="Base component">
     <Podium horizontalPadding="small" verticalPadding="small">
       <AddToCartContextProvider onClick={mockAddToCartButtonOnClick}>
-        <ProductDetailContextProvider product={ProductDetailHeaderFixture.product}>
-          <VariantSelectContextProvider variants={ProductCommerceFixture.variantOptions}>
+        <ProductDetailContextProvider
+          product={ProductDetailHeaderFixture.product}
+        >
+          <VariantSelectContextProvider
+            variants={ProductCommerceFixture.variantOptions}
+          >
             <ProductCommerce
               copy={{
                 addToCart: AddToCartButtonFixture.copy,
                 ...ProductCommerceFixture.copy,
               }}
               cta={knobs.object('cta', ProductCommerceFixture.cta, 'Content')}
-              description={knobs.text('description', ProductCommerceFixture.description, 'Content')}
-              eyebrow={knobs.text('eyebrow', ProductCommerceFixture.eyebrow, 'Content')}
-              heading={knobs.text('heading', ProductCommerceFixture.heading, 'Content')}
-              theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
+              description={
+                <P>
+                  {knobs.text(
+                    'description',
+                    ProductCommerceFixture.description,
+                    'Content'
+                  )}
+                  <Hyperlink url={ProductCommerceFixture.cta.url}>Learn more</Hyperlink>
+                </P>
+              }
+              eyebrow={knobs.text(
+                'eyebrow',
+                ProductCommerceFixture.eyebrow,
+                'Content'
+              )}
+              heading={knobs.text(
+                'heading',
+                ProductCommerceFixture.heading,
+                'Content'
+              )}
+              theme={knobs.select(
+                'theme',
+                ['dark', 'light'],
+                'dark',
+                'Presentation'
+              )}
             />
           </VariantSelectContextProvider>
         </ProductDetailContextProvider>
