@@ -65,13 +65,30 @@ import MediaWithContentFixture from './MediaWithContent.fixture';
             isHero={knobs.boolean('isHero', false, 'Presentation')}
             isReverse={knobs.boolean('isReverse', false, 'Presentation')}
             media={
-              <Image
-                altText={MediaWithContentFixture.image.expectations.altText}
-                large={MediaWithContentFixture.image.expectations.large}
-                medium={MediaWithContentFixture.image.expectations.medium}
-                small={MediaWithContentFixture.image.expectations.small}
-              />
-            }
+              (() => {
+                const options = {
+                  Video: {
+                    Component: Video,
+                    props: {
+                      fallbackImage: MediaWithContentFixture.video.fallbackImage,
+                      hasAllowAudio: false,
+                      hasAutoplay: true,
+                      hasLoop: true,
+                      hasPlayInFullScreen: false,
+                      hasControls: false,
+                      isFullWidth: false,
+                      large: MediaWithContentFixture.video.source,
+                    }
+                  },
+                  Image: {
+                    Component: Image,
+                    props: MediaWithContentFixture.image.expectations,
+                  },
+                };
+                const componentName = knobs.select('media', Object.keys(options), 'Image', 'Content');
+                const { Component, props } = options[componentName];
+                return <Component {...props} theme={theme} />
+              })()}
             theme={theme}
           />
         </div>
