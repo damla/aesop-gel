@@ -10,6 +10,7 @@ const BodyCopy = ({
   className,
   copy,
   eyebrow,
+  hasFlushHeading,
   hasSerifFontHeading,
   heading,
   id,
@@ -32,6 +33,7 @@ const BodyCopy = ({
         hasSerifFontHeading={hasSerifFontHeading}
         heading={heading}
         id={id}
+        isFlush={hasFlushHeading}
         subHeading={subHeading}
         theme={currentTheme}
       />
@@ -53,6 +55,7 @@ BodyCopy.propTypes = {
   content: PropTypes.any,
   copy: PropTypes.node,
   eyebrow: PropTypes.string,
+  hasFlushHeading: PropTypes.bool,
   hasSerifFontHeading: PropTypes.bool,
   heading: PropTypes.string,
   id: PropTypes.string,
@@ -70,6 +73,7 @@ BodyCopy.defaultProps = {
   content: undefined,
   copy: undefined,
   eyebrow: undefined,
+  hasFlushHeading: false,
   hasSerifFontHeading: false,
   heading: undefined,
   id: undefined,
