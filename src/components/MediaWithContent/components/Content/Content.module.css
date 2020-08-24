@@ -21,27 +21,36 @@
 .hasFullWidthImage {
   @media (--viewport-lg) {
     margin: auto 0 auto 50%;
+
+    &.hero {
+      width: 100%;
+      margin-left: 0;
+    }
   }
 }
 
 .hasFullWidthImage.reverse {
   @media (--viewport-lg) {
     margin: auto 50% auto 0;
+
+    &.hero {
+      width: 100%;
+      margin-right: 0;
+    }
   }
 }
 
 .hasFullWidthImage.hero {
   @media (--viewport-md-only) {
     position: relative;
-    padding-top: var(--layout-logo-vertical-offset-lg);
     margin-right: auto;
-    margin-left: var(--layout-lg-spacing);
+    margin-left: 0;
   }
 }
 
 .innerWrapper {
   justify-content: space-between;
-  padding: 36px 20px 56px;
+  padding: 40px 20px;
 
   @media (--viewport-md-only) {
     .hero & {
@@ -59,6 +68,19 @@
     .hero & {
       flex-direction: column;
     }
+
+    .hasFullWidthImage.hero & {
+      width: 100%;
+      max-width: 448px;
+      padding-right: 0;
+      padding-left: 0;
+      margin-right: 40px;
+      margin-left: 33%;
+    }
+
+    .hasFullWidthImage.hero.topOffest & {
+      padding-top: var(--layout-logo-vertical-offset-md);
+    }
   }
 
   @media (--viewport-lg) {
@@ -69,14 +91,26 @@
     padding: 115px 0;
     margin: auto;
 
-    .hero & {
-      padding-top: var(--layout-logo-vertical-offset-lg);
-      margin-top: 0;
-    }
-
     .hero.reverse & {
       margin-right: 15%;
       margin-left: 34%;
+    }
+
+    .hasFullWidthImage.hero & {
+      width: 100%;
+      max-width: 595px;
+      margin-right: 15%;
+      margin-left: auto;
+    }
+
+    .hasFullWidthImage.hero.reverse & {
+      margin-right: 0;
+      margin-left: 24.99%;
+    }
+
+    .hasFullWidthImage.hero.topOffest & {
+      padding-top: var(--layout-logo-vertical-offset-lg);
+      margin-top: 0;
     }
   }
 

@@ -53,7 +53,8 @@ const Carousel = ({
 
   let slideOffset = 0;
 
-  /* Slide offset refers to the number of slides in view per display size,
+  /**
+   * Slide offset refers to the number of slides in view per display size,
    * and effects the offset position and Next Arrow display
    */
   if (!hasFullWidthSlides) {
