@@ -13,6 +13,8 @@ import ImageCarouselFixture from './ImageCarousel.fixture';
 <Preview>
   <Story name="Base component">
     <ImageCarousel
+      autoplaySpeed={knobs.number('autoplaySpeed', ImageCarouselFixture.autoplaySpeed, 'Presentation')}
+      hasAutoplay={knobs.boolean('hasAutoplay', false, 'Presentation')}
       slides={[
         {
           caption: knobs.text(
@@ -29,6 +31,7 @@ import ImageCarouselFixture from './ImageCarousel.fixture';
         },
         ...ImageCarouselFixture.slides,
       ]}
+      theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
     />
   </Story>
 </Preview>
@@ -44,7 +47,7 @@ import ImageCarouselFixture from './ImageCarousel.fixture';
 <Preview>
   <Story name="With Autoplay">
     <ImageCarousel
-      autoplaySpeed={knobs.number('autoplaySpeed', 3000, 'Presentation')}
+      autoplaySpeed={knobs.number('autoplaySpeed', ImageCarouselFixture.autoplaySpeed, 'Presentation')}
       hasAutoplay={true}
       slides={ImageCarouselFixture.slides}
     />

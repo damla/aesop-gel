@@ -2,7 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Carousel from '~/components/Carousel';
 
-const ImageCarousel = ({ autoplaySpeed, className, hasAutoplay, slides }) => (
+const ImageCarousel = ({
+  autoplaySpeed,
+  className,
+  hasAutoplay,
+  slides,
+  theme,
+}) => (
   <Carousel
     autoplaySpeed={autoplaySpeed}
     className={className}
@@ -12,6 +18,7 @@ const ImageCarousel = ({ autoplaySpeed, className, hasAutoplay, slides }) => (
     hasShowCaption={true}
     hasSlideCounter={true}
     slides={slides}
+    theme={theme}
   />
 );
 

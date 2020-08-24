@@ -17,6 +17,7 @@ export default {
     {
       url: '/',
       description: 'Vivamus sollicitudin ac ligula',
+      caption: 'Vivamus sollicitudin ac ligula',
       heading: 'Quisque non enim efficitur',
       image: {
         altText: 'Quisque non enim efficitur',
@@ -31,6 +32,7 @@ export default {
     {
       url: '/',
       description: 'Suspendisse elit mauris',
+      caption: 'Suspendisse elit mauris',
       heading: 'Phasellus posuere porta varius',
       image: {
         altText: 'Phasellus posuere porta varius',
@@ -45,6 +47,7 @@ export default {
     {
       url: '/',
       description: 'Aliquam metus enim, pellentesque eu',
+      caption: 'Aliquam metus enim, pellentesque eu',
       heading: 'Etiam at pharetra nisl',
       image: {
         altText: 'Etiam at pharetra nisl',
@@ -59,6 +62,7 @@ export default {
     {
       url: '/',
       description: 'Suspendisse elit',
+      caption: 'Suspendisse elit',
       heading: 'Phasellus posuere porta varius',
       image: {
         altText: 'Phasellus posuere porta varius',

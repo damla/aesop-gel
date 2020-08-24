@@ -10,6 +10,9 @@ import CarouselFixture from './Carousel.fixture';
 <Preview>
   <Story name="Base component">
     <Carousel
+      hasFullWidthSlides={knobs.boolean('hasFullWidthSlides', false, 'Presentation')}
+      hasShowCaption={knobs.boolean('hasShowCaption', false, 'Presentation')}
+      hasSlideCounter={knobs.boolean('hasSlideCounter', false, 'Presentation')}
       theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
       introduction={{
         cta: {

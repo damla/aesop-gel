@@ -23,4 +23,5 @@ export default {
       },
     },
   ],
+  theme: 'dark',
 };
