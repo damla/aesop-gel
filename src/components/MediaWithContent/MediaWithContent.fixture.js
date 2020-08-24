@@ -120,7 +120,6 @@ export default {
   },
   linkButtonGroup: {
     textAlign: 'left',
-    hasFitContent: true,
     children: (
       <>
         <Hyperlink style="Internal Button Link" url="/">

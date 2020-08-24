@@ -20,12 +20,12 @@ import MediaWithContentFixture from './MediaWithContent.fixture';
   <Story name="Base Component">
     {(() => {
       const theme = knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation');
-      const hasHeader = knobs.boolean('hasHeader', false, 'Presentation');
+      const hasHeader = knobs.boolean('hasHeader', false, 'Implementation');
       return (
         <div style={{position: 'relative'}}>
           {hasHeader && (
             <>
-              <nav style={{position: 'relative', height: '40px', color: 'white', zIndex: '1000', padding:  '20px', borderBottom: '1px solid white' }}>Shop  Read  Search  Stores</nav>
+              <nav style={{position: 'relative', height: '20px', lineHeight: '1', color: 'white', zIndex: '1000', padding:  '30px 20px', borderBottom: '1px solid white' }}>Shop&nbsp;&nbsp;&nbsp;&nbsp;Read&nbsp;&nbsp;&nbsp;&nbsp;Search&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stores</nav>
               <span style={{position: 'absolute', top: '195px', color: 'white', zIndex: '1000', paddingLeft: '20px', fontSize: '30px' }}>Aesop</span>
             </>
           )}
