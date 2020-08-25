@@ -26,7 +26,7 @@
   --color-grey-rgba-20: rgba(51, 51, 51, 0.2);
 
   /* UI colours light theme */
-  --color-light-copy: var(--color-primary);
+  --color-light-copy: var(--color-white);
   --color-light-copy-alternate: var(--color-white-darker);
   --color-light-label: var(--color-white-darker);
   --color-light-link: var(--color-primary);
