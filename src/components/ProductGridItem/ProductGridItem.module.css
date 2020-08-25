@@ -90,7 +90,7 @@
 
 .infoHolder {
   @media (--viewport-sm-md-only) {
-    margin-bottom: var(--layout-sm-spacing);
+    margin-bottom: 24px;
     opacity: 1;
   }
   @media (--viewport-lg) {
@@ -99,6 +99,7 @@
 }
 
 .info {
+  margin-bottom: 0;
   color: var(--color-grey-30);
   font-size: rem(14px);
   text-align: center;
@@ -122,6 +123,7 @@
 }
 
 .addToCartButton {
+  max-width: 100%;
   @media (--viewport-lg) {
     position: absolute;
     right: 0;
