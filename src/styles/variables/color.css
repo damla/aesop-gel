@@ -30,7 +30,7 @@
   --color-light-copy: var(--color-white);
   --color-light-copy-alternate: var(--color-white-darker);
   --color-light-label: var(--color-white-darker);
-  --color-light-link: var(--color-primary);
+  --color-light-link: var(--color-white);
   --color-light-link-hover: var(--color-white-darker);
   --color-light-decoration: var(--color-white-darker);
   --color-light-disabled: var(--color-grey-40);
