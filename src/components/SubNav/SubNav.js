@@ -11,9 +11,15 @@ import List from '~/components/List';
 import styles from './SubNav.module.css';
 
 export const getLinkItems = (links, theme) =>
-  links.map(({ id, style, children, url }) => ({
+  links.map(({ children, id, hasTargetInNewWindow, style, url }) => ({
     content: (
-      <Hyperlink className={styles.item} style={style} theme={theme} url={url}>
+      <Hyperlink
+        className={styles.item}
+        hasTargetInNewWindow={hasTargetInNewWindow}
+        style={style}
+        theme={theme}
+        url={url}
+      >
         {children}
       </Hyperlink>
     ),
