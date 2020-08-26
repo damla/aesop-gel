@@ -14,15 +14,15 @@
     padding-bottom: 56.25%; /* 16:9 */
   }
 
-  @media (--viewport-lg) {
-    height: 100%;
-    padding-top: 0;
-    padding-bottom: 0;
+  &.heroFullWidth {
+    @media (--viewport-md) {
+      height: 100%;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
   }
-}
 
-.heroFullWidth {
-  @media (--viewport-md) {
+  @media (--viewport-lg) {
     height: 100%;
     padding-top: 0;
     padding-bottom: 0;
