@@ -2,7 +2,7 @@
 
 .base {
   @media (--viewport-md-only) {
-    width: 60%;
+    width: calc((100% - 34px * 2) * 4 / 6);
     margin: 0 auto;
   }
 
