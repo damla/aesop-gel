@@ -3969,7 +3969,14 @@ sans-serif;
 .Video-module_base__3wxiY {
     height: 100%;
     padding-top: 0;
-    padding-bottom: 0%
+    padding-bottom: 0
+}
+  }
+@media (min-width: 640px) {
+.Video-module_heroFullWidth__3eSZs {
+    height: 100%;
+    padding-top: 0;
+    padding-bottom: 0
 }
   }
 .Video-module_spanContent__rtQD5 {
