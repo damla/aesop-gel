@@ -2828,7 +2828,6 @@ sans-serif;
 .ContentHubArticle-module_category__2y6ZD.ContentHubArticle-module_readMoreCategory__2t-qE {
     margin-top: 20px;
     margin-bottom: 14px;
-    font-size: 16px;
     line-height: 1.5;
   }
 .ContentHubArticle-module_category__2y6ZD::after {
@@ -6916,7 +6915,7 @@ sans-serif;
 */
 @media (min-width: 640px) and (max-width: 1024px) {
 .ReadMore-module_base__3paua {
-    width: 60%;
+    width: calc((100% - 34px * 2) * 4 / 6);
     margin: 0 auto
 }
   }
