@@ -142,7 +142,6 @@ const ProductDetailBody = ({ className, copy, theme }) => {
 
           <AddToCartButton
             copy={copy?.addToCart}
-            dataTestRef={ADD_TO_CART_BUTTON_DATA_TEST_REF}
             theme={theme}
           />
         </div>

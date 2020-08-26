@@ -102,7 +102,6 @@ const ProductCommerce = ({
           <AddToCartButton
             className={styles.addToCartButton}
             copy={copy.addToCart}
-            dataTestRef={ADD_TO_CART_BUTTON_DATA_TEST_REF}
             isFullWidth={false}
             theme={theme}
           />

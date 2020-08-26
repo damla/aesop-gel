@@ -146,7 +146,7 @@ AddToCartButton.defaultProps = {
       title: undefined,
     },
   },
-  dataTestRef: undefined,
+  dataTestRef: 'ADD_TO_CART',
   isEnabled: true,
   isFullWidth: true,
   theme: 'dark',
