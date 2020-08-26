@@ -24,6 +24,7 @@ export const Video = forwardRef(function VideoRef(
     hasPlayInFullScreen,
     id,
     isFullWidth,
+    isHeroFullWidth,
     large,
     medium,
     poster,
@@ -97,6 +98,7 @@ export const Video = forwardRef(function VideoRef(
 
   const classSet = cx(styles.base, className, {
     [styles.spanContent]: hasSpanContent,
+    [styles.heroFullWidth]: isHeroFullWidth,
     [styles.fullWidth]: isFullWidth,
   });
 
@@ -196,6 +198,10 @@ Video.propTypes = {
     but it will react to the height of the surrounding element.
   */
   isFullWidth: PropTypes.bool,
+  /**
+    This prop negates the 16:9 aspect ratio on tablet so Full Width Hero Videos fill any avaliable space.
+   */
+  isHeroFullWidth: PropTypes.bool,
   large: PropTypes.string,
   medium: PropTypes.string,
   poster: PropTypes.shape({
@@ -230,6 +236,7 @@ Video.defaultProps = {
   hasSpanContent: false,
   hasPlayInFullScreen: false,
   id: undefined,
+  isHeroFullWidth: false,
   isFullWidth: true,
   large: undefined,
   medium: undefined,
