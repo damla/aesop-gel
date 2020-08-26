@@ -140,10 +140,7 @@ const ProductDetailBody = ({ className, copy, theme }) => {
             />
           </Transition>
 
-          <AddToCartButton
-            copy={copy?.addToCart}
-            theme={theme}
-          />
+          <AddToCartButton copy={copy?.addToCart} theme={theme} />
         </div>
 
         <Hidden isLarge={true} isMedium={true} isXLarge={true}>
