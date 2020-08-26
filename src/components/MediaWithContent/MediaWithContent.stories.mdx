@@ -21,6 +21,7 @@ import MediaWithContentFixture from './MediaWithContent.fixture';
     {(() => {
       const theme = knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation');
       const hasHeader = knobs.boolean('hasHeader', false, 'Implementation');
+      const hasForegroundImage = knobs.boolean('hasForegroundImage', false, 'Implementation');
       return (
         <div style={{position: 'relative'}}>
           {hasHeader && (
@@ -30,6 +31,17 @@ import MediaWithContentFixture from './MediaWithContent.fixture';
             </>
           )}
           <MediaWithContent
+            foregroundImage={
+              hasForegroundImage ? (
+                <Image
+                  altText={MediaWithContentFixture.image.foreground.altText}
+                  large={MediaWithContentFixture.image.foreground.large}
+                  medium={MediaWithContentFixture.image.foreground.medium}
+                  small={MediaWithContentFixture.image.foreground.small}
+                />
+              ) : undefined
+            }
+            foregroundImageLink={hasForegroundImage ? MediaWithContentFixture.foregroundImageLink : undefined}
             backgroundColor={knobs.text('backgroundColor', null, 'Presentation')}
             content={(() => {
               const options = {
@@ -76,6 +88,7 @@ import MediaWithContentFixture from './MediaWithContent.fixture';
                       hasLoop: true,
                       hasPlayInFullScreen: false,
                       hasControls: false,
+                      isHeroFullWidth: knobs.boolean('isHeroFullWidth', false, 'Presentation'),
                       isFullWidth: false,
                       large: MediaWithContentFixture.video.source,
                     }
