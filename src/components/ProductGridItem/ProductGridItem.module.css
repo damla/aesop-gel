@@ -72,6 +72,10 @@
   margin-top: 0;
   margin-bottom: 7px;
   text-align: center;
+
+  a {
+    font-family: inherit;
+  }
 }
 
 .productNameLink {
