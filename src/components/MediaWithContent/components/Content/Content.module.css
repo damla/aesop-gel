@@ -84,7 +84,7 @@
 
   .topOffest & {
     @media (--viewport-md) {
-      padding-top: var(--layout-logo-vertical-offset-md);
+      padding-top: var(80px);
     }
 
     @media (--viewport-lg) {
@@ -95,6 +95,12 @@
 
   .hasFullWidthImage & {
     height: 100%;
+  }
+
+  .topOffest.hasFullWidthImage & {
+    @media (--viewport-md) {
+      padding-top: var(--layout-logo-vertical-offset-md);
+    }
   }
 
   .hasFullWidthImage.hero & {
