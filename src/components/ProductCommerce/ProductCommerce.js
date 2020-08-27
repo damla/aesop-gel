@@ -47,7 +47,6 @@ const ProductCommerce = ({
   const classSet = cx(styles.base, className);
   const RADIO_GROUP_NAME = 'sku';
   const RADIO_GROUP_DATA_TEST_REF = 'PRODUCT_COMMERCE_VARIANT_SELECT';
-  const ADD_TO_CART_BUTTON_DATA_TEST_REF = 'PRODUCT_COMMERCE_ADD_TO_CART_CTA';
 
   return (
     <div className={classSet} id={id}>
