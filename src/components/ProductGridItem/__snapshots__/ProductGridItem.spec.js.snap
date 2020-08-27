@@ -137,7 +137,7 @@ exports[`<ProductGridItem /> renders base component correctly 1`] = `
   </div>
   <button
     className="base alternate blockStyle dark base fullWidth addToCartButton"
-    data-test-ref="PRODUCT_GRID_ITEM_ADD_TO_CART_CTA"
+    data-test-ref="ADD_TO_CART"
     disabled={false}
     onClick={[Function]}
     title="Add to your cart — $26.45"
