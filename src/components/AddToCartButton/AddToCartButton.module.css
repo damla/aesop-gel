@@ -4,7 +4,8 @@
   width: min-content;
   min-width: auto;
   max-width: 100%;
-  padding: 15px 15px 18px;
+  justify-content: center;
+  padding: 20px 15px 20px;
   font-size: rem(15px);
   text-align: center;
 

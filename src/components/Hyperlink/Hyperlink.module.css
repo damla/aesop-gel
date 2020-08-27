@@ -8,6 +8,11 @@
   font-weight: var(--font-weight-normal);
   outline: none;
   text-decoration: none;
+
+  &,
+  & * {
+    box-sizing: border-box;
+  }
 }
 
 .icon {
@@ -27,14 +32,17 @@
   display: inline-block;
   min-width: 220px;
   max-width: 300px;
-  padding: 23px;
+  padding: 18px 23px;
   border-width: 1px;
   border-style: solid;
+  font-family: var(--font-family-sans-serif-medium);
+  font-size: rem(15px);
   line-height: 1.4;
   transition: all 200ms var(--easing-ease-in-out-cubic);
 
-  @media (--viewport-md) {
-    padding: 15px 20px;
+  @media (--viewport-sm-only) {
+    width: 100%;
+    max-width: 100%;
   }
 
   &.hasIcon {
@@ -43,15 +51,21 @@
 
   .icon {
     position: absolute;
-    top: calc(50% - 8px);
+    top: calc(50% - 6px);
     right: 23px;
+    font-size: 0;
+    line-height: 1;
   }
+}
+
+.blockStyle.hasExternalIcon .icon {
+  top: calc(50% - 5px);
 }
 
 .dark {
   @extend %font-theme-dark-link;
 
-  .icon {
+  .icon.icon {
     svg {
       path {
         fill: var(--color-dark-background);
@@ -60,6 +74,8 @@
   }
 
   &.blockStyle {
+    border-color: var(--color-grey-rgba-20);
+
     .icon {
       svg {
         path {

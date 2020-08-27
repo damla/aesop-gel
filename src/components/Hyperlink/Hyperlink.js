@@ -31,6 +31,7 @@ const Hyperlink = ({
     styles.base,
     { [styles.blockStyle]: !isInline },
     { [styles.hasIcon]: hasIcon },
+    { [styles.hasExternalIcon]: isExternal && hasIcon },
     { [styles.alternate]: isAlternate },
     styles[textAlign],
     styles[theme],
