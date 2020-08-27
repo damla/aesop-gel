@@ -3,7 +3,7 @@
 exports[`<AddToCartButton /> renders base component correctly 1`] = `
 <button
   className="base alternate blockStyle dark base fullWidth"
-  data-test-ref="DATA_TEST_REF"
+  data-test-ref="ADD_TO_CART"
   disabled={false}
   onClick={[Function]}
   title="Add to your cart — $26.45"

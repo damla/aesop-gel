@@ -17,23 +17,33 @@
   > * {
     pointer-events: none;
   }
+
+  &,
+  & * {
+    box-sizing: border-box;
+  }
 }
 
 .blockStyle {
   display: inline-block;
   min-width: 220px;
   max-width: 300px;
-  padding: 15px;
+  padding: 20px;
   border-width: 1px;
   border-style: solid;
   transition: all 200ms var(--easing-ease-in-out-cubic);
+
+  @media (--viewport-sm-only) {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 .dark {
   @extend %font-theme-dark-link;
 
   &.blockStyle {
-    border-color: var(--color-grey-60);
+    border-color: var(--color-grey-rgba-20);
 
     &:hover,
     &:focus {

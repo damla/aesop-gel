@@ -68,74 +68,18 @@ exports[`<BodyCopy /> renders base component correctly 1`] = `
   >
     <div>
       <a
-        className="base blockStyle hasIcon left dark"
+        className="base blockStyle left dark"
         href="/"
         target="_self"
       >
-        Proin vulputate
-         
-        <i
-          aria-hidden="true"
-          className="icon"
-        >
-          <svg
-            className="base rightArrow dark"
-            data-ref=""
-            focusable="false"
-            height={12}
-            role="img"
-            style={
-              Object {
-                "height": "12px",
-                "width": "12px",
-              }
-            }
-            tabIndex={-1}
-            viewBox="0 0 50 50"
-            width={12}
-          >
-            <g>
-              <path
-                d="M30.1,5.3L50,25.1L30.1,45h-6.6l18-17.6H0v-4.8h41.5l-18-17.6h6.6V5.3z"
-              />
-            </g>
-          </svg>
-        </i>
+        Proin vulputate dignissim
       </a>
       <a
-        className="base blockStyle hasIcon left dark"
+        className="base blockStyle left dark"
         href="Quisque lacus"
         target="_self"
       >
-        Quisque lacus
-         
-        <i
-          aria-hidden="true"
-          className="icon"
-        >
-          <svg
-            className="base rightArrow dark"
-            data-ref=""
-            focusable="false"
-            height={12}
-            role="img"
-            style={
-              Object {
-                "height": "12px",
-                "width": "12px",
-              }
-            }
-            tabIndex={-1}
-            viewBox="0 0 50 50"
-            width={12}
-          >
-            <g>
-              <path
-                d="M30.1,5.3L50,25.1L30.1,45h-6.6l18-17.6H0v-4.8h41.5l-18-17.6h6.6V5.3z"
-              />
-            </g>
-          </svg>
-        </i>
+        Quisque lacus dolor
       </a>
     </div>
   </div>

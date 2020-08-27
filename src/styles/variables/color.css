@@ -39,7 +39,7 @@
   --color-dark-copy: var(--color-secondary);
   --color-dark-copy-alternate: var(--color-grey-63);
   --color-dark-label: var(--color-grey-30);
-  --color-dark-link: var(--color-grey-20);
+  --color-dark-link: var(--color-secondary);
   --color-dark-link-hover: var(--color-secondary);
   --color-dark-decoration: var(--color-grey-30);
   --color-dark-disabled: var(--color-grey-57);

@@ -46,7 +46,6 @@ const ProductDetailBody = ({ className, copy, theme }) => {
   });
   const RADIO_GROUP_NAME = 'sku';
   const RADIO_GROUP_DATA_TEST_REF = 'PRODUCT_DETAIL_VARIANT_SELECT';
-  const ADD_TO_CART_BUTTON_DATA_TEST_REF = 'PRODUCT_DETAIL_ADD_TO_CART_CTA';
 
   const definitionListItems = [
     ...definitionList,
@@ -140,11 +139,7 @@ const ProductDetailBody = ({ className, copy, theme }) => {
             />
           </Transition>
 
-          <AddToCartButton
-            copy={copy?.addToCart}
-            dataTestRef={ADD_TO_CART_BUTTON_DATA_TEST_REF}
-            theme={theme}
-          />
+          <AddToCartButton copy={copy?.addToCart} theme={theme} />
         </div>
 
         <Hidden isLarge={true} isMedium={true} isXLarge={true}>

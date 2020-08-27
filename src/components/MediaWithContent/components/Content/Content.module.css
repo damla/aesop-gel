@@ -39,6 +39,7 @@
 }
 
 .hasFullWidthImage.reverse.hero {
+  pointer-events: none;
   @media (--viewport-lg) {
     width: 100%;
     margin-right: 0;
@@ -69,6 +70,7 @@
   }
 
   .hero & {
+    pointer-events: auto;
     @media (--viewport-md-only) {
       width: 60%;
       margin-right: auto;

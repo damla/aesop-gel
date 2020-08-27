@@ -48,7 +48,6 @@ const ProductGridItem = ({ className, copy, id, info, theme, url }) => {
 
   const RADIO_GROUP_NAME = 'sku';
   const RADIO_GROUP_DATA_TEST_REF = 'PRODUCT_GRID_ITEM_VARIANT_SELECT';
-  const ADD_TO_CART_BUTTON_DATA_TEST_REF = 'PRODUCT_GRID_ITEM_ADD_TO_CART_CTA';
 
   return (
     <div className={classSet} id={id}>
@@ -105,7 +104,6 @@ const ProductGridItem = ({ className, copy, id, info, theme, url }) => {
         <AddToCartButton
           className={styles.addToCartButton}
           copy={copy.addToCart}
-          dataTestRef={ADD_TO_CART_BUTTON_DATA_TEST_REF}
           isFullWidth={true}
           theme={theme}
         />
