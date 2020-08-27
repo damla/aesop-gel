@@ -28,7 +28,7 @@ exports[`<StoreDetailHeader /> renders base component correctly 1`] = `
           className="detailContent"
         >
           <a
-            className="base hasIcon left dark hyperlink"
+            className="base hasIcon hasExternalIcon left dark hyperlink"
             data-test-ref="STORE_DETAILS_DIRECTION_LINK"
             href="https://www.google.com/maps?saddr=Current+Location&daddr=Duis in massa sed, Suspendisse hendrerit"
             target="_blank"
@@ -78,7 +78,7 @@ exports[`<StoreDetailHeader /> renders base component correctly 1`] = `
           className="detailContent"
         >
           <a
-            className="base hasIcon left dark hyperlink"
+            className="base hasIcon hasExternalIcon left dark hyperlink"
             data-test-ref="STORE_DETAILS_DIRECTION_EMAIL"
             href="mailto:consectetur.elit@aesop.com"
             target="_blank"
