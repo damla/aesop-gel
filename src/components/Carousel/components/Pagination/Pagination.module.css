@@ -55,4 +55,12 @@
   margin: 0;
   background-color: var(--color-light-copy);
   transition: left 1000ms var(--easing-ease-out-cubic);
+
+  .dark & {
+    background-color: var(--color-dark-copy);
+  }
+
+  .light & {
+    background-color: var(--color-light-copy);
+  }
 }
