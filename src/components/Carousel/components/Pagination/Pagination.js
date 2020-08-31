@@ -4,18 +4,20 @@ import PropTypes from 'prop-types';
 import styles from './Pagination.module.css';
 
 const Pagination = ({ dots, hasFlushPagination, progressIndex, theme }) => {
-  const width = `${100 / dots.length}%`;
-  const positionLeft = `${(100 / dots.length) * progressIndex}%`;
+  if (!dots.length) return null;
+
+  const dotsLength = dots.length;
+  const width = `${100 / dotsLength}%`;
+  const positionLeft = `${(100 / dotsLength) * progressIndex}%`;
+  const listClassSet = cx(
+    styles.list,
+    { [styles.flush]: hasFlushPagination },
+    styles[theme],
+  );
 
   return (
     <div className={styles.base}>
-      <div
-        className={cx(
-          styles.list,
-          { [styles.flush]: hasFlushPagination },
-          styles[theme],
-        )}
-      >
+      <div className={listClassSet}>
         <div className={styles.bar} style={{ width, left: positionLeft }} />
       </div>
     </div>
@@ -30,7 +32,7 @@ Pagination.propTypes = {
 };
 
 Pagination.defaultProps = {
-  dots: undefined,
+  dots: [],
   hasFlushPagination: false,
   progressIndex: 0,
   theme: 'dark',

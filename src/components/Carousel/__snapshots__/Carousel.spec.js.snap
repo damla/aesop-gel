@@ -468,24 +468,19 @@ exports[`<Carousel /> renders base component correctly 1`] = `
     <div
       className="base"
     >
-      <ul
+      <div
         className="list dark"
       >
-        <li
-          className="slick-active"
-        >
-          <div
-            onClick={[Function]}
-          />
-        </li>
-        <li
-          className=""
-        >
-          <div
-            onClick={[Function]}
-          />
-        </li>
-      </ul>
+        <div
+          className="bar"
+          style={
+            Object {
+              "left": "0%",
+              "width": "50%",
+            }
+          }
+        />
+      </div>
     </div>
   </div>
 </div>

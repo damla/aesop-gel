@@ -4,8 +4,18 @@ exports[`<Carousel.Pagination /> renders base component correctly 1`] = `
 <div
   className="base"
 >
-  <ul
+  <div
     className="list dark"
-  />
+  >
+    <div
+      className="bar"
+      style={
+        Object {
+          "left": "0%",
+          "width": "100%",
+        }
+      }
+    />
+  </div>
 </div>
 `;
