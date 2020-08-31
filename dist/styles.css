@@ -2303,6 +2303,12 @@ sans-serif;
   -webkit-transition: left 1000ms cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: left 1000ms cubic-bezier(0.215, 0.61, 0.355, 1);
 }
+.Pagination-module_dark__2FCbX .Pagination-module_bar__31cQF {
+    background-color: #333;
+  }
+.Pagination-module_light__36LlY .Pagination-module_bar__31cQF {
+    background-color: #fffef2;
+  }
 
 /* @import './key-frame.css'; */
 /* @import './font-face.css'; */
