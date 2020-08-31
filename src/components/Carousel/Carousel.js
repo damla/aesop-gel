@@ -35,6 +35,7 @@ const Carousel = ({
   theme,
 }) => {
   const slidesLength = slides.length;
+  const [progressIndex, setProgressIndex] = useState(0);
   const [isCaptionActive, setIsCaptionActive] = useState(true);
   const [isNextButtonActive, setIsNextButtonActive] = useState(true);
   const [isPreviousButtonActive, setIsPreviousButtonActive] = useState(
@@ -96,6 +97,7 @@ const Carousel = ({
     Pagination,
     NextButton,
     PreviousButton,
+    progressIndex,
     theme,
   });
 
@@ -106,6 +108,7 @@ const Carousel = ({
 
   const handleBeforeChange = (index, nextIndex) => {
     setIsCaptionActive(false);
+    setProgressIndex(nextIndex);
 
     if (hasFullWidthSlides) {
       return;

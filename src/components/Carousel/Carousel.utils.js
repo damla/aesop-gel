@@ -13,6 +13,7 @@ export const getCarouselSettings = ({
   Pagination,
   NextButton,
   PreviousButton,
+  progressIndex,
   theme,
 }) => ({
   autoplay: hasAutoplay,
@@ -22,6 +23,7 @@ export const getCarouselSettings = ({
       dots={dots}
       fullWidth={hasFullWidthSlides}
       hasFlushPagination={hasFlushPagination}
+      progressIndex={progressIndex}
       theme={theme}
     />
   ),
