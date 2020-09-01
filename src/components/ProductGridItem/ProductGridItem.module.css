@@ -1,6 +1,7 @@
 @import 'styles/index';
 
 .base {
+  width: 100%;
   transition: background-color 300ms var(--easing-ease-out-cubic);
 
   @media (--viewport-sm-only) {
