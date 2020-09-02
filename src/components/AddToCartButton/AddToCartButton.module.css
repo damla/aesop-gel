@@ -6,7 +6,7 @@
   max-width: 100%;
   justify-content: center;
   padding: 20px 15px 20px;
-  font-size: rem(15px);
+  font-size: rem(14px);
   text-align: center;
 
   @media (--viewport-lg) {

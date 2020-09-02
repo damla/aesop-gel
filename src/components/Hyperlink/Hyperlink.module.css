@@ -30,13 +30,14 @@
 
 .blockStyle {
   display: inline-block;
-  min-width: 220px;
+  min-width: 210px;
   max-width: 300px;
-  padding: 18px 23px;
+  height: 60px;
+  padding: 19px 23px;
   border-width: 1px;
   border-style: solid;
   font-family: var(--font-family-sans-serif-medium);
-  font-size: rem(15px);
+  font-size: rem(14px);
   line-height: 1.4;
   transition: all 200ms var(--easing-ease-in-out-cubic);
 
@@ -88,12 +89,12 @@
     &:focus {
       border-color: var(--color-dark-background);
       background-color: var(--color-dark-background);
-      color: var(--color-light-link-hover);
+      color: var(--color-light-link);
 
       .icon {
         svg {
           path {
-            fill: var(--color-light-link-hover);
+            fill: var(--color-light-link);
           }
         }
       }
