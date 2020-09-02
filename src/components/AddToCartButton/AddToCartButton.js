@@ -1,11 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import {
-  useAddToCartContext,
-  useProductDetailContext,
-  useVariantSelectContext,
-} from 'contexts';
+import { useAddToCartContext, useVariantSelectContext } from 'contexts';
 import { HYPERLINK_STYLE_TYPES } from '~/constants';
 import Button from '~/components/Button';
 import Loading from '~/components/Loading';
@@ -21,12 +17,7 @@ const AddToCartButton = ({
   theme,
 }) => {
   const addToCart = useAddToCartContext();
-  const { productDetail } = useProductDetailContext();
   const { selectedVariant } = useVariantSelectContext();
-
-  if (!productDetail) return null;
-
-  const { productName } = productDetail;
   const { isInStock, price, sku, alternateAction } = selectedVariant;
 
   const classSet = cx(
@@ -75,7 +66,7 @@ const AddToCartButton = ({
 
   const { hasError, isLoading, isUpdateSuccessful } = addToCart;
   const cartActionLabel = `${copy.cartAction} — ${price}`;
-  const updateNotificationLabel = `${productName} ${copy.updateNotification}`;
+  const updateNotificationLabel = copy.updateNotification;
   const showUpdateSuccessMessage = !isLoading && isUpdateSuccessful;
 
   const labelClassName = cx(
