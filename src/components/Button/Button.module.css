@@ -8,7 +8,7 @@
   background-color: transparent;
   cursor: pointer;
   font-family: var(--font-family-sans-serif-regular);
-  font-size: rem(15px);
+  font-size: rem(14px);
   font-weight: var(--font-weight-normal);
   line-height: 1.4;
   outline: none;
@@ -26,9 +26,10 @@
 
 .blockStyle {
   display: inline-block;
-  min-width: 220px;
+  min-width: 210px;
   max-width: 300px;
-  padding: 20px;
+  height: 60px;
+  padding: 19px 23px;
   border-width: 1px;
   border-style: solid;
   transition: all 200ms var(--easing-ease-in-out-cubic);
