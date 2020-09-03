@@ -4100,9 +4100,9 @@ sans-serif;
 .MediaBlock-module_light___JgJ7 {
   color: #fffef2;
 }
-.MediaBlock-module_figure__3ovYx {
-  margin-bottom: calc(16px * 2);
-}
+.MediaBlock-module_figure__3ovYx:first-of-type {
+    margin-bottom: 45px;
+  }
 @media (min-width: 640px) {
 .MediaBlock-module_figure__3ovYx {
     -webkit-box-flex: 0;
