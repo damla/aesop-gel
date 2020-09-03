@@ -1,6 +1,7 @@
 export default {
   products: [
     {
+<<<<<<< HEAD
       addToCart: {
         cartAction: 'Add to your cart',
         updateNotification: 'added to your cart',
@@ -9,6 +10,8 @@ export default {
           title: 'Out of stock',
         },
       },
+=======
+>>>>>>> ecf893a... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
       closedState: {
         background: 'Image',
         backgroundColor: '#9DB5AC',
@@ -31,7 +34,11 @@ export default {
           medium:
             './assets/images/HorizontalProductDisplayAccordion/candles-product.png',
           large:
+<<<<<<< HEAD
             './assets/images/HorizontalProductDisplayAccordion/candles-product.png',
+=======
+            './as sets/images/HorizontalProductDisplayAccordion/candles-product.png',
+>>>>>>> ecf893a... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
         },
         id: 'ptolomey-closed-test',
         openButtonText: 'Learn more',
@@ -89,6 +96,7 @@ export default {
       ],
     },
     {
+<<<<<<< HEAD
       addToCart: {
         cartAction: 'Add to your cart',
         updateNotification: 'added to your cart',
@@ -97,6 +105,8 @@ export default {
           title: 'Out of stock',
         },
       },
+=======
+>>>>>>> ecf893a... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
       closedState: {
         background: 'Image',
         backgroundColor: '#9DB5AC',
@@ -177,6 +187,7 @@ export default {
       ],
     },
     {
+<<<<<<< HEAD
       addToCart: {
         cartAction: 'Add to your cart',
         updateNotification: 'added to your cart',
@@ -185,6 +196,8 @@ export default {
           title: 'Out of stock',
         },
       },
+=======
+>>>>>>> ecf893a... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
       closedState: {
         background: 'Image',
         backgroundColor: '#BAC7B2',
