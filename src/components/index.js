@@ -14,9 +14,11 @@ import DialogBanner from './DialogBanner';
 import DoubleMedia from './DoubleMedia';
 import Figure from './Figure';
 import FlyinPanel from './FlyinPanel';
+import FullWidthHeroScroll from './FullWidthHeroScroll';
 import GoogleMap from './GoogleMap';
 import Heading from './Heading';
 import Hidden from './Hidden';
+import HorizontalProductDisplayAccordion from './HorizontalProductDisplayAccordion';
 import Hyperlink from './Hyperlink';
 import Icon from './Icon';
 import Image from './Image';
@@ -65,9 +67,11 @@ export { DialogBanner };
 export { DoubleMedia };
 export { Figure };
 export { FlyinPanel };
+export { FullWidthHeroScroll };
 export { GoogleMap };
 export { Heading };
 export { Hidden };
+export { HorizontalProductDisplayAccordion };
 export { Hyperlink };
 export { Icon };
 export { Image };
@@ -119,9 +123,11 @@ export default {
   DoubleMedia,
   Figure,
   FlyinPanel,
+  FullWidthHeroScroll,
   GoogleMap,
   Heading,
   Hidden,
+  HorizontalProductDisplayAccordion,
   Hyperlink,
   Icon,
   Image,
