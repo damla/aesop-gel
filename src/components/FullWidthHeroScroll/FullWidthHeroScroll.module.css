@@ -16,6 +16,7 @@
   }
 }
 
+<<<<<<< HEAD
 .dark {
   @extend %font-theme-dark-copy;
 }
@@ -27,12 +28,17 @@
 .heroEyebrow {
   margin: 12px 0 10px;
   font-family: var(--font-family-sans-serif-regular);
+=======
+.heroEyebrow {
+  margin-bottom: 10px;
+>>>>>>> 23691e3... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
 
   @media (--viewport-lg) {
     font-size: rem(14px);
   }
 }
 
+<<<<<<< HEAD
 .fullscreenHeroCopy {
   padding: 0;
   margin: 0 0 2em;
@@ -46,13 +52,48 @@
   @media (--viewport-md) {
     max-width: 410px;
     padding: 90px 20px;
+=======
+.innerWrapper {
+  padding: 36px 20px 56px;
+
+  @media (--viewport-md-only) {
+    .hero & {
+      width: 60%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  @media (--viewport-md) {
+    padding: 90px 25%;
+
+    .hero & {
+      flex-direction: column;
+    }
+>>>>>>> 23691e3... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
   }
 
   @media (--viewport-lg) {
     width: 66.66667%;
+<<<<<<< HEAD
     max-width: 410px;
     padding: 115px 0 2em;
     margin: 0 0 0 330px;
+=======
+    max-width: 780px;
+    padding: 115px 0 2em;
+    margin: auto;
+
+    .hero & {
+      padding-top: var(--layout-logo-vertical-offset-lg);
+      margin-top: 0;
+    }
+
+    .hero.reverse & {
+      margin-right: 15%;
+      margin-left: 34%;
+    }
+>>>>>>> 23691e3... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
   }
 
   .hasFullWidthImage & {
@@ -68,7 +109,10 @@
 
 .heroTitle {
   margin: 0 0 1em;
+<<<<<<< HEAD
   font-family: var(--font-family-sans-serif-regular);
+=======
+>>>>>>> 23691e3... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
   font-size: 2.5rem;
   @media (--viewport-md) {
     font-size: 26px;
@@ -110,11 +154,18 @@
 
 .fullscreenHero {
   display: flex;
+<<<<<<< HEAD
   min-height: calc(100vh - 120px);
   box-sizing: border-box;
   flex-direction: column;
   justify-content: space-between;
   margin: 0 auto auto;
+=======
+  height: calc(100vh - 120px);
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: space-between;
+>>>>>>> 23691e3... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
 }
 
 .fullscreenHeroText {
@@ -139,11 +190,18 @@
   display: flex;
   width: 60px;
   height: 60px;
+<<<<<<< HEAD
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
   border: 1px solid #252525;
   margin: auto auto 6rem;
+=======
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #252525;
+  margin: 0 auto 6rem;
+>>>>>>> 23691e3... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
   cursor: pointer;
   svg {
     width: 12px;
