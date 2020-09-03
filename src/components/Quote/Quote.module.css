@@ -1,14 +1,14 @@
 @import 'styles/index';
 
 .base {
-  padding: 60px var(--layout-sm-spacing);
+  padding: 80px var(--layout-sm-spacing);
 
   @media (--viewport-md) {
     padding: 100px var(--layout-md-spacing);
   }
 
   @media (--viewport-lg) {
-    padding: 160px var(--layout-lg-spacing);
+    padding: 150px var(--layout-lg-spacing);
   }
 }
 
