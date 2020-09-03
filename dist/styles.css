@@ -6865,7 +6865,7 @@ sans-serif;
 --color-dark-disabled: var(--color-grey-60);
 */
 .Quote-module_base__2H3wf {
-  padding: 60px 16px;
+  padding: 80px 16px;
 }
 @media (min-width: 640px) {
 .Quote-module_base__2H3wf {
@@ -6874,7 +6874,7 @@ sans-serif;
   }
 @media (min-width: 1025px) {
 .Quote-module_base__2H3wf {
-    padding: 160px 40px
+    padding: 150px 40px
 }
   }
 .Quote-module_dark__ocCjZ {
