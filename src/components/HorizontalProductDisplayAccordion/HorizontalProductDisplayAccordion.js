@@ -60,10 +60,6 @@ const HorizontalProductDisplayAccordion = ({ id, products }) => {
       accordionProducts.map((product, i) => {
         product.expanded = false;
         product.compressed = false;
-<<<<<<< HEAD
-=======
-        console.log('reset');
->>>>>>> 23691e3... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
         return product;
       }),
     );
@@ -181,13 +177,6 @@ HorizontalProductDisplayAccordion.propTypes = {
     }),
   ),
 };
-
-// HorizontalProductDisplayAccordion.propTypes = {
-//  className: PropTypes.string,
-//  id: PropTypes.string,
-//  openIndex: PropTypes.string,
-//  products: PropTypes.array,
-// };
 
 HorizontalProductDisplayAccordion.defaultProps = {
   className: undefined,

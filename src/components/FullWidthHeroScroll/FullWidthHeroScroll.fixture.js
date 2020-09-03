@@ -23,11 +23,8 @@ export default {
       small: './assets/images/MediaWithContent/video-poster.png',
     },
   },
-<<<<<<< HEAD
   copy:
     '"We explore the importance of the stars in seafaring journeys, and in finding a safe port after a storm—a metaphor for navigating the turbulent waters of 2020."',
-=======
->>>>>>> 23691e3... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
   cta: {
     text: 'Lorem ipsum dolor',
     url: '/',
@@ -35,10 +32,7 @@ export default {
   eyebrow: 'Praesent tincidunt accumsan',
   hasSerifFontHeading: false,
   heading: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-<<<<<<< HEAD
   id: 'candles-full-width-floating',
-=======
->>>>>>> 23691e3... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
   textBlocks: [
     {
       text:
@@ -57,8 +51,5 @@ export default {
     },
   ],
   theme: 'light',
-<<<<<<< HEAD
   title: 'Introducing Poured Candles',
-=======
->>>>>>> 23691e3... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
 };
