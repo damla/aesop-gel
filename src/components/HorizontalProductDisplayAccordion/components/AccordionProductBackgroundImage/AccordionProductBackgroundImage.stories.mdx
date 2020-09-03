@@ -1,0 +1,34 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import * as knobs from '@storybook/addon-knobs';
+import AccordionProductBackgroundImage from './AccordionProductBackgroundImage';
+
+<Meta title="Components/AccordionProductBackgroundImage" component={AccordionProductBackgroundImage} />
+
+# AccordionProductBackgroundImage
+
+<Preview>
+  <Story name="Base component">
+    <AccordionProductBackgroundImage
+      altText={knobs.text('altText', 'Lorem ipsum dolor sit amet')}
+      cta={{
+        url: knobs.text('hyperlink.url', '/'),
+      }}
+      large={knobs.text(
+        'large',
+        'https://www.aesop.com/medias/GelCleanser-640x640.png?context=bWFzdGVyfGltYWdlc3w1MzE5NTl8aW1hZ2UvcG5nfGltYWdlcy9oOTUvaGNkLzg4MDc3OTc4NTAxNDIucG5nfGM3NTNhYjdkMWNiOTRhNWZhNDA0NWExZWJiODMxN2VhNzEyY2ZkNGUyYzc4ZWVkZDRjYTIzMzZmZTRlOGYxNjM',
+      )}
+      medium={knobs.text(
+        'medium',
+        'https://www.aesop.com/medias/GelCleanser-640x640.png?context=bWFzdGVyfGltYWdlc3w1MzE5NTl8aW1hZ2UvcG5nfGltYWdlcy9oOTUvaGNkLzg4MDc3OTc4NTAxNDIucG5nfGM3NTNhYjdkMWNiOTRhNWZhNDA0NWExZWJiODMxN2VhNzEyY2ZkNGUyYzc4ZWVkZDRjYTIzMzZmZTRlOGYxNjM',
+      )}
+      small={knobs.text(
+        'small',
+        'https://www.aesop.com/medias/GelCleanser-640x640.png?context=bWFzdGVyfGltYWdlc3w1MzE5NTl8aW1hZ2UvcG5nfGltYWdlcy9oOTUvaGNkLzg4MDc3OTc4NTAxNDIucG5nfGM3NTNhYjdkMWNiOTRhNWZhNDA0NWExZWJiODMxN2VhNzEyY2ZkNGUyYzc4ZWVkZDRjYTIzMzZmZTRlOGYxNjM',
+      )}
+    />
+  </Story>
+</Preview>
+
+## API
+
+<Props of={AccordionProductBackgroundImage} />
