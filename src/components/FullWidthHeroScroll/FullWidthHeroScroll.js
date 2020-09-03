@@ -87,37 +87,39 @@ const FullWidthHeroScroll = ({
             </div>
             <button
               className={cx(styles.ScrollIndicator, styles[theme])}
+            <div
+              className={cx(styles.ScrollIndicatorWrapper, styles[theme])}
               ref={scrollBtn}
               type="button"
             >
               <svg
-                aria-labelledby="e00a5034-d523-4b5a-b5ee-51159feac31e"
-                className="Icon ScrollIndicator-icon"
-                role="img"
-                viewBox="0 0 50 50"
-              >
-                <title id="e00a5034-d523-4b5a-b5ee-51159feac31e">
-                  Scroll down
+              aria-labelledby="e00a5034-d523-4b5a-b5ee-51159feac31e"
+              className="Icon ScrollIndicator-icon"
+              role="img"
+              viewBox="0 0 50 50"
+            >
+              <title id="e00a5034-d523-4b5a-b5ee-51159feac31e">
+                Scroll down
                 </title>
-                <g>
-                  <polygon points="25,31.3 4.2,10.5 0.1,14.6 25,39.5 50,14.6 45.9,10.5 " />
-                </g>
-              </svg>
+              <g>
+                <polygon points="25,31.3 4.2,10.5 0.1,14.6 25,39.5 50,14.6 45.9,10.5 " />
+              </g>
+            </svg>
             </button>
-          </div>
-          {textBlocks.map(({ hasSerifFont, text }, index) => {
-            return (
-              <FullscreenSection
-                hasSerifFont={hasSerifFont}
-                key={index}
-                text={text}
-                theme={theme}
-              />
-            );
-          })}
         </div>
+        {textBlocks.map(({ hasSerifFont, text }, index) => {
+          return (
+            <FullscreenSection
+              hasSerifFont={hasSerifFont}
+              key={index}
+              text={text}
+              theme={theme}
+            />
+          );
+        })}
       </div>
-    </section>
+      </div>
+    </section >
   );
 };
 
