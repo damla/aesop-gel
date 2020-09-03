@@ -6865,22 +6865,16 @@ sans-serif;
 --color-dark-disabled: var(--color-grey-60);
 */
 .Quote-module_base__2H3wf {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0 16px;
+  padding: 60px 16px;
 }
 @media (min-width: 640px) {
 .Quote-module_base__2H3wf {
-    padding: 0 34px
+    padding: 100px 34px
 }
   }
 @media (min-width: 1025px) {
 .Quote-module_base__2H3wf {
-    padding: 0 40px
+    padding: 160px 40px
 }
   }
 .Quote-module_dark__ocCjZ {
@@ -6895,71 +6889,41 @@ sans-serif;
 }
 @media (min-width: 640px) {
 .Quote-module_wrapper__1S4Pe {
-    /* flex-basis doesn't account for box-sizing:border-box */
-    /* stylelint-disable */
-    width: calc(100% * 3 / 6);
-    -ms-flex-preferred-size: auto;
-        flex-basis: auto
-    /* IE is consistently 1px too wide with the standard calc value */
-    /* here is a hack so terrible we have to tell the linter to ignore it */
-    /* stylelint-enable */
+    width: 50%;
+    margin: 0 auto
 }
-    .Quote-module_wrapper__1S4Pe _:-ms-input-placeholder,
-  :root .Quote-module_wrapper__1S4Pe {
-    width: calc((100% * 3 / 6) - 1px);
-  }
-  }
-@media (min-width: 1025px) {
-.Quote-module_wrapper__1S4Pe {
-    /* flex-basis doesn't account for box-sizing:border-box */
-    /* stylelint-disable */
-    width: calc(100% * 6 / 12);
-    -ms-flex-preferred-size: auto;
-        flex-basis: auto
-    /* IE is consistently 1px too wide with the standard calc value */
-    /* here is a hack so terrible we have to tell the linter to ignore it */
-    /* stylelint-enable */
-}
-    .Quote-module_wrapper__1S4Pe _:-ms-input-placeholder,
-  :root .Quote-module_wrapper__1S4Pe {
-    width: calc((100% * 6 / 12) - 1px);
-  }
   }
 .Quote-module_blockquote__1Ap9l {
   padding: 0;
-  margin: 20px 0;
+  margin: 0;
+  margin-bottom: 20px;
   font-family: 'Zapf Humanist'
 ,
 serif;
-  font-size: 27px;
+  font-size: 25px;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.33;
   -webkit-text-size-adjust: 100%;
      -moz-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
           text-size-adjust: 100%;
 }
+@media (min-width: 640px) {
+.Quote-module_blockquote__1Ap9l {
+    font-size: 30px
+}
+  }
 .Quote-module_author__3tPnl {
   display: block;
-  margin-top: 24px;
+  margin: 0;
   font-family: 'Suisse Medium'
 ,
 sans-serif;
-  font-size: 15px;
+  font-size: 14px;
   font-style: normal;
   font-style: initial;
-  line-height: 1.4;
+  line-height: 2;
 }
-@media (min-width: 640px) {
-.Quote-module_author__3tPnl {
-    margin-top: 34px
-}
-  }
-@media (min-width: 1025px) {
-.Quote-module_author__3tPnl {
-    margin-top: 48px
-}
-  }
 
 /* @import './key-frame.css'; */
 /* @import './font-face.css'; */
