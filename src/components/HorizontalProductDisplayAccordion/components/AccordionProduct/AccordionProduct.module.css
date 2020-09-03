@@ -1,0 +1,206 @@
+@import 'styles/index';
+
+.accordionProduct {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  transition: width 1s 0.4s;
+  &.compressed {
+    width: 10%;
+    cursor: pointer;
+  }
+  @media (--viewport-sm-only) {
+    padding: 0 20px;
+  }
+  img {
+    width: 50%;
+    height: auto;
+  }
+}
+
+.productImage {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
+.accordionDefaultContent {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  display: flex;
+  overflow: hidden;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.4s 1.4s, height 0s;
+  &.hidden {
+    height: 0;
+    opacity: 0;
+    transition: opacity 0.4s, height 0s 1.4s;
+  }
+  & > div {
+    padding: 20px;
+    text-align: center;
+  }
+}
+
+.accordionExpanded {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s 0s;
+
+  /* & > div {
+    display: flex;
+    height: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    padding: 20px;
+    transform: translate3d(0, 25%, 0);
+    transition: transform 0s 1.4s;
+    @media (--viewport-md-only) {
+      flex-direction: column;
+    }
+  } */
+  &.open {
+    opacity: 1;
+    transition: opacity 0.4s 1.4s;
+
+    /* & > div {
+      transform: translate3d(0, 0, 0);
+      transition: transform 2s 0.4s ease;
+    } */
+  }
+
+  /* & > div > div:first-child {
+    width: 30%;
+    @media (--viewport-md-only) {
+      position: relative;
+      width: 100%;
+      flex: 1;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center bottom;
+      }
+    }
+  } */
+}
+
+.accordionExpandedContent {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  align-items: center;
+  padding: 20px;
+  transform: translate3d(0, 25%, 0);
+  transition: transform 0s 1.4s;
+  @media (--viewport-sm-only) {
+    flex-direction: column;
+  }
+}
+
+.open .accordionExpandedContent {
+  transform: translate3d(0, 0, 0);
+  transition: transform 2s 0.4s ease;
+}
+
+.expandedAccordionImage {
+  position: relative;
+  width: 30%;
+  @media (--viewport-sm-only) {
+    width: 100%;
+    flex: 1;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center bottom;
+    }
+  }
+}
+
+.closeBtn {
+  position: absolute;
+  z-index: 1;
+  top: 20px;
+  right: 20px;
+  margin: 0;
+}
+
+.openBtn {
+  margin: 1em 0 2em;
+}
+
+.openBtn,
+.closeBtn {
+  padding: 0;
+  border-top: none;
+  border-right: none;
+  border-bottom: 1px solid;
+  border-left: none;
+  background: none;
+  color: var(--color-dark-copy);
+  cursor: pointer;
+  font-family: var(--font-family-sans-serif-regular);
+  &:focus {
+    outline: 0;
+  }
+  &.light {
+    color: var(--color-light-copy);
+  }
+}
+
+.accordionDefaultBackground {
+  height: 100%;
+  transition: opacity 0.4s 1.4s;
+  &.hidden {
+    opacity: 0;
+    transition: opacity 0.4s 0s;
+  }
+}
+
+.accordionOpenCopy,
+.accordionClosedCopy {
+  padding: 0;
+  margin: 0 0 1em;
+  font-family: var(--font-family-sans-serif-regular);
+  @extend %font-theme-dark-copy;
+  &.light {
+    @extend %font-theme-light-copy;
+  }
+}
+
+.btns {
+  display: flex;
+  margin: 1em 0 0;
+  button,
+  a {
+    flex: 1;
+  }
+  button {
+    margin: 0 4px 0 0;
+  }
+  @media (--viewport-sm-only) {
+    display: block;
+    button {
+      margin: 0 0 4px;
+    }
+  }
+}
