@@ -59,6 +59,10 @@ const HorizontalProductDisplayAccordion = ({ id, products }) => {
       accordionProducts.map((product, i) => {
         product.expanded = false;
         product.compressed = false;
+<<<<<<< HEAD
+=======
+        console.log('reset');
+>>>>>>> 23691e3... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
         return product;
       }),
     );
