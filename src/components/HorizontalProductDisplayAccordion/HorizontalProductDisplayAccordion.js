@@ -18,34 +18,34 @@ const HorizontalProductDisplayAccordion = ({ id, products }) => {
 
   const toggleAccordion = (index, opening) => {
     toggleAccordionProducts(
-      accordionProducts.map((product, i) => {
+      accordionProducts.map((product, productIndex) => {
         if (isMobile) {
           if (opening) {
-            if (i === index) {
-              product.expanded = true;
+            if (productIndex === index) {
+              product.isExpanded = true;
             }
           } else {
-            if (i === index) {
-              product.expanded = false;
+            if (productIndex === index) {
+              product.isExpanded = false;
             }
           }
         } else {
           if (opening) {
-            if (i === index) {
-              product.expanded = true;
-              product.compressed = false;
+            if (productIndex === index) {
+              product.isExpanded = true;
+              product.isCompressed = false;
             } else {
-              product.expanded = false;
-              product.compressed = true;
+              product.isExpanded = false;
+              product.isCompressed = true;
             }
             toggleAccordionActiveState(true);
           } else {
-            if (i === index) {
-              product.expanded = false;
-              product.compressed = false;
+            if (productIndex === index) {
+              product.isExpanded = false;
+              product.isCompressed = false;
             } else {
-              product.expanded = false;
-              product.compressed = false;
+              product.isExpanded = false;
+              product.isCompressed = false;
             }
             toggleAccordionActiveState(false);
           }
@@ -57,9 +57,9 @@ const HorizontalProductDisplayAccordion = ({ id, products }) => {
 
   const resetAccordion = () => {
     toggleAccordionProducts(
-      accordionProducts.map((product, i) => {
-        product.expanded = false;
-        product.compressed = false;
+      accordionProducts.map(product => {
+        product.isExpanded = false;
+        product.isCompressed = false;
         return product;
       }),
     );
@@ -69,8 +69,8 @@ const HorizontalProductDisplayAccordion = ({ id, products }) => {
     const resetAccordionOnResize = debounce(() => {
       if (ascertainIsSmallOnlyViewport() !== isMobile) {
         accordionProducts.map(product => {
-          product.expanded = false;
-          product.compressed = false;
+          product.isExpanded = false;
+          product.isCompressed = false;
         });
         isMobile = ascertainIsSmallOnlyViewport();
       }
@@ -78,7 +78,7 @@ const HorizontalProductDisplayAccordion = ({ id, products }) => {
 
     window.addEventListener('resize', resetAccordionOnResize);
 
-    return () => {
+    return function callback() {
       window.removeEventListener('resize', resetAccordionOnResize);
     };
   });
@@ -93,18 +93,20 @@ const HorizontalProductDisplayAccordion = ({ id, products }) => {
       }
       id={id}
     >
-      {accordionProducts.map(({ ...product }, index) => {
+      {accordionProducts.map(({ ...product }, productIndex) => {
         return (
           <ProductDetailContextProvider
-            key={index}
+            key={productIndex}
             product={{
               description: product.openState.eyebrow,
               productName: product.openState.title,
             }}
           >
-            <VariantSelectContextProvider variants={product.variantOptions}>
+            <VariantSelectContextProvider
+              variants={product.openState.product.variants}
+            >
               <AccordionProduct
-                index={index}
+                index={productIndex}
                 resetAccordion={resetAccordion}
                 toggleAccordion={toggleAccordion}
                 {...product}
@@ -144,8 +146,8 @@ HorizontalProductDisplayAccordion.propTypes = {
         theme: PropTypes.string,
         title: PropTypes.string,
       }),
-      compressed: PropTypes.bool,
-      expanded: PropTypes.bool,
+      isCompressed: PropTypes.bool,
+      isExpanded: PropTypes.bool,
       id: PropTypes.string,
       index: PropTypes.number,
       openState: PropTypes.shape({
@@ -157,18 +159,20 @@ HorizontalProductDisplayAccordion.propTypes = {
         copy: PropTypes.node,
         eyebrow: PropTypes.string,
         foregroundImage: PropTypes.object,
+        product: PropTypes.shape({
+          variants: PropTypes.arrayOf(
+            PropTypes.shape({
+              isInStock: PropTypes.bool,
+              price: PropTypes.string,
+              size: PropTypes.string,
+              sku: PropTypes.string,
+            }),
+          ),
+        }),
         theme: PropTypes.string,
         title: PropTypes.string,
       }),
       toggleAccordion: PropTypes.func,
-      variantOptions: PropTypes.arrayOf(
-        PropTypes.shape({
-          isInStock: PropTypes.bool,
-          price: PropTypes.string,
-          size: PropTypes.string,
-          sku: PropTypes.string,
-        }),
-      ),
     }),
   ),
 };
@@ -199,8 +203,8 @@ HorizontalProductDisplayAccordion.defaultProps = {
       theme: undefined,
       title: undefined,
     },
-    compressed: undefined,
-    expanded: undefined,
+    isCompressed: undefined,
+    isExpanded: undefined,
     id: undefined,
     index: undefined,
     openState: {
@@ -212,13 +216,20 @@ HorizontalProductDisplayAccordion.defaultProps = {
       eyebrow: undefined,
       foregroundImage: undefined,
       openButtonText: undefined,
+      product: {
+        variants: [
+          {
+            isInStock: undefined,
+            price: undefined,
+            size: undefined,
+            sku: undefined,
+          },
+        ],
+      },
       theme: undefined,
       title: undefined,
     },
     toggleAccordion: undefined,
-    variantOptions: {
-      isInStock: true,
-    },
   },
 };
 
