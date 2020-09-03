@@ -2,6 +2,11 @@ import React from 'react';
 import cx from 'classnames';
 import { HEADING, HYPERLINK_STYLE_TYPES } from '~/constants';
 import PropTypes from 'prop-types';
+<<<<<<< HEAD
+=======
+// import { useProductDetailContext, useVariantSelectContext } from '~/contexts';
+
+>>>>>>> ecf893a... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
 import AddToCartButton from '~/components/AddToCartButton';
 import AccordionProductBackgroundImage from '../AccordionProductBackgroundImage';
 import AccordionProductBackgroundVideo from '../AccordionProductBackgroundVideo';
@@ -12,7 +17,10 @@ import Paragraph from '~/components/Paragraph';
 import styles from './AccordionProduct.module.css';
 
 const AccordionProduct = ({
+<<<<<<< HEAD
   addToCart,
+=======
+>>>>>>> ecf893a... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
   closedState,
   compressed,
   expanded,
@@ -39,6 +47,11 @@ const AccordionProduct = ({
           styles.accordionDefaultBackground,
           expanded && styles.hidden,
         )}
+<<<<<<< HEAD
+=======
+        // style={{ closedState.background === 'Colour' ? { backgroundColor: closedState?.backgroundColour } : {} }}
+
+>>>>>>> ecf893a... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
         style={{ backgroundColor: closedState?.backgroundColour }}
       >
         {closedState.background === 'Video' && (
@@ -75,10 +88,14 @@ const AccordionProduct = ({
           >
             {closedState?.openButtonText}
           </button>
+<<<<<<< HEAD
           <Image
             className={cx(styles.closedForegroundImage)}
             {...closedState.foregroundImage}
           />
+=======
+          <Image {...closedState.foregroundImage} />
+>>>>>>> ecf893a... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
         </div>
       </div>
 
@@ -111,8 +128,24 @@ const AccordionProduct = ({
               {openState?.copy}
             </div>
             <div className={cx(styles.btns)}>
+<<<<<<< HEAD
               <AddToCartButton copy={addToCart} theme={openState.theme} />
               {openState?.cta && (
+=======
+              <AddToCartButton
+                copy={{
+                  /** @TODO needs to be passed down in props, considering adding this copy to the addToCart context */
+                  cartAction: 'Add to your cart',
+                  updateNotification: 'added to your cart',
+                  outOfStock: {
+                    label: 'Out of Stock',
+                    title: 'Out of stock',
+                  },
+                }}
+                dataTestRef="add-to-cart-accordion-product"
+              />
+              {/* {openState?.cta && (
+>>>>>>> ecf893a... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
                 <Hyperlink
                   className={styles.cta}
                   isAlternate={false}
@@ -121,7 +154,11 @@ const AccordionProduct = ({
                 >
                   {openState?.cta.text}
                 </Hyperlink>
+<<<<<<< HEAD
               )}
+=======
+              )} */}
+>>>>>>> ecf893a... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
             </div>
           </div>
         </div>
@@ -137,6 +174,7 @@ const AccordionProduct = ({
 };
 
 AccordionProduct.propTypes = {
+<<<<<<< HEAD
   addToCart: PropTypes.shape({
     cartAction: PropTypes.string,
     updateNotification: PropTypes.string,
@@ -145,6 +183,8 @@ AccordionProduct.propTypes = {
       title: PropTypes.string,
     }),
   }),
+=======
+>>>>>>> ecf893a... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
   closedState: PropTypes.shape({
     background: PropTypes.oneOf(['Colour', 'Image', 'Video']),
     backgroundColour: PropTypes.string,
@@ -169,10 +209,13 @@ AccordionProduct.propTypes = {
     backgroundVideo: PropTypes.object,
     closeButtonText: PropTypes.string,
     copy: PropTypes.node,
+<<<<<<< HEAD
     cta: PropTypes.shape({
       text: PropTypes.string,
       url: PropTypes.string,
     }),
+=======
+>>>>>>> ecf893a... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
     eyebrow: PropTypes.string,
     foregroundImage: PropTypes.object,
     theme: PropTypes.string,
@@ -183,6 +226,7 @@ AccordionProduct.propTypes = {
 };
 
 AccordionProduct.defaultProps = {
+<<<<<<< HEAD
   addToCart: {
     cartAction: undefined,
     updateNotification: undefined,
@@ -191,6 +235,8 @@ AccordionProduct.defaultProps = {
       title: undefined,
     },
   },
+=======
+>>>>>>> ecf893a... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
   closedState: {
     background: undefined,
     backgroundColour: undefined,

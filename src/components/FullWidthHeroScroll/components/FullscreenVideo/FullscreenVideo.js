@@ -8,15 +8,26 @@ const FullscreenVideo = ({ large, medium, small }) => {
   const ref = useRef(null);
 
   useEffect(() => {
+<<<<<<< HEAD
     let viewportSize = getViewportForWidth(window.innerWidth);
+=======
+    let vp = getViewportForWidth(window.innerWidth);
+>>>>>>> ecf893a... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
 
     const bgVideoInit = ref => {
       const vid = ref.current;
       let videoUrl = large;
+<<<<<<< HEAD
       if (viewportSize === 'small') {
         videoUrl = small;
       }
       if (viewportSize === 'medium') {
+=======
+      if (vp === 'small') {
+        videoUrl = small;
+      }
+      if (vp === 'medium') {
+>>>>>>> ecf893a... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
         videoUrl = medium;
       }
       if (videoUrl) {
@@ -48,9 +59,15 @@ const FullscreenVideo = ({ large, medium, small }) => {
     };
     bgVideoInit(ref);
     window.addEventListener('resize', () => {
+<<<<<<< HEAD
       const viewportSizeNew = getViewportForWidth(window.innerWidth);
       if (viewportSizeNew !== viewportSize) {
         viewportSize = viewportSizeNew;
+=======
+      const vpNew = getViewportForWidth(window.innerWidth);
+      if (vpNew !== vp) {
+        vp = vpNew;
+>>>>>>> ecf893a... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
         bgVideoInit(ref);
       }
     });
