@@ -23,7 +23,11 @@ export default {
           medium:
             './assets/images/HorizontalProductDisplayAccordion/candles-product.png',
           large:
+<<<<<<< HEAD
             './assets/images/HorizontalProductDisplayAccordion/candles-product.png',
+=======
+            './as sets/images/HorizontalProductDisplayAccordion/candles-product.png',
+>>>>>>> 23691e3... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
         },
         id: 'ptolomey-closed-test',
         openButtonText: 'Learn more',

@@ -2,6 +2,11 @@ import React from 'react';
 import cx from 'classnames';
 import { HEADING, HYPERLINK_STYLE_TYPES } from '~/constants';
 import PropTypes from 'prop-types';
+<<<<<<< HEAD
+=======
+// import { useProductDetailContext, useVariantSelectContext } from '~/contexts';
+
+>>>>>>> 23691e3... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
 import AddToCartButton from '~/components/AddToCartButton';
 import AccordionProductBackgroundImage from '../AccordionProductBackgroundImage';
 import AccordionProductBackgroundVideo from '../AccordionProductBackgroundVideo';
@@ -38,6 +43,11 @@ const AccordionProduct = ({
           styles.accordionDefaultBackground,
           expanded && styles.hidden,
         )}
+<<<<<<< HEAD
+=======
+        // style={{ closedState.background === 'Colour' ? { backgroundColor: closedState?.backgroundColour } : {} }}
+
+>>>>>>> 23691e3... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
         style={{ backgroundColor: closedState?.backgroundColour }}
       >
         {closedState.background === 'Video' && (
@@ -74,10 +84,14 @@ const AccordionProduct = ({
           >
             {closedState?.openButtonText}
           </button>
+<<<<<<< HEAD
           <Image
             className={cx(styles.closedForegroundImage)}
             {...closedState.foregroundImage}
           />
+=======
+          <Image {...closedState.foregroundImage} />
+>>>>>>> 23691e3... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
         </div>
       </div>
 
@@ -122,7 +136,11 @@ const AccordionProduct = ({
                 }}
                 dataTestRef="add-to-cart-accordion-product"
               />
+<<<<<<< HEAD
               {openState?.cta && (
+=======
+              {/* {openState?.cta && (
+>>>>>>> 23691e3... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
                 <Hyperlink
                   className={styles.cta}
                   isAlternate={false}
@@ -131,7 +149,11 @@ const AccordionProduct = ({
                 >
                   {openState?.cta.text}
                 </Hyperlink>
+<<<<<<< HEAD
               )}
+=======
+              )} */}
+>>>>>>> 23691e3... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
             </div>
           </div>
         </div>

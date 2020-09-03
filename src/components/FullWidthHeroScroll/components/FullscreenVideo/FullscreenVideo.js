@@ -9,25 +9,35 @@ const FullscreenVideo = ({ large, medium, small }) => {
 
   useEffect(() => {
 <<<<<<< HEAD
+<<<<<<< HEAD
     let viewportSize = getViewportForWidth(window.innerWidth);
 =======
     let vp = getViewportForWidth(window.innerWidth);
 >>>>>>> ecf893a... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
+=======
+    let vp = getViewportForWidth(window.innerWidth);
+>>>>>>> 23691e3... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
 
     const bgVideoInit = ref => {
       const vid = ref.current;
       let videoUrl = large;
+<<<<<<< HEAD
 <<<<<<< HEAD
       if (viewportSize === 'small') {
         videoUrl = small;
       }
       if (viewportSize === 'medium') {
 =======
+=======
+>>>>>>> 23691e3... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
       if (vp === 'small') {
         videoUrl = small;
       }
       if (vp === 'medium') {
+<<<<<<< HEAD
 >>>>>>> ecf893a... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
+=======
+>>>>>>> 23691e3... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
         videoUrl = medium;
       }
       if (videoUrl) {
@@ -60,6 +70,7 @@ const FullscreenVideo = ({ large, medium, small }) => {
     bgVideoInit(ref);
     window.addEventListener('resize', () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
       const viewportSizeNew = getViewportForWidth(window.innerWidth);
       if (viewportSizeNew !== viewportSize) {
         viewportSize = viewportSizeNew;
@@ -68,6 +79,11 @@ const FullscreenVideo = ({ large, medium, small }) => {
       if (vpNew !== vp) {
         vp = vpNew;
 >>>>>>> ecf893a... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
+=======
+      const vpNew = getViewportForWidth(window.innerWidth);
+      if (vpNew !== vp) {
+        vp = vpNew;
+>>>>>>> 23691e3... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
         bgVideoInit(ref);
       }
     });
