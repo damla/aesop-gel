@@ -1,0 +1,28 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import * as knobs from '@storybook/addon-knobs';
+import { AddToCartContextProvider } from '~/contexts';
+import mockAddToCartButtonOnClick from '~/components/AddToCartButton/__mocks__/AddToCartButton.onClick';
+import HorizontalProductDisplayAccordion from './HorizontalProductDisplayAccordion';
+import HorizontalProductDisplayAccordionFixture from './HorizontalProductDisplayAccordion.fixture';
+
+<Meta
+  title="Components/HorizontalProductDisplayAccordion"
+  component={HorizontalProductDisplayAccordion}
+/>
+
+# HorizontalProductDisplayAccordion
+
+<Preview>
+  <Story name="Base component">
+    <AddToCartContextProvider onClick={mockAddToCartButtonOnClick}>
+      <HorizontalProductDisplayAccordion
+        theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
+        products={[...HorizontalProductDisplayAccordionFixture.products]}
+      />
+    </AddToCartContextProvider>
+  </Story>
+</Preview>
+
+## API
+
+<Props of={HorizontalProductDisplayAccordion} />

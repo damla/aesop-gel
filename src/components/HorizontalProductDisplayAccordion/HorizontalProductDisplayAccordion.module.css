@@ -1,0 +1,12 @@
+@import 'styles/index';
+
+.accordionProductWrap {
+  display: flex;
+  height: 100vh;
+}
+
+@media (--viewport-sm-only) {
+  .accordionProductWrap {
+    display: block;
+  }
+}
