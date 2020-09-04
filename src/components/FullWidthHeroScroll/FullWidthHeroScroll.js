@@ -29,6 +29,7 @@ const FullWidthHeroScroll = ({
         return;
       }
       scrollBtnEl.style.opacity = (100 - window.scrollY) / 100;
+      console.log('scrolling');
     };
 
     fadeScrollBtn;
