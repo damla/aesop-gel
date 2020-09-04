@@ -80,9 +80,10 @@ const FullWidthHeroScroll = ({
                 </Hyperlink>
               )}
             </div>
-            <div
-              className={cx(styles.ScrollIndicatorWrapper, styles[theme])}
+            <button
+              className={cx(styles.ScrollIndicator, styles[theme])}
               ref={scrollBtn}
+              type="button"
             >
               <svg
                 aria-labelledby="e00a5034-d523-4b5a-b5ee-51159feac31e"
@@ -97,7 +98,7 @@ const FullWidthHeroScroll = ({
                   <polygon points="25,31.3 4.2,10.5 0.1,14.6 25,39.5 50,14.6 45.9,10.5 " />
                 </g>
               </svg>
-            </div>
+            </button>
           </div>
           {textBlocks.map(({ hasSerifFont, text }, index) => {
             return (

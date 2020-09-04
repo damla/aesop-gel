@@ -135,15 +135,19 @@
   transform: translate3d(0, 0, 0);
 }
 
-.ScrollIndicatorWrapper {
+.ScrollIndicator {
   display: flex;
   width: 60px;
   height: 60px;
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
+  padding: 0;
   border: 1px solid #252525;
   margin: auto auto 6rem;
+  -webkit-appearance: none;
+  background: none;
+  border-radius: 0;
   cursor: pointer;
   svg {
     width: 12px;
@@ -160,5 +164,8 @@
     svg {
       fill: var(--color-light-copy);
     }
+  }
+  &:focus {
+    outline: 0;
   }
 }
