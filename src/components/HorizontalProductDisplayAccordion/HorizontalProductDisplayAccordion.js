@@ -59,10 +59,6 @@ const HorizontalProductDisplayAccordion = ({ id, products }) => {
       accordionProducts.map((product, i) => {
         product.expanded = false;
         product.compressed = false;
-<<<<<<< HEAD
-=======
-        console.log('reset');
->>>>>>> ecf893a... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
         return product;
       }),
     );
@@ -91,8 +87,6 @@ const HorizontalProductDisplayAccordion = ({ id, products }) => {
         return (
           <ProductDetailContextProvider
             key={index}
-<<<<<<< HEAD
-=======
             /**
               src/contexts/ProductDetail.context.js
               expects {
@@ -106,7 +100,6 @@ const HorizontalProductDisplayAccordion = ({ id, products }) => {
                 productName,
               }
             */
->>>>>>> ecf893a... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
             product={{
               description: product.openState.eyebrow,
               productName: product.openState.title,
@@ -133,17 +126,6 @@ HorizontalProductDisplayAccordion.propTypes = {
   openIndex: PropTypes.string,
   products: PropTypes.arrayOf(
     PropTypes.shape({
-<<<<<<< HEAD
-      addToCart: PropTypes.shape({
-        cartAction: PropTypes.string,
-        updateNotification: PropTypes.string,
-        outOfStock: PropTypes.shape({
-          label: PropTypes.string,
-          title: PropTypes.string,
-        }),
-      }),
-=======
->>>>>>> ecf893a... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
       closedState: PropTypes.shape({
         background: PropTypes.oneOf(['Colour', 'Image', 'Video']),
         backgroundColour: PropTypes.string,
@@ -186,8 +168,6 @@ HorizontalProductDisplayAccordion.propTypes = {
   ),
 };
 
-<<<<<<< HEAD
-=======
 // HorizontalProductDisplayAccordion.propTypes = {
 //  className: PropTypes.string,
 //  id: PropTypes.string,
@@ -195,23 +175,11 @@ HorizontalProductDisplayAccordion.propTypes = {
 //  products: PropTypes.array,
 // };
 
->>>>>>> ecf893a... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
 HorizontalProductDisplayAccordion.defaultProps = {
   className: undefined,
   id: undefined,
   openIndex: null,
   products: {
-<<<<<<< HEAD
-    addToCart: {
-      cartAction: undefined,
-      updateNotification: undefined,
-      outOfStock: {
-        label: undefined,
-        title: undefined,
-      },
-    },
-=======
->>>>>>> ecf893a... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
     closedState: {
       background: 'Image',
       backgroundColour: undefined,
