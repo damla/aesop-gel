@@ -100,15 +100,6 @@ const FullWidthHeroScroll = ({
             </div>
           </div>
           {textBlocks.map(({ hasSerifFont, text }, index) => {
-            // return (
-            //  <div className={cx(styles.fullscreenSection)} key={index} ref={ref + index}>
-            //    {/*<Transition isActive={isOnScreen} type="fade">*/}
-            //    <Heading level="4" size="medium" theme={theme} className={cx(styles.textBlock)}>
-            //      {text}
-            //    </Heading>
-            //    {/*</Transition>*/}
-            //  </div>
-            // )
             return (
               <FullscreenSection
                 hasSerifFont={hasSerifFont}
