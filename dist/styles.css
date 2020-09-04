@@ -5444,6 +5444,406 @@ sans-serif
 --color-dark-decoration: var(--color-grey-30);
 --color-dark-disabled: var(--color-grey-60);
 */
+.AccordionProductBackgroundImage-module_prodAccBgimg__35OP5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.AccordionProductBackgroundImage-module_imgdiv__2aKmC {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.AccordionProductBackgroundVideo-module_accordionProductBackgroundVideo__1SC1n {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+/* @import './key-frame.css'; */
+/* @import './font-face.css'; */
+:root {
+  /* Base colours */
+
+  /* UI colours light theme */
+
+  /* UI colours dark theme */
+
+  /* Background colours */
+
+  /* System colours */
+
+  /* Secondary Message background colour */
+}
+/* Dark theme UI elements */
+/* Light theme UI elements */
+/* UI colours light theme */
+/*
+--color-light-copy: var(--color-primary);
+--color-light-copy-alternate: var(--color-white-darker);
+--color-light-label: var(--color-white-darker);
+--color-light-link: var(--color-primary);
+--color-light-link-hover: var(--color-white-darker);
+--color-light-decoration: var(--color-white-darker);
+--color-light-disabled: var(--color-grey-60);
+*/
+/* UI colours dark theme */
+/*
+--color-dark-copy: var(--color-secondary);
+--color-dark-copy-alternate: var(--color-grey-63);
+--color-dark-label: var(--color-grey-30);
+--color-dark-link: var(--color-grey-20);
+--color-dark-link-hover: var(--color-grey-10);
+--color-dark-decoration: var(--color-grey-30);
+--color-dark-disabled: var(--color-grey-60);
+*/
+.AccordionProduct-module_accordionProduct__1y3uS {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: width 1s 0.4s;
+  transition: width 1s 0.4s;
+}
+.AccordionProduct-module_accordionProduct__1y3uS.AccordionProduct-module_compressed__xGnO- {
+    width: 10%;
+    cursor: pointer;
+  }
+@media (max-width: 639px) {
+.AccordionProduct-module_accordionProduct__1y3uS {
+    padding: 0 20px
+}
+  }
+.AccordionProduct-module_accordionProduct__1y3uS img {
+    width: 50%;
+    height: auto;
+  }
+.AccordionProduct-module_productImage__2Zgl2 {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+.AccordionProduct-module_accordionDefaultContent__1FbLP {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: opacity 0.4s 1.4s, height 0s;
+  transition: opacity 0.4s 1.4s, height 0s;
+}
+.AccordionProduct-module_accordionDefaultContent__1FbLP.AccordionProduct-module_hidden__32W8W {
+    height: 0;
+    opacity: 0;
+    -webkit-transition: opacity 0.4s, height 0s 1.4s;
+    transition: opacity 0.4s, height 0s 1.4s;
+  }
+.AccordionProduct-module_accordionDefaultContent__1FbLP > div {
+    padding: 20px;
+    text-align: center;
+  }
+.AccordionProduct-module_accordionExpanded__1WO9Y {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s 0s;
+  transition: opacity 0.4s 0s;
+
+  /* & > div > div:first-child {
+    width: 30%;
+    @media (--viewport-md-only) {
+      position: relative;
+      width: 100%;
+      flex: 1;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center bottom;
+      }
+    }
+  } */
+}
+/* & > div {
+    display: flex;
+    height: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    padding: 20px;
+    transform: translate3d(0, 25%, 0);
+    transition: transform 0s 1.4s;
+    @media (--viewport-md-only) {
+      flex-direction: column;
+    }
+  } */
+.AccordionProduct-module_accordionExpanded__1WO9Y.AccordionProduct-module_open__2VFan {
+    opacity: 1;
+    -webkit-transition: opacity 0.4s 1.4s;
+    transition: opacity 0.4s 1.4s;
+
+    /* & > div {
+      transform: translate3d(0, 0, 0);
+      transition: transform 2s 0.4s ease;
+    } */
+  }
+.AccordionProduct-module_accordionExpandedContent__3ZYPa {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  -webkit-transform: translate3d(0, 25%, 0);
+          transform: translate3d(0, 25%, 0);
+  -webkit-transition: -webkit-transform 0s 1.4s;
+  transition: -webkit-transform 0s 1.4s;
+  transition: transform 0s 1.4s;
+  transition: transform 0s 1.4s, -webkit-transform 0s 1.4s;
+}
+@media (max-width: 639px) {
+.AccordionProduct-module_accordionExpandedContent__3ZYPa {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column
+}
+  }
+.AccordionProduct-module_open__2VFan .AccordionProduct-module_accordionExpandedContent__3ZYPa {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform 2s 0.4s ease;
+  transition: -webkit-transform 2s 0.4s ease;
+  transition: transform 2s 0.4s ease;
+  transition: transform 2s 0.4s ease, -webkit-transform 2s 0.4s ease;
+}
+.AccordionProduct-module_expandedAccordionImage__ULov6 {
+  position: relative;
+  width: 30%;
+}
+@media (max-width: 639px) {
+.AccordionProduct-module_expandedAccordionImage__ULov6 {
+    width: 100%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1
+}
+    .AccordionProduct-module_expandedAccordionImage__ULov6 img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      -o-object-fit: contain;
+         object-fit: contain;
+      -o-object-position: center bottom;
+         object-position: center bottom;
+    }
+  }
+.AccordionProduct-module_closeBtn__1EOQ6 {
+  position: absolute;
+  z-index: 1;
+  top: 20px;
+  right: 20px;
+  margin: 0;
+}
+.AccordionProduct-module_openBtn__27FC4 {
+  margin: 1em 0 2em;
+}
+.AccordionProduct-module_openBtn__27FC4,
+.AccordionProduct-module_closeBtn__1EOQ6 {
+  padding: 0;
+  border-top: none;
+  border-right: none;
+  border-bottom: 1px solid;
+  border-left: none;
+  background: none;
+  color: #333;
+  cursor: pointer;
+  font-family: 'Suisse Regular'
+,
+sans-serif;
+}
+.AccordionProduct-module_openBtn__27FC4:focus, .AccordionProduct-module_closeBtn__1EOQ6:focus {
+    outline: 0;
+  }
+.AccordionProduct-module_openBtn__27FC4.AccordionProduct-module_light__10wa6, .AccordionProduct-module_closeBtn__1EOQ6.AccordionProduct-module_light__10wa6 {
+    color: #fffef2;
+  }
+.AccordionProduct-module_accordionDefaultBackground__3ATA8 {
+  height: 100%;
+  -webkit-transition: opacity 0.4s 1.4s;
+  transition: opacity 0.4s 1.4s;
+}
+.AccordionProduct-module_accordionDefaultBackground__3ATA8.AccordionProduct-module_hidden__32W8W {
+    opacity: 0;
+    -webkit-transition: opacity 0.4s 0s;
+    transition: opacity 0.4s 0s;
+  }
+.AccordionProduct-module_accordionOpenCopy__a-AcA,
+.AccordionProduct-module_accordionClosedCopy__2Z1Hp {
+  padding: 0;
+  margin: 0 0 1em;
+  font-family: 'Suisse Regular'
+,
+sans-serif
+}
+.AccordionProduct-module_accordionOpenCopy__a-AcA,
+.AccordionProduct-module_accordionClosedCopy__2Z1Hp {
+  color: #333
+}
+.AccordionProduct-module_accordionOpenCopy__a-AcA.AccordionProduct-module_light__10wa6, .AccordionProduct-module_accordionClosedCopy__2Z1Hp.AccordionProduct-module_light__10wa6 {
+  }
+.AccordionProduct-module_btns__2dtYR {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1em 0 0;
+}
+.AccordionProduct-module_btns__2dtYR button,
+  .AccordionProduct-module_btns__2dtYR a {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+.AccordionProduct-module_btns__2dtYR button {
+    margin: 0 4px 0 0;
+  }
+@media (max-width: 639px) {
+.AccordionProduct-module_btns__2dtYR {
+    display: block
+}
+    .AccordionProduct-module_btns__2dtYR button {
+      margin: 0 0 4px;
+    }
+  }
+
+/* @import './key-frame.css'; */
+/* @import './font-face.css'; */
+:root {
+  /* Base colours */
+
+  /* UI colours light theme */
+
+  /* UI colours dark theme */
+
+  /* Background colours */
+
+  /* System colours */
+
+  /* Secondary Message background colour */
+}
+/* Dark theme UI elements */
+/* Light theme UI elements */
+/* UI colours light theme */
+/*
+--color-light-copy: var(--color-primary);
+--color-light-copy-alternate: var(--color-white-darker);
+--color-light-label: var(--color-white-darker);
+--color-light-link: var(--color-primary);
+--color-light-link-hover: var(--color-white-darker);
+--color-light-decoration: var(--color-white-darker);
+--color-light-disabled: var(--color-grey-60);
+*/
+/* UI colours dark theme */
+/*
+--color-dark-copy: var(--color-secondary);
+--color-dark-copy-alternate: var(--color-grey-63);
+--color-dark-label: var(--color-grey-30);
+--color-dark-link: var(--color-grey-20);
+--color-dark-link-hover: var(--color-grey-10);
+--color-dark-decoration: var(--color-grey-30);
+--color-dark-disabled: var(--color-grey-60);
+*/
+.HorizontalProductDisplayAccordion-module_accordionProductWrap__3RU7F {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+}
+@media (max-width: 639px) {
+  .HorizontalProductDisplayAccordion-module_accordionProductWrap__3RU7F {
+    display: block;
+  }
+}
+
+/* @import './key-frame.css'; */
+/* @import './font-face.css'; */
+:root {
+  /* Base colours */
+
+  /* UI colours light theme */
+
+  /* UI colours dark theme */
+
+  /* Background colours */
+
+  /* System colours */
+
+  /* Secondary Message background colour */
+}
+/* Dark theme UI elements */
+/* Light theme UI elements */
+/* UI colours light theme */
+/*
+--color-light-copy: var(--color-primary);
+--color-light-copy-alternate: var(--color-white-darker);
+--color-light-label: var(--color-white-darker);
+--color-light-link: var(--color-primary);
+--color-light-link-hover: var(--color-white-darker);
+--color-light-decoration: var(--color-white-darker);
+--color-light-disabled: var(--color-grey-60);
+*/
+/* UI colours dark theme */
+/*
+--color-dark-copy: var(--color-secondary);
+--color-dark-copy-alternate: var(--color-grey-63);
+--color-dark-label: var(--color-grey-30);
+--color-dark-link: var(--color-grey-20);
+--color-dark-link-hover: var(--color-grey-10);
+--color-dark-decoration: var(--color-grey-30);
+--color-dark-disabled: var(--color-grey-60);
+*/
 .List-module_base__wbAa2 {
   padding-left: 0;
   margin-top: 0;
