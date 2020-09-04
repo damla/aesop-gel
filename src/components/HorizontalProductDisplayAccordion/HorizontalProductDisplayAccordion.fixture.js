@@ -23,7 +23,7 @@ export default {
           medium:
             './assets/images/HorizontalProductDisplayAccordion/candles-product.png',
           large:
-            './as sets/images/HorizontalProductDisplayAccordion/candles-product.png',
+            './assets/images/HorizontalProductDisplayAccordion/candles-product.png',
         },
         id: 'ptolomey-closed-test',
         openButtonText: 'Learn more',
