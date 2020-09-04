@@ -2,11 +2,6 @@ import React from 'react';
 import cx from 'classnames';
 import { HEADING, HYPERLINK_STYLE_TYPES } from '~/constants';
 import PropTypes from 'prop-types';
-<<<<<<< HEAD
-=======
-// import { useProductDetailContext, useVariantSelectContext } from '~/contexts';
-
->>>>>>> 23691e3... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
 import AddToCartButton from '~/components/AddToCartButton';
 import AccordionProductBackgroundImage from '../AccordionProductBackgroundImage';
 import AccordionProductBackgroundVideo from '../AccordionProductBackgroundVideo';
@@ -17,6 +12,7 @@ import Paragraph from '~/components/Paragraph';
 import styles from './AccordionProduct.module.css';
 
 const AccordionProduct = ({
+  addToCart,
   closedState,
   compressed,
   expanded,
@@ -43,11 +39,6 @@ const AccordionProduct = ({
           styles.accordionDefaultBackground,
           expanded && styles.hidden,
         )}
-<<<<<<< HEAD
-=======
-        // style={{ closedState.background === 'Colour' ? { backgroundColor: closedState?.backgroundColour } : {} }}
-
->>>>>>> 23691e3... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
         style={{ backgroundColor: closedState?.backgroundColour }}
       >
         {closedState.background === 'Video' && (
@@ -84,14 +75,10 @@ const AccordionProduct = ({
           >
             {closedState?.openButtonText}
           </button>
-<<<<<<< HEAD
           <Image
             className={cx(styles.closedForegroundImage)}
             {...closedState.foregroundImage}
           />
-=======
-          <Image {...closedState.foregroundImage} />
->>>>>>> 23691e3... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
         </div>
       </div>
 
@@ -124,23 +111,8 @@ const AccordionProduct = ({
               {openState?.copy}
             </div>
             <div className={cx(styles.btns)}>
-              <AddToCartButton
-                copy={{
-                  /** @TODO needs to be passed down in props, considering adding this copy to the addToCart context */
-                  cartAction: 'Add to your cart',
-                  updateNotification: 'added to your cart',
-                  outOfStock: {
-                    label: 'Out of Stock',
-                    title: 'Out of stock',
-                  },
-                }}
-                dataTestRef="add-to-cart-accordion-product"
-              />
-<<<<<<< HEAD
+              <AddToCartButton copy={addToCart} theme={openState.theme} />
               {openState?.cta && (
-=======
-              {/* {openState?.cta && (
->>>>>>> 23691e3... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
                 <Hyperlink
                   className={styles.cta}
                   isAlternate={false}
@@ -149,11 +121,7 @@ const AccordionProduct = ({
                 >
                   {openState?.cta.text}
                 </Hyperlink>
-<<<<<<< HEAD
               )}
-=======
-              )} */}
->>>>>>> 23691e3... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
             </div>
           </div>
         </div>
@@ -169,6 +137,14 @@ const AccordionProduct = ({
 };
 
 AccordionProduct.propTypes = {
+  addToCart: PropTypes.shape({
+    cartAction: PropTypes.string,
+    updateNotification: PropTypes.string,
+    outOfStock: PropTypes.shape({
+      label: PropTypes.string,
+      title: PropTypes.string,
+    }),
+  }),
   closedState: PropTypes.shape({
     background: PropTypes.oneOf(['Colour', 'Image', 'Video']),
     backgroundColour: PropTypes.string,
@@ -207,6 +183,14 @@ AccordionProduct.propTypes = {
 };
 
 AccordionProduct.defaultProps = {
+  addToCart: {
+    cartAction: undefined,
+    updateNotification: undefined,
+    outOfStock: {
+      label: undefined,
+      title: undefined,
+    },
+  },
   closedState: {
     background: undefined,
     backgroundColour: undefined,

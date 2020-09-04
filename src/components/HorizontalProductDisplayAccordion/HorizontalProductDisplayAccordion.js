@@ -91,19 +91,6 @@ const HorizontalProductDisplayAccordion = ({ id, products }) => {
         return (
           <ProductDetailContextProvider
             key={index}
-            /**
-              src/contexts/ProductDetail.context.js
-              expects {
-                description,
-                id,
-                variantOptions,
-                cartDisclaimer,
-                definitionList,
-                ingredients,
-                keyIngredient,
-                productName,
-              }
-            */
             product={{
               description: product.openState.eyebrow,
               productName: product.openState.title,
@@ -130,6 +117,14 @@ HorizontalProductDisplayAccordion.propTypes = {
   openIndex: PropTypes.string,
   products: PropTypes.arrayOf(
     PropTypes.shape({
+      addToCart: PropTypes.shape({
+        cartAction: PropTypes.string,
+        updateNotification: PropTypes.string,
+        outOfStock: PropTypes.shape({
+          label: PropTypes.string,
+          title: PropTypes.string,
+        }),
+      }),
       closedState: PropTypes.shape({
         background: PropTypes.oneOf(['Colour', 'Image', 'Video']),
         backgroundColour: PropTypes.string,
@@ -172,18 +167,19 @@ HorizontalProductDisplayAccordion.propTypes = {
   ),
 };
 
-// HorizontalProductDisplayAccordion.propTypes = {
-//  className: PropTypes.string,
-//  id: PropTypes.string,
-//  openIndex: PropTypes.string,
-//  products: PropTypes.array,
-// };
-
 HorizontalProductDisplayAccordion.defaultProps = {
   className: undefined,
   id: undefined,
   openIndex: null,
   products: {
+    addToCart: {
+      cartAction: undefined,
+      updateNotification: undefined,
+      outOfStock: {
+        label: undefined,
+        title: undefined,
+      },
+    },
     closedState: {
       background: 'Image',
       backgroundColour: undefined,
