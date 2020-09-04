@@ -13,11 +13,7 @@ const FullWidthHeroScroll = ({
   cta,
   eyebrow,
   hasSerifFontHeading,
-<<<<<<< HEAD
   id,
-=======
-  heading,
->>>>>>> 23691e3... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
   textBlocks,
   theme,
   title,
@@ -47,11 +43,7 @@ const FullWidthHeroScroll = ({
   });
 
   return (
-<<<<<<< HEAD
     <section className={cx(styles.scrollLockWrap)} id={id}>
-=======
-    <section className={cx(styles.scrollLockWrap)}>
->>>>>>> 23691e3... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
       <div>
         <div className={cx(styles.scrollLockMedia)}>
           <FullscreenVideo {...backgroundVideo} />
@@ -59,7 +51,6 @@ const FullWidthHeroScroll = ({
         <div className={cx(styles.scrollingContent)}>
           <div className={cx(styles.fullscreenHero)}>
             <div className={styles.innerWrapper}>
-<<<<<<< HEAD
               {eyebrow && (
                 <h4 className={cx(styles.heroEyebrow, styles[theme])}>
                   {eyebrow}
@@ -68,19 +59,12 @@ const FullWidthHeroScroll = ({
               {title && (
                 <h3
                   className={cx(styles.heroTitle, styles[theme], {
-=======
-              {eyebrow && <h4 className={cx(styles.heroEyebrow)}>{eyebrow}</h4>}
-              {title && (
-                <h3
-                  className={cx(styles.heroTitle, {
->>>>>>> 23691e3... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
                     [styles.serif]: hasSerifFontHeading,
                   })}
                 >
                   {title}
                 </h3>
               )}
-<<<<<<< HEAD
               <div className={cx(styles.fullscreenHeroCopy, styles[theme])}>
                 {copy}
               </div>
@@ -96,24 +80,10 @@ const FullWidthHeroScroll = ({
                 </Hyperlink>
               )}
             </div>
-=======
-              {copy}
-            </div>
-            {cta && (
-              <Hyperlink
-                className={styles.cta}
-                isAlternate={false}
-                style={HYPERLINK_STYLE_TYPES.INTERNAL_BUTTON_LINK}
-                theme={theme}
-                url={cta.url}
-              >
-                {cta.text}
-              </Hyperlink>
-            )}
->>>>>>> 23691e3... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
-            <div
-              className={cx(styles.ScrollIndicatorWrapper, styles[theme])}
+            <button
+              className={cx(styles.ScrollIndicator, styles[theme])}
               ref={scrollBtn}
+              type="button"
             >
               <svg
                 aria-labelledby="e00a5034-d523-4b5a-b5ee-51159feac31e"
@@ -128,21 +98,9 @@ const FullWidthHeroScroll = ({
                   <polygon points="25,31.3 4.2,10.5 0.1,14.6 25,39.5 50,14.6 45.9,10.5 " />
                 </g>
               </svg>
-            </div>
+            </button>
           </div>
           {textBlocks.map(({ hasSerifFont, text }, index) => {
-<<<<<<< HEAD
-=======
-            // return (
-            //  <div className={cx(styles.fullscreenSection)} key={index} ref={ref + index}>
-            //    {/*<Transition isActive={isOnScreen} type="fade">*/}
-            //    <Heading level="4" size="medium" theme={theme} className={cx(styles.textBlock)}>
-            //      {text}
-            //    </Heading>
-            //    {/*</Transition>*/}
-            //  </div>
-            // )
->>>>>>> 23691e3... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
             return (
               <FullscreenSection
                 hasSerifFont={hasSerifFont}
@@ -168,10 +126,7 @@ FullWidthHeroScroll.propTypes = {
   eyebrow: PropTypes.string,
   hasSerifFontHeading: PropTypes.bool,
   heading: PropTypes.string,
-<<<<<<< HEAD
   id: PropTypes.string,
-=======
->>>>>>> 23691e3... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
   theme: PropTypes.oneOf(['dark', 'light']),
   textBlocks: PropTypes.arrayOf(
     PropTypes.shape({
@@ -189,10 +144,7 @@ FullWidthHeroScroll.defaultProps = {
   eyebrow: undefined,
   hasSerifFontHeading: false,
   heading: undefined,
-<<<<<<< HEAD
   id: undefined,
-=======
->>>>>>> 23691e3... Adding HorizontalProductDisplayAccordion and FullscreenHeroScroll
   theme: 'light',
   textBlocks: [],
   title: undefined,
