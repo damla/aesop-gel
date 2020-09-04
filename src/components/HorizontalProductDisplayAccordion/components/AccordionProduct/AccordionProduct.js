@@ -193,6 +193,10 @@ AccordionProduct.propTypes = {
     backgroundVideo: PropTypes.object,
     closeButtonText: PropTypes.string,
     copy: PropTypes.node,
+    cta: PropTypes.shape({
+      text: PropTypes.string,
+      url: PropTypes.string,
+    }),
     eyebrow: PropTypes.string,
     foregroundImage: PropTypes.object,
     theme: PropTypes.string,
