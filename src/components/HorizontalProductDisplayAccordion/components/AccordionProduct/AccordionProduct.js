@@ -12,6 +12,7 @@ import Paragraph from '~/components/Paragraph';
 import styles from './AccordionProduct.module.css';
 
 const AccordionProduct = ({
+  addToCart,
   closedState,
   compressed,
   expanded,
@@ -110,18 +111,7 @@ const AccordionProduct = ({
               {openState?.copy}
             </div>
             <div className={cx(styles.btns)}>
-              <AddToCartButton
-                copy={{
-                  /** @TODO needs to be passed down in props, considering adding this copy to the addToCart context */
-                  cartAction: 'Add to your cart',
-                  updateNotification: 'added to your cart',
-                  outOfStock: {
-                    label: 'Out of Stock',
-                    title: 'Out of stock',
-                  },
-                }}
-                dataTestRef="add-to-cart-accordion-product"
-              />
+              <AddToCartButton copy={addToCart} theme={openState.theme} />
               {openState?.cta && (
                 <Hyperlink
                   className={styles.cta}
@@ -147,6 +137,14 @@ const AccordionProduct = ({
 };
 
 AccordionProduct.propTypes = {
+  addToCart: PropTypes.shape({
+    cartAction: PropTypes.string,
+    updateNotification: PropTypes.string,
+    outOfStock: PropTypes.shape({
+      label: PropTypes.string,
+      title: PropTypes.string,
+    }),
+  }),
   closedState: PropTypes.shape({
     background: PropTypes.oneOf(['Colour', 'Image', 'Video']),
     backgroundColour: PropTypes.string,
@@ -185,6 +183,14 @@ AccordionProduct.propTypes = {
 };
 
 AccordionProduct.defaultProps = {
+  addToCart: {
+    cartAction: undefined,
+    updateNotification: undefined,
+    outOfStock: {
+      label: undefined,
+      title: undefined,
+    },
+  },
   closedState: {
     background: undefined,
     backgroundColour: undefined,
