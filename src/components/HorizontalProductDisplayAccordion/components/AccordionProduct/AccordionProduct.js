@@ -2,8 +2,6 @@ import React from 'react';
 import cx from 'classnames';
 import { HEADING, HYPERLINK_STYLE_TYPES } from '~/constants';
 import PropTypes from 'prop-types';
-// import { useProductDetailContext, useVariantSelectContext } from '~/contexts';
-
 import AddToCartButton from '~/components/AddToCartButton';
 import AccordionProductBackgroundImage from '../AccordionProductBackgroundImage';
 import AccordionProductBackgroundVideo from '../AccordionProductBackgroundVideo';
@@ -40,8 +38,6 @@ const AccordionProduct = ({
           styles.accordionDefaultBackground,
           expanded && styles.hidden,
         )}
-        // style={{ closedState.background === 'Colour' ? { backgroundColor: closedState?.backgroundColour } : {} }}
-
         style={{ backgroundColor: closedState?.backgroundColour }}
       >
         {closedState.background === 'Video' && (
@@ -78,7 +74,10 @@ const AccordionProduct = ({
           >
             {closedState?.openButtonText}
           </button>
-          <Image {...closedState.foregroundImage} />
+          <Image
+            className={cx(styles.closedForegroundImage)}
+            {...closedState.foregroundImage}
+          />
         </div>
       </div>
 
@@ -123,7 +122,7 @@ const AccordionProduct = ({
                 }}
                 dataTestRef="add-to-cart-accordion-product"
               />
-              {/* {openState?.cta && (
+              {openState?.cta && (
                 <Hyperlink
                   className={styles.cta}
                   isAlternate={false}
@@ -132,7 +131,7 @@ const AccordionProduct = ({
                 >
                   {openState?.cta.text}
                 </Hyperlink>
-              )} */}
+              )}
             </div>
           </div>
         </div>

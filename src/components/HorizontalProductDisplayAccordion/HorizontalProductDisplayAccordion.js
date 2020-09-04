@@ -59,7 +59,6 @@ const HorizontalProductDisplayAccordion = ({ id, products }) => {
       accordionProducts.map((product, i) => {
         product.expanded = false;
         product.compressed = false;
-        console.log('reset');
         return product;
       }),
     );
