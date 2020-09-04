@@ -13,7 +13,7 @@ const FullWidthHeroScroll = ({
   cta,
   eyebrow,
   hasSerifFontHeading,
-  heading,
+  id,
   textBlocks,
   theme,
   title,
@@ -43,7 +43,7 @@ const FullWidthHeroScroll = ({
   });
 
   return (
-    <section className={cx(styles.scrollLockWrap)}>
+    <section className={cx(styles.scrollLockWrap)} id={id}>
       <div>
         <div className={cx(styles.scrollLockMedia)}>
           <FullscreenVideo {...backgroundVideo} />
@@ -51,29 +51,35 @@ const FullWidthHeroScroll = ({
         <div className={cx(styles.scrollingContent)}>
           <div className={cx(styles.fullscreenHero)}>
             <div className={styles.innerWrapper}>
-              {eyebrow && <h4 className={cx(styles.heroEyebrow)}>{eyebrow}</h4>}
+              {eyebrow && (
+                <h4 className={cx(styles.heroEyebrow, styles[theme])}>
+                  {eyebrow}
+                </h4>
+              )}
               {title && (
                 <h3
-                  className={cx(styles.heroTitle, {
+                  className={cx(styles.heroTitle, styles[theme], {
                     [styles.serif]: hasSerifFontHeading,
                   })}
                 >
                   {title}
                 </h3>
               )}
-              {copy}
+              <div className={cx(styles.fullscreenHeroCopy, styles[theme])}>
+                {copy}
+              </div>
+              {cta && (
+                <Hyperlink
+                  className={styles.cta}
+                  isAlternate={false}
+                  style={HYPERLINK_STYLE_TYPES.INTERNAL_BUTTON_LINK}
+                  theme={theme}
+                  url={cta.url}
+                >
+                  {cta.text}
+                </Hyperlink>
+              )}
             </div>
-            {cta && (
-              <Hyperlink
-                className={styles.cta}
-                isAlternate={false}
-                style={HYPERLINK_STYLE_TYPES.INTERNAL_BUTTON_LINK}
-                theme={theme}
-                url={cta.url}
-              >
-                {cta.text}
-              </Hyperlink>
-            )}
             <div
               className={cx(styles.ScrollIndicatorWrapper, styles[theme])}
               ref={scrollBtn}
@@ -128,6 +134,7 @@ FullWidthHeroScroll.propTypes = {
   eyebrow: PropTypes.string,
   hasSerifFontHeading: PropTypes.bool,
   heading: PropTypes.string,
+  id: PropTypes.string,
   theme: PropTypes.oneOf(['dark', 'light']),
   textBlocks: PropTypes.arrayOf(
     PropTypes.shape({
@@ -145,6 +152,7 @@ FullWidthHeroScroll.defaultProps = {
   eyebrow: undefined,
   hasSerifFontHeading: false,
   heading: undefined,
+  id: undefined,
   theme: 'light',
   textBlocks: [],
   title: undefined,

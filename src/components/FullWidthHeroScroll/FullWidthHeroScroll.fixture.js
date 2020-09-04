@@ -23,6 +23,8 @@ export default {
       small: './assets/images/MediaWithContent/video-poster.png',
     },
   },
+  copy:
+    '"We explore the importance of the stars in seafaring journeys, and in finding a safe port after a storm—a metaphor for navigating the turbulent waters of 2020."',
   cta: {
     text: 'Lorem ipsum dolor',
     url: '/',
@@ -30,6 +32,7 @@ export default {
   eyebrow: 'Praesent tincidunt accumsan',
   hasSerifFontHeading: false,
   heading: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+  id: 'candles-full-width-floating',
   textBlocks: [
     {
       text:
@@ -48,4 +51,5 @@ export default {
     },
   ],
   theme: 'light',
+  title: 'Introducing Poured Candles',
 };
