@@ -2680,7 +2680,8 @@ sans-serif;
   }
 @media (min-width: 640px) {
 .Carousel-module_carousel__2ILZE .slick-list {
-      margin-right: 40px
+      margin-right: 40px;
+      margin-left: 40px
   }
     }
 @media (min-width: 1025px) {
@@ -2745,7 +2746,7 @@ sans-serif;
       margin-left: 40px
   }
     }
-.Carousel-module_fullWidthSlides__2sXZx .slick-list {
+.Carousel-module_fullWidthSlides__2sXZx .slick-list.slick-list {
     margin-right: 0;
     margin-left: 0;
   }
