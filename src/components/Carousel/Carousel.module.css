@@ -33,14 +33,19 @@
 
   :global(.slick-list) {
     position: relative;
-    margin: 0 0 24px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 24px;
+    margin-left: 0;
 
     @media (--viewport-md) {
-      margin: 0 40px 24px;
+      margin-right: 40px;
     }
 
     @media (--viewport-lg) {
-      margin: 0 80px 48px;
+      margin-right: 80px;
+      margin-bottom: 48px;
+      margin-left: 80px;
     }
   }
 
@@ -76,10 +81,15 @@
 }
 
 .mobileCarouselIntroductionWrapper {
-  margin: 0 20px 60px;
+  margin-top: 0;
+  margin-right: 20px;
+  margin-bottom: 60px;
+  margin-left: 20px;
 
   @media (--viewport-md) {
-    margin: 0 40px 100px;
+    margin-right: 40px;
+    margin-bottom: 100px;
+    margin-left: 40px;
   }
 
   p {
@@ -91,7 +101,9 @@
 .fullWidthSlides {
   .mobileCarouselIntroductionWrapper {
     @media (--viewport-lg) {
-      margin: 0 80px 40px;
+      margin-right: 80px;
+      margin-bottom: 40px;
+      margin-left: 40px;
     }
   }
 
@@ -103,17 +115,22 @@
 
 .footer {
   position: relative;
-  margin: 0 20px;
+  margin-top: 0;
+  margin-right: 20px;
+  margin-bottom: 0;
+  margin-left: 20px;
   font-size: rem(14px);
   line-height: 1.6;
 
   @media (--viewport-md) {
     display: flex;
-    margin: 0 40px;
+    margin-right: 40px;
+    margin-left: 40px;
   }
 
   @media (--viewport-lg) {
-    margin: 0 80px;
+    margin-right: 80px;
+    margin-left: 80px;
   }
 }
 
