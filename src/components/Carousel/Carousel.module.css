@@ -40,6 +40,7 @@
 
     @media (--viewport-md) {
       margin-right: 40px;
+      margin-left: 40px;
     }
 
     @media (--viewport-lg) {
@@ -107,7 +108,7 @@
     }
   }
 
-  :global(.slick-list) {
+  :global(.slick-list.slick-list) {
     margin-right: 0;
     margin-left: 0;
   }
