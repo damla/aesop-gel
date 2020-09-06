@@ -8,15 +8,15 @@ const FullscreenVideo = ({ large, medium, small }) => {
   const ref = useRef(null);
 
   useEffect(() => {
-    let vp = getViewportForWidth(window.innerWidth);
+    let viewportSize = getViewportForWidth(window.innerWidth);
 
     const bgVideoInit = ref => {
       const vid = ref.current;
       let videoUrl = large;
-      if (vp === 'small') {
+      if (viewportSize === 'small') {
         videoUrl = small;
       }
-      if (vp === 'medium') {
+      if (viewportSize === 'medium') {
         videoUrl = medium;
       }
       if (videoUrl) {
@@ -48,9 +48,9 @@ const FullscreenVideo = ({ large, medium, small }) => {
     };
     bgVideoInit(ref);
     window.addEventListener('resize', () => {
-      const vpNew = getViewportForWidth(window.innerWidth);
-      if (vpNew !== vp) {
-        vp = vpNew;
+      const viewportSizeNew = getViewportForWidth(window.innerWidth);
+      if (viewportSizeNew !== viewportSize) {
+        viewportSize = viewportSizeNew;
         bgVideoInit(ref);
       }
     });
