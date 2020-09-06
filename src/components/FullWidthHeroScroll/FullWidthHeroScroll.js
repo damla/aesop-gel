@@ -2,10 +2,11 @@ import React, { useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { HYPERLINK_STYLE_TYPES } from '~/constants';
-import FullscreenVideo from './components/FullscreenVideo';
-import styles from './FullWidthHeroScroll.module.css';
-import FullscreenSection from './components/FullscreenSection';
 import Hyperlink from '~/components/Hyperlink';
+import FullscreenSection from './components/FullscreenSection';
+import FullscreenVideo from './components/FullscreenVideo';
+
+import styles from './FullWidthHeroScroll.module.css';
 
 const FullWidthHeroScroll = ({
   backgroundVideo,
@@ -28,7 +29,6 @@ const FullWidthHeroScroll = ({
         return;
       }
       scrollBtnEl.style.opacity = (100 - window.scrollY) / 100;
-      console.log('scrolling');
     };
 
     fadeScrollBtn;
@@ -86,18 +86,9 @@ const FullWidthHeroScroll = ({
               ref={scrollBtn}
               type="button"
             >
-              <svg
-                aria-labelledby="e00a5034-d523-4b5a-b5ee-51159feac31e"
-                className="Icon ScrollIndicator-icon"
-                role="img"
-                viewBox="0 0 50 50"
-              >
-                <title id="e00a5034-d523-4b5a-b5ee-51159feac31e">
-                  Scroll down
-                </title>
-                <g>
-                  <polygon points="25,31.3 4.2,10.5 0.1,14.6 25,39.5 50,14.6 45.9,10.5 " />
-                </g>
+              <svg viewBox="0 0 50 50">
+                <title>Scroll down</title>
+                <polygon points="25,31.3 4.2,10.5 0.1,14.6 25,39.5 50,14.6 45.9,10.5 " />
               </svg>
             </button>
           </div>
