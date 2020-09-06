@@ -2,10 +2,11 @@ import React, { useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { HYPERLINK_STYLE_TYPES } from '~/constants';
-import FullscreenVideo from './components/FullscreenVideo';
-import styles from './FullWidthHeroScroll.module.css';
-import FullscreenSection from './components/FullscreenSection';
 import Hyperlink from '~/components/Hyperlink';
+import FullscreenSection from './components/FullscreenSection';
+import FullscreenVideo from './components/FullscreenVideo';
+
+import styles from './FullWidthHeroScroll.module.css';
 
 const FullWidthHeroScroll = ({
   backgroundVideo,
@@ -28,7 +29,6 @@ const FullWidthHeroScroll = ({
         return;
       }
       scrollBtnEl.style.opacity = (100 - window.scrollY) / 100;
-      console.log('scrolling');
     };
 
     fadeScrollBtn;
