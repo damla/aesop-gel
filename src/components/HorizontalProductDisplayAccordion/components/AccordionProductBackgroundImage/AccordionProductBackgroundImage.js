@@ -18,12 +18,12 @@ const AccordionProductBackgroundImage = ({ small, medium, large }) => {
   const BgImgWrap = useRef();
 
   useEffect(() => {
-    let vp = getViewportForWidth(window.innerWidth);
+    let viewportSize = getViewportForWidth(window.innerWidth);
     const BgImgInit = BgImgWrap => {
       const imgDiv = BgImgWrap.current;
-      if (imgDiv.querySelector(`[data-screensize=${vp}]`)) {
-        const src = imgDiv.querySelector(`[data-screensize=${vp}]`).dataset
-          .imgsrc;
+      if (imgDiv.querySelector(`[data-screensize=${viewportSize}]`)) {
+        const src = imgDiv.querySelector(`[data-screensize=${viewportSize}]`)
+          .dataset.imgsrc;
 
         if (src) {
           imgDiv.querySelector('[data-imgdiv]').style.backgroundImage =
@@ -32,13 +32,19 @@ const AccordionProductBackgroundImage = ({ small, medium, large }) => {
       }
     };
     BgImgInit(BgImgWrap);
-    window.addEventListener('resize', () => {
-      const vpNew = getViewportForWidth(window.innerWidth);
-      if (vpNew !== vp) {
-        vp = vpNew;
+
+    const setBgImgSrc = () => {
+      const viewportSizeNew = getViewportForWidth(window.innerWidth);
+      if (viewportSizeNew !== viewportSize) {
+        viewportSize = viewportSizeNew;
         BgImgInit(BgImgWrap);
       }
-    });
+    };
+    window.addEventListener('resize', setBgImgSrc);
+
+    return () => {
+      window.removeEventListener('resize', setBgImgSrc);
+    };
   }, [BgImgWrap]);
 
   return (
