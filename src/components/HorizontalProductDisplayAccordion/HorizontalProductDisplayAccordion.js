@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import {
@@ -9,6 +9,7 @@ import AccordionProduct from './components/AccordionProduct';
 import styles from './HorizontalProductDisplayAccordion.module.css';
 import { ascertainIsSmallOnlyViewport } from '~/utils/viewports';
 import useWindowHasResized from '~/customHooks/useWindowHasResized';
+import debounce from 'lodash/debounce';
 
 const HorizontalProductDisplayAccordion = ({ id, products }) => {
   const [accordionProducts, toggleAccordionProducts] = useState(products);
@@ -68,13 +69,22 @@ const HorizontalProductDisplayAccordion = ({ id, products }) => {
     );
   };
 
-  window.addEventListener('resize', () => {
-    if (ascertainIsSmallOnlyViewport() === false && isMobile === true) {
-      accordionProducts.map(product => {
-        product.expanded = false;
-      });
-      isMobile = ascertainIsSmallOnlyViewport();
-    }
+  useEffect(() => {
+    const resetAccordionOnResize = debounce(() => {
+      if (ascertainIsSmallOnlyViewport() !== isMobile) {
+        accordionProducts.map(product => {
+          product.expanded = false;
+          product.compressed = false;
+        });
+        isMobile = ascertainIsSmallOnlyViewport();
+      }
+    }, 200);
+
+    window.addEventListener('resize', resetAccordionOnResize);
+
+    return () => {
+      window.removeEventListener('resize', resetAccordionOnResize);
+    };
   });
 
   useWindowHasResized();
@@ -91,6 +101,19 @@ const HorizontalProductDisplayAccordion = ({ id, products }) => {
         return (
           <ProductDetailContextProvider
             key={index}
+            /**
+              src/contexts/ProductDetail.context.js
+              expects {
+                description,
+                id,
+                variantOptions,
+                cartDisclaimer,
+                definitionList,
+                ingredients,
+                keyIngredient,
+                productName,
+              }
+            */
             product={{
               description: product.openState.eyebrow,
               productName: product.openState.title,
@@ -117,14 +140,6 @@ HorizontalProductDisplayAccordion.propTypes = {
   openIndex: PropTypes.string,
   products: PropTypes.arrayOf(
     PropTypes.shape({
-      addToCart: PropTypes.shape({
-        cartAction: PropTypes.string,
-        updateNotification: PropTypes.string,
-        outOfStock: PropTypes.shape({
-          label: PropTypes.string,
-          title: PropTypes.string,
-        }),
-      }),
       closedState: PropTypes.shape({
         background: PropTypes.oneOf(['Colour', 'Image', 'Video']),
         backgroundColour: PropTypes.string,
@@ -167,19 +182,18 @@ HorizontalProductDisplayAccordion.propTypes = {
   ),
 };
 
+// HorizontalProductDisplayAccordion.propTypes = {
+//  className: PropTypes.string,
+//  id: PropTypes.string,
+//  openIndex: PropTypes.string,
+//  products: PropTypes.array,
+// };
+
 HorizontalProductDisplayAccordion.defaultProps = {
   className: undefined,
   id: undefined,
   openIndex: null,
   products: {
-    addToCart: {
-      cartAction: undefined,
-      updateNotification: undefined,
-      outOfStock: {
-        label: undefined,
-        title: undefined,
-      },
-    },
     closedState: {
       background: 'Image',
       backgroundColour: undefined,

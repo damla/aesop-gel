@@ -21,24 +21,6 @@ const AccordionProductBackgroundVideo = ({ small, medium, large }) => {
         vid.src = videoUrl;
         // objectFitVideos();
 
-        // vid.oncanplay = () => {
-        //  const promise = vid.play();
-        //  if (promise !== undefined) {
-        //    promise
-        //      .then(() => {
-        //        vid.parentElement.classList.add('autoplay-enabled');
-        //        // objectFitVideos();
-        //      })
-        //      .catch(() => {
-        //        vid.parentElement.classList.add('autoplay-disabled');
-        //      });
-        //  }
-        // };
-        // vid.addEventListener('loadedmetadata', () => {
-        //  const ratio = (vid.videoHeight / vid.videoWidth) * 100;
-        //  vid.parentElement.dataset.ratio = ratio;
-        // }, false);
-
         const wrapper = vid.parentElement.parentElement;
 
         wrapper.addEventListener('mouseover', () => {

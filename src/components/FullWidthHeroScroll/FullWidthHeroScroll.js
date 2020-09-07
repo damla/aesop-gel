@@ -34,13 +34,18 @@ const FullWidthHeroScroll = ({
     fadeScrollBtn;
     window.addEventListener('scroll', fadeScrollBtn);
 
-    scrollBtnEl.addEventListener('click', () => {
+    const animateScrollTo = () => {
       window.scroll({
         top: window.innerHeight,
         left: 0,
         behavior: 'smooth',
       });
-    });
+    };
+    scrollBtnEl.addEventListener('click', animateScrollTo);
+
+    return () => {
+      window.removeEventListener('scroll', fadeScrollBtn);
+    };
   });
 
   return (
