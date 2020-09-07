@@ -2433,7 +2433,9 @@ sans-serif;
 --color-dark-disabled: var(--color-grey-60);
 */
 .Image-module_base__18W0_ {
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .Image-module_picture__312I- {
   width: 100%;
@@ -3528,19 +3530,39 @@ sans-serif;
 .Figure-module_base__2Vmj2 {
   margin: 0;
 }
+.Figure-module_base__2Vmj2,
+  .Figure-module_base__2Vmj2 * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
 .Figure-module_caption__187du {
+  padding-top: 25px;
+  padding-right: 20px;
+  padding-bottom: 25px;
+  padding-left: 20px;
   margin: 0;
-  font-family: 'Suisse Regular'
+  font-family: 'Suisse Medium'
 ,
 sans-serif;
   font-size: 14px;
-  line-height: 1.6;
+  line-height: 1.7;
 }
+@media (min-width: 640px) {
+.Figure-module_caption__187du {
+    padding-right: 25px;
+    padding-left: 34px
+}
+  }
+@media (min-width: 1025px) {
+.Figure-module_caption__187du {
+    padding-left: 20px
+}
+  }
 .Figure-module_dark__1Gy-5 .Figure-module_caption__187du {
-    color: #333;
+    color: #666;
   }
 .Figure-module_light__wv1hI .Figure-module_caption__187du {
-    color: #fffef2;
+    color: #e0dfd6;
   }
 .Figure-module_caption__187du p:first-of-type {
       margin-top: 0;
@@ -3549,27 +3571,20 @@ sans-serif;
       margin-bottom: 0;
     }
 .Figure-module_captionWrapper__1WrIr {
-  padding-top: 16px;
-  padding-right: 16px;
-  padding-bottom: 16px;
   margin: 0;
 }
 @media (min-width: 640px) {
-.Figure-module_captionWrapper__1WrIr {
-    padding-top: calc(34px / 2);
-    padding-right: 34px;
-    padding-bottom: calc(34px / 2)
+.Figure-module_captionOffset__3d-Q- {
+    margin-left: 27.34%
 }
   }
 @media (min-width: 1025px) {
-.Figure-module_captionWrapper__1WrIr {
-    padding-top: calc(40px / 2);
-    padding-right: 40px;
-    padding-bottom: calc(40px / 2)
+.Figure-module_captionOffset__3d-Q- {
+    margin-left: 40.39%
 }
   }
 .Figure-module_border__5rGIx {
-  border-bottom: 1px solid #bcbbb4;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.2);
 }
 
 /* @import './key-frame.css'; */
