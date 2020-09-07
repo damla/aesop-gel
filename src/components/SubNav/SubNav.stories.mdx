@@ -12,6 +12,7 @@ import SubNavFixture from './SubNav.fixture';
     <SubNav
       heading={SubNavFixture.heading}
       id={SubNavFixture.id}
+      isHero={knobs.boolean('isHero', false, 'Presentation')}
       isSelect={knobs.boolean('isSelect', false, 'Presentation')}
       links={SubNavFixture.links}
       theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
