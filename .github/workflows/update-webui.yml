@@ -17,17 +17,22 @@ jobs:
           ref: 'develop'
           token: ${{ secrets.X_GITHUB_TOKEN }}
 
+      - name: Create variables
+        run: |
+          echo "::set-env name=GEL_VERSION::${GITHUB_REF#refs/*/}"
+          echo "::set-env name=BRANCH_NAME::update-Gel-to-${GEL_VERSION}"
+
       - name: npm install
-        run: npm install --save github:aesop/aesop-gel#$GITHUB_REF
+        run: npm install --save github:aesop/aesop-gel#$GEL_VERSION
 
       - name: Commit and push update
         run: |
           git config user.name "Gel Updater"
           git config user.email ""
           git add ./package*
-          git checkout -b update-Gel-to-$GITHUB_REF
-          git commit -m "chore(update-gel): update Aesop Gel to ${GITHUB_REF}"
-          git push
+          git checkout -b $BRANCH_NAME
+          git commit -m "chore(update-gel): update Aesop Gel to ${GEL_VERSION}"
+          git push --set-upstream origin $BRANCH_NAME
 
       - name: Create PR
         run: |
@@ -35,4 +40,4 @@ jobs:
           -X POST \
           -H "Accept: application/vnd.github.v3+json" \
           https://api.github.com/repos/aesop/aesop-web-ui/pulls \
-          -d '{"title":"update Aesop Gel to ${GITHUB_REF}","head":"update-Gel-to-${GITHUB_REF}","base":"develop"}'
+          -d '{"title":"Update Aesop Gel to ${GITHUB_REF}","head":"${BRANCH_NAME}","base":"develop"}'
