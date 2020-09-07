@@ -3528,6 +3528,8 @@ sans-serif;
 --color-dark-disabled: var(--color-grey-60);
 */
 .Figure-module_base__2Vmj2 {
+  width: 100%;
+  height: 100%;
   margin: 0;
 }
 .Figure-module_base__2Vmj2,
@@ -5123,6 +5125,8 @@ sans-serif;
   position: absolute;
   right: 0;
   bottom: -30px;
+  width: auto;
+  height: auto;
 }
 .Media-module_foregroundImage__1XF6r img {
     width: auto;
