@@ -9,6 +9,10 @@ jobs:
     name: Update Web UI
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+
       - name: Checkout Web UI
         uses: actions/checkout@v2
         with:
@@ -22,22 +26,13 @@ jobs:
           echo "::set-env name=GEL_VERSION::${GITHUB_REF#refs/*/}"
           echo "::set-env name=BRANCH_NAME::update-Gel-to-${GITHUB_REF#refs/*/}"
 
-      - name: npm install
+      - name: Update Gel
         run: npm install --save github:aesop/aesop-gel#$GEL_VERSION
 
-      - name: Commit and push update
-        run: |
-          git config user.name "Gel Updater"
-          git config user.email ""
-          git add ./package*
-          git checkout -b $BRANCH_NAME
-          git commit -m "chore(update-gel): update Aesop Gel to ${GEL_VERSION}"
-          git push --set-upstream origin $BRANCH_NAME
-
-      - name: Create PR
-        run: |
-          curl \
-          -X POST \
-          -H "Accept: application/vnd.github.v3+json" \
-          https://api.github.com/repos/aesop/aesop-web-ui/pulls \
-          -d '{"title":"Update Aesop Gel to ${GEL_VERSION}","head":"${BRANCH_NAME}","base":"develop"}'
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+            token: ${{ secrets.X_GITHUB_TOKEN }}
+            commit-message: Update Gel to ${{ env.GEL_VERSION }}
+            title: Update Gel to ${{ env.GEL_VERSION }}
+            branch: update-gel-to-${{ env.GEL_VERSION }}
