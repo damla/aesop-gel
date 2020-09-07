@@ -29,10 +29,24 @@ jobs:
       - name: Update Gel
         run: npm install --save github:aesop/aesop-gel#$GEL_VERSION
 
+      - name: Commit and push update
+        run: |
+          git config user.name "Jenkins Aesop"
+          git config user.email ""
+          git add ./package*
+          git checkout -b $BRANCH_NAME
+          git commit -m "chore(update-gel): update Aesop Gel to ${GEL_VERSION}"
+          git push --set-upstream origin $BRANCH_NAME
+
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v3
-        with:
-            token: ${{ secrets.X_GITHUB_TOKEN }}
-            commit-message: Update Gel to ${{ env.GEL_VERSION }}
-            title: Update Gel to ${{ env.GEL_VERSION }}
-            branch: update-gel-to-${{ env.GEL_VERSION }}
+        run: |
+          curl \
+          -u "jenkins-aesop:${TOKEN}" \
+          -X POST \
+          -H "Accept: application/vnd.github.v3+json" \
+          https://api.github.com/repos/aesop/aesop-web-ui/pulls \
+          -d "{\"title\":\"Update Aesop Gel to ${GEL_VERSION}\",\"head\":\"${BRANCH_NAME}\",\"base\":\"develop\"}"
+        env:
+          TOKEN: ${{ secrets.X_GITHUB_TOKEN }}
+          VERSION: ${{ env.GEL_VERSION }}
+          BRANCH_NAME: ${{ env.BRANCH_NAME }}
