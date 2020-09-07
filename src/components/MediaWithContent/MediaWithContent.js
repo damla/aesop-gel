@@ -33,7 +33,7 @@ const MediaWithContent = forwardRef(function MediaWithContentRef(
   const style = backgroundColor ? { backgroundColor } : undefined;
 
   return (
-    <section className={classSet} ref={ref} style={style}>
+    <div className={classSet} ref={ref} style={style}>
       <Media
         className={styles.media}
         foregroundImage={foregroundImage}
@@ -51,7 +51,7 @@ const MediaWithContent = forwardRef(function MediaWithContentRef(
         isReverse={isReverse}
         theme={theme}
       />
-    </section>
+    </div>
   );
 });
 
