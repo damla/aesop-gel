@@ -16,6 +16,7 @@ const ProductExtract = forwardRef(function ProductExtractRef(
     product,
     theme,
     itemNum,
+    works,
   },
   ref,
 ) {
@@ -78,7 +79,7 @@ const ProductExtract = forwardRef(function ProductExtractRef(
             level={HEADING.LEVEL.FOUR}
             size={HEADING.SIZE.X_X_SMALL}
           >
-            <span>{product.works}</span>
+            <span>{works}</span>
           </Heading>
           <div className={productNameClassSet}>
             <span>{product.name}</span>
@@ -102,12 +103,12 @@ ProductExtract.propTypes = {
   isVisible: PropTypes.bool,
   itemNum: PropTypes.number,
   product: PropTypes.shape({
-    works: PropTypes.string,
     image: PropTypes.object,
     name: PropTypes.string,
     url: PropTypes.string,
   }),
   theme: PropTypes.oneOf(['dark', 'light']),
+  works: PropTypes.string,
 };
 
 ProductExtract.defaultProps = {
@@ -117,11 +118,11 @@ ProductExtract.defaultProps = {
   isVisible: true,
   itemNum: 1,
   product: {
-    works: 'Works well with',
     image: {
       altText: 'Product Extract',
     },
   },
+  works: 'Works well with',
   theme: 'dark',
   url: '/',
 };

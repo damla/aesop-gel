@@ -17,14 +17,15 @@ import ProductExtractFixture from './ProductExtractFixture';
         'itemNum',
         ['1', '2', '3', '4'],
         '4',
-        'Presentation'
+        'Presentation',
       )}
       product={knobs.object(
         'product',
         ProductExtractFixture.product,
-        'product'
+        'product',
       )}
       theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
+      works={ProductExtractFixture.works}
     />
   </Story>
 </Preview>
