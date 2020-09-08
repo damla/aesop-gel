@@ -98,7 +98,7 @@ export default {
         },
       },
       closedState: {
-        background: 'Image',
+        background: 'Video',
         backgroundColor: '#9DB5AC',
         backgroundImage: {
           type: 'image',
@@ -109,7 +109,30 @@ export default {
           large:
             './assets/images/HorizontalProductDisplayAccordion/Aganice-front.png',
         },
-        backgroundVideo: null,
+        backgroundVideo: {
+          large:
+            'https://player.vimeo.com/external/225136214.hd.mp4?s=a01cd8b47f35767394e48dc01af10510ef8ff4dd&profile_id=174',
+          medium:
+            'https://player.vimeo.com/external/225136214.hd.mp4?s=a01cd8b47f35767394e48dc01af10510ef8ff4dd&profile_id=174',
+          small:
+            'https://player.vimeo.com/external/225136214.hd.mp4?s=a01cd8b47f35767394e48dc01af10510ef8ff4dd&profile_id=174',
+          poster: {
+            copy: {
+              altText: 'How to Use Video for Tea Tree Leaf Facial Exfoliant',
+            },
+            large: './assets/images/MediaWithContent/video-poster.png',
+            medium: './assets/images/MediaWithContent/video-poster.png',
+            small: './assets/images/MediaWithContent/video-poster.png',
+          },
+          fallbackImage: {
+            copy: {
+              altText: 'How to Use Video for Tea Tree Leaf Facial Exfoliant',
+            },
+            large: './assets/images/MediaWithContent/video-poster.png',
+            medium: './assets/images/MediaWithContent/video-poster.png',
+            small: './assets/images/MediaWithContent/video-poster.png',
+          },
+        },
         copy: 'A beam to comfort those on the high seas',
         eyebrow: 'Cardamon Mimosa Tobacco',
         foregroundImage: {

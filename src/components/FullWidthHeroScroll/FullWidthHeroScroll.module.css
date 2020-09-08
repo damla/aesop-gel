@@ -39,6 +39,10 @@
   font-family: var(--font-family-sans-serif-regular);
 }
 
+.backgroundVideo {
+  height: 100%;
+}
+
 .innerWrapper {
   padding: 36px 20px 56px;
   margin: 0;

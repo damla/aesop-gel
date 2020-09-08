@@ -1,14 +1,12 @@
 import React from 'react';
 import cx from 'classnames';
-import { HEADING, HYPERLINK_STYLE_TYPES } from '~/constants';
+import { HYPERLINK_STYLE_TYPES } from '~/constants';
 import PropTypes from 'prop-types';
 import AddToCartButton from '~/components/AddToCartButton';
-import AccordionProductBackgroundImage from '../AccordionProductBackgroundImage';
-import AccordionProductBackgroundVideo from '../AccordionProductBackgroundVideo';
+import Video from '~/components/Video';
 import Heading from '~/components/Heading';
 import Hyperlink from '~/components/Hyperlink';
 import Image from '~/components/Image';
-import Paragraph from '~/components/Paragraph';
 import styles from './AccordionProduct.module.css';
 
 const AccordionProduct = ({
@@ -42,10 +40,21 @@ const AccordionProduct = ({
         style={{ backgroundColor: closedState?.backgroundColour }}
       >
         {closedState.background === 'Video' && (
-          <AccordionProductBackgroundVideo {...closedState.backgroundVideo} />
+          <Video
+            className={cx(styles.closedBackgroundVideo)}
+            hasAllowAudio={false}
+            hasAutoplay={true}
+            hasControls={false}
+            hasLoop={true}
+            isMuted={true}
+            {...closedState.backgroundVideo}
+          />
         )}
         {closedState.background === 'Image' && (
-          <AccordionProductBackgroundImage {...closedState.backgroundImage} />
+          <Image
+            className={cx(styles.closedBackgroundImage)}
+            {...closedState.backgroundImage}
+          />
         )}
       </div>
 
@@ -87,10 +96,21 @@ const AccordionProduct = ({
         style={{ backgroundColor: openState?.backgroundColour }}
       >
         {openState.background === 'Video' && (
-          <AccordionProductBackgroundVideo {...openState.backgroundVideo} />
+          <Video
+            className={cx(styles.openBackgroundVideo)}
+            hasAllowAudio={false}
+            hasAutoplay={true}
+            hasControls={false}
+            hasLoop={true}
+            isMuted={true}
+            {...openState.backgroundVideo}
+          />
         )}
         {openState.background === 'Image' && (
-          <AccordionProductBackgroundImage {...openState.backgroundImage} />
+          <Image
+            className={cx(styles.openBackgroundImage)}
+            {...openState.backgroundImage}
+          />
         )}
         <div className={cx(styles.accordionExpandedContent)}>
           <div className={cx(styles.expandedAccordionImage)}>
