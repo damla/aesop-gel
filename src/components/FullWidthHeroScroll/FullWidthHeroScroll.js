@@ -54,6 +54,7 @@ const FullWidthHeroScroll = ({
         <div className={cx(styles.scrollLockMedia)}>
           <Video
             {...backgroundVideo}
+            className={cx(styles.backgroundVideo)}
             hasAllowAudio={false}
             hasAutoplay={true}
             hasControls={false}
@@ -67,8 +68,8 @@ const FullWidthHeroScroll = ({
               <BodyCopy
                 copy={copy}
                 eyebrow={eyebrow}
-                eyebrow={title}
                 hasSerifFontHeading={hasSerifFontHeading}
+                heading={title}
                 theme={theme}
               />
               {cta && (
