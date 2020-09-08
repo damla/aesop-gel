@@ -85,7 +85,7 @@ const FullWidthHeroScroll = ({
               )}
             </div>
             <button
-              className={cx(styles.ScrollIndicator, styles[theme])}
+              className={cx(styles.scrollIndicator, styles[theme])}
               onClick={handleScrollDown}
               type="button"
             >
