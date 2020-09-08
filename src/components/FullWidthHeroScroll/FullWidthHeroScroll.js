@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { HYPERLINK_STYLE_TYPES } from '~/constants';
+import BodyCopy from '~/components/BodyCopy';
 import Hyperlink from '~/components/Hyperlink';
 import FullscreenSection from './components/FullscreenSection';
 import Video from '~/components/Video';
@@ -62,23 +63,13 @@ const FullWidthHeroScroll = ({
         <div className={cx(styles.scrollingContent)}>
           <div className={cx(styles.fullscreenHero)}>
             <div className={styles.innerWrapper}>
-              {eyebrow && (
-                <h4 className={cx(styles.heroEyebrow, styles[theme])}>
-                  {eyebrow}
-                </h4>
-              )}
-              {title && (
-                <h3
-                  className={cx(styles.heroTitle, styles[theme], {
-                    [styles.serif]: hasSerifFontHeading,
-                  })}
-                >
-                  {title}
-                </h3>
-              )}
-              <div className={cx(styles.fullscreenHeroCopy, styles[theme])}>
-                {copy}
-              </div>
+              <BodyCopy
+                copy={copy}
+                eyebrow={eyebrow}
+                eyebrow={title}
+                hasSerifFontHeading={hasSerifFontHeading}
+                theme={theme}
+              />
               {cta && (
                 <Hyperlink
                   className={styles.cta}
