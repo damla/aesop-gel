@@ -17,7 +17,7 @@ const ProductExtract = forwardRef(function ProductExtractRef(
     theme,
     itemNum,
   },
-  ref
+  ref,
 ) {
   const classSet = cx(
     styles.base,
@@ -27,7 +27,7 @@ const ProductExtract = forwardRef(function ProductExtractRef(
       [styles.slideIn]: isVisible,
     },
     styles[`item${itemNum}`],
-    className
+    className,
   );
 
   const linkClassSet = cx(styles.link);
@@ -37,7 +37,7 @@ const ProductExtract = forwardRef(function ProductExtractRef(
     {
       [styles.slideIn]: isVisible,
     },
-    className
+    className,
   );
 
   const productNameClassSet = cx(
@@ -45,7 +45,7 @@ const ProductExtract = forwardRef(function ProductExtractRef(
     {
       [styles.slideIn]: isVisible,
     },
-    className
+    className,
   );
 
   const productImageClassSet = cx(
@@ -53,7 +53,7 @@ const ProductExtract = forwardRef(function ProductExtractRef(
     {
       [styles.slideIn]: isVisible,
     },
-    className
+    className,
   );
 
   const isEmptyObject = value => {

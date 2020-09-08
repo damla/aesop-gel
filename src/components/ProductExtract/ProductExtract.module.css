@@ -60,7 +60,7 @@
 
   .link:hover & {
     span {
-      border-bottom: 1px solid var(--color-secondary);
+      border-bottom: 1px solid var(--color-grey-30);
     }
   }
 }
@@ -123,23 +123,17 @@
   width: 100%;
 
   .item2 & {
-    margin-top: 18px;
     @media (--viewport-md) {
-      margin-top: 14px;
     }
   }
 
   .item3 & {
-    margin-top: 18px;
     @media (--viewport-md) {
-      margin-top: 14px;
     }
   }
 
   .item4 & {
-    margin-top: 18px;
     @media (--viewport-md) {
-      margin-top: 14px;
     }
   }
 }
