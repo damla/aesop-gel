@@ -35,19 +35,27 @@ const FullWidthHeroScroll = ({
     fadeScrollBtn;
     window.addEventListener('scroll', fadeScrollBtn);
 
-    const animateScrollTo = () => {
-      window.scroll({
-        top: window.innerHeight,
-        left: 0,
-        behavior: 'smooth',
-      });
-    };
-    scrollBtnEl.addEventListener('click', animateScrollTo);
+    // const animateScrollTo = () => {
+    //  window.scroll({
+    //    top: window.innerHeight,
+    //    left: 0,
+    //    behavior: 'smooth',
+    //  });
+    // };
+    // scrollBtnEl.addEventListener('click', animateScrollTo);
 
     return () => {
       window.removeEventListener('scroll', fadeScrollBtn);
     };
   });
+
+  const scrollDown = () => {
+    window.scroll({
+      top: window.innerHeight,
+      left: 0,
+      behavior: 'smooth',
+    });
+  };
 
   return (
     <section className={cx(styles.scrollLockWrap)} id={id}>
