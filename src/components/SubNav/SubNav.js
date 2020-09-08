@@ -15,7 +15,6 @@ const SubNav = ({
   heading,
   headingClassName,
   id,
-  isHero,
   isSelect,
   links,
   theme,
@@ -26,7 +25,6 @@ const SubNav = ({
   const classSet = cx(
     styles.base,
     styles[currentTheme],
-    { [styles.hero]: isHero },
     { [styles.select]: isSelect },
     className,
   );
