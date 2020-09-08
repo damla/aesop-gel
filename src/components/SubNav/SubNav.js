@@ -89,7 +89,6 @@ export function getLinkItems(links, theme) {
 SubNav.propTypes = {
   className: PropTypes.string,
   id: PropTypes.string,
-  isHero: PropTypes.bool,
   isSelect: PropTypes.bool,
   links: PropTypes.arrayOf(PropTypes.object)
     .isRequired /** @TODO hyperlink type */,
@@ -101,7 +100,6 @@ SubNav.propTypes = {
 SubNav.defaultProps = {
   className: undefined,
   id: undefined,
-  isHero: false,
   isSelect: false,
   links: undefined,
   heading: undefined,
