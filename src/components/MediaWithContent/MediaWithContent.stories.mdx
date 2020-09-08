@@ -31,6 +31,7 @@ import MediaWithContentFixture from './MediaWithContent.fixture';
             </>
           )}
           <MediaWithContent
+            containMedia={knobs.select('containMedia', ['center', 'left', 'right', undefined], undefined, 'Presentation')}
             foregroundImage={
               hasForegroundImage ? (
                 <Image
@@ -78,6 +79,16 @@ import MediaWithContentFixture from './MediaWithContent.fixture';
             isReverse={knobs.boolean('isReverse', false, 'Presentation')}
             media={
               (() => {
+                const imageSourceOptions = {
+                  Background: MediaWithContentFixture.image.background,
+                  Default: MediaWithContentFixture.image.default,
+                  Expectations: MediaWithContentFixture.image.expectations,
+                  FullWidth: MediaWithContentFixture.image.fullWidth,
+                  Hero: MediaWithContentFixture.image.hero,
+                  Kit: MediaWithContentFixture.image.kit,
+                  TheOrator: MediaWithContentFixture.image.theOrator,
+                }
+                const imageSource = knobs.select('imageSource', Object.keys(imageSourceOptions), 'Expectations', 'Content');
                 const options = {
                   Video: {
                     Component: Video,
@@ -95,7 +106,7 @@ import MediaWithContentFixture from './MediaWithContent.fixture';
                   },
                   Image: {
                     Component: Image,
-                    props: MediaWithContentFixture.image.expectations,
+                    props: imageSourceOptions[imageSource],
                   },
                 };
                 const componentName = knobs.select('media', Object.keys(options), 'Image', 'Content');
