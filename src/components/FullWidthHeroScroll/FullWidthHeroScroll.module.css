@@ -35,6 +35,10 @@
   }
 }
 
+.backgroundVideo {
+  height: 100%;
+}
+
 .innerWrapper {
   width: 100%;
   padding: 90px 20px 20px;
