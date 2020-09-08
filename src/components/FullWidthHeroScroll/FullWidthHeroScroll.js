@@ -92,16 +92,14 @@ const FullWidthHeroScroll = ({
               <Icon height={12} name="scrolldown" theme={theme} width={12} />
             </button>
           </div>
-          {textBlocks.map(({ hasSerifFont, text }, index) => {
-            return (
-              <FullscreenSection
-                hasSerifFont={hasSerifFont}
-                key={index}
-                text={text}
-                theme={theme}
-              />
-            );
-          })}
+          {textBlocks.map(({ hasSerifFont, text }, index) => (
+            <FullscreenSection
+              hasSerifFont={hasSerifFont}
+              key={index}
+              text={text}
+              theme={theme}
+            />
+          ))}
         </div>
       </div>
     </section>
