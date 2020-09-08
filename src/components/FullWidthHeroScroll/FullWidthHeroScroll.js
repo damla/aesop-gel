@@ -5,6 +5,7 @@ import { HYPERLINK_STYLE_TYPES } from '~/constants';
 import BodyCopy from '~/components/BodyCopy';
 import Hyperlink from '~/components/Hyperlink';
 import FullscreenSection from './components/FullscreenSection';
+import Icon from '~/components/Icon';
 import Video from '~/components/Video';
 import styles from './FullWidthHeroScroll.module.css';
 
@@ -34,12 +35,12 @@ const FullWidthHeroScroll = ({
     fadeScrollBtn;
     window.addEventListener('scroll', fadeScrollBtn);
 
-    return () => {
+    return function cleanup() {
       window.removeEventListener('scroll', fadeScrollBtn);
     };
   });
 
-  const scrollDown = () => {
+  const handleScrollDown = () => {
     window.scroll({
       top: window.innerHeight,
       left: 0,
@@ -85,13 +86,10 @@ const FullWidthHeroScroll = ({
             </div>
             <button
               className={cx(styles.ScrollIndicator, styles[theme])}
-              onClick={scrollDown}
+              onClick={handleScrollDown}
               type="button"
             >
-              <svg viewBox="0 0 50 50">
-                <title>Scroll down</title>
-                <polygon points="25,31.3 4.2,10.5 0.1,14.6 25,39.5 50,14.6 45.9,10.5 " />
-              </svg>
+              <Icon height={12} name="scrolldown" theme={theme} width={12} />
             </button>
           </div>
           {textBlocks.map(({ hasSerifFont, text }, index) => {
