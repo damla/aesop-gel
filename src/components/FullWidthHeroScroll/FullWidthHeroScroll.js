@@ -4,7 +4,6 @@ import cx from 'classnames';
 import { HYPERLINK_STYLE_TYPES } from '~/constants';
 import Hyperlink from '~/components/Hyperlink';
 import FullscreenSection from './components/FullscreenSection';
-import FullscreenVideo from './components/FullscreenVideo';
 
 import styles from './FullWidthHeroScroll.module.css';
 
@@ -35,15 +34,6 @@ const FullWidthHeroScroll = ({
     fadeScrollBtn;
     window.addEventListener('scroll', fadeScrollBtn);
 
-    // const animateScrollTo = () => {
-    //  window.scroll({
-    //    top: window.innerHeight,
-    //    left: 0,
-    //    behavior: 'smooth',
-    //  });
-    // };
-    // scrollBtnEl.addEventListener('click', animateScrollTo);
-
     return () => {
       window.removeEventListener('scroll', fadeScrollBtn);
     };
@@ -61,7 +51,14 @@ const FullWidthHeroScroll = ({
     <section className={cx(styles.scrollLockWrap)} id={id}>
       <div>
         <div className={cx(styles.scrollLockMedia)}>
-          <FullscreenVideo {...backgroundVideo} />
+          <Video
+            {...backgroundVideo}
+            hasAllowAudio={false}
+            hasAutoplay={true}
+            hasControls={false}
+            hasLoop={true}
+            isMuted={true}
+          />
         </div>
         <div className={cx(styles.scrollingContent)}>
           <div className={cx(styles.fullscreenHero)}>
