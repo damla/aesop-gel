@@ -31,7 +31,7 @@ import MediaWithContentFixture from './MediaWithContent.fixture';
             </>
           )}
           <MediaWithContent
-            containMedia={knobs.select('containMedia', ['center', 'left', 'right', undefined], undefined, 'Presentation')}
+            containMedia={knobs.select('containMedia', { center: 'center', left: 'left', right: 'right', none: undefined }, undefined, 'Presentation')}
             foregroundImage={
               hasForegroundImage ? (
                 <Image
