@@ -19,32 +19,34 @@ const FullscreenVideo = ({ large, medium, small }) => {
       if (vp === 'medium') {
         videoUrl = medium;
       }
-      if (videoUrl) {
-        vid.src = videoUrl;
-        // objectFitVideos();
 
-        vid.oncanplay = () => {
-          const promise = vid.play();
-          if (promise !== undefined) {
-            promise
-              .then(() => {
-                vid.parentElement.classList.add('autoplay-enabled');
-                // objectFitVideos();
-              })
-              .catch(() => {
-                vid.parentElement.classList.add('autoplay-disabled');
-              });
-          }
-        };
-        vid.addEventListener(
-          'loadedmetadata',
-          () => {
-            const ratio = (vid.videoHeight / vid.videoWidth) * 100;
-            vid.parentElement.dataset.ratio = ratio;
-          },
-          false,
-        );
-      }
+      vid.src = videoUrl;
+      // objectFitVideos();
+
+      vid.oncanplay = () => {
+        const promise = vid.play();
+        if (promise !== undefined) {
+          promise
+            .then(() => {
+              vid.parentElement.classList.add('autoplay-enabled');
+              // objectFitVideos();
+            })
+            .catch(() => {
+              vid.parentElement.classList.add('autoplay-disabled');
+            });
+        }
+      };
+
+      const getRatio = () => () => {
+        const ratio = (vid.videoHeight / vid.videoWidth) * 100;
+        vid.parentElement.dataset.ratio = ratio;
+      };
+
+      vid.addEventListener('loadedmetadata', getRatio, false);
+
+      return () => {
+        window.removeEventListener('loadedmetadata', getRatio);
+      };
     };
     bgVideoInit(ref);
     window.addEventListener('resize', () => {
