@@ -5,7 +5,6 @@ import { HYPERLINK_STYLE_TYPES } from '~/constants';
 import BodyCopy from '~/components/BodyCopy';
 import Hyperlink from '~/components/Hyperlink';
 import FullscreenSection from './components/FullscreenSection';
-
 import styles from './FullWidthHeroScroll.module.css';
 
 const FullWidthHeroScroll = ({
@@ -35,12 +34,12 @@ const FullWidthHeroScroll = ({
     fadeScrollBtn;
     window.addEventListener('scroll', fadeScrollBtn);
 
-    return () => {
+    return function cleanup() {
       window.removeEventListener('scroll', fadeScrollBtn);
     };
   });
 
-  const scrollDown = () => {
+  const handleScrollDown = () => {
     window.scroll({
       top: window.innerHeight,
       left: 0,
