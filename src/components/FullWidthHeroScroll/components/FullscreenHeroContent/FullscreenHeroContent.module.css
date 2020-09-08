@@ -5,12 +5,6 @@
   font-family: var(--font-family-sans-serif-regular);
   font-size: rem(14px);
   line-height: 1.6;
-
-  /* @media (--viewport-lg) {
-    display: block;
-    width: 50%;
-    flex-basis: auto;
-  } */
 }
 
 .hasFullWidthImage {
@@ -28,10 +22,6 @@
 .hasFullWidthImage.hero {
   @media (--viewport-md-only) {
     position: relative;
-
-    /* padding-top: var(--layout-logo-vertical-offset-lg);
-    margin-right: auto;
-    margin-left: var(--layout-lg-spacing); */
   }
 }
 
