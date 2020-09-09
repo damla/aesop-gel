@@ -93,10 +93,10 @@ const HorizontalProductDisplayAccordion = ({ id, products }) => {
       }
       id={id}
     >
-      {accordionProducts.map(({ ...product }, index) => {
+      {accordionProducts.map(({ ...product }, productIndex) => {
         return (
           <ProductDetailContextProvider
-            key={index}
+            key={productIndex}
             product={{
               description: product.openState.eyebrow,
               productName: product.openState.title,
@@ -104,7 +104,7 @@ const HorizontalProductDisplayAccordion = ({ id, products }) => {
           >
             <VariantSelectContextProvider variants={product.variantOptions}>
               <AccordionProduct
-                index={index}
+                index={productIndex}
                 resetAccordion={resetAccordion}
                 toggleAccordion={toggleAccordion}
                 {...product}
