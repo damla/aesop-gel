@@ -1,5 +1,6 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import * as knobs from '@storybook/addon-knobs';
+import Podium from '~/components/Podium';
 import CheckBox from './CheckBox';
 
 <Meta title="Components/CheckBox" component={CheckBox} />
@@ -8,10 +9,12 @@ import CheckBox from './CheckBox';
 
 <Preview>
   <Story name="Base component">
-    <p>Set the background to dark</p>
-    <CheckBox
-      content='Subscribe to communications about Aesop products, services, stores, events and matters of cultural interest.'
-    />
+    <Podium horizontalPadding="small" verticalPadding="small">
+      <p>Set the background to dark</p>
+      <CheckBox
+        content='Subscribe to communications about Aesop products, services, stores, events and matters of cultural interest.'
+      />
+    </Podium>
   </Story>
 </Preview>
 
