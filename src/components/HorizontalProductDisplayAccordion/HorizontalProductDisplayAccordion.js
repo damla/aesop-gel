@@ -102,7 +102,9 @@ const HorizontalProductDisplayAccordion = ({ id, products }) => {
               productName: product.openState.title,
             }}
           >
-            <VariantSelectContextProvider variants={product.variantOptions}>
+            <VariantSelectContextProvider
+              variants={product.openState.product.variants}
+            >
               <AccordionProduct
                 index={productIndex}
                 resetAccordion={resetAccordion}
@@ -157,18 +159,20 @@ HorizontalProductDisplayAccordion.propTypes = {
         copy: PropTypes.node,
         eyebrow: PropTypes.string,
         foregroundImage: PropTypes.object,
+        product: PropTypes.shape({
+          variants: PropTypes.arrayOf(
+            PropTypes.shape({
+              isInStock: PropTypes.bool,
+              price: PropTypes.string,
+              size: PropTypes.string,
+              sku: PropTypes.string,
+            }),
+          ),
+        }),
         theme: PropTypes.string,
         title: PropTypes.string,
       }),
       toggleAccordion: PropTypes.func,
-      variantOptions: PropTypes.arrayOf(
-        PropTypes.shape({
-          isInStock: PropTypes.bool,
-          price: PropTypes.string,
-          size: PropTypes.string,
-          sku: PropTypes.string,
-        }),
-      ),
     }),
   ),
 };
@@ -212,13 +216,20 @@ HorizontalProductDisplayAccordion.defaultProps = {
       eyebrow: undefined,
       foregroundImage: undefined,
       openButtonText: undefined,
+      product: {
+        variants: [
+          {
+            isInStock: undefined,
+            price: undefined,
+            size: undefined,
+            sku: undefined,
+          },
+        ],
+      },
       theme: undefined,
       title: undefined,
     },
     toggleAccordion: undefined,
-    variantOptions: {
-      isInStock: true,
-    },
   },
 };
 

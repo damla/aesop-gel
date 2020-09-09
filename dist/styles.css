@@ -4358,17 +4358,58 @@ sans-serif;
   padding: 2px 4px 0 4px;
 }
 
-.FullscreenVideo-module_fullscreenVideo__1qsTB {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+/* @import './key-frame.css'; */
+/* @import './font-face.css'; */
+:root {
+  /* Base colours */
+
+  /* UI colours light theme */
+
+  /* UI colours dark theme */
+
+  /* Background colours */
+
+  /* System colours */
+
+  /* Secondary Message background colour */
 }
+/* Dark theme UI elements */
+/* Light theme UI elements */
+/* UI colours light theme */
+/*
+--color-light-copy: var(--color-primary);
+--color-light-copy-alternate: var(--color-white-darker);
+--color-light-label: var(--color-white-darker);
+--color-light-link: var(--color-primary);
+--color-light-link-hover: var(--color-white-darker);
+--color-light-decoration: var(--color-white-darker);
+--color-light-disabled: var(--color-grey-60);
+*/
+/* UI colours dark theme */
+/*
+--color-dark-copy: var(--color-secondary);
+--color-dark-copy-alternate: var(--color-grey-63);
+--color-dark-label: var(--color-grey-30);
+--color-dark-link: var(--color-grey-20);
+--color-dark-link-hover: var(--color-grey-10);
+--color-dark-decoration: var(--color-grey-30);
+--color-dark-disabled: var(--color-grey-60);
+*/
+.FullscreenSection-module_fullscreenSection__2GkTp {
+  width: 48%;
+  height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 90px 34px;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+.FullscreenSection-module_fullscreenSection__2GkTp.FullscreenSection-module_dark__LGnhp {
+    color: #333;
+  }
+.FullscreenSection-module_fullscreenSection__2GkTp.FullscreenSection-module_light__1gQLU {
+    color: #fffef2;
+  }
 
 /* @import './key-frame.css'; */
 /* @import './font-face.css'; */
@@ -4451,21 +4492,25 @@ sans-serif;
 ,
 sans-serif;
 }
+.FullWidthHeroScroll-module_backgroundVideo__fG21m {
+  height: 100%;
+}
 .FullWidthHeroScroll-module_innerWrapper__J2DKq {
   padding: 36px 20px 56px;
   margin: 0;
 }
 @media (min-width: 640px) {
 .FullWidthHeroScroll-module_innerWrapper__J2DKq {
-    padding: 90px 0
+    max-width: 410px;
+    padding: 90px 20px
 }
   }
 @media (min-width: 1025px) {
 .FullWidthHeroScroll-module_innerWrapper__J2DKq {
-    max-width: 410px;
-    margin: 0 0 0 330px;
     width: 66.66667%;
-    padding: 115px 0 2em
+    max-width: 410px;
+    padding: 115px 0 2em;
+    margin: 0 0 0 330px
 }
   }
 .FullWidthHeroScroll-module_hasFullWidthImage__1I_o9 .FullWidthHeroScroll-module_innerWrapper__J2DKq {
@@ -4478,10 +4523,10 @@ sans-serif;
     }
 .FullWidthHeroScroll-module_heroTitle__3keXp {
   margin: 0 0 1em;
-  font-size: 2.5rem;
   font-family: 'Suisse Regular'
 ,
 sans-serif;
+  font-size: 2.5rem;
 }
 @media (min-width: 640px) {
 .FullWidthHeroScroll-module_heroTitle__3keXp {
@@ -4558,91 +4603,45 @@ serif;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
 }
-.FullWidthHeroScroll-module_ScrollIndicatorWrapper__NaxRZ {
+.FullWidthHeroScroll-module_scrollIndicator__3URDX {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
   width: 60px;
   height: 60px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 0;
   border: 1px solid #252525;
   margin: auto auto 6rem;
+  -webkit-appearance: none;
+  background: none;
+  border-radius: 0;
   cursor: pointer;
 }
-.FullWidthHeroScroll-module_ScrollIndicatorWrapper__NaxRZ svg {
+.FullWidthHeroScroll-module_scrollIndicator__3URDX svg {
     width: 12px;
   }
-.FullWidthHeroScroll-module_ScrollIndicatorWrapper__NaxRZ.FullWidthHeroScroll-module_dark__3y1a6 {
+.FullWidthHeroScroll-module_scrollIndicator__3URDX.FullWidthHeroScroll-module_dark__3y1a6 {
     border-color: #333;
   }
-.FullWidthHeroScroll-module_ScrollIndicatorWrapper__NaxRZ.FullWidthHeroScroll-module_dark__3y1a6 svg {
+.FullWidthHeroScroll-module_scrollIndicator__3URDX.FullWidthHeroScroll-module_dark__3y1a6 svg {
       fill: #333;
     }
-.FullWidthHeroScroll-module_ScrollIndicatorWrapper__NaxRZ.FullWidthHeroScroll-module_light__5ALv_ {
+.FullWidthHeroScroll-module_scrollIndicator__3URDX.FullWidthHeroScroll-module_light__5ALv_ {
     border-color: #fffef2;
   }
-.FullWidthHeroScroll-module_ScrollIndicatorWrapper__NaxRZ.FullWidthHeroScroll-module_light__5ALv_ svg {
+.FullWidthHeroScroll-module_scrollIndicator__3URDX.FullWidthHeroScroll-module_light__5ALv_ svg {
       fill: #fffef2;
     }
-
-/* @import './key-frame.css'; */
-/* @import './font-face.css'; */
-:root {
-  /* Base colours */
-
-  /* UI colours light theme */
-
-  /* UI colours dark theme */
-
-  /* Background colours */
-
-  /* System colours */
-
-  /* Secondary Message background colour */
-}
-/* Dark theme UI elements */
-/* Light theme UI elements */
-/* UI colours light theme */
-/*
---color-light-copy: var(--color-primary);
---color-light-copy-alternate: var(--color-white-darker);
---color-light-label: var(--color-white-darker);
---color-light-link: var(--color-primary);
---color-light-link-hover: var(--color-white-darker);
---color-light-decoration: var(--color-white-darker);
---color-light-disabled: var(--color-grey-60);
-*/
-/* UI colours dark theme */
-/*
---color-dark-copy: var(--color-secondary);
---color-dark-copy-alternate: var(--color-grey-63);
---color-dark-label: var(--color-grey-30);
---color-dark-link: var(--color-grey-20);
---color-dark-link-hover: var(--color-grey-10);
---color-dark-decoration: var(--color-grey-30);
---color-dark-disabled: var(--color-grey-60);
-*/
-.FullscreenSection-module_fullscreenSection__2GkTp {
-  width: 48%;
-  height: 100vh;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 90px 34px;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-}
-.FullscreenSection-module_fullscreenSection__2GkTp.FullscreenSection-module_dark__LGnhp {
-    color: #333;
-  }
-.FullscreenSection-module_fullscreenSection__2GkTp.FullscreenSection-module_light__1gQLU {
-    color: #fffef2;
+.FullWidthHeroScroll-module_scrollIndicator__3URDX:focus {
+    outline: 0;
   }
 
 /* @import './key-frame.css'; */
@@ -5038,72 +5037,6 @@ sans-serif;
 --color-dark-decoration: var(--color-grey-30);
 --color-dark-disabled: var(--color-grey-60);
 */
-.AccordionProductBackgroundImage-module_prodAccBgimg__35OP5 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.AccordionProductBackgroundImage-module_imgdiv__2aKmC {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-}
-
-.AccordionProductBackgroundVideo-module_accordionProductBackgroundVideo__1SC1n {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-}
-
-/* @import './key-frame.css'; */
-/* @import './font-face.css'; */
-:root {
-  /* Base colours */
-
-  /* UI colours light theme */
-
-  /* UI colours dark theme */
-
-  /* Background colours */
-
-  /* System colours */
-
-  /* Secondary Message background colour */
-}
-/* Dark theme UI elements */
-/* Light theme UI elements */
-/* UI colours light theme */
-/*
---color-light-copy: var(--color-primary);
---color-light-copy-alternate: var(--color-white-darker);
---color-light-label: var(--color-white-darker);
---color-light-link: var(--color-primary);
---color-light-link-hover: var(--color-white-darker);
---color-light-decoration: var(--color-white-darker);
---color-light-disabled: var(--color-grey-60);
-*/
-/* UI colours dark theme */
-/*
---color-dark-copy: var(--color-secondary);
---color-dark-copy-alternate: var(--color-grey-63);
---color-dark-label: var(--color-grey-30);
---color-dark-link: var(--color-grey-20);
---color-dark-link-hover: var(--color-grey-10);
---color-dark-decoration: var(--color-grey-30);
---color-dark-disabled: var(--color-grey-60);
-*/
 .AccordionProduct-module_accordionProduct__1y3uS {
   position: relative;
   width: 100%;
@@ -5113,7 +5046,7 @@ sans-serif;
   -webkit-transition: width 1s 0.4s;
   transition: width 1s 0.4s;
 }
-.AccordionProduct-module_accordionProduct__1y3uS.AccordionProduct-module_compressed__xGnO- {
+.AccordionProduct-module_accordionProduct__1y3uS.AccordionProduct-module_isCompressed__cU8x9 {
     width: 10%;
     cursor: pointer;
   }
@@ -5121,10 +5054,39 @@ sans-serif;
 .AccordionProduct-module_accordionProduct__1y3uS {
     padding: 0 20px
 }
+    .AccordionProduct-module_accordionProduct__1y3uS.AccordionProduct-module_isCompressed__cU8x9 {
+      width: 100%;
+      cursor: default;
+    }
   }
-.AccordionProduct-module_accordionProduct__1y3uS img {
-    width: 50%;
+.AccordionProduct-module_closedForegroundImage__233QR {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+}
+.AccordionProduct-module_closedForegroundImage__233QR img {
+    width: 100%;
     height: auto;
+  }
+.AccordionProduct-module_closedBackgroundVideo__3Xmtq {
+  height: 100%;
+}
+.AccordionProduct-module_openBackgroundVideo__2reYw {
+  height: 100%;
+}
+.AccordionProduct-module_openBackgroundImage__18iLb,
+.AccordionProduct-module_closedBackgroundImage__3vCjM {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.AccordionProduct-module_openBackgroundImage__18iLb img, .AccordionProduct-module_closedBackgroundImage__3vCjM img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
   }
 .AccordionProduct-module_productImage__2Zgl2 {
   width: auto;
@@ -5136,10 +5098,12 @@ sans-serif;
   position: absolute;
   z-index: 1;
   top: 0;
+  left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
+  width: 100%;
   height: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -5175,46 +5139,11 @@ sans-serif;
   opacity: 0;
   -webkit-transition: opacity 0.4s 0s;
   transition: opacity 0.4s 0s;
-
-  /* & > div > div:first-child {
-    width: 30%;
-    @media (--viewport-md-only) {
-      position: relative;
-      width: 100%;
-      flex: 1;
-      img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        object-position: center bottom;
-      }
-    }
-  } */
 }
-/* & > div {
-    display: flex;
-    height: 100%;
-    box-sizing: border-box;
-    align-items: center;
-    padding: 20px;
-    transform: translate3d(0, 25%, 0);
-    transition: transform 0s 1.4s;
-    @media (--viewport-md-only) {
-      flex-direction: column;
-    }
-  } */
 .AccordionProduct-module_accordionExpanded__1WO9Y.AccordionProduct-module_open__2VFan {
     opacity: 1;
     -webkit-transition: opacity 0.4s 1.4s;
     transition: opacity 0.4s 1.4s;
-
-    /* & > div {
-      transform: translate3d(0, 0, 0);
-      transition: transform 2s 0.4s ease;
-    } */
   }
 .AccordionProduct-module_accordionExpandedContent__3ZYPa {
   display: -webkit-box;
@@ -5328,26 +5257,26 @@ sans-serif
 }
 .AccordionProduct-module_accordionOpenCopy__a-AcA.AccordionProduct-module_light__10wa6, .AccordionProduct-module_accordionClosedCopy__2Z1Hp.AccordionProduct-module_light__10wa6 {
   }
-.AccordionProduct-module_btns__2dtYR {
+.AccordionProduct-module_buttonGroup__1pZPt {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 1em 0 0;
 }
-.AccordionProduct-module_btns__2dtYR button,
-  .AccordionProduct-module_btns__2dtYR a {
+.AccordionProduct-module_buttonGroup__1pZPt button,
+  .AccordionProduct-module_buttonGroup__1pZPt a {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
   }
-.AccordionProduct-module_btns__2dtYR button {
+.AccordionProduct-module_buttonGroup__1pZPt button {
     margin: 0 4px 0 0;
   }
 @media (max-width: 639px) {
-.AccordionProduct-module_btns__2dtYR {
+.AccordionProduct-module_buttonGroup__1pZPt {
     display: block
 }
-    .AccordionProduct-module_btns__2dtYR button {
+    .AccordionProduct-module_buttonGroup__1pZPt button {
       margin: 0 0 4px;
     }
   }
