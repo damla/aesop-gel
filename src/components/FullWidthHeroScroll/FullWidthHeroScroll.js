@@ -5,6 +5,8 @@ import { HYPERLINK_STYLE_TYPES } from '~/constants';
 import BodyCopy from '~/components/BodyCopy';
 import Hyperlink from '~/components/Hyperlink';
 import FullscreenSection from './components/FullscreenSection';
+import Icon from '~/components/Icon';
+import Video from '~/components/Video';
 import styles from './FullWidthHeroScroll.module.css';
 
 const FullWidthHeroScroll = ({
@@ -28,7 +30,6 @@ const FullWidthHeroScroll = ({
         return;
       }
       scrollBtnEl.style.opacity = (100 - window.scrollY) / 100;
-      console.log('scrolling');
     };
 
     window.addEventListener('scroll', fadeScrollBtn);
@@ -83,40 +84,25 @@ const FullWidthHeroScroll = ({
               )}
             </div>
             <button
-              className={cx(styles.ScrollIndicator, styles[theme])}
-            <div
-              className={cx(styles.ScrollIndicatorWrapper, styles[theme])}
+              className={cx(styles.scrollIndicator, styles[theme])}
+              onClick={handleScrollDown}
               ref={scrollBtn}
               type="button"
             >
-              <svg
-              aria-labelledby="e00a5034-d523-4b5a-b5ee-51159feac31e"
-              className="Icon ScrollIndicator-icon"
-              role="img"
-              viewBox="0 0 50 50"
-            >
-              <title id="e00a5034-d523-4b5a-b5ee-51159feac31e">
-                Scroll down
-                </title>
-              <g>
-                <polygon points="25,31.3 4.2,10.5 0.1,14.6 25,39.5 50,14.6 45.9,10.5 " />
-              </g>
-            </svg>
+              <Icon height={12} name="scrolldown" theme={theme} width={12} />
             </button>
-        </div>
-        {textBlocks.map(({ hasSerifFont, text }, index) => {
-          return (
+          </div>
+          {textBlocks.map(({ hasSerifFont, text }, index) => (
             <FullscreenSection
               hasSerifFont={hasSerifFont}
               key={index}
               text={text}
               theme={theme}
             />
-          );
-        })}
+          ))}
+        </div>
       </div>
-      </div>
-    </section >
+    </section>
   );
 };
 
