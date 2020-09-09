@@ -3,7 +3,6 @@ import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import renderer from 'react-test-renderer';
 import DefinitionListWithProductExtract from './DefinitionListWithProductExtract';
-import DefinitionListWithProductExtractFixture from './DefinitionListWithProductExtract.fixture';
 
 configure({ adapter: new Adapter() });
 

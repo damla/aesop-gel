@@ -35,6 +35,7 @@ const ProductExtract = forwardRef(function ProductExtractRef(
 
   const headingClassSet = cx(
     styles.heading,
+    styles.delayAnimation,
     {
       [styles.slideIn]: isVisible,
     },
@@ -43,6 +44,7 @@ const ProductExtract = forwardRef(function ProductExtractRef(
 
   const productNameClassSet = cx(
     styles.productName,
+    styles.delayAnimation,
     {
       [styles.slideIn]: isVisible,
     },
@@ -51,6 +53,7 @@ const ProductExtract = forwardRef(function ProductExtractRef(
 
   const productImageClassSet = cx(
     styles.productImage,
+    styles.delayAnimation,
     {
       [styles.slideIn]: isVisible,
     },
@@ -82,7 +85,9 @@ const ProductExtract = forwardRef(function ProductExtractRef(
             <span>{works}</span>
           </Heading>
           <div className={productNameClassSet}>
-            <span>{product.name}</span>
+            <div>
+              <span>{product.name}</span>
+            </div>
           </div>
           <div className={productImageClassSet}>
             <Image

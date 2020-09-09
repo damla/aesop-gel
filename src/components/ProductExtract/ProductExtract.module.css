@@ -23,9 +23,7 @@
   }
 }
 
-.heading,
-.productName,
-.productImage {
+.delayAnimation {
   opacity: 0;
   transform: translateY(-20px);
   transition-duration: 1000ms;
@@ -50,6 +48,7 @@
 }
 
 .heading {
+  max-width: 80%;
   margin-bottom: 2px;
   color: var(--color-secondary);
   font-family: var(--font-family-sans-serif-medium);
@@ -88,6 +87,10 @@
 
   .hasBottomBorder &:not(:last-child) {
     border-bottom: 1px solid var(--color-grey-65);
+  }
+
+  div {
+    max-width: 80%;
   }
 
   span {
