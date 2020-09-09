@@ -31,7 +31,6 @@ const FullWidthHeroScroll = ({
       console.log('scrolling');
     };
 
-    fadeScrollBtn;
     window.addEventListener('scroll', fadeScrollBtn);
 
     return function cleanup() {
