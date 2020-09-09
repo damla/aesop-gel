@@ -18,7 +18,7 @@ describe('<ProductExtract />', () => {
         <ProductExtract
           dataTestRef={ProductExtractFixture.dataTestRef}
           product={ProductExtractFixture.product}
-        />
+        />,
       )
       .toJSON();
 
@@ -30,7 +30,7 @@ describe('<ProductExtract />', () => {
       <ProductExtract
         dataTestRef={ProductExtractFixture.dataTestRef}
         product={{}}
-      />
+      />,
     );
     expect(component.type()).toEqual(null);
   });
