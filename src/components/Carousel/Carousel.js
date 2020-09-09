@@ -127,8 +127,6 @@ const Carousel = ({
     setSlideCounter(`${index + 1} of ${slidesLength}`);
   };
 
-  console.log('isCompact', isCompact);
-
   return (
     <div className={classSet} id={id}>
       {!hasIntroSlide && introduction && (
