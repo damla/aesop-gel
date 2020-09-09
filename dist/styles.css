@@ -7268,6 +7268,7 @@ sans-serif;
 .Select-module_base__2hN67 {
   position: relative;
   display: block;
+  max-width: 466.66px;
   padding-top: 25px;
   margin-bottom: 15px;
   font-family: 'Suisse Regular'
@@ -7711,15 +7712,18 @@ sans-serif;
 .SubNav-module_link__KY05d:hover {
     text-decoration: underline;
   }
-.SubNav-module_select__2Krhy .SubNav-module_link__KY05d {
-    font-size: 14px;
-  }
 .SubNav-module_dark__2Xs3T .SubNav-module_link__KY05d {
     color: #333;
   }
 .SubNav-module_light__1B3lz .SubNav-module_link__KY05d {
     color: #fffef2;
   }
+.SubNav-module_select__2Krhy .SubNav-module_link__KY05d {
+    font-size: 14px;
+  }
+.SubNav-module_select__2Krhy .SubNav-module_link__KY05d:hover {
+      text-decoration: none;
+    }
 .SubNav-module_select__2Krhy.SubNav-module_dark__2Xs3T .SubNav-module_link__KY05d {
     color: #666;
   }
