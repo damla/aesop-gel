@@ -7268,13 +7268,17 @@ sans-serif;
 .Select-module_base__2hN67 {
   position: relative;
   display: block;
-  max-width: 466.66px;
   padding-top: 25px;
   margin-bottom: 15px;
   font-family: 'Suisse Regular'
 ,
 sans-serif;
 }
+@media (min-width: 640px) {
+.Select-module_base__2hN67 {
+    max-width: 466.66px
+}
+  }
 .Select-module_base__2hN67,
   .Select-module_base__2hN67 * {
     -webkit-box-sizing: border-box;
