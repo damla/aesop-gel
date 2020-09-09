@@ -5,11 +5,12 @@ import DefinitionList from '../DefinitionList/DefinitionList';
 import ProductExtract from '../ProductExtract/ProductExtract';
 
 const DefinitionListWithProductExtract = ({
+  dataTestRef,
   isVisible,
+  itemBottomBorder,
   items,
   product,
   productBottomBorder,
-  itemBottomBorder,
   productItemNumber,
   theme,
   works,
@@ -22,6 +23,7 @@ const DefinitionListWithProductExtract = ({
         items={items}
       />
       <ProductExtract
+        dataTestRef={dataTestRef}
         hasBottomBorder={productBottomBorder}
         isVisible={isVisible}
         itemNum={productItemNumber}
@@ -36,36 +38,36 @@ const DefinitionListWithProductExtract = ({
 DefinitionListWithProductExtract.propTypes = {
   className: PropTypes.string,
   dataTestRef: PropTypes.string.isRequired,
-  productBottomBorder: PropTypes.bool,
+  isVisible: PropTypes.bool,
   itemBottomBorder: PropTypes.bool,
   items: PropTypes.object,
-  isVisible: PropTypes.bool,
+  productBottomBorder: PropTypes.bool,
   productItemNumber: PropTypes.number,
   product: PropTypes.shape({
     image: PropTypes.object,
     name: PropTypes.string,
     url: PropTypes.string,
   }),
-  works: PropTypes.string,
   theme: PropTypes.oneOf(['dark', 'light']),
+  works: PropTypes.string,
 };
 
 DefinitionListWithProductExtract.defaultProps = {
   className: undefined,
   dataTestRef: undefined,
-  items: [{}],
-  productBottomBorder: false,
-  itemBottomBorder: false,
   isVisible: true,
+  itemBottomBorder: false,
+  items: [],
+  productBottomBorder: false,
   productItemNumber: 1,
   product: {
     image: {
       altText: 'Product Extract',
+      url: '/',
     },
   },
-  works: 'Works well with',
   theme: 'dark',
-  url: '/',
+  works: 'Works well with',
 };
 
 export default DefinitionListWithProductExtract;
