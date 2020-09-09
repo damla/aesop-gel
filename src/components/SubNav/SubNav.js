@@ -10,22 +10,6 @@ import Select from '~/components/Select';
 import List from '~/components/List';
 import styles from './SubNav.module.css';
 
-export const getLinkItems = (links, theme) =>
-  links.map(({ children, id, hasTargetInNewWindow, style, url }) => ({
-    content: (
-      <Hyperlink
-        className={styles.item}
-        hasTargetInNewWindow={hasTargetInNewWindow}
-        style={style}
-        theme={theme}
-        url={url}
-      >
-        {children}
-      </Hyperlink>
-    ),
-    id,
-  }));
-
 const SubNav = ({
   className,
   heading,
@@ -38,7 +22,12 @@ const SubNav = ({
   useWindowHasResized();
 
   const currentTheme = useThemeContext(theme, 'dark');
-  const classSet = cx(styles.base, styles[currentTheme], className);
+  const classSet = cx(
+    styles.base,
+    styles[currentTheme],
+    { [styles.select]: isSelect },
+    className,
+  );
   const isSmallOrMediumViewport = ascertainIsSmallOrMediumOnlyViewport();
   const onChange = event => {
     window.location.href = event.target.value;
@@ -70,11 +59,32 @@ const SubNav = ({
           theme={currentTheme}
         />
       ) : (
-        <List items={getLinkItems(links, currentTheme)} theme={currentTheme} />
+        <List
+          items={getLinkItems(links, currentTheme)}
+          listItemClassName={styles.item}
+          theme={currentTheme}
+        />
       )}
     </nav>
   );
 };
+
+export function getLinkItems(links, theme) {
+  return links.map(({ children, id, hasTargetInNewWindow, style, url }) => ({
+    content: (
+      <Hyperlink
+        className={styles.link}
+        hasTargetInNewWindow={hasTargetInNewWindow}
+        style={style}
+        theme={theme}
+        url={url}
+      >
+        {children}
+      </Hyperlink>
+    ),
+    id,
+  }));
+}
 
 SubNav.propTypes = {
   className: PropTypes.string,
