@@ -184,7 +184,7 @@
   }
 }
 
-.btns {
+.buttonGroup {
   display: flex;
   margin: 1em 0 0;
   button,

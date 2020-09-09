@@ -130,7 +130,7 @@ const AccordionProduct = ({
             <div className={cx(styles.accordionOpenCopy, styles.theme)}>
               {openState?.copy}
             </div>
-            <div className={cx(styles.btns)}>
+            <div className={cx(styles.buttonGroup)}>
               <AddToCartButton copy={addToCart} theme={openState.theme} />
               {openState?.cta && (
                 <Hyperlink
