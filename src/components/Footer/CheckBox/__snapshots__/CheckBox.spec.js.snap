@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<CheckBox /> renders base component correctly 1`] = `
-<div
+<label
   className="base"
 >
   <input
@@ -9,10 +9,10 @@ exports[`<CheckBox /> renders base component correctly 1`] = `
     disabled={false}
     type="checkbox"
   />
-  <div
+  <span
     className="content"
   >
     Subscribe to communications about Aesop products, services, stores, events and matters of cultural interest.
-  </div>
-</div>
+  </span>
+</label>
 `;

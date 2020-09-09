@@ -9,15 +9,15 @@ const CheckBox = ({ className, content, disabled, onChange }) => {
   const contentClassSet = cx(styles.content, className);
 
   return (
-    <div className={baseClassSet}>
+    <label className={baseClassSet}>
       <input
         className={checkboxClassSet}
         disabled={disabled}
         onChange={onChange}
         type="checkbox"
       />
-      <div className={contentClassSet}>{content}</div>
-    </div>
+      <span className={contentClassSet}>{content}</span>
+    </label>
   );
 };
 
