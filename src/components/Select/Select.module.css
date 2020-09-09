@@ -3,6 +3,7 @@
 .base {
   position: relative;
   display: block;
+  max-width: 466.66px;
   padding-top: 25px;
   margin-bottom: 15px;
   font-family: var(--font-family-sans-serif-regular);
