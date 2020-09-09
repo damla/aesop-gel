@@ -99,10 +99,6 @@
     opacity: 1;
     transition: opacity 0.4s 1.4s;
   }
-  &.open {
-    opacity: 1;
-    transition: opacity 0.4s 1.4s;
-  }
 }
 
 .accordionExpandedContent {
