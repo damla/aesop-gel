@@ -32,7 +32,6 @@ const FullWidthHeroScroll = ({
       scrollBtnEl.style.opacity = (100 - window.scrollY) / 100;
     };
 
-    fadeScrollBtn;
     window.addEventListener('scroll', fadeScrollBtn);
 
     return function cleanup() {
@@ -87,6 +86,7 @@ const FullWidthHeroScroll = ({
             <button
               className={cx(styles.scrollIndicator, styles[theme])}
               onClick={handleScrollDown}
+              ref={scrollBtn}
               type="button"
             >
               <Icon height={12} name="scrolldown" theme={theme} width={12} />
