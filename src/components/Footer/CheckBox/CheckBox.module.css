@@ -1,0 +1,44 @@
+@import 'styles/index';
+
+.base {
+  display: flex;
+  margin-top: 18px;
+}
+
+.checkBox {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  flex: 0 0 13px;
+  border: 1.5px solid var(--color-white);
+  margin: 7.5px 0 0 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-clip: content-box;
+  background-color: transparent;
+  color: var(--color-white);
+  font-size: rem(14px);
+  line-height: 2.14;
+
+  &:checked::before {
+    position: relative;
+    top: -7px;
+    content: '\2713';
+  }
+
+  &:focus {
+    outline: none !important;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.content {
+  margin-left: 10px;
+  color: var(--color-white);
+  font-size: rem(14px);
+  line-height: 2.14;
+}
