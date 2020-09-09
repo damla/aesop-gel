@@ -121,10 +121,11 @@ ProductExtract.defaultProps = {
     image: {
       altText: 'Product Extract',
     },
+    name: 'Product Extract',
+    url: '/',
   },
-  works: 'Works well with',
   theme: 'dark',
-  url: '/',
+  works: 'Works well with',
 };
 
 export default ProductExtract;
