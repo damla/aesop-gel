@@ -15,6 +15,7 @@ import ImageCarouselFixture from './ImageCarousel.fixture';
     <ImageCarousel
       autoplaySpeed={knobs.number('autoplaySpeed', ImageCarouselFixture.autoplaySpeed, 'Presentation')}
       hasAutoplay={knobs.boolean('hasAutoplay', false, 'Presentation')}
+      isCompact={knobs.boolean('isCompact', false, 'Presentation')}
       slides={[
         {
           caption: knobs.text(
