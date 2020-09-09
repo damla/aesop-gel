@@ -18,20 +18,20 @@ const HorizontalProductDisplayAccordion = ({ id, products }) => {
 
   const toggleAccordion = (index, opening) => {
     toggleAccordionProducts(
-      accordionProducts.map((product, i) => {
+      accordionProducts.map((product, productIndex) => {
         if (isMobile) {
           if (opening) {
-            if (i === index) {
+            if (productIndex === index) {
               product.expanded = true;
             }
           } else {
-            if (i === index) {
+            if (productIndex === index) {
               product.expanded = false;
             }
           }
         } else {
           if (opening) {
-            if (i === index) {
+            if (productIndex === index) {
               product.expanded = true;
               product.compressed = false;
             } else {
@@ -40,7 +40,7 @@ const HorizontalProductDisplayAccordion = ({ id, products }) => {
             }
             toggleAccordionActiveState(true);
           } else {
-            if (i === index) {
+            if (productIndex === index) {
               product.expanded = false;
               product.compressed = false;
             } else {
@@ -57,7 +57,7 @@ const HorizontalProductDisplayAccordion = ({ id, products }) => {
 
   const resetAccordion = () => {
     toggleAccordionProducts(
-      accordionProducts.map((product, i) => {
+      accordionProducts.map(product => {
         product.expanded = false;
         product.compressed = false;
         return product;
