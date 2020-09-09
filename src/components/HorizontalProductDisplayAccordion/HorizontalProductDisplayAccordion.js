@@ -78,7 +78,7 @@ const HorizontalProductDisplayAccordion = ({ id, products }) => {
 
     window.addEventListener('resize', resetAccordionOnResize);
 
-    return () => {
+    return function callback() {
       window.removeEventListener('resize', resetAccordionOnResize);
     };
   });
