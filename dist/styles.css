@@ -7697,22 +7697,40 @@ sans-serif;
   transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .SubNav-module_item__1Mvyk {
+  margin-bottom: 20px;
+}
+.SubNav-module_link__KY05d {
   font-family: 'Suisse Medium'
 ,
 sans-serif;
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 1.8;
+  -webkit-transition: color 200ms;
+  transition: color 200ms;
 }
-.SubNav-module_dark__2Xs3T .SubNav-module_item__1Mvyk {
+.SubNav-module_link__KY05d:hover {
+    text-decoration: underline;
+  }
+.SubNav-module_select__2Krhy .SubNav-module_link__KY05d {
+    font-size: 14px;
+  }
+.SubNav-module_dark__2Xs3T .SubNav-module_link__KY05d {
+    color: #333;
+  }
+.SubNav-module_light__1B3lz .SubNav-module_link__KY05d {
+    color: #fffef2;
+  }
+.SubNav-module_select__2Krhy.SubNav-module_dark__2Xs3T .SubNav-module_link__KY05d {
     color: #666;
   }
-.SubNav-module_light__1B3lz .SubNav-module_item__1Mvyk {
+.SubNav-module_select__2Krhy.SubNav-module_light__1B3lz .SubNav-module_link__KY05d {
     color: #e0dfd6;
   }
-.SubNav-module_light__1B3lz .SubNav-module_item__1Mvyk:hover {
-    color: #f6f5e8;
-  }
-.SubNav-module_dark__2Xs3T .SubNav-module_item__1Mvyk:hover {
+.SubNav-module_select__2Krhy.SubNav-module_dark__2Xs3T .SubNav-module_link__KY05d:hover {
     color: #333;
+  }
+.SubNav-module_select__2Krhy.SubNav-module_light__1B3lz .SubNav-module_link__KY05d:hover {
+    color: #fffef2;
   }
 
 /* @import './key-frame.css'; */
