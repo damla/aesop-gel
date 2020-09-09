@@ -12,8 +12,8 @@ import styles from './AccordionProduct.module.css';
 const AccordionProduct = ({
   addToCart,
   closedState,
-  compressed,
-  expanded,
+  isCompressed,
+  isExpanded,
   id,
   index,
   openState,
@@ -24,18 +24,18 @@ const AccordionProduct = ({
     <div
       className={cx(
         styles.accordionProduct,
-        expanded && styles.expanded,
-        compressed && styles.compressed,
+        isExpanded && styles.isExpanded,
+        isCompressed && styles.isCompressed,
       )}
-      onClick={compressed ? () => resetAccordion() : undefined}
-      onKeyDown={compressed ? () => resetAccordion() : undefined}
+      onClick={isCompressed ? () => resetAccordion() : undefined}
+      onKeyDown={isCompressed ? () => resetAccordion() : undefined}
       role="button"
-      tabIndex={compressed ? 0 : -1}
+      tabIndex={isCompressed ? 0 : -1}
     >
       <div
         className={cx(
           styles.accordionDefaultBackground,
-          expanded && styles.hidden,
+          isExpanded && styles.hidden,
         )}
         style={{ backgroundColor: closedState?.backgroundColour }}
       >
@@ -61,7 +61,7 @@ const AccordionProduct = ({
       <div
         className={cx(
           styles.accordionDefaultContent,
-          expanded || compressed ? styles.hidden : '',
+          isExpanded || isCompressed ? styles.hidden : '',
         )}
       >
         <div>
@@ -92,7 +92,7 @@ const AccordionProduct = ({
       </div>
 
       <div
-        className={cx(styles.accordionExpanded, expanded ? styles.open : '')}
+        className={cx(styles.accordionExpanded, isExpanded ? styles.open : '')}
         style={{ backgroundColor: openState?.backgroundColour }}
       >
         {openState.background === 'Video' && (
@@ -178,8 +178,8 @@ AccordionProduct.propTypes = {
     theme: PropTypes.string,
     title: PropTypes.string,
   }),
-  compressed: PropTypes.bool,
-  expanded: PropTypes.bool,
+  isCompressed: PropTypes.bool,
+  isExpanded: PropTypes.bool,
   id: PropTypes.string,
   index: PropTypes.number,
   openState: PropTypes.shape({
@@ -222,8 +222,8 @@ AccordionProduct.defaultProps = {
     theme: 'dark',
     title: undefined,
   },
-  compressed: false,
-  expanded: false,
+  isCompressed: false,
+  isExpanded: false,
   id: undefined,
   index: undefined,
   openState: {

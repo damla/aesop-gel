@@ -22,30 +22,30 @@ const HorizontalProductDisplayAccordion = ({ id, products }) => {
         if (isMobile) {
           if (opening) {
             if (productIndex === index) {
-              product.expanded = true;
+              product.isExpanded = true;
             }
           } else {
             if (productIndex === index) {
-              product.expanded = false;
+              product.isExpanded = false;
             }
           }
         } else {
           if (opening) {
             if (productIndex === index) {
-              product.expanded = true;
-              product.compressed = false;
+              product.isExpanded = true;
+              product.isCompressed = false;
             } else {
-              product.expanded = false;
-              product.compressed = true;
+              product.isExpanded = false;
+              product.isCompressed = true;
             }
             toggleAccordionActiveState(true);
           } else {
             if (productIndex === index) {
-              product.expanded = false;
-              product.compressed = false;
+              product.isExpanded = false;
+              product.isCompressed = false;
             } else {
-              product.expanded = false;
-              product.compressed = false;
+              product.isExpanded = false;
+              product.isCompressed = false;
             }
             toggleAccordionActiveState(false);
           }
@@ -58,8 +58,8 @@ const HorizontalProductDisplayAccordion = ({ id, products }) => {
   const resetAccordion = () => {
     toggleAccordionProducts(
       accordionProducts.map(product => {
-        product.expanded = false;
-        product.compressed = false;
+        product.isExpanded = false;
+        product.isCompressed = false;
         return product;
       }),
     );
@@ -69,8 +69,8 @@ const HorizontalProductDisplayAccordion = ({ id, products }) => {
     const resetAccordionOnResize = debounce(() => {
       if (ascertainIsSmallOnlyViewport() !== isMobile) {
         accordionProducts.map(product => {
-          product.expanded = false;
-          product.compressed = false;
+          product.isExpanded = false;
+          product.isCompressed = false;
         });
         isMobile = ascertainIsSmallOnlyViewport();
       }
@@ -144,8 +144,8 @@ HorizontalProductDisplayAccordion.propTypes = {
         theme: PropTypes.string,
         title: PropTypes.string,
       }),
-      compressed: PropTypes.bool,
-      expanded: PropTypes.bool,
+      isCompressed: PropTypes.bool,
+      isExpanded: PropTypes.bool,
       id: PropTypes.string,
       index: PropTypes.number,
       openState: PropTypes.shape({
@@ -199,8 +199,8 @@ HorizontalProductDisplayAccordion.defaultProps = {
       theme: undefined,
       title: undefined,
     },
-    compressed: undefined,
-    expanded: undefined,
+    isCompressed: undefined,
+    isExpanded: undefined,
     id: undefined,
     index: undefined,
     openState: {

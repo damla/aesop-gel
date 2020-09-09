@@ -6,13 +6,13 @@
   height: 100%;
   box-sizing: border-box;
   transition: width 1s 0.4s;
-  &.compressed {
+  &.isCompressed {
     width: 10%;
     cursor: pointer;
   }
   @media (--viewport-sm-only) {
     padding: 0 20px;
-    &.compressed {
+    &.isCompressed {
       width: 100%;
       cursor: default;
     }
@@ -37,16 +37,11 @@
   height: 100%;
 }
 
+.openBackgroundImage,
 .closedBackgroundImage {
-  width: 100%;
-  height: 100%;
-  img {
-    object-fit: cover;
-    object-position: center;
-  }
-}
-
-.opençBackgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   img {
