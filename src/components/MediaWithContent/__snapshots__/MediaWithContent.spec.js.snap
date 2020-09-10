@@ -10,10 +10,10 @@ exports[`<MediaWithContent /> renders base component correctly 1`] = `
   }
 >
   <div
-    className="media base"
+    className="media base undefined"
   >
     <figure
-      className="base dark media"
+      className="base dark figure"
     >
       <picture
         className="base picture dark"

@@ -125,14 +125,6 @@ HorizontalProductDisplayAccordion.propTypes = {
   openIndex: PropTypes.string,
   products: PropTypes.arrayOf(
     PropTypes.shape({
-      addToCart: PropTypes.shape({
-        cartAction: PropTypes.string,
-        updateNotification: PropTypes.string,
-        outOfStock: PropTypes.shape({
-          label: PropTypes.string,
-          title: PropTypes.string,
-        }),
-      }),
       closedState: PropTypes.shape({
         background: PropTypes.oneOf(['Colour', 'Image', 'Video']),
         backgroundColour: PropTypes.string,
@@ -151,6 +143,14 @@ HorizontalProductDisplayAccordion.propTypes = {
       id: PropTypes.string,
       index: PropTypes.number,
       openState: PropTypes.shape({
+        addToCart: PropTypes.shape({
+          cartAction: PropTypes.string,
+          updateNotification: PropTypes.string,
+          outOfStock: PropTypes.shape({
+            label: PropTypes.string,
+            title: PropTypes.string,
+          }),
+        }),
         background: PropTypes.oneOf(['Colour', 'Image', 'Video']),
         backgroundColour: PropTypes.string,
         backgroundImage: PropTypes.object,
@@ -182,14 +182,6 @@ HorizontalProductDisplayAccordion.defaultProps = {
   id: undefined,
   openIndex: null,
   products: {
-    addToCart: {
-      cartAction: undefined,
-      updateNotification: undefined,
-      outOfStock: {
-        label: undefined,
-        title: undefined,
-      },
-    },
     closedState: {
       background: 'Image',
       backgroundColour: undefined,
@@ -208,6 +200,14 @@ HorizontalProductDisplayAccordion.defaultProps = {
     id: undefined,
     index: undefined,
     openState: {
+      addToCart: {
+        cartAction: undefined,
+        updateNotification: undefined,
+        outOfStock: {
+          label: undefined,
+          title: undefined,
+        },
+      },
       background: 'Colour',
       backgroundColour: undefined,
       backgroundImage: undefined,

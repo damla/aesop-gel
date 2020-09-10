@@ -1,55 +1,36 @@
 import React from 'react';
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+import {
+  ProductDetailContextProvider,
+  VariantSelectContextProvider,
+} from '~/contexts';
 import renderer from 'react-test-renderer';
-import CarouselFixture from '../../Carousel.fixture';
-import Slide from './Slide';
+import AccordionProductFixture from './AccordionProduct.fixture.js';
 import AccordionProduct from './AccordionProduct';
 
 configure({ adapter: new Adapter() });
 
-describe('<Carousel.Slide />', () => {
+describe('<AccordionProduct />', () => {
   it('should be defined', () => {
-    expect(Slide).toBeDefined();
+    expect(AccordionProduct).toBeDefined();
   });
 
   it('renders base component correctly', () => {
     const tree = renderer
       .create(
-        <AccordionProduct
-          description={CarouselFixture.slides[0].description}
-          heading={CarouselFixture.slides[0].heading}
-          image={CarouselFixture.slides[0].image}
-        />,
+        <VariantSelectContextProvider
+          variants={AccordionProductFixture.openState.product.variants}
+        >
+          <AccordionProduct
+            addToCart={AccordionProductFixture.addToCart}
+            closedState={AccordionProductFixture.closedState}
+            id={AccordionProductFixture.id}
+            openState={AccordionProductFixture.openState}
+          />
+        </VariantSelectContextProvider>,
       )
       .toJSON();
-
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('renders a slide without a descritption correctly', () => {
-    const tree = renderer
-      .create(
-        <AccordionProduct
-          heading={CarouselFixture.slides[0].heading}
-          image={CarouselFixture.slides[0].image}
-        />,
-      )
-      .toJSON();
-
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('renders a slide without a heading correctly', () => {
-    const tree = renderer
-      .create(
-        <AccordionProduct
-          description={CarouselFixture.slides[0].description}
-          image={CarouselFixture.slides[0].image}
-        />,
-      )
-      .toJSON();
-
     expect(tree).toMatchSnapshot();
   });
 });
