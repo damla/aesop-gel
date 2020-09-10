@@ -1,0 +1,33 @@
+import { Fragment } from 'react';
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import * as knobs from '@storybook/addon-knobs';
+import FullWidthHeroScroll from './FullWidthHeroScroll';
+import FullWidthHeroScrollFixture from './FullWidthHeroScroll.fixture';
+
+<Meta title="Components/FullWidthHeroScroll" component={FullWidthHeroScroll} />
+
+### Full Width Hero Scroll
+
+<Preview>
+  <Story name="Full Width Hero Scroll">
+    <FullWidthHeroScroll
+      backgroundColor="#000"
+      backgroundVideo={FullWidthHeroScrollFixture.backgroundVideo}
+      copy={FullWidthHeroScrollFixture.copy}
+      cta={FullWidthHeroScrollFixture.cta}
+      eyebrow={FullWidthHeroScrollFixture.eyebrow}
+      hasFullWidthImage={true}
+      id={FullWidthHeroScrollFixture.id}
+      heading={FullWidthHeroScrollFixture.heading}
+      isHero={true}
+      isReverse={true}
+      textBlocks={FullWidthHeroScrollFixture.textBlocks}
+      theme="light"
+      title={FullWidthHeroScrollFixture.title}
+    />
+  </Story>
+</Preview>
+
+# API
+
+<Props of={FullWidthHeroScroll} />
