@@ -1,5 +1,13 @@
 export default {
   closedState: {
+    addToCart: {
+      cartAction: 'Add to your cart',
+      updateNotification: 'added to your cart',
+      outOfStock: {
+        label: 'Out of Stock',
+        title: 'Out of stock',
+      },
+    },
     background: 'Image',
     backgroundColor: '#9DB5AC',
     backgroundImage: {
@@ -31,14 +39,6 @@ export default {
   },
   id: 'Aganice',
   openState: {
-    addToCart: {
-      cartAction: 'Add to your cart',
-      updateNotification: 'added to your cart',
-      outOfStock: {
-        label: 'Out of Stock',
-        title: 'Out of stock',
-      },
-    },
     background: 'Image',
     backgroundColor: '#c0cfb8',
     backgroundImage: {
