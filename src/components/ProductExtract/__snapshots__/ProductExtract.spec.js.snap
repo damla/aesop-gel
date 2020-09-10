@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProductExtract /> renders base component correctly 1`] = `
+<div
+  className="base dark slideIn item1"
+>
+  <a
+    className="base left dark link"
+    data-test-ref="test_id"
+    href="/"
+    target="_self"
+    title="The sea"
+  >
+    <h4
+      className="base xXSmall dark heading delayAnimation slideIn"
+    >
+      <span>
+        Works well with
+      </span>
+    </h4>
+    <div
+      className="productName delayAnimation slideIn"
+    >
+      <div>
+        <span>
+          The sea
+        </span>
+      </div>
+    </div>
+    <div
+      className="productImage delayAnimation slideIn"
+    >
+      <picture
+        className="base picture dark"
+      >
+        <source
+          media="(min-width: 0px)"
+          srcSet="https://www.aesop.com/medias/Aesop-Hand-Resurrection-Rinse-Free-Hand-Wash-500mL-large.png?context=bWFzdGVyfGltYWdlc3wxNjEyNDF8aW1hZ2UvcG5nfGltYWdlcy9oNTgvaDRkLzkwMTkyNTQ5OTcwMjIucG5nfGU5YTRhMDk0Y2FjZWVmYzMyN2MxYTEwZTA2NjJhNTY1MDAwZmRkNzBmOWQ2MGIzYTNiYWM0MjVmODFlOGFmYzc"
+        />
+        <img
+          alt="Product Extract"
+        />
+      </picture>
+    </div>
+  </a>
+</div>
+`;

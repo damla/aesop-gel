@@ -7,6 +7,7 @@ import styles from './Media.module.css';
 
 const Media = ({
   className,
+  containMedia,
   foregroundImage,
   foregroundImageLink,
   hasFullWidthImage,
@@ -16,13 +17,14 @@ const Media = ({
   const classSet = cx(
     className,
     styles.base,
+    styles[containMedia],
     { [styles.hero]: isHero },
     { [styles.hasFullWidthImage]: hasFullWidthImage },
   );
 
   return (
     <div className={classSet}>
-      <Figure className={styles.media}>{media}</Figure>
+      <Figure className={styles.figure}>{media}</Figure>
       {foregroundImage && (
         <Figure className={styles.foregroundImage}>
           {foregroundImageLink ? (
@@ -43,6 +45,7 @@ const Media = ({
 
 Media.propTypes = {
   className: PropTypes.string,
+  containMedia: PropTypes.oneOf(['center', 'left', 'right']),
   foregroundImage: PropTypes.element,
   foregroundImageLink: PropTypes.shape({
     url: PropTypes.string,
@@ -55,6 +58,7 @@ Media.propTypes = {
 
 Media.defaultProps = {
   className: undefined,
+  containMedia: undefined,
   foregroundImage: undefined,
   foregroundImageLink: undefined,
   hasFullWidthImage: false,

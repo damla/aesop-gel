@@ -9,6 +9,7 @@ const MediaWithContent = forwardRef(function MediaWithContentRef(
   {
     backgroundColor,
     className,
+    containMedia,
     content,
     copy,
     foregroundImage,
@@ -36,6 +37,7 @@ const MediaWithContent = forwardRef(function MediaWithContentRef(
     <div className={classSet} ref={ref} style={style}>
       <Media
         className={styles.media}
+        containMedia={containMedia}
         foregroundImage={foregroundImage}
         foregroundImageLink={foregroundImageLink}
         hasFullWidthImage={hasFullWidthImage}
@@ -58,6 +60,7 @@ const MediaWithContent = forwardRef(function MediaWithContentRef(
 MediaWithContent.propTypes = {
   backgroundColor: PropTypes.string,
   className: PropTypes.string,
+  containMedia: PropTypes.oneOf(['center', 'left', 'right']),
   content: PropTypes.any,
   copy: PropTypes.shape({
     description: PropTypes.any,
@@ -78,6 +81,7 @@ MediaWithContent.propTypes = {
 MediaWithContent.defaultProps = {
   backgroundColor: '#F6F5E8',
   className: undefined,
+  containMedia: undefined,
   content: undefined,
   copy: {
     description: undefined,
