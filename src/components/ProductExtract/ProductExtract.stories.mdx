@@ -1,0 +1,35 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import * as knobs from '@storybook/addon-knobs';
+import ProductExtract from './ProductExtract';
+import ProductExtractFixture from './ProductExtractFixture';
+
+<Meta title="Components/ProductExtract" component={ProductExtract} />
+
+# ProductExtract
+
+<Preview>
+  <Story name="Base component">
+    <ProductExtract
+      dataTestRef={ProductExtractFixture.dataTestRef}
+      hasBottomBorder={knobs.boolean('hasBottomBorder', false, 'Presentation')}
+      isVisible={knobs.boolean('isActive', true, 'Presentation')}
+      itemNum={knobs.select(
+        'itemNum',
+        ['1', '2', '3', '4'],
+        '4',
+        'Presentation',
+      )}
+      product={knobs.object(
+        'product',
+        ProductExtractFixture.product,
+        'product',
+      )}
+      theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
+      works={ProductExtractFixture.works}
+    />
+  </Story>
+</Preview>
+
+## API
+
+<Props of={ProductExtract} />

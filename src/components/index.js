@@ -32,6 +32,7 @@ import Overlay from './Overlay';
 import Paragraph, { P, ParagraphSet } from './Paragraph';
 import Podium from './Podium';
 import ProductCommerce from './ProductCommerce';
+import ProductExtract from './ProductExtract';
 import ProductGridItem from './ProductGridItem';
 import ProductDetailHeader from './ProductDetailHeader';
 import Quote from './Quote';
@@ -84,6 +85,7 @@ export { Paragraph };
 export { ParagraphSet };
 export { Podium };
 export { ProductCommerce };
+export { ProductExtract };
 export { ProductGridItem };
 export { ProductDetailHeader };
 export { Quote };
@@ -137,6 +139,7 @@ export default {
   ParagraphSet,
   Podium,
   ProductCommerce,
+  ProductExtract,
   ProductGridItem,
   ProductDetailHeader,
   Quote,

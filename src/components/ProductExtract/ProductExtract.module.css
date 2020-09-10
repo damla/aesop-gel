@@ -1,0 +1,131 @@
+@import 'styles/index';
+
+.base {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-top: 18px;
+  list-style: none;
+  visibility: hidden;
+
+  @media (--viewport-md) {
+    margin-top: 14px;
+  }
+}
+
+.heading,
+.productName {
+  display: block;
+  font-size: rem(14px);
+  line-height: 1.4;
+
+  @media (--viewport-md) {
+    line-height: 1.6;
+  }
+}
+
+.delayAnimation {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition-duration: 1000ms;
+  transition-property: all;
+  transition-timing-function: var(--easing-ease-out-cubic);
+  visibility: hidden;
+
+  .item1 & {
+    transition-delay: calc((1 * 100ms) + 200ms);
+  }
+
+  .item2 & {
+    transition-delay: calc((2 * 100ms) + 200ms);
+  }
+
+  .item3 & {
+    transition-delay: calc((3 * 100ms) + 200ms);
+  }
+
+  .item4 & {
+    transition-delay: calc((4 * 100ms) + 200ms);
+  }
+}
+
+.heading {
+  max-width: 80%;
+  margin-bottom: 2px;
+  color: var(--color-secondary);
+  font-family: var(--font-family-sans-serif-medium);
+  font-size: rem(14px);
+
+  .dark & {
+    @extend %font-theme-dark-copy;
+  }
+
+  .light & {
+    color: var(--color-light-copy);
+  }
+}
+
+.productName {
+  position: relative;
+  padding-bottom: 18px;
+  margin-left: 0;
+  color: var(--color-dark-label);
+  font-family: var(--font-family-sans-serif-regular);
+
+  .dark & {
+    @extend %font-theme-dark-label;
+  }
+
+  .light & {
+    color: var(--color-light-label);
+  }
+
+  @media (--viewport-md) {
+    padding-bottom: 14px;
+
+    .hasBottomBorder &:not(:last-child) {
+      border-bottom: 1px solid var(--color-grey-65);
+    }
+  }
+
+  .hasBottomBorder &:not(:last-child) {
+    border-bottom: 1px solid var(--color-grey-65);
+  }
+
+  div {
+    max-width: 80%;
+  }
+
+  span {
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 300ms var(--easing-ease-in-sine);
+  }
+
+  .link:hover & {
+    span {
+      border-bottom: 1px solid var(--color-grey-30);
+    }
+  }
+}
+
+.productImage {
+  position: absolute;
+  top: 0;
+  left: calc(100% - 32.45px);
+
+  img {
+    width: 32.45px;
+    height: 50px;
+  }
+}
+
+.slideIn {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.link {
+  display: inline-block;
+  width: 100%;
+}
