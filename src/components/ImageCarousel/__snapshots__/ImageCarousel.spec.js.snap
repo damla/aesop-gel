@@ -373,7 +373,7 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
       className="base"
     >
       <div
-        className="list flush dark"
+        className="list dark"
       >
         <div
           className="bar"
@@ -388,7 +388,7 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
     </div>
   </div>
   <footer
-    className="footer flush"
+    className="footer"
   >
     <div
       className="slideCounter"
