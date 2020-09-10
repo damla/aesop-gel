@@ -2259,7 +2259,10 @@ sans-serif;
   display: flex;
   height: 2px;
   padding: 0;
-  margin: 0 20px 20px;
+  margin-top: 0;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
   list-style-type: none;
 }
 .Pagination-module_list__2Oj5X.Pagination-module_dark__2FCbX {
@@ -2276,12 +2279,15 @@ sans-serif;
     }
 @media (min-width: 640px) {
 .Pagination-module_list__2Oj5X {
-    margin: 0 40px 20px
+    margin-right: 40px;
+    margin-left: 40px
 }
   }
 @media (min-width: 1025px) {
 .Pagination-module_list__2Oj5X {
-    margin: 0 80px 40px
+    margin-right: 80px;
+    margin-bottom: 80px;
+    margin-left: 40px
 }
   }
 .Pagination-module_list__2Oj5X li {
