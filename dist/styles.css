@@ -4474,89 +4474,105 @@ sans-serif;
 .FullWidthHeroScroll-module_light__5ALv_ {
   color: #fffef2;
 }
-.FullWidthHeroScroll-module_heroEyebrow__Rq116 {
+/*.heroEyebrow {
   margin: 12px 0 10px;
-  font-family: 'Suisse Regular'
-,
-sans-serif;
-}
-@media (min-width: 1025px) {
-.FullWidthHeroScroll-module_heroEyebrow__Rq116 {
-    font-size: 14px
-}
+  font-family: var(--font-family-sans-serif-regular);
+
+  @media (--viewport-lg) {
+    font-size: rem(14px);
   }
-.FullWidthHeroScroll-module_fullscreenHeroCopy__39idD {
+}*/
+/*.heroText {
+  margin-left: 15%;
+  @media (--viewport-sm-md-only) {
+    margin-left: 33.3%;
+  }
+  @media (--viewport-sm-only) {
+    margin-left: 0;
+  }
+}*/
+/*.fullscreenHeroCopy {
   padding: 0;
   margin: 0 0 2em;
-  font-family: 'Suisse Regular'
-,
-sans-serif;
-}
+  font-family: var(--font-family-sans-serif-regular);
+}*/
 .FullWidthHeroScroll-module_backgroundVideo__fG21m {
   height: 100%;
 }
-.FullWidthHeroScroll-module_innerWrapper__J2DKq {
-  padding: 36px 20px 56px;
-  margin: 0;
-}
-@media (min-width: 640px) {
-.FullWidthHeroScroll-module_innerWrapper__J2DKq {
-    max-width: 410px;
-    padding: 90px 20px
-}
-  }
 @media (min-width: 1025px) {
-.FullWidthHeroScroll-module_innerWrapper__J2DKq {
-    width: 66.66667%;
-    max-width: 410px;
-    padding: 115px 0 2em;
-    margin: 0 0 0 330px
+.FullWidthHeroScroll-module_backgroundVideo__fG21m {
+    height: 100%
 }
   }
-.FullWidthHeroScroll-module_hasFullWidthImage__1I_o9 .FullWidthHeroScroll-module_innerWrapper__J2DKq {
+@media (max-width: 1024px){
+.FullWidthHeroScroll-module_backgroundVideo__fG21m {
+    height: 100%
+}
+  }
+.FullWidthHeroScroll-module_innerWrapper__J2DKq {
+  width: 100%;
+  margin-left: 0;
+  padding: 90px 20px 20px;
+
+  /*@media (--viewport-md) {
+    width: 100%;
+    margin-left: 0;
+    padding: 90px 20px;
+  }*/
+
+  /*.hasFullWidthImage & {
     height: 100%;
   }
-@media (min-width: 640px) and (max-width: 1024px) {
-.FullWidthHeroScroll-module_hasFullWidthImage__1I_o9.FullWidthHeroScroll-module_hero__1c3u7 .FullWidthHeroScroll-module_innerWrapper__J2DKq {
-      padding-top: 0
-  }
+
+  .hasFullWidthImage.hero & {
+    @media (--viewport-md-only) {
+      padding-top: 0;
     }
-.FullWidthHeroScroll-module_heroTitle__3keXp {
-  margin: 0 0 1em;
-  font-family: 'Suisse Regular'
-,
-sans-serif;
-  font-size: 2.5rem;
+  }*/
 }
-@media (min-width: 640px) {
-.FullWidthHeroScroll-module_heroTitle__3keXp {
-    font-size: 26px
-}
-  }
-@media (--viewport-sm) {
-.FullWidthHeroScroll-module_heroTitle__3keXp {
-    font-size: 24px
-}
-  }
-.FullWidthHeroScroll-module_heroTitle__3keXp.FullWidthHeroScroll-module_serif__1p082 {
-    font-family: 'Zapf Humanist'
-,
-serif;
-    font-size: 30px;
-  }
-@media (--viewport-sm) {
-.FullWidthHeroScroll-module_heroTitle__3keXp.FullWidthHeroScroll-module_serif__1p082 {
-      font-size: 25px
-  }
-    }
+/*@media (--viewport-lg) {
+    width: calc(100% * 7 / 12);
+    margin-left: 33.33332%;
+    padding-top: 90px;
+  }*/
 @media (min-width: 1025px) {
-.FullWidthHeroScroll-module_reverse__3EvZu {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse
+.FullWidthHeroScroll-module_innerWrapper__J2DKq {
+    width: calc(100% * 5 / 12);
+    max-width: 590px;
+    margin-left: 15%;
+    padding: 115px 0 0
 }
   }
+@media (min-width: 640px) {
+.FullWidthHeroScroll-module_innerWrapper__J2DKq {
+    width: calc(100% * 7 / 12);
+    margin-left: 33.33332%;
+    padding: 90px 0 0
+}
+  }
+/*.heroTitle {
+  margin: 0 0 1em;
+  font-family: var(--font-family-sans-serif-regular);
+  font-size: 2.5rem;
+  @media (--viewport-md) {
+    font-size: 26px;
+  }
+  @media (--viewport-sm) {
+    font-size: 24px;
+  }
+  &.serif {
+    font-family: var(--font-family-zapf-serif);
+    font-size: 30px;
+    @media (--viewport-sm) {
+      font-size: 25px;
+    }
+  }
+}*/
+/*.reverse {
+  @media (--viewport-lg) {
+    flex-direction: row-reverse;
+  }
+}*/
 .FullWidthHeroScroll-module_scrollLockWrap__1Ujw- {
   position: relative;
 }
