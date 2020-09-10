@@ -1,0 +1,16 @@
+@import 'styles/index';
+
+.fullscreenSection {
+  width: 48%;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 90px 34px;
+  transform: translate3d(0, 0, 0);
+  &.dark {
+    color: var(--color-dark-copy);
+  }
+
+  &.light {
+    color: var(--color-light-copy);
+  }
+}

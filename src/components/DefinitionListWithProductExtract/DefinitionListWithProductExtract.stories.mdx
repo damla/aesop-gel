@@ -1,0 +1,44 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import * as knobs from '@storybook/addon-knobs';
+import DefinitionListWithProductExtract from './DefinitionListWithProductExtract';
+import DefinitionListWithProductExtractFixture from './DefinitionListWithProductExtract.fixture';
+
+<Meta
+  title="Components/DefinitionListWithProductExtract"
+  component={DefinitionListWithProductExtract}
+/>
+
+# DefinitionListWithProductExtract
+
+<Preview>
+  <Story name="Base component">
+    <DefinitionListWithProductExtract
+      dataTestRef={DefinitionListWithProductExtractFixture.dataTestRef}
+      product={DefinitionListWithProductExtractFixture.product}
+      productBottomBorder={knobs.boolean(
+        'productBottomBorder',
+        false,
+        'Presentation',
+      )}
+      itemBottomBorder={knobs.boolean(
+        'itemBottomBorder',
+        false,
+        'Presentation',
+      )}
+      productItemNumber={knobs.select(
+        'itemNum',
+        ['1', '2', '3', '4'],
+        '4',
+        'Presentation',
+      )}
+      isVisible={knobs.boolean('isActive', true, 'Presentation')}
+      items={DefinitionListWithProductExtractFixture.items}
+      theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
+      works={DefinitionListWithProductExtractFixture.works}
+    />
+  </Story>
+</Preview>
+
+## API
+
+<Props of={DefinitionListWithProductExtract} />

@@ -14,9 +14,11 @@ import DialogBanner from './DialogBanner';
 import DoubleMedia from './DoubleMedia';
 import Figure from './Figure';
 import FlyinPanel from './FlyinPanel';
+import FullWidthHeroScroll from './FullWidthHeroScroll';
 import GoogleMap from './GoogleMap';
 import Heading from './Heading';
 import Hidden from './Hidden';
+import HorizontalProductDisplayAccordion from './HorizontalProductDisplayAccordion';
 import Hyperlink from './Hyperlink';
 import Icon from './Icon';
 import Image from './Image';
@@ -32,6 +34,7 @@ import Overlay from './Overlay';
 import Paragraph, { P, ParagraphSet } from './Paragraph';
 import Podium from './Podium';
 import ProductCommerce from './ProductCommerce';
+import ProductExtract from './ProductExtract';
 import ProductGridItem from './ProductGridItem';
 import ProductDetailHeader from './ProductDetailHeader';
 import Quote from './Quote';
@@ -64,9 +67,11 @@ export { DialogBanner };
 export { DoubleMedia };
 export { Figure };
 export { FlyinPanel };
+export { FullWidthHeroScroll };
 export { GoogleMap };
 export { Heading };
 export { Hidden };
+export { HorizontalProductDisplayAccordion };
 export { Hyperlink };
 export { Icon };
 export { Image };
@@ -84,6 +89,7 @@ export { Paragraph };
 export { ParagraphSet };
 export { Podium };
 export { ProductCommerce };
+export { ProductExtract };
 export { ProductGridItem };
 export { ProductDetailHeader };
 export { Quote };
@@ -117,9 +123,11 @@ export default {
   DoubleMedia,
   Figure,
   FlyinPanel,
+  FullWidthHeroScroll,
   GoogleMap,
   Heading,
   Hidden,
+  HorizontalProductDisplayAccordion,
   Hyperlink,
   Icon,
   Image,
@@ -137,6 +145,7 @@ export default {
   ParagraphSet,
   Podium,
   ProductCommerce,
+  ProductExtract,
   ProductGridItem,
   ProductDetailHeader,
   Quote,

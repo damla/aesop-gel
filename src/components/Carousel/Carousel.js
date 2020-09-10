@@ -31,6 +31,7 @@ const Carousel = ({
   id,
   initialSlideIndex,
   introduction,
+  isCompact,
   slides,
   theme,
 }) => {
@@ -186,7 +187,7 @@ const Carousel = ({
         <footer
           className={cx(styles.footer, { [styles.flush]: hasFlushPagination })}
         >
-          {hasSlideCounter && (
+          {hasSlideCounter && !isCompact && (
             <div className={styles.slideCounter}>
               {totalSlidesCount > 1 && slideCounter}
             </div>
@@ -223,6 +224,7 @@ Carousel.propTypes = {
     eyebrow: PropTypes.string,
     heading: PropTypes.string,
   }),
+  isCompact: PropTypes.bool,
   slides: PropTypes.arrayOf(
     PropTypes.shape({
       caption: PropTypes.string,
@@ -247,6 +249,7 @@ Carousel.defaultProps = {
   id: undefined,
   initialSlideIndex: 0,
   introduction: undefined,
+  isCompact: false,
   slides: [],
   theme: 'dark',
 };
