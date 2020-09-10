@@ -21,6 +21,7 @@ const DefinitionListWithProductExtract = ({
         hasBottomBorder={itemBottomBorder}
         isVisible={isVisible}
         items={items}
+        theme={theme}
       />
       <ProductExtract
         dataTestRef={dataTestRef}
