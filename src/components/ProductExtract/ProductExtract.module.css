@@ -7,6 +7,7 @@
   margin-top: 18px;
   list-style: none;
   visibility: hidden;
+
   @media (--viewport-md) {
     margin-top: 14px;
   }
@@ -42,6 +43,7 @@
   .item3 & {
     transition-delay: calc((3 * 100ms) + 200ms);
   }
+
   .item4 & {
     transition-delay: calc((4 * 100ms) + 200ms);
   }

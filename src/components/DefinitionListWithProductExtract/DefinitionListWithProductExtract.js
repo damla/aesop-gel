@@ -63,7 +63,6 @@ DefinitionListWithProductExtract.defaultProps = {
   product: {
     image: {
       altText: 'Product Extract',
-      url: '/',
     },
   },
   theme: 'dark',

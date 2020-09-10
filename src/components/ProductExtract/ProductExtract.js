@@ -1,11 +1,10 @@
-import React, { forwardRef, Fragment } from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
+import isEmpty from 'lodash/isEmpty';
 import cx from 'classnames';
-import Image from '~/components/Image';
-import styles from './ProductExtract.module.css';
 import { HEADING } from '~/constants';
-
-import { Heading, Hyperlink } from '~/components';
+import { ConditionalWrapper, Heading, Hyperlink, Image } from '~/components';
+import styles from './ProductExtract.module.css';
 
 const ProductExtract = forwardRef(function ProductExtractRef(
   {
@@ -60,44 +59,42 @@ const ProductExtract = forwardRef(function ProductExtractRef(
     className,
   );
 
-  const isEmptyObject = value => {
-    return Object.keys(value).length === 0 && value.constructor === Object;
-  };
-
-  if (!product || isEmptyObject(product)) {
+  if (!product || isEmpty(product)) {
     return null;
   }
 
   return (
-    <Fragment>
-      <div className={classSet} ref={ref}>
-        <Hyperlink
-          className={linkClassSet}
-          dataTestRef={dataTestRef}
-          title={product.name}
-          url={product.url}
-        >
-          <Heading
-            className={headingClassSet}
-            level={HEADING.LEVEL.FOUR}
-            size={HEADING.SIZE.X_X_SMALL}
+    <div className={classSet} ref={ref}>
+      <ConditionalWrapper
+        condition={product.url}
+        wrapper={children => (
+          <Hyperlink
+            className={linkClassSet}
+            dataTestRef={dataTestRef}
+            title={product.name}
+            url={product.url}
           >
-            <span>{works}</span>
-          </Heading>
-          <div className={productNameClassSet}>
-            <div>
-              <span>{product.name}</span>
-            </div>
+            {children}
+          </Hyperlink>
+        )}
+      >
+        <Heading
+          className={headingClassSet}
+          level={HEADING.LEVEL.FOUR}
+          size={HEADING.SIZE.X_X_SMALL}
+        >
+          <span>{works}</span>
+        </Heading>
+        <div className={productNameClassSet}>
+          <div>
+            <span>{product.name}</span>
           </div>
-          <div className={productImageClassSet}>
-            <Image
-              altText={product.image.altText}
-              small={product.image.small}
-            />
-          </div>
-        </Hyperlink>
-      </div>
-    </Fragment>
+        </div>
+        <div className={productImageClassSet}>
+          <Image altText={product.image.altText} small={product.image.small} />
+        </div>
+      </ConditionalWrapper>
+    </div>
   );
 });
 
@@ -127,7 +124,6 @@ ProductExtract.defaultProps = {
       altText: 'Product Extract',
     },
     name: 'Product Extract',
-    url: '/',
   },
   theme: 'dark',
   works: 'Works well with',
