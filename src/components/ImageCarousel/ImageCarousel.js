@@ -6,6 +6,7 @@ const ImageCarousel = ({
   autoplaySpeed,
   className,
   hasAutoplay,
+  hasFlushPagination,
   isCompact,
   slides,
   theme,
@@ -14,7 +15,7 @@ const ImageCarousel = ({
     autoplaySpeed={autoplaySpeed}
     className={className}
     hasAutoplay={hasAutoplay}
-    hasFlushPagination={true}
+    hasFlushPagination={hasFlushPagination}
     hasFullWidthSlides={true}
     hasShowCaption={true}
     hasSlideCounter={true}
@@ -28,6 +29,7 @@ ImageCarousel.propTypes = {
   autoplaySpeed: PropTypes.number,
   className: PropTypes.string,
   hasAutoplay: PropTypes.bool,
+  hasFlushPagination: PropTypes.bool,
   isCompact: PropTypes.bool,
   slides: PropTypes.arrayOf(
     PropTypes.shape({
@@ -43,6 +45,7 @@ ImageCarousel.defaultProps = {
   autoplaySpeed: 3000,
   className: undefined,
   hasAutoplay: false,
+  hasFlushPagination: false,
   isCompact: false,
   slides: [],
   theme: 'dark',
