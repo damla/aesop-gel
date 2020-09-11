@@ -1,0 +1,203 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FullWidthHeroScroll /> renders base component correctly 1`] = `
+<section
+  className="scrollLockWrap"
+>
+  <div>
+    <div
+      className="scrollLockMedia"
+    >
+      <div
+        className="base backgroundVideo fullWidth"
+        role="group"
+      >
+        <figure
+          className="fallbackImageFigure"
+        >
+          <picture
+            className="base picture dark fallbackImage"
+          >
+            <source
+              media="(min-width: 1025px)"
+              srcSet="./assets/images/MediaWithContent/video-poster.png"
+            />
+            <source
+              media="(min-width: 640px)"
+              srcSet="./assets/images/MediaWithContent/video-poster.png"
+            />
+            <source
+              media="(min-width: 0px)"
+              srcSet="./assets/images/MediaWithContent/video-poster.png"
+            />
+            <img
+              alt="How to Use Video for Tea Tree Leaf Facial Exfoliant"
+            />
+          </picture>
+        </figure>
+        <video
+          autoPlay={true}
+          className="base"
+          controls={false}
+          loop={true}
+          muted={true}
+          playsInline={true}
+        >
+          <source
+            src="https://player.vimeo.com/external/225136214.hd.mp4?s=a01cd8b47f35767394e48dc01af10510ef8ff4dd&profile_id=174"
+            type="video/mp4"
+          />
+        </video>
+        <button
+          className="base dark base fadeEnter"
+          disabled={false}
+          onClick={[Function]}
+          title="View video"
+          type="button"
+        >
+          <picture
+            className="base picture dark"
+          >
+            <source
+              media="(min-width: 1025px)"
+              srcSet="./assets/images/MediaWithContent/video-poster.png"
+            />
+            <source
+              media="(min-width: 640px)"
+              srcSet="./assets/images/MediaWithContent/video-poster.png"
+            />
+            <source
+              media="(min-width: 0px)"
+              srcSet="./assets/images/MediaWithContent/video-poster.png"
+            />
+            <img
+              alt="How to Use Video for Tea Tree Leaf Facial Exfoliant"
+            />
+          </picture>
+        </button>
+      </div>
+    </div>
+    <div
+      className="scrollingContent"
+    >
+      <div
+        className="fullscreenHero"
+      >
+        <div
+          className="innerWrapper"
+        >
+          <article
+            className="base light"
+          >
+            <header
+              className="base"
+            />
+          </article>
+          <a
+            className="base blockStyle hasIcon left light cta"
+            href="/"
+            target="_self"
+          >
+            Lorem ipsum dolor
+             
+            <i
+              aria-hidden="true"
+              className="icon"
+            >
+              <svg
+                className="base rightArrow light"
+                data-ref=""
+                focusable="false"
+                height={12}
+                role="img"
+                style={
+                  Object {
+                    "height": "12px",
+                    "width": "12px",
+                  }
+                }
+                tabIndex={-1}
+                viewBox="0 0 50 50"
+                width={12}
+              >
+                <g>
+                  <path
+                    d="M30.1,5.3L50,25.1L30.1,45h-6.6l18-17.6H0v-4.8h41.5l-18-17.6h6.6V5.3z"
+                  />
+                </g>
+              </svg>
+            </i>
+          </a>
+        </div>
+        <button
+          className="scrollIndicator light"
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="base scrolldown light"
+            data-ref=""
+            focusable="false"
+            height={12}
+            role="img"
+            style={
+              Object {
+                "height": "12px",
+                "width": "12px",
+              }
+            }
+            tabIndex={-1}
+            viewBox="0 0 50 50"
+            width={12}
+          >
+            <g>
+              <polygon
+                points="25,31.3 4.2,10.5 0.1,14.6 25,39.5 50,14.6 45.9,10.5"
+              />
+            </g>
+          </svg>
+        </button>
+      </div>
+      <div
+        className="fullscreenSection"
+      >
+        <div
+          className="slowFadeEnter"
+        >
+          <h4
+            className="base medium light"
+          >
+            Aliquam turpis libero, posuere sed nisl in, porta facilisis lorem. Phasellus eu turpis in quam efficitur hendrerit.
+          </h4>
+        </div>
+      </div>
+      <div
+        className="fullscreenSection"
+      >
+        <div
+          className="slowFadeEnter"
+        >
+          <h4
+            className="base medium light"
+          >
+            Aliquam turpis libero, posuere sed nisl in, porta facilisis lorem. Phasellus eu turpis in quam efficitur hendrerit.
+          </h4>
+        </div>
+      </div>
+      <div
+        className="fullscreenSection"
+      >
+        <div
+          className="slowFadeEnter"
+        >
+          <h4
+            className="base medium light"
+          >
+            Aliquam turpis libero, posuere sed nisl in, porta facilisis lorem. Phasellus eu turpis in quam efficitur hendrerit.
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`;

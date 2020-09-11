@@ -35,7 +35,7 @@ const TextInput = ({
 
   return (
     <div className={classNames}>
-      <label>
+      <label htmlFor={name}>
         <input
           className={inputClassNames}
           data-test-ref={dataTestRef}

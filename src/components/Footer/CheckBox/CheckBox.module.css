@@ -28,7 +28,7 @@
   }
 
   &:focus {
-    outline: none !important;
+    outline: none;
   }
 
   &:hover {
