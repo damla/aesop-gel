@@ -41,6 +41,7 @@ const TextInput = ({
           className={inputClassNames}
           data-test-ref={dataTestRef}
           defaultValue={defaultValue}
+          id={id}
           disabled={disabled}
           max={max}
           maxLength={maxLength}
