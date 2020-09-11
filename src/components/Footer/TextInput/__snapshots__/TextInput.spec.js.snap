@@ -4,9 +4,12 @@ exports[`<TextInput /> renders base component correctly 1`] = `
 <div
   className="formText"
 >
-  <label>
+  <label
+    htmlFor="test-textinput"
+  >
     <input
       className="formTextInput"
+      name="test-textinput"
       placeholder=""
       type="text"
     />

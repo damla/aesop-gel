@@ -3,10 +3,12 @@
 exports[`<CheckBox /> renders base component correctly 1`] = `
 <label
   className="base"
+  htmlFor="test-checkbox"
 >
   <input
     className="checkBox"
     disabled={false}
+    name="test-checkbox"
     type="checkbox"
   />
   <span

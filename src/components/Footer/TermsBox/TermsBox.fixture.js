@@ -1,0 +1,4 @@
+export default {
+  term:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis sem quis sem bibendum aliquet non nec sapien. Suspendisse felis dui, gravida non ligula id, tempor pharetra sapien. Vestibulum porttitor felis vitae mollis porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis sem quis sem bibendum aliquet non nec sapien. Suspendisse felis dui, gravida non ligula id, tempor pharetra sapien. Vestibulum porttitor felis vitae mollis porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis sem quis sem bibendum aliquet non nec sapien. Suspendisse felis dui, gravida non ligula id, tempor pharetra sapien. Vestibulum porttitor felis vitae mollis porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis sem quis sem bibendum aliquet non nec sapien. Suspendisse felis dui, gravida non ligula id, tempor pharetra sapien. Vestibulum porttitor felis vitae mollis porta.',
+};
