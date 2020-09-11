@@ -4,7 +4,6 @@ import styles from './TextInput.module.css';
 import cx from 'classnames';
 
 const TextInput = ({
-  autoFocus,
   className,
   defaultValue,
   disabled,
@@ -38,7 +37,6 @@ const TextInput = ({
     <div className={classNames}>
       <label htmlFor={name}>
         <input
-          autoFocus={autoFocus}
           className={inputClassNames}
           data-test-ref={dataTestRef}
           defaultValue={defaultValue}
@@ -66,7 +64,6 @@ const TextInput = ({
 };
 
 TextInput.propTypes = {
-  autoFocus: PropTypes.bool,
   className: PropTypes.string,
   defaultValue: PropTypes.string,
   disabled: PropTypes.bool,
