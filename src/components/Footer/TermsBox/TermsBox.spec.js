@@ -14,7 +14,7 @@ describe('<TermsBox />', () => {
 
   it('renders base component correctly', () => {
     const tree = renderer
-      .create(<TermsBox name="test-textarea" term={TermsBoxFixture.term} />)
+      .create(<TermsBox id="test-textarea" term={TermsBoxFixture.term} />)
       .toJSON();
 
     expect(tree).toMatchSnapshot();

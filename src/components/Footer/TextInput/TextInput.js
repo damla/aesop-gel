@@ -9,6 +9,7 @@ const TextInput = ({
   disabled,
   errorMessage,
   hasContent,
+  id,
   inputClassName,
   inputRef,
   label,
@@ -35,7 +36,7 @@ const TextInput = ({
 
   return (
     <div className={classNames}>
-      <label htmlFor={name}>
+      <label htmlFor={id}>
         <input
           className={inputClassNames}
           data-test-ref={dataTestRef}
@@ -69,6 +70,7 @@ TextInput.propTypes = {
   disabled: PropTypes.bool,
   errorMessage: PropTypes.string,
   hasContent: PropTypes.bool,
+  id: PropTypes.string,
   inputClassName: PropTypes.string,
   inputRef: PropTypes.func,
   label: PropTypes.string,
