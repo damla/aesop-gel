@@ -12,7 +12,9 @@ describe('<DefinitionListWithProductExtract />', () => {
   });
 
   it('renders base component correctly', () => {
-    const tree = renderer.create(<DefinitionListWithProductExtract />).toJSON();
+    const tree = renderer
+      .create(<DefinitionListWithProductExtract dataTestRef="test_id" />)
+      .toJSON();
 
     expect(tree).toMatchSnapshot();
   });
