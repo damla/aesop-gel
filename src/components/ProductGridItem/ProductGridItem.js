@@ -34,7 +34,7 @@ const ProductGridItem = ({ className, copy, id, info, theme, url }) => {
     imageRef,
   );
 
-  const { productDetail } = useProductDetailContext();
+  const { productDetail, sku } = useProductDetailContext();
 
   if (!productDetail) return null;
 
@@ -46,7 +46,7 @@ const ProductGridItem = ({ className, copy, id, info, theme, url }) => {
     [styles.hasOneVariant]: hasOneVariant,
   });
 
-  const RADIO_GROUP_NAME = 'sku';
+  const RADIO_GROUP_NAME = sku;
   const RADIO_GROUP_DATA_TEST_REF = 'PRODUCT_GRID_ITEM_VARIANT_SELECT';
 
   return (
