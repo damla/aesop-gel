@@ -14,7 +14,10 @@ describe('<CheckBox />', () => {
   it('renders base component correctly', () => {
     const tree = renderer
       .create(
-        <CheckBox content="Subscribe to communications about Aesop products, services, stores, events and matters of cultural interest." name='test-checkbox' />,
+        <CheckBox
+          content="Subscribe to communications about Aesop products, services, stores, events and matters of cultural interest."
+          name="test-checkbox"
+        />,
       )
       .toJSON();
 
