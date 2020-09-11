@@ -197,6 +197,7 @@ AccordionProduct.propTypes = {
     foregroundImage: PropTypes.object,
     theme: PropTypes.string,
     title: PropTypes.string,
+    product: PropTypes.object,
   }),
   resetAccordion: PropTypes.func,
   toggleAccordion: PropTypes.func,

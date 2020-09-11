@@ -1,0 +1,216 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AccordionProduct /> renders base component correctly 1`] = `
+<div
+  className="accordionProduct"
+  role="button"
+  tabIndex={-1}
+>
+  <div
+    className="accordionDefaultBackground"
+    style={
+      Object {
+        "backgroundColor": undefined,
+      }
+    }
+  >
+    <picture
+      className="base picture dark closedBackgroundImage"
+    >
+      <source
+        media="(min-width: 1025px)"
+        srcSet="./assets/images/HorizontalProductDisplayAccordion/Ptolemy-front.png"
+      />
+      <source
+        media="(min-width: 640px)"
+        srcSet="./assets/images/HorizontalProductDisplayAccordion/Ptolemy-front.png"
+      />
+      <source
+        media="(min-width: 0px)"
+        srcSet="./assets/images/HorizontalProductDisplayAccordion/Ptolemy-front.png"
+      />
+      <img />
+    </picture>
+  </div>
+  <div
+    className="accordionDefaultContent"
+  >
+    <div>
+      <h2
+        className="base xLarge dark"
+      >
+        Ptolemy
+      </h2>
+      <h4
+        className="base xXSmall dark"
+      >
+        Cardamon Mimosa Tobacco
+      </h4>
+      <div
+        className="accordionClosedCopy theme"
+      >
+        A beam to comfort those on the high seas
+      </div>
+      <button
+        className="openBtn"
+        onClick={[Function]}
+      >
+        Learn more
+      </button>
+      <picture
+        className="base picture dark closedForegroundImage"
+      >
+        <source
+          media="(min-width: 1025px)"
+          srcSet="./assets/images/HorizontalProductDisplayAccordion/candles-product.png"
+        />
+        <source
+          media="(min-width: 640px)"
+          srcSet="./assets/images/HorizontalProductDisplayAccordion/candles-product.png"
+        />
+        <source
+          media="(min-width: 0px)"
+          srcSet="./assets/images/HorizontalProductDisplayAccordion/candles-product.png"
+        />
+        <img
+          alt="Lorem ipsum dolor sit"
+        />
+      </picture>
+    </div>
+  </div>
+  <div
+    className="accordionExpanded"
+    style={
+      Object {
+        "backgroundColor": undefined,
+      }
+    }
+  >
+    <picture
+      className="base picture dark openBackgroundImage"
+    >
+      <source
+        media="(min-width: 1025px)"
+        srcSet="https://www.aesop.com/medias/GelCleanser-640x640.png?context=bWFzdGVyfGltYWdlc3w1MzE5NTl8aW1hZ2UvcG5nfGltYWdlcy9oOTUvaGNkLzg4MDc3OTc4NTAxNDIucG5nfGM3NTNhYjdkMWNiOTRhNWZhNDA0NWExZWJiODMxN2VhNzEyY2ZkNGUyYzc4ZWVkZDRjYTIzMzZmZTRlOGYxNjM"
+      />
+      <source
+        media="(min-width: 640px)"
+        srcSet="https://www.aesop.com/medias/GelCleanser-640x640.png?context=bWFzdGVyfGltYWdlc3w1MzE5NTl8aW1hZ2UvcG5nfGltYWdlcy9oOTUvaGNkLzg4MDc3OTc4NTAxNDIucG5nfGM3NTNhYjdkMWNiOTRhNWZhNDA0NWExZWJiODMxN2VhNzEyY2ZkNGUyYzc4ZWVkZDRjYTIzMzZmZTRlOGYxNjM"
+      />
+      <source
+        media="(min-width: 0px)"
+        srcSet="https://www.aesop.com/medias/GelCleanser-640x640.png?context=bWFzdGVyfGltYWdlc3w1MzE5NTl8aW1hZ2UvcG5nfGltYWdlcy9oOTUvaGNkLzg4MDc3OTc4NTAxNDIucG5nfGM3NTNhYjdkMWNiOTRhNWZhNDA0NWExZWJiODMxN2VhNzEyY2ZkNGUyYzc4ZWVkZDRjYTIzMzZmZTRlOGYxNjM"
+      />
+      <img />
+    </picture>
+    <div
+      className="accordionExpandedContent"
+    >
+      <div
+        className="expandedAccordionImage"
+      >
+        <picture
+          className="base picture dark"
+        >
+          <source
+            media="(min-width: 1025px)"
+            srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+          />
+          <source
+            media="(min-width: 640px)"
+            srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+          />
+          <source
+            media="(min-width: 0px)"
+            srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+          />
+          <img
+            alt="Lorem ipsum dolor sit"
+          />
+        </picture>
+      </div>
+      <div
+        className="expandedAccordionText"
+      >
+        <h2
+          className="base xLarge dark"
+        >
+          Aganice
+        </h2>
+        <h4
+          className="base xXSmall dark"
+        >
+          Cardamon Mimosa Tobacco
+        </h4>
+        <div
+          className="accordionOpenCopy theme"
+        >
+          A beam to comfort those on the high seas
+        </div>
+        <div
+          className="buttonGroup"
+        >
+          <button
+            className="base alternate blockStyle dark base fullWidth"
+            data-test-ref="ADD_TO_CART"
+            disabled={false}
+            onClick={[Function]}
+            title="undefined — $26.45"
+            type="button"
+          >
+            <span
+              className="label"
+            >
+              <span />
+              <span>
+                undefined — $26.45
+              </span>
+            </span>
+          </button>
+          <a
+            className="base blockStyle hasIcon left dark cta"
+            href="/"
+            target="_self"
+          >
+            Lorem ipsum dolor
+             
+            <i
+              aria-hidden="true"
+              className="icon"
+            >
+              <svg
+                className="base rightArrow dark"
+                data-ref=""
+                focusable="false"
+                height={12}
+                role="img"
+                style={
+                  Object {
+                    "height": "12px",
+                    "width": "12px",
+                  }
+                }
+                tabIndex={-1}
+                viewBox="0 0 50 50"
+                width={12}
+              >
+                <g>
+                  <path
+                    d="M30.1,5.3L50,25.1L30.1,45h-6.6l18-17.6H0v-4.8h41.5l-18-17.6h6.6V5.3z"
+                  />
+                </g>
+              </svg>
+            </i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <button
+      className="closeBtn"
+      onClick={[Function]}
+    >
+      Close
+    </button>
+  </div>
+</div>
+`;
