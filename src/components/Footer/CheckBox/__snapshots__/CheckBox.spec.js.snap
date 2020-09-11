@@ -8,7 +8,7 @@ exports[`<CheckBox /> renders base component correctly 1`] = `
   <input
     className="checkBox"
     disabled={false}
-    name="test-checkbox"
+    id="test-checkbox"
     type="checkbox"
   />
   <span
