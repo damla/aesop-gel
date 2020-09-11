@@ -66,7 +66,7 @@ const ProductExtract = forwardRef(function ProductExtractRef(
   return (
     <div className={classSet} ref={ref}>
       <ConditionalWrapper
-        condition={product.url}
+        condition={!!product.url}
         wrapper={children => (
           <Hyperlink
             className={linkClassSet}
