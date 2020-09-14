@@ -3,6 +3,7 @@
 .base {
   display: flex;
   margin-top: 18px;
+  font-family: var(--font-family-sans-serif-regular);
 }
 
 .checkBox {
