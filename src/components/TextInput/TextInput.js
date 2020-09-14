@@ -35,6 +35,7 @@ const TextInput = ({
     !!errorMessage && styles.hasError,
     inputClassName,
   );
+  const labelClassSet = cx(styles.formTextLabel, styles[theme]);
 
   return (
     <div className={classNames}>
@@ -57,7 +58,7 @@ const TextInput = ({
           type={type || 'text'}
           value={value}
         />
-        <span className={styles.formTextLabel}>{label}</span>
+        <span className={labelClassSet}>{label}</span>
         {prefixElement}
       </label>
       {errorMessage && (
