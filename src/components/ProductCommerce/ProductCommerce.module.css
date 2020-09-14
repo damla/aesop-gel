@@ -68,8 +68,14 @@
   justify-content: left;
 }
 
+@media (--viewport-md) {
+  .linkButtonGroup {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .addToCartButton,
 .cta {
-  width: min-content;
   max-width: none;
 }

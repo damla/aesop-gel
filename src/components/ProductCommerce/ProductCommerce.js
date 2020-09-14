@@ -93,6 +93,7 @@ const ProductCommerce = ({
           />
         </div>
         <LinkButtonGroup
+          className={styles.linkButtonGroup}
           hasFitContent={false}
           isFlush={false}
           textAlign="center"
