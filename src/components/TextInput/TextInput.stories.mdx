@@ -1,26 +1,20 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import * as knobs from '@storybook/addon-knobs';
 import Podium from '~/components/Podium';
-import TermsBox from './TermsBox';
-import TermsBoxFixture from './TermsBox.fixture'
+import TextInput from './TextInput';
 
-# TermsBox
+<Meta title="Components/TextInput" component={TextInput} />
 
-<Meta title="Components/TermsBox" component={TermsBox} />
+# TextInput
 
 <Preview>
   <Story name="Base component">
     <Podium horizontalPadding="small" verticalPadding="small">
-      <p>Set the background to dark</p>
-      <TermsBox
-        id='test-textarea'
-        term={TermsBoxFixture.term}
-      />
+      <TextInput id='test-input' theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')} />
     </Podium>
   </Story>
 </Preview>
 
 ## API
 
-<Props of={ContentHubArticle} />
-
+<Props of={TextInput} />

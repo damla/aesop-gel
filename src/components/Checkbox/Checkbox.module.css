@@ -10,16 +10,26 @@
   width: 13px;
   height: 13px;
   flex: 0 0 13px;
-  border: 1px solid var(--color-white);
+  border: 1px solid var(--color-dark-copy);
   margin: 8px 0 0 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   background-clip: content-box;
   background-color: transparent;
-  color: var(--color-white);
+  color: var(--color-dark-copy);
   font-size: rem(14px);
   line-height: 2.14;
+
+  &.dark {
+    border-color: var(--color-dark-copy);
+    color: var(--color-dark-copy);
+  }
+
+  &.light {
+    border-color: var(--color-light-copy);
+    color: var(--color-light-copy);
+  }
 
   &:checked::before {
     position: relative;
@@ -38,7 +48,13 @@
 
 .content {
   margin-left: 10px;
-  color: var(--color-white);
   font-size: rem(14px);
   line-height: 2.14;
+  &.dark {
+    color: var(--color-dark-copy);
+  }
+
+  &.light {
+    color: var(--color-light-copy);
+  }
 }

@@ -17,6 +17,19 @@
   font-family: var(--font-family-sans-serif-regular);
   font-size: rem(20px);
   line-height: 1.85;
+
+  &.dark {
+    border-color: var(--color-dark-copy);
+    caret-color: var(--color-dark-copy);
+    color: var(--color-dark-copy);
+  }
+
+  &.light {
+    border-color: var(--color-light-copy);
+    caret-color: var(--color-light-copy);
+    color: var(--color-light-copy);
+  }
+
   &.hasError {
     border-color: red;
   }
@@ -29,7 +42,13 @@
   &:-webkit-autofill,
   &:-webkit-autofill:hover,
   &:-webkit-autofill:focus {
-    -webkit-text-fill-color: var(--color-white);
+    &.dark {
+      -webkit-text-fill-color: var(--color-dark-copy);
+    }
+    &.light {
+      -webkit-text-fill-color: var(--color-light-copy);
+    }
+
     transition: background-color 5000s ease-in-out 0s;
   }
 }

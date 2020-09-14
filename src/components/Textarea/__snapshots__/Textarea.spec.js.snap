@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Textarea /> renders base component correctly 1`] = `
+<label
+  htmlFor="test-textarea"
+>
+  <div
+    className="base dark"
+  >
+    <textarea
+      className="term dark"
+      disabled={false}
+      id="test-textarea"
+    />
+  </div>
+</label>
+`;

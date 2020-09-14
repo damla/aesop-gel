@@ -22,6 +22,7 @@ const TextInput = ({
   onBlur,
   onChange,
   prefixElement,
+  theme,
   value,
   ...moreProps
 }) => {
@@ -29,6 +30,7 @@ const TextInput = ({
   const classNames = cx(styles.formText, className);
   const inputClassNames = cx(
     styles.formTextInput,
+    styles[theme],
     (!!defaultValue || hasContent) && styles.hasContent,
     !!errorMessage && styles.hasError,
     inputClassName,
@@ -83,6 +85,7 @@ TextInput.propTypes = {
   onChange: PropTypes.func,
   novalidate: PropTypes.bool,
   prefixElement: PropTypes.element,
+  theme: PropTypes.oneOf(['dark', 'light']),
   type: PropTypes.oneOf([
     'text',
     'password',

@@ -2,19 +2,23 @@ import React from 'react';
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import renderer from 'react-test-renderer';
-import TermsBox from './TermsBox';
-import TermsBoxFixture from './TermsBox.fixture';
+import Checkbox from './Checkbox';
 
 configure({ adapter: new Adapter() });
 
-describe('<TermsBox />', () => {
+describe('<Checkbox />', () => {
   it('should be defined', () => {
-    expect(TermsBox).toBeDefined();
+    expect(Checkbox).toBeDefined();
   });
 
   it('renders base component correctly', () => {
     const tree = renderer
-      .create(<TermsBox id="test-textarea" term={TermsBoxFixture.term} />)
+      .create(
+        <Checkbox
+          content="Subscribe to communications about Aesop products, services, stores, events and matters of cultural interest."
+          id="test-checkbox"
+        />,
+      )
       .toJSON();
 
     expect(tree).toMatchSnapshot();

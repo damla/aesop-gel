@@ -1,12 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import styles from './CheckBox.module.css';
+import styles from './Checkbox.module.css';
 
-const CheckBox = ({ className, content, disabled, id, name, onChange }) => {
+const Checkbox = ({
+  className,
+  checkboxClassName,
+  content,
+  contentClassName,
+  disabled,
+  id,
+  name,
+  onChange,
+  theme,
+}) => {
   const baseClassSet = cx(styles.base, className);
-  const checkboxClassSet = cx(styles.checkBox, className);
-  const contentClassSet = cx(styles.content, className);
+  const checkboxClassSet = cx(
+    styles.checkBox,
+    styles[theme],
+    checkboxClassName,
+  );
+  const contentClassSet = cx(styles.content, styles[theme], contentClassName);
 
   return (
     <label className={baseClassSet} htmlFor={id}>
@@ -23,22 +37,28 @@ const CheckBox = ({ className, content, disabled, id, name, onChange }) => {
   );
 };
 
-CheckBox.propTypes = {
+Checkbox.propTypes = {
   className: PropTypes.string,
+  checkboxClassName: PropTypes.string,
   content: PropTypes.string.isRequired,
+  contentClassName: PropTypes.string,
   disabled: PropTypes.bool,
   id: PropTypes.string,
   name: PropTypes.string,
   onChange: PropTypes.func,
+  theme: PropTypes.oneOf(['dark', 'light']),
 };
 
-CheckBox.defaultProps = {
+Checkbox.defaultProps = {
   className: undefined,
+  checkboxClassName: undefined,
   content: undefined,
+  contentClassName: undefined,
   disabled: false,
   id: undefined,
   name: undefined,
   onChange: undefined,
+  theme: 'dark',
 };
 
-export default CheckBox;
+export default Checkbox;
