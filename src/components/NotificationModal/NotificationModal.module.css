@@ -1,0 +1,56 @@
+@import 'styles/index';
+
+.base {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: var(--color-tan);
+  transition: all 300ms var(--easing-ease-in-out-cubic);
+
+  &.isNotVisible {
+    height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.footerEmailSuccessCloseButton {
+  padding-top: var(--site-sm-margin);
+  padding-right: var(--site-sm-margin);
+  border: none;
+  background: transparent;
+  outline: none;
+  @media (--viewport-md) {
+    padding-top: var(--site-md-margin);
+    padding-right: var(--site-md-margin);
+  }
+
+  @media (--viewport-lg) {
+    padding-top: var(--site-lg-margin);
+    padding-right: var(--site-lg-margin);
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.footerEmailSuccessMessageContent {
+  padding-top: var(--site-sm-margin);
+  padding-left: var(--site-sm-margin);
+  @media (--viewport-md) {
+    padding-top: var(--site-md-margin);
+    padding-left: var(--site-md-margin);
+  }
+
+  @media (--viewport-lg) {
+    padding-top: var(--site-lg-margin);
+    padding-left: var(--site-lg-margin);
+  }
+}
