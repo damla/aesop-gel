@@ -32,5 +32,6 @@ exports[`<AddToCartButton /> renders out of stock button correctly 1`] = `
   type="button"
 >
   Out of Stock
+   — $26.45
 </button>
 `;
