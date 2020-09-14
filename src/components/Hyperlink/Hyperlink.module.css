@@ -165,13 +165,16 @@
 }
 
 .center {
+  justify-content: center;
   text-align: center;
 }
 
 .left {
+  justify-content: left;
   text-align: left;
 }
 
 .right {
+  justify-content: right;
   text-align: right;
 }
