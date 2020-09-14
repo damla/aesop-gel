@@ -1,11 +1,15 @@
 @import 'styles/index';
 
 .base {
-  display: flex;
-  flex-wrap: wrap;
   font-family: var(--font-family-sans-serif-regular);
   font-size: rem(14px);
   font-weight: var(--font-weight-normal);
+
+  @media (--viewport-md) {
+    display: grid;
+    grid-template-columns: 40% minmax(auto, 600px);
+    grid-template-rows: repeat(8, min-content);
+  }
 
   &,
   & * {
@@ -15,11 +19,12 @@
 
 .imageWrapper {
   width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 
   @media (--viewport-md) {
-    width: 40%;
     margin-bottom: 0;
+    grid-column: 1/ 2;
+    grid-row: 1/ -1;
   }
 }
 
@@ -47,21 +52,7 @@
 }
 
 .variantsWrapper {
-  margin-top: 20px;
-  margin-bottom: 34px;
-}
-
-.contentWrapper {
-  width: 100%;
-  max-width: 600px;
-
-  @media (--viewport-md) {
-    width: 60%;
-  }
-
-  a {
-    font-size: rem(14px);
-  }
+  margin-bottom: 30px;
 }
 
 .variants {
