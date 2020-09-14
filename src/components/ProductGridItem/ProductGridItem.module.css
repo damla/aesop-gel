@@ -83,10 +83,14 @@
   color: currentColor;
 }
 
-@media (--viewport-lg) {
-  .infoVariantHolder {
+.infoVariantHolder {
+  @media (--viewport-sm-md-only) {
+    margin-bottom: 24px;
+  }
+  @media (--viewport-md) {
     min-height: 60px;
-
+  }
+  @media (--viewport-lg) {
     &:focus-within .infoHolder {
       opacity: 0;
     }
@@ -95,7 +99,6 @@
 
 .infoHolder {
   @media (--viewport-sm-md-only) {
-    margin-bottom: 24px;
     opacity: 1;
   }
   @media (--viewport-lg) {
@@ -104,16 +107,13 @@
 }
 
 .info {
-  margin-bottom: 0;
+  margin: -2px 0; /* to match radio button negative margins */
   color: var(--color-grey-30);
   font-size: rem(14px);
   text-align: center;
 }
 
 .variants {
-  @media (--viewport-sm-md-only) {
-    margin-bottom: 24px;
-  }
   @media (--viewport-lg) {
     position: relative;
     z-index: 2;
