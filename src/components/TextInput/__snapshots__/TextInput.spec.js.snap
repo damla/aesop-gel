@@ -14,7 +14,7 @@ exports[`<TextInput /> renders base component correctly 1`] = `
       type="text"
     />
     <span
-      className="formTextLabel"
+      className="formTextLabel undefined"
     />
   </label>
 </div>
