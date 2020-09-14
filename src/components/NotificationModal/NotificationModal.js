@@ -28,9 +28,7 @@ const NotificationModal = ({
 
   return (
     <div className={baseClassSet} style={style}>
-      <span className={styles.notificationMessage}>
-        {notificationMessage}
-      </span>
+      <span className={styles.notificationMessage}>{notificationMessage}</span>
       <button
         className={styles.closeButton}
         data-ref="close"
