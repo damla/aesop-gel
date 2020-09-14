@@ -1,8 +1,10 @@
 @import 'styles/index';
 
 .fullscreenSection {
+  display: flex;
   width: 48%;
   height: 100vh;
+  align-items: center;
   box-sizing: border-box;
   padding: 90px 34px;
   transform: translate3d(0, 0, 0);

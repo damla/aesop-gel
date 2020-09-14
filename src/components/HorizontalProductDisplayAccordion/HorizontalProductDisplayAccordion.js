@@ -163,7 +163,7 @@ HorizontalProductDisplayAccordion.propTypes = {
         product: PropTypes.shape({
           variants: PropTypes.arrayOf(
             PropTypes.shape({
-              isInStock: PropTypes.bool,
+              inStock: PropTypes.bool,
               price: PropTypes.string,
               size: PropTypes.string,
               sku: PropTypes.string,
@@ -220,7 +220,7 @@ HorizontalProductDisplayAccordion.defaultProps = {
       product: {
         variants: [
           {
-            isInStock: undefined,
+            inStock: undefined,
             price: undefined,
             size: undefined,
             sku: undefined,
