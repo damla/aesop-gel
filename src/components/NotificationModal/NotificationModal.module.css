@@ -21,7 +21,7 @@
   }
 }
 
-.footerEmailSuccessCloseButton {
+.closeButton {
   padding-top: var(--site-sm-margin);
   padding-right: var(--site-sm-margin);
   border: none;
@@ -41,7 +41,7 @@
   }
 }
 
-.footerEmailSuccessMessageContent {
+.notificationMessage {
   padding-top: var(--site-sm-margin);
   padding-left: var(--site-sm-margin);
   @media (--viewport-md) {

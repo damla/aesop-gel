@@ -28,11 +28,11 @@ const NotificationModal = ({
 
   return (
     <div className={baseClassSet} style={style}>
-      <span className={styles.footerEmailSuccessMessageContent}>
+      <span className={styles.notificationMessage}>
         {notificationMessage}
       </span>
       <button
-        className={styles.footerEmailSuccessCloseButton}
+        className={styles.closeButton}
         data-ref="close"
         onClick={onClick}
         tabIndex={-1}
