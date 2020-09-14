@@ -10,7 +10,7 @@ import Image from '~/components/Image';
 import styles from './AccordionProduct.module.css';
 
 const AccordionProduct = ({
-  addToCart,
+  addToCartCopy,
   closedState,
   isCompressed,
   isExpanded,
@@ -20,6 +20,7 @@ const AccordionProduct = ({
   resetAccordion,
   toggleAccordion,
 }) => {
+  console.log('AccordionProduct', addToCartCopy);
   return (
     <div
       className={cx(
@@ -131,7 +132,7 @@ const AccordionProduct = ({
               {openState?.copy}
             </div>
             <div className={cx(styles.buttonGroup)}>
-              <AddToCartButton copy={addToCart} theme={openState.theme} />
+              <AddToCartButton copy={addToCartCopy} theme={openState.theme} />
               {openState?.cta && (
                 <Hyperlink
                   className={styles.cta}
@@ -157,7 +158,7 @@ const AccordionProduct = ({
 };
 
 AccordionProduct.propTypes = {
-  addToCart: PropTypes.shape({
+  addToCartCopy: PropTypes.shape({
     cartAction: PropTypes.string,
     updateNotification: PropTypes.string,
     outOfStock: PropTypes.shape({
@@ -204,7 +205,7 @@ AccordionProduct.propTypes = {
 };
 
 AccordionProduct.defaultProps = {
-  addToCart: {
+  addToCartCopy: {
     cartAction: undefined,
     updateNotification: undefined,
     outOfStock: {
