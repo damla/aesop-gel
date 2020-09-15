@@ -21,6 +21,16 @@
   color: var(--color-dark-copy);
   font-size: rem(14px);
   line-height: 2.14;
+  
+  @media (--viewport-sm-only) {
+    font-size: rem(12px);
+    line-height: 1.33;
+    margin: 2px 0 0 0;
+  }
+  @media (--viewport-md-only) {
+    line-height: 1.79;
+    margin: 6px 0 0 0;
+  }
 
   &.dark {
     border-color: var(--color-dark-copy);
@@ -57,5 +67,13 @@
 
   &.light {
     color: var(--color-light-copy);
+  }
+
+  @media (--viewport-sm-only) {
+    font-size: rem(12px);
+    line-height: 1.33;
+  }
+  @media (--viewport-md-only) {
+    line-height: 1.79;
   }
 }

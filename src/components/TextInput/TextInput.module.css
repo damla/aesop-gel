@@ -51,6 +51,15 @@
 
     transition: background-color 5000s ease-in-out 0s;
   }
+
+  @media (--viewport-md-only) {
+    font-size: rem(17px);
+    line-height: 2.18;
+  }
+  @media (--viewport-sm-only) {
+    font-size: rem(18px);
+    line-height: 2.068;
+  }
 }
 
 .formTextLabel {
