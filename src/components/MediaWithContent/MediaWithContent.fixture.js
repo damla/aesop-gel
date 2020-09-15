@@ -129,6 +129,7 @@ export default {
   },
   linkButtonGroup: {
     textAlign: 'center',
+    hasFitContent: true,
     children: (
       <>
         <Hyperlink style="Internal No Icon Button Link" url="/">
