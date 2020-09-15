@@ -7,8 +7,12 @@
 
   @media (--viewport-md) {
     display: grid;
-    grid-template-columns: 40% minmax(auto, 600px);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-template-rows: repeat(8, min-content);
+  }
+
+  @media (--viewport-lg) {
+    grid-template-columns: 40% minmax(auto, 600px);
   }
 
   &,
@@ -64,10 +68,10 @@
   justify-content: left;
 }
 
-@media (--viewport-md) {
-  .linkButtonGroup {
+.linkButtonGroup {
+  @media (--viewport-lg) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
