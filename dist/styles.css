@@ -689,12 +689,21 @@ sans-serif;
         background-color: #fffef2;
       }
 .Hyperlink-module_center__2bv1X {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
 }
 .Hyperlink-module_left__3BZhR {
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
   text-align: left;
 }
 .Hyperlink-module_right__yaOnj {
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
   text-align: right;
 }
 
@@ -2649,6 +2658,11 @@ sans-serif;
 .Carousel-module_base__2Zak0 {
   padding: 0;
 }
+.Carousel-module_base__2Zak0,
+  .Carousel-module_base__2Zak0 * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
 .Carousel-module_slideWrapper__nqrVO {
   height: 100%;
 }
@@ -2761,9 +2775,11 @@ sans-serif;
 .Carousel-module_footer__NX8AO {
   position: relative;
   margin-top: 0;
-  margin-right: 20px;
+
+  /* margin-right: 20px; */
   margin-bottom: 0;
-  margin-left: 20px;
+
+  /* margin-left: 20px; */
   font-size: 14px;
   line-height: 1.6;
 }
@@ -2771,32 +2787,33 @@ sans-serif;
 .Carousel-module_footer__NX8AO {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
-    margin-right: 40px;
-    margin-left: 40px
+    display: flex
+
+    /* margin-right: 40px;
+    margin-left: 40px; */
 }
   }
 @media (min-width: 1025px) {
 .Carousel-module_footer__NX8AO {
-    margin-right: 80px;
-    margin-left: 80px
+    /* margin-right: 80px;
+    margin-left: 80px; */
 }
   }
-.Carousel-module_flush__qpy47.Carousel-module_flush__qpy47 {
-  margin-right: 0;
-  margin-left: 0;
-}
 .Carousel-module_slideCounter__2MHc_ {
+  padding-left: 20px;
   margin-bottom: 10px;
 }
 @media (min-width: 640px) {
 .Carousel-module_slideCounter__2MHc_ {
-    width: 20%
+    width: 20%;
+    padding-left: 40px
 }
   }
 @media (min-width: 1025px) {
 .Carousel-module_slideCounter__2MHc_ {
-    width: 40%
+    /* width: 40%; */
+    width: 33.33333%;
+    padding-left: 80px
 }
   }
 .Carousel-module_dark__eKBpb .Carousel-module_slideCounter__2MHc_ {
@@ -2805,14 +2822,23 @@ sans-serif;
 .Carousel-module_light__2WA9F .Carousel-module_slideCounter__2MHc_ {
     color: #fffef2;
   }
+.Carousel-module_flush__qpy47.Carousel-module_flush__qpy47 .Carousel-module_slideCounter__2MHc_ {
+    padding-left: 0;
+  }
+.Carousel-module_caption__2q0_n {
+  padding-right: 20px;
+  padding-left: 20px;
+}
 @media (min-width: 640px) {
 .Carousel-module_caption__2q0_n {
-    max-width: 480px
+    max-width: 480px;
+    padding-right: 0
 }
   }
 @media (min-width: 1025px) {
 .Carousel-module_caption__2q0_n {
-    max-width: 570px
+    max-width: 570px;
+    padding-left: 8.33333%
 }
   }
 .Carousel-module_dark__eKBpb .Carousel-module_caption__2q0_n {
@@ -2820,6 +2846,24 @@ sans-serif;
   }
 .Carousel-module_light__2WA9F .Carousel-module_caption__2q0_n {
     color: #fffef2;
+  }
+.Carousel-module_flush__qpy47.Carousel-module_flush__qpy47 .Carousel-module_caption__2q0_n {
+    padding-right: 0;
+    padding-left: 0;
+  }
+@media (min-width: 640px) {
+.Carousel-module_onlyChild__35v-P {
+    padding-left: 40px
+}
+  }
+@media (min-width: 1025px) {
+.Carousel-module_onlyChild__35v-P {
+    padding-left: 80px
+}
+  }
+.Carousel-module_flush__qpy47.Carousel-module_flush__qpy47 .Carousel-module_onlyChild__35v-P {
+    padding-right: 0;
+    padding-left: 0;
   }
 
 /* @import './key-frame.css'; */
@@ -3557,13 +3601,7 @@ sans-serif;
 }
 @media (min-width: 640px) {
 .Figure-module_caption__187du {
-    padding-right: 25px;
-    padding-left: 34px
-}
-  }
-@media (min-width: 1025px) {
-.Figure-module_caption__187du {
-    padding-left: 20px
+    padding-right: 25px
 }
   }
 .Figure-module_dark__1Gy-5 .Figure-module_caption__187du {
@@ -3591,7 +3629,7 @@ sans-serif;
   }
 @media (min-width: 1025px) {
 .Figure-module_captionOffset__3d-Q- {
-    margin-left: 40.39%
+    margin-left: calc(100% * 5 / 12)
 }
   }
 .Figure-module_border__5rGIx {
@@ -5547,9 +5585,6 @@ sans-serif;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
 }
 
 /* @import './key-frame.css'; */
@@ -5757,7 +5792,7 @@ sans-serif;
   }
     }
 .Media-module_figure__3qASf picture {
-    position: relative;
+    position: static;
     width: 100%;
     height: 100%;
     padding: 0;
