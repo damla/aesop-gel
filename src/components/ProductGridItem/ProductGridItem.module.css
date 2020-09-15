@@ -110,6 +110,7 @@
   margin: -2px 0; /* to match radio button negative margins */
   color: var(--color-grey-30);
   font-size: rem(14px);
+  line-height: 1.6;
   text-align: center;
 }
 
