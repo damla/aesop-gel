@@ -54,6 +54,7 @@ exports[`<ProductGridItem /> renders base component correctly 1`] = `
             className="input"
             data-test-ref="PRODUCT_GRID_ITEM_VARIANT_SELECT"
             id="option-ARD33"
+            name="ARD33"
             onChange={[Function]}
             tabIndex={0}
             type="radio"
@@ -82,6 +83,7 @@ exports[`<ProductGridItem /> renders base component correctly 1`] = `
             className="input"
             data-test-ref="PRODUCT_GRID_ITEM_VARIANT_SELECT"
             id="option-ARD32"
+            name="ARD33"
             onChange={[Function]}
             tabIndex={0}
             type="radio"
@@ -110,6 +112,7 @@ exports[`<ProductGridItem /> renders base component correctly 1`] = `
             className="input"
             data-test-ref="PRODUCT_GRID_ITEM_VARIANT_SELECT"
             id="option-ARD30"
+            name="ARD33"
             onChange={[Function]}
             tabIndex={0}
             type="radio"
@@ -172,7 +175,7 @@ exports[`<ProductGridItem /> renders base component correctly 1`] = `
     <dd
       className="description slideIn"
     >
-      Ut consectetur, vitae libero imperdiet id. 
+      Ut consectetur, vitae libero imperdiet id.
     </dd>
   </dl>
 </div>
