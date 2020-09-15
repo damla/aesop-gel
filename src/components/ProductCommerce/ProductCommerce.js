@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { HEADING, HYPERLINK_STYLE_TYPES } from '~/constants';
+import { HEADING, HYPERLINK_STYLE_TYPES, TRANSITIONS } from '~/constants';
 import { useProductDetailContext, useVariantSelectContext } from '~/contexts';
 import { useImageTransition } from '~/customHooks';
 import { getVariantRadioOptions } from '~/utils/product';
@@ -53,7 +53,7 @@ const ProductCommerce = ({
 
   return (
     <div className={classSet} id={id}>
-      <Transition isActive={isActive} type="slowFade">
+      <Transition isActive={isActive} type={TRANSITIONS.TYPE.SLOW_FADE}>
         <SectionHeading
           eyebrow={eyebrow}
           heading={heading}
@@ -61,12 +61,12 @@ const ProductCommerce = ({
           theme={theme}
         />
       </Transition>
-      <Transition isActive={isActive} type="slowFade">
+      <Transition isActive={isActive} type={TRANSITIONS.TYPE.SLOW_FADE}>
         <div className={styles.description}>{description}</div>
       </Transition>
-      <Transition isActive={isActive} type="shiftInLeft">
+      <Transition isActive={isActive} type={TRANSITIONS.TYPE.SHIFT_IN_LEFT}>
         <div className={styles.imageWrapper}>
-          <Transition isActive={isImageActive} name="fade">
+          <Transition isActive={isImageActive} type={TRANSITIONS.TYPE.FADE}>
             <Image
               altText={currentImage.altText}
               className={styles.image}
@@ -79,7 +79,7 @@ const ProductCommerce = ({
         </div>
       </Transition>
       {size && (
-        <Transition isActive={isActive} type="slowFade">
+        <Transition isActive={isActive} type={TRANSITIONS.TYPE.SLOW_FADE}>
           <div className={styles.variantsWrapper}>
             <Heading
               hasMediumWeightFont={true}
@@ -103,7 +103,7 @@ const ProductCommerce = ({
         </Transition>
       )}
 
-      <Transition isActive={isActive} type="shiftInDown">
+      <Transition isActive={isActive} type={TRANSITIONS.TYPE.SHIFT_IN_DOWN}>
         <LinkButtonGroup
           className={styles.linkButtonGroup}
           hasFitContent={false}
