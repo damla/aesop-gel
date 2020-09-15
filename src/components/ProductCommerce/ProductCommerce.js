@@ -27,6 +27,7 @@ const ProductCommerce = ({
   id,
   size,
   theme,
+  isActive,
 }) => {
   const imageRef = useRef();
   const {
@@ -51,71 +52,82 @@ const ProductCommerce = ({
 
   return (
     <div className={classSet} id={id}>
-      <SectionHeading
-        eyebrow={eyebrow}
-        heading={heading}
-        isFlush={true}
-        theme={theme}
-      />
-      <div className={styles.description}>{description}</div>
-      <div className={styles.imageWrapper}>
-        <Transition isActive={isImageActive} name="fade">
-          <Image
-            altText={currentImage.altText}
-            className={styles.image}
-            large={currentImage.sizes?.large}
-            medium={currentImage.sizes?.medium}
-            ref={imageRef}
-            small={currentImage.sizes?.small}
-          />
-        </Transition>
-      </div>
-      {size && (
-        <div className={styles.variantsWrapper}>
-          <Heading
-            hasMediumWeightFont={true}
-            isFlush={true}
-            level={HEADING.LEVEL.FOUR}
-            size={HEADING.SIZE.X_X_SMALL}
-            theme={theme}
-          >
-            {copy?.size}
-          </Heading>
-          <RadioGroup
-            className={styles.variants}
-            dataTestRef={RADIO_GROUP_DATA_TEST_REF}
-            name={RADIO_GROUP_NAME}
-            onChange={e => onVariantChange(e, variants)}
-            options={variantRadioOptions}
-            theme={theme}
-            value={selectedVariant.sku}
-          />
-        </div>
-      )}
-      <LinkButtonGroup
-        className={styles.linkButtonGroup}
-        hasFitContent={false}
-        isFlush={false}
-        textAlign="center"
-        theme={theme}
-      >
-        <AddToCartButton
-          className={styles.addToCartButton}
-          copy={copy.addToCart}
-          isFullWidth={false}
+      <Transition isActive={isActive} type="slowFade">
+        <SectionHeading
+          eyebrow={eyebrow}
+          heading={heading}
+          isFlush={true}
           theme={theme}
         />
-        {cta && (
-          <Hyperlink
-            className={styles.cta}
-            isAlternate={false}
-            style={HYPERLINK_STYLE_TYPES.INTERNAL_BUTTON_LINK}
-            url={cta.url}
-          >
-            {cta.text}
-          </Hyperlink>
-        )}
-      </LinkButtonGroup>
+      </Transition>
+      <Transition isActive={isActive} type="slowFade">
+        <div className={styles.description}>{description}</div>
+      </Transition>
+      <Transition isActive={isActive} type="shiftInLeft">
+        <div className={styles.imageWrapper}>
+          <Transition isActive={isImageActive} name="fade">
+            <Image
+              altText={currentImage.altText}
+              className={styles.image}
+              large={currentImage.sizes?.large}
+              medium={currentImage.sizes?.medium}
+              ref={imageRef}
+              small={currentImage.sizes?.small}
+            />
+          </Transition>
+        </div>
+      </Transition>
+      {size && (
+        <Transition isActive={isActive} type="slowFade">
+          <div className={styles.variantsWrapper}>
+            <Heading
+              hasMediumWeightFont={true}
+              isFlush={true}
+              level={HEADING.LEVEL.FOUR}
+              size={HEADING.SIZE.X_X_SMALL}
+              theme={theme}
+            >
+              {copy?.size}
+            </Heading>
+            <RadioGroup
+              className={styles.variants}
+              dataTestRef={RADIO_GROUP_DATA_TEST_REF}
+              name={RADIO_GROUP_NAME}
+              onChange={e => onVariantChange(e, variants)}
+              options={variantRadioOptions}
+              theme={theme}
+              value={selectedVariant.sku}
+            />
+          </div>
+        </Transition>
+      )}
+
+      <Transition isActive={isActive} type="shiftInDown">
+        <LinkButtonGroup
+          className={styles.linkButtonGroup}
+          hasFitContent={false}
+          isFlush={false}
+          textAlign="center"
+          theme={theme}
+        >
+          <AddToCartButton
+            className={styles.addToCartButton}
+            copy={copy.addToCart}
+            isFullWidth={false}
+            theme={theme}
+          />
+          {cta && (
+            <Hyperlink
+              className={styles.cta}
+              isAlternate={false}
+              style={HYPERLINK_STYLE_TYPES.INTERNAL_BUTTON_LINK}
+              url={cta.url}
+            >
+              {cta.text}
+            </Hyperlink>
+          )}
+        </LinkButtonGroup>
+      </Transition>
     </div>
   );
 };
@@ -142,6 +154,7 @@ ProductCommerce.propTypes = {
   heading: PropTypes.string,
   id: PropTypes.string,
   size: PropTypes.string,
+  isActive: PropTypes.bool,
   theme: PropTypes.oneOf(['dark', 'light']),
 };
 
@@ -164,6 +177,7 @@ ProductCommerce.defaultProps = {
   heading: undefined,
   id: undefined,
   size: undefined,
+  isActive: true,
   theme: 'dark',
 };
 
