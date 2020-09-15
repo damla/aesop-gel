@@ -89,6 +89,14 @@
   .formTextInput.hasContent + & {
     opacity: 0;
   }
+  @media (--viewport-md-only) {
+    font-size: rem(17px);
+    line-height: 2.18;
+  }
+  @media (--viewport-sm-only) {
+    font-size: rem(18px);
+    line-height: 2.068;
+  }
 }
 
 .formTextErrorMessage {
