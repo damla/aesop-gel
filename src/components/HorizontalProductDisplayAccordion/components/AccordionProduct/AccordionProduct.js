@@ -20,7 +20,6 @@ const AccordionProduct = ({
   resetAccordion,
   toggleAccordion,
 }) => {
-  console.log('AccordionProduct', addToCartCopy);
   return (
     <div
       className={cx(
