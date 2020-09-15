@@ -25,6 +25,7 @@ const ProductCommerce = ({
   eyebrow,
   heading,
   id,
+  size,
   theme,
 }) => {
   const imageRef = useRef();
@@ -69,27 +70,28 @@ const ProductCommerce = ({
           />
         </Transition>
       </div>
-      <div className={styles.variantsWrapper}>
-        <Heading
-          hasMediumWeightFont={true}
-          isFlush={true}
-          level={HEADING.LEVEL.FOUR}
-          size={HEADING.SIZE.X_X_SMALL}
-          theme={theme}
-        >
-          {copy?.size}
-        </Heading>
-
-        <RadioGroup
-          className={styles.variants}
-          dataTestRef={RADIO_GROUP_DATA_TEST_REF}
-          name={RADIO_GROUP_NAME}
-          onChange={e => onVariantChange(e, variants)}
-          options={variantRadioOptions}
-          theme={theme}
-          value={selectedVariant.sku}
-        />
-      </div>
+      {size && (
+        <div className={styles.variantsWrapper}>
+          <Heading
+            hasMediumWeightFont={true}
+            isFlush={true}
+            level={HEADING.LEVEL.FOUR}
+            size={HEADING.SIZE.X_X_SMALL}
+            theme={theme}
+          >
+            {copy?.size}
+          </Heading>
+          <RadioGroup
+            className={styles.variants}
+            dataTestRef={RADIO_GROUP_DATA_TEST_REF}
+            name={RADIO_GROUP_NAME}
+            onChange={e => onVariantChange(e, variants)}
+            options={variantRadioOptions}
+            theme={theme}
+            value={selectedVariant.sku}
+          />
+        </div>
+      )}
       <LinkButtonGroup
         className={styles.linkButtonGroup}
         hasFitContent={false}
@@ -139,6 +141,7 @@ ProductCommerce.propTypes = {
   eyebrow: PropTypes.string,
   heading: PropTypes.string,
   id: PropTypes.string,
+  size: PropTypes.string,
   theme: PropTypes.oneOf(['dark', 'light']),
 };
 
@@ -160,6 +163,7 @@ ProductCommerce.defaultProps = {
   eyebrow: undefined,
   heading: undefined,
   id: undefined,
+  size: undefined,
   theme: 'dark',
 };
 

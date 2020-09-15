@@ -12,6 +12,7 @@ export default {
   className: 'fixture-classname',
   theme: 'dark',
   product: {
+    size: '50 mL',
     description:
       'Nunc sagittis ultrices dignissim. Nullam dignissim nisi nec dolor blandit convallis. Suspendisse quis facilisis arcu, nec feugiat ligula.',
     cartDisclaimer:
