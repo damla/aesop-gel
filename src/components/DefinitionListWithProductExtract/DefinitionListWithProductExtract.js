@@ -41,7 +41,7 @@ DefinitionListWithProductExtract.propTypes = {
   dataTestRef: PropTypes.string.isRequired,
   isVisible: PropTypes.bool,
   itemBottomBorder: PropTypes.bool,
-  items: PropTypes.object,
+  items: PropTypes.array,
   productBottomBorder: PropTypes.bool,
   productItemNumber: PropTypes.number,
   product: PropTypes.shape({

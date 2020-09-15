@@ -38,7 +38,7 @@ const ProductGridItem = ({ className, copy, id, info, theme, url }) => {
 
   if (!productDetail) return null;
 
-  const { definitionList, productName } = productDetail;
+  const { definitionList, productName, sku } = productDetail;
 
   const variantRadioOptions = getVariantRadioOptions(variants);
   const classSet = cx(styles.base, styles[theme], className);
@@ -46,7 +46,7 @@ const ProductGridItem = ({ className, copy, id, info, theme, url }) => {
     [styles.hasOneVariant]: hasOneVariant,
   });
 
-  const RADIO_GROUP_NAME = 'sku';
+  const RADIO_GROUP_NAME = sku;
   const RADIO_GROUP_DATA_TEST_REF = 'PRODUCT_GRID_ITEM_VARIANT_SELECT';
 
   return (

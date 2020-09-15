@@ -128,13 +128,14 @@ export default {
     ],
   },
   linkButtonGroup: {
-    textAlign: 'left',
+    textAlign: 'center',
+    hasFitContent: true,
     children: (
       <>
-        <Hyperlink style="Internal Button Link" url="/">
+        <Hyperlink style="Internal No Icon Button Link" url="/">
           Proin vulputate
         </Hyperlink>
-        <Hyperlink style="Internal Button Link" url="Quisque lacus">
+        <Hyperlink style="Internal No Icon Button Link" url="Quisque lacus">
           Quisque lacus
         </Hyperlink>
       </>

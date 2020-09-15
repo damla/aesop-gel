@@ -2,8 +2,9 @@ name: Prepare Release
 on:
   push:
     branches:
-      - master
-      - develop
+      - '**'
+    tags-ignore:
+      - '**'
 
 jobs:
   prepare_release:
