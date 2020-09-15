@@ -34,11 +34,11 @@ const ProductGridItem = ({ className, copy, id, info, theme, url }) => {
     imageRef,
   );
 
-  const { productDetail, sku } = useProductDetailContext();
+  const { productDetail } = useProductDetailContext();
 
   if (!productDetail) return null;
 
-  const { definitionList, productName } = productDetail;
+  const { definitionList, productName, sku } = productDetail;
 
   const variantRadioOptions = getVariantRadioOptions(variants);
   const classSet = cx(styles.base, styles[theme], className);
