@@ -74,7 +74,7 @@ TextInput.propTypes = {
   disabled: PropTypes.bool,
   errorMessage: PropTypes.string,
   hasContent: PropTypes.bool,
-  id: PropTypes.string,
+  id: PropTypes.string.isRequired,
   inputClassName: PropTypes.string,
   inputRef: PropTypes.func,
   label: PropTypes.string,

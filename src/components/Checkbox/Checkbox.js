@@ -43,7 +43,7 @@ Checkbox.propTypes = {
   content: PropTypes.string.isRequired,
   contentClassName: PropTypes.string,
   disabled: PropTypes.bool,
-  id: PropTypes.string,
+  id: PropTypes.string.isRequired,
   name: PropTypes.string,
   onChange: PropTypes.func,
   theme: PropTypes.oneOf(['dark', 'light']),

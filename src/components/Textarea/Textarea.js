@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import styles from './Textarea.css';
+import styles from './Textarea.module.css';
 
 const Textarea = ({
   className,
@@ -45,7 +45,7 @@ Textarea.propTypes = {
   className: PropTypes.string,
   defaultValue: PropTypes.string,
   disabled: PropTypes.bool,
-  id: PropTypes.string,
+  id: PropTypes.string.isRequired,
   inputRef: PropTypes.func,
   maxLength: PropTypes.number,
   name: PropTypes.string,
