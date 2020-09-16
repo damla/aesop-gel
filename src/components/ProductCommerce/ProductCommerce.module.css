@@ -79,3 +79,32 @@
 .cta {
   max-width: none;
 }
+
+@media all and (-ms-high-contrast: none) {
+  .imageWrapper {
+    grid-column-end: 2;
+    grid-column-start: 1;
+    grid-row-end: 8;
+    -ms-grid-row-span: 8;
+    grid-row-start: 1;
+
+    img {
+      flex-shrink: 0;
+    }
+  }
+  .header {
+    grid-column-start: 2;
+  }
+  .description {
+    grid-column-start: 2;
+    grid-row-start: 2;
+  }
+  .variantsWrapper {
+    grid-column-start: 2;
+    grid-row-start: 3;
+  }
+  .linkButtonGroup {
+    grid-column-start: 2;
+    grid-row-start: 4;
+  }
+}

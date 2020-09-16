@@ -55,6 +55,7 @@ const ProductCommerce = ({
     <div className={classSet} id={id}>
       <Transition isActive={isActive} type={TRANSITIONS.TYPE.SLOW_FADE}>
         <SectionHeading
+          className={styles.header}
           eyebrow={eyebrow}
           heading={heading}
           isFlush={true}
