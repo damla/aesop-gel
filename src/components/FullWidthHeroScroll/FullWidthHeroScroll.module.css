@@ -43,13 +43,13 @@
   @media (--viewport-lg) {
     width: calc(100% * 5 / 12);
     max-width: 590px;
-    padding: 115px 0 0;
+    padding: 120px 0 0;
     margin-left: 15%;
   }
 
   @media (--viewport-md) {
     width: calc(100% * 7 / 12);
-    padding: 90px 0 0;
+    padding: 94px 0 0;
     margin-left: 33.33332%;
   }
 }
