@@ -6,27 +6,31 @@ import styles from './Textarea.module.css';
 const Textarea = ({
   className,
   defaultValue,
-  disabled,
   id,
+  isEnabled,
   inputRef,
   maxLength,
   name,
   onBlur,
   onChange,
   rows,
-  termBoxClassName,
+  textareaClassName,
   theme,
   value,
 }) => {
   const baseClassSet = cx(styles.base, styles[theme], className);
-  const termBoxClassSet = cx(styles.term, styles[theme], termBoxClassName);
+  const textareaClassSet = cx(
+    styles.textarea,
+    styles[theme],
+    textareaClassName,
+  );
   return (
     <label htmlFor={id}>
       <div className={baseClassSet}>
         <textarea
-          className={termBoxClassSet}
+          className={textareaClassSet}
           defaultValue={defaultValue}
-          disabled={disabled}
+          disabled={!isEnabled}
           id={id}
           maxLength={maxLength}
           name={name}
@@ -44,12 +48,12 @@ const Textarea = ({
 Textarea.propTypes = {
   className: PropTypes.string,
   defaultValue: PropTypes.string,
-  disabled: PropTypes.bool,
   id: PropTypes.string.isRequired,
+  isEnabled: PropTypes.bool,
   inputRef: PropTypes.func,
   maxLength: PropTypes.number,
   name: PropTypes.string,
-  termBoxClassName: PropTypes.string,
+  textareaClassName: PropTypes.string,
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
   rows: PropTypes.number,
@@ -60,12 +64,12 @@ Textarea.propTypes = {
 Textarea.defaultProps = {
   className: undefined,
   defaultValue: undefined,
-  disabled: false,
   id: undefined,
+  isEnabled: true,
   inputRef: undefined,
   maxLength: undefined,
   name: undefined,
-  termBoxClassName: undefined,
+  textareaClassName: undefined,
   onBlur: undefined,
   onChange: undefined,
   rows: undefined,
