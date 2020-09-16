@@ -31,9 +31,8 @@
 }
 
 .label {
-  display: inline-block;
+  display: block;
   overflow: hidden;
-  max-width: min-content;
   height: 16px;
   line-height: 1;
   opacity: 1;
@@ -41,9 +40,8 @@
   vertical-align: middle;
 
   span {
-    display: inline-block;
+    display: block;
     overflow: hidden;
-    max-width: max-content;
     height: 18px;
     line-height: 1;
     text-overflow: ellipsis;
