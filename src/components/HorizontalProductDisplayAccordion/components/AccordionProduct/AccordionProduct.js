@@ -66,7 +66,11 @@ const AccordionProduct = ({
       >
         <div>
           {closedState?.title && (
-            <Heading level="2" size="xLarge">
+            <Heading
+              hasSerifFont={closedState?.hasSerifFont}
+              level="2"
+              size="xLarge"
+            >
               {closedState?.title}
             </Heading>
           )}
@@ -84,10 +88,15 @@ const AccordionProduct = ({
           >
             {closedState?.openButtonText}
           </button>
-          <Image
-            className={cx(styles.closedForegroundImage)}
-            {...closedState.foregroundImage}
-          />
+          <button
+            className={cx(styles.closedStateForegroundImageWrap)}
+            onClick={() => toggleAccordion(index, true)}
+          >
+            <Image
+              className={cx(styles.closedForegroundImage)}
+              {...closedState.foregroundImage}
+            />
+          </button>
         </div>
       </div>
 
@@ -118,7 +127,11 @@ const AccordionProduct = ({
           </div>
           <div className={cx(styles.expandedAccordionText)}>
             {openState?.title && (
-              <Heading hasSerifFont={hasSerifFont} level="2" size="xLarge">
+              <Heading
+                hasSerifFont={openState?.hasSerifFont}
+                level="2"
+                size="xLarge"
+              >
                 {openState?.title}
               </Heading>
             )}
