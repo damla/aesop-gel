@@ -19,7 +19,11 @@ const Textarea = ({
   value,
 }) => {
   const baseClassSet = cx(styles.base, styles[theme], className);
-  const textareaClassSet = cx(styles.textarea, styles[theme], textareaClassName);
+  const textareaClassSet = cx(
+    styles.textarea,
+    styles[theme],
+    textareaClassName,
+  );
   return (
     <label htmlFor={id}>
       <div className={baseClassSet}>
