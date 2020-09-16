@@ -45,7 +45,7 @@
   &:checked::before {
     position: relative;
     top: -8px;
-    content: '\2713';
+    content: '\2713'; /* Glyph: ✓ (check mark) */
   }
 
   &:focus {

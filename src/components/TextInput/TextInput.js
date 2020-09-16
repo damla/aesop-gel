@@ -6,10 +6,10 @@ import cx from 'classnames';
 const TextInput = ({
   className,
   defaultValue,
-  disabled,
   errorMessage,
   hasContent,
   id,
+  isEnabled,
   inputClassName,
   inputRef,
   label,
@@ -18,7 +18,7 @@ const TextInput = ({
   name,
   type,
   maxLength,
-  novalidate,
+  hasValidation,
   onBlur,
   onChange,
   prefixElement,
@@ -44,13 +44,13 @@ const TextInput = ({
           className={inputClassNames}
           data-test-ref={dataTestRef}
           defaultValue={defaultValue}
-          disabled={disabled}
+          disabled={!isEnabled}
           id={id}
           max={max}
           maxLength={maxLength}
           min={min}
           name={name}
-          noValidate={novalidate}
+          noValidate={!hasValidation}
           onBlur={onBlur}
           onChange={onChange}
           placeholder=""
@@ -71,12 +71,13 @@ const TextInput = ({
 TextInput.propTypes = {
   className: PropTypes.string,
   defaultValue: PropTypes.string,
-  disabled: PropTypes.bool,
   errorMessage: PropTypes.string,
   hasContent: PropTypes.bool,
+  hasValidation: PropTypes.bool,
   id: PropTypes.string.isRequired,
   inputClassName: PropTypes.string,
   inputRef: PropTypes.func,
+  isEnabled: PropTypes.bool,
   label: PropTypes.string,
   max: PropTypes.number,
   min: PropTypes.number,
@@ -84,7 +85,6 @@ TextInput.propTypes = {
   maxLength: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
-  novalidate: PropTypes.bool,
   prefixElement: PropTypes.element,
   theme: PropTypes.oneOf(['dark', 'light']),
   type: PropTypes.oneOf([
