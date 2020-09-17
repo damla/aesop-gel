@@ -9,7 +9,7 @@ exports[`<ProductExtract /> renders base component correctly 1`] = `
     data-test-ref="test_id"
     href="/"
     target="_self"
-    title="The sea The sea The sea The sea The sea The sea The sea The sea The sea The sea The sea The sea The sea The sea The sea "
+    title="The sea"
   >
     <div
       className="test delayAnimation slideIn"
@@ -27,7 +27,7 @@ exports[`<ProductExtract /> renders base component correctly 1`] = `
         >
           <div>
             <span>
-              The sea The sea The sea The sea The sea The sea The sea The sea The sea The sea The sea The sea The sea The sea The sea 
+              The sea
             </span>
           </div>
         </div>
