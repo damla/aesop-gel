@@ -10,12 +10,12 @@ exports[`<NotificationModal /> renders base component correctly 1`] = `
   }
 >
   <span
-    className="footerEmailSuccessMessageContent"
+    className="notificationMessage"
   >
     Sincere thanks for subscribing. We are always pleased to share ourpassionate interests with like - minded individuals.
   </span>
   <button
-    className="footerEmailSuccessCloseButton"
+    className="closeButton"
     data-ref="close"
     onClick={[Function]}
     tabIndex={-1}
