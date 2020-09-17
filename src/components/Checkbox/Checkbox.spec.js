@@ -17,6 +17,8 @@ describe('<Checkbox />', () => {
         <Checkbox
           content="Subscribe to communications about Aesop products, services, stores, events and matters of cultural interest."
           id="test-checkbox"
+          isEnabled={false}
+          theme="dark"
         />,
       )
       .toJSON();

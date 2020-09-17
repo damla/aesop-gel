@@ -16,6 +16,7 @@ describe('<HorizontalProductDisplayAccordion />', () => {
     const tree = renderer
       .create(
         <HorizontalProductDisplayAccordion
+          addToCartCopy={HorizontalProductDisplayAccordionFixture.addToCartCopy}
           products={HorizontalProductDisplayAccordionFixture.products}
         />,
       )

@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { HEADING, HYPERLINK_STYLE_TYPES } from '~/constants';
-import { useVariantSelectContext } from '~/contexts';
+import { useProductDetailContext, useVariantSelectContext } from '~/contexts';
 import { useImageTransition } from '~/customHooks';
 import { getVariantRadioOptions } from '~/utils/product';
 import AddToCartButton from '~/components/AddToCartButton';
@@ -34,6 +34,7 @@ const ProductCommerce = ({
     variants,
   } = useVariantSelectContext();
 
+  const { sku } = useProductDetailContext();
   const [currentImage, isImageActive] = useImageTransition(
     selectedVariant?.image,
     imageRef,
@@ -45,7 +46,7 @@ const ProductCommerce = ({
 
   const variantRadioOptions = getVariantRadioOptions(variants);
   const classSet = cx(styles.base, className);
-  const RADIO_GROUP_NAME = 'sku';
+  const RADIO_GROUP_NAME = sku;
   const RADIO_GROUP_DATA_TEST_REF = 'PRODUCT_COMMERCE_VARIANT_SELECT';
 
   return (
@@ -81,7 +82,6 @@ const ProductCommerce = ({
           >
             {copy?.size}
           </Heading>
-
           <RadioGroup
             className={styles.variants}
             dataTestRef={RADIO_GROUP_DATA_TEST_REF}
