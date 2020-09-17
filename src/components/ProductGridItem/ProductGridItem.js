@@ -10,7 +10,6 @@ import { getVariantRadioOptions } from '~/utils/product';
 import AddToCartButton from '~/components/AddToCartButton';
 import DefinitionList from '~/components/DefinitionList';
 import Heading from '~/components/Heading';
-import Hidden from '~/components/Hidden';
 import Hyperlink from '~/components/Hyperlink';
 import Image from '~/components/Image';
 import RadioGroup from '~/components/RadioGroup';
@@ -42,8 +41,10 @@ const ProductGridItem = ({ className, copy, id, info, theme, url }) => {
 
   const variantRadioOptions = getVariantRadioOptions(variants);
   const classSet = cx(styles.base, styles[theme], className);
+
   const classInfoHolderSet = cx(styles.infoHolder, {
     [styles.hasOneVariant]: hasOneVariant,
+    [styles.hasManyVariants]: !hasOneVariant,
   });
 
   const RADIO_GROUP_NAME = sku;
@@ -77,37 +78,31 @@ const ProductGridItem = ({ className, copy, id, info, theme, url }) => {
       </Heading>
 
       <div className={styles.infoVariantHolder}>
-        <Hidden isMedium={!hasOneVariant} isSmall={!hasOneVariant}>
-          <div className={classInfoHolderSet}>
-            <P className={styles.info} theme={theme}>
-              {info}
-            </P>
-          </div>
-        </Hidden>
+        <div className={classInfoHolderSet}>
+          <P className={styles.info} theme={theme}>
+            {info}
+          </P>
+        </div>
 
         {!hasOneVariant && (
-          <Hidden isMedium={false}>
-            <RadioGroup
-              className={styles.variants}
-              dataTestRef={RADIO_GROUP_DATA_TEST_REF}
-              name={RADIO_GROUP_NAME}
-              onChange={e => onVariantChange(e, variants)}
-              options={variantRadioOptions}
-              theme={theme}
-              value={selectedVariant.sku}
-            />
-          </Hidden>
+          <RadioGroup
+            className={styles.variants}
+            dataTestRef={RADIO_GROUP_DATA_TEST_REF}
+            name={RADIO_GROUP_NAME}
+            onChange={e => onVariantChange(e, variants)}
+            options={variantRadioOptions}
+            theme={theme}
+            value={selectedVariant.sku}
+          />
         )}
       </div>
 
-      <Hidden isMedium={false}>
-        <AddToCartButton
-          className={styles.addToCartButton}
-          copy={copy.addToCart}
-          isFullWidth={true}
-          theme={theme}
-        />
-      </Hidden>
+      <AddToCartButton
+        className={styles.addToCartButton}
+        copy={copy.addToCart}
+        isFullWidth={true}
+        theme={theme}
+      />
 
       <DefinitionList
         className={styles.definitionList}
