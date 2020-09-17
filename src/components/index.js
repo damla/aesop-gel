@@ -6,6 +6,7 @@ import Breadcrumbs from './Breadcrumbs';
 import Button from './Button';
 import BynderWidget from './BynderWidget';
 import Carousel from './Carousel';
+import Checkbox from './Checkbox';
 import ConditionalWrapper from './ConditionalWrapper';
 import ContentHubArticle from './ContentHubArticle';
 import ContentHubArticleList from './ContentHubArticleList';
@@ -46,6 +47,8 @@ import Select from './Select';
 import StoreDetailHeader from './StoreDetailHeader';
 import StoreHoursList from './StoreHoursList';
 import SubNav from './SubNav';
+import Textarea from './Textarea';
+import TextInput from './TextInput';
 import Transition from './Transition';
 import TwoColumnLayout from './TwoColumnLayout';
 import TwoColumnList from './TwoColumnList';
@@ -59,6 +62,7 @@ export { Breadcrumbs };
 export { Button };
 export { BynderWidget };
 export { Carousel };
+export { Checkbox };
 export { ConditionalWrapper };
 export { ContentHubArticle };
 export { ContentHubArticleList };
@@ -101,6 +105,8 @@ export { Select };
 export { StoreDetailHeader };
 export { StoreHoursList };
 export { SubNav };
+export { Textarea };
+export { TextInput };
 export { Transition };
 export { TwoColumnLayout };
 export { TwoColumnList };
@@ -115,6 +121,7 @@ export default {
   Button,
   BynderWidget,
   Carousel,
+  Checkbox,
   ConditionalWrapper,
   ContentHubArticle,
   ContentHubArticleList,
@@ -157,6 +164,8 @@ export default {
   StoreDetailHeader,
   StoreHoursList,
   SubNav,
+  Textarea,
+  TextInput,
   Transition,
   TwoColumnLayout,
   TwoColumnList,

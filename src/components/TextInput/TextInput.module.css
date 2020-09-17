@@ -1,0 +1,104 @@
+@import 'styles/index';
+
+.formText {
+  width: 100%;
+}
+
+.formTextInput {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 10px;
+  border: 1px solid var(--color-white);
+  background-color: transparent;
+  border-radius: 3px;
+  caret-color: var(--color-white);
+  color: var(--color-white);
+  font-family: var(--font-family-sans-serif-regular);
+  font-size: rem(20px);
+  line-height: 1.85;
+
+  &.dark {
+    border-color: var(--color-dark-copy);
+    caret-color: var(--color-dark-copy);
+    color: var(--color-dark-copy);
+  }
+
+  &.light {
+    border-color: var(--color-light-copy);
+    caret-color: var(--color-light-copy);
+    color: var(--color-light-copy);
+  }
+
+  &.hasError {
+    border-color: red;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  /* Overrides for autofill coloring */
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+    &.dark {
+      -webkit-text-fill-color: var(--color-dark-copy);
+    }
+    &.light {
+      -webkit-text-fill-color: var(--color-light-copy);
+    }
+
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
+  @media (--viewport-md-only) {
+    font-size: rem(17px);
+    line-height: 2.18;
+  }
+  @media (--viewport-sm-only) {
+    font-size: rem(18px);
+    line-height: 2.068;
+  }
+}
+
+.formTextLabel {
+  position: absolute;
+  top: 2px;
+  left: 10px;
+  font-family: var(--font-family-sans-serif-regular);
+  font-size: rem(20px);
+  line-height: 1.85;
+  opacity: 1;
+  pointer-events: none;
+  transition: all 300ms var(--easing-ease-in-out-cubic);
+
+  &.dark {
+    color: var(--color-dark-copy);
+  }
+
+  &.light {
+    color: var(--color-light-copy);
+  }
+
+  &.is-hidden {
+    opacity: 0;
+  }
+
+  .formTextInput:focus + &,
+  .formTextInput.hasContent + & {
+    opacity: 0;
+  }
+  @media (--viewport-md-only) {
+    font-size: rem(17px);
+    line-height: 2.18;
+  }
+  @media (--viewport-sm-only) {
+    font-size: rem(18px);
+    line-height: 2.068;
+  }
+}
+
+.formTextErrorMessage {
+  color: red;
+}
