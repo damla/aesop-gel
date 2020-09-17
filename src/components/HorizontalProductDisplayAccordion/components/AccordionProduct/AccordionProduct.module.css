@@ -146,6 +146,7 @@
 
 .closedStateForegroundImageWrap {
   display: block;
+  cursor: pointer;
   &:focus {
     outline: 0;
   }
