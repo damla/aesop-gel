@@ -194,7 +194,13 @@ const Carousel = ({
           )}
           {hasShowCaption && (
             <Transition isActive={isCaptionActive} type="fade">
-              <div className={styles.caption}>{caption}</div>
+              <div
+                className={cx(styles.caption, {
+                  [styles.onlyChild]: !hasSlideCounter || isCompact,
+                })}
+              >
+                {caption}
+              </div>
             </Transition>
           )}
         </footer>

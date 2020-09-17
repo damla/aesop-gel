@@ -23,11 +23,6 @@
 
   @media (--viewport-md) {
     padding-right: 25px;
-    padding-left: 34px;
-  }
-
-  @media (--viewport-lg) {
-    padding-left: 20px;
   }
 
   .dark & {
@@ -61,7 +56,7 @@
   }
 
   @media (--viewport-lg) {
-    margin-left: 40.39%;
+    margin-left: calc(100% * 5 / 12);
   }
 }
 

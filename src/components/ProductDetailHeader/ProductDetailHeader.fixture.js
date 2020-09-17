@@ -12,6 +12,7 @@ export default {
   className: 'fixture-classname',
   theme: 'dark',
   product: {
+    sku: 'ARD33',
     description:
       'Nunc sagittis ultrices dignissim. Nullam dignissim nisi nec dolor blandit convallis. Suspendisse quis facilisis arcu, nec feugiat ligula.',
     cartDisclaimer:
@@ -25,7 +26,7 @@ export default {
       {
         term: 'Ut consectetur mi',
         id: 'Ut-consectetur-mi',
-        description: 'Ut consectetur, vitae libero imperdiet id. ',
+        description: 'Ut consectetur, vitae libero imperdiet id.',
       },
     ],
     id: 'Lorem-ipsum-dolor',

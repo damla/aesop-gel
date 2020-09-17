@@ -2,6 +2,11 @@
 
 .base {
   padding: 0;
+
+  &,
+  & * {
+    box-sizing: border-box;
+  }
 }
 
 .slideWrapper {
@@ -14,7 +19,7 @@
   overflow: hidden;
 
   picture {
-    display: flex;
+    display: inline-block;
     height: 380px;
     padding: 0;
 
@@ -117,38 +122,40 @@
 .footer {
   position: relative;
   margin-top: 0;
-  margin-right: 20px;
+
+  /* margin-right: 20px; */
   margin-bottom: 0;
-  margin-left: 20px;
+
+  /* margin-left: 20px; */
   font-size: rem(14px);
   line-height: 1.6;
 
   @media (--viewport-md) {
     display: flex;
-    margin-right: 40px;
-    margin-left: 40px;
+
+    /* margin-right: 40px;
+    margin-left: 40px; */
   }
 
   @media (--viewport-lg) {
-    margin-right: 80px;
-    margin-left: 80px;
+    /* margin-right: 80px;
+    margin-left: 80px; */
   }
 }
 
-.flush.flush {
-  margin-right: 0;
-  margin-left: 0;
-}
-
 .slideCounter {
+  padding-left: 20px;
   margin-bottom: 10px;
 
   @media (--viewport-md) {
     width: 20%;
+    padding-left: 40px;
   }
 
   @media (--viewport-lg) {
-    width: 40%;
+    /* width: 40%; */
+    width: 33.33333%;
+    padding-left: 80px;
   }
 
   .dark & {
@@ -157,16 +164,25 @@
 
   .light & {
     color: var(--color-white);
+  }
+
+  .flush.flush & {
+    padding-left: 0;
   }
 }
 
 .caption {
+  padding-right: 20px;
+  padding-left: 20px;
+
   @media (--viewport-md) {
     max-width: 480px;
+    padding-right: 0;
   }
 
   @media (--viewport-lg) {
     max-width: 570px;
+    padding-left: 8.33333%;
   }
 
   .dark & {
@@ -175,5 +191,25 @@
 
   .light & {
     color: var(--color-white);
+  }
+
+  .flush.flush & {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.onlyChild {
+  @media (--viewport-md) {
+    padding-left: 40px;
+  }
+
+  @media (--viewport-lg) {
+    padding-left: 80px;
+  }
+
+  .flush.flush & {
+    padding-right: 0;
+    padding-left: 0;
   }
 }

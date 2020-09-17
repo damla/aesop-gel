@@ -1,14 +1,14 @@
 export default {
+  addToCartCopy: {
+    cartAction: 'Add to your cart',
+    updateNotification: 'added to your cart',
+    outOfStock: {
+      label: 'Out of Stock',
+      title: 'Out of stock',
+    },
+  },
   products: [
     {
-      addToCart: {
-        cartAction: 'Add to your cart',
-        updateNotification: 'added to your cart',
-        outOfStock: {
-          label: 'Out of Stock',
-          title: 'Out of stock',
-        },
-      },
       closedState: {
         background: 'Image',
         backgroundColor: '#9DB5AC',
@@ -91,14 +91,6 @@ export default {
       },
     },
     {
-      addToCart: {
-        cartAction: 'Add to your cart',
-        updateNotification: 'added to your cart',
-        outOfStock: {
-          label: 'Out of Stock',
-          title: 'Out of stock',
-        },
-      },
       closedState: {
         background: 'Video',
         backgroundColor: '#9DB5AC',
@@ -204,14 +196,6 @@ export default {
       },
     },
     {
-      addToCart: {
-        cartAction: 'Add to your cart',
-        updateNotification: 'added to your cart',
-        outOfStock: {
-          label: 'Out of Stock',
-          title: 'Out of stock',
-        },
-      },
       closedState: {
         background: 'Image',
         backgroundColor: '#BAC7B2',
