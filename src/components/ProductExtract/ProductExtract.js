@@ -23,7 +23,6 @@ const ProductExtract = forwardRef(function ProductExtractRef(
     styles.base,
     styles[theme],
     {
-      [styles.hasBottomBorder]: hasBottomBorder,
       [styles.slideIn]: isVisible,
     },
     styles[`item${itemNum}`],
@@ -31,6 +30,11 @@ const ProductExtract = forwardRef(function ProductExtractRef(
   );
 
   const linkClassSet = cx(styles.link);
+
+  const flexClassSet = cx(styles.test, styles.delayAnimation, {
+    [styles.hasBottomBorder]: hasBottomBorder,
+    [styles.slideIn]: isVisible,
+  });
 
   const headingClassSet = cx(
     styles.heading,
@@ -78,20 +82,27 @@ const ProductExtract = forwardRef(function ProductExtractRef(
           </Hyperlink>
         )}
       >
-        <Heading
-          className={headingClassSet}
-          level={HEADING.LEVEL.FOUR}
-          size={HEADING.SIZE.X_X_SMALL}
-        >
-          <span>{works}</span>
-        </Heading>
-        <div className={productNameClassSet}>
+        <div className={flexClassSet}>
           <div>
-            <span>{product.name}</span>
+            <Heading
+              className={headingClassSet}
+              level={HEADING.LEVEL.FOUR}
+              size={HEADING.SIZE.X_X_SMALL}
+            >
+              <span>{works}</span>
+            </Heading>
+            <div className={productNameClassSet}>
+              <div>
+                <span>{product.name}</span>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className={productImageClassSet}>
-          <Image altText={product.image.altText} small={product.image.small} />
+          <div className={productImageClassSet}>
+            <Image
+              altText={product.image.altText}
+              small={product.image.small}
+            />
+          </div>
         </div>
       </ConditionalWrapper>
     </div>

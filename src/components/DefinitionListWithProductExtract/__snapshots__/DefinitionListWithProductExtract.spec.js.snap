@@ -4,30 +4,36 @@ exports[`<DefinitionListWithProductExtract /> renders base component correctly 1
 <div
   className="base dark slideIn item1"
 >
-  <h4
-    className="base xXSmall dark heading delayAnimation slideIn"
-  >
-    <span>
-      Works well with
-    </span>
-  </h4>
   <div
-    className="productName delayAnimation slideIn"
+    className="test delayAnimation slideIn"
   >
     <div>
-      <span />
+      <h4
+        className="base xXSmall dark heading delayAnimation slideIn"
+      >
+        <span>
+          Works well with
+        </span>
+      </h4>
+      <div
+        className="productName delayAnimation slideIn"
+      >
+        <div>
+          <span />
+        </div>
+      </div>
     </div>
-  </div>
-  <div
-    className="productImage delayAnimation slideIn"
-  >
-    <picture
-      className="base picture dark"
+    <div
+      className="productImage delayAnimation slideIn"
     >
-      <img
-        alt="Product Extract"
-      />
-    </picture>
+      <picture
+        className="base picture dark"
+      >
+        <img
+          alt="Product Extract"
+        />
+      </picture>
+    </div>
   </div>
 </div>
 `;
