@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextInput /> renders base component correctly 1`] = `
+<div
+  className="formText"
+>
+  <label
+    htmlFor="test-textinput"
+  >
+    <input
+      className="formTextInput undefined"
+      disabled={true}
+      id="test-textinput"
+      noValidate={true}
+      placeholder=""
+      type="text"
+    />
+    <span
+      className="formTextLabel undefined"
+    />
+  </label>
+</div>
+`;
