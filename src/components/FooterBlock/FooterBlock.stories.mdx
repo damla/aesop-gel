@@ -11,8 +11,8 @@ import FooterBlockFixture from './FooterBlock.fixture'
   <Story name="Base component">
     <FooterBlock
       copy={FooterBlockFixture.blockNoLink.copy}
+      heading={FooterBlockFixture.blockNoLink.heading}
       theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
-      title={FooterBlockFixture.blockNoLink.title}
     />
   </Story>
 </Preview>
@@ -26,8 +26,8 @@ import FooterBlockFixture from './FooterBlock.fixture'
     <FooterBlock
       isVisibleOnTabletAndMobile={knobs.boolean('isVisibleOnTabletAndMobile', true, 'Presentation')}
       links={FooterBlockFixture.navigation.links}
+      heading={FooterBlockFixture.navigation.heading}
       theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
-      title={FooterBlockFixture.navigation.title}
     />
   </Story>
 </Preview>
