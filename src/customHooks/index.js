@@ -5,6 +5,7 @@ import useHasMounted from './useHasMounted';
 import useImageTransition from './useImageTransition';
 import useLoadMore from './useLoadMore';
 import useNavBarTheme from './useNavBarTheme';
+import useNotification from './useNotification';
 import useOnScreen from './useOnScreen';
 import useOverflowHidden from './useOverflowHidden';
 import useProductDetail from './useProductDetail';
@@ -19,6 +20,7 @@ export { useHasMounted };
 export { useImageTransition };
 export { useLoadMore };
 export { useNavBarTheme };
+export { useNotification };
 export { useOnScreen };
 export { useOverflowHidden };
 export { useProductDetail };
@@ -36,6 +38,7 @@ export default {
   useImageTransition,
   useLoadMore,
   useNavBarTheme,
+  useNotification,
   useScript,
   useVariantSelect,
   useWindowHasResized,
