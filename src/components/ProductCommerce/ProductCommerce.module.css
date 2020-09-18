@@ -65,7 +65,7 @@
 }
 
 .variants {
-  justify-content: left;
+  justify-content: flex-start;
 }
 
 .linkButtonGroup {
