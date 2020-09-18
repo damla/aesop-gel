@@ -71,12 +71,12 @@
   height: 100%;
   align-items: center;
   justify-content: center;
-  transition: opacity 0.4s 1.4s;
+  transition: opacity 40ms 140ms;
   &.hidden {
     width: 0;
     height: 0;
     opacity: 0;
-    transition: opacity 0.4s, height 0s 1.4s, width 0s 0.4s;
+    transition: opacity 40ms, height 0ms 140ms, width 0ms 40s;
   }
   & > div {
     padding: 20px;
@@ -93,10 +93,10 @@
   height: 100%;
   justify-content: center;
   opacity: 0;
-  transition: opacity 0.8s 1.4s;
+  transition: opacity 80ms 140ms;
   &.open {
     opacity: 1;
-    transition: opacity 0.8s 0s;
+    transition: opacity 80ms 0ms;
   }
 }
 
@@ -109,7 +109,7 @@
   padding: 20px;
   opacity: 0;
   transform: translate3d(0, 25%, 0);
-  transition: transform 0s 2s, opacity 0.4s 0s;
+  transition: transform 0s 200ms, opacity 40ms 0ms;
   @media (--viewport-sm-only) {
     flex-direction: column;
   }
@@ -118,7 +118,7 @@
 .open .accordionExpandedContent {
   opacity: 1;
   transform: translate3d(0, 0, 0);
-  transition: transform 2s 0.4s ease, opacity 0.8s 1.8s;
+  transition: transform 200ms 40ms ease, opacity 80ms 180ms;
 }
 
 .expandedAccordionImage {
@@ -204,12 +204,6 @@
 
 .accordionDefaultBackground {
   height: 100%;
-
-  /* transition: opacity 0.4s 1.4s;
-  &.hidden {
-    opacity: 0;
-    transition: opacity 0.4s 0s;
-  } */
 }
 
 .accordionOpenCopy,
