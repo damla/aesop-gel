@@ -58,6 +58,7 @@
 }
 
 .fullWidthSlide.fullWidthSlide {
+  display: inline-block;
   height: auto;
 }
 
