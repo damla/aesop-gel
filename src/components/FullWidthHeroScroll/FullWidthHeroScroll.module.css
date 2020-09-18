@@ -43,19 +43,20 @@
   @media (--viewport-lg) {
     width: calc(100% * 5 / 12);
     max-width: 590px;
-    padding: 115px 0 0;
+    padding: 120px 0 0;
     margin-left: 15%;
   }
 
   @media (--viewport-md) {
     width: calc(100% * 7 / 12);
-    padding: 90px 0 0;
+    padding: 94px 0 0;
     margin-left: 33.33332%;
   }
 }
 
 .scrollLockWrap {
   position: relative;
+  margin-top: -75px;
 }
 
 .scrollLockMedia {
@@ -69,6 +70,7 @@
 .scrollingContent {
   position: relative;
   top: -100vh;
+  padding-top: 75px;
 }
 
 .fullscreenHero {
@@ -88,12 +90,6 @@
   }
 }
 
-.fullscreenSection {
-  width: 48%;
-  height: 100vh;
-  padding: 90px 34px;
-}
-
 .textBlock {
   transform: translate3d(0, 0, 0);
 }
@@ -107,7 +103,7 @@
   justify-content: center;
   padding: 0;
   border: 1px solid var(--color-grey-10);
-  margin: auto auto 6rem;
+  margin: auto auto 60px;
   -webkit-appearance: none;
   background: none;
   border-radius: 0;
