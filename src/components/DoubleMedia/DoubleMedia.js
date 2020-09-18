@@ -15,8 +15,6 @@ const DoubleMedia = ({ mediaOne, mediaTwo, className, theme }) => {
   );
 };
 
-const mediaType = PropTypes.oneOf(['video', 'image', 'scrollbasedvideo']);
-
 DoubleMedia.propTypes = {
   className: PropTypes.string,
   mediaOne: PropTypes.shape({
@@ -34,7 +32,7 @@ DoubleMedia.propTypes = {
     medium: PropTypes.string,
     poster: PropTypes.object,
     small: PropTypes.string,
-    type: mediaType,
+    type: PropTypes.oneOf(['video', 'image', 'scrollbasedvideo']),
   }),
   mediaTwo: PropTypes.shape({
     altText: PropTypes.string,
@@ -51,7 +49,7 @@ DoubleMedia.propTypes = {
     medium: PropTypes.string,
     poster: PropTypes.object,
     small: PropTypes.string,
-    type: mediaType,
+    type: PropTypes.oneOf(['video', 'image', 'scrollbasedvideo']),
   }),
   theme: PropTypes.oneOf(['dark', 'light']),
 };

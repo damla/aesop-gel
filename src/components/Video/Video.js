@@ -61,7 +61,7 @@ export const Video = forwardRef(function VideoRef(
       videoRefCurrent.addEventListener('timeupdate', handleProgress);
     }
 
-    return function cleanUp() {
+    return function cleanup() {
       if (videoRefCurrent) {
         videoRefCurrent.removeEventListener('timeupdate', handleProgress);
       }
