@@ -4686,6 +4686,7 @@ sans-serif;
   }
 .FullWidthHeroScroll-module_scrollLockWrap__1Ujw- {
   position: relative;
+  margin-top: -75px;
 }
 .FullWidthHeroScroll-module_scrollLockMedia__39CtU {
   position: sticky;
@@ -4697,6 +4698,7 @@ sans-serif;
 .FullWidthHeroScroll-module_scrollingContent__1l98_ {
   position: relative;
   top: -100vh;
+  padding-top: 75px;
 }
 .FullWidthHeroScroll-module_fullscreenHero__1H7Xf {
   display: -webkit-box;
@@ -5337,6 +5339,7 @@ sans-serif;
 }
 .AccordionProduct-module_closedStateForegroundImageWrap__1_k-K {
   display: block;
+  cursor: pointer;
 }
 .AccordionProduct-module_closedStateForegroundImageWrap__1_k-K:focus {
     outline: 0;

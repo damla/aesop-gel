@@ -21,7 +21,6 @@ const FullWidthHeroScroll = ({
   title,
 }) => {
   const scrollBtn = useRef();
-
   useEffect(() => {
     const scrollBtnEl = scrollBtn.current;
 

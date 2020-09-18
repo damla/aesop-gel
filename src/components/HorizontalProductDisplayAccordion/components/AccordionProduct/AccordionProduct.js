@@ -27,6 +27,7 @@ const AccordionProduct = ({
         isExpanded && styles.isExpanded,
         isCompressed && styles.isCompressed,
       )}
+      id={id}
       onClick={isCompressed ? () => resetAccordion() : undefined}
       onKeyDown={isCompressed ? () => resetAccordion() : undefined}
       role="button"
