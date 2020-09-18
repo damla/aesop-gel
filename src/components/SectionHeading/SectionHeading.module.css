@@ -25,5 +25,5 @@
 }
 
 .ZapfTitleFont {
-  font-family: var(--font-family-zapf-serif);
+  @extend %zaph-serif-typography;
 }
