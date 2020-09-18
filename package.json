@@ -66,6 +66,7 @@
     "react-slick": "0.25.2",
     "react-transition-group-npm": "npm:react-transition-group@^4.4.1",
     "uuid": "3.4.0",
+    "video-scroller": "^1.1.1",
     "wavesurfer.js": "3.3.3"
   },
   "devDependencies": {
