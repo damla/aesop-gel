@@ -4555,8 +4555,14 @@ sans-serif;
 --color-dark-disabled: var(--color-grey-60);
 */
 .FullscreenSection-module_fullscreenSection__2GkTp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 48%;
   height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 90px 34px;
@@ -4703,11 +4709,6 @@ sans-serif;
 .FullWidthHeroScroll-module_fullscreenHeroText__nCB9v > div {
     margin: 0;
   }
-.FullWidthHeroScroll-module_fullscreenSection__31Fd_ {
-  width: 48%;
-  height: 100vh;
-  padding: 90px 34px;
-}
 .FullWidthHeroScroll-module_textBlock__E_NqN {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
@@ -4728,7 +4729,7 @@ sans-serif;
           justify-content: center;
   padding: 0;
   border: 1px solid #252525;
-  margin: auto auto 6rem;
+  margin: auto auto 60px;
   -webkit-appearance: none;
   background: none;
   border-radius: 0;
@@ -5220,14 +5221,15 @@ sans-serif;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transition: opacity 0.4s 1.4s, height 0s;
-  transition: opacity 0.4s 1.4s, height 0s;
+  -webkit-transition: opacity 0.4s 1.4s;
+  transition: opacity 0.4s 1.4s;
 }
 .AccordionProduct-module_accordionDefaultContent__1FbLP.AccordionProduct-module_hidden__32W8W {
+    width: 0;
     height: 0;
     opacity: 0;
-    -webkit-transition: opacity 0.4s, height 0s 1.4s;
-    transition: opacity 0.4s, height 0s 1.4s;
+    -webkit-transition: opacity 0.4s, height 0s 1.4s, width 0s 0.4s;
+    transition: opacity 0.4s, height 0s 1.4s, width 0s 0.4s;
   }
 .AccordionProduct-module_accordionDefaultContent__1FbLP > div {
     padding: 20px;
@@ -5246,13 +5248,13 @@ sans-serif;
       -ms-flex-pack: center;
           justify-content: center;
   opacity: 0;
-  -webkit-transition: opacity 0.4s 0s;
-  transition: opacity 0.4s 0s;
+  -webkit-transition: opacity 0.8s 1.4s;
+  transition: opacity 0.8s 1.4s;
 }
 .AccordionProduct-module_accordionExpanded__1WO9Y.AccordionProduct-module_open__2VFan {
     opacity: 1;
-    -webkit-transition: opacity 0.4s 1.4s;
-    transition: opacity 0.4s 1.4s;
+    -webkit-transition: opacity 0.8s 0s;
+    transition: opacity 0.8s 0s;
   }
 .AccordionProduct-module_accordionExpandedContent__3ZYPa {
   display: -webkit-box;
@@ -5266,12 +5268,13 @@ sans-serif;
       -ms-flex-align: center;
           align-items: center;
   padding: 20px;
+  opacity: 0;
   -webkit-transform: translate3d(0, 25%, 0);
           transform: translate3d(0, 25%, 0);
-  -webkit-transition: -webkit-transform 0s 1.4s;
-  transition: -webkit-transform 0s 1.4s;
-  transition: transform 0s 1.4s;
-  transition: transform 0s 1.4s, -webkit-transform 0s 1.4s;
+  -webkit-transition: opacity 0.4s 0s, -webkit-transform 0s 2s;
+  transition: opacity 0.4s 0s, -webkit-transform 0s 2s;
+  transition: transform 0s 2s, opacity 0.4s 0s;
+  transition: transform 0s 2s, opacity 0.4s 0s, -webkit-transform 0s 2s;
 }
 @media (max-width: 639px) {
 .AccordionProduct-module_accordionExpandedContent__3ZYPa {
@@ -5282,12 +5285,13 @@ sans-serif;
 }
   }
 .AccordionProduct-module_open__2VFan .AccordionProduct-module_accordionExpandedContent__3ZYPa {
+  opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
-  -webkit-transition: -webkit-transform 2s 0.4s ease;
-  transition: -webkit-transform 2s 0.4s ease;
-  transition: transform 2s 0.4s ease;
-  transition: transform 2s 0.4s ease, -webkit-transform 2s 0.4s ease;
+  -webkit-transition: opacity 0.8s 1.8s, -webkit-transform 2s 0.4s ease;
+  transition: opacity 0.8s 1.8s, -webkit-transform 2s 0.4s ease;
+  transition: transform 2s 0.4s ease, opacity 0.8s 1.8s;
+  transition: transform 2s 0.4s ease, opacity 0.8s 1.8s, -webkit-transform 2s 0.4s ease;
 }
 .AccordionProduct-module_expandedAccordionImage__ULov6 {
   position: relative;
@@ -5344,14 +5348,13 @@ sans-serif;
   }
 .AccordionProduct-module_accordionDefaultBackground__3ATA8 {
   height: 100%;
-  -webkit-transition: opacity 0.4s 1.4s;
-  transition: opacity 0.4s 1.4s;
-}
-.AccordionProduct-module_accordionDefaultBackground__3ATA8.AccordionProduct-module_hidden__32W8W {
+
+  /* transition: opacity 0.4s 1.4s;
+  &.hidden {
     opacity: 0;
-    -webkit-transition: opacity 0.4s 0s;
     transition: opacity 0.4s 0s;
-  }
+  } */
+}
 .AccordionProduct-module_accordionOpenCopy__a-AcA,
 .AccordionProduct-module_accordionClosedCopy__2Z1Hp {
   padding: 0;
@@ -5431,7 +5434,7 @@ sans-serif
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100vh;
+  height: 90vh;
 }
 @media (max-width: 639px) {
   .HorizontalProductDisplayAccordion-module_accordionProductWrap__3RU7F {
