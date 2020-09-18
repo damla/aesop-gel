@@ -8,6 +8,8 @@
     "dist"
   ],
   "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
     "build-storybook": "build-storybook -s ./public",
     "build:dev": "NODE_ENV=development rollup -c",
     "build:prod": "NODE_ENV=production rollup -c",
