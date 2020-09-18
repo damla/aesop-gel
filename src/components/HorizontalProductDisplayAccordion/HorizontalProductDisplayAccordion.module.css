@@ -8,5 +8,6 @@
 @media (--viewport-sm-only) {
   .accordionProductWrap {
     display: block;
+    height: auto;
   }
 }

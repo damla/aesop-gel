@@ -3,7 +3,7 @@
 .accordionProduct {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 90vh;
   box-sizing: border-box;
   transition: width 1s 0.4s;
   &.isCompressed {

@@ -5164,7 +5164,7 @@ sans-serif;
 .AccordionProduct-module_accordionProduct__1y3uS {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 90vh;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   -webkit-transition: width 1s 0.4s;
@@ -5468,6 +5468,7 @@ sans-serif
 @media (max-width: 639px) {
   .HorizontalProductDisplayAccordion-module_accordionProductWrap__3RU7F {
     display: block;
+    height:auto;
   }
 }
 
