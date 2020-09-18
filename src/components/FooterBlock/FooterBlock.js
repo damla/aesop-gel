@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Hidden from '~/components/Hidden';
 import Hyperlink from '~/components/Hyperlink';
 import { HYPERLINK_STYLE_TYPES } from '~/constants';
 import cx from 'classnames';
@@ -13,64 +14,78 @@ const {
 const FooterBlock = ({
   className,
   copy,
+  heading,
+  headingClassName,
   isVisibleOnTabletAndMobile,
   links,
+  listClassName,
+  listItemClassName,
   theme,
-  title,
 }) => {
-  const baseClassSet = cx(
-    styles.base,
-    styles[theme],
-    links && !isVisibleOnTabletAndMobile && styles.invisible,
-    className,
-  );
-  const titleClassSet = cx(styles.title);
+  const baseClassSet = cx(styles.base, styles[theme], className);
   const dividerClassSet = cx(styles.divider, styles[theme]);
+  const headingClassSet = cx(styles.heading, headingClassName);
+  const listClassSet = cx(styles.list, listClassName);
+  const listItemClassSet = cx(styles.listItem, listItemClassName);
+
   return (
-    <section className={baseClassSet}>
-      <div className={titleClassSet}>{title}</div>
-      <div className={dividerClassSet} />
-      {links &&
-        links.map(link => (
-          <div key={link.id}>
-            <Hyperlink
-              className={styles.item}
-              dataTestRef={`DATA_TEST_REF_FOOTER_BLOCK_${link.id}`}
-              hasTargetInNewWindow={false}
-              style={
-                link.openInANewWindow
-                  ? EXTERNAL_TEXT_LINK
-                  : INTERNAL_NO_ICON_TEXT_LINK
-              }
-              theme={theme}
-              title={link.text}
-              url={link.url}
-            >
-              {link.text}
-            </Hyperlink>
-          </div>
-        ))}
-      {copy && <div className={styles.item}>{copy}</div>}
-    </section>
+    <Hidden
+      isMedium={!isVisibleOnTabletAndMobile}
+      isSmall={!isVisibleOnTabletAndMobile}
+    >
+      <section className={baseClassSet}>
+        <h5 className={headingClassSet}>{heading}</h5>
+        <div className={dividerClassSet} />
+        <ul className={listClassSet}>
+          {links &&
+            links.map(link => (
+              <li key={link.id}>
+                <Hyperlink
+                  className={listItemClassSet}
+                  dataTestRef={`DATA_TEST_REF_FOOTER_BLOCK_${link.id}`}
+                  hasTargetInNewWindow={false}
+                  style={
+                    link.openInANewWindow
+                      ? EXTERNAL_TEXT_LINK
+                      : INTERNAL_NO_ICON_TEXT_LINK
+                  }
+                  theme={theme}
+                  title={link.text}
+                  url={link.url}
+                >
+                  {link.text}
+                </Hyperlink>
+              </li>
+            ))}
+        </ul>
+        {copy && <div className={listItemClassSet}>{copy}</div>}
+      </section>
+    </Hidden>
   );
 };
 
 FooterBlock.propTypes = {
   className: PropTypes.string,
   copy: PropTypes.string,
+  heading: PropTypes.string,
+  headingClassName: PropTypes.string,
   isVisibleOnTabletAndMobile: PropTypes.bool,
   links: PropTypes.array,
+  listClassName: PropTypes.string,
+  listItemClassName: PropTypes.string,
   theme: PropTypes.oneOf(['dark', 'light']),
-  title: PropTypes.string,
 };
 
 FooterBlock.defaultProps = {
   className: undefined,
   copy: undefined,
-  isVisibleOnTabletAndMobile: false,
+  heading: undefined,
+  headingClassName: undefined,
+  isVisibleOnTabletAndMobile: true,
   links: undefined,
+  listClassName: undefined,
+  listItemClassName: undefined,
   theme: 'dark',
-  title: undefined,
 };
 
 export default FooterBlock;
