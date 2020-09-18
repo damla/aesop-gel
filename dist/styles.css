@@ -4554,6 +4554,104 @@ sans-serif;
 --color-dark-decoration: var(--color-grey-30);
 --color-dark-disabled: var(--color-grey-60);
 */
+.FooterBlock_base__30nq0 {
+  font-family: 'Suisse Regular'
+,
+sans-serif;
+}
+.FooterBlock_base__30nq0.FooterBlock_dark__145OS {
+    color: #333;
+  }
+.FooterBlock_base__30nq0.FooterBlock_light__3rLDm {
+    color: #fffef2;
+  }
+.FooterBlock_heading__2kMY- {
+  margin-top: 0;
+  margin-bottom: 23px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 2.5;
+}
+@media (max-width: 639px) {
+.FooterBlock_heading__2kMY- {
+    margin-bottom: 13px;
+    font-size: 13px;
+    line-height: 2.85
+}
+  }
+.FooterBlock_divider__23KaL {
+  border-bottom: 1px solid #fffef2;
+  margin-bottom: 16px;
+}
+.FooterBlock_divider__23KaL.FooterBlock_dark__145OS {
+    border-color: #333;
+  }
+.FooterBlock_divider__23KaL.FooterBlock_light__3rLDm {
+    border-color: #fffef2;
+  }
+@media (max-width: 639px) {
+.FooterBlock_divider__23KaL {
+    margin-bottom: 6px
+}
+  }
+.FooterBlock_list__2H6IJ {
+  padding-left: 0;
+  list-style: none;
+}
+.FooterBlock_listItem__2cWAS {
+  font-size: 14px;
+  line-height: 2.15;
+}
+@media (max-width: 639px) {
+.FooterBlock_listItem__2cWAS {
+    font-size: 12px;
+    line-height: 2.5
+}
+  }
+.FooterBlock_listItem__2cWAS svg {
+    vertical-align: middle;
+  }
+.FooterBlock_learnMore__19DGW {
+  text-decoration: underline;
+}
+
+/* @import './key-frame.css'; */
+/* @import './font-face.css'; */
+:root {
+  /* Base colours */
+
+  /* UI colours light theme */
+
+  /* UI colours dark theme */
+
+  /* Background colours */
+
+  /* System colours */
+
+  /* Secondary Message background colour */
+}
+/* Dark theme UI elements */
+/* Light theme UI elements */
+/* UI colours light theme */
+/*
+--color-light-copy: var(--color-primary);
+--color-light-copy-alternate: var(--color-white-darker);
+--color-light-label: var(--color-white-darker);
+--color-light-link: var(--color-primary);
+--color-light-link-hover: var(--color-white-darker);
+--color-light-decoration: var(--color-white-darker);
+--color-light-disabled: var(--color-grey-60);
+*/
+/* UI colours dark theme */
+/*
+--color-dark-copy: var(--color-secondary);
+--color-dark-copy-alternate: var(--color-grey-63);
+--color-dark-label: var(--color-grey-30);
+--color-dark-link: var(--color-grey-20);
+--color-dark-link-hover: var(--color-grey-10);
+--color-dark-decoration: var(--color-grey-30);
+--color-dark-disabled: var(--color-grey-60);
+*/
 .FullscreenSection-module_fullscreenSection__2GkTp {
   width: 48%;
   height: 100vh;
