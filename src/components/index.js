@@ -15,6 +15,7 @@ import DialogBanner from './DialogBanner';
 import DoubleMedia from './DoubleMedia';
 import Figure from './Figure';
 import FlyinPanel from './FlyinPanel';
+import FooterBlock from './FooterBlock';
 import FullWidthHeroScroll from './FullWidthHeroScroll';
 import GoogleMap from './GoogleMap';
 import Heading from './Heading';
@@ -71,6 +72,7 @@ export { DialogBanner };
 export { DoubleMedia };
 export { Figure };
 export { FlyinPanel };
+export { FooterBlock };
 export { FullWidthHeroScroll };
 export { GoogleMap };
 export { Heading };
@@ -130,6 +132,7 @@ export default {
   DoubleMedia,
   Figure,
   FlyinPanel,
+  FooterBlock,
   FullWidthHeroScroll,
   GoogleMap,
   Heading,
