@@ -22,19 +22,19 @@
 }
 
 .closeButton {
-  padding-top: var(--site-sm-margin);
-  padding-right: var(--site-sm-margin);
+  padding-top: var(--layout-sm-margin);
+  padding-right: var(--layout-sm-margin);
   border: none;
   background: transparent;
   outline: none;
   @media (--viewport-md) {
-    padding-top: var(--site-md-margin);
-    padding-right: var(--site-md-margin);
+    padding-top: var(--layout-md-margin);
+    padding-right: var(--layout-md-margin);
   }
 
   @media (--viewport-lg) {
-    padding-top: var(--site-lg-margin);
-    padding-right: var(--site-lg-margin);
+    padding-top: var(--layout-lg-margin);
+    padding-right: var(--layout-lg-margin);
   }
   &:hover {
     cursor: pointer;
@@ -42,15 +42,15 @@
 }
 
 .notificationMessage {
-  padding-top: var(--site-sm-margin);
-  padding-left: var(--site-sm-margin);
+  padding-top: var(--layout-sm-margin);
+  padding-left: var(--layout-sm-margin);
   @media (--viewport-md) {
-    padding-top: var(--site-md-margin);
-    padding-left: var(--site-md-margin);
+    padding-top: var(--layout-md-margin);
+    padding-left: var(--layout-md-margin);
   }
 
   @media (--viewport-lg) {
-    padding-top: var(--site-lg-margin);
-    padding-left: var(--site-lg-margin);
+    padding-top: var(--layout-lg-margin);
+    padding-left: var(--layout-lg-margin);
   }
 }

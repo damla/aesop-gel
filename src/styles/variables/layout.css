@@ -8,9 +8,9 @@
   --layout-logo-vertical-offset-md: 175px;
   --layout-logo-vertical-offset-lg: 200px;
   --layout-menu-height: 80px;
-  --site-lg-margin: 40px;
-  --site-md-margin: 34px;
-  --site-sm-margin: 20px;
+  --layout-lg-margin: 40px;
+  --layout-md-margin: 34px;
+  --layout-sm-margin: 20px;
 }
 
 %layout-full-bleed-negative-margin {

@@ -1,19 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import { useNotificationContext } from 'contexts';
 import Icon from '~/components/Icon';
 import styles from './NotificationModal.module.css';
-import { useNotificationContext } from 'contexts';
 
 const NotificationModal = ({
-  className,
   backgroundColor,
+  className,
   notificationMessage,
 }) => {
   const footerSuccessModal = useNotificationContext();
   const { actionType, dispatch, showModal } = footerSuccessModal;
 
-  const onClick = e => {
+  const handleOnClick = e => {
     e.preventDefault();
     dispatch({ type: actionType });
   };
@@ -32,7 +32,7 @@ const NotificationModal = ({
       <button
         className={styles.closeButton}
         data-ref="close"
-        onClick={onClick}
+        onClick={handleOnClick}
         tabIndex={-1}
       >
         <Icon height={15} name="close" theme="dark" width={15} />
@@ -42,14 +42,14 @@ const NotificationModal = ({
 };
 
 NotificationModal.propTypes = {
-  className: PropTypes.string,
   backgroundColor: PropTypes.string,
+  className: PropTypes.string,
   notificationMessage: PropTypes.string,
 };
 
 NotificationModal.defaultProps = {
-  className: undefined,
   backgroundColor: undefined,
+  className: undefined,
   notificationMessage: undefined,
 };
 
