@@ -118,7 +118,7 @@ const AccordionProduct = ({
           </div>
           <div className={cx(styles.expandedAccordionText)}>
             {openState?.title && (
-              <Heading level="2" size="xLarge">
+              <Heading hasSerifFont={hasSerifFont} level="2" size="xLarge">
                 {openState?.title}
               </Heading>
             )}
@@ -173,6 +173,7 @@ AccordionProduct.propTypes = {
     copy: PropTypes.node,
     eyebrow: PropTypes.string,
     foregroundImage: PropTypes.object,
+    hasSerifFont: PropTypes.bool,
     id: PropTypes.string,
     openButtonText: PropTypes.string,
     theme: PropTypes.string,
@@ -195,6 +196,7 @@ AccordionProduct.propTypes = {
     }),
     eyebrow: PropTypes.string,
     foregroundImage: PropTypes.object,
+    hasSerifFont: PropTypes.bool,
     theme: PropTypes.string,
     title: PropTypes.string,
     product: PropTypes.object,
@@ -220,6 +222,7 @@ AccordionProduct.defaultProps = {
     copy: undefined,
     eyebrow: undefined,
     foregroundImage: undefined,
+    hasSerifFont: false,
     theme: 'dark',
     title: undefined,
   },
@@ -235,6 +238,7 @@ AccordionProduct.defaultProps = {
     copy: undefined,
     eyebrow: undefined,
     foregroundImage: undefined,
+    hasSerifFont: false,
     theme: 'dark',
     title: undefined,
   },
