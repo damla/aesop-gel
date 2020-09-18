@@ -1,6 +1,7 @@
 import React, { forwardRef, useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import VideoScroller from 'video-scroller';
 import { useEscapeKeyListener } from '~/customHooks/useEscapeKeyListener';
 import { useOverflowHidden } from '~/customHooks/useOverflowHidden';
 import useWindowHasResized from '~/customHooks/useWindowHasResized';
@@ -25,6 +26,7 @@ export const Video = forwardRef(function VideoRef(
     id,
     isFullWidth,
     isHeroFullWidth,
+    isScrollBasedVideo,
     large,
     medium,
     poster,
@@ -66,6 +68,15 @@ export const Video = forwardRef(function VideoRef(
     };
   });
 
+  useEffect(() => {
+    const videoRefCurrent = videoRef.current;
+
+    if (isScrollBasedVideo && videoRefCurrent) {
+      // eslint-disable-next-line no-new
+      new VideoScroller({ el: videoRefCurrent });
+    }
+  }, [isScrollBasedVideo]);
+
   const pauseVideo = () => {
     videoRef.current.pause();
     setIsPlaying(false);
@@ -92,7 +103,7 @@ export const Video = forwardRef(function VideoRef(
   useEscapeKeyListener(stopVideo);
 
   const hasVideo = large || medium || small;
-  const hanldeOnPosterClick = () => playVideo();
+  const handleOnPosterClick = () => playVideo();
   const handlePlayPauseButtonOnClick = isPlaying ? pauseVideo : playVideo;
   const handleAudioButtonClick = () => setIsMuted(!isMuted);
 
@@ -122,7 +133,7 @@ export const Video = forwardRef(function VideoRef(
         hasAutoplay={hasAutoplay}
         hasLoop={hasLoop}
         hasPlayInFullScreen={hasPlayInFullScreen}
-        isActive={!poster || hasActiveVideo}
+        isActive={!poster || hasActiveVideo || isScrollBasedVideo}
         isMuted={isMuted}
         large={large}
         medium={medium}
@@ -130,17 +141,19 @@ export const Video = forwardRef(function VideoRef(
         small={small}
       />
 
-      <Poster
-        copy={{
-          playButtonTitle: copy.playButtonTitle,
-          altText: poster.copy?.altText,
-        }}
-        isActive={!hasActiveVideo}
-        large={poster.large}
-        medium={poster.medium}
-        onClick={hanldeOnPosterClick}
-        small={poster.small}
-      />
+      {!isScrollBasedVideo && (
+        <Poster
+          copy={{
+            playButtonTitle: copy.playButtonTitle,
+            altText: poster.copy?.altText,
+          }}
+          isActive={!hasActiveVideo}
+          large={poster.large}
+          medium={poster.medium}
+          onClick={handleOnPosterClick}
+          small={poster.small}
+        />
+      )}
 
       {hasControls && (
         <Controls
@@ -202,6 +215,7 @@ Video.propTypes = {
     This prop negates the 16:9 aspect ratio on tablet so Full Width Hero Videos fill any avaliable space.
    */
   isHeroFullWidth: PropTypes.bool,
+  isScrollBasedVideo: PropTypes.bool,
   large: PropTypes.string,
   medium: PropTypes.string,
   poster: PropTypes.shape({
@@ -238,6 +252,7 @@ Video.defaultProps = {
   id: undefined,
   isHeroFullWidth: false,
   isFullWidth: true,
+  isScrollBasedVideo: false,
   large: undefined,
   medium: undefined,
   poster: {
