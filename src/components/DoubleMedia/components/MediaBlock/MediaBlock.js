@@ -21,15 +21,18 @@ const MediaBlock = ({
   type,
 }) => {
   const Media = () => {
-    return type === 'video' ? (
+    const isScrollBasedVideo = type === 'scrollbasedvideo' ? true : false;
+
+    return type.includes('video') ? (
       <Video
         fallbackImage={fallbackImage}
         hasAllowAudio={false}
-        hasAutoplay={true}
+        hasAutoplay={isScrollBasedVideo ? false : true}
         hasControls={false}
         hasLoop={true}
         hasPlayInFullScreen={false}
         isFullWidth={true}
+        isScrollBasedVideo={isScrollBasedVideo}
         large={large}
         medium={medium}
         poster={poster}
@@ -93,7 +96,7 @@ MediaBlock.propTypes = {
   medium: PropTypes.string,
   poster: PropTypes.object,
   small: PropTypes.string,
-  type: PropTypes.oneOf(['video', 'image']),
+  type: PropTypes.oneOf(['video', 'image', 'scrollbasedvideo']),
   theme: PropTypes.oneOf(['dark', 'light']),
 };
 
