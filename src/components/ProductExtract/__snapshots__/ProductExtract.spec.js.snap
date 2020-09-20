@@ -12,7 +12,7 @@ exports[`<ProductExtract /> renders base component correctly 1`] = `
     title="The sea"
   >
     <div
-      className="test delayAnimation slideIn"
+      className="flexContainer delayAnimation slideIn"
     >
       <div>
         <h4

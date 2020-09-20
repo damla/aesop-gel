@@ -31,7 +31,7 @@ const ProductExtract = forwardRef(function ProductExtractRef(
 
   const linkClassSet = cx(styles.link);
 
-  const flexClassSet = cx(styles.test, styles.delayAnimation, {
+  const flexClassSet = cx(styles.flexContainer, styles.delayAnimation, {
     [styles.hasBottomBorder]: hasBottomBorder,
     [styles.slideIn]: isVisible,
   });

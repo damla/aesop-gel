@@ -113,7 +113,7 @@
   width: 100%;
 }
 
-.test {
+.flexContainer {
   display: flex;
   justify-content: space-between;
 }

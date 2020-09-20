@@ -5,7 +5,7 @@ exports[`<DefinitionListWithProductExtract /> renders base component correctly 1
   className="base dark slideIn item1"
 >
   <div
-    className="test delayAnimation slideIn"
+    className="flexContainer delayAnimation slideIn"
   >
     <div>
       <h4
