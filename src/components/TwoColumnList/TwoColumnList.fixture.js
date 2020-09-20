@@ -19,12 +19,22 @@ export default {
     },
     {
       id: '2',
-      heading: 'Vestibulum ante ipsum',
+      heading: 'Vestibulum ipsum',
       subHeading: 'Nullam sed libero',
       items: [
         {
           id: '1',
           text: 'Donec non venenatis massa',
+          url: '/',
+        },
+        {
+          id: '1',
+          text: 'Donec non venenatis',
+          url: '/',
+        },
+        {
+          id: '1',
+          text: 'Venenatis donec non massa',
           url: '/',
         },
       ],

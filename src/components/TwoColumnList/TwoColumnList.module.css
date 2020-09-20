@@ -1,14 +1,9 @@
 @import 'styles/index';
 
 .base {
-  box-sizing: border-box;
-
-  * {
-    &,
-    &::before,
-    &::after {
-      box-sizing: inherit;
-    }
+  &,
+  & * {
+    box-sizing: border-box;
   }
 
   @media (--viewport-md) {
@@ -17,87 +12,67 @@
   }
 }
 
-.subHeading {
-  font-family: var(--font-family-sans-serif-medium);
-}
-
 .column {
-  padding-right: var(--layout-sm-spacing);
-
   @media (--viewport-md) {
+    max-width: 217.3px;
+
     &:not(:last-child) {
-      padding-right: var(--layout-sm-spacing);
+      margin-right: 32px;
     }
   }
 
   @media (--viewport-lg) {
-    &:not(:last-child) {
-      padding-right: var(--layout-sm-spacing);
-    }
-  }
+    max-width: 233.6px;
 
-  @media (--viewport-md) {
-    max-width: 50%;
-    flex: 0 0 50%;
+    &:not(:last-child) {
+      margin-right: 115px;
+    }
   }
 }
 
 .wrapper {
-  margin-bottom: var(--layout-md-spacing);
+  margin-bottom: 60px;
+}
 
-  @media (--viewport-lg) {
-    margin-bottom: var(--layout-lg-spacing);
+.heading {
+  font-size: 24px;
+}
+
+.item {
+  margin-bottom: 8px;
+  font-size: 16px;
+  line-height: 1.4;
+
+  .dark & {
+    color: var(--color-dark-label);
+  }
+
+  .light & {
+    color: var(--color-light-label);
   }
 }
 
-.dark {
-  @extend %font-theme-dark-alternate;
+.link {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: transparent;
+  color: inherit;
+  font-size: inherit;
+  text-decoration: none;
+  transition: all 300ms var(--easing-ease-in-sine);
 
-  a {
-    /* @extend %font-theme-dark-link; */
-    color: var(--color-dark-link);
+  &:hover,
+  &:focus {
+    text-decoration: none;
 
-    &:hover,
-    &:focus {
+    .dark & {
+      border-bottom-color: var(--color-dark-link-hover);
       color: var(--color-dark-link-hover);
     }
-  }
-}
 
-.light.light {
-  @extend %font-theme-light-alternate;
-
-  a {
-    /* @extend %font-theme-light-link; */
-    color: var(--color-light-link);
-
-    &:hover,
-    &:focus {
+    .light & {
+      border-bottom-color: var(--color-light-link-hover);
       color: var(--color-light-link-hover);
     }
   }
-}
-
-.list {
-  font-size: 15px;
-
-  /* stylelint-disable */
-  li {
-    a {
-      font-size: 15px;
-      text-decoration: none;
-
-      &:hover,
-      &:focus {
-        text-decoration: underline;
-      }
-    }
-
-    li {
-      &:not(:last-child) {
-        margin-bottom: 10px;
-      }
-    }
-  }
-  /* stylelint-enable */
 }
