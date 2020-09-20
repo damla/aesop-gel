@@ -15,6 +15,7 @@ import DialogBanner from './DialogBanner';
 import DoubleMedia from './DoubleMedia';
 import Figure from './Figure';
 import FlyinPanel from './FlyinPanel';
+import FooterBlock from './FooterBlock';
 import FullWidthHeroScroll from './FullWidthHeroScroll';
 import GoogleMap from './GoogleMap';
 import Heading from './Heading';
@@ -31,6 +32,7 @@ import LoadMoreButton from './LoadMoreButton';
 import Loading from './Loading';
 import MediaWithContent from './MediaWithContent';
 import Modal from './Modal';
+import NotificationModal from './NotificationModal';
 import Overlay from './Overlay';
 import Paragraph, { P, ParagraphSet } from './Paragraph';
 import Podium from './Podium';
@@ -71,6 +73,7 @@ export { DialogBanner };
 export { DoubleMedia };
 export { Figure };
 export { FlyinPanel };
+export { FooterBlock };
 export { FullWidthHeroScroll };
 export { GoogleMap };
 export { Heading };
@@ -87,6 +90,7 @@ export { LoadMoreButton };
 export { Loading };
 export { MediaWithContent };
 export { Modal };
+export { NotificationModal };
 export { Overlay };
 export { P };
 export { Paragraph };
@@ -130,6 +134,7 @@ export default {
   DoubleMedia,
   Figure,
   FlyinPanel,
+  FooterBlock,
   FullWidthHeroScroll,
   GoogleMap,
   Heading,
@@ -146,6 +151,7 @@ export default {
   Loading,
   MediaWithContent,
   Modal,
+  NotificationModal,
   Overlay,
   P,
   Paragraph,

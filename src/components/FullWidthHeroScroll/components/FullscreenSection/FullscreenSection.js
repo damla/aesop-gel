@@ -17,7 +17,7 @@ const FullscreenSection = ({ hasSerifFont, text, theme }) => {
           <Heading
             hasSerifFont={hasSerifFont}
             level="4"
-            size="medium"
+            size="xLarge"
             theme={theme}
           >
             {text}
