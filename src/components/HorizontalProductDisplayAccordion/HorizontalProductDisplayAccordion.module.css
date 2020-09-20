@@ -2,11 +2,12 @@
 
 .accordionProductWrap {
   display: flex;
-  height: 100vh;
+  height: 90vh;
 }
 
 @media (--viewport-sm-only) {
   .accordionProductWrap {
     display: block;
+    height: auto;
   }
 }

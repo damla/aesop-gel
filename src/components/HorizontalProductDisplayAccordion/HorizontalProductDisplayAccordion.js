@@ -14,7 +14,7 @@ import debounce from 'lodash/debounce';
 const HorizontalProductDisplayAccordion = ({ id, products, addToCartCopy }) => {
   const [accordionProducts, toggleAccordionProducts] = useState(products);
   const [accordionActive, toggleAccordionActiveState] = useState(false);
-  let isMobile = ascertainIsSmallOnlyViewport();
+  const isMobile = ascertainIsSmallOnlyViewport();
 
   const toggleAccordion = (index, opening) => {
     toggleAccordionProducts(
@@ -66,13 +66,14 @@ const HorizontalProductDisplayAccordion = ({ id, products, addToCartCopy }) => {
   };
 
   useEffect(() => {
+    let currentSize = ascertainIsSmallOnlyViewport();
     const resetAccordionOnResize = debounce(() => {
-      if (ascertainIsSmallOnlyViewport() !== isMobile) {
+      if (ascertainIsSmallOnlyViewport() !== currentSize) {
         accordionProducts.map(product => {
           product.isExpanded = false;
           product.isCompressed = false;
         });
-        isMobile = ascertainIsSmallOnlyViewport();
+        currentSize = ascertainIsSmallOnlyViewport();
       }
     }, 200);
 
@@ -81,7 +82,7 @@ const HorizontalProductDisplayAccordion = ({ id, products, addToCartCopy }) => {
     return function callback() {
       window.removeEventListener('resize', resetAccordionOnResize);
     };
-  }, []);
+  }, [accordionProducts]);
 
   useWindowHasResized();
 
@@ -163,7 +164,7 @@ HorizontalProductDisplayAccordion.propTypes = {
         product: PropTypes.shape({
           variants: PropTypes.arrayOf(
             PropTypes.shape({
-              isInStock: PropTypes.bool,
+              inStock: PropTypes.bool,
               price: PropTypes.string,
               size: PropTypes.string,
               sku: PropTypes.string,
@@ -220,7 +221,7 @@ HorizontalProductDisplayAccordion.defaultProps = {
       product: {
         variants: [
           {
-            isInStock: undefined,
+            inStock: undefined,
             price: undefined,
             size: undefined,
             sku: undefined,

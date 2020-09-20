@@ -6,6 +6,7 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
 >
   <div
     className="accordionProduct"
+    id="Aganice"
     role="button"
     tabIndex={-1}
   >
@@ -60,25 +61,30 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
         >
           Learn more
         </button>
-        <picture
-          className="base picture dark closedForegroundImage"
+        <button
+          className="closedStateForegroundImageWrap"
+          onClick={[Function]}
         >
-          <source
-            media="(min-width: 1025px)"
-            srcSet="./assets/images/HorizontalProductDisplayAccordion/candles-product.png"
-          />
-          <source
-            media="(min-width: 640px)"
-            srcSet="./assets/images/HorizontalProductDisplayAccordion/candles-product.png"
-          />
-          <source
-            media="(min-width: 0px)"
-            srcSet="./assets/images/HorizontalProductDisplayAccordion/candles-product.png"
-          />
-          <img
-            alt="Lorem ipsum dolor sit"
-          />
-        </picture>
+          <picture
+            className="base picture dark closedForegroundImage"
+          >
+            <source
+              media="(min-width: 1025px)"
+              srcSet="./assets/images/HorizontalProductDisplayAccordion/candles-product.png"
+            />
+            <source
+              media="(min-width: 640px)"
+              srcSet="./assets/images/HorizontalProductDisplayAccordion/candles-product.png"
+            />
+            <source
+              media="(min-width: 0px)"
+              srcSet="./assets/images/HorizontalProductDisplayAccordion/candles-product.png"
+            />
+            <img
+              alt="Lorem ipsum dolor sit"
+            />
+          </picture>
+        </button>
       </div>
     </div>
     <div
@@ -220,6 +226,7 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
   </div>
   <div
     className="accordionProduct"
+    id="ptolomey"
     role="button"
     tabIndex={-1}
   >
@@ -325,25 +332,30 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
         >
           Learn more
         </button>
-        <picture
-          className="base picture dark closedForegroundImage"
+        <button
+          className="closedStateForegroundImageWrap"
+          onClick={[Function]}
         >
-          <source
-            media="(min-width: 1025px)"
-            srcSet="./as sets/images/HorizontalProductDisplayAccordion/candles-product.png"
-          />
-          <source
-            media="(min-width: 640px)"
-            srcSet="./assets/images/HorizontalProductDisplayAccordion/candles-product.png"
-          />
-          <source
-            media="(min-width: 0px)"
-            srcSet="./assets/images/HorizontalProductDisplayAccordion/candles-product.png"
-          />
-          <img
-            alt="Lorem ipsum dolor sit"
-          />
-        </picture>
+          <picture
+            className="base picture dark closedForegroundImage"
+          >
+            <source
+              media="(min-width: 1025px)"
+              srcSet="./as sets/images/HorizontalProductDisplayAccordion/candles-product.png"
+            />
+            <source
+              media="(min-width: 640px)"
+              srcSet="./assets/images/HorizontalProductDisplayAccordion/candles-product.png"
+            />
+            <source
+              media="(min-width: 0px)"
+              srcSet="./assets/images/HorizontalProductDisplayAccordion/candles-product.png"
+            />
+            <img
+              alt="Lorem ipsum dolor sit"
+            />
+          </picture>
+        </button>
       </div>
     </div>
     <div
@@ -485,6 +497,7 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
   </div>
   <div
     className="accordionProduct"
+    id="ptolomey"
     role="button"
     tabIndex={-1}
   >
@@ -539,25 +552,30 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
         >
           Learn more
         </button>
-        <picture
-          className="base picture dark closedForegroundImage"
+        <button
+          className="closedStateForegroundImageWrap"
+          onClick={[Function]}
         >
-          <source
-            media="(min-width: 1025px)"
-            srcSet="./as sets/images/HorizontalProductDisplayAccordion/candles-product.png"
-          />
-          <source
-            media="(min-width: 640px)"
-            srcSet="./assets/images/HorizontalProductDisplayAccordion/candles-product.png"
-          />
-          <source
-            media="(min-width: 0px)"
-            srcSet="./assets/images/HorizontalProductDisplayAccordion/candles-product.png"
-          />
-          <img
-            alt="Lorem ipsum dolor sit"
-          />
-        </picture>
+          <picture
+            className="base picture dark closedForegroundImage"
+          >
+            <source
+              media="(min-width: 1025px)"
+              srcSet="./as sets/images/HorizontalProductDisplayAccordion/candles-product.png"
+            />
+            <source
+              media="(min-width: 640px)"
+              srcSet="./assets/images/HorizontalProductDisplayAccordion/candles-product.png"
+            />
+            <source
+              media="(min-width: 0px)"
+              srcSet="./assets/images/HorizontalProductDisplayAccordion/candles-product.png"
+            />
+            <img
+              alt="Lorem ipsum dolor sit"
+            />
+          </picture>
+        </button>
       </div>
     </div>
     <div

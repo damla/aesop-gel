@@ -21,7 +21,6 @@ const FullWidthHeroScroll = ({
   title,
 }) => {
   const scrollBtn = useRef();
-
   useEffect(() => {
     const scrollBtnEl = scrollBtn.current;
 
@@ -41,7 +40,7 @@ const FullWidthHeroScroll = ({
 
   const handleScrollDown = () => {
     window.scroll({
-      top: window.innerHeight,
+      top: window.innerHeight - 120,
       left: 0,
       behavior: 'smooth',
     });
