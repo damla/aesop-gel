@@ -8,7 +8,7 @@ const Figure = ({
   children,
   className,
   hasCaptionBorder,
-  hasCaptionOffest,
+  hasCaptionOffset,
   id,
   theme,
 }) => {
@@ -16,7 +16,7 @@ const Figure = ({
 
   const captionWrapperClassSet = cx(styles.captionWrapper, {
     [styles.border]: hasCaptionBorder && caption,
-    [styles.captionOffset]: hasCaptionOffest && caption,
+    [styles.captionOffset]: hasCaptionOffset && caption,
   });
 
   return (
@@ -36,7 +36,7 @@ Figure.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   hasCaptionBorder: PropTypes.bool,
-  hasCaptionOffest: PropTypes.bool,
+  hasCaptionOffset: PropTypes.bool,
   id: PropTypes.string,
   theme: PropTypes.oneOf(['dark', 'light']),
 };
@@ -46,7 +46,7 @@ Figure.defaultProps = {
   children: undefined,
   className: undefined,
   hasCaptionBorder: true,
-  hasCaptionOffest: true,
+  hasCaptionOffset: true,
   id: undefined,
   theme: 'dark',
 };
