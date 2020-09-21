@@ -227,7 +227,7 @@
 .accordionOpenCopy,
 .accordionClosedCopy {
   padding: 0;
-  margin: 20px 0 10px;
+  margin-bottom: 10px;
   color: var(--color-dark-copy);
   font-family: var(--font-family-sans-serif-regular);
   font-size: rem(16px);

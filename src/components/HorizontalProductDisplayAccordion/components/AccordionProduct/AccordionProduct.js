@@ -78,7 +78,7 @@ const AccordionProduct = ({
           )}
           {closedState?.eyebrow && (
             <Heading
-              isFlush={true}
+              hasMediumWeightFont={true}
               level="4"
               size="xSmall"
               theme={closedState.theme}
