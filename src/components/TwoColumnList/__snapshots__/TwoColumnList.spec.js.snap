@@ -11,12 +11,12 @@ exports[`<TwoColumnList /> renders base component correctly 1`] = `
       className="wrapper"
     >
       <h2
-        className="base medium dark"
+        className="base large dark heading"
       >
         Suspendisse rhoncus
       </h2>
       <h3
-        className="base small dark subHeading"
+        className="base mediumWeightFont xSmall dark"
       >
         Sagittis diam
       </h3>
@@ -24,10 +24,10 @@ exports[`<TwoColumnList /> renders base component correctly 1`] = `
         className="base dark list"
       >
         <li
-          className="item"
+          className="item item"
         >
           <a
-            className="base left dark"
+            className="base left dark link"
             href="/"
             target="_self"
           >
@@ -35,10 +35,10 @@ exports[`<TwoColumnList /> renders base component correctly 1`] = `
           </a>
         </li>
         <li
-          className="item"
+          className="item item"
         >
           <a
-            className="base left dark"
+            className="base left dark link"
             href="/"
             target="_self"
           >
@@ -51,12 +51,12 @@ exports[`<TwoColumnList /> renders base component correctly 1`] = `
       className="wrapper"
     >
       <h2
-        className="base medium dark"
+        className="base large dark heading"
       >
-        Vestibulum ante ipsum
+        Vestibulum ipsum
       </h2>
       <h3
-        className="base small dark subHeading"
+        className="base mediumWeightFont xSmall dark"
       >
         Nullam sed libero
       </h3>
@@ -64,14 +64,36 @@ exports[`<TwoColumnList /> renders base component correctly 1`] = `
         className="base dark list"
       >
         <li
-          className="item"
+          className="item item"
         >
           <a
-            className="base left dark"
+            className="base left dark link"
             href="/"
             target="_self"
           >
             Donec non venenatis massa
+          </a>
+        </li>
+        <li
+          className="item item"
+        >
+          <a
+            className="base left dark link"
+            href="/"
+            target="_self"
+          >
+            Donec non venenatis
+          </a>
+        </li>
+        <li
+          className="item item"
+        >
+          <a
+            className="base left dark link"
+            href="/"
+            target="_self"
+          >
+            Venenatis donec non massa
           </a>
         </li>
       </ul>
@@ -84,12 +106,12 @@ exports[`<TwoColumnList /> renders base component correctly 1`] = `
       className="wrapper"
     >
       <h2
-        className="base medium dark"
+        className="base large dark heading"
       >
         Interdum et malesuada fames
       </h2>
       <h3
-        className="base small dark subHeading"
+        className="base mediumWeightFont xSmall dark"
       >
         Fusce venenatis
       </h3>
@@ -97,15 +119,15 @@ exports[`<TwoColumnList /> renders base component correctly 1`] = `
         className="base dark list"
       >
         <li
-          className="item"
+          className="item item"
         >
           Pellentesque luctus
         </li>
         <li
-          className="item"
+          className="item item"
         >
           <a
-            className="base left dark"
+            className="base left dark link"
             href="/"
             target="_self"
           >

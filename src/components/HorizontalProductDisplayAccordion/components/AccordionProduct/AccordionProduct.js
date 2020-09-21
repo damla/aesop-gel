@@ -27,6 +27,7 @@ const AccordionProduct = ({
         isExpanded && styles.isExpanded,
         isCompressed && styles.isCompressed,
       )}
+      id={id}
       onClick={isCompressed ? () => resetAccordion() : undefined}
       onKeyDown={isCompressed ? () => resetAccordion() : undefined}
       role="button"
@@ -66,7 +67,11 @@ const AccordionProduct = ({
       >
         <div>
           {closedState?.title && (
-            <Heading level="2" size="xLarge">
+            <Heading
+              hasSerifFont={closedState?.hasSerifFont}
+              level="2"
+              size="xLarge"
+            >
               {closedState?.title}
             </Heading>
           )}
@@ -84,10 +89,15 @@ const AccordionProduct = ({
           >
             {closedState?.openButtonText}
           </button>
-          <Image
-            className={cx(styles.closedForegroundImage)}
-            {...closedState.foregroundImage}
-          />
+          <button
+            className={cx(styles.closedStateForegroundImageWrap)}
+            onClick={() => toggleAccordion(index, true)}
+          >
+            <Image
+              className={cx(styles.closedForegroundImage)}
+              {...closedState.foregroundImage}
+            />
+          </button>
         </div>
       </div>
 
@@ -118,7 +128,11 @@ const AccordionProduct = ({
           </div>
           <div className={cx(styles.expandedAccordionText)}>
             {openState?.title && (
-              <Heading level="2" size="xLarge">
+              <Heading
+                hasSerifFont={openState?.hasSerifFont}
+                level="2"
+                size="xLarge"
+              >
                 {openState?.title}
               </Heading>
             )}
@@ -173,6 +187,7 @@ AccordionProduct.propTypes = {
     copy: PropTypes.node,
     eyebrow: PropTypes.string,
     foregroundImage: PropTypes.object,
+    hasSerifFont: PropTypes.bool,
     id: PropTypes.string,
     openButtonText: PropTypes.string,
     theme: PropTypes.string,
@@ -195,6 +210,7 @@ AccordionProduct.propTypes = {
     }),
     eyebrow: PropTypes.string,
     foregroundImage: PropTypes.object,
+    hasSerifFont: PropTypes.bool,
     theme: PropTypes.string,
     title: PropTypes.string,
     product: PropTypes.object,
@@ -220,6 +236,7 @@ AccordionProduct.defaultProps = {
     copy: undefined,
     eyebrow: undefined,
     foregroundImage: undefined,
+    hasSerifFont: false,
     theme: 'dark',
     title: undefined,
   },
@@ -235,6 +252,7 @@ AccordionProduct.defaultProps = {
     copy: undefined,
     eyebrow: undefined,
     foregroundImage: undefined,
+    hasSerifFont: false,
     theme: 'dark',
     title: undefined,
   },
