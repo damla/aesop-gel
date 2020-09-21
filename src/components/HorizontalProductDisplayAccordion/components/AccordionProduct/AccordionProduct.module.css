@@ -210,9 +210,10 @@
 .accordionClosedCopy {
   padding: 0;
   margin: 0 0 1em;
+  color: var(--color-dark-copy);
   font-family: var(--font-family-sans-serif-regular);
-  @extend %font-theme-dark-copy;
+
   &.light {
-    @extend %font-theme-light-copy;
+    color: var(--color-light-copy);
   }
 }

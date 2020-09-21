@@ -71,20 +71,26 @@ const AccordionProduct = ({
               hasSerifFont={closedState?.hasSerifFont}
               level="2"
               size="xLarge"
+              theme={closedState.theme}
             >
               {closedState?.title}
             </Heading>
           )}
           {closedState?.eyebrow && (
-            <Heading level="4" size="xXSmall">
+            <Heading level="4" size="xXSmall" theme={closedState.theme}>
               {closedState?.eyebrow}
             </Heading>
           )}
-          <div className={cx(styles.accordionClosedCopy, styles.theme)}>
+          <div
+            className={cx(
+              styles.accordionClosedCopy,
+              styles[closedState.theme],
+            )}
+          >
             {closedState?.copy}
           </div>
           <button
-            className={cx(styles.openBtn)}
+            className={cx(styles.openBtn, styles[closedState.theme])}
             onClick={() => toggleAccordion(index, true)}
           >
             {closedState?.openButtonText}
