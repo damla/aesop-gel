@@ -19,7 +19,8 @@
 }
 
 .serifFont {
-  font-family: var(--font-family-zapf-serif);
+  @extend %zaph-serif-typography;
+
   font-weight: var(--font-weight-light);
 }
 
