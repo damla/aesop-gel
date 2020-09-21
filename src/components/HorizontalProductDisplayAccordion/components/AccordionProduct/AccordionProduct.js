@@ -68,7 +68,7 @@ const AccordionProduct = ({
         <div>
           {closedState?.title && (
             <Heading
-              hasSerifFont={closedState?.hasSerifFont}
+              hasSerifFont={true}
               level="2"
               size="xLarge"
               theme={closedState.theme}
@@ -77,7 +77,12 @@ const AccordionProduct = ({
             </Heading>
           )}
           {closedState?.eyebrow && (
-            <Heading level="4" size="xXSmall" theme={closedState.theme}>
+            <Heading
+              isFlush={true}
+              level="4"
+              size="xSmall"
+              theme={closedState.theme}
+            >
               {closedState?.eyebrow}
             </Heading>
           )}
