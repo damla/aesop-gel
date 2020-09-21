@@ -17,10 +17,10 @@ describe('<IconLink />', () => {
       .create(
         <IconLink
           altText={IconLinkFixture[0].altText}
+          hasTargetInNewWindow={true}
           height={25}
           icon={IconLinkFixture[0].icon}
           id={IconLinkFixture[0].altText}
-          openInANewWindow={true}
           target={IconLinkFixture[0].target}
           width={25}
         />,

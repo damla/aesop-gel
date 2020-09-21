@@ -15,10 +15,10 @@ import IconLinkFixture from './IconLink.fixture';
         <div style={{ padding: '20px 40px' }} key={key}>
           <IconLink 
             altText={icon.altText}
+            hasTargetInNewWindow={knobs.boolean('hasTargetInNewWindow', false, 'Presentation')}
             height={knobs.number('height', 25, 'Presentation')}
             icon={icon.icon}
             id={icon.altText}
-            openInANewWindow={knobs.boolean('openInANewWindow', false, 'Presentation')}
             target={icon.target}
             width={knobs.number('width', 25, 'Presentation')}
           />
