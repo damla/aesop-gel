@@ -27,7 +27,7 @@ const MediaBlock = ({
       <Video
         fallbackImage={fallbackImage}
         hasAllowAudio={false}
-        hasAutoplay={isScrollBasedVideo ? false : true}
+        hasAutoplay={true}
         hasControls={false}
         hasLoop={true}
         hasPlayInFullScreen={false}
