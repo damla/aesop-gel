@@ -20,6 +20,7 @@ export const Column = ({ lists, theme }) =>
         return {
           content: (
             <Hyperlink
+              className={styles.link}
               openInANewWindow={openInANewWindow}
               style={style}
               theme={theme}
@@ -37,22 +38,32 @@ export const Column = ({ lists, theme }) =>
     return (
       <div className={styles.wrapper} key={id}>
         {heading && (
-          <Heading level="2" size="medium" theme={theme}>
+          <Heading
+            className={styles.heading}
+            level="2"
+            size="large"
+            theme={theme}
+          >
             {heading}
           </Heading>
         )}
         {subHeading && (
           <Heading
-            className={styles.subHeading}
+            hasMediumWeightFont={true}
             level="3"
-            size="small"
+            size="xSmall"
             theme={theme}
           >
             {subHeading}
           </Heading>
         )}
         {linkItems && (
-          <List className={styles.list} items={linkItems} theme={theme} />
+          <List
+            className={styles.list}
+            items={linkItems}
+            listItemClassName={styles.item}
+            theme={theme}
+          />
         )}
       </div>
     );
