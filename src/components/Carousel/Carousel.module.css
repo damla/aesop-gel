@@ -19,7 +19,7 @@
   overflow: hidden;
 
   picture {
-    display: inline-block;
+    display: flex;
     height: 380px;
     padding: 0;
 
