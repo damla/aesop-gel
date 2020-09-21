@@ -2,6 +2,7 @@ import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import * as knobs from '@storybook/addon-knobs';
 import { AddToCartContextProvider } from '~/contexts';
 import mockAddToCartButtonOnClick from '~/components/AddToCartButton/__mocks__/AddToCartButton.onClick';
+import AddToCartButtonFixture from '~/components/AddToCartButton/AddToCartButton.fixture';
 import HorizontalProductDisplayAccordion from './HorizontalProductDisplayAccordion';
 import HorizontalProductDisplayAccordionFixture from './HorizontalProductDisplayAccordion.fixture';
 
@@ -16,8 +17,9 @@ import HorizontalProductDisplayAccordionFixture from './HorizontalProductDisplay
   <Story name="Base component">
     <AddToCartContextProvider onClick={mockAddToCartButtonOnClick}>
       <HorizontalProductDisplayAccordion
-        theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
+        addToCartCopy={AddToCartButtonFixture.copy}
         products={[...HorizontalProductDisplayAccordionFixture.products]}
+        theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
       />
     </AddToCartContextProvider>
   </Story>

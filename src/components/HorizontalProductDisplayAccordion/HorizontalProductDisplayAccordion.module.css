@@ -1,12 +1,10 @@
 @import 'styles/index';
 
-.accordionProductWrap {
+.base {
   display: flex;
   height: 90vh;
-}
 
-@media (--viewport-sm-only) {
-  .accordionProductWrap {
+  @media (--viewport-sm-only) {
     display: block;
     height: auto;
   }

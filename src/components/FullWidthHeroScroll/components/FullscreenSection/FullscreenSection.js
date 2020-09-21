@@ -3,15 +3,15 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { useOnScreen } from '~/customHooks/useOnScreen';
 import Heading from '~/components/Heading';
-import styles from './FullscreenSection.module.css';
 import Transition from '~/components/Transition';
+import styles from './FullscreenSection.module.css';
 
 const FullscreenSection = ({ hasSerifFont, text, theme }) => {
   const ref = useRef(null);
-  const isOnScreen = useOnScreen(ref, 1, '0% 0% -25% 0%');
+  const isOnScreen = useOnScreen(ref, 1, '0% 0% -20% 0%');
 
   return (
-    <div className={cx(styles.fullscreenSection)}>
+    <div className={cx(styles.base)}>
       <Transition isActive={isOnScreen} type="slowFade">
         <div ref={ref}>
           <Heading

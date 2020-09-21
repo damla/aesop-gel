@@ -1,21 +1,21 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { HYPERLINK_STYLE_TYPES } from '~/constants';
-import PropTypes from 'prop-types';
 import AddToCartButton from '~/components/AddToCartButton';
-import Video from '~/components/Video';
 import Heading from '~/components/Heading';
 import Hyperlink from '~/components/Hyperlink';
 import Image from '~/components/Image';
+import Video from '~/components/Video';
 import styles from './AccordionProduct.module.css';
 
 const AccordionProduct = ({
   addToCartCopy,
   closedState,
-  isCompressed,
-  isExpanded,
   id,
   index,
+  isCompressed,
+  isExpanded,
   openState,
   resetAccordion,
   toggleAccordion,
@@ -23,7 +23,7 @@ const AccordionProduct = ({
   return (
     <div
       className={cx(
-        styles.accordionProduct,
+        styles.base,
         isExpanded && styles.isExpanded,
         isCompressed && styles.isCompressed,
       )}
@@ -68,7 +68,7 @@ const AccordionProduct = ({
         <div>
           {closedState?.title && (
             <Heading
-              hasSerifFont={true}
+              hasSerifFont={closedState.hasSerifFont}
               level="2"
               size="xLarge"
               theme={closedState.theme}
@@ -143,16 +143,19 @@ const AccordionProduct = ({
                 hasSerifFont={openState?.hasSerifFont}
                 level="2"
                 size="xLarge"
+                theme={openState.theme}
               >
                 {openState?.title}
               </Heading>
             )}
             {openState?.eyebrow && (
-              <Heading level="4" size="xXSmall">
+              <Heading level="4" size="xXSmall" theme={openState.theme}>
                 {openState?.eyebrow}
               </Heading>
             )}
-            <div className={cx(styles.accordionOpenCopy, styles.theme)}>
+            <div
+              className={cx(styles.accordionOpenCopy, styles[openState.theme])}
+            >
               {openState?.copy}
             </div>
             <div className={cx(styles.buttonGroup)}>
@@ -171,7 +174,7 @@ const AccordionProduct = ({
           </div>
         </div>
         <button
-          className={cx(styles.closeBtn)}
+          className={cx(styles.closeBtn, styles[openState.theme])}
           onClick={() => toggleAccordion(index, false)}
         >
           {openState.closeButtonText}
