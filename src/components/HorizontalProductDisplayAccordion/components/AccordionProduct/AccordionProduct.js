@@ -149,7 +149,7 @@ const AccordionProduct = ({
               </Heading>
             )}
             {openState?.eyebrow && (
-              <Heading level="4" size="xXSmall" theme={openState.theme}>
+              <Heading level="4" size="xSmall" theme={openState.theme}>
                 {openState?.eyebrow}
               </Heading>
             )}

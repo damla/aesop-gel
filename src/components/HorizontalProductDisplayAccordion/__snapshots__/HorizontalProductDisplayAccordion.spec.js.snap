@@ -2,10 +2,10 @@
 
 exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 1`] = `
 <div
-  className="accordionProductWrap"
+  className="base"
 >
   <div
-    className="accordionProduct"
+    className="base"
     id="Aganice"
     role="button"
     tabIndex={-1}
@@ -41,22 +41,22 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
     >
       <div>
         <h2
-          className="base xLarge dark"
+          className="base xLarge light"
         >
           Ptolemy
         </h2>
         <h4
-          className="base xXSmall dark"
+          className="base mediumWeightFont xSmall light"
         >
-          Cardamon Mimosa Tobacco
+          Cardamon · Mimosa · Tobacco
         </h4>
         <div
-          className="accordionClosedCopy theme"
+          className="accordionClosedCopy light"
         >
           A beam to comfort those on the high seas
         </div>
         <button
-          className="openBtn"
+          className="openBtn light"
           onClick={[Function]}
         >
           Learn more
@@ -149,10 +149,10 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
           <h4
             className="base xXSmall dark"
           >
-            Cardamon Mimosa Tobacco
+            Cardamon · Mimosa · Tobacco
           </h4>
           <div
-            className="accordionOpenCopy theme"
+            className="accordionOpenCopy dark"
           >
             A beam to comfort those on the high seas
           </div>
@@ -217,7 +217,7 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
         </div>
       </div>
       <button
-        className="closeBtn"
+        className="closeBtn dark"
         onClick={[Function]}
       >
         Close
@@ -225,7 +225,7 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
     </div>
   </div>
   <div
-    className="accordionProduct"
+    className="base"
     id="ptolomey"
     role="button"
     tabIndex={-1}
@@ -312,22 +312,22 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
     >
       <div>
         <h2
-          className="base xLarge dark"
+          className="base xLarge light"
         >
           Ptolemy
         </h2>
         <h4
-          className="base xXSmall dark"
+          className="base mediumWeightFont xSmall light"
         >
-          Cardamon Mimosa Tobacco
+          Cardamon · Mimosa · Tobacco
         </h4>
         <div
-          className="accordionClosedCopy theme"
+          className="accordionClosedCopy light"
         >
           A beam to comfort those on the high seas
         </div>
         <button
-          className="openBtn"
+          className="openBtn light"
           onClick={[Function]}
         >
           Learn more
@@ -423,7 +423,7 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
             Cardamon Mimosa Tobacco
           </h4>
           <div
-            className="accordionOpenCopy theme"
+            className="accordionOpenCopy dark"
           >
             A beam to comfort those on the high seas
           </div>
@@ -488,7 +488,7 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
         </div>
       </div>
       <button
-        className="closeBtn"
+        className="closeBtn dark"
         onClick={[Function]}
       >
         Close
@@ -496,7 +496,7 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
     </div>
   </div>
   <div
-    className="accordionProduct"
+    className="base"
     id="ptolomey"
     role="button"
     tabIndex={-1}
@@ -532,22 +532,22 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
     >
       <div>
         <h2
-          className="base xLarge dark"
+          className="base xLarge light"
         >
           Ptolemy
         </h2>
         <h4
-          className="base xXSmall dark"
+          className="base mediumWeightFont xSmall light"
         >
-          Cardamon Mimosa Tobacco
+          Cardamon · Mimosa · Tobacco
         </h4>
         <div
-          className="accordionClosedCopy theme"
+          className="accordionClosedCopy light"
         >
           A beam to comfort those on the high seas
         </div>
         <button
-          className="openBtn"
+          className="openBtn light"
           onClick={[Function]}
         >
           Learn more
@@ -640,10 +640,10 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
           <h4
             className="base xXSmall dark"
           >
-            Cardamon Mimosa Tobacco
+            Cardamon · Mimosa · Tobacco
           </h4>
           <div
-            className="accordionOpenCopy theme"
+            className="accordionOpenCopy dark"
           >
             A beam to comfort those on the high seas
           </div>
@@ -708,7 +708,7 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
         </div>
       </div>
       <button
-        className="closeBtn"
+        className="closeBtn dark"
         onClick={[Function]}
       >
         Close
