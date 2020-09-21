@@ -2,15 +2,18 @@
 
 .base {
   display: block;
+
   @media (--viewport-sm-only) {
     padding-bottom: 50px;
   }
+
   @media (--viewport-md-only) {
     &.readMoreArticle {
       padding-right: 0;
       padding-left: 0;
     }
   }
+
   @media (--viewport-lg) {
     &.readMoreArticle {
       padding-right: 20px;
@@ -46,17 +49,20 @@
 }
 
 .title span {
+  @extend %zaph-serif-typography;
+
   padding-bottom: 1.5px;
   border-bottom: 1px solid transparent;
   color: var(--color-grey-20);
-  font-family: var(--font-family-zapf-serif);
   font-size: rem(30px);
   letter-spacing: 0;
   line-height: 1.2;
   transition: all 500ms var(--easing-ease-in-cubic);
+
   @media (--viewport-sm-only) {
     font-size: rem(20px);
   }
+
   @media (--viewport-md-only) {
     font-size: rem(26px);
   }
@@ -109,6 +115,7 @@
 
 .nonMobile {
   display: none;
+
   @media (--viewport-md) {
     display: block;
   }
@@ -118,6 +125,7 @@
   @media (--viewport-sm-only) {
     display: block;
   }
+
   @media (--viewport-md) {
     display: none;
   }
