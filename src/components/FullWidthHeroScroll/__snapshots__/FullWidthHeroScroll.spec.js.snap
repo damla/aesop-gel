@@ -159,7 +159,7 @@ exports[`<FullWidthHeroScroll /> renders base component correctly 1`] = `
         </button>
       </div>
       <div
-        className="fullscreenSection"
+        className="base"
       >
         <div
           className="slowFadeEnter"
@@ -172,7 +172,7 @@ exports[`<FullWidthHeroScroll /> renders base component correctly 1`] = `
         </div>
       </div>
       <div
-        className="fullscreenSection"
+        className="base"
       >
         <div
           className="slowFadeEnter"
@@ -185,7 +185,7 @@ exports[`<FullWidthHeroScroll /> renders base component correctly 1`] = `
         </div>
       </div>
       <div
-        className="fullscreenSection"
+        className="base"
       >
         <div
           className="slowFadeEnter"

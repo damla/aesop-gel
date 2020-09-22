@@ -78,6 +78,7 @@
 
   .hero & {
     pointer-events: auto;
+
     @media (--viewport-md-only) {
       width: 60%;
       margin-right: auto;
@@ -86,6 +87,11 @@
 
     @media (--viewport-md) {
       flex-direction: column;
+    }
+
+    @media (--viewport-lg) {
+      margin-right: 34%;
+      margin-left: 15%;
     }
   }
 
