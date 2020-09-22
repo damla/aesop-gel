@@ -18,6 +18,9 @@ const AddToCartButton = ({
 }) => {
   const addToCart = useAddToCartContext();
   const { selectedVariant } = useVariantSelectContext();
+
+  if (!selectedVariant) return null;
+
   const { isInStock, price, sku, alternateAction } = selectedVariant;
 
   const classSet = cx(
