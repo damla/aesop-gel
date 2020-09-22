@@ -165,6 +165,7 @@ const AccordionProduct = ({
                   className={styles.cta}
                   isAlternate={false}
                   style={HYPERLINK_STYLE_TYPES.INTERNAL_BUTTON_LINK}
+                  theme={openState.theme}
                   url={openState?.cta.url}
                 >
                   {openState?.cta.text}
