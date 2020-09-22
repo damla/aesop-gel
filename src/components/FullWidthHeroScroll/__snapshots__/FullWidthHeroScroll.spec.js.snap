@@ -165,7 +165,7 @@ exports[`<FullWidthHeroScroll /> renders base component correctly 1`] = `
           className="slowFadeEnter"
         >
           <h4
-            className="base xLarge light"
+            className="base xLarge dark"
           >
             Aliquam turpis libero, posuere sed nisl in, porta facilisis lorem. Phasellus eu turpis in quam efficitur hendrerit.
           </h4>
@@ -178,7 +178,7 @@ exports[`<FullWidthHeroScroll /> renders base component correctly 1`] = `
           className="slowFadeEnter"
         >
           <h4
-            className="base xLarge light"
+            className="base xLarge dark"
           >
             Aliquam turpis libero, posuere sed nisl in, porta facilisis lorem. Phasellus eu turpis in quam efficitur hendrerit.
           </h4>
@@ -191,7 +191,7 @@ exports[`<FullWidthHeroScroll /> renders base component correctly 1`] = `
           className="slowFadeEnter"
         >
           <h4
-            className="base xLarge light"
+            className="base xLarge dark"
           >
             Aliquam turpis libero, posuere sed nisl in, porta facilisis lorem. Phasellus eu turpis in quam efficitur hendrerit.
           </h4>
