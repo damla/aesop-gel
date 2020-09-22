@@ -32,6 +32,7 @@ import LoadMoreButton from './LoadMoreButton';
 import Loading from './Loading';
 import MediaWithContent from './MediaWithContent';
 import Modal from './Modal';
+import NavigationBar from './NavigationBar';
 import NotificationModal from './NotificationModal';
 import Overlay from './Overlay';
 import Paragraph, { P, ParagraphSet } from './Paragraph';
@@ -90,6 +91,7 @@ export { LoadMoreButton };
 export { Loading };
 export { MediaWithContent };
 export { Modal };
+export { NavigationBar };
 export { NotificationModal };
 export { Overlay };
 export { P };
@@ -151,6 +153,7 @@ export default {
   Loading,
   MediaWithContent,
   Modal,
+  NavigationBar,
   NotificationModal,
   Overlay,
   P,
