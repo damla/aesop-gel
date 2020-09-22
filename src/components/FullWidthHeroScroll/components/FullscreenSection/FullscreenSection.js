@@ -8,7 +8,7 @@ import styles from './FullscreenSection.module.css';
 
 const FullscreenSection = ({ hasSerifFont, text, theme }) => {
   const ref = useRef(null);
-  const isOnScreen = useOnScreen(ref, 1, '0% 0% -20% 0%');
+  const isOnScreen = useOnScreen(ref, 1, '0% 0% -10% 0%');
 
   return (
     <div className={cx(styles.base)}>

@@ -147,7 +147,7 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
             Aganice
           </h2>
           <h4
-            className="base xXSmall dark"
+            className="base xSmall dark"
           >
             Cardamon · Mimosa · Tobacco
           </h4>
@@ -418,7 +418,7 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
             Aganice
           </h2>
           <h4
-            className="base xXSmall dark"
+            className="base xSmall dark"
           >
             Cardamon Mimosa Tobacco
           </h4>
@@ -638,7 +638,7 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
             Aganice
           </h2>
           <h4
-            className="base xXSmall dark"
+            className="base xSmall dark"
           >
             Cardamon · Mimosa · Tobacco
           </h4>
