@@ -96,6 +96,10 @@
 }
 
 .productImage {
+  display: flex;
+  width: 100px;
+  justify-content: center;
+
   img {
     width: auto;
     max-height: 50px;

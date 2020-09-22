@@ -7266,6 +7266,15 @@ sans-serif;
 .ProductExtract-module_link__3GLQP:hover .ProductExtract-module_productName__3RQ8U span {
       border-bottom: 1px solid #666;
     }
+.ProductExtract-module_productImage__3jZqn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
 .ProductExtract-module_productImage__3jZqn img {
     width: auto;
     max-height: 50px;
