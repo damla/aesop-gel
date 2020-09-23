@@ -4,8 +4,12 @@ import { withKnobs } from '@storybook/addon-knobs';
 
 export const parameters = {
   backgrounds: {
-    default: '#fff',
+    default: 'white',
     values: [
+      {
+        name: 'white',
+        value: '#fff',
+      },
       {
         name: 'alabaster',
         value: '#fffef0',
