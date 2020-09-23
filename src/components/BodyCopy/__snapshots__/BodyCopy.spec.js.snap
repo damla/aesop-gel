@@ -10,17 +10,17 @@ exports[`<BodyCopy /> does not render content when no \`content\` prop supplied 
     id="Anti-Oxidant"
   >
     <h2
-      className="base mediumWeightFont xXSmall dark eyebrow"
-    >
-      Recommended Nearby
-    </h2>
-    <h3
-      className="base xLarge dark heading"
+      className="base xLarge dark heading heading"
     >
       Aesop & The Paris Review: A Partnership Extended
+    </h2>
+    <h3
+      className="base mediumWeightFont xXSmall dark heading eyebrow"
+    >
+      Recommended Nearby
     </h3>
     <h4
-      className="base mediumWeightFont xSmall dark subHeading"
+      className="base mediumWeightFont xSmall dark heading subHeading"
     >
       Active Nutrients
     </h4>
@@ -43,17 +43,17 @@ exports[`<BodyCopy /> renders base component correctly 1`] = `
     id="Anti-Oxidant"
   >
     <h2
-      className="base mediumWeightFont xXSmall dark eyebrow"
-    >
-      Recommended Nearby
-    </h2>
-    <h3
-      className="base xLarge dark heading"
+      className="base xLarge dark heading heading"
     >
       Aesop & The Paris Review: A Partnership Extended
+    </h2>
+    <h3
+      className="base mediumWeightFont xXSmall dark heading eyebrow"
+    >
+      Recommended Nearby
     </h3>
     <h4
-      className="base mediumWeightFont xSmall dark subHeading"
+      className="base mediumWeightFont xSmall dark heading subHeading"
     >
       Active Nutrients
     </h4>
@@ -94,7 +94,7 @@ exports[`<BodyCopy /> renders promary title as an \`h2\` if no \`eyebrow\` or \`
     className="base"
   >
     <h2
-      className="base mediumWeightFont xSmall dark subHeading"
+      className="base mediumWeightFont xSmall dark heading subHeading"
     >
       Aesop & The Paris Review: A Partnership Extended
     </h2>
@@ -110,7 +110,7 @@ exports[`<BodyCopy /> renders promary title as an \`h2\` if no \`eyebrow\` prop 
     className="base"
   >
     <h2
-      className="base xLarge dark heading"
+      className="base xLarge dark heading heading"
     >
       Aesop & The Paris Review: A Partnership Extended
     </h2>
