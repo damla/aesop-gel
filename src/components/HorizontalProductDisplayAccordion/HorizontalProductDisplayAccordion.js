@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import debounce from 'lodash/debounce';
 import cx from 'classnames';
 import {
+  AddToCartContextProvider,
   ProductDetailContextProvider,
   VariantSelectContextProvider,
 } from '~/contexts';
@@ -95,25 +96,29 @@ const HorizontalProductDisplayAccordion = ({ id, products, addToCartCopy }) => {
     >
       {accordionProducts.map(({ ...product }, productIndex) => {
         return (
-          <ProductDetailContextProvider
+          <AddToCartContextProvider
             key={productIndex}
-            product={{
-              description: product.openState.eyebrow,
-              productName: product.openState.title,
-            }}
+            onClick={product.handleAddToCart}
           >
-            <VariantSelectContextProvider
-              variants={product.openState.product.variants}
+            <ProductDetailContextProvider
+              product={{
+                description: product.openState.eyebrow,
+                productName: product.openState.title,
+              }}
             >
-              <AccordionProduct
-                addToCartCopy={addToCartCopy}
-                index={productIndex}
-                resetAccordion={resetAccordion}
-                toggleAccordion={toggleAccordion}
-                {...product}
-              />
-            </VariantSelectContextProvider>
-          </ProductDetailContextProvider>
+              <VariantSelectContextProvider
+                variants={product.openState.product.variants}
+              >
+                <AccordionProduct
+                  addToCartCopy={addToCartCopy}
+                  index={productIndex}
+                  resetAccordion={resetAccordion}
+                  toggleAccordion={toggleAccordion}
+                  {...product}
+                />
+              </VariantSelectContextProvider>
+            </ProductDetailContextProvider>
+          </AddToCartContextProvider>
         );
       })}
     </div>
@@ -147,6 +152,7 @@ HorizontalProductDisplayAccordion.propTypes = {
         theme: PropTypes.string,
         title: PropTypes.string,
       }),
+      handleAddToCart: PropTypes.func,
       isCompressed: PropTypes.bool,
       isExpanded: PropTypes.bool,
       id: PropTypes.string,
@@ -204,6 +210,7 @@ HorizontalProductDisplayAccordion.defaultProps = {
       theme: undefined,
       title: undefined,
     },
+    handleAddToCart: undefined,
     isCompressed: undefined,
     isExpanded: undefined,
     id: undefined,
