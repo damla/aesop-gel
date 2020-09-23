@@ -14,6 +14,7 @@ const BodyCopy = ({
   hasSerifFontHeading,
   heading,
   id,
+  isHeroArticle,
   subHeading,
   theme,
   content,
@@ -34,6 +35,7 @@ const BodyCopy = ({
         heading={heading}
         id={id}
         isFlush={hasFlushHeading}
+        isPageheading={isHeroArticle}
         subHeading={subHeading}
         theme={currentTheme}
       />
@@ -59,6 +61,7 @@ BodyCopy.propTypes = {
   hasSerifFontHeading: PropTypes.bool,
   heading: PropTypes.string,
   id: PropTypes.string,
+  isHeroArticle: PropTypes.bool,
   subHeading: PropTypes.string,
   theme: PropTypes.oneOf(['dark', 'light']),
 };
@@ -77,6 +80,7 @@ BodyCopy.defaultProps = {
   hasSerifFontHeading: false,
   heading: undefined,
   id: undefined,
+  isHeroArticle: undefined,
   subHeading: undefined,
   theme: undefined,
 };

@@ -68,6 +68,7 @@ const FullWidthHeroScroll = ({
                 eyebrow={eyebrow}
                 hasSerifFontHeading={hasSerifFontHeading}
                 heading={title}
+                isHeroArticle={true}
                 theme={theme}
               />
               {cta && (
