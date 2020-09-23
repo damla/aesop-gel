@@ -35,7 +35,7 @@ const BodyCopy = ({
         heading={heading}
         id={id}
         isFlush={hasFlushHeading}
-        isPageheading={isHeroArticle}
+        isPageHeading={isHeroArticle}
         subHeading={subHeading}
         theme={currentTheme}
       />
