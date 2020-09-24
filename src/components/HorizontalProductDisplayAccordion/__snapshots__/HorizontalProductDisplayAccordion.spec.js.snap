@@ -142,12 +142,12 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
           className="expandedAccordionText"
         >
           <h2
-            className="base xLarge dark"
+            className="base xLarge dark openStateHeading"
           >
             Aganice
           </h2>
           <h4
-            className="base xSmall dark"
+            className="base xSmall dark openStateEyebrow"
           >
             Cardamon · Mimosa · Tobacco
           </h4>
@@ -413,12 +413,12 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
           className="expandedAccordionText"
         >
           <h2
-            className="base xLarge dark"
+            className="base xLarge dark openStateHeading"
           >
             Aganice
           </h2>
           <h4
-            className="base xSmall dark"
+            className="base xSmall dark openStateEyebrow"
           >
             Cardamon Mimosa Tobacco
           </h4>
@@ -633,12 +633,12 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
           className="expandedAccordionText"
         >
           <h2
-            className="base xLarge dark"
+            className="base xLarge dark openStateHeading"
           >
             Aganice
           </h2>
           <h4
-            className="base xSmall dark"
+            className="base xSmall dark openStateEyebrow"
           >
             Cardamon · Mimosa · Tobacco
           </h4>
