@@ -6,6 +6,7 @@ import { useAddToCart } from '~/customHooks';
 const initialState = {
   actionTypes: {},
   dispatch: () => {},
+  errorMessage: '',
   hasError: false,
   isLoading: false,
   isUpdateSuccessful: false,

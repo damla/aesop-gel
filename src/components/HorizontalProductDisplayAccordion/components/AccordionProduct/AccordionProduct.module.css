@@ -165,7 +165,6 @@
 
 .buttonGroup {
   display: flex;
-  margin: 34px 0 0;
 
   button,
   a {
@@ -188,8 +187,8 @@
 .closeBtn {
   position: absolute;
   z-index: 1;
-  top: 20px;
-  right: 20px;
+  top: 40px;
+  right: 40px;
   margin: 0;
   font-size: rem(17px);
 }
@@ -235,4 +234,16 @@
   &.light {
     color: var(--color-light-copy);
   }
+}
+
+.openStateHeading {
+  margin-bottom: 20px;
+}
+
+.openStateEyebrow {
+  margin-bottom: 20px;
+}
+
+.accordionOpenCopy {
+  margin-bottom: 30px;
 }
