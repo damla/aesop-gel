@@ -137,6 +137,7 @@
   @media (--viewport-sm-only) {
     width: 100%;
     flex: 1;
+    margin-bottom: 30px;
 
     img {
       position: absolute;
@@ -151,8 +152,11 @@
 }
 
 .expandedAccordionText {
-  width: 66.6%;
   max-width: 600px;
+
+  @media (--viewport-md) {
+    width: 66.6%;
+  }
 }
 
 .closedStateForegroundImageWrap {
@@ -190,7 +194,7 @@
   top: 40px;
   right: 40px;
   margin: 0;
-  font-size: rem(17px);
+  font-size: rem(16px);
 }
 
 .openBtn {
