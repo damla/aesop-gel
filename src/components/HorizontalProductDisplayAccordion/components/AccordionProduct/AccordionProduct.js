@@ -140,6 +140,7 @@ const AccordionProduct = ({
           <div className={cx(styles.expandedAccordionText)}>
             {openState?.title && (
               <Heading
+                className={styles.openStateHeading}
                 hasSerifFont={openState?.hasSerifFont}
                 level="2"
                 size="xLarge"
@@ -149,7 +150,12 @@ const AccordionProduct = ({
               </Heading>
             )}
             {openState?.eyebrow && (
-              <Heading level="4" size="xSmall" theme={openState.theme}>
+              <Heading
+                className={styles.openStateEyebrow}
+                level="4"
+                size="xSmall"
+                theme={openState.theme}
+              >
                 {openState?.eyebrow}
               </Heading>
             )}

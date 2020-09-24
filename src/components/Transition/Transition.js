@@ -50,6 +50,7 @@ Transition.propTypes = {
     'fade',
     'shiftInDown',
     'shiftInLeft',
+    'shiftInUp',
     'slideDown',
     'slideRight',
     'slowFade',
