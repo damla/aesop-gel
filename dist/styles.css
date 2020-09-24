@@ -5418,8 +5418,14 @@ sans-serif;
   height: 90vh;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-transition: width 100ms 40ms;
-  transition: width 100ms 40ms;
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms;
+  -webkit-transition-duration: 1000ms;
+          transition-duration: 1000ms;
+  -webkit-transition-property: width;
+  transition-property: width;
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .AccordionProduct-module_base__2s-7t.AccordionProduct-module_isCompressed__cU8x9 {
     width: 10%;
@@ -5490,15 +5496,17 @@ sans-serif;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transition: opacity 40ms 140ms;
-  transition: opacity 40ms 140ms;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-timing-function: liner;
+          transition-timing-function: liner;
 }
 .AccordionProduct-module_accordionDefaultContent__1FbLP.AccordionProduct-module_hidden__32W8W {
-    width: 0;
-    height: 0;
     opacity: 0;
-    -webkit-transition: opacity 40ms, height 0ms 140ms, width 0ms 40s;
-    transition: opacity 40ms, height 0ms 140ms, width 0ms 40s;
   }
 .AccordionProduct-module_accordionDefaultContent__1FbLP > div {
     padding: 20px;
@@ -5517,13 +5525,17 @@ sans-serif;
       -ms-flex-pack: center;
           justify-content: center;
   opacity: 0;
-  -webkit-transition: opacity 80ms 140ms;
-  transition: opacity 80ms 140ms;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+  -webkit-transition-duration: 100ms;
+          transition-duration: 100ms;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .AccordionProduct-module_accordionExpanded__1WO9Y.AccordionProduct-module_open__2VFan {
     opacity: 1;
-    -webkit-transition: opacity 80ms 0ms;
-    transition: opacity 80ms 0ms;
   }
 .AccordionProduct-module_accordionExpandedContent__3ZYPa {
   display: -webkit-box;
@@ -5538,12 +5550,18 @@ sans-serif;
           align-items: center;
   padding: 20px;
   opacity: 0;
-  -webkit-transform: translate3d(0, 25%, 0);
-          transform: translate3d(0, 25%, 0);
-  -webkit-transition: opacity 40ms 0ms, -webkit-transform 0s 200ms;
-  transition: opacity 40ms 0ms, -webkit-transform 0s 200ms;
-  transition: transform 0s 200ms, opacity 40ms 0ms;
-  transition: transform 0s 200ms, opacity 40ms 0ms, -webkit-transform 0s 200ms;
+  -webkit-transform: translate3d(0, 20px, 0);
+          transform: translate3d(0, 20px, 0);
+  -webkit-transition-delay: 800ms, 800ms;
+          transition-delay: 800ms, 800ms;
+  -webkit-transition-duration: 1000ms, 1000ms;
+          transition-duration: 1000ms, 1000ms;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: transform, opacity;
+  transition-property: transform, opacity, -webkit-transform;
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1), cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1), cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 @media (max-width: 639px) {
 .AccordionProduct-module_accordionExpandedContent__3ZYPa {
@@ -5557,10 +5575,6 @@ sans-serif;
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
-  -webkit-transition: opacity 80ms 180ms, -webkit-transform 200ms 40ms ease;
-  transition: opacity 80ms 180ms, -webkit-transform 200ms 40ms ease;
-  transition: transform 200ms 40ms ease, opacity 80ms 180ms;
-  transition: transform 200ms 40ms ease, opacity 80ms 180ms, -webkit-transform 200ms 40ms ease;
 }
 .AccordionProduct-module_expandedAccordionImage__ULov6 {
   position: relative;
