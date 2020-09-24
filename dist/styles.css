@@ -5571,7 +5571,8 @@ sans-serif;
     width: 100%;
     -webkit-box-flex: 1;
         -ms-flex: 1;
-            flex: 1
+            flex: 1;
+    margin-bottom: 30px
 }
 
     .AccordionProduct-module_expandedAccordionImage__ULov6 img {
@@ -5587,9 +5588,13 @@ sans-serif;
     }
   }
 .AccordionProduct-module_expandedAccordionText__1narm {
-  width: 66.6%;
   max-width: 600px;
 }
+@media (min-width: 640px) {
+.AccordionProduct-module_expandedAccordionText__1narm {
+    width: 66.6%
+}
+  }
 .AccordionProduct-module_closedStateForegroundImageWrap__1_k-K {
   display: block;
   cursor: pointer;
@@ -5626,7 +5631,7 @@ sans-serif;
   top: 40px;
   right: 40px;
   margin: 0;
-  font-size: 17px;
+  font-size: 16px;
 }
 .AccordionProduct-module_openBtn__27FC4 {
   margin: 0 0 40px;
