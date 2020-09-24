@@ -5572,6 +5572,7 @@ sans-serif;
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
+    margin-top: 50px;
     margin-bottom: 30px
 }
 
