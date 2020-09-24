@@ -54,7 +54,7 @@ const Image = forwardRef(function ImageRef(
         />
       )}
 
-      <img alt={altText} ref={ref} />
+      <img alt={altText} loading="lazy" ref={ref} />
     </picture>
   );
 
