@@ -1,0 +1,57 @@
+@import 'styles/index';
+
+.base {
+  position: relative;
+  background-color: var(--color-grey-10);
+}
+
+.block {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 3px solid #d6d5cb;
+}
+
+.bottom {
+  display: flex;
+  height: 72px;
+  align-items: center;
+  padding-left: 25px;
+  color: var(--color-light-copy);
+  font-family: var(--font-family-sans-serif-regular);
+}
+
+.signup {
+  flex: 1 0 30%;
+  padding-top: 45px;
+  padding-right: 25px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+  @media (--viewport-sm-only) {
+    flex: 100%;
+  }
+  @media (--viewport-md-only) {
+    flex: 80%;
+  }
+}
+
+.item {
+  flex: 1 0 15%; /* explanation below */
+  padding: 25px;
+  @media (--viewport-sm-only) {
+    flex: 1 0 25%;
+  }
+  @media (--viewport-md-only) {
+    flex: 1 0 25%;
+  }
+}
+
+.wideItem {
+  flex: 1 0 30%;
+  padding: 25px;
+  @media (--viewport-sm-only) {
+    flex: 1 0 25%;
+  }
+  @media (--viewport-md-only) {
+    flex: 1 0 25%;
+  }
+}
