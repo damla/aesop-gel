@@ -5427,10 +5427,30 @@ sans-serif;
   -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
           transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
+.AccordionProduct-module_base__2s-7t,
+  .AccordionProduct-module_base__2s-7t * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
 .AccordionProduct-module_base__2s-7t.AccordionProduct-module_isCompressed__cU8x9 {
     width: 10%;
     cursor: pointer;
   }
+@media (min-width: 1700px) {
+.AccordionProduct-module_base__2s-7t.AccordionProduct-module_isCompressed__cU8x9 {
+      width: 20%
+  }
+    }
+@media (min-width: 2000px) {
+.AccordionProduct-module_base__2s-7t.AccordionProduct-module_isCompressed__cU8x9 {
+      width: 33.33%
+  }
+    }
+@media (min-width: 2400px) {
+.AccordionProduct-module_base__2s-7t.AccordionProduct-module_isCompressed__cU8x9 {
+      width: 41%
+  }
+    }
 @media (max-width: 639px) {
 .AccordionProduct-module_base__2s-7t {
     padding: 0 20px
@@ -5443,13 +5463,22 @@ sans-serif;
   }
 .AccordionProduct-module_closedForegroundImage__233QR {
   display: block;
-  width: 50%;
   margin: 0 auto;
 }
 .AccordionProduct-module_closedForegroundImage__233QR img {
-    width: 100%;
-    height: auto;
+    width: auto;
+    max-height: 200px;
   }
+@media (min-width: 640px) {
+.AccordionProduct-module_closedForegroundImage__233QR img {
+      max-height: 240px
+  }
+    }
+@media (min-width: 1025px) {
+.AccordionProduct-module_closedForegroundImage__233QR img {
+      max-height: 300px
+  }
+    }
 .AccordionProduct-module_closedBackgroundVideo__3Xmtq {
   height: 100%;
 }
@@ -5496,17 +5525,18 @@ sans-serif;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transition-delay: 0;
-          transition-delay: 0;
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms;
   -webkit-transition-duration: 400ms;
           transition-duration: 400ms;
   -webkit-transition-property: opacity;
   transition-property: opacity;
-  -webkit-transition-timing-function: liner;
-          transition-timing-function: liner;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
 }
 .AccordionProduct-module_accordionDefaultContent__1FbLP.AccordionProduct-module_hidden__32W8W {
     opacity: 0;
+    pointer-events: none;
   }
 .AccordionProduct-module_accordionDefaultContent__1FbLP > div {
     padding: 20px;
@@ -5525,8 +5555,8 @@ sans-serif;
       -ms-flex-pack: center;
           justify-content: center;
   opacity: 0;
-  -webkit-transition-delay: 0;
-          transition-delay: 0;
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms;
   -webkit-transition-duration: 100ms;
           transition-duration: 100ms;
   -webkit-transition-property: opacity;
@@ -5543,15 +5573,16 @@ sans-serif;
   display: flex;
   width: 100%;
   height: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 20px;
   opacity: 0;
-  -webkit-transform: translate3d(0, 20px, 0);
-          transform: translate3d(0, 20px, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
   -webkit-transition-delay: 800ms, 800ms;
           transition-delay: 800ms, 800ms;
   -webkit-transition-duration: 1000ms, 1000ms;
@@ -5560,15 +5591,24 @@ sans-serif;
   transition-property: opacity, -webkit-transform;
   transition-property: transform, opacity;
   transition-property: transform, opacity, -webkit-transform;
-  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1), cubic-bezier(0.215, 0.61, 0.355, 1);
-          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1), cubic-bezier(0.215, 0.61, 0.355, 1);
+  -webkit-transition-timing-function:
+    cubic-bezier(0.215, 0.61, 0.355, 1),
+    cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition-timing-function:
+    cubic-bezier(0.215, 0.61, 0.355, 1),
+    cubic-bezier(0.215, 0.61, 0.355, 1);
 }
-@media (max-width: 639px) {
+@media (max-width: 1024px) {
 .AccordionProduct-module_accordionExpandedContent__3ZYPa {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column
+}
+  }
+@media (min-width: 640px) {
+.AccordionProduct-module_accordionExpandedContent__3ZYPa {
+    padding: 34px
 }
   }
 .AccordionProduct-module_open__2VFan .AccordionProduct-module_accordionExpandedContent__3ZYPa {
@@ -5580,13 +5620,14 @@ sans-serif;
   position: relative;
   width: 30%;
 }
-@media (max-width: 639px) {
+@media (max-width: 1024px) {
 .AccordionProduct-module_expandedAccordionImage__ULov6 {
     width: 100%;
+    max-height: 200px;
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
-    margin-top: 50px;
+    margin-top: 60px;
     margin-bottom: 30px
 }
 
@@ -5602,18 +5643,39 @@ sans-serif;
          object-position: center bottom;
     }
   }
-.AccordionProduct-module_expandedAccordionText__1narm {
-  max-width: 600px;
+@media (min-width: 640px) {
+.AccordionProduct-module_expandedAccordionImage__ULov6 {
+    max-height: 420px;
+    margin-bottom: 80px
 }
+  }
+@media (min-width: 1025px) {
+.AccordionProduct-module_expandedAccordionImage__ULov6 {
+    margin-right: 40px
+}
+  }
 @media (min-width: 640px) {
 .AccordionProduct-module_expandedAccordionText__1narm {
-    width: 66.6%
+    width: 100%
+}
+  }
+@media (min-width: 1025px) {
+.AccordionProduct-module_expandedAccordionText__1narm {
+    width: 66.6%;
+    max-width: 640px
 }
   }
 .AccordionProduct-module_closedStateForegroundImageWrap__1_k-K {
   display: block;
+  width: 100%;
+  margin-top: 40px;
   cursor: pointer;
 }
+@media (min-width: 640px) {
+.AccordionProduct-module_closedStateForegroundImageWrap__1_k-K {
+    margin-top: 80px
+}
+  }
 .AccordionProduct-module_closedStateForegroundImageWrap__1_k-K:focus {
     outline: 0;
   }
@@ -5649,7 +5711,6 @@ sans-serif;
   font-size: 16px;
 }
 .AccordionProduct-module_openBtn__27FC4 {
-  margin: 0 0 40px;
   font-size: 16px;
 }
 .AccordionProduct-module_openBtn__27FC4,
