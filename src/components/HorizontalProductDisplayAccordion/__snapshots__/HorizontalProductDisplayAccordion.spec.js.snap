@@ -14,7 +14,7 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
       className="accordionDefaultBackground"
       style={
         Object {
-          "backgroundColor": undefined,
+          "backgroundColor": "#9DB5AC",
         }
       }
     >
@@ -23,15 +23,15 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
       >
         <source
           media="(min-width: 1025px)"
-          srcSet="./assets/images/HorizontalProductDisplayAccordion/Ptolemy-front.png"
+          srcSet="https://images.ctfassets.net/u1nb1km7t5q7/79GVrsv9HLi2IptU2s9DuX/118ba7bc9beb0595f6d50dba55a7cf2c/Aesop_Poured_Candles_2020_Hybris_Homepage_Secondary_Accordion_03_Callipus_Background_648x1080px.gif"
         />
         <source
           media="(min-width: 640px)"
-          srcSet="./assets/images/HorizontalProductDisplayAccordion/Ptolemy-front.png"
+          srcSet="https://images.ctfassets.net/u1nb1km7t5q7/7co3QQhzvXkQNUpik7W6OG/e56006cda4bf43b623687de50e871300/Aesop_Poured_Candles_2020_Hybris_Homepage_Secondary_Accordion_03_Callipus_Background_648x1080px.gif"
         />
         <source
           media="(min-width: 0px)"
-          srcSet="./assets/images/HorizontalProductDisplayAccordion/Ptolemy-front.png"
+          srcSet="https://images.ctfassets.net/u1nb1km7t5q7/3qxE1emdFuU76KIucYGnKK/f7d3255816270000ab6a2c0754579f65/Aesop_Poured_Candles_2020_Hybris_Homepage_Secondary_Accordion_03_Callipus_Background_648x1080px.gif"
         />
         <img />
       </picture>
@@ -48,7 +48,7 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
         <h4
           className="base mediumWeightFont xSmall light"
         >
-          Cardamon · Mimosa · Tobacco
+          Cardamon Mimosa Tobacco
         </h4>
         <div
           className="accordionClosedCopy light"
@@ -62,294 +62,25 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
           Learn more
         </button>
         <button
-          className="closedStateForegroundImageWrap"
-          onClick={[Function]}
-        >
-          <picture
-            className="base picture dark closedForegroundImage"
-          >
-            <source
-              media="(min-width: 1025px)"
-              srcSet="./assets/images/HorizontalProductDisplayAccordion/candles-product.png"
-            />
-            <source
-              media="(min-width: 640px)"
-              srcSet="./assets/images/HorizontalProductDisplayAccordion/candles-product.png"
-            />
-            <source
-              media="(min-width: 0px)"
-              srcSet="./assets/images/HorizontalProductDisplayAccordion/candles-product.png"
-            />
-            <img
-              alt="Lorem ipsum dolor sit"
-            />
-          </picture>
-        </button>
-      </div>
-    </div>
-    <div
-      className="accordionExpanded"
-      style={
-        Object {
-          "backgroundColor": undefined,
-        }
-      }
-    >
-      <picture
-        className="base picture dark openBackgroundImage"
-      >
-        <source
-          media="(min-width: 1025px)"
-          srcSet="https://www.aesop.com/medias/GelCleanser-640x640.png?context=bWFzdGVyfGltYWdlc3w1MzE5NTl8aW1hZ2UvcG5nfGltYWdlcy9oOTUvaGNkLzg4MDc3OTc4NTAxNDIucG5nfGM3NTNhYjdkMWNiOTRhNWZhNDA0NWExZWJiODMxN2VhNzEyY2ZkNGUyYzc4ZWVkZDRjYTIzMzZmZTRlOGYxNjM"
-        />
-        <source
-          media="(min-width: 640px)"
-          srcSet="https://www.aesop.com/medias/GelCleanser-640x640.png?context=bWFzdGVyfGltYWdlc3w1MzE5NTl8aW1hZ2UvcG5nfGltYWdlcy9oOTUvaGNkLzg4MDc3OTc4NTAxNDIucG5nfGM3NTNhYjdkMWNiOTRhNWZhNDA0NWExZWJiODMxN2VhNzEyY2ZkNGUyYzc4ZWVkZDRjYTIzMzZmZTRlOGYxNjM"
-        />
-        <source
-          media="(min-width: 0px)"
-          srcSet="https://www.aesop.com/medias/GelCleanser-640x640.png?context=bWFzdGVyfGltYWdlc3w1MzE5NTl8aW1hZ2UvcG5nfGltYWdlcy9oOTUvaGNkLzg4MDc3OTc4NTAxNDIucG5nfGM3NTNhYjdkMWNiOTRhNWZhNDA0NWExZWJiODMxN2VhNzEyY2ZkNGUyYzc4ZWVkZDRjYTIzMzZmZTRlOGYxNjM"
-        />
-        <img />
-      </picture>
-      <div
-        className="accordionExpandedContent"
-      >
-        <div
-          className="expandedAccordionImage"
-        >
-          <picture
-            className="base picture dark"
-          >
-            <source
-              media="(min-width: 1025px)"
-              srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
-            />
-            <source
-              media="(min-width: 640px)"
-              srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
-            />
-            <source
-              media="(min-width: 0px)"
-              srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
-            />
-            <img
-              alt="Lorem ipsum dolor sit"
-            />
-          </picture>
-        </div>
-        <div
-          className="expandedAccordionText"
-        >
-          <h2
-            className="base xLarge dark openStateHeading"
-          >
-            Aganice
-          </h2>
-          <h4
-            className="base xSmall dark openStateEyebrow"
-          >
-            Cardamon · Mimosa · Tobacco
-          </h4>
-          <div
-            className="accordionOpenCopy dark"
-          >
-            A beam to comfort those on the high seas
-          </div>
-          <div
-            className="buttonGroup"
-          >
-            <button
-              className="base alternate blockStyle dark base fullWidth"
-              data-test-ref="ADD_TO_CART"
-              disabled={false}
-              onClick={[Function]}
-              title="Add to your cart — $26.45"
-              type="button"
-            >
-              <span
-                className="label"
-              >
-                <span>
-                  added to your cart
-                </span>
-                <span>
-                  Add to your cart — $26.45
-                </span>
-              </span>
-            </button>
-            <a
-              className="base blockStyle hasIcon left dark cta"
-              href="/"
-              target="_self"
-            >
-              Lorem ipsum dolor
-               
-              <i
-                aria-hidden="true"
-                className="icon"
-              >
-                <svg
-                  className="base rightArrow dark"
-                  data-ref=""
-                  focusable="false"
-                  height={12}
-                  role="img"
-                  style={
-                    Object {
-                      "height": "12px",
-                      "width": "12px",
-                    }
-                  }
-                  tabIndex={-1}
-                  viewBox="0 0 50 50"
-                  width={12}
-                >
-                  <g>
-                    <path
-                      d="M30.1,5.3L50,25.1L30.1,45h-6.6l18-17.6H0v-4.8h41.5l-18-17.6h6.6V5.3z"
-                    />
-                  </g>
-                </svg>
-              </i>
-            </a>
-          </div>
-        </div>
-      </div>
-      <button
-        className="closeBtn dark"
-        onClick={[Function]}
-      >
-        Close
-      </button>
-    </div>
-  </div>
-  <div
-    className="base"
-    id="ptolomey"
-    role="button"
-    tabIndex={-1}
-  >
-    <div
-      className="accordionDefaultBackground"
-      style={
-        Object {
-          "backgroundColor": undefined,
-        }
-      }
-    >
-      <div
-        className="base closedBackgroundVideo fullWidth"
-        role="group"
-      >
-        <figure
-          className="fallbackImageFigure"
-        >
-          <picture
-            className="base picture dark fallbackImage"
-          >
-            <source
-              media="(min-width: 1025px)"
-              srcSet="./assets/images/MediaWithContent/video-poster.png"
-            />
-            <source
-              media="(min-width: 640px)"
-              srcSet="./assets/images/MediaWithContent/video-poster.png"
-            />
-            <source
-              media="(min-width: 0px)"
-              srcSet="./assets/images/MediaWithContent/video-poster.png"
-            />
-            <img
-              alt="How to Use Video for Tea Tree Leaf Facial Exfoliant"
-            />
-          </picture>
-        </figure>
-        <video
-          autoPlay={true}
-          className="base"
-          controls={false}
-          loop={true}
-          muted={true}
-          playsInline={true}
-        >
-          <source
-            src="https://player.vimeo.com/external/225136214.hd.mp4?s=a01cd8b47f35767394e48dc01af10510ef8ff4dd&profile_id=174"
-            type="video/mp4"
-          />
-        </video>
-        <button
-          className="base dark base fadeEnter"
+          className="base dark closedStateForegroundImageWrap"
           disabled={false}
           onClick={[Function]}
-          title="View video"
           type="button"
         >
           <picture
-            className="base picture dark"
-          >
-            <source
-              media="(min-width: 1025px)"
-              srcSet="./assets/images/MediaWithContent/video-poster.png"
-            />
-            <source
-              media="(min-width: 640px)"
-              srcSet="./assets/images/MediaWithContent/video-poster.png"
-            />
-            <source
-              media="(min-width: 0px)"
-              srcSet="./assets/images/MediaWithContent/video-poster.png"
-            />
-            <img
-              alt="How to Use Video for Tea Tree Leaf Facial Exfoliant"
-            />
-          </picture>
-        </button>
-      </div>
-    </div>
-    <div
-      className="accordionDefaultContent"
-    >
-      <div>
-        <h2
-          className="base xLarge light"
-        >
-          Ptolemy
-        </h2>
-        <h4
-          className="base mediumWeightFont xSmall light"
-        >
-          Cardamon · Mimosa · Tobacco
-        </h4>
-        <div
-          className="accordionClosedCopy light"
-        >
-          A beam to comfort those on the high seas
-        </div>
-        <button
-          className="openBtn light"
-          onClick={[Function]}
-        >
-          Learn more
-        </button>
-        <button
-          className="closedStateForegroundImageWrap"
-          onClick={[Function]}
-        >
-          <picture
             className="base picture dark closedForegroundImage"
           >
             <source
               media="(min-width: 1025px)"
-              srcSet="./as sets/images/HorizontalProductDisplayAccordion/candles-product.png"
+              srcSet="https://images.ctfassets.net/u1nb1km7t5q7/584i2txtM9Evx8gk8wXeQd/f7aa5dff18c538b5e377a8287c0a60cd/Aesop_Poured_Candles_2020_Hybris_Homepage_Secondary_Accordion_02_Aganice_Product_Desktop_835x962px.png"
             />
             <source
               media="(min-width: 640px)"
-              srcSet="./assets/images/HorizontalProductDisplayAccordion/candles-product.png"
+              srcSet="https://images.ctfassets.net/u1nb1km7t5q7/65hEQAyMqMXx7GQa6HbBIN/d014e96f3a284e8a14a5aa9e5e3c901d/Aesop_Poured_Candles_2020_Hybris_Homepage_Secondary_Accordion_02_Aganice_Product_Tablet_653x752px.png"
             />
             <source
               media="(min-width: 0px)"
-              srcSet="./assets/images/HorizontalProductDisplayAccordion/candles-product.png"
+              srcSet="https://images.ctfassets.net/u1nb1km7t5q7/5XlxK9vdyy9Bm56uVPFjTv/147183c3c92495d161eced89104ccafe/Aesop_Poured_Candles_2020_Hybris_Homepage_Secondary_Accordion_02_Aganice_Product_Mobile_455x524px.png"
             />
             <img
               alt="Lorem ipsum dolor sit"
@@ -362,27 +93,10 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
       className="accordionExpanded"
       style={
         Object {
-          "backgroundColor": undefined,
+          "backgroundColor": "#BEAD8F",
         }
       }
     >
-      <picture
-        className="base picture dark openBackgroundImage"
-      >
-        <source
-          media="(min-width: 1025px)"
-          srcSet="https://www.aesop.com/medias/GelCleanser-640x640.png?context=bWFzdGVyfGltYWdlc3w1MzE5NTl8aW1hZ2UvcG5nfGltYWdlcy9oOTUvaGNkLzg4MDc3OTc4NTAxNDIucG5nfGM3NTNhYjdkMWNiOTRhNWZhNDA0NWExZWJiODMxN2VhNzEyY2ZkNGUyYzc4ZWVkZDRjYTIzMzZmZTRlOGYxNjM"
-        />
-        <source
-          media="(min-width: 640px)"
-          srcSet="https://www.aesop.com/medias/GelCleanser-640x640.png?context=bWFzdGVyfGltYWdlc3w1MzE5NTl8aW1hZ2UvcG5nfGltYWdlcy9oOTUvaGNkLzg4MDc3OTc4NTAxNDIucG5nfGM3NTNhYjdkMWNiOTRhNWZhNDA0NWExZWJiODMxN2VhNzEyY2ZkNGUyYzc4ZWVkZDRjYTIzMzZmZTRlOGYxNjM"
-        />
-        <source
-          media="(min-width: 0px)"
-          srcSet="https://www.aesop.com/medias/GelCleanser-640x640.png?context=bWFzdGVyfGltYWdlc3w1MzE5NTl8aW1hZ2UvcG5nfGltYWdlcy9oOTUvaGNkLzg4MDc3OTc4NTAxNDIucG5nfGM3NTNhYjdkMWNiOTRhNWZhNDA0NWExZWJiODMxN2VhNzEyY2ZkNGUyYzc4ZWVkZDRjYTIzMzZmZTRlOGYxNjM"
-        />
-        <img />
-      </picture>
       <div
         className="accordionExpandedContent"
       >
@@ -394,15 +108,15 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
           >
             <source
               media="(min-width: 1025px)"
-              srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+              srcSet="https://images.ctfassets.net/u1nb1km7t5q7/3jWHcEvyLuAd3JGTDyM6q6/e8047f01381756ed33cebb66adde78d4/Aesop_Poured_Candles_2020_Hybris_Homepage_Secondary_Accordion_03_Callipus_Menu_1400x1020px.gif"
             />
             <source
               media="(min-width: 640px)"
-              srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+              srcSet="https://images.ctfassets.net/u1nb1km7t5q7/152Y4pHKQXh1rIugZcwpDA/1ff81742d4aec35ffb6b4f4c1ec7407f/Aesop_Poured_Candles_2020_Hybris_Homepage_Secondary_Accordion_03_Callipus_Menu_1400x1020px.gif"
             />
             <source
               media="(min-width: 0px)"
-              srcSet="https://www.aesop.com/medias/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png?context=bWFzdGVyfGltYWdlc3wzNDYwMTh8aW1hZ2UvcG5nfGltYWdlcy9oYWMvaDIxLzg4MTUwMjM1ODczNTgucG5nfGFlYmNhMjRiM2Q2NWMzZTA1ZjljOTEyZmMxYmUyMTMyZDgyYjY4MGJlODU2OWEyNjkzYWQ0ZTBmMDY0NmQ1NjQ"
+              srcSet="https://images.ctfassets.net/u1nb1km7t5q7/4hmTzb2vPAfvAur8D0M0PW/692b1fb975b97be14ced876cf4db71aa/Aesop_Poured_Candles_2020_Hybris_Homepage_Secondary_Accordion_03_Callipus_Menu_1400x1020px.gif"
             />
             <img
               alt="Lorem ipsum dolor sit"
@@ -418,7 +132,7 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
             Aganice
           </h2>
           <h4
-            className="base xSmall dark openStateEyebrow"
+            className="base mediumWeightFont xSmall dark openStateEyebrow"
           >
             Cardamon Mimosa Tobacco
           </h4>
@@ -497,7 +211,7 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
   </div>
   <div
     className="base"
-    id="ptolomey"
+    id="Aganice"
     role="button"
     tabIndex={-1}
   >
@@ -505,7 +219,7 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
       className="accordionDefaultBackground"
       style={
         Object {
-          "backgroundColor": undefined,
+          "backgroundColor": "#9DB5AC",
         }
       }
     >
@@ -514,15 +228,15 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
       >
         <source
           media="(min-width: 1025px)"
-          srcSet="./assets/images/HorizontalProductDisplayAccordion/Aganice-front.png"
+          srcSet="https://images.ctfassets.net/u1nb1km7t5q7/79GVrsv9HLi2IptU2s9DuX/118ba7bc9beb0595f6d50dba55a7cf2c/Aesop_Poured_Candles_2020_Hybris_Homepage_Secondary_Accordion_03_Callipus_Background_648x1080px.gif"
         />
         <source
           media="(min-width: 640px)"
-          srcSet="./assets/images/HorizontalProductDisplayAccordion/Aganice-front.png"
+          srcSet="https://images.ctfassets.net/u1nb1km7t5q7/7co3QQhzvXkQNUpik7W6OG/e56006cda4bf43b623687de50e871300/Aesop_Poured_Candles_2020_Hybris_Homepage_Secondary_Accordion_03_Callipus_Background_648x1080px.gif"
         />
         <source
           media="(min-width: 0px)"
-          srcSet="./assets/images/HorizontalProductDisplayAccordion/Aganice-front.png"
+          srcSet="https://images.ctfassets.net/u1nb1km7t5q7/3qxE1emdFuU76KIucYGnKK/f7d3255816270000ab6a2c0754579f65/Aesop_Poured_Candles_2020_Hybris_Homepage_Secondary_Accordion_03_Callipus_Background_648x1080px.gif"
         />
         <img />
       </picture>
@@ -539,7 +253,7 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
         <h4
           className="base mediumWeightFont xSmall light"
         >
-          Cardamon · Mimosa · Tobacco
+          Cardamon Mimosa Tobacco
         </h4>
         <div
           className="accordionClosedCopy light"
@@ -553,23 +267,25 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
           Learn more
         </button>
         <button
-          className="closedStateForegroundImageWrap"
+          className="base dark closedStateForegroundImageWrap"
+          disabled={false}
           onClick={[Function]}
+          type="button"
         >
           <picture
             className="base picture dark closedForegroundImage"
           >
             <source
               media="(min-width: 1025px)"
-              srcSet="./as sets/images/HorizontalProductDisplayAccordion/candles-product.png"
+              srcSet="https://images.ctfassets.net/u1nb1km7t5q7/584i2txtM9Evx8gk8wXeQd/f7aa5dff18c538b5e377a8287c0a60cd/Aesop_Poured_Candles_2020_Hybris_Homepage_Secondary_Accordion_02_Aganice_Product_Desktop_835x962px.png"
             />
             <source
               media="(min-width: 640px)"
-              srcSet="./assets/images/HorizontalProductDisplayAccordion/candles-product.png"
+              srcSet="https://images.ctfassets.net/u1nb1km7t5q7/65hEQAyMqMXx7GQa6HbBIN/d014e96f3a284e8a14a5aa9e5e3c901d/Aesop_Poured_Candles_2020_Hybris_Homepage_Secondary_Accordion_02_Aganice_Product_Tablet_653x752px.png"
             />
             <source
               media="(min-width: 0px)"
-              srcSet="./assets/images/HorizontalProductDisplayAccordion/candles-product.png"
+              srcSet="https://images.ctfassets.net/u1nb1km7t5q7/5XlxK9vdyy9Bm56uVPFjTv/147183c3c92495d161eced89104ccafe/Aesop_Poured_Candles_2020_Hybris_Homepage_Secondary_Accordion_02_Aganice_Product_Mobile_455x524px.png"
             />
             <img
               alt="Lorem ipsum dolor sit"
@@ -582,27 +298,10 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
       className="accordionExpanded"
       style={
         Object {
-          "backgroundColor": undefined,
+          "backgroundColor": "#BEAD8F",
         }
       }
     >
-      <picture
-        className="base picture dark openBackgroundImage"
-      >
-        <source
-          media="(min-width: 1025px)"
-          srcSet="https://www.aesop.com/medias/GelCleanser-640x640.png?context=bWFzdGVyfGltYWdlc3w1MzE5NTl8aW1hZ2UvcG5nfGltYWdlcy9oOTUvaGNkLzg4MDc3OTc4NTAxNDIucG5nfGM3NTNhYjdkMWNiOTRhNWZhNDA0NWExZWJiODMxN2VhNzEyY2ZkNGUyYzc4ZWVkZDRjYTIzMzZmZTRlOGYxNjM"
-        />
-        <source
-          media="(min-width: 640px)"
-          srcSet="https://www.aesop.com/medias/GelCleanser-640x640.png?context=bWFzdGVyfGltYWdlc3w1MzE5NTl8aW1hZ2UvcG5nfGltYWdlcy9oOTUvaGNkLzg4MDc3OTc4NTAxNDIucG5nfGM3NTNhYjdkMWNiOTRhNWZhNDA0NWExZWJiODMxN2VhNzEyY2ZkNGUyYzc4ZWVkZDRjYTIzMzZmZTRlOGYxNjM"
-        />
-        <source
-          media="(min-width: 0px)"
-          srcSet="https://www.aesop.com/medias/GelCleanser-640x640.png?context=bWFzdGVyfGltYWdlc3w1MzE5NTl8aW1hZ2UvcG5nfGltYWdlcy9oOTUvaGNkLzg4MDc3OTc4NTAxNDIucG5nfGM3NTNhYjdkMWNiOTRhNWZhNDA0NWExZWJiODMxN2VhNzEyY2ZkNGUyYzc4ZWVkZDRjYTIzMzZmZTRlOGYxNjM"
-        />
-        <img />
-      </picture>
       <div
         className="accordionExpandedContent"
       >
@@ -614,15 +313,15 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
           >
             <source
               media="(min-width: 1025px)"
-              srcSet="./assets/images/HorizontalProductDisplayAccordion/candles-product.png"
+              srcSet="https://images.ctfassets.net/u1nb1km7t5q7/3jWHcEvyLuAd3JGTDyM6q6/e8047f01381756ed33cebb66adde78d4/Aesop_Poured_Candles_2020_Hybris_Homepage_Secondary_Accordion_03_Callipus_Menu_1400x1020px.gif"
             />
             <source
               media="(min-width: 640px)"
-              srcSet="./assets/images/HorizontalProductDisplayAccordion/candles-product.png"
+              srcSet="https://images.ctfassets.net/u1nb1km7t5q7/152Y4pHKQXh1rIugZcwpDA/1ff81742d4aec35ffb6b4f4c1ec7407f/Aesop_Poured_Candles_2020_Hybris_Homepage_Secondary_Accordion_03_Callipus_Menu_1400x1020px.gif"
             />
             <source
               media="(min-width: 0px)"
-              srcSet="./assets/images/HorizontalProductDisplayAccordion/candles-product.png"
+              srcSet="https://images.ctfassets.net/u1nb1km7t5q7/4hmTzb2vPAfvAur8D0M0PW/692b1fb975b97be14ced876cf4db71aa/Aesop_Poured_Candles_2020_Hybris_Homepage_Secondary_Accordion_03_Callipus_Menu_1400x1020px.gif"
             />
             <img
               alt="Lorem ipsum dolor sit"
@@ -638,9 +337,214 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
             Aganice
           </h2>
           <h4
-            className="base xSmall dark openStateEyebrow"
+            className="base mediumWeightFont xSmall dark openStateEyebrow"
           >
-            Cardamon · Mimosa · Tobacco
+            Cardamon Mimosa Tobacco
+          </h4>
+          <div
+            className="accordionOpenCopy dark"
+          >
+            A beam to comfort those on the high seas
+          </div>
+          <div
+            className="buttonGroup"
+          >
+            <button
+              className="base alternate blockStyle dark base fullWidth"
+              data-test-ref="ADD_TO_CART"
+              disabled={false}
+              onClick={[Function]}
+              title="Add to your cart — $26.45"
+              type="button"
+            >
+              <span
+                className="label"
+              >
+                <span>
+                  added to your cart
+                </span>
+                <span>
+                  Add to your cart — $26.45
+                </span>
+              </span>
+            </button>
+            <a
+              className="base blockStyle hasIcon left dark cta"
+              href="/"
+              target="_self"
+            >
+              Lorem ipsum dolor
+               
+              <i
+                aria-hidden="true"
+                className="icon"
+              >
+                <svg
+                  className="base rightArrow dark"
+                  data-ref=""
+                  focusable="false"
+                  height={12}
+                  role="img"
+                  style={
+                    Object {
+                      "height": "12px",
+                      "width": "12px",
+                    }
+                  }
+                  tabIndex={-1}
+                  viewBox="0 0 50 50"
+                  width={12}
+                >
+                  <g>
+                    <path
+                      d="M30.1,5.3L50,25.1L30.1,45h-6.6l18-17.6H0v-4.8h41.5l-18-17.6h6.6V5.3z"
+                    />
+                  </g>
+                </svg>
+              </i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <button
+        className="closeBtn dark"
+        onClick={[Function]}
+      >
+        Close
+      </button>
+    </div>
+  </div>
+  <div
+    className="base"
+    id="Aganice"
+    role="button"
+    tabIndex={-1}
+  >
+    <div
+      className="accordionDefaultBackground"
+      style={
+        Object {
+          "backgroundColor": "#9DB5AC",
+        }
+      }
+    >
+      <picture
+        className="base picture dark closedBackgroundImage"
+      >
+        <source
+          media="(min-width: 1025px)"
+          srcSet="https://images.ctfassets.net/u1nb1km7t5q7/79GVrsv9HLi2IptU2s9DuX/118ba7bc9beb0595f6d50dba55a7cf2c/Aesop_Poured_Candles_2020_Hybris_Homepage_Secondary_Accordion_03_Callipus_Background_648x1080px.gif"
+        />
+        <source
+          media="(min-width: 640px)"
+          srcSet="https://images.ctfassets.net/u1nb1km7t5q7/7co3QQhzvXkQNUpik7W6OG/e56006cda4bf43b623687de50e871300/Aesop_Poured_Candles_2020_Hybris_Homepage_Secondary_Accordion_03_Callipus_Background_648x1080px.gif"
+        />
+        <source
+          media="(min-width: 0px)"
+          srcSet="https://images.ctfassets.net/u1nb1km7t5q7/3qxE1emdFuU76KIucYGnKK/f7d3255816270000ab6a2c0754579f65/Aesop_Poured_Candles_2020_Hybris_Homepage_Secondary_Accordion_03_Callipus_Background_648x1080px.gif"
+        />
+        <img />
+      </picture>
+    </div>
+    <div
+      className="accordionDefaultContent"
+    >
+      <div>
+        <h2
+          className="base xLarge light"
+        >
+          Ptolemy
+        </h2>
+        <h4
+          className="base mediumWeightFont xSmall light"
+        >
+          Cardamon Mimosa Tobacco
+        </h4>
+        <div
+          className="accordionClosedCopy light"
+        >
+          A beam to comfort those on the high seas
+        </div>
+        <button
+          className="openBtn light"
+          onClick={[Function]}
+        >
+          Learn more
+        </button>
+        <button
+          className="base dark closedStateForegroundImageWrap"
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+        >
+          <picture
+            className="base picture dark closedForegroundImage"
+          >
+            <source
+              media="(min-width: 1025px)"
+              srcSet="https://images.ctfassets.net/u1nb1km7t5q7/584i2txtM9Evx8gk8wXeQd/f7aa5dff18c538b5e377a8287c0a60cd/Aesop_Poured_Candles_2020_Hybris_Homepage_Secondary_Accordion_02_Aganice_Product_Desktop_835x962px.png"
+            />
+            <source
+              media="(min-width: 640px)"
+              srcSet="https://images.ctfassets.net/u1nb1km7t5q7/65hEQAyMqMXx7GQa6HbBIN/d014e96f3a284e8a14a5aa9e5e3c901d/Aesop_Poured_Candles_2020_Hybris_Homepage_Secondary_Accordion_02_Aganice_Product_Tablet_653x752px.png"
+            />
+            <source
+              media="(min-width: 0px)"
+              srcSet="https://images.ctfassets.net/u1nb1km7t5q7/5XlxK9vdyy9Bm56uVPFjTv/147183c3c92495d161eced89104ccafe/Aesop_Poured_Candles_2020_Hybris_Homepage_Secondary_Accordion_02_Aganice_Product_Mobile_455x524px.png"
+            />
+            <img
+              alt="Lorem ipsum dolor sit"
+            />
+          </picture>
+        </button>
+      </div>
+    </div>
+    <div
+      className="accordionExpanded"
+      style={
+        Object {
+          "backgroundColor": "#BEAD8F",
+        }
+      }
+    >
+      <div
+        className="accordionExpandedContent"
+      >
+        <div
+          className="expandedAccordionImage"
+        >
+          <picture
+            className="base picture dark"
+          >
+            <source
+              media="(min-width: 1025px)"
+              srcSet="https://images.ctfassets.net/u1nb1km7t5q7/3jWHcEvyLuAd3JGTDyM6q6/e8047f01381756ed33cebb66adde78d4/Aesop_Poured_Candles_2020_Hybris_Homepage_Secondary_Accordion_03_Callipus_Menu_1400x1020px.gif"
+            />
+            <source
+              media="(min-width: 640px)"
+              srcSet="https://images.ctfassets.net/u1nb1km7t5q7/152Y4pHKQXh1rIugZcwpDA/1ff81742d4aec35ffb6b4f4c1ec7407f/Aesop_Poured_Candles_2020_Hybris_Homepage_Secondary_Accordion_03_Callipus_Menu_1400x1020px.gif"
+            />
+            <source
+              media="(min-width: 0px)"
+              srcSet="https://images.ctfassets.net/u1nb1km7t5q7/4hmTzb2vPAfvAur8D0M0PW/692b1fb975b97be14ced876cf4db71aa/Aesop_Poured_Candles_2020_Hybris_Homepage_Secondary_Accordion_03_Callipus_Menu_1400x1020px.gif"
+            />
+            <img
+              alt="Lorem ipsum dolor sit"
+            />
+          </picture>
+        </div>
+        <div
+          className="expandedAccordionText"
+        >
+          <h2
+            className="base xLarge dark openStateHeading"
+          >
+            Aganice
+          </h2>
+          <h4
+            className="base mediumWeightFont xSmall dark openStateEyebrow"
+          >
+            Cardamon Mimosa Tobacco
           </h4>
           <div
             className="accordionOpenCopy dark"

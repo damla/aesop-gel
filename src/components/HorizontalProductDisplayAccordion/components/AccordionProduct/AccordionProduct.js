@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { HYPERLINK_STYLE_TYPES } from '~/constants';
 import AddToCartButton from '~/components/AddToCartButton';
+import Button from '~/components/Button';
 import Heading from '~/components/Heading';
 import Hyperlink from '~/components/Hyperlink';
 import Image from '~/components/Image';
@@ -100,21 +101,22 @@ const AccordionProduct = ({
           >
             {closedState?.openButtonText}
           </button>
-          <button
+          <Button
             className={cx(styles.closedStateForegroundImageWrap)}
+            isInline={true}
             onClick={() => toggleAccordion(index, true)}
           >
             <Image
               className={cx(styles.closedForegroundImage)}
               {...closedState.foregroundImage}
             />
-          </button>
+          </Button>
         </div>
       </div>
 
       <div
         className={cx(styles.accordionExpanded, isExpanded ? styles.open : '')}
-        style={{ backgroundColor: openState?.backgroundColour }}
+        style={{ backgroundColor: openState.backgroundColour }}
       >
         {openState.background === 'Video' && (
           <Video
@@ -152,6 +154,7 @@ const AccordionProduct = ({
             {openState?.eyebrow && (
               <Heading
                 className={styles.openStateEyebrow}
+                hasMediumWeightFont={true}
                 level="4"
                 size="xSmall"
                 theme={openState.theme}
