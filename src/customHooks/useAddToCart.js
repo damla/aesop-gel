@@ -7,6 +7,7 @@ export const ADD_TO_CART_ACTION_TYPES = {
 };
 
 const initialState = {
+  errorMessage: '',
   hasError: false,
   isLoading: false,
   isUpdateSuccessful: false,
@@ -15,18 +16,21 @@ const initialState = {
 function reducer(state, action) {
   if (action.type === ADD_TO_CART_ACTION_TYPES.FETCHING) {
     return {
+      errorMessage: '',
       hasError: false,
       isLoading: true,
       isUpdateSuccessful: false,
     };
   } else if (action.type === ADD_TO_CART_ACTION_TYPES.SUCCESS) {
     return {
+      errorMessage: '',
       hasError: false,
       isLoading: false,
       isUpdateSuccessful: true,
     };
   } else if (action.type === ADD_TO_CART_ACTION_TYPES.FAIL) {
     return {
+      errorMessage: action.payload,
       hasError: true,
       isLoading: false,
       isUpdateSuccessful: false,
