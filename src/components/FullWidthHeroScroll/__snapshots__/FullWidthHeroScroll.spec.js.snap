@@ -159,42 +159,30 @@ exports[`<FullWidthHeroScroll /> renders base component correctly 1`] = `
         </button>
       </div>
       <div
-        className="fullscreenSection"
+        className="base light"
       >
         <div
           className="slowFadeEnter"
         >
-          <h4
-            className="base xLarge light"
-          >
-            Aliquam turpis libero, posuere sed nisl in, porta facilisis lorem. Phasellus eu turpis in quam efficitur hendrerit.
-          </h4>
+          Aliquam turpis libero, posuere sed nisl in, porta facilisis lorem. Phasellus eu turpis in quam efficitur hendrerit.
         </div>
       </div>
       <div
-        className="fullscreenSection"
+        className="base light"
       >
         <div
           className="slowFadeEnter"
         >
-          <h4
-            className="base xLarge light"
-          >
-            Aliquam turpis libero, posuere sed nisl in, porta facilisis lorem. Phasellus eu turpis in quam efficitur hendrerit.
-          </h4>
+          Aliquam turpis libero, posuere sed nisl in, porta facilisis lorem. Phasellus eu turpis in quam efficitur hendrerit.
         </div>
       </div>
       <div
-        className="fullscreenSection"
+        className="base light"
       >
         <div
           className="slowFadeEnter"
         >
-          <h4
-            className="base xLarge light"
-          >
-            Aliquam turpis libero, posuere sed nisl in, porta facilisis lorem. Phasellus eu turpis in quam efficitur hendrerit.
-          </h4>
+          Aliquam turpis libero, posuere sed nisl in, porta facilisis lorem. Phasellus eu turpis in quam efficitur hendrerit.
         </div>
       </div>
     </div>

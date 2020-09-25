@@ -4,9 +4,9 @@ import cx from 'classnames';
 import { HYPERLINK_STYLE_TYPES } from '~/constants';
 import BodyCopy from '~/components/BodyCopy';
 import Hyperlink from '~/components/Hyperlink';
-import FullscreenSection from './components/FullscreenSection';
 import Icon from '~/components/Icon';
 import Video from '~/components/Video';
+import FullscreenSection from './components/FullscreenSection';
 import styles from './FullWidthHeroScroll.module.css';
 
 const FullWidthHeroScroll = ({
@@ -20,21 +20,21 @@ const FullWidthHeroScroll = ({
   theme,
   title,
 }) => {
-  const scrollBtn = useRef();
-  useEffect(() => {
-    const scrollBtnEl = scrollBtn.current;
+  const scrollButton = useRef();
 
-    const fadeScrollBtn = () => {
-      if (window.scrollY > 100) {
-        return;
-      }
-      scrollBtnEl.style.opacity = (100 - window.scrollY) / 100;
+  useEffect(() => {
+    const scrollButtonElelment = scrollButton.current;
+
+    const fadeScrollButton = () => {
+      if (window.scrollY > 100) return;
+
+      scrollButtonElelment.style.opacity = (100 - window.scrollY) / 100;
     };
 
-    window.addEventListener('scroll', fadeScrollBtn);
+    window.addEventListener('scroll', fadeScrollButton);
 
     return function cleanup() {
-      window.removeEventListener('scroll', fadeScrollBtn);
+      window.removeEventListener('scroll', fadeScrollButton);
     };
   });
 
@@ -68,6 +68,7 @@ const FullWidthHeroScroll = ({
                 eyebrow={eyebrow}
                 hasSerifFontHeading={hasSerifFontHeading}
                 heading={title}
+                isHeroArticle={true}
                 theme={theme}
               />
               {cta && (
@@ -85,19 +86,14 @@ const FullWidthHeroScroll = ({
             <button
               className={cx(styles.scrollIndicator, styles[theme])}
               onClick={handleScrollDown}
-              ref={scrollBtn}
+              ref={scrollButton}
               type="button"
             >
               <Icon height={12} name="scrolldown" theme={theme} width={12} />
             </button>
           </div>
-          {textBlocks.map(({ hasSerifFont, text }, index) => (
-            <FullscreenSection
-              hasSerifFont={hasSerifFont}
-              key={index}
-              text={text}
-              theme={theme}
-            />
+          {textBlocks.map(({ text }, index) => (
+            <FullscreenSection key={index} text={text} theme={theme} />
           ))}
         </div>
       </div>

@@ -2,7 +2,7 @@
 
 exports[`<AccordionProduct /> renders base component correctly 1`] = `
 <div
-  className="accordionProduct"
+  className="base"
   id="Aganice"
   role="button"
   tabIndex={-1}
@@ -38,22 +38,22 @@ exports[`<AccordionProduct /> renders base component correctly 1`] = `
   >
     <div>
       <h2
-        className="base xLarge dark"
+        className="base xLarge light"
       >
         Ptolemy
       </h2>
       <h4
-        className="base xXSmall dark"
+        className="base mediumWeightFont xSmall light"
       >
         Cardamon Mimosa Tobacco
       </h4>
       <div
-        className="accordionClosedCopy theme"
+        className="accordionClosedCopy light"
       >
         A beam to comfort those on the high seas
       </div>
       <button
-        className="openBtn"
+        className="openBtn light"
         onClick={[Function]}
       >
         Learn more
@@ -139,17 +139,17 @@ exports[`<AccordionProduct /> renders base component correctly 1`] = `
         className="expandedAccordionText"
       >
         <h2
-          className="base xLarge dark"
+          className="base xLarge dark openStateHeading"
         >
           Aganice
         </h2>
         <h4
-          className="base xXSmall dark"
+          className="base xSmall dark openStateEyebrow"
         >
           Cardamon Mimosa Tobacco
         </h4>
         <div
-          className="accordionOpenCopy theme"
+          className="accordionOpenCopy dark"
         >
           A beam to comfort those on the high seas
         </div>
@@ -212,7 +212,7 @@ exports[`<AccordionProduct /> renders base component correctly 1`] = `
       </div>
     </div>
     <button
-      className="closeBtn"
+      className="closeBtn dark"
       onClick={[Function]}
     >
       Close

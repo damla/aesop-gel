@@ -23,7 +23,7 @@ export default {
         },
         backgroundVideo: null,
         copy: 'A beam to comfort those on the high seas',
-        eyebrow: 'Cardamon Mimosa Tobacco',
+        eyebrow: 'Cardamon · Mimosa · Tobacco',
         foregroundImage: {
           altText: 'Lorem ipsum dolor sit',
           small:
@@ -58,7 +58,7 @@ export default {
           text: 'Lorem ipsum dolor',
           url: '/',
         },
-        eyebrow: 'Cardamon Mimosa Tobacco',
+        eyebrow: 'Cardamon · Mimosa · Tobacco',
         foregroundImage: {
           altText: 'Lorem ipsum dolor sit',
           small:
@@ -128,7 +128,7 @@ export default {
           },
         },
         copy: 'A beam to comfort those on the high seas',
-        eyebrow: 'Cardamon Mimosa Tobacco',
+        eyebrow: 'Cardamon · Mimosa · Tobacco',
         foregroundImage: {
           altText: 'Lorem ipsum dolor sit',
           small:
@@ -210,7 +210,7 @@ export default {
         },
         backgroundVideo: null,
         copy: 'A beam to comfort those on the high seas',
-        eyebrow: 'Cardamon Mimosa Tobacco',
+        eyebrow: 'Cardamon · Mimosa · Tobacco',
         foregroundImage: {
           altText: 'Lorem ipsum dolor sit',
           small:
@@ -245,7 +245,7 @@ export default {
           text: 'Lorem ipsum dolor',
           url: '/',
         },
-        eyebrow: 'Cardamon Mimosa Tobacco',
+        eyebrow: 'Cardamon · Mimosa · Tobacco',
         foregroundImage: {
           altText: 'Lorem ipsum dolor sit',
           small:
