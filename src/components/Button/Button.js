@@ -20,6 +20,8 @@ const Button = forwardRef(function ButtonRef(
   },
   ref,
 ) {
+  if (!children) return null;
+
   const classSet = cx(
     styles.base,
     { [styles.alternate]: isAlternate },
@@ -47,7 +49,7 @@ const Button = forwardRef(function ButtonRef(
 });
 
 Button.propTypes = {
-  children: PropTypes.any.isRequired,
+  children: PropTypes.any,
   className: PropTypes.string,
   dataTestRef: PropTypes.string,
   id: PropTypes.string,
@@ -56,7 +58,7 @@ Button.propTypes = {
   isInline: PropTypes.bool,
   onClick: PropTypes.func,
   tabIndex: PropTypes.number,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   type: PropTypes.oneOf(['button', 'reset', 'submit']),
   theme: PropTypes.oneOf(['dark', 'light']),
 };

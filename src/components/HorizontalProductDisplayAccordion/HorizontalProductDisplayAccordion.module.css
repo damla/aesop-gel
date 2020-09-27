@@ -4,6 +4,11 @@
   display: flex;
   height: 90vh;
 
+  &,
+  & * {
+    box-sizing: border-box;
+  }
+
   @media (--viewport-sm-only) {
     display: block;
     height: auto;

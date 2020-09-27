@@ -1,3 +1,5 @@
+import mockAddToCartButtonOnClick from '~/components/AddToCartButton/__mocks__/AddToCartButton.onClick';
+
 export default {
   addToCartCopy: {
     cartAction: 'Add to your cart',
@@ -9,6 +11,7 @@ export default {
   },
   products: [
     {
+      handleAddToCart: mockAddToCartButtonOnClick,
       closedState: {
         addToCart: {
           cartAction: 'Add to your cart',
@@ -92,6 +95,7 @@ export default {
       },
     },
     {
+      handleAddToCart: mockAddToCartButtonOnClick,
       closedState: {
         addToCart: {
           cartAction: 'Add to your cart',
@@ -175,6 +179,7 @@ export default {
       },
     },
     {
+      handleAddToCart: mockAddToCartButtonOnClick,
       closedState: {
         addToCart: {
           cartAction: 'Add to your cart',

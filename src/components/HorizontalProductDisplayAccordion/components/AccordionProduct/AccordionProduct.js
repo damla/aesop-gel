@@ -7,6 +7,7 @@ import Button from '~/components/Button';
 import Heading from '~/components/Heading';
 import Hyperlink from '~/components/Hyperlink';
 import Image from '~/components/Image';
+import LinkButtonGroup from '~/components/LinkButtonGroup';
 import Video from '~/components/Video';
 import styles from './AccordionProduct.module.css';
 
@@ -167,11 +168,14 @@ const AccordionProduct = ({
             >
               {openState?.copy}
             </div>
-            <div className={cx(styles.buttonGroup)}>
+            <LinkButtonGroup
+              isFlush={false}
+              isFullWidth={true}
+              istheme={openState.theme}
+            >
               <AddToCartButton copy={addToCartCopy} theme={openState.theme} />
               {openState?.cta && (
                 <Hyperlink
-                  className={styles.cta}
                   isAlternate={false}
                   style={HYPERLINK_STYLE_TYPES.INTERNAL_BUTTON_LINK}
                   theme={openState.theme}
@@ -180,7 +184,7 @@ const AccordionProduct = ({
                   {openState?.cta.text}
                 </Hyperlink>
               )}
-            </div>
+            </LinkButtonGroup>
           </div>
         </div>
         <button
