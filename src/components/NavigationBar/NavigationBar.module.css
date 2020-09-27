@@ -1,5 +1,103 @@
 @import 'styles/index';
 
-.base {
-  color: red;
+.wrapper {
+  position: relative;
+  overflow: hidden;
+
+  &::before,
+  &::after {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    height: 100%;
+    content: '';
+  }
+
+  &::before {
+    left: 0;
+    width: 20px;
+    background-image: linear-gradient(to right, #fff 0%, transparent 100%);
+  }
+  &::after {
+    right: 0;
+    width: 50px;
+    background-image: linear-gradient(to right, transparent 0%, #fff 100%);
+  }
+}
+
+.list {
+  display: flex;
+  overflow: auto;
+  height: 64px;
+  align-items: center;
+  padding: 0 5px;
+  margin: 0;
+  background-color: transparent;
+  list-style-type: none;
+  white-space: nowrap;
+
+  > *:last-child {
+    padding-right: 50px;
+  }
+
+  @media (--viewport-lg) {
+    height: 110px;
+  }
+}
+
+.link {
+  display: block;
+  border: none;
+  margin: 0 1rem;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: var(--font-family-sans-serif-medium);
+  font-size: rem(14px);
+
+  /* Web UI has global button styles with outlines */
+  outline: none !important;
+  text-decoration: none;
+
+  &.hasChildren {
+    display: flex;
+    align-items: center;
+    margin-right: 0;
+
+    &::after {
+      width: 1px;
+      height: 10px;
+      margin-left: 1rem;
+      background-color: currentColor;
+      content: '';
+    }
+  }
+
+  .linkInnerText {
+    display: block;
+
+    &::after {
+      display: block;
+      border-bottom: solid 1px currentcolor;
+      margin-top: 2px;
+      content: '';
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 250ms var(--easing-ease-out-cubic);
+    }
+  }
+
+  &:focus {
+    .linkInnerText {
+      outline: 1px solid currentColor;
+      outline-offset: 5px;
+      transition: outline-offset 200ms var(--easing-ease-out-cubic);
+    }
+  }
+
+  &:hover,
+  &.isActive {
+    .linkInnerText::after {
+      transform: scaleX(1);
+    }
+  }
 }
