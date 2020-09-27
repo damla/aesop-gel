@@ -146,10 +146,9 @@
   justify-content: center;
   padding: 20px;
   opacity: 0;
-  transform: translate3d(0, 0, 0);
-  transition-delay: 800ms, 800ms;
-  transition-duration: 1000ms, 1000ms;
-  transition-property: transform, opacity;
+  transition-delay: 800ms;
+  transition-duration: 1000ms;
+  transition-property: opacity;
   transition-timing-function:
     var(--easing-ease-out-cubic),
     var(--easing-ease-out-cubic);
@@ -159,18 +158,22 @@
   }
 
   @media (--viewport-md) {
+    justify-content: space-around;
     padding: 34px;
+  }
+
+  @media (--viewport-lg) {
+    justify-content: flex-start;
+    padding: 40px;
   }
 }
 
 .open .accordionExpandedContent {
   opacity: 1;
-  transform: translate3d(0, 0, 0);
 }
 
 .expandedAccordionImage {
   position: relative;
-  width: 30%;
 
   @media (--viewport-sm-md-only) {
     width: 100%;
@@ -192,11 +195,12 @@
 
   @media (--viewport-md) {
     max-height: 420px;
-    margin-bottom: 80px;
   }
 
   @media (--viewport-lg) {
+    width: 33.33%;
     margin-right: 40px;
+    margin-bottom: 0;
   }
 }
 
@@ -206,7 +210,7 @@
   }
 
   @media (--viewport-lg) {
-    width: 66.6%;
+    width: 66.66%;
     max-width: 640px;
   }
 }
@@ -223,27 +227,6 @@
 
   &:focus {
     outline: 0;
-  }
-}
-
-.buttonGroup {
-  display: flex;
-
-  button,
-  a {
-    flex: 1;
-  }
-
-  button {
-    margin: 0 4px 0 0;
-  }
-
-  @media (--viewport-sm-only) {
-    display: block;
-
-    button {
-      margin: 0 0 4px;
-    }
   }
 }
 
