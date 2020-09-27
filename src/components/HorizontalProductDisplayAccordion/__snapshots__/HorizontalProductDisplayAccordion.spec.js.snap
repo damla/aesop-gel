@@ -142,10 +142,10 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
             A beam to comfort those on the high seas
           </div>
           <div
-            className="buttonGroup"
+            className="base"
           >
             <button
-              className="base alternate blockStyle dark base fullWidth"
+              className="base alternate blockStyle dark base fullWidth  link fullWidth center"
               data-test-ref="ADD_TO_CART"
               disabled={false}
               onClick={[Function]}
@@ -164,7 +164,7 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
               </span>
             </button>
             <a
-              className="base blockStyle hasIcon left dark cta"
+              className="base blockStyle hasIcon center dark  link fullWidth center"
               href="/"
               target="_self"
             >
@@ -347,10 +347,10 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
             A beam to comfort those on the high seas
           </div>
           <div
-            className="buttonGroup"
+            className="base"
           >
             <button
-              className="base alternate blockStyle dark base fullWidth"
+              className="base alternate blockStyle dark base fullWidth  link fullWidth center"
               data-test-ref="ADD_TO_CART"
               disabled={false}
               onClick={[Function]}
@@ -369,7 +369,7 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
               </span>
             </button>
             <a
-              className="base blockStyle hasIcon left dark cta"
+              className="base blockStyle hasIcon center dark  link fullWidth center"
               href="/"
               target="_self"
             >
@@ -552,10 +552,10 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
             A beam to comfort those on the high seas
           </div>
           <div
-            className="buttonGroup"
+            className="base"
           >
             <button
-              className="base alternate blockStyle dark base fullWidth"
+              className="base alternate blockStyle dark base fullWidth  link fullWidth center"
               data-test-ref="ADD_TO_CART"
               disabled={false}
               onClick={[Function]}
@@ -574,7 +574,7 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
               </span>
             </button>
             <a
-              className="base blockStyle hasIcon left dark cta"
+              className="base blockStyle hasIcon center dark  link fullWidth center"
               href="/"
               target="_self"
             >
