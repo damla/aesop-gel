@@ -36,13 +36,17 @@ const ProductCommerce = ({
     variants,
   } = useVariantSelectContext();
 
-  const { sku } = useProductDetailContext();
+  const isBundle = variants?.length === 0;
+
+  const { productDetail } = useProductDetailContext();
+  const { sku } = productDetail;
+
   const [currentImage, isImageActive] = useImageTransition(
-    selectedVariant?.image,
+    selectedVariant?.image || productDetail.image,
     imageRef,
   );
 
-  if (!selectedVariant) {
+  if (!isBundle && !selectedVariant) {
     return <Loading isLoading={true} />;
   }
 
@@ -79,7 +83,7 @@ const ProductCommerce = ({
           </Transition>
         </div>
       </Transition>
-      {size && (
+      {size && !isBundle && (
         <Transition isActive={isActive} type={TRANSITIONS.TYPE.SLOW_FADE}>
           <div className={styles.variantsWrapper}>
             <Heading

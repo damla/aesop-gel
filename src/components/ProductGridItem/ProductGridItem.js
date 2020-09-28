@@ -25,15 +25,15 @@ const ProductGridItem = ({ className, copy, id, info, theme, url }) => {
     onVariantChange,
     variants,
   } = useVariantSelectContext();
+  const { productDetail } = useProductDetailContext();
 
   const hasOneVariant = variants?.length === 1;
+  const isBundle = variants?.length === 0;
 
   const [currentImage, isImageActive] = useImageTransition(
-    selectedVariant?.image,
+    selectedVariant?.image || productDetail.image,
     imageRef,
   );
-
-  const { productDetail } = useProductDetailContext();
 
   if (!productDetail) return null;
 
@@ -43,7 +43,7 @@ const ProductGridItem = ({ className, copy, id, info, theme, url }) => {
   const classSet = cx(styles.base, styles[theme], className);
 
   const classInfoHolderSet = cx(styles.infoHolder, {
-    [styles.hasOneVariant]: hasOneVariant,
+    [styles.hasOneVariant]: hasOneVariant || isBundle,
     [styles.hasManyVariants]: !hasOneVariant,
   });
 
@@ -84,7 +84,7 @@ const ProductGridItem = ({ className, copy, id, info, theme, url }) => {
           </P>
         </div>
 
-        {!hasOneVariant && (
+        {!hasOneVariant && !isBundle && (
           <RadioGroup
             className={styles.variants}
             dataTestRef={RADIO_GROUP_DATA_TEST_REF}
