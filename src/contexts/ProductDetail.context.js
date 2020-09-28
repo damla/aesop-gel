@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { createContext, useContext } from 'react';
-import { useProductDetail } from '~/customHooks';
+import useProductDetail from '~/customHooks/useProductDetail';
 
 const defaultValues = {
   productDetail: {

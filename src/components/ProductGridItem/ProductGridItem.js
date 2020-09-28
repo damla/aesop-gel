@@ -4,7 +4,7 @@ import cx from 'classnames';
 
 import { HEADING } from '~/constants';
 import { useProductDetailContext, useVariantSelectContext } from '~/contexts';
-import { useImageTransition } from '~/customHooks';
+import useImageTransition from '~/customHooks/useImageTransition';
 import { getVariantRadioOptions } from '~/utils/product';
 
 import AddToCartButton from '~/components/AddToCartButton';

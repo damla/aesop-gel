@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { HEADING, HYPERLINK_STYLE_TYPES } from '~/constants';
 import { useProductDetailContext, useVariantSelectContext } from '~/contexts';
-import { useImageTransition } from '~/customHooks';
+import useImageTransition from '~/customHooks/useImageTransition';
 import { getVariantRadioOptions } from '~/utils/product';
 import AddToCartButton from '~/components/AddToCartButton';
 import Heading from '~/components/Heading';

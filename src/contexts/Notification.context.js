@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { createContext, useContext } from 'react';
-import { useNotification } from '~/customHooks';
+import useNotification from '~/customHooks/useNotification';
 
 const initialState = {
   actionTypes: {},

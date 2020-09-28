@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { createContext, useContext } from 'react';
-import { useAddToCart } from '~/customHooks';
+import useAddToCart from '~/customHooks/useAddToCart';
 
 const initialState = {
   actionTypes: {},

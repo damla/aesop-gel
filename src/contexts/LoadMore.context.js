@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { createContext, useContext } from 'react';
-import { useLoadMore } from '~/customHooks';
+import useLoadMore from '~/customHooks/useLoadMore';
 
 const initialState = {
   actionTypes: {},
