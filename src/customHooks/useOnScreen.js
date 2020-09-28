@@ -1,16 +1,17 @@
 import { useEffect, useState } from 'react';
 
 const hasIntersectionObserver =
-  'IntersectionObserver' in window ||
-  'IntersectionObserverEntry' in window ||
-  ('IntersectionObserverEntry' in window &&
-    'intersectionRatio' in window.IntersectionObserverEntry.prototype);
+  typeof window !== 'undefined' &&
+  ('IntersectionObserver' in window ||
+    'IntersectionObserverEntry' in window ||
+    ('IntersectionObserverEntry' in window &&
+      'intersectionRatio' in window.IntersectionObserverEntry.prototype));
 
 export const useOnScreen = (ref, threshold = 0, rootMargin = '0px') => {
   const [isOnScreen, setIsOnScreen] = useState(false);
 
   useEffect(() => {
-    if (!ref?.current) return;
+    if (!ref.current) return;
 
     let observer = null;
     const currentRef = ref.current;
