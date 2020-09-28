@@ -3,12 +3,22 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import styles from './Paragraph.module.css';
 
-const Paragraph = ({ children, className, isFlush, isLarge, theme }) => {
+const Paragraph = ({
+  children,
+  className,
+  hasSerifFont,
+  isFlush,
+  isHero,
+  isLarge,
+  theme,
+}) => {
   const classSet = cx(
     styles.base,
     styles[theme],
     { [styles.flush]: isFlush },
     { [styles.large]: isLarge },
+    { [styles.hero]: isHero },
+    { [styles.serifFont]: hasSerifFont },
     className,
   );
 
@@ -18,7 +28,9 @@ const Paragraph = ({ children, className, isFlush, isLarge, theme }) => {
 Paragraph.propTypes = {
   children: PropTypes.any,
   className: PropTypes.string,
+  hasSerifFont: PropTypes.bool,
   isFlush: PropTypes.bool,
+  isHero: PropTypes.bool,
   isLarge: PropTypes.bool,
   theme: PropTypes.oneOf(['dark', 'light']),
 };
@@ -26,7 +38,9 @@ Paragraph.propTypes = {
 Paragraph.defaultProps = {
   children: undefined,
   className: undefined,
+  hasSerifFont: false,
   isFlush: false,
+  isHero: false,
   isLarge: false,
   theme: 'dark',
 };

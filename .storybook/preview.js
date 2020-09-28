@@ -1,11 +1,20 @@
 import { addDecorator } from '@storybook/react';
-import { withA11y } from '@storybook/addon-a11y';
 import { withKnobs } from '@storybook/addon-knobs';
 
 export const parameters = {
+  a11y: {
+    element: '#root',
+    config: {},
+    options: {},
+    manual: true,
+  },
   backgrounds: {
-    default: '#fff',
+    default: 'white',
     values: [
+      {
+        name: 'white',
+        value: '#fff',
+      },
       {
         name: 'alabaster',
         value: '#fffef0',
@@ -18,5 +27,4 @@ export const parameters = {
   },
 };
 
-addDecorator(withA11y);
 addDecorator(withKnobs);

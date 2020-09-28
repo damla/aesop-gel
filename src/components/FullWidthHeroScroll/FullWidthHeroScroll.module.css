@@ -26,6 +26,7 @@
 
 .backgroundVideo {
   height: 100%;
+
   @media (--viewport-lg) {
     height: 100%;
   }
@@ -56,7 +57,11 @@
 
 .scrollLockWrap {
   position: relative;
-  margin-top: -75px;
+  margin-top: 0;
+
+  &.topOffset {
+    margin-top: -75px;
+  }
 }
 
 .scrollLockMedia {
@@ -70,7 +75,11 @@
 .scrollingContent {
   position: relative;
   top: -100vh;
-  padding-top: 75px;
+  padding-top: 0;
+
+  .topOffset & {
+    padding-top: 75px;
+  }
 }
 
 .fullscreenHero {
@@ -85,6 +94,7 @@
 .fullscreenHeroText {
   width: 50%;
   padding: 0 8% 0 16%;
+
   & > div {
     margin: 0;
   }
@@ -108,11 +118,14 @@
   background: none;
   border-radius: 0;
   cursor: pointer;
+
   svg {
     width: 12px;
   }
+
   &.dark {
     border-color: var(--color-dark-copy);
+
     svg {
       fill: var(--color-dark-copy);
     }
@@ -120,10 +133,12 @@
 
   &.light {
     border-color: var(--color-light-copy);
+
     svg {
       fill: var(--color-light-copy);
     }
   }
+
   &:focus {
     outline: 0;
   }

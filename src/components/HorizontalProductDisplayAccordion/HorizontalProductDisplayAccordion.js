@@ -1,20 +1,44 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import debounce from 'lodash/debounce';
 import cx from 'classnames';
 import {
+  AddToCartContextProvider,
   ProductDetailContextProvider,
   VariantSelectContextProvider,
 } from '~/contexts';
+import useWindowHasResized from '~/customHooks/useWindowHasResized';
+import { ascertainIsSmallOnlyViewport } from '~/utils/viewports';
 import AccordionProduct from './components/AccordionProduct';
 import styles from './HorizontalProductDisplayAccordion.module.css';
-import { ascertainIsSmallOnlyViewport } from '~/utils/viewports';
-import useWindowHasResized from '~/customHooks/useWindowHasResized';
-import debounce from 'lodash/debounce';
 
 const HorizontalProductDisplayAccordion = ({ id, products, addToCartCopy }) => {
   const [accordionProducts, toggleAccordionProducts] = useState(products);
   const [accordionActive, toggleAccordionActiveState] = useState(false);
   const isMobile = ascertainIsSmallOnlyViewport();
+
+  useEffect(() => {
+    let currentSize = ascertainIsSmallOnlyViewport();
+
+    const resetAccordionOnResize = debounce(() => {
+      if (ascertainIsSmallOnlyViewport() !== currentSize) {
+        accordionProducts.map(product => {
+          product.isExpanded = false;
+          product.isCompressed = false;
+        });
+
+        currentSize = ascertainIsSmallOnlyViewport();
+      }
+    }, 200);
+
+    window.addEventListener('resize', resetAccordionOnResize);
+
+    return function callback() {
+      window.removeEventListener('resize', resetAccordionOnResize);
+    };
+  }, [accordionProducts]);
+
+  useWindowHasResized();
 
   const toggleAccordion = (index, opening) => {
     toggleAccordionProducts(
@@ -65,56 +89,36 @@ const HorizontalProductDisplayAccordion = ({ id, products, addToCartCopy }) => {
     );
   };
 
-  useEffect(() => {
-    let currentSize = ascertainIsSmallOnlyViewport();
-    const resetAccordionOnResize = debounce(() => {
-      if (ascertainIsSmallOnlyViewport() !== currentSize) {
-        accordionProducts.map(product => {
-          product.isExpanded = false;
-          product.isCompressed = false;
-        });
-        currentSize = ascertainIsSmallOnlyViewport();
-      }
-    }, 200);
-
-    window.addEventListener('resize', resetAccordionOnResize);
-
-    return function callback() {
-      window.removeEventListener('resize', resetAccordionOnResize);
-    };
-  }, [accordionProducts]);
-
-  useWindowHasResized();
-
   return (
     <div
-      className={
-        (accordionActive ? 'accordion-active ' : '') +
-        cx(styles.accordionProductWrap)
-      }
+      className={(accordionActive ? 'accordion-active ' : '') + cx(styles.base)}
       id={id}
     >
       {accordionProducts.map(({ ...product }, productIndex) => {
         return (
-          <ProductDetailContextProvider
+          <AddToCartContextProvider
             key={productIndex}
-            product={{
-              description: product.openState.eyebrow,
-              productName: product.openState.title,
-            }}
+            onClick={product.handleAddToCart}
           >
-            <VariantSelectContextProvider
-              variants={product.openState.product.variants}
+            <ProductDetailContextProvider
+              product={{
+                description: product.openState.eyebrow,
+                productName: product.openState.title,
+              }}
             >
-              <AccordionProduct
-                addToCartCopy={addToCartCopy}
-                index={productIndex}
-                resetAccordion={resetAccordion}
-                toggleAccordion={toggleAccordion}
-                {...product}
-              />
-            </VariantSelectContextProvider>
-          </ProductDetailContextProvider>
+              <VariantSelectContextProvider
+                variants={product.openState.product.variants}
+              >
+                <AccordionProduct
+                  addToCartCopy={addToCartCopy}
+                  index={productIndex}
+                  resetAccordion={resetAccordion}
+                  toggleAccordion={toggleAccordion}
+                  {...product}
+                />
+              </VariantSelectContextProvider>
+            </ProductDetailContextProvider>
+          </AddToCartContextProvider>
         );
       })}
     </div>
@@ -148,6 +152,7 @@ HorizontalProductDisplayAccordion.propTypes = {
         theme: PropTypes.string,
         title: PropTypes.string,
       }),
+      handleAddToCart: PropTypes.func,
       isCompressed: PropTypes.bool,
       isExpanded: PropTypes.bool,
       id: PropTypes.string,
@@ -205,6 +210,7 @@ HorizontalProductDisplayAccordion.defaultProps = {
       theme: undefined,
       title: undefined,
     },
+    handleAddToCart: undefined,
     isCompressed: undefined,
     isExpanded: undefined,
     id: undefined,

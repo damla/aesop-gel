@@ -36,6 +36,18 @@ const shiftInLeft = {
   timeout: 1500,
 };
 
+const shiftInUp = {
+  classNames: {
+    enter: transitions.shiftInUpEnter,
+    enterActive: transitions.shiftInUpEnterActive,
+    enterDone: transitions.shiftInUpEnterDone,
+    exit: transitions.shiftInUpExit,
+    exitActive: transitions.shiftInUpExitActive,
+    exitDone: transitions.shiftInUpExitDone,
+  },
+  timeout: 1500,
+};
+
 const shiftInDown = {
   classNames: {
     enter: transitions.shiftInDownEnter,
@@ -88,6 +100,7 @@ export default {
   fade,
   shiftInDown,
   shiftInLeft,
+  shiftInUp,
   slideDown,
   slideRight,
   slowFade,

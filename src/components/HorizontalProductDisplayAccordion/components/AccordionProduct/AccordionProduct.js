@@ -1,21 +1,23 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { HYPERLINK_STYLE_TYPES } from '~/constants';
-import PropTypes from 'prop-types';
 import AddToCartButton from '~/components/AddToCartButton';
-import Video from '~/components/Video';
+import Button from '~/components/Button';
 import Heading from '~/components/Heading';
 import Hyperlink from '~/components/Hyperlink';
 import Image from '~/components/Image';
+import LinkButtonGroup from '~/components/LinkButtonGroup';
+import Video from '~/components/Video';
 import styles from './AccordionProduct.module.css';
 
 const AccordionProduct = ({
   addToCartCopy,
   closedState,
-  isCompressed,
-  isExpanded,
   id,
   index,
+  isCompressed,
+  isExpanded,
   openState,
   resetAccordion,
   toggleAccordion,
@@ -23,7 +25,7 @@ const AccordionProduct = ({
   return (
     <div
       className={cx(
-        styles.accordionProduct,
+        styles.base,
         isExpanded && styles.isExpanded,
         isCompressed && styles.isCompressed,
       )}
@@ -68,42 +70,54 @@ const AccordionProduct = ({
         <div>
           {closedState?.title && (
             <Heading
-              hasSerifFont={closedState?.hasSerifFont}
+              hasSerifFont={closedState.hasSerifFont}
               level="2"
               size="xLarge"
+              theme={closedState.theme}
             >
               {closedState?.title}
             </Heading>
           )}
           {closedState?.eyebrow && (
-            <Heading level="4" size="xXSmall">
+            <Heading
+              hasMediumWeightFont={true}
+              level="4"
+              size="xSmall"
+              theme={closedState.theme}
+            >
               {closedState?.eyebrow}
             </Heading>
           )}
-          <div className={cx(styles.accordionClosedCopy, styles.theme)}>
+          <div
+            className={cx(
+              styles.accordionClosedCopy,
+              styles[closedState.theme],
+            )}
+          >
             {closedState?.copy}
           </div>
           <button
-            className={cx(styles.openBtn)}
+            className={cx(styles.openBtn, styles[closedState.theme])}
             onClick={() => toggleAccordion(index, true)}
           >
             {closedState?.openButtonText}
           </button>
-          <button
+          <Button
             className={cx(styles.closedStateForegroundImageWrap)}
+            isInline={true}
             onClick={() => toggleAccordion(index, true)}
           >
             <Image
               className={cx(styles.closedForegroundImage)}
               {...closedState.foregroundImage}
             />
-          </button>
+          </Button>
         </div>
       </div>
 
       <div
         className={cx(styles.accordionExpanded, isExpanded ? styles.open : '')}
-        style={{ backgroundColor: openState?.backgroundColour }}
+        style={{ backgroundColor: openState.backgroundColour }}
       >
         {openState.background === 'Video' && (
           <Video
@@ -129,38 +143,52 @@ const AccordionProduct = ({
           <div className={cx(styles.expandedAccordionText)}>
             {openState?.title && (
               <Heading
+                className={styles.openStateHeading}
                 hasSerifFont={openState?.hasSerifFont}
                 level="2"
                 size="xLarge"
+                theme={openState.theme}
               >
                 {openState?.title}
               </Heading>
             )}
             {openState?.eyebrow && (
-              <Heading level="4" size="xXSmall">
+              <Heading
+                className={styles.openStateEyebrow}
+                hasMediumWeightFont={true}
+                level="4"
+                size="xSmall"
+                theme={openState.theme}
+              >
                 {openState?.eyebrow}
               </Heading>
             )}
-            <div className={cx(styles.accordionOpenCopy, styles.theme)}>
+            <div
+              className={cx(styles.accordionOpenCopy, styles[openState.theme])}
+            >
               {openState?.copy}
             </div>
-            <div className={cx(styles.buttonGroup)}>
+            <LinkButtonGroup
+              isFlush={false}
+              isFullWidth={true}
+              theme={openState.theme}
+            >
               <AddToCartButton copy={addToCartCopy} theme={openState.theme} />
               {openState?.cta && (
                 <Hyperlink
-                  className={styles.cta}
                   isAlternate={false}
                   style={HYPERLINK_STYLE_TYPES.INTERNAL_BUTTON_LINK}
+                  theme={openState.theme}
                   url={openState?.cta.url}
                 >
                   {openState?.cta.text}
                 </Hyperlink>
               )}
-            </div>
+            </LinkButtonGroup>
           </div>
         </div>
         <button
-          className={cx(styles.closeBtn)}
+          className={cx(styles.closeBtn, styles[openState.theme])}
           onClick={() => toggleAccordion(index, false)}
         >
           {openState.closeButtonText}

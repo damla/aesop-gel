@@ -18,6 +18,9 @@ const AddToCartButton = ({
 }) => {
   const addToCart = useAddToCartContext();
   const { selectedVariant } = useVariantSelectContext();
+
+  if (!selectedVariant) return null;
+
   const { isInStock, price, sku, alternateAction } = selectedVariant;
 
   const classSet = cx(
@@ -64,7 +67,7 @@ const AddToCartButton = ({
     );
   }
 
-  const { hasError, isLoading, isUpdateSuccessful } = addToCart;
+  const { errorMessage, hasError, isLoading, isUpdateSuccessful } = addToCart;
   const cartActionLabel = `${copy.cartAction} — ${price}`;
   const updateNotificationLabel = copy.updateNotification;
   const showUpdateSuccessMessage = !isLoading && isUpdateSuccessful;
@@ -77,7 +80,7 @@ const AddToCartButton = ({
 
   if (hasError) {
     /** @TODO Handle errors thrown by handleOnClick */
-    console.error('updateError'); // eslint-disable-line
+    console.error('Add To Cart button updateError: ', errorMessage); // eslint-disable-line
   }
 
   return (
@@ -85,7 +88,7 @@ const AddToCartButton = ({
       className={classSet}
       dataTestRef={dataTestRef}
       isAlternate={true}
-      isEnabled={!isLoading && price && sku && isEnabled}
+      isEnabled={!isLoading && price && sku && isEnabled && !hasError}
       onClick={handleOnClick}
       theme={theme}
       title={cartActionLabel}
