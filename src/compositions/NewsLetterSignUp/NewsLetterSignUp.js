@@ -135,6 +135,7 @@ const NewsLetterSignUp = ({
             <Textarea
               id="term-condition"
               isEnabled={false}
+              rows={3}
               theme={theme}
               value={termsAndCondition}
             />

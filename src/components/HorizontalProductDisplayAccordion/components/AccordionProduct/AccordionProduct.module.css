@@ -125,7 +125,9 @@
   transition-delay: 800ms, 800ms;
   transition-duration: 1000ms, 1000ms;
   transition-property: transform, opacity;
-  transition-timing-function: var(--easing-ease-out-cubic), var(--easing-ease-out-cubic);
+  transition-timing-function:
+    var(--easing-ease-out-cubic),
+    var(--easing-ease-out-cubic);
 
   @media (--viewport-sm-only) {
     flex-direction: column;
