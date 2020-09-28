@@ -156,7 +156,7 @@ export default {
           large:
             'https://images.ctfassets.net/u1nb1km7t5q7/3jWHcEvyLuAd3JGTDyM6q6/e8047f01381756ed33cebb66adde78d4/Aesop_Poured_Candles_2020_Hybris_Homepage_Secondary_Accordion_03_Callipus_Menu_1400x1020px.gif',
         },
-        theme: 'dark',
+        theme: 'light',
         title: 'Aganice',
         product: {
           variants: [
@@ -214,7 +214,7 @@ export default {
         },
         id: 'ptolomey-closed-test',
         openButtonText: 'Learn more',
-        theme: 'light',
+        theme: 'dark',
         title: 'Ptolemy',
         typeface: 'sans-serif',
       },

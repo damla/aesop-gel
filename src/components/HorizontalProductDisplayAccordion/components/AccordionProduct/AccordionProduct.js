@@ -171,7 +171,7 @@ const AccordionProduct = ({
             <LinkButtonGroup
               isFlush={false}
               isFullWidth={true}
-              istheme={openState.theme}
+              theme={openState.theme}
             >
               <AddToCartButton copy={addToCartCopy} theme={openState.theme} />
               {openState?.cta && (

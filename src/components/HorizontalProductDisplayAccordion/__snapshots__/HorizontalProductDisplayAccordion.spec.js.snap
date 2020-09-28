@@ -332,17 +332,17 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
           className="expandedAccordionText"
         >
           <h2
-            className="base xLarge dark openStateHeading"
+            className="base xLarge light openStateHeading"
           >
             Aganice
           </h2>
           <h4
-            className="base mediumWeightFont xSmall dark openStateEyebrow"
+            className="base mediumWeightFont xSmall light openStateEyebrow"
           >
             Cardamon Mimosa Tobacco
           </h4>
           <div
-            className="accordionOpenCopy dark"
+            className="accordionOpenCopy light"
           >
             A beam to comfort those on the high seas
           </div>
@@ -350,7 +350,7 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
             className="base"
           >
             <button
-              className="base alternate blockStyle dark base fullWidth  link fullWidth center"
+              className="base alternate blockStyle light base fullWidth  link fullWidth center"
               data-test-ref="ADD_TO_CART"
               disabled={false}
               onClick={[Function]}
@@ -369,7 +369,7 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
               </span>
             </button>
             <a
-              className="base blockStyle hasIcon center dark  link fullWidth center"
+              className="base blockStyle hasIcon center light  link fullWidth center"
               href="/"
               target="_self"
             >
@@ -380,7 +380,7 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
                 className="icon"
               >
                 <svg
-                  className="base rightArrow dark"
+                  className="base rightArrow light"
                   data-ref=""
                   focusable="false"
                   height={12}
@@ -407,7 +407,7 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
         </div>
       </div>
       <button
-        className="closeBtn dark"
+        className="closeBtn light"
         onClick={[Function]}
       >
         Close
@@ -451,22 +451,22 @@ exports[`<HorizontalProductDisplayAccordion /> renders base component correctly 
     >
       <div>
         <h2
-          className="base xLarge light"
+          className="base xLarge dark"
         >
           Ptolemy
         </h2>
         <h4
-          className="base mediumWeightFont xSmall light"
+          className="base mediumWeightFont xSmall dark"
         >
           Cardamon Mimosa Tobacco
         </h4>
         <div
-          className="accordionClosedCopy light"
+          className="accordionClosedCopy dark"
         >
           A beam to comfort those on the high seas
         </div>
         <button
-          className="openBtn light"
+          className="openBtn dark"
           onClick={[Function]}
         >
           Learn more
