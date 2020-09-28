@@ -51,6 +51,6 @@
   width: fit-content;
 }
 
-.fullWidth {
+.fullWidth.fullWidth {
   max-width: none;
 }
