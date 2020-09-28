@@ -32,7 +32,7 @@
 }
 
 :global(.slick-slider:hover) {
-  :local(.base) {
+  .base {
     transform: translate3d(0, 0, 0);
   }
 }

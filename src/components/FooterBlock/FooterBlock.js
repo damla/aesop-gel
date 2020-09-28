@@ -4,7 +4,7 @@ import Hidden from '~/components/Hidden';
 import Hyperlink from '~/components/Hyperlink';
 import { HYPERLINK_STYLE_TYPES } from '~/constants';
 import cx from 'classnames';
-import styles from './FooterBlock.css';
+import styles from './FooterBlock.module.css';
 
 const {
   EXTERNAL_TEXT_LINK,
