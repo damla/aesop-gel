@@ -34,6 +34,5 @@ export default {
       hasTargetInNewWindow: true,
     },
   ],
-  theme: 'dark',
   selectedUrl: '/child3',
 };

@@ -10,13 +10,7 @@ const testRefs = {
   childLink: 'NAVIGATION_BAR_CHILD_LINK',
 };
 
-const NavigationBar = ({
-  childLinks,
-  className,
-  parentLink,
-  selectedUrl,
-  theme,
-}) => {
+const NavigationBar = ({ childLinks, className, parentLink, selectedUrl }) => {
   const hasChildren = !!childLinks.length;
 
   if (!hasChildren && !parentLink) {
@@ -52,7 +46,7 @@ const NavigationBar = ({
                     : testRefs.childLink
                 }
                 hasTargetInNewWindow={hasTargetInNewWindow}
-                theme={theme}
+                theme="dark"
                 url={url}
               >
                 <span className={cx(styles.linkInnerText)}>{text}</span>
@@ -80,7 +74,6 @@ NavigationBar.propTypes = {
     url: PropTypes.string.isRequired,
   }),
   selectedUrl: PropTypes.string,
-  theme: PropTypes.oneOf(['dark', 'light']),
 };
 
 NavigationBar.defaultProps = {
@@ -88,7 +81,6 @@ NavigationBar.defaultProps = {
   className: undefined,
   parentLink: undefined,
   selectedUrl: undefined,
-  theme: 'dark',
 };
 
 export default NavigationBar;
