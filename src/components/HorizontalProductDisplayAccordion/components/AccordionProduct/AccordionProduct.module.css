@@ -10,9 +10,26 @@
   transition-property: width;
   transition-timing-function: var(--easing-ease-out-cubic);
 
+  &,
+  & * {
+    box-sizing: border-box;
+  }
+
   &.isCompressed {
     width: 10%;
     cursor: pointer;
+
+    @media (--viewport-xxl) {
+      width: 20%;
+    }
+
+    @media (--viewport-xxxl) {
+      width: 33.33%;
+    }
+
+    @media (--viewport-xxxxl) {
+      width: 41%;
+    }
   }
 
   @media (--viewport-sm-only) {
@@ -27,12 +44,19 @@
 
 .closedForegroundImage {
   display: block;
-  width: 50%;
   margin: 0 auto;
 
   img {
-    width: 100%;
-    height: auto;
+    width: auto;
+    max-height: 200px;
+
+    @media (--viewport-md) {
+      max-height: 240px;
+    }
+
+    @media (--viewport-lg) {
+      max-height: 300px;
+    }
   }
 }
 
@@ -79,13 +103,14 @@
   height: 100%;
   align-items: center;
   justify-content: center;
-  transition-delay: 0;
+  transition-delay: 0ms;
   transition-duration: 400ms;
   transition-property: opacity;
-  transition-timing-function: liner;
+  transition-timing-function: linear;
 
   &.hidden {
     opacity: 0;
+    pointer-events: none;
   }
 
   & > div {
@@ -103,7 +128,7 @@
   height: 100%;
   justify-content: center;
   opacity: 0;
-  transition-delay: 0;
+  transition-delay: 0ms;
   transition-duration: 100ms;
   transition-property: opacity;
   transition-timing-function: var(--easing-ease-out-cubic);
@@ -117,34 +142,44 @@
   display: flex;
   width: 100%;
   height: 100%;
-  box-sizing: border-box;
   align-items: center;
+  justify-content: center;
   padding: 20px;
   opacity: 0;
-  transform: translate3d(0, 20px, 0);
-  transition-delay: 800ms, 800ms;
-  transition-duration: 1000ms, 1000ms;
-  transition-property: transform, opacity;
-  transition-timing-function: var(--easing-ease-out-cubic), var(--easing-ease-out-cubic);
+  transition-delay: 800ms;
+  transition-duration: 1000ms;
+  transition-property: opacity;
+  transition-timing-function:
+    var(--easing-ease-out-cubic),
+    var(--easing-ease-out-cubic);
 
-  @media (--viewport-sm-only) {
+  @media (--viewport-sm-md-only) {
     flex-direction: column;
+  }
+
+  @media (--viewport-md) {
+    justify-content: space-around;
+    padding: 34px;
+  }
+
+  @media (--viewport-lg) {
+    justify-content: flex-start;
+    padding: 40px;
   }
 }
 
 .open .accordionExpandedContent {
   opacity: 1;
-  transform: translate3d(0, 0, 0);
 }
 
 .expandedAccordionImage {
   position: relative;
-  width: 30%;
 
-  @media (--viewport-sm-only) {
+  @media (--viewport-sm-md-only) {
     width: 100%;
+    max-height: 200px;
     flex: 1;
-    margin-top: 50px;
+    margin-top: 60px;
     margin-bottom: 30px;
 
     img {
@@ -157,42 +192,41 @@
       object-position: center bottom;
     }
   }
+
+  @media (--viewport-md) {
+    max-height: 420px;
+  }
+
+  @media (--viewport-lg) {
+    width: 33.33%;
+    margin-right: 40px;
+    margin-bottom: 0;
+  }
 }
 
 .expandedAccordionText {
-  max-width: 600px;
-
   @media (--viewport-md) {
-    width: 66.6%;
+    width: 100%;
+  }
+
+  @media (--viewport-lg) {
+    width: 66.66%;
+    max-width: 640px;
   }
 }
 
 .closedStateForegroundImageWrap {
   display: block;
+  width: 100%;
+  margin-top: 40px;
   cursor: pointer;
+
+  @media (--viewport-md) {
+    margin-top: 80px;
+  }
+
   &:focus {
     outline: 0;
-  }
-}
-
-.buttonGroup {
-  display: flex;
-
-  button,
-  a {
-    flex: 1;
-  }
-
-  button {
-    margin: 0 4px 0 0;
-  }
-
-  @media (--viewport-sm-only) {
-    display: block;
-
-    button {
-      margin: 0 0 4px;
-    }
   }
 }
 
@@ -206,7 +240,6 @@
 }
 
 .openBtn {
-  margin: 0 0 40px;
   font-size: rem(16px);
 }
 
