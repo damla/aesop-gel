@@ -37,7 +37,7 @@ const NavigationBar = ({ childLinks, className, parentLink, selectedUrl }) => {
           });
 
           return (
-            <li key={index}>
+            <li className={cx(styles.listItem)} key={index}>
               <Hyperlink
                 className={linkClasses}
                 dataTestRef={

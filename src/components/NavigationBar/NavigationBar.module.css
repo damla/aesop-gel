@@ -1,9 +1,15 @@
 @import 'styles/index';
 
 .wrapper {
+  --background-color-solid: rgba(235, 234, 222, 1);
+  --background-color-transparent: rgba(235, 234, 222, 0);
+  --left-faded-edge-width: 20px;
+  --right-faded-edge-width: 50px;
+  --font-color: #666;
+
   position: relative;
   overflow: hidden;
-  background-color: rgba(235, 234, 222, 1);
+  background-color: var(--background-color-solid);
 
   &::before,
   &::after {
@@ -16,13 +22,13 @@
 
   &::before {
     left: 0;
-    width: 20px;
-    background-image: linear-gradient(to right, rgba(235, 234, 222, 1) 0%, rgba(235, 234, 222, 0) 100%);
+    width: var(--left-faded-edge-width);
+    background-image: linear-gradient(to right, var(--background-color-solid) 0%, var(--background-color-transparent) 100%);
   }
   &::after {
     right: 0;
-    width: 50px;
-    background-image: linear-gradient(to right, rgba(235, 234, 222, 0) 0%, rgba(235, 234, 222, 1) 100%);
+    width: var(--right-faded-edge-width);
+    background-image: linear-gradient(to right, var(--background-color-transparent) 0%, rgba(235, 234, 222, 1) 100%);
   }
 }
 
@@ -31,26 +37,39 @@
   overflow: auto;
   height: 64px;
   align-items: center;
-  padding: 0 5px;
+  padding: 0 0 0 var(--left-faded-edge-width);
   margin: 0;
   background-color: transparent;
   list-style-type: none;
   white-space: nowrap;
 
-  > *:last-child {
-    padding-right: 50px;
+  @media (--viewport-md) {
+    padding-left: 34px;
   }
 
   @media (--viewport-lg) {
     height: 110px;
+    padding-left: 40px;
+  }
+}
+
+.listItem {
+  margin: 0 10px;
+
+  &:first-of-type {
+    margin-left: 0;
+  }
+
+  &:last-of-type {
+    padding-right: var(--right-faded-edge-width);
   }
 }
 
 .link {
   display: block;
   border: none;
-  margin: 0 1rem;
   background-color: transparent;
+  color: var(--font-color);
   cursor: pointer;
   font-family: var(--font-family-sans-serif-medium);
   font-size: rem(14px);
@@ -60,16 +79,19 @@
   text-decoration: none;
 
   &.hasChildren {
+    position: relative;
     display: flex;
     align-items: center;
-    margin-right: 0;
+    margin-right: 10px;
 
     &::after {
+      position: absolute;
+      right: -15px;
       width: 1px;
       height: 10px;
-      margin-left: 1rem;
       background-color: currentColor;
       content: '';
+      pointer-events: none;
     }
   }
 
@@ -88,6 +110,8 @@
   }
 
   &:focus {
+    color: var(--font-color);
+
     .linkInnerText {
       outline: 1px solid currentColor;
       outline-offset: 5px;
@@ -97,6 +121,8 @@
 
   &:hover,
   &.isActive {
+    color: var(--font-color);
+
     .linkInnerText::after {
       transform: scaleX(1);
     }
