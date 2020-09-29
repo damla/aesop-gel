@@ -23,6 +23,7 @@ import Hidden from './Hidden';
 import HorizontalProductDisplayAccordion from './HorizontalProductDisplayAccordion';
 import Hyperlink from './Hyperlink';
 import Icon from './Icon';
+import IconLink from './IconLink';
 import Image from './Image';
 import ImageCarousel from './ImageCarousel';
 import KitList from './KitList';
@@ -82,6 +83,7 @@ export { Hidden };
 export { HorizontalProductDisplayAccordion };
 export { Hyperlink };
 export { Icon };
+export { IconLink };
 export { Image };
 export { ImageCarousel };
 export { KitList };
@@ -144,6 +146,7 @@ export default {
   HorizontalProductDisplayAccordion,
   Hyperlink,
   Icon,
+  IconLink,
   Image,
   ImageCarousel,
   KitList,
