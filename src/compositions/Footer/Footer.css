@@ -50,6 +50,9 @@
   @media (--viewport-md-only) {
     grid-column: 1 / 4;
   }
+  @media (--viewport-lg) {
+    margin-top: 10px;
+  }
 }
 
 .item {
@@ -148,6 +151,7 @@
     }
 
     .signup {
+      margin-top: 10px;
       -ms-grid-column: 1;
       -ms-grid-column-span: 1;
     }
