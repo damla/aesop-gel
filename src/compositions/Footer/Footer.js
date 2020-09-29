@@ -47,7 +47,8 @@ const Footer = ({
             blocks.map((block, index) => (
               <FooterBlock
                 className={
-                  (index + 1) % 4 === 0 ? styles.wideItem : styles.item
+                  cx((index + 1) % 4 === 0 && styles.wideItem, styles.item)
+                  // (index + 1) % 4 === 0 ? styles.wideItem : styles.item
                 }
                 copy={block.copy}
                 heading={block.heading}
