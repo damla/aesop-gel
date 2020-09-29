@@ -51,6 +51,11 @@
   }
   @media (--viewport-lg) {
     height: 60%;
+    max-height: 350px;
+
+    .hasFullWidthImage.hero & {
+      width: 35%;
+    }
   }
 
   a {
