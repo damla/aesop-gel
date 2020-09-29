@@ -6,6 +6,7 @@ import { HEADING } from '~/constants';
 import { useProductDetailContext, useVariantSelectContext } from '~/contexts';
 import { useImageTransition } from '~/customHooks';
 import { getVariantRadioOptions } from '~/utils/product';
+import { HYPERLINK_STYLE_TYPES } from '~/constants';
 
 import AddToCartButton from '~/components/AddToCartButton';
 import DefinitionList from '~/components/DefinitionList';
@@ -18,7 +19,7 @@ import { P } from '~/components/Paragraph';
 
 import styles from './ProductGridItem.module.css';
 
-const ProductGridItem = ({ className, copy, id, info, theme, url }) => {
+const ProductGridItem = ({ className, copy, cta, id, info, theme, url }) => {
   const imageRef = useRef();
   const {
     selectedVariant,
@@ -97,12 +98,27 @@ const ProductGridItem = ({ className, copy, id, info, theme, url }) => {
         )}
       </div>
 
-      <AddToCartButton
-        className={styles.addToCartButton}
-        copy={copy.addToCart}
-        isFullWidth={true}
-        theme={theme}
-      />
+      {!isBundle && (
+        <AddToCartButton
+          className={styles.addToCartButton}
+          copy={copy.addToCart}
+          isFullWidth={true}
+          theme={theme}
+        />
+      )}
+
+      {cta && isBundle && (
+        <Hyperlink
+          className={styles.addToCartButton}
+          isAlternate={false}
+          style={HYPERLINK_STYLE_TYPES.INTERNAL_NO_ICON_BUTTON_LINK}
+          theme={theme}
+          title={cta?.text}
+          url={cta?.url}
+        >
+          Learn more
+        </Hyperlink>
+      )}
 
       <DefinitionList
         className={styles.definitionList}
@@ -126,6 +142,10 @@ ProductGridItem.propTypes = {
       }),
     }),
   }),
+  cta: PropTypes.shape({
+    text: PropTypes.string,
+    url: PropTypes.string,
+  }),
   id: PropTypes.string,
   info: PropTypes.string,
   theme: PropTypes.oneOf(['dark', 'light']),
@@ -144,6 +164,7 @@ ProductGridItem.defaultProps = {
       },
     },
   },
+  cta: undefined,
   id: undefined,
   info: undefined,
   theme: 'dark',

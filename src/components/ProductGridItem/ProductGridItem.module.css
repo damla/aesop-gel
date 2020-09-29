@@ -137,6 +137,7 @@
 
 .addToCartButton {
   max-width: 100%;
+  text-align: center;
   @media (--viewport-lg) {
     position: absolute;
     right: 0;
