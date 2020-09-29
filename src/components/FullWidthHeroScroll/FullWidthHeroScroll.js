@@ -15,6 +15,7 @@ const FullWidthHeroScroll = ({
   cta,
   eyebrow,
   hasSerifFontHeading,
+  hasTopOffset,
   id,
   textBlocks,
   theme,
@@ -47,7 +48,12 @@ const FullWidthHeroScroll = ({
   };
 
   return (
-    <section className={cx(styles.scrollLockWrap)} id={id}>
+    <section
+      className={cx(styles.scrollLockWrap, {
+        [styles.topOffset]: hasTopOffset,
+      })}
+      id={id}
+    >
       <div>
         <div className={cx(styles.scrollLockMedia)}>
           <Video
@@ -110,6 +116,7 @@ FullWidthHeroScroll.propTypes = {
   }),
   eyebrow: PropTypes.string,
   hasSerifFontHeading: PropTypes.bool,
+  hasTopOffset: PropTypes.bool,
   heading: PropTypes.string,
   id: PropTypes.string,
   theme: PropTypes.oneOf(['dark', 'light']),
@@ -128,6 +135,7 @@ FullWidthHeroScroll.defaultProps = {
   cta: undefined,
   eyebrow: undefined,
   hasSerifFontHeading: false,
+  hasTopOffset: false,
   heading: undefined,
   id: undefined,
   theme: 'light',

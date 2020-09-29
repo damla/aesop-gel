@@ -14,6 +14,7 @@ const LinkButtonGroup = ({
   className,
   hasFitContent,
   isFlush,
+  isFullWidth,
   textAlign,
   theme,
 }) => {
@@ -34,6 +35,7 @@ const LinkButtonGroup = ({
     styles.link,
     { [styles.flushLink]: isFlush },
     { [styles.fitContent]: hasFitContent },
+    { [styles.fullWidth]: isFullWidth },
     styles[textAlign],
   );
 
@@ -66,6 +68,7 @@ LinkButtonGroup.propTypes = {
   className: PropTypes.string,
   hasFitContent: PropTypes.bool,
   isFlush: PropTypes.bool,
+  isFullWidth: PropTypes.bool,
   textAlign: PropTypes.oneOf(['center', 'left', 'right']),
   theme: PropTypes.oneOf(['dark', 'light']),
 };
@@ -75,6 +78,7 @@ LinkButtonGroup.defaultProps = {
   className: undefined,
   hasFitContent: false,
   isFlush: true,
+  isFullWidth: false,
   textAlign: 'center',
   theme: undefined,
 };

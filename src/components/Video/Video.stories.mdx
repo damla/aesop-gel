@@ -13,7 +13,11 @@ import Video from './Video';
 <Preview>
   <Story name="Base component">
     <Video
-      fallbackImage={"./assets/images/MediaWithContent/video-poster.png"}
+      fallbackImage={{
+        large: './assets/images/MediaWithContent/video-poster.png',
+        medium: './assets/images/MediaWithContent/video-poster.png',
+        small: './assets/images/MediaWithContent/video-poster.png',
+      }}
       hasAllowAudio={knobs.boolean('hasAllowAudio', false, 'Attributes')}
       hasAutoplay={knobs.boolean('hasAutoplay', false, 'Attributes')}
       hasLoop={knobs.boolean('hasLoop', false, 'Attributes')}
@@ -75,7 +79,11 @@ import Video from './Video';
       isReverse={knobs.boolean('isReverse', false, 'Presentation')}
       media={
         <Video
-          fallbackImage={"./assets/images/MediaWithContent/video-poster.png"}
+          fallbackImage={{
+            large: './assets/images/MediaWithContent/video-poster.png',
+            medium: './assets/images/MediaWithContent/video-poster.png',
+            small: './assets/images/MediaWithContent/video-poster.png',
+          }}
           hasAllowAudio={true}
           hasAutoplay={false}
           hasLoop={true}

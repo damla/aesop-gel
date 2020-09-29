@@ -57,7 +57,11 @@
 
 .scrollLockWrap {
   position: relative;
-  margin-top: -75px;
+  margin-top: 0;
+
+  &.topOffset {
+    margin-top: -75px;
+  }
 }
 
 .scrollLockMedia {
@@ -71,7 +75,11 @@
 .scrollingContent {
   position: relative;
   top: -100vh;
-  padding-top: 75px;
+  padding-top: 0;
+
+  .topOffset & {
+    padding-top: 75px;
+  }
 }
 
 .fullscreenHero {
