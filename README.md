@@ -277,4 +277,12 @@ Any `@TODO`s in the code base should have a corresponding issue submission.
 
 ### Contributing
 
+#### Creating new components
+
+Use the npm script to generate the new files for a new component.
+
+```bash
+npm run generate-component -- MyComponent
+```
+
 Pull Requests for any new feature, bug fix or update need to be made with the PR template provided via a [New Pull Request](https://github.com/aesop/aesop-gel/pulls). Every PR needs to be Peer Reviewed before it can be merged.
