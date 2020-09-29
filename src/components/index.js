@@ -23,6 +23,7 @@ import Hidden from './Hidden';
 import HorizontalProductDisplayAccordion from './HorizontalProductDisplayAccordion';
 import Hyperlink from './Hyperlink';
 import Icon from './Icon';
+import IconLink from './IconLink';
 import Image from './Image';
 import ImageCarousel from './ImageCarousel';
 import KitList from './KitList';
@@ -32,6 +33,7 @@ import LoadMoreButton from './LoadMoreButton';
 import Loading from './Loading';
 import MediaWithContent from './MediaWithContent';
 import Modal from './Modal';
+import NavigationBar from './NavigationBar';
 import NotificationModal from './NotificationModal';
 import Overlay from './Overlay';
 import Paragraph, { P, ParagraphSet } from './Paragraph';
@@ -81,6 +83,7 @@ export { Hidden };
 export { HorizontalProductDisplayAccordion };
 export { Hyperlink };
 export { Icon };
+export { IconLink };
 export { Image };
 export { ImageCarousel };
 export { KitList };
@@ -90,6 +93,7 @@ export { LoadMoreButton };
 export { Loading };
 export { MediaWithContent };
 export { Modal };
+export { NavigationBar };
 export { NotificationModal };
 export { Overlay };
 export { P };
@@ -142,6 +146,7 @@ export default {
   HorizontalProductDisplayAccordion,
   Hyperlink,
   Icon,
+  IconLink,
   Image,
   ImageCarousel,
   KitList,
@@ -151,6 +156,7 @@ export default {
   Loading,
   MediaWithContent,
   Modal,
+  NavigationBar,
   NotificationModal,
   Overlay,
   P,

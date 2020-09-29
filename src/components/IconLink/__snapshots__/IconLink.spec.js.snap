@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<IconLink /> renders base component correctly 1`] = `
+<a
+  className="base left dark"
+  data-test-ref="DATA_TEST_REF_ICON_LINK_Instagram"
+  href="https://about.instagram.com/"
+  target="_blank"
+  title="Instagram"
+>
+  <picture
+    className="base picture dark"
+    style={
+      Object {
+        "height": "25px",
+        "width": "25px",
+      }
+    }
+  >
+    <source
+      media="(min-width: 1025px)"
+      srcSet="./assets/images/IconLink/instagram.png"
+    />
+    <source
+      media="(min-width: 640px)"
+      srcSet="./assets/images/IconLink/instagram.png"
+    />
+    <source
+      media="(min-width: 0px)"
+      srcSet="./assets/images/IconLink/instagram.png"
+    />
+    <img
+      alt="Instagram"
+    />
+  </picture>
+</a>
+`;
