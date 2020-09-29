@@ -43,6 +43,8 @@
     display: block;
     overflow: hidden;
     height: 18px;
+    margin-right: auto;
+    margin-left: auto;
     line-height: 1;
     text-overflow: ellipsis;
     transform: translateY(-18px);

@@ -140,6 +140,7 @@
 
 .accordionExpandedContent {
   display: flex;
+  overflow: auto;
   width: 100%;
   height: 100%;
   align-items: center;
@@ -174,10 +175,11 @@
 
 .expandedAccordionImage {
   position: relative;
+  min-height: 100px;
+  max-height: 280px;
 
   @media (--viewport-sm-md-only) {
     width: 100%;
-    max-height: 200px;
     flex: 1;
     margin-top: 60px;
     margin-bottom: 30px;
@@ -194,11 +196,12 @@
   }
 
   @media (--viewport-md) {
-    max-height: 420px;
+    max-height: 350px;
   }
 
   @media (--viewport-lg) {
     width: 33.33%;
+    max-height: 420px;
     margin-right: 40px;
     margin-bottom: 0;
   }
