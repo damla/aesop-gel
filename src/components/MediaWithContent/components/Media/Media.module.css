@@ -43,9 +43,10 @@
   }
   @media (--viewport-md-only) {
     height: 70%;
+    max-height: 335px;
 
     .hasFullWidthImage.hero & {
-      height: 50%;
+      height: 40%;
     }
   }
   @media (--viewport-lg) {
