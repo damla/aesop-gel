@@ -28,6 +28,7 @@ const ProductCommerce = ({
   size,
   theme,
   isActive,
+  trackData,
 }) => {
   const imageRef = useRef();
   const {
@@ -56,7 +57,7 @@ const ProductCommerce = ({
   const RADIO_GROUP_DATA_TEST_REF = 'PRODUCT_COMMERCE_VARIANT_SELECT';
 
   return (
-    <div className={classSet} id={id}>
+    <div className={classSet} id={id} {...trackData}>
       <Transition isActive={isActive} type={TRANSITIONS.TYPE.SLOW_FADE}>
         <SectionHeading
           className={styles.header}
@@ -162,6 +163,7 @@ ProductCommerce.propTypes = {
   size: PropTypes.string,
   isActive: PropTypes.bool,
   theme: PropTypes.oneOf(['dark', 'light']),
+  trackData: PropTypes.object,
 };
 
 ProductCommerce.defaultProps = {
@@ -185,6 +187,7 @@ ProductCommerce.defaultProps = {
   size: undefined,
   isActive: true,
   theme: 'dark',
+  trackData: undefined,
 };
 
 export default ProductCommerce;
