@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import FooterBlock from '~/components/FooterBlock';
+import Hidden from '~/components/Hidden';
+import IconLink from '~/components/IconLink';
 import NotificationModal from '~/components/NotificationModal';
 import NewsLetterSignUp from '../NewsLetterSignUp';
 import styles from './Footer.css';
@@ -11,6 +13,7 @@ const Footer = ({
   blocks,
   className,
   consentErrorMsg,
+  iconLinks,
   errorMessage,
   notificationMessage,
   showTermsConditionsTextBox,
@@ -46,10 +49,10 @@ const Footer = ({
           {blocks &&
             blocks.map((block, index) => (
               <FooterBlock
-                className={
-                  cx((index + 1) % 4 === 0 && styles.wideItem, styles.item)
-                  // (index + 1) % 4 === 0 ? styles.wideItem : styles.item
-                }
+                className={cx(
+                  (index + 1) % 4 === 0 && styles.wideItem,
+                  styles.item,
+                )}
                 copy={block.copy}
                 heading={block.heading}
                 isVisibleOnTabletAndMobile={block.isVisibleOnTabletAndMobile}
@@ -59,7 +62,27 @@ const Footer = ({
               />
             ))}
         </div>
-        <div className={bottomClasset}>&copy; Aesop</div>
+        <div className={bottomClasset}>
+          <span>&copy; Aesop</span>
+          <Hidden isLarge={true} isXLarge={true}>
+            <div>
+              {iconLinks &&
+                iconLinks.map(icon => (
+                  <IconLink
+                    altText={icon.altText}
+                    className={styles.iconLinks}
+                    hasTargetInNewWindow={icon.hasTargetInNewWindow}
+                    height={21}
+                    icon={icon.icon}
+                    id={icon.altText}
+                    key={icon.id}
+                    target={icon.target}
+                    width={21}
+                  />
+                ))}
+            </div>
+          </Hidden>
+        </div>
       </div>
     </NotificationContextProvider>
   );
@@ -69,6 +92,7 @@ Footer.propTypes = {
   blocks: PropTypes.array,
   className: PropTypes.string,
   consentErrorMsg: PropTypes.string,
+  iconLinks: PropTypes.array,
   errorMessage: PropTypes.string,
   notificationMessage: PropTypes.string,
   showTermsConditionsTextBox: PropTypes.bool,
@@ -82,6 +106,7 @@ Footer.defaultProps = {
   blocks: undefined,
   className: undefined,
   consentErrorMsg: undefined,
+  iconLinks: undefined,
   errorMessage: undefined,
   notificationMessage: undefined,
   showTermsConditionsTextBox: undefined,

@@ -156,4 +156,39 @@ export default {
       ],
     },
   ],
+  iconLinks: [
+    {
+      altText: 'Instagram',
+      icon: {
+        altText: 'instagram',
+        large: './assets/images/IconLink/instagram-light.png',
+        medium: './assets/images/IconLink/instagram-light.png',
+        small: './assets/images/IconLink/instagram-light.png',
+      },
+      target: 'https://about.instagram.com/',
+      hasTargetInNewWindow: true,
+    },
+    {
+      altText: 'Twitter',
+      icon: {
+        altText: 'Wwitter',
+        large: './assets/images/IconLink/twitter-light.png',
+        medium: './assets/images/IconLink/twitter-light.png',
+        small: './assets/images/IconLink/twitter-light.png',
+      },
+      target: 'https://twitter.com/home?lang=en',
+      hasTargetInNewWindow: true,
+    },
+    {
+      altText: 'LinkedIn',
+      icon: {
+        altText: 'linkedin',
+        large: './assets/images/IconLink/linkedin-light.png',
+        medium: './assets/images/IconLink/linkedin-light.png',
+        small: './assets/images/IconLink/linkedin-light.png',
+      },
+      target: 'https://www.linkedin.com/home/?originalSubdomain=au',
+      hasTargetInNewWindow: true,
+    },
+  ],
 };

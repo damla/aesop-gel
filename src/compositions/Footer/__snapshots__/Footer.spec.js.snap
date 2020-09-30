@@ -716,7 +716,10 @@ exports[`<Footer /> renders base component correctly 1`] = `
   <div
     className="bottom"
   >
-    © Aesop
+    <span>
+      © Aesop
+    </span>
+    <div />
   </div>
 </div>
 `;

@@ -16,15 +16,16 @@ import newsLetterSignUpOnClick from '../NewsLetterSignUp/__mocks__/NewsLetterSig
 <Preview>
   <Story name="Base component">
        <Footer 
-        notificationMessage={NotificationModalFixture.notificationMessage}
+        blocks={FooterFixture.blocks}
         consentErrorMsg={NewsLetterSignUpFixture.consentErrorMsg}
+        iconLinks={FooterFixture.iconLinks}
         errorMessage={NewsLetterSignUpFixture.errorMessage}
         onClick={newsLetterSignUpOnClick}
         showTermsConditionsTextBox={knobs.boolean('showTermsConditionsTextBox', true, 'Presentation')}
         subscriptionMessage={NewsLetterSignUpFixture.subscriptionMessage}
         termsAndCondition={NewsLetterSignUpFixture.termsAndCondition}
         termsMessage={NewsLetterSignUpFixture.termsMessage}
-        blocks={FooterFixture.blocks}
+        notificationMessage={NotificationModalFixture.notificationMessage}
        />
   </Story>
 </Preview>

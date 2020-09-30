@@ -34,13 +34,17 @@
   display: flex;
   height: 72px;
   align-items: center;
+  justify-content: space-between;
+  padding-right: 20px;
   padding-left: 20px;
   color: var(--color-light-copy);
   font-family: var(--font-family-sans-serif-regular);
   @media (--viewport-md) {
+    padding-right: 25px;
     padding-left: 25px;
   }
   @media (--viewport-lg) {
+    padding-right: 40px;
     padding-left: 40px;
   }
 }
@@ -64,6 +68,10 @@
   @media (--viewport-lg) {
     grid-column: 2 span;
   }
+}
+
+.iconLinks {
+  margin-left: 45px;
 }
 
 /* Handle the grid css to support IE */
