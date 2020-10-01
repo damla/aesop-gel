@@ -408,7 +408,7 @@ exports[`<Footer /> renders base component correctly 1`] = `
       </div>
     </section>
     <section
-      className="base light wideItem item"
+      className="base light item"
     >
       <h5
         className="heading"

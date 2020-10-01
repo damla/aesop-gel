@@ -61,12 +61,10 @@
 
 .item {
   grid-column: 1 span;
-}
-
-.wideItem {
-  grid-column: 1 span;
   @media (--viewport-lg) {
-    grid-column: 2 span;
+    &:nth-of-type(4n + 0) {
+      grid-column: 2 span;
+    }
   }
 }
 

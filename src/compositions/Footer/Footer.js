@@ -46,13 +46,10 @@ const Footer = ({
               theme="light"
             />
           </div>
-          {blocks &&
+          {blocks?.length &&
             blocks.map((block, index) => (
               <FooterBlock
-                className={cx(
-                  (index + 1) % 4 === 0 && styles.wideItem,
-                  styles.item,
-                )}
+                className={styles.item}
                 copy={block.copy}
                 heading={block.heading}
                 isVisibleOnTabletAndMobile={block.isVisibleOnTabletAndMobile}
@@ -66,7 +63,7 @@ const Footer = ({
           <span>&copy; Aesop</span>
           <Hidden isLarge={true} isXLarge={true}>
             <div>
-              {iconLinks &&
+              {iconLinks?.length &&
                 iconLinks.map(icon => (
                   <IconLink
                     altText={icon.altText}
