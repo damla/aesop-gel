@@ -19,16 +19,7 @@ import { P } from '~/components/Paragraph';
 
 import styles from './ProductGridItem.module.css';
 
-const ProductGridItem = ({
-  className,
-  copy,
-  cta,
-  id,
-  info,
-  theme,
-  url,
-  trackData,
-}) => {
+const ProductGridItem = ({ className, copy, cta, id, info, theme, url }) => {
   const imageRef = useRef();
   const {
     selectedVariant,
@@ -61,7 +52,7 @@ const ProductGridItem = ({
   const RADIO_GROUP_DATA_TEST_REF = 'PRODUCT_GRID_ITEM_VARIANT_SELECT';
 
   return (
-    <div className={classSet} id={id} {...trackData}>
+    <div className={classSet} id={id}>
       <Transition isActive={isImageActive} name="fade">
         <Hyperlink className={styles.imageLink} url={url}>
           <Image
@@ -159,7 +150,6 @@ ProductGridItem.propTypes = {
   info: PropTypes.string,
   theme: PropTypes.oneOf(['dark', 'light']),
   url: PropTypes.string,
-  trackData: PropTypes.object,
 };
 
 ProductGridItem.defaultProps = {
@@ -179,7 +169,6 @@ ProductGridItem.defaultProps = {
   info: undefined,
   theme: 'dark',
   url: undefined,
-  trackData: undefined,
 };
 
 export default ProductGridItem;
