@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import Icon from '~/components/Icon';
 import Loading from '~/components/Loading';
 import Checkbox from '~/components/Checkbox';
-import Textarea from '~/components/Textarea';
 import TextInput from '~/components/TextInput';
 import styles from './NewsLetterSignUp.css';
 import { useNotificationContext } from 'contexts';
@@ -132,13 +131,11 @@ const NewsLetterSignUp = ({
               onChange={() => setAcceptTerms(!acceptTerms)}
               theme={theme}
             />
-            <Textarea
-              id="term-condition"
-              isEnabled={false}
-              rows={3}
-              theme={theme}
-              value={termsAndCondition}
-            />
+            <div className={styles.termsAndConditionWrapper}>
+              <div className={styles.termsAndCondition}>
+                {termsAndCondition}
+              </div>
+            </div>
           </section>
         ) : (
           <div className={subscriptionMessageClassSet}>
