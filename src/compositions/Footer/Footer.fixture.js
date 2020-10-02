@@ -158,6 +158,7 @@ export default {
   ],
   iconLinks: [
     {
+      id: 'Instagram',
       altText: 'Instagram',
       icon: {
         altText: 'instagram',
@@ -169,6 +170,7 @@ export default {
       hasTargetInNewWindow: true,
     },
     {
+      id: 'Twitter',
       altText: 'Twitter',
       icon: {
         altText: 'Wwitter',
@@ -180,6 +182,7 @@ export default {
       hasTargetInNewWindow: true,
     },
     {
+      id: 'LinkedIn',
       altText: 'LinkedIn',
       icon: {
         altText: 'linkedin',

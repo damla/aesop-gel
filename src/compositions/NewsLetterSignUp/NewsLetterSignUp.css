@@ -6,7 +6,7 @@
 
 .signUpIcon,
 .loading {
-  fill: red;
+  fill: var(--color-error);
   &.dark {
     fill: var(--color-dark-copy);
   }
@@ -20,17 +20,17 @@
   position: relative;
   display: flex;
   width: 100%;
-  flex-wrap: wrap;
+  align-items: flex-end;
 }
 
 .footerNewsletterInputWrapper {
-  flex: 20;
+  flex: 1 0 auto;
 }
 
 .button {
   height: 37px;
   box-sizing: border-box;
-  flex: 1;
+  flex: 0 0 auto;
   border: 1px solid var(--color-dark-copy);
   border-left: 0;
   margin-left: 0;
@@ -48,7 +48,7 @@
   }
 
   &.hasError {
-    border-color: red;
+    border-color: var(--color-error);
   }
 
   &:focus {
@@ -79,4 +79,8 @@
   &.light {
     color: var(--color-light-copy);
   }
+}
+
+.footerNewsletterErrorMessage {
+  color: var(--color-error);
 }

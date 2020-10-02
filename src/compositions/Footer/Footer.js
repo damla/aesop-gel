@@ -23,8 +23,6 @@ const Footer = ({
   onClick,
 }) => {
   const baseClassSet = cx(styles.base, className);
-  const blockClassSet = cx(styles.block);
-  const bottomClasset = cx(styles.bottom);
 
   return (
     <NotificationContextProvider>
@@ -33,7 +31,7 @@ const Footer = ({
           backgroundColor="#d5d5cc"
           notificationMessage={notificationMessage}
         />
-        <div className={blockClassSet}>
+        <div className={styles.block}>
           <div className={styles.signup}>
             <NewsLetterSignUp
               consentErrorMsg={consentErrorMsg}
@@ -59,7 +57,7 @@ const Footer = ({
               />
             ))}
         </div>
-        <div className={bottomClasset}>
+        <div className={styles.bottom}>
           <span>&copy; Aesop</span>
           <Hidden isLarge={true} isXLarge={true}>
             <div>
@@ -86,7 +84,14 @@ const Footer = ({
 };
 
 Footer.propTypes = {
-  blocks: PropTypes.array,
+  blocks: PropTypes.arrayOf(
+    PropTypes.shape({
+      copy: PropTypes.string,
+      heading: PropTypes.string,
+      isVisibleOnTabletAndMobile: PropTypes.bool,
+      links: PropTypes.array,
+    }),
+  ),
   className: PropTypes.string,
   consentErrorMsg: PropTypes.string,
   iconLinks: PropTypes.array,

@@ -65,6 +65,9 @@ exports[`<NewsLetterSignUp /> renders base component correctly 1`] = `
         </svg>
       </button>
     </div>
+    <div
+      className="footerNewsletterErrorMessage"
+    />
     <section>
       <label
         className="base"

@@ -24,9 +24,9 @@ const NewsLetterSignUp = ({
   const [email, setEmail] = useState(undefined);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setErrorMessage] = useState(undefined);
-  const [isSubscribe, setIsSubscribe] = useState(false);
+  const [acceptSubscription, setAcceptSubscription] = useState(false);
   const [acceptTerms, setAcceptTerms] = useState(false);
-  const baseClassSet = cx(styles.base);
+
   const inputFieldClassSet = cx(styles.inputField, styles[theme], className);
   const buttonClassSet = cx(
     styles.button,
@@ -43,11 +43,10 @@ const NewsLetterSignUp = ({
   const footerSuccessModal = useNotificationContext();
   const { actionType, dispatch } = footerSuccessModal;
 
-  const EMAIL_REGEXP = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-
   const validate = value => {
+    const EMAIL_REGEXP = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
     const string = String(value);
-    if (string === '') {
+    if (!string) {
       return true;
     }
 
@@ -66,7 +65,7 @@ const NewsLetterSignUp = ({
     const isValid = validate(email);
     if (
       isValid &&
-      !(showTermsConditionsTextBox && (!isSubscribe || !acceptTerms))
+      !(showTermsConditionsTextBox && (!acceptSubscription || !acceptTerms))
     ) {
       setIsLoading(true);
       await onClick(email);
@@ -74,7 +73,7 @@ const NewsLetterSignUp = ({
       dispatch({ type: actionType });
     } else {
       let errorMsg = errorMessage;
-      if (showTermsConditionsTextBox && (!isSubscribe || !acceptTerms)) {
+      if (showTermsConditionsTextBox && (!acceptSubscription || !acceptTerms)) {
         errorMsg = consentErrorMsg;
       }
       setErrorMessage(errorMsg);
@@ -82,13 +81,13 @@ const NewsLetterSignUp = ({
   };
 
   return (
-    <div className={baseClassSet}>
+    <div className={styles.base}>
       <form onSubmit={handleSubmit}>
         <div className={inputFieldClassSet}>
           <div className={styles.footerNewsletterInputWrapper}>
             <TextInput
-              errorMessage={error}
               hasContent={hasContent}
+              hasError={!!error}
               id="newsletter-email"
               inputClassName={cx(styles.footerNewsLetter)}
               isEnabled={!isLoading}
@@ -116,13 +115,14 @@ const NewsLetterSignUp = ({
             />
           )}
         </div>
+        <div className={styles.footerNewsletterErrorMessage}>{error}</div>
         {showTermsConditionsTextBox ? (
           <section>
             <Checkbox
               content={subscriptionMessage}
               id="subscription"
               isEnabled={!isLoading}
-              onChange={() => setIsSubscribe(!isSubscribe)}
+              onChange={() => setAcceptSubscription(!acceptSubscription)}
               theme={theme}
             />
             <Checkbox
