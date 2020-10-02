@@ -23,8 +23,8 @@ const NewsLetterSignUp = ({
   const [email, setEmail] = useState(undefined);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setErrorMessage] = useState(undefined);
-  const [acceptSubscription, setAcceptSubscription] = useState(false);
-  const [acceptTerms, setAcceptTerms] = useState(false);
+  const [hasAcceptedSubscription, setHasAcceptedSubscription] = useState(false);
+  const [hasAcceptedTerms, setHasAcceptedTerms] = useState(false);
 
   const inputFieldClassSet = cx(styles.inputField, styles[theme], className);
   const buttonClassSet = cx(
@@ -64,7 +64,10 @@ const NewsLetterSignUp = ({
     const isValid = validate(email);
     if (
       isValid &&
-      !(showTermsConditionsTextBox && (!acceptSubscription || !acceptTerms))
+      !(
+        showTermsConditionsTextBox &&
+        (!hasAcceptedSubscription || !hasAcceptedTerms)
+      )
     ) {
       setIsLoading(true);
       await onClick(email);
@@ -72,7 +75,10 @@ const NewsLetterSignUp = ({
       dispatch({ type: actionType });
     } else {
       let errorMsg = errorMessage;
-      if (showTermsConditionsTextBox && (!acceptSubscription || !acceptTerms)) {
+      if (
+        showTermsConditionsTextBox &&
+        (!hasAcceptedSubscription || !hasAcceptedTerms)
+      ) {
         errorMsg = consentErrorMsg;
       }
       setErrorMessage(errorMsg);
@@ -121,14 +127,16 @@ const NewsLetterSignUp = ({
               content={subscriptionMessage}
               id="subscription"
               isEnabled={!isLoading}
-              onChange={() => setAcceptSubscription(!acceptSubscription)}
+              onChange={() =>
+                setHasAcceptedSubscription(!hasAcceptedSubscription)
+              }
               theme={theme}
             />
             <Checkbox
               content={termsMessage}
               id="terms"
               isEnabled={!isLoading}
-              onChange={() => setAcceptTerms(!acceptTerms)}
+              onChange={() => setHasAcceptedTerms(!hasAcceptedTerms)}
               theme={theme}
             />
             <div className={styles.termsAndConditionWrapper}>
