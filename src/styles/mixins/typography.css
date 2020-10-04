@@ -15,7 +15,8 @@
   /**
    * Override for Korean region translation
    */
-  html[lang='ko'] & {
+  html[lang*='ko'] &,
+  html[lang*='KO'] & {
     font-family: var(--font-family-sans-serif-regular);
     font-weight: var(--font-weight-normal);
   }
