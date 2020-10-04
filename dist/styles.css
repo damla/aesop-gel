@@ -906,7 +906,8 @@ serif;
 /**
    * Override for Korean region translation
    */
-html[lang='ko'] .Heading-module_serifFont__pIB5u {
+html[lang*='ko'] .Heading-module_serifFont__pIB5u,
+  html[lang*='KO'] .Heading-module_serifFont__pIB5u {
     font-family: 'Suisse Regular'
 ,
 sans-serif;
@@ -1363,7 +1364,8 @@ serif;
 /**
    * Override for Korean region translation
    */
-html[lang='ko'] .SectionHeading-module_ZapfTitleFont__74AFB {
+html[lang*='ko'] .SectionHeading-module_ZapfTitleFont__74AFB,
+  html[lang*='KO'] .SectionHeading-module_ZapfTitleFont__74AFB {
     font-family: 'Suisse Regular'
 ,
 sans-serif;
@@ -2137,7 +2139,8 @@ serif;
 /**
    * Override for Korean region translation
    */
-html[lang='ko'] .Paragraph-module_serifFont__30f9k {
+html[lang*='ko'] .Paragraph-module_serifFont__30f9k,
+  html[lang*='KO'] .Paragraph-module_serifFont__30f9k {
     font-family: 'Suisse Regular'
 ,
 sans-serif;
@@ -3214,7 +3217,8 @@ serif;
 /**
    * Override for Korean region translation
    */
-html[lang='ko'] .ContentHubArticle-module_title__1SnEp span {
+html[lang*='ko'] .ContentHubArticle-module_title__1SnEp span,
+  html[lang*='KO'] .ContentHubArticle-module_title__1SnEp span {
     font-family: 'Suisse Regular'
 ,
 sans-serif;
@@ -8493,7 +8497,8 @@ serif;
 /**
    * Override for Korean region translation
    */
-html[lang='ko'] .Quote-module_blockquote__1Ap9l {
+html[lang*='ko'] .Quote-module_blockquote__1Ap9l,
+  html[lang*='KO'] .Quote-module_blockquote__1Ap9l {
     font-family: 'Suisse Regular'
 ,
 sans-serif;
