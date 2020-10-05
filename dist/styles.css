@@ -5606,7 +5606,7 @@ sans-serif;
   display: flex;
   overflow: hidden;
   width: 100%;
-  max-width: 600px;
+  max-width: none;
   height: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -5628,6 +5628,7 @@ sans-serif;
     pointer-events: none;
   }
 .AccordionProduct-module_accordionDefaultContent__1FbLP > div {
+    max-width: 600px;
     padding: 20px;
     text-align: center;
   }
