@@ -17,6 +17,10 @@ const TextOverFullWidthAsset = ({
   let Media = undefined;
   let mediaProps = {};
 
+  if (!content && !['Image', 'Video'].includes(mediaType)) {
+    return null;
+  }
+
   if (mediaType === 'Image') {
     Media = Image;
     mediaProps = backgroundImage;
