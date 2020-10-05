@@ -53,6 +53,7 @@ import StoreHoursList from './StoreHoursList';
 import SubNav from './SubNav';
 import Textarea from './Textarea';
 import TextInput from './TextInput';
+import TextOverFullWidthAsset from './TextOverFullWidthAsset';
 import Transition from './Transition';
 import TwoColumnLayout from './TwoColumnLayout';
 import TwoColumnList from './TwoColumnList';
@@ -115,6 +116,7 @@ export { StoreHoursList };
 export { SubNav };
 export { Textarea };
 export { TextInput };
+export { TextOverFullWidthAsset };
 export { Transition };
 export { TwoColumnLayout };
 export { TwoColumnList };
@@ -178,6 +180,7 @@ export default {
   SubNav,
   Textarea,
   TextInput,
+  TextOverFullWidthAsset,
   Transition,
   TwoColumnLayout,
   TwoColumnList,
