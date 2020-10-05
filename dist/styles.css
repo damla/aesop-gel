@@ -4899,8 +4899,10 @@ sans-serif;
 .FullWidthHeroScroll-module_topOffset__xlgvV {
   margin-top: -75px;
 }
-.FullWidthHeroScroll-module_backgroundVideo__fG21m {
+.FullWidthHeroScroll-module_backgroundVideo__fG21m.FullWidthHeroScroll-module_backgroundVideo__fG21m {
   height: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 .FullWidthHeroScroll-module_scrollLockMedia__39CtU {
   position: sticky;
