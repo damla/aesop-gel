@@ -19,6 +19,7 @@ const VideoPlayer = forwardRef(function VideoPlayerRef(
     hasLoop,
     hasPlayInFullScreen,
     isActive,
+    isBackground,
     isMuted,
     large,
     medium,
@@ -33,6 +34,7 @@ const VideoPlayer = forwardRef(function VideoPlayerRef(
     {
       [styles.playsInFullScreen]: hasPlayInFullScreen,
       [styles.isPlayingInFullScreen]: hasActiveVideo && hasPlayInFullScreen,
+      [styles.background]: isBackground,
     },
     className,
   );
@@ -72,6 +74,7 @@ VideoPlayer.propTypes = {
   hasLoop: PropTypes.bool,
   hasPlayInFullScreen: PropTypes.bool,
   isActive: PropTypes.bool,
+  isBackground: PropTypes.bool,
   isMuted: PropTypes.bool,
   large: PropTypes.string,
   medium: PropTypes.string,
@@ -86,6 +89,7 @@ VideoPlayer.defaultProps = {
   hasLoop: true,
   hasPlayInFullScreen: false,
   isActive: true,
+  isBackground: false,
   isMuted: true,
   large: undefined,
   medium: undefined,

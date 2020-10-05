@@ -23,12 +23,22 @@
   &::before {
     left: 0;
     width: var(--left-faded-edge-width);
-    background-image: linear-gradient(to right, var(--background-color-solid) 0%, var(--background-color-transparent) 100%);
+    background-image:
+      linear-gradient(
+        to right,
+        var(--background-color-solid) 0%,
+        var(--background-color-transparent) 100%
+      );
   }
   &::after {
     right: 0;
     width: var(--right-faded-edge-width);
-    background-image: linear-gradient(to right, var(--background-color-transparent) 0%, rgba(235, 234, 222, 1) 100%);
+    background-image:
+      linear-gradient(
+        to right,
+        var(--background-color-transparent) 0%,
+        rgba(235, 234, 222, 1) 100%
+      );
   }
 }
 
