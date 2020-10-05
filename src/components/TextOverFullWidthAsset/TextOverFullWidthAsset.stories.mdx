@@ -1,5 +1,5 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import * as knobs from '@storybook/addon-knobs';
+import { select } from '@storybook/addon-knobs';
 import TextOverFullWidthAsset from './TextOverFullWidthAsset';
 import TextOverFullWidthAssetFixture from './TextOverFullWidthAsset.fixture';
 
@@ -9,7 +9,14 @@ import TextOverFullWidthAssetFixture from './TextOverFullWidthAsset.fixture';
 
 <Preview>
   <Story name="Base component">
-    <TextOverFullWidthAsset />
+    <TextOverFullWidthAsset
+      backgroundImage={TextOverFullWidthAssetFixture.backgroundImage}
+      backgroundVideo={TextOverFullWidthAssetFixture.backgroundVideo}
+      content={<p>Hello word</p>}
+      copyHeight={select('Content vertical location', ['Top', 'Bottom'], 'Top', 'Layout')}
+      copySide={select('Content horizontal location', ['Left', 'Right'], 'Left', 'Layout')}
+      mediaType={select('Media type', ['Image', 'Video'], 'Image', 'Presentation')}
+    />
   </Story>
 </Preview>
 
