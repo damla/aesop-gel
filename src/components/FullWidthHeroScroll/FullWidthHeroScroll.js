@@ -58,6 +58,7 @@ const FullWidthHeroScroll = ({
           hasAutoplay={true}
           hasControls={false}
           hasLoop={true}
+          isBackground={true}
           isMuted={true}
         />
       </div>
