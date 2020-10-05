@@ -21,6 +21,7 @@ exports[`<NewsLetterSignUp /> renders base component correctly 1`] = `
           >
             <input
               className="formTextInput light footerNewsLetter"
+              data-test-ref="EMAIL_SIGN_UP_INPUT"
               disabled={false}
               id="newsletter-email"
               name="newsletter-email"
@@ -39,6 +40,7 @@ exports[`<NewsLetterSignUp /> renders base component correctly 1`] = `
       </div>
       <button
         className="button light"
+        data-test-ref="EMAIL_SIGN_UP_BUTTON"
         disabled={true}
       >
         <svg
@@ -75,6 +77,7 @@ exports[`<NewsLetterSignUp /> renders base component correctly 1`] = `
       >
         <input
           className="checkBox light"
+          data-test-ref="EMAIL_SIGN_UP_SUBSCRIPTION_CHECKBOX"
           disabled={false}
           id="subscription"
           onChange={[Function]}
@@ -92,6 +95,7 @@ exports[`<NewsLetterSignUp /> renders base component correctly 1`] = `
       >
         <input
           className="checkBox light"
+          data-test-ref="EMAIL_SIGN_UP_TERMS_AND_CONDITIONS_CHECKBOX"
           disabled={false}
           id="terms"
           onChange={[Function]}

@@ -22,7 +22,7 @@ const NewsLetterSignUp = ({
   const [hasContent, setHasContent] = useState(false);
   const [email, setEmail] = useState(undefined);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setErrorMessage] = useState(undefined);
+  const [error, setError] = useState(undefined);
   const [hasAcceptedSubscription, setHasAcceptedSubscription] = useState(false);
   const [hasAcceptedTerms, setHasAcceptedTerms] = useState(false);
 
@@ -60,7 +60,7 @@ const NewsLetterSignUp = ({
 
   const handleSubmit = async e => {
     e.preventDefault();
-    setErrorMessage(undefined);
+    setError(undefined);
     const isValid = validate(email);
     if (
       isValid &&
@@ -81,7 +81,7 @@ const NewsLetterSignUp = ({
       ) {
         errorMsg = consentErrorMsg;
       }
-      setErrorMessage(errorMsg);
+      setError(errorMsg);
     }
   };
 
@@ -91,6 +91,7 @@ const NewsLetterSignUp = ({
         <div className={inputFieldClassSet}>
           <div className={styles.footerNewsletterInputWrapper}>
             <TextInput
+              data-test-ref="EMAIL_SIGN_UP_INPUT"
               hasContent={hasContent}
               hasError={!!error}
               id="newsletter-email"
@@ -104,6 +105,7 @@ const NewsLetterSignUp = ({
           </div>
           <button
             className={buttonClassSet}
+            data-test-ref="EMAIL_SIGN_UP_BUTTON"
             disabled={!!isLoading || !hasContent}
           >
             <Icon
@@ -125,6 +127,7 @@ const NewsLetterSignUp = ({
           <section>
             <Checkbox
               content={subscriptionMessage}
+              dataTestRef="EMAIL_SIGN_UP_SUBSCRIPTION_CHECKBOX"
               id="subscription"
               isEnabled={!isLoading}
               onChange={() =>
@@ -134,6 +137,7 @@ const NewsLetterSignUp = ({
             />
             <Checkbox
               content={termsMessage}
+              dataTestRef="EMAIL_SIGN_UP_TERMS_AND_CONDITIONS_CHECKBOX"
               id="terms"
               isEnabled={!isLoading}
               onChange={() => setHasAcceptedTerms(!hasAcceptedTerms)}

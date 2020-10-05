@@ -9,6 +9,7 @@ exports[`<Textarea /> renders base component correctly 1`] = `
   >
     <textarea
       className="textarea dark"
+      data-test-ref="test-data-ref"
       disabled={false}
       id="test-textarea"
     />
