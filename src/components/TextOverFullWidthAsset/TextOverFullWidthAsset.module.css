@@ -23,24 +23,30 @@
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
   padding: 20px;
 
-  &.Top {
-    @media (--viewport-lg) {
-      top: 50%;
-      transform: translateY(-50%);
-    }
+  @media (--viewport-md) {
+    width: 42%;
+  }
+
+  @media (--viewport-lg) {
+    width: 34%;
   }
 
   &.Bottom {
-    @media (--viewport-md) {
-      top: auto;
-      bottom: 0;
-    }
+    top: auto;
+    bottom: 0;
 
     @media (--viewport-lg) {
-      top: 50%;
       bottom: auto;
+    }
+  }
+
+  &.Top,
+  &.Bottom {
+    @media (--viewport-lg) {
+      top: 50%;
       transform: translateY(-50%);
     }
   }
