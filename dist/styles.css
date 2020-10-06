@@ -3093,8 +3093,19 @@ sans-serif;
 .Checkbox-module_checkBox__1srqJ:checked::before {
     position: relative;
     top: -8px;
-    content: '\2713'; /* Glyph: ✓ (check mark) */
+    content: '\2713';
   }
+/* Glyph: ✓ (check mark) */
+@media (max-width: 639px) {
+.Checkbox-module_checkBox__1srqJ:checked::before {
+      top: -2px
+  }
+    }
+@media (min-width: 640px) and (max-width: 1024px) {
+.Checkbox-module_checkBox__1srqJ:checked::before {
+      top: -8px
+  }
+    }
 .Checkbox-module_checkBox__1srqJ:focus {
     outline: none;
   }
@@ -6865,14 +6876,36 @@ sans-serif;
 .NavigationBar-module_wrapper__1gvhE::before {
     left: 0;
     width: var(--left-faded-edge-width);
-    background-image: -webkit-gradient(linear, left top, right top, from(var(--background-color-solid)), to(var(--background-color-transparent)));
-    background-image: linear-gradient(to right, var(--background-color-solid) 0%, var(--background-color-transparent) 100%);
+    background-image:
+      -webkit-gradient(
+        linear,
+        left top, right top,
+        from(var(--background-color-solid)),
+        to(var(--background-color-transparent))
+      );
+    background-image:
+      linear-gradient(
+        to right,
+        var(--background-color-solid) 0%,
+        var(--background-color-transparent) 100%
+      );
   }
 .NavigationBar-module_wrapper__1gvhE::after {
     right: 0;
     width: var(--right-faded-edge-width);
-    background-image: -webkit-gradient(linear, left top, right top, from(var(--background-color-transparent)), to(rgba(235, 234, 222, 1)));
-    background-image: linear-gradient(to right, var(--background-color-transparent) 0%, rgba(235, 234, 222, 1) 100%);
+    background-image:
+      -webkit-gradient(
+        linear,
+        left top, right top,
+        from(var(--background-color-transparent)),
+        to(rgba(235, 234, 222, 1))
+      );
+    background-image:
+      linear-gradient(
+        to right,
+        var(--background-color-transparent) 0%,
+        rgba(235, 234, 222, 1) 100%
+      );
   }
 .NavigationBar-module_list__3ZozU {
   display: -webkit-box;
@@ -9364,7 +9397,6 @@ sans-serif;
   }
 .Textarea-module_textarea__sdVoK {
   width: 100%;
-  height: 90px;
   border: none;
   background: transparent;
   color: #333;
@@ -9466,7 +9498,7 @@ sans-serif;
     color: #fffef2;
   }
 .TextInput-module_formTextInput__35OMg.TextInput-module_hasError__Xrq0u {
-    border-color: red;
+    border-color: #ea6956;
   }
 .TextInput-module_formTextInput__35OMg:focus {
     outline: none;
@@ -9537,9 +9569,10 @@ sans-serif;
     line-height: 2.068
 }
   }
-.TextInput-module_formTextErrorMessage__1ZMsm {
-  color: red;
-}
+/*
+.formTextErrorMessage {
+  color: var(--color-error);
+} */
 
 /* @import './key-frame.css'; */
 /* @import './font-face.css'; */
