@@ -45,6 +45,8 @@ const ProductExtract = forwardRef(function ProductExtractRef(
     className,
   );
 
+  const productDescriptionClassSet = cx(styles.productDescription);
+
   const productNameClassSet = cx(
     styles.productName,
     styles.delayAnimation,
@@ -83,7 +85,7 @@ const ProductExtract = forwardRef(function ProductExtractRef(
         )}
       >
         <div className={flexClassSet}>
-          <div>
+          <div className={productDescriptionClassSet}>
             <Heading
               className={headingClassSet}
               level={HEADING.LEVEL.FOUR}
