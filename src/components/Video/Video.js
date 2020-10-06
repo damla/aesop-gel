@@ -24,6 +24,7 @@ export const Video = forwardRef(function VideoRef(
     hasSpanContent,
     hasPlayInFullScreen,
     id,
+    isBackground,
     isFullWidth,
     isHeroFullWidth,
     isScrollBasedVideo,
@@ -134,6 +135,7 @@ export const Video = forwardRef(function VideoRef(
         hasLoop={hasLoop}
         hasPlayInFullScreen={hasPlayInFullScreen}
         isActive={!poster || hasActiveVideo || isScrollBasedVideo}
+        isBackground={isBackground}
         isMuted={isMuted}
         large={large}
         medium={medium}
@@ -205,6 +207,7 @@ Video.propTypes = {
   hasSpanContent: PropTypes.bool,
   hasPlayInFullScreen: PropTypes.bool,
   id: PropTypes.string,
+  isBackground: PropTypes.bool,
   /**
     `isFullWidth` is set true by default and this will allow videos to display at the correct aspect ratio.
     In the event that a different, more fluid ratio is required, set this prop to false, this will collase the hieght of th Video,
@@ -250,6 +253,7 @@ Video.defaultProps = {
   hasSpanContent: false,
   hasPlayInFullScreen: false,
   id: undefined,
+  isBackground: false,
   isHeroFullWidth: false,
   isFullWidth: true,
   isScrollBasedVideo: false,
