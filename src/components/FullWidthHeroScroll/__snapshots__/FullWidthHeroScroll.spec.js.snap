@@ -36,7 +36,7 @@ exports[`<FullWidthHeroScroll /> renders base component correctly 1`] = `
       </figure>
       <video
         autoPlay={true}
-        className="base"
+        className="base background"
         controls={false}
         loop={true}
         muted={true}
