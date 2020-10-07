@@ -6,7 +6,6 @@ import { HEADING } from '~/constants';
 import { useProductDetailContext, useVariantSelectContext } from '~/contexts';
 import { useImageTransition } from '~/customHooks';
 import { getVariantRadioOptions } from '~/utils/product';
-import { HYPERLINK_STYLE_TYPES } from '~/constants';
 
 import AddToCartButton from '~/components/AddToCartButton';
 import DefinitionList from '~/components/DefinitionList';
@@ -113,7 +112,6 @@ const ProductGridItem = ({ className, copy, cta, id, info, theme, url }) => {
         <Hyperlink
           className={classCtaLinkSet}
           isAlternate={false}
-          style={HYPERLINK_STYLE_TYPES.INTERNAL_NO_ICON_BUTTON_LINK}
           theme={theme}
           title={cta?.text}
           url={cta?.url}

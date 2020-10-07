@@ -7946,14 +7946,26 @@ sans-serif;
     }
   }
 .ProductGridItem-module_ctaLink__39Wvx {
+  display: block;
+  height: 60px;
+  padding: 20px 15px;
+  border-width: 1px;
+  border-style: solid;
   border-color: #333;
   background-color: #333;
   color: #f6f5e8;
+  font-family: 'Suisse Medium'
+,
+sans-serif;
+  font-size: 14px;
+  -webkit-transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .ProductGridItem-module_ctaLink__39Wvx:hover,
   .ProductGridItem-module_ctaLink__39Wvx:focus {
     border-color: #000;
     background-color: #000;
+    color: #f6f5e8;
   }
 .ProductGridItem-module_definitionList__3hxLn {
   display: grid;
