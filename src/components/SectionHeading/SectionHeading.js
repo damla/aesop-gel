@@ -22,13 +22,16 @@ const SectionHeading = ({
   const classSet = cx(className, styles.base, {
     [styles.offsetPageHeading]: isOffsetPageHeading,
   });
-  const eyebrowClassSet = cx(styles.heading, childrenClassNames.eyebrow);
+  const eyebrowClassSet = cx(styles.eyebrow, childrenClassNames.eyebrow);
   const headingClassSet = cx(
     styles.heading,
     childrenClassNames.heading,
     titleFont && styles[`${titleFont}TitleFont`],
   );
-  const subHeadingClassSet = cx(styles.heading, childrenClassNames.subHeading);
+  const subHeadingClassSet = cx(
+    styles.subHeading,
+    childrenClassNames.subHeading,
+  );
 
   return (
     <header className={classSet} id={id}>
