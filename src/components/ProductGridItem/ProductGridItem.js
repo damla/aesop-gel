@@ -48,6 +48,8 @@ const ProductGridItem = ({ className, copy, cta, id, info, theme, url }) => {
     [styles.hasManyVariants]: !hasOneVariant,
   });
 
+  const classCtaLinkSet = cx(styles.addToCartButton, styles.ctaLink);
+
   const RADIO_GROUP_NAME = sku;
   const RADIO_GROUP_DATA_TEST_REF = 'PRODUCT_GRID_ITEM_VARIANT_SELECT';
 
@@ -109,14 +111,14 @@ const ProductGridItem = ({ className, copy, cta, id, info, theme, url }) => {
 
       {cta && isBundle && (
         <Hyperlink
-          className={styles.addToCartButton}
+          className={classCtaLinkSet}
           isAlternate={false}
           style={HYPERLINK_STYLE_TYPES.INTERNAL_NO_ICON_BUTTON_LINK}
           theme={theme}
           title={cta?.text}
           url={cta?.url}
         >
-          Learn more
+          {cta?.text}
         </Hyperlink>
       )}
 
