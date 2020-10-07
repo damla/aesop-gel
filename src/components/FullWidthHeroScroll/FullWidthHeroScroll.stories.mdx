@@ -23,7 +23,7 @@ import FullWidthHeroScrollFixture from './FullWidthHeroScroll.fixture';
       isHero={true}
       isReverse={true}
       textBlocks={FullWidthHeroScrollFixture.textBlocks}
-      theme="light"
+      theme={knobs.select('theme', ['dark', 'light'], 'light', 'Presentation')}
       title={FullWidthHeroScrollFixture.title}
     />
   </Story>
