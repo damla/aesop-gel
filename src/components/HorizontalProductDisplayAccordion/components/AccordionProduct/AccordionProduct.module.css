@@ -99,7 +99,7 @@
   display: flex;
   overflow: hidden;
   width: 100%;
-  max-width: 600px;
+  max-width: none;
   height: 100%;
   align-items: center;
   justify-content: center;
@@ -114,6 +114,7 @@
   }
 
   & > div {
+    max-width: 600px;
     padding: 20px;
     text-align: center;
   }
@@ -140,6 +141,7 @@
 
 .accordionExpandedContent {
   display: flex;
+  overflow: auto;
   width: 100%;
   height: 100%;
   align-items: center;
@@ -174,6 +176,7 @@
 
 .expandedAccordionImage {
   position: relative;
+  min-height: 100px;
   max-height: 280px;
 
   @media (--viewport-sm-md-only) {

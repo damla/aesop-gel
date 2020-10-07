@@ -10,7 +10,7 @@ if [ -z "$COMPONENT" ]; then
   echo "------------------------------------------------------------------------------------"
 else
   if mkdir "$LOCATION/$COMPONENT"; then
-    cd "scripts/ComponentBoilerplate";
+    cd "scripts/componentBoilerplate";
 
     cp "assets/Component.js.txt" "../../$LOCATION/$COMPONENT/$COMPONENT.js";
     cp "assets/Component.module.css.txt" "../../$LOCATION/$COMPONENT/$COMPONENT.module.css";
@@ -21,7 +21,7 @@ else
 
     cd "../../$LOCATION/$COMPONENT/";
 
-    sed -i "" "s/ComponentBoilerplate/$COMPONENT/g" "$COMPONENT.js" "$COMPONENT.spec.js" "$COMPONENT.stories.mdx" "$COMPONENT.fixture.js" "index.js";
+    sed -i "" "$COMPONENT.js" "$COMPONENT.module.css" "$COMPONENT.spec.js" "$COMPONENT.stories.mdx" "$COMPONENT.fixture.js" "index.js";
 
     echo "-----------------------------------------------------------------------";
     echo "New component '$COMPONENT' created! 🎉 : $LOCATION/$COMPONENT";

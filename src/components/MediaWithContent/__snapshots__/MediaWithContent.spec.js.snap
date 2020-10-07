@@ -51,7 +51,7 @@ exports[`<MediaWithContent /> renders base component correctly 1`] = `
           Fusce et dui nisi
         </h2>
         <h3
-          className="base flush mediumWeightFont xXSmall dark heading eyebrow"
+          className="base flush mediumWeightFont xXSmall dark eyebrow eyebrow"
         >
           Quisque blandit est erat
         </h3>

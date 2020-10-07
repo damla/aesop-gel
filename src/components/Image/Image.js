@@ -7,7 +7,7 @@ import Hyperlink from '~/components/Hyperlink';
 import styles from './Image.module.css';
 
 const Image = forwardRef(function ImageRef(
-  { altText, className, cta, large, medium, small, type, theme },
+  { altText, className, cta, large, medium, small, style, type, theme },
   ref,
 ) {
   const fullBleedImage = type === 'componentFullBleedImage';
@@ -23,7 +23,7 @@ const Image = forwardRef(function ImageRef(
   );
 
   const picture = (
-    <picture className={classSet}>
+    <picture className={classSet} style={style}>
       {large && (
         <source
           media={`(min-width: ${get(
@@ -81,6 +81,7 @@ Image.propTypes = {
   large: PropTypes.string,
   medium: PropTypes.string,
   small: PropTypes.string,
+  style: PropTypes.object,
   type: PropTypes.string,
   theme: PropTypes.oneOf(['dark', 'light']),
 };
@@ -94,6 +95,7 @@ Image.defaultProps = {
   large: undefined,
   medium: undefined,
   small: undefined,
+  style: undefined,
   theme: 'dark',
   type: undefined,
 };
