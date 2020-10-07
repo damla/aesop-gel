@@ -95,7 +95,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                   Maecenas elementum
                 </h2>
                 <h3
-                  className="base flush mediumWeightFont xXSmall dark heading"
+                  className="base flush mediumWeightFont xXSmall dark eyebrow"
                 >
                   Aenean ac tortor consectetur
                 </h3>
