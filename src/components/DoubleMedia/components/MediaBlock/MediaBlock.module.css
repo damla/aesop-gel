@@ -1,13 +1,5 @@
 @import 'styles/index';
 
-.dark {
-  color: var(--color-dark-copy);
-}
-
-.light {
-  color: var(--color-light-copy);
-}
-
 .figure {
   &:first-of-type {
     margin-bottom: 45px;
@@ -41,13 +33,32 @@
   transition: border 500ms var(--easing-ease-in-cubic);
 }
 
+.headingWrapper {
+  .dark & {
+    color: var(--color-dark-copy);
+  }
+
+  .light & {
+    color: var(--color-light-copy);
+  }
+}
+
 .headingWrapper span {
   font-family: var(--font-family-sans-serif-medium);
   font-weight: var(--font-weight-normal);
 }
 
 .headingLink span:hover {
-  border-bottom: 1px solid var(--color-secondary);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+
+  .dark & {
+    border-bottom-color: var(--color-dark-link-hover);
+  }
+
+  .light & {
+    border-bottom-color: var(--color-light-link-hover);
+  }
 }
 
 .imageLinkWrapper {
@@ -55,7 +66,16 @@
 }
 
 .imageLinkWrapper:hover + .figcaption .headingLink span {
-  border-bottom: 1px solid var(--color-secondary);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+
+  .dark & {
+    border-bottom-color: var(--color-dark-link-hover);
+  }
+
+  .light & {
+    border-bottom-color: var(--color-light-link-hover);
+  }
 }
 
 .figcaption {
@@ -79,11 +99,11 @@
   font-size: rem(14px);
   line-height: 1.6;
 
-  &.dark {
+  .dark & {
     color: var(--color-dark-copy);
   }
 
-  &.light {
+  .light & {
     color: var(--color-light-copy);
   }
 

@@ -43,12 +43,16 @@ const MediaBlock = ({
     );
   };
 
-  const captionClassSet = cx(styles.caption, styles[theme]);
+  const captionClassSet = cx(styles.caption);
   const headingClassSet = cx(styles.heading, link && styles.headingLink);
-  const headingWrapperClassSet = cx(styles.headingWrapper, styles[theme]);
+  const headingWrapperClassSet = cx(styles.headingWrapper);
 
   return (
-    <Figure className={styles.figure} hasCaptionBorder={false} theme={theme}>
+    <Figure
+      className={cx(styles.figure, styles[theme])}
+      hasCaptionBorder={false}
+      theme={theme}
+    >
       {link ? (
         <Hyperlink {...link} className={styles.imageLinkWrapper}>
           <Media />
