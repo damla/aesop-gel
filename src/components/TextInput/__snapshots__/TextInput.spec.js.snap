@@ -9,6 +9,7 @@ exports[`<TextInput /> renders base component correctly 1`] = `
   >
     <input
       className="formTextInput undefined"
+      data-test-ref="test-data-ref"
       disabled={true}
       id="test-textinput"
       noValidate={true}

@@ -6,8 +6,8 @@ import cx from 'classnames';
 const TextInput = ({
   className,
   defaultValue,
-  errorMessage,
   hasContent,
+  hasError,
   id,
   isEnabled,
   inputClassName,
@@ -32,7 +32,7 @@ const TextInput = ({
     styles.formTextInput,
     styles[theme],
     (!!defaultValue || hasContent) && styles.hasContent,
-    !!errorMessage && styles.hasError,
+    !!hasError && styles.hasError,
     inputClassName,
   );
   const labelClassSet = cx(styles.formTextLabel, styles[theme]);
@@ -61,9 +61,6 @@ const TextInput = ({
         <span className={labelClassSet}>{label}</span>
         {prefixElement}
       </label>
-      {errorMessage && (
-        <div className={styles.formTextErrorMessage}>{errorMessage}</div>
-      )}
     </div>
   );
 };
@@ -71,8 +68,8 @@ const TextInput = ({
 TextInput.propTypes = {
   className: PropTypes.string,
   defaultValue: PropTypes.string,
-  errorMessage: PropTypes.string,
   hasContent: PropTypes.bool,
+  hasError: PropTypes.bool,
   hasValidation: PropTypes.bool,
   id: PropTypes.string.isRequired,
   inputClassName: PropTypes.string,

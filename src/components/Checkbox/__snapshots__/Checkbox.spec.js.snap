@@ -7,6 +7,7 @@ exports[`<Checkbox /> renders base component correctly 1`] = `
 >
   <input
     className="checkBox dark"
+    data-test-ref="test-data-ref"
     disabled={true}
     id="test-checkbox"
     type="checkbox"
