@@ -3093,8 +3093,19 @@ sans-serif;
 .Checkbox-module_checkBox__1srqJ:checked::before {
     position: relative;
     top: -8px;
-    content: '\2713'; /* Glyph: ✓ (check mark) */
+    content: '\2713';
   }
+/* Glyph: ✓ (check mark) */
+@media (max-width: 639px) {
+.Checkbox-module_checkBox__1srqJ:checked::before {
+      top: -2px
+  }
+    }
+@media (min-width: 640px) and (max-width: 1024px) {
+.Checkbox-module_checkBox__1srqJ:checked::before {
+      top: -8px
+  }
+    }
 .Checkbox-module_checkBox__1srqJ:focus {
     outline: none;
   }
@@ -9373,7 +9384,6 @@ sans-serif;
   }
 .Textarea-module_textarea__sdVoK {
   width: 100%;
-  height: 90px;
   border: none;
   background: transparent;
   color: #333;
@@ -9475,7 +9485,7 @@ sans-serif;
     color: #fffef2;
   }
 .TextInput-module_formTextInput__35OMg.TextInput-module_hasError__Xrq0u {
-    border-color: red;
+    border-color: #ea6956;
   }
 .TextInput-module_formTextInput__35OMg:focus {
     outline: none;
@@ -9546,9 +9556,10 @@ sans-serif;
     line-height: 2.068
 }
   }
-.TextInput-module_formTextErrorMessage__1ZMsm {
-  color: red;
-}
+/*
+.formTextErrorMessage {
+  color: var(--color-error);
+} */
 
 /* @import './key-frame.css'; */
 /* @import './font-face.css'; */

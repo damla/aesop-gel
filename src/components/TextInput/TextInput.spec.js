@@ -12,7 +12,9 @@ describe('<TextInput />', () => {
   });
 
   it('renders base component correctly', () => {
-    const tree = renderer.create(<TextInput id="test-textinput" />).toJSON();
+    const tree = renderer
+      .create(<TextInput data-test-ref="test-data-ref" id="test-textinput" />)
+      .toJSON();
 
     expect(tree).toMatchSnapshot();
   });
