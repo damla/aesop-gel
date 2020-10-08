@@ -46,6 +46,12 @@
     position: relative;
     top: -8px;
     content: '\2713'; /* Glyph: ✓ (check mark) */
+    @media (--viewport-sm-only) {
+      top: -2px;
+    }
+    @media (--viewport-md-only) {
+      top: -8px;
+    }
   }
 
   &:focus {

@@ -5,6 +5,7 @@ import styles from './Textarea.module.css';
 
 const Textarea = ({
   className,
+  dataTestRef,
   defaultValue,
   id,
   isEnabled,
@@ -29,6 +30,7 @@ const Textarea = ({
       <div className={baseClassSet}>
         <textarea
           className={textareaClassSet}
+          data-test-ref={dataTestRef}
           defaultValue={defaultValue}
           disabled={!isEnabled}
           id={id}
@@ -47,6 +49,7 @@ const Textarea = ({
 
 Textarea.propTypes = {
   className: PropTypes.string,
+  dataTestRef: PropTypes.string,
   defaultValue: PropTypes.string,
   id: PropTypes.string.isRequired,
   isEnabled: PropTypes.bool,
@@ -63,6 +66,7 @@ Textarea.propTypes = {
 
 Textarea.defaultProps = {
   className: undefined,
+  dataTestRef: undefined,
   defaultValue: undefined,
   id: undefined,
   isEnabled: true,

@@ -12,7 +12,9 @@ describe('<Textarea />', () => {
   });
 
   it('renders base component correctly', () => {
-    const tree = renderer.create(<Textarea id="test-textarea" />).toJSON();
+    const tree = renderer
+      .create(<Textarea dataTestRef="test-data-ref" id="test-textarea" />)
+      .toJSON();
 
     expect(tree).toMatchSnapshot();
   });
