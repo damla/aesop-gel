@@ -7,7 +7,9 @@ exports[`<DefinitionListWithProductExtract /> renders base component correctly 1
   <div
     className="flexContainer delayAnimation slideIn"
   >
-    <div>
+    <div
+      className="productDescription"
+    >
       <h4
         className="base xXSmall dark heading delayAnimation slideIn"
       >
