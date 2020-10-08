@@ -62,12 +62,12 @@ Presented here with both `paddingTop` and `paddingBottom` set to `small`, and fa
           'small',
           'Presentation',
         )}
+        theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
         transition="fade"
       >
         <Carousel
           introduction={CarouselFixture.introduction}
           slides={CarouselFixture.slides}
-          theme={knobs.select('Carousel theme', ['dark', 'light'], 'dark', 'Presentation')}
         />
       </Podium>
     </div>

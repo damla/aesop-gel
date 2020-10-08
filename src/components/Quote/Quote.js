@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import { useThemeContext } from '~/contexts';
 import styles from './Quote.module.css';
 
 const Quote = ({ author, className, content, theme }) => {
-  const classSet = cx(styles.base, styles[theme], className);
+  const currentTheme = useThemeContext(theme, 'dark');
+  const classSet = cx(styles.base, styles[currentTheme], className);
 
   return (
     <div className={classSet}>
@@ -27,7 +29,7 @@ Quote.defaultProps = {
   author: undefined,
   className: undefined,
   content: undefined,
-  theme: 'dark',
+  theme: undefined,
 };
 
 export default Quote;

@@ -1,6 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import { ThemeContextProvider } from '~/contexts';
 import Transition from '~/components/Transition';
 import styles from './Podium.module.css';
 
@@ -20,6 +21,7 @@ const Podium = forwardRef(function PodiumRef(
     paddingLeft,
     paddingRight,
     paddingTop,
+    theme,
     transition,
     verticalPadding,
   },
@@ -45,14 +47,16 @@ const Podium = forwardRef(function PodiumRef(
       isActiveOnMount={isActiveOnMount}
       type={transition}
     >
-      <section
-        className={classSet}
-        data-test-ref={dataTestRef}
-        ref={ref}
-        style={style}
-      >
-        {children}
-      </section>
+      <ThemeContextProvider theme={theme}>
+        <section
+          className={classSet}
+          data-test-ref={dataTestRef}
+          ref={ref}
+          style={style}
+        >
+          {children}
+        </section>
+      </ThemeContextProvider>
     </Transition>
   );
 });
@@ -72,6 +76,7 @@ Podium.propTypes = {
   paddingLeft: PropTypes.oneOf(['none', 'small']),
   paddingRight: PropTypes.oneOf(['none', 'small']),
   paddingTop: PropTypes.oneOf(['none', 'small', 'medium', 'large']),
+  theme: PropTypes.oneOf(['dark', 'light']),
   transition: PropTypes.oneOf([
     'fade',
     'shiftInDown',
@@ -99,6 +104,7 @@ Podium.defaultProps = {
   paddingLeft: undefined,
   paddingRight: undefined,
   paddingTop: undefined,
+  theme: undefined,
   transition: undefined,
   verticalPadding: 'none',
 };
