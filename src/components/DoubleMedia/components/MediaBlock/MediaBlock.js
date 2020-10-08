@@ -110,7 +110,7 @@ MediaBlock.defaultProps = {
   medium: undefined,
   poster: undefined,
   small: undefined,
-  type: undefined,
+  type: 'image',
   theme: 'dark',
 };
 
