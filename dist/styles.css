@@ -9612,6 +9612,109 @@ sans-serif;
 --color-dark-decoration: var(--color-grey-30);
 --color-dark-disabled: var(--color-grey-60);
 */
+.TextOverFullWidthAsset-module_base__1Eq4j {
+  position: relative;
+  width: 100%;
+}
+@media (max-width: 639px) {
+.TextOverFullWidthAsset-module_media__4oONG {
+    height: 80vh
+}
+  }
+.TextOverFullWidthAsset-module_media__4oONG img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+@media (max-width: 639px) {
+.TextOverFullWidthAsset-module_media__4oONG img {
+      height: 80vh
+  }
+    }
+.TextOverFullWidthAsset-module_content__2--QQ {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+}
+@media (min-width: 640px) {
+.TextOverFullWidthAsset-module_content__2--QQ {
+    width: 42%
+}
+  }
+@media (min-width: 1025px) {
+.TextOverFullWidthAsset-module_content__2--QQ {
+    width: 34%
+}
+  }
+.TextOverFullWidthAsset-module_content__2--QQ.TextOverFullWidthAsset-module_Bottom__20Kz1 {
+    top: auto;
+    bottom: 0;
+  }
+@media (min-width: 1025px) {
+.TextOverFullWidthAsset-module_content__2--QQ.TextOverFullWidthAsset-module_Bottom__20Kz1 {
+      bottom: auto
+  }
+    }
+@media (min-width: 1025px) {
+.TextOverFullWidthAsset-module_content__2--QQ.TextOverFullWidthAsset-module_Top__3Anm9,
+  .TextOverFullWidthAsset-module_content__2--QQ.TextOverFullWidthAsset-module_Bottom__20Kz1 {
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%)
+  }
+    }
+@media (min-width: 640px) {
+.TextOverFullWidthAsset-module_content__2--QQ.TextOverFullWidthAsset-module_Left__1OISv {
+      left: 8%;
+      padding: 20px 0
+  }
+    }
+@media (min-width: 640px) {
+.TextOverFullWidthAsset-module_content__2--QQ.TextOverFullWidthAsset-module_Right__tbRff {
+      right: 8%;
+      left: auto;
+      padding: 20px 0
+  }
+    }
+
+/* @import './key-frame.css'; */
+/* @import './font-face.css'; */
+:root {
+  /* Base colours */
+
+  /* UI colours light theme */
+
+  /* UI colours dark theme */
+
+  /* Background colours */
+
+  /* System colours */
+
+  /* Secondary Message background colour */
+}
+/* Dark theme UI elements */
+/* Light theme UI elements */
+/* UI colours light theme */
+/*
+--color-light-copy: var(--color-primary);
+--color-light-copy-alternate: var(--color-white-darker);
+--color-light-label: var(--color-white-darker);
+--color-light-link: var(--color-primary);
+--color-light-link-hover: var(--color-white-darker);
+--color-light-decoration: var(--color-white-darker);
+--color-light-disabled: var(--color-grey-60);
+*/
+/* UI colours dark theme */
+/*
+--color-dark-copy: var(--color-secondary);
+--color-dark-copy-alternate: var(--color-grey-63);
+--color-dark-label: var(--color-grey-30);
+--color-dark-link: var(--color-grey-20);
+--color-dark-link-hover: var(--color-grey-10);
+--color-dark-decoration: var(--color-grey-30);
+--color-dark-disabled: var(--color-grey-60);
+*/
 .TwoColumnList-module_base__rFZFc,
   .TwoColumnList-module_base__rFZFc * {
     -webkit-box-sizing: border-box;
