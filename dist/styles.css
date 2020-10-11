@@ -4770,21 +4770,20 @@ sans-serif;
   }
 .FooterBlock_heading__2kMY- {
   margin-top: 0;
-  margin-bottom: 23px;
+  margin-bottom: 0;
   font-size: 15px;
   font-weight: 400;
   line-height: 2.5;
 }
 @media (max-width: 639px) {
 .FooterBlock_heading__2kMY- {
-    margin-bottom: 13px;
     font-size: 13px;
     line-height: 2.85
 }
   }
 .FooterBlock_divider__23KaL {
   border-bottom: 1px solid #fffef2;
-  margin-bottom: 16px;
+  margin: 16px 0;
 }
 .FooterBlock_divider__23KaL.FooterBlock_dark__145OS {
     border-color: #333;
@@ -4794,11 +4793,12 @@ sans-serif;
   }
 @media (max-width: 639px) {
 .FooterBlock_divider__23KaL {
-    margin-bottom: 6px
+    margin: 6px 0
 }
   }
 .FooterBlock_list__2H6IJ {
   padding-left: 0;
+  margin: 0;
   list-style: none;
 }
 .FooterBlock_listItem__2cWAS {

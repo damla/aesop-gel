@@ -399,9 +399,6 @@ exports[`<Footer /> renders base component correctly 1`] = `
       <div
         className="divider light"
       />
-      <ul
-        className="list"
-      />
       <div
         className="listItem"
       >
@@ -419,9 +416,6 @@ exports[`<Footer /> renders base component correctly 1`] = `
       <div
         className="divider light"
       />
-      <ul
-        className="list"
-      />
       <div
         className="listItem"
       >
@@ -438,9 +432,6 @@ exports[`<Footer /> renders base component correctly 1`] = `
       </h5>
       <div
         className="divider light"
-      />
-      <ul
-        className="list"
       />
       <div
         className="listItem"
