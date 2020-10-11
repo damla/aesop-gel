@@ -20,7 +20,7 @@
 
 .offsetPageHeading {
   @media (--viewport-sm-only) {
-    padding-top: 130px;
+    padding-top: 160px;
     padding-right: 20px;
     padding-left: 20px;
     margin-top: -100px;
@@ -28,13 +28,12 @@
 
   @media (--viewport-md) {
     width: 40%;
-    padding-top: 165px;
     margin-top: -75px;
     margin-left: 30%;
   }
 
   @media (--viewport-lg) {
-    padding-top: 195px;
+    padding-top: 190px;
   }
 }
 
