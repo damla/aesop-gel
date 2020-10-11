@@ -10,9 +10,6 @@ exports[`<FooterBlock /> renders base component correctly 1`] = `
   <div
     className="divider dark"
   />
-  <ul
-    className="list"
-  />
   <div
     className="listItem"
   >
