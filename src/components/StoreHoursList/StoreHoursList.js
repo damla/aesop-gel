@@ -23,7 +23,6 @@ const StoreHoursList = ({
       {heading && (
         <Heading
           className={styles.heading}
-          hasTopMargin={false}
           level={HEADING.LEVEL.FOUR}
           size={HEADING.SIZE.X_X_SMALL}
           theme={theme}

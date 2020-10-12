@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import Figure from '~/components/Figure';
-import Heading from '~/components/Heading';
 import Hyperlink from '~/components/Hyperlink';
 import Image from '~/components/Image';
 import Video from '~/components/Video';
@@ -22,7 +21,9 @@ const MediaBlock = ({
   type,
 }) => {
   const Media = () => {
-    return type === 'video' ? (
+    const isScrollBasedVideo = type === 'scrollbasedvideo' ? true : false;
+
+    return type.includes('video') ? (
       <Video
         fallbackImage={fallbackImage}
         hasAllowAudio={false}
@@ -31,6 +32,7 @@ const MediaBlock = ({
         hasLoop={true}
         hasPlayInFullScreen={false}
         isFullWidth={true}
+        isScrollBasedVideo={isScrollBasedVideo}
         large={large}
         medium={medium}
         poster={poster}
@@ -41,10 +43,16 @@ const MediaBlock = ({
     );
   };
 
-  const captionClassSet = cx(styles.caption, styles[theme]);
+  const captionClassSet = cx(styles.caption);
+  const headingClassSet = cx(styles.heading, link && styles.headingLink);
+  const headingWrapperClassSet = cx(styles.headingWrapper);
 
   return (
-    <Figure className={styles.figure} hasCaptionBorder={false} theme={theme}>
+    <Figure
+      className={cx(styles.figure, styles[theme])}
+      hasCaptionBorder={false}
+      theme={theme}
+    >
       {link ? (
         <Hyperlink {...link} className={styles.imageLinkWrapper}>
           <Media />
@@ -56,15 +64,19 @@ const MediaBlock = ({
       {(heading || caption) && (
         <figcaption className={styles.figcaption}>
           {heading && (
-            <Heading level="3" size="xSmall" theme={theme}>
+            <h3 className={headingClassSet}>
               {link ? (
-                <Hyperlink {...link} theme={theme}>
-                  {heading}
+                <Hyperlink
+                  {...link}
+                  className={headingWrapperClassSet}
+                  theme={theme}
+                >
+                  <span>{heading}</span>
                 </Hyperlink>
               ) : (
-                heading
+                <span className={headingWrapperClassSet}>{heading}</span>
               )}
-            </Heading>
+            </h3>
           )}
           {caption && <div className={captionClassSet}>{caption}</div>}
         </figcaption>
@@ -88,7 +100,7 @@ MediaBlock.propTypes = {
   medium: PropTypes.string,
   poster: PropTypes.object,
   small: PropTypes.string,
-  type: PropTypes.oneOf(['video', 'image']),
+  type: PropTypes.oneOf(['video', 'image', 'scrollbasedvideo']),
   theme: PropTypes.oneOf(['dark', 'light']),
 };
 
@@ -102,7 +114,7 @@ MediaBlock.defaultProps = {
   medium: undefined,
   poster: undefined,
   small: undefined,
-  type: undefined,
+  type: 'image',
   theme: 'dark',
 };
 

@@ -5,10 +5,13 @@
   --color-white: #fffef2;
   --color-white-dark: #f6f5e8;
   --color-white-darker: #e0dfd6;
+  --color-white-darker-2: #f0efe1;
   --color-white-rgba-20: rgba(255, 255, 255, 0.2);
   --color-white-rgba-60: rgba(255, 255, 255, 0.6);
   --color-black: #000;
+  --color-black-rgba-20: rgba(0, 0, 0, 0.2);
   --color-black-rgba-50: rgba(0, 0, 0, 0.5);
+  --color-black-rgba-60: rgba(0, 0, 0, 0.6);
   --color-grey-90: #f5f5f5;
   --color-grey-80: #eee;
   --color-grey-70: #e5e5e5;
@@ -26,10 +29,10 @@
   --color-grey-rgba-20: rgba(51, 51, 51, 0.2);
 
   /* UI colours light theme */
-  --color-light-copy: var(--color-primary);
+  --color-light-copy: var(--color-white);
   --color-light-copy-alternate: var(--color-white-darker);
   --color-light-label: var(--color-white-darker);
-  --color-light-link: var(--color-primary);
+  --color-light-link: var(--color-white);
   --color-light-link-hover: var(--color-white-dark);
   --color-light-decoration: var(--color-white-darker);
   --color-light-disabled: var(--color-grey-40);
@@ -38,8 +41,8 @@
   --color-dark-copy: var(--color-secondary);
   --color-dark-copy-alternate: var(--color-grey-63);
   --color-dark-label: var(--color-grey-30);
-  --color-dark-link: var(--color-grey-20);
-  --color-dark-link-hover: var(--color-grey-10);
+  --color-dark-link: var(--color-secondary);
+  --color-dark-link-hover: var(--color-secondary);
   --color-dark-decoration: var(--color-grey-30);
   --color-dark-disabled: var(--color-grey-57);
 
@@ -54,4 +57,7 @@
   --color-highlight-orange: #c67330;
   --color-highlight-green: #007544;
   --color-highlight-blue: #114094;
+
+  /* Secondary Message background colour */
+  --color-secondary-msg-bg: #f3f1e4;
 }

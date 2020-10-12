@@ -61,6 +61,15 @@ export default {
       medium: './assets/images/MediaWithContent/background-large.jpg',
       small: './assets/images/MediaWithContent/background-large.jpg',
     },
+    theOrator: {
+      altText: 'alt image',
+      large:
+        'https://images.ctfassets.net/u1nb1km7t5q7/5fp4Awf1ao2BQ9ERmviJZS/48844c064d647d9d6191d9c7058007e3/Aesop-Gift-Kits-2019-20-Hybris-The-Orator-PDP-Tertiary-50-50-Desktop-1440x1800px.png',
+      medium:
+        'https://images.ctfassets.net/u1nb1km7t5q7/5b1AU4IQX9Lyzna0BdOtb8/512152a24abcbb645adad1fe4efe76a9/Aesop-Gift-Kits-2019-20-Hybris-The-Orator-PDP-Tertiary-50-50-Tablet-1536x1685px.png',
+      small:
+        'https://images.ctfassets.net/u1nb1km7t5q7/74ngiRfTilkZroWAyrBDeH/1f54ece4731aeb71013d034b72d539a4/Aesop-Gift-Kits-2019-20-Hybris-The-Orator-PDP-Tertiary-1-Mobile-640x800px.png',
+    },
     expectations: {
       altText: 'alt image',
       large:
@@ -119,6 +128,8 @@ export default {
     ],
   },
   linkButtonGroup: {
+    textAlign: 'center',
+    hasFitContent: true,
     children: (
       <>
         <Hyperlink style="Internal No Icon Button Link" url="/">
@@ -165,6 +176,14 @@ export default {
     ],
   },
   video: {
+    fallbackImage: {
+      copy: {
+        altText: 'How to Use Video for Tea Tree Leaf Facial Exfoliant',
+      },
+      large: './assets/images/MediaWithContent/video-poster.png',
+      medium: './assets/images/MediaWithContent/video-poster.png',
+      small: './assets/images/MediaWithContent/video-poster.png',
+    },
     poster: {
       copy: {
         altText: 'How to Use Video for Tea Tree Leaf Facial Exfoliant',

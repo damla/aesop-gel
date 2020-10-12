@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import Heading from '~/components/Heading';
-import { getHeadingLevel, getSubHeadingLevel } from './SectionHeading.utils';
+import { getEyebrowLevel, getSubHeadingLevel } from './SectionHeading.utils';
 import styles from './SectionHeading.module.css';
 
 const SectionHeading = ({
@@ -19,42 +19,44 @@ const SectionHeading = ({
   theme,
   titleFont,
 }) => {
-  const classSet = cx(
-    styles.base,
-    { [styles.offsetPageHeading]: isOffsetPageHeading },
-    className,
-  );
-  const eyebrowClassSet = cx(childrenClassNames.eyebrow);
+  const classSet = cx(className, styles.base, {
+    [styles.offsetPageHeading]: isOffsetPageHeading,
+  });
+  const eyebrowClassSet = cx(styles.eyebrow, childrenClassNames.eyebrow);
   const headingClassSet = cx(
+    styles.heading,
     childrenClassNames.heading,
     titleFont && styles[`${titleFont}TitleFont`],
   );
-  const subHeadingClassSet = cx(childrenClassNames.subHeading);
+  const subHeadingClassSet = cx(
+    styles.subHeading,
+    childrenClassNames.subHeading,
+  );
 
   return (
     <header className={classSet} id={id}>
-      {eyebrow && (
-        <Heading
-          className={eyebrowClassSet}
-          hasMediumWeightFont={true}
-          isFlush={isFlush}
-          level={isPageHeading ? '1' : '2'}
-          size="xXSmall"
-          theme={theme}
-        >
-          {eyebrow}
-        </Heading>
-      )}
       {heading && (
         <Heading
           className={headingClassSet}
           hasSerifFont={hasSerifFontHeading}
           isFlush={isFlush}
-          level={getHeadingLevel(eyebrow, isPageHeading)}
+          level={isPageHeading ? '1' : '2'}
           size="xLarge"
           theme={theme}
         >
           {heading}
+        </Heading>
+      )}
+      {eyebrow && (
+        <Heading
+          className={eyebrowClassSet}
+          hasMediumWeightFont={true}
+          isFlush={isFlush}
+          level={getEyebrowLevel(heading, isPageHeading)}
+          size="xXSmall"
+          theme={theme}
+        >
+          {eyebrow}
         </Heading>
       )}
       {subHeading && (

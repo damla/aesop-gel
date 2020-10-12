@@ -4,8 +4,9 @@
   width: min-content;
   min-width: auto;
   max-width: 100%;
-  padding: 15px 15px 18px;
-  font-size: rem(15px);
+  justify-content: center;
+  padding: 20px 15px 20px;
+  font-size: rem(14px);
   text-align: center;
 
   @media (--viewport-lg) {
@@ -40,10 +41,12 @@
   vertical-align: middle;
 
   span {
-    display: inline-block;
+    display: block;
     overflow: hidden;
     max-width: max-content;
     height: 18px;
+    margin-right: auto;
+    margin-left: auto;
     line-height: 1;
     text-overflow: ellipsis;
     transform: translateY(-18px);

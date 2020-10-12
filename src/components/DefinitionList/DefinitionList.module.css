@@ -13,7 +13,7 @@
 
 .term,
 .description {
-  font-size: rem(15px);
+  font-size: rem(14px);
   line-height: 1.4;
   opacity: 0;
   transform: translateY(-20px);

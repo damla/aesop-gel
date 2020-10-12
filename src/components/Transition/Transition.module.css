@@ -62,6 +62,42 @@
   transform: translate3d(0, -20px, 0);
 }
 
+.shiftInUpEnter {
+  opacity: 0;
+  transform: translate3d(0, 20px, 0);
+}
+
+.shiftInUpEnterActive {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition:
+    transform 1500ms var(--easing-ease-out-cubic),
+    opacity 1500ms var(--easing-ease-in-cubic);
+}
+
+.shiftInUpEnterDone {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.shiftInUpExit {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.shiftInUpExitActive {
+  opacity: 0;
+  transform: translate3d(0, 20px, 0);
+  transition:
+    transform 1500ms var(--easing-ease-out-cubic),
+    opacity 1500ms var(--easing-ease-in-cubic);
+}
+
+.shiftInUpExitDone {
+  opacity: 0;
+  transform: translate3d(0, 20px, 0);
+}
+
 .shiftInLeftEnter {
   opacity: 0;
   transform: translate3d(20px, 0, 0);

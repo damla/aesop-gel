@@ -1,0 +1,140 @@
+@import 'styles/index';
+
+.wrapper {
+  --background-color-solid: rgba(235, 234, 222, 1);
+  --background-color-transparent: rgba(235, 234, 222, 0);
+  --left-faded-edge-width: 20px;
+  --right-faded-edge-width: 50px;
+  --font-color: #666;
+
+  position: relative;
+  overflow: hidden;
+  background-color: var(--background-color-solid);
+
+  &::before,
+  &::after {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    height: 100%;
+    content: '';
+  }
+
+  &::before {
+    left: 0;
+    width: var(--left-faded-edge-width);
+    background-image:
+      linear-gradient(
+        to right,
+        var(--background-color-solid) 0%,
+        var(--background-color-transparent) 100%
+      );
+  }
+  &::after {
+    right: 0;
+    width: var(--right-faded-edge-width);
+    background-image:
+      linear-gradient(
+        to right,
+        var(--background-color-transparent) 0%,
+        rgba(235, 234, 222, 1) 100%
+      );
+  }
+}
+
+.list {
+  display: flex;
+  overflow: auto;
+  height: 64px;
+  align-items: center;
+  padding: 0 0 0 var(--left-faded-edge-width);
+  margin: 0;
+  background-color: transparent;
+  list-style-type: none;
+  white-space: nowrap;
+
+  @media (--viewport-md) {
+    padding-left: 34px;
+  }
+
+  @media (--viewport-lg) {
+    height: 110px;
+    padding-left: 40px;
+  }
+}
+
+.listItem {
+  margin: 0 10px;
+
+  &:first-of-type {
+    margin-left: 0;
+  }
+
+  &:last-of-type {
+    padding-right: var(--right-faded-edge-width);
+  }
+}
+
+.link {
+  display: block;
+  border: none;
+  background-color: transparent;
+  color: var(--font-color);
+  cursor: pointer;
+  font-family: var(--font-family-sans-serif-medium);
+  font-size: rem(14px);
+
+  /* Web UI has global button styles with outlines */
+  outline: none !important;
+  text-decoration: none;
+
+  &.hasChildren {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+
+    &::after {
+      position: absolute;
+      right: -15px;
+      width: 1px;
+      height: 10px;
+      background-color: currentColor;
+      content: '';
+      pointer-events: none;
+    }
+  }
+
+  .linkInnerText {
+    display: block;
+
+    &::after {
+      display: block;
+      border-bottom: solid 1px currentcolor;
+      margin-top: 2px;
+      content: '';
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 250ms var(--easing-ease-out-cubic);
+    }
+  }
+
+  &:focus {
+    color: var(--font-color);
+
+    .linkInnerText {
+      outline: 1px solid currentColor;
+      outline-offset: 5px;
+      transition: outline-offset 200ms var(--easing-ease-out-cubic);
+    }
+  }
+
+  &:hover,
+  &.isActive {
+    color: var(--font-color);
+
+    .linkInnerText::after {
+      transform: scaleX(1);
+    }
+  }
+}

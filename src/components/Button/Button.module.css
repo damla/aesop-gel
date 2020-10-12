@@ -8,7 +8,7 @@
   background-color: transparent;
   cursor: pointer;
   font-family: var(--font-family-sans-serif-regular);
-  font-size: rem(15px);
+  font-size: rem(14px);
   font-weight: var(--font-weight-normal);
   line-height: 1.4;
   outline: none;
@@ -17,23 +17,34 @@
   > * {
     pointer-events: none;
   }
+
+  &,
+  & * {
+    box-sizing: border-box;
+  }
 }
 
 .blockStyle {
   display: inline-block;
-  min-width: 160px;
-  max-width: 400px;
-  padding: 15px;
+  min-width: 210px;
+  max-width: 300px;
+  height: 60px;
+  padding: 19px 23px;
   border-width: 1px;
   border-style: solid;
   transition: all 200ms var(--easing-ease-in-out-cubic);
+
+  @media (--viewport-sm-only) {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 .dark {
   @extend %font-theme-dark-link;
 
   &.blockStyle {
-    border-color: var(--color-grey-60);
+    border-color: var(--color-grey-rgba-20);
 
     &:hover,
     &:focus {

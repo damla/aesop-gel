@@ -32,7 +32,6 @@ describe('<AddToCartButton />', () => {
               <AddToCartButton
                 className={AddToCartButtonFixture.className}
                 copy={AddToCartButtonFixture.copy}
-                dataTestRef={AddToCartButtonFixture.dataTestRef}
                 isEnabled={AddToCartButtonFixture.isEnabled}
               />
             </VariantSelectContextProvider>

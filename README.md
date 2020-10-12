@@ -26,15 +26,55 @@ TBA
 
 ## Development
 
-```
+```bash
 npm i && nvm use && npm run storybook
+```
+
+### While using a consuming application
+
+You can use the `npm link` command to actively develop on Aesop Gel and have the changes reflected in your consuming app.
+
+```bash
+# run inside aesop-gel to create a global link to be used
+npm link
+
+# run inside aesop-gel to get a link to the consumer's react
+npm link ../aesop-web-ui/node_modules/react
+
+# run inside aesop-web-ui to use your local aesop-gel build
+npm link aesop-gel
+
+# finally run this to update the built files on changes
+npm run build:watch
+```
+
+### VS Code
+
+Visual Studio  code struggles to make sense of aliased imports which are being utilised in this project.
+To address this you can use a `jsconfig.json` with a sample shown below. More information can be found [here](https://code.visualstudio.com/docs/languages/jsconfig)
+
+```json
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~/*": [
+        "./src/*"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
 ```
 
 ## Production
 
 Rollup buils ES Modules for this project
 
-```
+```bash
 npm run build:prod
 ```
 
@@ -236,5 +276,13 @@ Code issues, update requests and development improvements that do not have a JIR
 Any `@TODO`s in the code base should have a corresponding issue submission.
 
 ### Contributing
+
+#### Creating new components
+
+Use the npm script to generate the new files for a new component.
+
+```bash
+npm run generate-component -- MyComponent
+```
 
 Pull Requests for any new feature, bug fix or update need to be made with the PR template provided via a [New Pull Request](https://github.com/aesop/aesop-gel/pulls). Every PR needs to be Peer Reviewed before it can be merged.

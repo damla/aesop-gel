@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import { useThemeContext } from '~/contexts';
 import SectionHeading from '~/components/SectionHeading';
 import styles from './BodyCopy.module.css';
 
@@ -9,14 +10,17 @@ const BodyCopy = ({
   className,
   copy,
   eyebrow,
+  hasFlushHeading,
   hasSerifFontHeading,
   heading,
   id,
+  isHeroArticle,
   subHeading,
   theme,
   content,
 }) => {
-  const classSet = cx(styles.base, styles[theme], className);
+  const currentTheme = useThemeContext(theme, 'dark');
+  const classSet = cx(styles.base, styles[currentTheme], className);
 
   return (
     <article className={classSet} id={id}>
@@ -30,8 +34,10 @@ const BodyCopy = ({
         hasSerifFontHeading={hasSerifFontHeading}
         heading={heading}
         id={id}
+        isFlush={hasFlushHeading}
+        isPageHeading={isHeroArticle}
         subHeading={subHeading}
-        theme={theme}
+        theme={currentTheme}
       />
 
       {copy && <div className={styles.copy}>{copy}</div>}
@@ -51,9 +57,11 @@ BodyCopy.propTypes = {
   content: PropTypes.any,
   copy: PropTypes.node,
   eyebrow: PropTypes.string,
+  hasFlushHeading: PropTypes.bool,
   hasSerifFontHeading: PropTypes.bool,
   heading: PropTypes.string,
   id: PropTypes.string,
+  isHeroArticle: PropTypes.bool,
   subHeading: PropTypes.string,
   theme: PropTypes.oneOf(['dark', 'light']),
 };
@@ -68,11 +76,13 @@ BodyCopy.defaultProps = {
   content: undefined,
   copy: undefined,
   eyebrow: undefined,
+  hasFlushHeading: false,
   hasSerifFontHeading: false,
   heading: undefined,
   id: undefined,
+  isHeroArticle: undefined,
   subHeading: undefined,
-  theme: 'dark',
+  theme: undefined,
 };
 
 export default BodyCopy;

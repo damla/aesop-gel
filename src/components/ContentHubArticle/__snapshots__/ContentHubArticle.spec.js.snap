@@ -2,7 +2,7 @@
 
 exports[`<ContentHubArticle /> renders base component correctly 1`] = `
 <div
-  className="base fadeEnter"
+  className="base"
   id="test_id"
 >
   <div

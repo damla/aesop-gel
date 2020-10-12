@@ -2,7 +2,7 @@
 
 exports[`<SubNav /> renders base component correctly 1`] = `
 <nav
-  className="base"
+  className="base dark"
 >
   <h3
     className="base small dark heading"
@@ -13,10 +13,10 @@ exports[`<SubNav /> renders base component correctly 1`] = `
     className="base dark"
   >
     <li
-      className="item"
+      className="item item"
     >
       <a
-        className="base left dark itemList"
+        className="base left dark link"
         href="https://aesop.com/"
         target="_self"
       >
@@ -24,10 +24,10 @@ exports[`<SubNav /> renders base component correctly 1`] = `
       </a>
     </li>
     <li
-      className="item"
+      className="item item"
     >
       <a
-        className="base left dark itemList"
+        className="base left dark link"
         href="https://aesop.com/"
         target="_self"
       >
@@ -40,16 +40,16 @@ exports[`<SubNav /> renders base component correctly 1`] = `
 
 exports[`<SubNav /> renders without title if not \`title\` prop is passed 1`] = `
 <nav
-  className="base"
+  className="base dark"
 >
   <ul
     className="base dark"
   >
     <li
-      className="item"
+      className="item item"
     >
       <a
-        className="base left dark itemList"
+        className="base left dark link"
         href="https://aesop.com/"
         target="_self"
       >
@@ -57,10 +57,10 @@ exports[`<SubNav /> renders without title if not \`title\` prop is passed 1`] = 
       </a>
     </li>
     <li
-      className="item"
+      className="item item"
     >
       <a
-        className="base left dark itemList"
+        className="base left dark link"
         href="https://aesop.com/"
         target="_self"
       >

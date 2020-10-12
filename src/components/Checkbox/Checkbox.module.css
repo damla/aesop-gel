@@ -1,0 +1,85 @@
+@import 'styles/index';
+
+.base {
+  display: flex;
+  margin-top: 18px;
+  font-family: var(--font-family-sans-serif-regular);
+}
+
+.checkBox {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  flex: 0 0 13px;
+  border: 1px solid var(--color-dark-copy);
+  margin: 8px 0 0 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-clip: content-box;
+  background-color: transparent;
+  color: var(--color-dark-copy);
+  font-size: rem(14px);
+  line-height: 2.14;
+
+  @media (--viewport-sm-only) {
+    margin: 2px 0 0 0;
+    font-size: rem(12px);
+    line-height: 1.33;
+  }
+  @media (--viewport-md-only) {
+    margin: 6px 0 0 0;
+    line-height: 1.79;
+  }
+
+  &.dark {
+    border-color: var(--color-dark-copy);
+    color: var(--color-dark-copy);
+  }
+
+  &.light {
+    border-color: var(--color-light-copy);
+    color: var(--color-light-copy);
+  }
+
+  &:checked::before {
+    position: relative;
+    top: -8px;
+    content: '\2713'; /* Glyph: ✓ (check mark) */
+    @media (--viewport-sm-only) {
+      top: -2px;
+    }
+    @media (--viewport-md-only) {
+      top: -8px;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.content {
+  margin-left: 10px;
+  font-size: rem(14px);
+  line-height: 2.14;
+  &.dark {
+    color: var(--color-dark-copy);
+  }
+
+  &.light {
+    color: var(--color-light-copy);
+  }
+
+  @media (--viewport-sm-only) {
+    font-size: rem(12px);
+    line-height: 1.33;
+  }
+  @media (--viewport-md-only) {
+    line-height: 1.79;
+  }
+}

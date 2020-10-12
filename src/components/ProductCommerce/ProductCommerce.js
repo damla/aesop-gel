@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { HEADING, HYPERLINK_STYLE_TYPES } from '~/constants';
-import { useVariantSelectContext } from '~/contexts';
+import { useProductDetailContext, useVariantSelectContext } from '~/contexts';
 import { useImageTransition } from '~/customHooks';
 import { getVariantRadioOptions } from '~/utils/product';
 import AddToCartButton from '~/components/AddToCartButton';
@@ -14,7 +14,6 @@ import Loading from '~/components/Loading';
 import RadioGroup from '~/components/RadioGroup';
 import SectionHeading from '~/components/SectionHeading';
 import Transition from '~/components/Transition';
-import { P } from '~/components/Paragraph';
 
 import styles from './ProductCommerce.module.css';
 
@@ -35,6 +34,7 @@ const ProductCommerce = ({
     variants,
   } = useVariantSelectContext();
 
+  const { sku } = useProductDetailContext();
   const [currentImage, isImageActive] = useImageTransition(
     selectedVariant?.image,
     imageRef,
@@ -46,9 +46,8 @@ const ProductCommerce = ({
 
   const variantRadioOptions = getVariantRadioOptions(variants);
   const classSet = cx(styles.base, className);
-  const RADIO_GROUP_NAME = 'sku';
+  const RADIO_GROUP_NAME = sku;
   const RADIO_GROUP_DATA_TEST_REF = 'PRODUCT_COMMERCE_VARIANT_SELECT';
-  const ADD_TO_CART_BUTTON_DATA_TEST_REF = 'PRODUCT_COMMERCE_ADD_TO_CART_CTA';
 
   return (
     <div className={classSet} id={id}>
@@ -72,9 +71,7 @@ const ProductCommerce = ({
           isFlush={true}
           theme={theme}
         />
-        <P className={styles.description} theme={theme}>
-          {description}
-        </P>
+        <div className={styles.description}>{description}</div>
         <div className={styles.variantsWrapper}>
           <Heading
             hasMediumWeightFont={true}
@@ -85,7 +82,6 @@ const ProductCommerce = ({
           >
             {copy?.size}
           </Heading>
-
           <RadioGroup
             className={styles.variants}
             dataTestRef={RADIO_GROUP_DATA_TEST_REF}
@@ -105,7 +101,6 @@ const ProductCommerce = ({
           <AddToCartButton
             className={styles.addToCartButton}
             copy={copy.addToCart}
-            dataTestRef={ADD_TO_CART_BUTTON_DATA_TEST_REF}
             isFullWidth={false}
             theme={theme}
           />
@@ -142,7 +137,7 @@ ProductCommerce.propTypes = {
     text: PropTypes.string,
     url: PropTypes.string,
   }),
-  description: PropTypes.string,
+  description: PropTypes.element,
   eyebrow: PropTypes.string,
   heading: PropTypes.string,
   id: PropTypes.string,

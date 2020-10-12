@@ -16,7 +16,7 @@ describe('<BodyCopy />', () => {
     const tree = renderer
       .create(
         <BodyCopy
-          content={<p>{BodyCopyFixture.heading}</p>}
+          content={<div>{BodyCopyFixture.linkButtonGroup.children}</div>}
           copy="Parsley Seed Cream. [The Paris Review](http://theparisreview.org) Intensely soothing, nourishing and hydrating, this elegant formulation contains a potent blend of botanicals that offer fortification of the highest order against free radicals."
           eyebrow="Recommended Nearby"
           heading="Aesop & The Paris Review: A Partnership Extended"
@@ -26,6 +26,21 @@ describe('<BodyCopy />', () => {
       )
       .toJSON();
 
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('does not render content when no `content` prop supplied', () => {
+    const tree = renderer
+      .create(
+        <BodyCopy
+          copy="Parsley Seed Cream. [The Paris Review](http://theparisreview.org) Intensely soothing, nourishing and hydrating, this elegant formulation contains a potent blend of botanicals that offer fortification of the highest order against free radicals."
+          eyebrow="Recommended Nearby"
+          heading="Aesop & The Paris Review: A Partnership Extended"
+          id="Anti-Oxidant"
+          subHeading="Active Nutrients"
+        />,
+      )
+      .toJSON();
     expect(tree).toMatchSnapshot();
   });
 

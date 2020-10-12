@@ -1,0 +1,34 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import * as knobs from '@storybook/addon-knobs';
+import Podium from '~/components/Podium';
+import IconLink from './IconLink';
+import IconLinkFixture from './IconLink.fixture';
+
+<Meta title="Components/IconLink" component={IconLink} />
+
+# IconLink
+
+<Preview>
+  <Story name="Base component">
+    <div style={{ display: 'flex', flexWrap: 'wrap', textAlign: 'center' }}>
+      {IconLinkFixture.map((icon, key) => (
+        <div style={{ padding: '20px 40px' }} key={key}>
+          <IconLink 
+            altText={icon.altText}
+            hasTargetInNewWindow={knobs.boolean('hasTargetInNewWindow', false, 'Presentation')}
+            height={knobs.number('height', 25, 'Presentation')}
+            icon={icon.icon}
+            id={icon.altText}
+            target={icon.target}
+            width={knobs.number('width', 25, 'Presentation')}
+          />
+          <div style={{ marginTop: '10px' }}>{icon.altText}</div>
+        </div>
+      ))}
+    </div>
+  </Story>
+</Preview>
+
+## API
+
+<Props of={IconLink} />

@@ -11,7 +11,7 @@ module.exports = {
     '@storybook/addon-a11y/register',
     '@storybook/addon-viewport/register',
     '@storybook/addon-docs/preset',
-    '@storybook/addon-backgrounds/register',
+    '@storybook/addon-backgrounds',
   ],
   webpackFinal: async (config, { configType }) => {
     // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'

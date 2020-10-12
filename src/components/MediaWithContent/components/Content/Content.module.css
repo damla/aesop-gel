@@ -15,45 +15,53 @@
 
 .hasFullWidthImage {
   @media (--viewport-lg) {
-    margin: auto 0 auto 50%;
-  }
-}
-
-.hasFullWidthImage.reverse {
-  @media (--viewport-lg) {
-    margin: auto 50% auto 0;
+    margin-top: auto;
+    margin-right: 0;
+    margin-bottom: auto;
+    margin-left: 50%;
   }
 }
 
 .hasFullWidthImage.hero {
   @media (--viewport-md-only) {
     position: relative;
-    padding-top: var(--layout-logo-vertical-offset-lg);
     margin-right: auto;
-    margin-left: var(--layout-lg-spacing);
+    margin-left: 0;
   }
+
+  @media (--viewport-lg) {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.hasFullWidthImage.reverse {
+  @media (--viewport-lg) {
+    margin-right: 50%;
+    margin-left: 0;
+  }
+}
+
+.hasFullWidthImage.reverse.hero {
+  pointer-events: none;
+  @media (--viewport-lg) {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+.topOffest.topOffest {
+  margin-top: 0;
 }
 
 .innerWrapper {
   justify-content: space-between;
-  padding: 36px 20px 56px;
-
-  @media (--viewport-md-only) {
-    .hero & {
-      width: 60%;
-      margin-right: auto;
-      margin-left: auto;
-    }
-  }
+  padding: 40px 20px;
 
   @media (--viewport-md) {
     display: flex;
     flex-basis: auto;
     padding: 90px 34px;
-
-    .hero & {
-      flex-direction: column;
-    }
   }
 
   @media (--viewport-lg) {
@@ -62,16 +70,39 @@
     flex-basis: auto;
     flex-direction: column;
     padding: 115px 0;
-    margin: auto;
+    margin-top: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+  }
 
-    .hero & {
-      padding-top: var(--layout-logo-vertical-offset-lg);
-      margin-top: 0;
+  .hero & {
+    pointer-events: auto;
+
+    @media (--viewport-md-only) {
+      width: 60%;
+      margin-right: auto;
+      margin-left: auto;
     }
 
-    .hero.reverse & {
-      margin-right: 15%;
-      margin-left: 34%;
+    @media (--viewport-md) {
+      flex-direction: column;
+    }
+
+    @media (--viewport-lg) {
+      margin-right: 34%;
+      margin-left: 15%;
+    }
+  }
+
+  .topOffest & {
+    @media (--viewport-md) {
+      padding-top: 80px;
+    }
+
+    @media (--viewport-lg) {
+      padding-top: var(--layout-logo-vertical-offset-lg);
+      margin-top: 0;
     }
   }
 
@@ -79,9 +110,45 @@
     height: 100%;
   }
 
+  .topOffest.hasFullWidthImage & {
+    @media (--viewport-md) {
+      padding-top: var(--layout-logo-vertical-offset-md);
+    }
+
+    @media (--viewport-lg) {
+      padding-top: var(--layout-logo-vertical-offset-lg);
+    }
+  }
+
   .hasFullWidthImage.hero & {
-    @media (--viewport-md-only) {
-      padding-top: 0;
+    @media (--viewport-md) {
+      width: 100%;
+      max-width: 448px;
+      padding-right: 0;
+      padding-left: 0;
+      margin-right: 40px;
+      margin-left: 33%;
+    }
+
+    @media (--viewport-lg) {
+      width: 100%;
+      max-width: 595px;
+      margin-right: 15%;
+      margin-left: auto;
+    }
+  }
+
+  .hero.reverse & {
+    @media (--viewport-lg) {
+      margin-right: 15%;
+      margin-left: 34%;
+    }
+  }
+
+  .hasFullWidthImage.hero.reverse & {
+    @media (--viewport-lg) {
+      margin-right: 0;
+      margin-left: 24.99%;
     }
   }
 }
@@ -105,28 +172,8 @@
   }
 }
 
-.eyebrow {
-  margin-bottom: 10px;
-
-  @media (--viewport-lg) {
-    font-size: rem(14px);
-  }
-}
-
 .content {
-  font-size: rem(16px);
-
-  @media (--viewport-lg) {
-    font-size: rem(14px);
-  }
-
-  p {
-    font-size: rem(16px);
-
-    @media (--viewport-lg) {
-      font-size: rem(14px);
-    }
-  }
+  font-size: rem(14px);
 
   @media (--viewport-md-only) {
     width: 48%;
@@ -134,6 +181,8 @@
   }
 
   .hero & {
+    font-size: rem(16px);
+
     @media (--viewport-sm-only) {
       margin-top: 15px;
     }
@@ -144,6 +193,8 @@
   }
 
   .notHero & {
+    margin-top: 10px;
+
     @media (--viewport-md-only) {
       margin-left: var(--layout-md-spacing);
     }
@@ -159,14 +210,15 @@
 }
 
 .description {
-  margin: 20px 0 20px;
-  font-size: rem(16px);
-
-  @media (--viewport-lg) {
-    font-size: rem(14px);
-  }
+  margin-top: 10px;
+  margin-right: 0;
+  margin-bottom: 20px;
+  margin-left: 0;
+  font-size: rem(14px);
 
   .hero & {
     margin-top: 0;
+    margin-bottom: 30px;
+    font-size: rem(16px);
   }
 }

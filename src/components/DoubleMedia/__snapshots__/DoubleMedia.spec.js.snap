@@ -5,7 +5,7 @@ exports[`<DoubleMedia /> renders base component correctly 1`] = `
   className="base dark"
 >
   <figure
-    className="base dark figure"
+    className="base dark figure dark"
   >
     <picture
       className="base picture dark"
@@ -30,19 +30,23 @@ exports[`<DoubleMedia /> renders base component correctly 1`] = `
       className="figcaption"
     >
       <h3
-        className="base xSmall dark"
+        className="heading"
       >
-        Aesop favourites
+        <span
+          className="headingWrapper"
+        >
+          Aesop favourites
+        </span>
       </h3>
       <div
-        className="caption dark"
+        className="caption"
       >
         Our passion for creativity in form and function, extends to the setting of a meal among staff.
       </div>
     </figcaption>
   </figure>
   <figure
-    className="base dark figure"
+    className="base dark figure dark"
   >
     <a
       className="base left dark imageLinkWrapper"
@@ -73,18 +77,20 @@ exports[`<DoubleMedia /> renders base component correctly 1`] = `
       className="figcaption"
     >
       <h3
-        className="base xSmall dark"
+        className="heading headingLink"
       >
         <a
-          className="base left dark"
+          className="base left dark headingWrapper"
           href="/au/c/skin/cleanse"
           target="_self"
         >
-          Aesop favourites
+          <span>
+            Aesop favourites
+          </span>
         </a>
       </h3>
       <div
-        className="caption dark"
+        className="caption"
       >
         Our passion for creativity in form and function, extends to the setting of a meal among staff.
       </div>

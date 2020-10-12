@@ -1,5 +1,5 @@
 import React from 'react';
-import { configure } from 'enzyme';
+import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import renderer from 'react-test-renderer';
 import Pagination from './Pagination';
@@ -12,8 +12,13 @@ describe('<Carousel.Pagination />', () => {
   });
 
   it('renders base component correctly', () => {
-    const tree = renderer.create(<Pagination dots={[]} />).toJSON();
+    const tree = renderer.create(<Pagination dots={[0]} />).toJSON();
 
     expect(tree).toMatchSnapshot();
+  });
+
+  it('returns null if dots array was empty', () => {
+    const component = shallow(<Pagination />);
+    expect(component.type()).toEqual(null);
   });
 });

@@ -5,7 +5,7 @@ exports[`<StoreHoursList /> renders base component correctly 1`] = `
   className="base dark"
 >
   <h4
-    className="base noTopMargin xXSmall dark heading"
+    className="base xXSmall dark heading"
   >
     Opening hours
   </h4>

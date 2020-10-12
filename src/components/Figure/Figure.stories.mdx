@@ -11,6 +11,8 @@ import Image from '~/components/Image';
   <Story name="Base component">
     <Figure
       caption={knobs.text('caption', 'Lorem ipsum dolor sit amet', 'Copy')}
+      hasCaptionBorder={knobs.boolean('hasCaptionBorder', true, 'Presentation')}
+      hasCaptionOffset={knobs.boolean('hasCaptionOffset', true, 'Presentation')}
       theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
     >
       <Image

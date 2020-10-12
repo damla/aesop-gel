@@ -8,7 +8,7 @@ module.exports = {
   coverageThreshold: {
     global: {
       branches: 50,
-      functions: 50,
+      functions: 40,
       lines: 65,
       statements: 65,
     },
@@ -16,8 +16,8 @@ module.exports = {
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   testPathIgnorePatterns: [
     `<rootDir>/(dist|docs|node_modules|.cache)/`,
-    `<rootDir>/src/components/ProductDetailHeader`,
-    `<rootDir>/src/compositions/ProductDetail`,
+    `<rootDir>/src/components/ProductDetailHeader/`,
+    `<rootDir>/src/compositions/ProductDetail/`,
   ],
   globals: {
     __TEST__: true,

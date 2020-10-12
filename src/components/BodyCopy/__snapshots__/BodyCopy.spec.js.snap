@@ -1,5 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<BodyCopy /> does not render content when no \`content\` prop supplied 1`] = `
+<article
+  className="base dark"
+  id="Anti-Oxidant"
+>
+  <header
+    className="base"
+    id="Anti-Oxidant"
+  >
+    <h2
+      className="base xLarge dark heading heading"
+    >
+      Aesop & The Paris Review: A Partnership Extended
+    </h2>
+    <h3
+      className="base mediumWeightFont xXSmall dark eyebrow eyebrow"
+    >
+      Recommended Nearby
+    </h3>
+    <h4
+      className="base mediumWeightFont xSmall dark subHeading subHeading"
+    >
+      Active Nutrients
+    </h4>
+  </header>
+  <div
+    className="copy"
+  >
+    Parsley Seed Cream. [The Paris Review](http://theparisreview.org) Intensely soothing, nourishing and hydrating, this elegant formulation contains a potent blend of botanicals that offer fortification of the highest order against free radicals.
+  </div>
+</article>
+`;
+
 exports[`<BodyCopy /> renders base component correctly 1`] = `
 <article
   className="base dark"
@@ -10,17 +43,17 @@ exports[`<BodyCopy /> renders base component correctly 1`] = `
     id="Anti-Oxidant"
   >
     <h2
-      className="base mediumWeightFont xXSmall dark eyebrow"
-    >
-      Recommended Nearby
-    </h2>
-    <h3
-      className="base xLarge dark heading"
+      className="base xLarge dark heading heading"
     >
       Aesop & The Paris Review: A Partnership Extended
+    </h2>
+    <h3
+      className="base mediumWeightFont xXSmall dark eyebrow eyebrow"
+    >
+      Recommended Nearby
     </h3>
     <h4
-      className="base mediumWeightFont xSmall dark subHeading"
+      className="base mediumWeightFont xSmall dark subHeading subHeading"
     >
       Active Nutrients
     </h4>
@@ -33,9 +66,22 @@ exports[`<BodyCopy /> renders base component correctly 1`] = `
   <div
     className="contentWrapper"
   >
-    <p>
-      Lorem ipsum dolor sit amet
-    </p>
+    <div>
+      <a
+        className="base blockStyle left dark"
+        href="/"
+        target="_self"
+      >
+        Proin vulputate dignissim
+      </a>
+      <a
+        className="base blockStyle left dark"
+        href="Quisque lacus"
+        target="_self"
+      >
+        Quisque lacus dolor
+      </a>
+    </div>
   </div>
 </article>
 `;
@@ -48,7 +94,7 @@ exports[`<BodyCopy /> renders promary title as an \`h2\` if no \`eyebrow\` or \`
     className="base"
   >
     <h2
-      className="base mediumWeightFont xSmall dark subHeading"
+      className="base mediumWeightFont xSmall dark subHeading subHeading"
     >
       Aesop & The Paris Review: A Partnership Extended
     </h2>
@@ -64,7 +110,7 @@ exports[`<BodyCopy /> renders promary title as an \`h2\` if no \`eyebrow\` prop 
     className="base"
   >
     <h2
-      className="base xLarge dark heading"
+      className="base xLarge dark heading heading"
     >
       Aesop & The Paris Review: A Partnership Extended
     </h2>

@@ -2,7 +2,10 @@ import React from 'react';
 import { HYPERLINK_STYLE_TYPES } from '~/constants';
 import Hyperlink from '~/components/Hyperlink';
 
-const { EXTERNAL_NO_ICON_TEXT_LINK } = HYPERLINK_STYLE_TYPES;
+const {
+  EXTERNAL_NO_ICON_TEXT_LINK,
+  EXTERNAL_NO_ICON_BUTTON_LINK,
+} = HYPERLINK_STYLE_TYPES;
 
 export default {
   eyebrow: 'Nullam id erat est',
@@ -10,13 +13,14 @@ export default {
   subHeading: 'Nunc dignissim quis arcu a',
   theme: 'dark',
   linkButtonGroup: {
+    textAlign: 'left',
     children: (
       <>
-        <Hyperlink style="Internal No Icon Button Link" url="/">
-          Proin vulputate
+        <Hyperlink style={EXTERNAL_NO_ICON_BUTTON_LINK} url="/">
+          Proin vulputate dignissim
         </Hyperlink>
-        <Hyperlink style="Internal No Icon Button Link" url="Quisque lacus">
-          Quisque lacus
+        <Hyperlink style={EXTERNAL_NO_ICON_BUTTON_LINK} url="Quisque lacus">
+          Quisque lacus dolor
         </Hyperlink>
       </>
     ),

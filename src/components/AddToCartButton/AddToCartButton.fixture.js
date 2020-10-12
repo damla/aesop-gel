@@ -2,7 +2,7 @@ export default {
   className: '',
   copy: {
     cartAction: 'Add to your cart',
-    updateNotification: 'added to your cart',
+    updateNotification: 'Added to your cart',
     outOfStock: {
       label: 'Out of Stock',
       title: 'Out of stock',

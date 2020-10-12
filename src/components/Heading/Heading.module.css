@@ -2,8 +2,8 @@
 
 .base {
   padding: 0;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin: 0;
+  margin-bottom: 30px;
   font-family: var(--font-family-sans-serif-regular);
   font-weight: var(--font-weight-normal);
   line-height: 1.2;
@@ -18,16 +18,9 @@
   @extend %font-theme-light-copy;
 }
 
-.noTopMargin {
-  margin-top: 0;
-}
-
-.flush {
-  margin: 0 0 6px;
-}
-
 .serifFont {
-  font-family: var(--font-family-zapf-serif);
+  @extend %zaph-serif-typography;
+
   font-weight: var(--font-weight-light);
 }
 
@@ -35,64 +28,61 @@
   font-family: var(--font-family-sans-serif-medium);
 }
 
+.flush {
+  margin-bottom: 10px;
+}
+
 .xXSmall {
+  margin-bottom: 20px;
   font-size: rem(14px);
   line-height: 1.7;
 
-  @media (--viewport-md) {
-    font-size: rem(15px);
+  &.flush {
+    margin-bottom: 5px;
   }
 }
 
 .xSmall {
-  font-size: rem(15px);
+  font-size: rem(16px);
   line-height: 1.6;
-
-  @media (--viewport-md) {
-    font-size: rem(17px);
-  }
 }
 
 .small {
-  font-size: rem(17px);
+  font-size: rem(18px);
   line-height: 1.5;
-
-  @media (--viewport-md) {
-    font-size: rem(19px);
-  }
 }
 
 .medium {
   font-size: rem(20px);
   line-height: 1.4;
-
-  @media (--viewport-md) {
-    font-size: rem(22px);
-  }
 }
 
 .large {
-  font-size: rem(23px);
+  font-size: rem(22px);
   line-height: 1.4;
-
-  @media (--viewport-md) {
-    font-size: rem(25px);
-  }
-
-  @media (--viewport-lg) {
-    font-size: rem(27px);
-  }
 }
 
 .xLarge {
-  font-size: rem(26px);
-  line-height: 1.3;
+  font-size: rem(24px);
+  line-height: 1.33;
+
+  &.serifFont {
+    font-size: rem(25px);
+  }
 
   @media (--viewport-md) {
-    font-size: rem(28px);
+    font-size: rem(26px);
+
+    &.serifFont {
+      font-size: rem(30px);
+    }
   }
 
   @media (--viewport-lg) {
     font-size: rem(30px);
+
+    &.serifFont {
+      font-size: rem(30px);
+    }
   }
 }

@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import { useThemeContext } from '~/contexts';
 import styles from './LinkButtonGroup.module.css';
 
 const isReactFragment = component => {
@@ -13,9 +14,12 @@ const LinkButtonGroup = ({
   className,
   hasFitContent,
   isFlush,
+  isFullWidth,
   textAlign,
   theme,
 }) => {
+  const currentTheme = useThemeContext(theme, 'dark');
+
   if (!children || typeof children === 'string' || children instanceof String) {
     return null;
   }
@@ -31,6 +35,7 @@ const LinkButtonGroup = ({
     styles.link,
     { [styles.flushLink]: isFlush },
     { [styles.fitContent]: hasFitContent },
+    { [styles.fullWidth]: isFullWidth },
     styles[textAlign],
   );
 
@@ -47,7 +52,7 @@ const LinkButtonGroup = ({
           return React.cloneElement(child, {
             className: `${child.props?.className || ''} ${childrenClassSet}`,
             textAlign,
-            theme,
+            theme: currentTheme,
           });
         })}
       </>
@@ -63,6 +68,7 @@ LinkButtonGroup.propTypes = {
   className: PropTypes.string,
   hasFitContent: PropTypes.bool,
   isFlush: PropTypes.bool,
+  isFullWidth: PropTypes.bool,
   textAlign: PropTypes.oneOf(['center', 'left', 'right']),
   theme: PropTypes.oneOf(['dark', 'light']),
 };
@@ -72,8 +78,9 @@ LinkButtonGroup.defaultProps = {
   className: undefined,
   hasFitContent: false,
   isFlush: true,
+  isFullWidth: false,
   textAlign: 'center',
-  theme: 'dark',
+  theme: undefined,
 };
 
 export default LinkButtonGroup;

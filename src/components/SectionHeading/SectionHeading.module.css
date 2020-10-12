@@ -2,22 +2,38 @@
 
 .base {
   position: relative;
-  margin: 0 0 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.eyebrow {
+  order: 1;
+}
+
+.heading {
+  order: 2;
+}
+
+.subHeading {
+  order: 3;
 }
 
 .offsetPageHeading {
-  @media (--viewport-sm-only) {
-    padding: 0 20px;
-  }
+  padding-top: 160px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-top: -100px;
 
   @media (--viewport-md) {
     width: 40%;
-    margin-top: 85px;
+    padding-right: 0;
+    padding-left: 0;
+    margin-top: -75px;
     margin-left: 30%;
   }
 
   @media (--viewport-lg) {
-    margin-top: 110px;
+    padding-top: 190px;
   }
 }
 
@@ -26,5 +42,5 @@
 }
 
 .ZapfTitleFont {
-  font-family: var(--font-family-zapf-serif);
+  @extend %zaph-serif-typography;
 }

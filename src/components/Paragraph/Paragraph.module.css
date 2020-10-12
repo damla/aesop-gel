@@ -1,31 +1,54 @@
 @import 'styles/index';
 
 .paragraph {
-  margin: 18px 0;
-  font-size: rem(15px);
+  margin: 0;
+  margin-bottom: 30px;
+  font-size: rem(14px);
   line-height: 1.6;
-
-  @media (--viewport-lg) {
-    font-size: rem(16px);
-  }
-
-  @media (--viewport-xl) {
-    font-size: rem(17px);
-  }
-
-  &:first-of-type {
-    margin-top: 0;
-  }
-
-  &:last-of-type {
-    margin-bottom: 0;
-  }
 }
 
 .base {
   @extend .paragraph;
 
   font-family: var(--font-family-sans-serif-regular);
+}
+
+.large {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.serifFont {
+  @extend %zaph-serif-typography;
+}
+
+.hero {
+  font-size: rem(24px);
+  line-height: 1.33;
+
+  &.serifFont {
+    font-size: rem(25px);
+  }
+
+  @media (--viewport-md) {
+    font-size: rem(26px);
+
+    &.serifFont {
+      font-size: rem(30px);
+    }
+  }
+
+  @media (--viewport-lg) {
+    font-size: rem(30px);
+
+    &.serifFont {
+      font-size: rem(30px);
+    }
+  }
+}
+
+.flush {
+  margin-bottom: 10px;
 }
 
 .dark {

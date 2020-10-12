@@ -4,7 +4,7 @@
   display: flex;
   flex-wrap: wrap;
   font-family: var(--font-family-sans-serif-regular);
-  font-size: rem(15px);
+  font-size: rem(14px);
   font-weight: var(--font-weight-normal);
 
   &,
@@ -15,10 +15,21 @@
 
 .imageWrapper {
   width: 100%;
-  margin-bottom: 40px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-bottom: 30px;
 
   @media (--viewport-md) {
-    width: 40%;
+    width: calc((100%) * 4 / 12);
+    padding-right: 0;
+    padding-left: 34px;
+    margin-bottom: 0;
+  }
+
+  @media (--viewport-lg) {
+    width: calc((100%) * 4 / 12);
+    padding-right: 0;
+    padding-left: calc(var(--layout-lg-spacing) * 2);
     margin-bottom: 0;
   }
 }
@@ -53,14 +64,26 @@
 
 .contentWrapper {
   width: 100%;
-  max-width: 600px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-bottom: 0;
 
   @media (--viewport-md) {
-    width: 60%;
+    width: calc((100%) * 8 / 12);
+    padding-right: 34px;
+    padding-left: calc((100%) * 1 / 12);
+    margin-bottom: 0;
+  }
+
+  @media (--viewport-lg) {
+    width: calc((100%) * 8 / 12);
+    padding-right: calc((100%) * 2 / 12);
+    padding-left: calc((100%) * 1 / 12);
+    margin-bottom: 0;
   }
 
   a {
-    font-size: rem(15px);
+    font-size: rem(14px);
   }
 }
 
@@ -70,5 +93,6 @@
 
 .addToCartButton,
 .cta {
-  max-width: 380px;
+  width: min-content;
+  max-width: none;
 }

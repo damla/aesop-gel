@@ -9,11 +9,13 @@ const MediaWithContent = forwardRef(function MediaWithContentRef(
   {
     backgroundColor,
     className,
+    containMedia,
     content,
     copy,
     foregroundImage,
     foregroundImageLink,
     hasFullWidthImage,
+    hasTopOffset,
     isHero,
     isReverse,
     media,
@@ -25,15 +27,17 @@ const MediaWithContent = forwardRef(function MediaWithContentRef(
     styles.base,
     { [styles.reverse]: isReverse },
     { [styles.hero]: isHero },
+    { [styles.topOffest]: hasTopOffset },
     className,
   );
 
   const style = backgroundColor ? { backgroundColor } : undefined;
 
   return (
-    <section className={classSet} ref={ref} style={style}>
+    <div className={classSet} ref={ref} style={style}>
       <Media
         className={styles.media}
+        containMedia={containMedia}
         foregroundImage={foregroundImage}
         foregroundImageLink={foregroundImageLink}
         hasFullWidthImage={hasFullWidthImage}
@@ -44,17 +48,19 @@ const MediaWithContent = forwardRef(function MediaWithContentRef(
         content={content}
         copy={copy}
         hasFullWidthImage={hasFullWidthImage}
+        hasTopOffset={hasTopOffset}
         isHero={isHero}
         isReverse={isReverse}
         theme={theme}
       />
-    </section>
+    </div>
   );
 });
 
 MediaWithContent.propTypes = {
   backgroundColor: PropTypes.string,
   className: PropTypes.string,
+  containMedia: PropTypes.oneOf(['center', 'left', 'right']),
   content: PropTypes.any,
   copy: PropTypes.shape({
     description: PropTypes.any,
@@ -65,6 +71,7 @@ MediaWithContent.propTypes = {
   foregroundImage: PropTypes.element,
   foregroundImageLink: PropTypes.object,
   hasFullWidthImage: PropTypes.bool,
+  hasTopOffset: PropTypes.bool,
   isHero: PropTypes.bool,
   isReverse: PropTypes.bool,
   media: PropTypes.element.isRequired,
@@ -74,6 +81,7 @@ MediaWithContent.propTypes = {
 MediaWithContent.defaultProps = {
   backgroundColor: '#F6F5E8',
   className: undefined,
+  containMedia: undefined,
   content: undefined,
   copy: {
     description: undefined,
@@ -84,6 +92,7 @@ MediaWithContent.defaultProps = {
   foregroundImage: undefined,
   foregroundImageLink: undefined,
   hasFullWidthImage: false,
+  hasTopOffset: false,
   isHero: false,
   isReverse: false,
   media: undefined,

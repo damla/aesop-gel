@@ -2,7 +2,7 @@
 
 exports[`<Figure /> renders base component correctly 1`] = `
 <figure
-  className="base dark border"
+  className="base dark"
   id="about"
 >
   <picture
@@ -17,7 +17,7 @@ exports[`<Figure /> renders base component correctly 1`] = `
     />
   </picture>
   <figcaption
-    className="captionWrapper"
+    className="captionWrapper border captionOffset"
   >
     <div
       className="caption"

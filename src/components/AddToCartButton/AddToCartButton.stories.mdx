@@ -29,15 +29,12 @@ for an example.
       }
       return (
         <AddToCartContextProvider onClick={mockAddToCartButtonOnClick}>
-          <ProductDetailContextProvider product={productDetails}>
-            <VariantSelectContextProvider variants={ProductDetailHeaderFixture.product.variantOptions}>
-              <AddToCartButton
-                dataTestRef="ADD_TO_CART_SMALL_CTA"
-                theme={theme}
-                copy={AddToCartButtonFixture.copy}
-              />
-            </VariantSelectContextProvider>
-          </ProductDetailContextProvider>
+          <VariantSelectContextProvider variants={ProductDetailHeaderFixture.product.variantOptions}>
+            <AddToCartButton
+              theme={theme}
+              copy={AddToCartButtonFixture.copy}
+            />
+          </VariantSelectContextProvider>
         </AddToCartContextProvider>
       )
     })()}

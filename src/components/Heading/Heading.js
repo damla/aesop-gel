@@ -8,7 +8,6 @@ const Heading = ({
   className,
   hasMediumWeightFont,
   hasSerifFont,
-  hasTopMargin,
   id,
   isFlush,
   level,
@@ -17,7 +16,6 @@ const Heading = ({
 }) => {
   const classSet = cx(
     styles.base,
-    { [styles.noTopMargin]: !hasTopMargin },
     { [styles.flush]: isFlush },
     { [styles.serifFont]: hasSerifFont },
     { [styles.mediumWeightFont]: hasMediumWeightFont },
@@ -38,7 +36,6 @@ Heading.propTypes = {
   className: PropTypes.string,
   hasMediumWeightFont: PropTypes.bool,
   hasSerifFont: PropTypes.bool,
-  hasTopMargin: PropTypes.bool,
   id: PropTypes.string,
   isFlush: PropTypes.bool,
   level: PropTypes.oneOf(['1', '2', '3', '4', '5', '6']).isRequired,
@@ -58,7 +55,6 @@ Heading.defaultProps = {
   className: undefined,
   hasMediumWeightFont: false,
   hasSerifFont: false,
-  hasTopMargin: true,
   id: undefined,
   isFlush: false,
   level: undefined,

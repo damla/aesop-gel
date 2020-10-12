@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'lodash/get';
 import Slider from 'react-slick';
+import { useThemeContext } from '~/contexts';
 import useWindowHasResized from '~/customHooks/useWindowHasResized';
 import {
   ascertainIsSmallOnlyViewport,
@@ -31,10 +32,13 @@ const Carousel = ({
   id,
   initialSlideIndex,
   introduction,
+  isCompact,
   slides,
   theme,
 }) => {
   const slidesLength = slides.length;
+  const currentTheme = useThemeContext(theme, 'dark');
+  const [progressIndex, setProgressIndex] = useState(0);
   const [isCaptionActive, setIsCaptionActive] = useState(true);
   const [isNextButtonActive, setIsNextButtonActive] = useState(true);
   const [isPreviousButtonActive, setIsPreviousButtonActive] = useState(
@@ -53,7 +57,8 @@ const Carousel = ({
 
   let slideOffset = 0;
 
-  /* Slide offset refers to the number of slides in view per display size,
+  /**
+   * Slide offset refers to the number of slides in view per display size,
    * and effects the offset position and Next Arrow display
    */
   if (!hasFullWidthSlides) {
@@ -79,7 +84,7 @@ const Carousel = ({
   const classSet = cx(
     styles.base,
     { [styles.fullWidthSlides]: hasFullWidthSlides },
-    styles[theme],
+    styles[currentTheme],
     className,
   );
 
@@ -95,7 +100,8 @@ const Carousel = ({
     Pagination,
     NextButton,
     PreviousButton,
-    theme,
+    progressIndex,
+    theme: currentTheme,
   });
 
   const hasIntroSlide =
@@ -105,6 +111,7 @@ const Carousel = ({
 
   const handleBeforeChange = (index, nextIndex) => {
     setIsCaptionActive(false);
+    setProgressIndex(nextIndex);
 
     if (hasFullWidthSlides) {
       return;
@@ -131,7 +138,7 @@ const Carousel = ({
             description={introduction.description}
             eyebrow={introduction.eyebrow}
             heading={introduction.heading}
-            theme={theme}
+            theme={currentTheme}
           />
         </aside>
       )}
@@ -147,7 +154,7 @@ const Carousel = ({
             description={introduction.description}
             eyebrow={introduction.eyebrow}
             heading={introduction.heading}
-            theme={theme}
+            theme={currentTheme}
           />
         )}
 
@@ -156,14 +163,14 @@ const Carousel = ({
             {url ? (
               <Hyperlink
                 className={cx(styles.item, styles.link)}
-                theme={theme}
+                theme={currentTheme}
                 title={`Link to ${slide.heading}`}
                 url={url}
               >
                 <Slide
                   {...slide}
                   isFullWidthSlide={hasFullWidthSlides}
-                  theme={theme}
+                  theme={currentTheme}
                 />
               </Hyperlink>
             ) : (
@@ -171,7 +178,7 @@ const Carousel = ({
                 <Slide
                   {...slide}
                   isFullWidthSlide={hasFullWidthSlides}
-                  theme={theme}
+                  theme={currentTheme}
                 />
               </div>
             )}
@@ -182,14 +189,20 @@ const Carousel = ({
         <footer
           className={cx(styles.footer, { [styles.flush]: hasFlushPagination })}
         >
-          {hasSlideCounter && (
+          {hasSlideCounter && !isCompact && (
             <div className={styles.slideCounter}>
               {totalSlidesCount > 1 && slideCounter}
             </div>
           )}
           {hasShowCaption && (
             <Transition isActive={isCaptionActive} type="fade">
-              <div className={styles.caption}>{caption}</div>
+              <div
+                className={cx(styles.caption, {
+                  [styles.onlyChild]: !hasSlideCounter || isCompact,
+                })}
+              >
+                {caption}
+              </div>
             </Transition>
           )}
         </footer>
@@ -219,6 +232,7 @@ Carousel.propTypes = {
     eyebrow: PropTypes.string,
     heading: PropTypes.string,
   }),
+  isCompact: PropTypes.bool,
   slides: PropTypes.arrayOf(
     PropTypes.shape({
       caption: PropTypes.string,
@@ -243,8 +257,9 @@ Carousel.defaultProps = {
   id: undefined,
   initialSlideIndex: 0,
   introduction: undefined,
+  isCompact: false,
   slides: [],
-  theme: 'dark',
+  theme: undefined,
 };
 
 export default Carousel;

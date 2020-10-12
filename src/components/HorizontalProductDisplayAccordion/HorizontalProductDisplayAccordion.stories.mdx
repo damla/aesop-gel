@@ -1,0 +1,26 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import * as knobs from '@storybook/addon-knobs';
+import AddToCartButtonFixture from '~/components/AddToCartButton/AddToCartButton.fixture';
+import HorizontalProductDisplayAccordion from './HorizontalProductDisplayAccordion';
+import HorizontalProductDisplayAccordionFixture from './HorizontalProductDisplayAccordion.fixture';
+
+<Meta
+  title="Components/HorizontalProductDisplayAccordion"
+  component={HorizontalProductDisplayAccordion}
+/>
+
+# HorizontalProductDisplayAccordion
+
+<Preview>
+  <Story name="Base component">
+    <HorizontalProductDisplayAccordion
+      addToCartCopy={AddToCartButtonFixture.copy}
+      products={[...HorizontalProductDisplayAccordionFixture.products]}
+      theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
+    />
+  </Story>
+</Preview>
+
+## API
+
+<Props of={HorizontalProductDisplayAccordion} />

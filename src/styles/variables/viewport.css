@@ -6,3 +6,6 @@
 @custom-media --viewport-lg-only (width >= 1025px) and (width < 1220px);
 @custom-media --viewport-xl (width >= 1220px);
 @custom-media --viewport-vertical (height > 1080px) and (orientation: portrait);
+@custom-media --viewport-xxl (width >= 1700px);
+@custom-media --viewport-xxxl (width >= 2000px);
+@custom-media --viewport-xxxxl (width >= 2400px);

@@ -1,0 +1,10 @@
+@import 'styles/index';
+
+.holder {
+  @media (--viewport-md) {
+    width: 50%;
+  }
+  @media (--viewport-lg) {
+    width: 460px;
+  }
+}

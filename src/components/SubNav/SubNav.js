@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import { useThemeContext } from '~/contexts';
 import useWindowHasResized from '~/customHooks/useWindowHasResized';
 import { ascertainIsSmallOrMediumOnlyViewport } from '~/utils/viewports';
 import Heading from '~/components/Heading';
@@ -8,21 +9,6 @@ import Hyperlink from '~/components/Hyperlink';
 import Select from '~/components/Select';
 import List from '~/components/List';
 import styles from './SubNav.module.css';
-
-export const getLinkItems = (links, theme) =>
-  links.map(({ id, style, children, url }) => ({
-    content: (
-      <Hyperlink
-        className={styles.itemList}
-        style={style}
-        theme={theme}
-        url={url}
-      >
-        {children}
-      </Hyperlink>
-    ),
-    id,
-  }));
 
 const SubNav = ({
   className,
@@ -35,7 +21,13 @@ const SubNav = ({
 }) => {
   useWindowHasResized();
 
-  const classSet = cx(styles.base, className);
+  const currentTheme = useThemeContext(theme, 'dark');
+  const classSet = cx(
+    styles.base,
+    styles[currentTheme],
+    { [styles.select]: isSelect },
+    className,
+  );
   const isSmallOrMediumViewport = ascertainIsSmallOrMediumOnlyViewport();
   const onChange = event => {
     window.location.href = event.target.value;
@@ -49,7 +41,7 @@ const SubNav = ({
           level="3"
           noMargin={true}
           size="small"
-          theme={theme}
+          theme={currentTheme}
         >
           {heading}
         </Heading>
@@ -64,14 +56,35 @@ const SubNav = ({
             label: children,
             value: url,
           }))}
-          theme={theme}
+          theme={currentTheme}
         />
       ) : (
-        <List items={getLinkItems(links, theme)} theme={theme} />
+        <List
+          items={getLinkItems(links, currentTheme)}
+          listItemClassName={styles.item}
+          theme={currentTheme}
+        />
       )}
     </nav>
   );
 };
+
+export function getLinkItems(links, theme) {
+  return links.map(({ children, id, hasTargetInNewWindow, style, url }) => ({
+    content: (
+      <Hyperlink
+        className={styles.link}
+        hasTargetInNewWindow={hasTargetInNewWindow}
+        style={style}
+        theme={theme}
+        url={url}
+      >
+        {children}
+      </Hyperlink>
+    ),
+    id,
+  }));
+}
 
 SubNav.propTypes = {
   className: PropTypes.string,
@@ -91,7 +104,7 @@ SubNav.defaultProps = {
   links: undefined,
   heading: undefined,
   headingClassName: undefined,
-  theme: 'dark',
+  theme: undefined,
 };
 
 export default SubNav;

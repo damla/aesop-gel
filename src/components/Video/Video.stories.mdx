@@ -13,6 +13,11 @@ import Video from './Video';
 <Preview>
   <Story name="Base component">
     <Video
+      fallbackImage={{
+        large: './assets/images/MediaWithContent/video-poster.png',
+        medium: './assets/images/MediaWithContent/video-poster.png',
+        small: './assets/images/MediaWithContent/video-poster.png',
+      }}
       hasAllowAudio={knobs.boolean('hasAllowAudio', false, 'Attributes')}
       hasAutoplay={knobs.boolean('hasAutoplay', false, 'Attributes')}
       hasLoop={knobs.boolean('hasLoop', false, 'Attributes')}
@@ -22,14 +27,15 @@ import Video from './Video';
         'Presentation',
       )}
       isFullWidth={knobs.boolean('isFullWidth', true, 'Presentation')}
+      isScrollBasedVideo={knobs.boolean('isScrollBasedVideo', false, 'Attributes')}
       large={knobs.text(
         'large',
-        'https://player.vimeo.com/external/225136214.hd.mp4?s=a01cd8b47f35767394e48dc01af10510ef8ff4dd&profile_id=174',
+        'https://player.vimeo.com/external/225136214.hd.mp4?s=a01cd8b47f35767394e48dc01af10510ef8ff4dd&profile_id=174&size=large',
         'Content',
       )}
       medium={knobs.text(
-        'large',
-        'https://player.vimeo.com/external/225136214.hd.mp4?s=a01cd8b47f35767394e48dc01af10510ef8ff4dd&profile_id=174',
+        'medium',
+        'https://player.vimeo.com/external/225136214.hd.mp4?s=a01cd8b47f35767394e48dc01af10510ef8ff4dd&profile_id=174&size=medium',
         'Content',
       )}
       poster={{
@@ -41,8 +47,8 @@ import Video from './Video';
         small: './assets/images/MediaWithContent/video-poster.png',
       }}
       small={knobs.text(
-        'large',
-        'https://player.vimeo.com/external/225136214.hd.mp4?s=a01cd8b47f35767394e48dc01af10510ef8ff4dd&profile_id=174',
+        'small',
+        'https://player.vimeo.com/external/225136214.hd.mp4?s=a01cd8b47f35767394e48dc01af10510ef8ff4dd&profile_id=174&size=small',
         'Content',
       )}
     />
@@ -73,6 +79,11 @@ import Video from './Video';
       isReverse={knobs.boolean('isReverse', false, 'Presentation')}
       media={
         <Video
+          fallbackImage={{
+            large: './assets/images/MediaWithContent/video-poster.png',
+            medium: './assets/images/MediaWithContent/video-poster.png',
+            small: './assets/images/MediaWithContent/video-poster.png',
+          }}
           hasAllowAudio={true}
           hasAutoplay={false}
           hasLoop={true}

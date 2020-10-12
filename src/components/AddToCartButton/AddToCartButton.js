@@ -1,11 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import {
-  useAddToCartContext,
-  useProductDetailContext,
-  useVariantSelectContext,
-} from 'contexts';
+import { useAddToCartContext, useVariantSelectContext } from 'contexts';
 import { HYPERLINK_STYLE_TYPES } from '~/constants';
 import Button from '~/components/Button';
 import Loading from '~/components/Loading';
@@ -21,12 +17,10 @@ const AddToCartButton = ({
   theme,
 }) => {
   const addToCart = useAddToCartContext();
-  const { productDetail } = useProductDetailContext();
   const { selectedVariant } = useVariantSelectContext();
 
-  if (!productDetail) return null;
+  if (!selectedVariant) return null;
 
-  const { productName } = productDetail;
   const { isInStock, price, sku, alternateAction } = selectedVariant;
 
   const classSet = cx(
@@ -73,9 +67,9 @@ const AddToCartButton = ({
     );
   }
 
-  const { hasError, isLoading, isUpdateSuccessful } = addToCart;
+  const { errorMessage, hasError, isLoading, isUpdateSuccessful } = addToCart;
   const cartActionLabel = `${copy.cartAction} — ${price}`;
-  const updateNotificationLabel = `${productName} ${copy.updateNotification}`;
+  const updateNotificationLabel = copy.updateNotification;
   const showUpdateSuccessMessage = !isLoading && isUpdateSuccessful;
 
   const labelClassName = cx(
@@ -86,7 +80,7 @@ const AddToCartButton = ({
 
   if (hasError) {
     /** @TODO Handle errors thrown by handleOnClick */
-    console.error('updateError'); // eslint-disable-line
+    console.error('Add To Cart button updateError: ', errorMessage); // eslint-disable-line
   }
 
   return (
@@ -94,7 +88,7 @@ const AddToCartButton = ({
       className={classSet}
       dataTestRef={dataTestRef}
       isAlternate={true}
-      isEnabled={!isLoading && price && sku && isEnabled}
+      isEnabled={!isLoading && price && sku && isEnabled && !hasError}
       onClick={handleOnClick}
       theme={theme}
       title={cartActionLabel}
@@ -146,7 +140,7 @@ AddToCartButton.defaultProps = {
       title: undefined,
     },
   },
-  dataTestRef: undefined,
+  dataTestRef: 'ADD_TO_CART',
   isEnabled: true,
   isFullWidth: true,
   theme: 'dark',
