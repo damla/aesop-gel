@@ -36,7 +36,7 @@ exports[`<FooterBlock /> renders block navigation component correctly 1`] = `
         className="base hasIcon hasExternalIcon left dark listItem"
         data-test-ref="DATA_TEST_REF_FOOTER_BLOCK_contact-us"
         href="https://www.aesop.com/au/r/contact-us"
-        target="_self"
+        target="_blank"
         title="Contact us"
       >
         Contact us
@@ -75,7 +75,7 @@ exports[`<FooterBlock /> renders block navigation component correctly 1`] = `
         className="base hasIcon hasExternalIcon left dark listItem"
         data-test-ref="DATA_TEST_REF_FOOTER_BLOCK_delivery-and-returns"
         href="https://www.aesop.com/au/r/shipping/"
-        target="_self"
+        target="_blank"
         title="Delivery and returns"
       >
         Delivery and returns
@@ -114,7 +114,7 @@ exports[`<FooterBlock /> renders block navigation component correctly 1`] = `
         className="base hasIcon hasExternalIcon left dark listItem"
         data-test-ref="DATA_TEST_REF_FOOTER_BLOCK_click-and-collect"
         href="https://www.aesop.com/au/r/contact-us"
-        target="_self"
+        target="_blank"
         title="Click And Collect"
       >
         Click And Collect
