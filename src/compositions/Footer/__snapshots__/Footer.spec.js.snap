@@ -192,7 +192,7 @@ exports[`<Footer /> renders base component correctly 1`] = `
             className="base hasIcon hasExternalIcon left light listItem"
             data-test-ref="DATA_TEST_REF_FOOTER_BLOCK_contact-us"
             href="https://www.aesop.com/au/r/contact-us"
-            target="_self"
+            target="_blank"
             title="Contact us"
           >
             Contact us
@@ -231,7 +231,7 @@ exports[`<Footer /> renders base component correctly 1`] = `
             className="base hasIcon hasExternalIcon left light listItem"
             data-test-ref="DATA_TEST_REF_FOOTER_BLOCK_delivery-and-returns"
             href="https://www.aesop.com/au/r/shipping/"
-            target="_self"
+            target="_blank"
             title="Delivery and returns"
           >
             Delivery and returns
@@ -270,7 +270,7 @@ exports[`<Footer /> renders base component correctly 1`] = `
             className="base hasIcon hasExternalIcon left light listItem"
             data-test-ref="DATA_TEST_REF_FOOTER_BLOCK_click-and-collect"
             href="https://www.aesop.com/au/r/contact-us"
-            target="_self"
+            target="_blank"
             title="Click And Collect"
           >
             Click And Collect
@@ -551,7 +551,7 @@ exports[`<Footer /> renders base component correctly 1`] = `
             className="base hasIcon hasExternalIcon left light listItem"
             data-test-ref="DATA_TEST_REF_FOOTER_BLOCK_instagram"
             href="https://www.aesop.com/au/r/contact-us"
-            target="_self"
+            target="_blank"
             title="Instagram"
           >
             Instagram
@@ -590,7 +590,7 @@ exports[`<Footer /> renders base component correctly 1`] = `
             className="base hasIcon hasExternalIcon left light listItem"
             data-test-ref="DATA_TEST_REF_FOOTER_BLOCK_twitter"
             href="https://www.aesop.com/au/r/contact-us"
-            target="_self"
+            target="_blank"
             title="Twitter"
           >
             Twitter
@@ -629,7 +629,7 @@ exports[`<Footer /> renders base component correctly 1`] = `
             className="base hasIcon hasExternalIcon left light listItem"
             data-test-ref="DATA_TEST_REF_FOOTER_BLOCK_kakao"
             href="https://www.aesop.com/au/r/contact-us"
-            target="_self"
+            target="_blank"
             title="KaKao Plus Friends"
           >
             KaKao Plus Friends
@@ -668,7 +668,7 @@ exports[`<Footer /> renders base component correctly 1`] = `
             className="base hasIcon hasExternalIcon left light listItem"
             data-test-ref="DATA_TEST_REF_FOOTER_BLOCK_naver-post"
             href="https://www.aesop.com/au/r/contact-us"
-            target="_self"
+            target="_blank"
             title="Naver Post"
           >
             Naver Post
