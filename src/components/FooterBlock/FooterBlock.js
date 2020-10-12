@@ -43,7 +43,7 @@ const FooterBlock = ({
                 <Hyperlink
                   className={listItemClassSet}
                   dataTestRef={`DATA_TEST_REF_FOOTER_BLOCK_${link.id}`}
-                  hasTargetInNewWindow={false}
+                  hasTargetInNewWindow={link.openInANewWindow}
                   style={
                     link.openInANewWindow
                       ? EXTERNAL_TEXT_LINK

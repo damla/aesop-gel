@@ -35,18 +35,43 @@
   position: absolute;
   right: 0;
   bottom: -30px;
-  width: auto;
-  height: auto;
+  width: 70%;
+
+  @media (--viewport-sm-only) {
+    height: calc(100% - 80px);
+    max-height: 300px;
+  }
+  @media (--viewport-md-only) {
+    height: 70%;
+    max-height: 335px;
+
+    .hasFullWidthImage.hero & {
+      height: 40%;
+    }
+  }
+  @media (--viewport-lg) {
+    height: 60%;
+    max-height: 350px;
+
+    .hasFullWidthImage.hero & {
+      width: 35%;
+    }
+  }
+
+  a {
+    position: static;
+    display: block;
+  }
 
   img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: block;
     width: auto;
     max-width: 100%;
-    min-height: 300px;
-    max-height: 45vh;
-
-    @media (--viewport-lg) {
-      max-height: 55vh;
-    }
+    height: auto;
+    max-height: 100%;
   }
 }
 

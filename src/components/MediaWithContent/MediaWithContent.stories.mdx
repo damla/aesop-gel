@@ -415,3 +415,39 @@ import MediaWithContentFixture from './MediaWithContent.fixture';
     />
   </Story>
 </Preview>
+
+
+### Hero Full width with Foreground Image
+
+<Preview>
+  <Story name="Hero Full width with Foreground Image">
+    <MediaWithContent
+      backgroundColor="#f5f3e6"
+      content={
+        <Hyperlink {...MediaWithContentFixture.hyperlinkButtonDark} />
+      }
+      copy={MediaWithContentFixture.copy.expectations}
+      foregroundImage={
+        <Image
+          altText={MediaWithContentFixture.image.foreground.altText}
+          large={MediaWithContentFixture.image.foreground.large}
+          medium={MediaWithContentFixture.image.foreground.medium}
+          small={MediaWithContentFixture.image.foreground.small}
+        />
+      }
+      foregroundImageLink={MediaWithContentFixture.foregroundImageLink}
+      hasFullWidthImage={true}
+      isHero={true}
+      isReverse={true}
+      media={
+        <Image
+          altText={MediaWithContentFixture.image.background.altText}
+          large={MediaWithContentFixture.image.background.large}
+          medium={MediaWithContentFixture.image.background.medium}
+          small={MediaWithContentFixture.image.background.small}
+        />
+      }
+      theme="dark"
+    />
+  </Story>
+</Preview>
