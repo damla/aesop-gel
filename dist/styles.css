@@ -7488,7 +7488,7 @@ sans-serif;
 @media (min-width: 640px) {
 .ProductCommerce-module_base__3XaIQ {
     display: grid;
-    grid-template-columns: calc((100%) * 4 / 12) calc((100%) * 8 / 12);
+    grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(8, -webkit-min-content);
     grid-template-rows: repeat(8, min-content)
 }
@@ -7510,7 +7510,7 @@ sans-serif;
     padding-right: 0;
     padding-left: 34px;
     margin-bottom: 0;
-    grid-column: 1/ 2;
+    grid-column: 1/ 5;
     grid-row: 1/ -1
 }
   }
@@ -7573,13 +7573,26 @@ sans-serif;
   max-width: none;
 }
 /* Content Padding */
+.ProductCommerce-module_header__1QUBN,
+.ProductCommerce-module_description__4STWo,
+.ProductCommerce-module_variantsWrapper__2Plis,
+.ProductCommerce-module_linkButtonGroup__1Yk64 {
+  max-width: 600px;
+}
+@media (min-width: 640px) and (max-width: 1024px) {
+.ProductCommerce-module_header__1QUBN,
+.ProductCommerce-module_description__4STWo,
+.ProductCommerce-module_variantsWrapper__2Plis,
+.ProductCommerce-module_linkButtonGroup__1Yk64 {
+    padding-right: 34px
+}
+  }
 @media (min-width: 640px) {
 .ProductCommerce-module_header__1QUBN,
 .ProductCommerce-module_description__4STWo,
 .ProductCommerce-module_variantsWrapper__2Plis,
 .ProductCommerce-module_linkButtonGroup__1Yk64 {
-    padding-right: 34px;
-    padding-left: calc((100%) * 1 / 12)
+    grid-column: 6/ 13
 }
   }
 @media (min-width: 1025px) {
@@ -7587,12 +7600,12 @@ sans-serif;
 .ProductCommerce-module_description__4STWo,
 .ProductCommerce-module_variantsWrapper__2Plis,
 .ProductCommerce-module_linkButtonGroup__1Yk64 {
-    padding-right: calc((100%) * 2 / 12)
+    grid-column: 6/ 11
 }
   }
 @media all and (-ms-high-contrast: none) {
   .ProductCommerce-module_imageWrapper__NWb-S {
-    grid-column-end: 2;
+    -ms-grid-column-span: 4;
     grid-column-start: 1;
     grid-row-end: 8;
     -ms-grid-row-span: 8;
@@ -7603,20 +7616,22 @@ sans-serif;
       -ms-flex-negative: 0;
           flex-shrink: 0;
     }
-  .ProductCommerce-module_header__1QUBN {
-    grid-column-start: 2;
-  }
   .ProductCommerce-module_description__4STWo {
-    grid-column-start: 2;
     grid-row-start: 2;
   }
   .ProductCommerce-module_variantsWrapper__2Plis {
-    grid-column-start: 2;
     grid-row-start: 3;
   }
   .ProductCommerce-module_linkButtonGroup__1Yk64 {
-    grid-column-start: 2;
     grid-row-start: 4;
+  }
+
+  .ProductCommerce-module_header__1QUBN,
+  .ProductCommerce-module_description__4STWo,
+  .ProductCommerce-module_variantsWrapper__2Plis,
+  .ProductCommerce-module_linkButtonGroup__1Yk64 {
+    -ms-grid-column-span: 5;
+    grid-column-start: 6;
   }
 }
 
