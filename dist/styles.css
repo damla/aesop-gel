@@ -4759,14 +4759,16 @@ sans-serif;
 .FooterBlock_heading__2kMY- {
   margin-top: 0;
   margin-bottom: 0;
+  font-family: 'Suisse Medium'
+,
+sans-serif;
   font-size: 15px;
-  font-weight: 400;
-  line-height: 2.5;
+  line-height: 2;
 }
 @media (max-width: 639px) {
 .FooterBlock_heading__2kMY- {
     font-size: 13px;
-    line-height: 2.85
+    line-height: 2.3
 }
   }
 .FooterBlock_divider__23KaL {
