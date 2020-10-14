@@ -5,14 +5,15 @@
   font-size: rem(14px);
   font-weight: var(--font-weight-normal);
 
-  @media (--viewport-md) {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: repeat(8, min-content);
+  @media (--viewport-sm-only) {
+    padding-right: 20px;
+    padding-left: 20px;
   }
 
-  @media (--viewport-lg) {
-    grid-template-columns: 40% minmax(auto, 600px);
+  @media (--viewport-md) {
+    display: grid;
+    grid-template-columns: calc((100%) * 4 / 12) calc((100%) * 8 / 12);
+    grid-template-rows: repeat(8, min-content);
   }
 
   &,
@@ -27,9 +28,15 @@
 
   @media (--viewport-md) {
     display: flex;
+    padding-right: 0;
+    padding-left: 34px;
     margin-bottom: 0;
     grid-column: 1/ 2;
     grid-row: 1/ -1;
+  }
+
+  @media (--viewport-lg) {
+    padding-left: calc(var(--layout-lg-spacing) * 2);
   }
 }
 
@@ -80,6 +87,21 @@
 .addToCartButton,
 .cta {
   max-width: none;
+}
+
+/* Content Padding */
+.header,
+.description,
+.variantsWrapper,
+.linkButtonGroup {
+  @media (--viewport-md) {
+    padding-right: 34px;
+    padding-left: calc((100%) * 1 / 12);
+  }
+
+  @media (--viewport-lg) {
+    padding-right: calc((100%) * 2 / 12);
+  }
 }
 
 @media all and (-ms-high-contrast: none) {

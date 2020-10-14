@@ -8,6 +8,7 @@ const Checkbox = ({
   checkboxClassName,
   content,
   contentClassName,
+  dataTestRef,
   id,
   isEnabled,
   name,
@@ -26,6 +27,7 @@ const Checkbox = ({
     <label className={baseClassSet} htmlFor={id}>
       <input
         className={checkboxClassSet}
+        data-test-ref={dataTestRef}
         disabled={!isEnabled}
         id={id}
         name={name}
@@ -42,6 +44,7 @@ Checkbox.propTypes = {
   checkboxClassName: PropTypes.string,
   content: PropTypes.string.isRequired,
   contentClassName: PropTypes.string,
+  dataTestRef: PropTypes.string,
   id: PropTypes.string.isRequired,
   isEnabled: PropTypes.bool,
   name: PropTypes.string,
@@ -54,6 +57,7 @@ Checkbox.defaultProps = {
   checkboxClassName: undefined,
   content: undefined,
   contentClassName: undefined,
+  dataTestRef: undefined,
   id: undefined,
   isEnabled: true,
   name: undefined,

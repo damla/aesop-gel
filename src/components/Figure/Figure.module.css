@@ -52,7 +52,7 @@
   margin-left: 20px;
 
   @media (--viewport-md) {
-    margin-left: 27.34%;
+    margin-left: calc(100% * 2 / 12);
   }
 
   @media (--viewport-lg) {

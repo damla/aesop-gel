@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'lodash/get';
 import Slider from 'react-slick';
+import { useThemeContext } from '~/contexts';
 import useWindowHasResized from '~/customHooks/useWindowHasResized';
 import {
   ascertainIsSmallOnlyViewport,
@@ -36,6 +37,7 @@ const Carousel = ({
   theme,
 }) => {
   const slidesLength = slides.length;
+  const currentTheme = useThemeContext(theme, 'dark');
   const [progressIndex, setProgressIndex] = useState(0);
   const [isCaptionActive, setIsCaptionActive] = useState(true);
   const [isNextButtonActive, setIsNextButtonActive] = useState(true);
@@ -82,7 +84,7 @@ const Carousel = ({
   const classSet = cx(
     styles.base,
     { [styles.fullWidthSlides]: hasFullWidthSlides },
-    styles[theme],
+    styles[currentTheme],
     className,
   );
 
@@ -99,7 +101,7 @@ const Carousel = ({
     NextButton,
     PreviousButton,
     progressIndex,
-    theme,
+    theme: currentTheme,
   });
 
   const hasIntroSlide =
@@ -136,7 +138,7 @@ const Carousel = ({
             description={introduction.description}
             eyebrow={introduction.eyebrow}
             heading={introduction.heading}
-            theme={theme}
+            theme={currentTheme}
           />
         </aside>
       )}
@@ -152,7 +154,7 @@ const Carousel = ({
             description={introduction.description}
             eyebrow={introduction.eyebrow}
             heading={introduction.heading}
-            theme={theme}
+            theme={currentTheme}
           />
         )}
 
@@ -161,14 +163,14 @@ const Carousel = ({
             {url ? (
               <Hyperlink
                 className={cx(styles.item, styles.link)}
-                theme={theme}
+                theme={currentTheme}
                 title={`Link to ${slide.heading}`}
                 url={url}
               >
                 <Slide
                   {...slide}
                   isFullWidthSlide={hasFullWidthSlides}
-                  theme={theme}
+                  theme={currentTheme}
                 />
               </Hyperlink>
             ) : (
@@ -176,7 +178,7 @@ const Carousel = ({
                 <Slide
                   {...slide}
                   isFullWidthSlide={hasFullWidthSlides}
-                  theme={theme}
+                  theme={currentTheme}
                 />
               </div>
             )}
@@ -257,7 +259,7 @@ Carousel.defaultProps = {
   introduction: undefined,
   isCompact: false,
   slides: [],
-  theme: 'dark',
+  theme: undefined,
 };
 
 export default Carousel;

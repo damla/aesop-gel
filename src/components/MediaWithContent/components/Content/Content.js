@@ -39,6 +39,7 @@ const Content = ({
           hasSerifFontHeading={true}
           heading={copy.heading}
           isFlush={!isHero}
+          isPageHeading={isHero}
           subHeading={copy.subHeading}
           theme={theme}
         />

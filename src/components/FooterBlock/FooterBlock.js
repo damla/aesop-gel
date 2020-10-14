@@ -36,14 +36,14 @@ const FooterBlock = ({
       <section className={baseClassSet}>
         <h5 className={headingClassSet}>{heading}</h5>
         <div className={dividerClassSet} />
-        <ul className={listClassSet}>
-          {links &&
-            links.map(link => (
+        {links?.length && (
+          <ul className={listClassSet}>
+            {links.map(link => (
               <li key={link.id}>
                 <Hyperlink
                   className={listItemClassSet}
                   dataTestRef={`DATA_TEST_REF_FOOTER_BLOCK_${link.id}`}
-                  hasTargetInNewWindow={false}
+                  hasTargetInNewWindow={link.openInANewWindow}
                   style={
                     link.openInANewWindow
                       ? EXTERNAL_TEXT_LINK
@@ -57,7 +57,8 @@ const FooterBlock = ({
                 </Hyperlink>
               </li>
             ))}
-        </ul>
+          </ul>
+        )}
         {copy && <div className={listItemClassSet}>{copy}</div>}
       </section>
     </Hidden>

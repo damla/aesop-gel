@@ -16,6 +16,7 @@ describe('<Checkbox />', () => {
       .create(
         <Checkbox
           content="Subscribe to communications about Aesop products, services, stores, events and matters of cultural interest."
+          dataTestRef="test-data-ref"
           id="test-checkbox"
           isEnabled={false}
           theme="dark"

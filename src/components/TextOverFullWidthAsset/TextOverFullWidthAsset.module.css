@@ -1,0 +1,68 @@
+@import 'styles/index';
+
+.base {
+  position: relative;
+  width: 100%;
+}
+
+.media {
+  @media (--viewport-sm-only) {
+    height: 80vh;
+  }
+
+  img {
+    object-fit: cover;
+
+    @media (--viewport-sm-only) {
+      height: 80vh;
+    }
+  }
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+
+  @media (--viewport-md) {
+    width: 42%;
+  }
+
+  @media (--viewport-lg) {
+    width: 34%;
+  }
+
+  &.Bottom {
+    top: auto;
+    bottom: 0;
+
+    @media (--viewport-lg) {
+      bottom: auto;
+    }
+  }
+
+  &.Top,
+  &.Bottom {
+    @media (--viewport-lg) {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &.Left {
+    @media (--viewport-md) {
+      left: 8%;
+      padding: 20px 0;
+    }
+  }
+
+  &.Right {
+    @media (--viewport-md) {
+      right: 8%;
+      left: auto;
+      padding: 20px 0;
+    }
+  }
+}

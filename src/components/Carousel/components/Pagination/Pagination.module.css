@@ -16,24 +16,16 @@
   list-style-type: none;
 
   &.dark {
-    background-color: var(--color-grey-63);
-
-    :global(.slick-active) {
-      background-color: var(--color-dark-copy);
-    }
+    background-color: var(--color-black-rgba-20);
   }
 
   &.light {
-    background-color: var(--color-grey-40);
-
-    :global(.slick-active) {
-      background-color: var(--color-light-copy);
-    }
+    background-color: var(--color-white-rgba-20);
   }
 
   @media (--viewport-md) {
-    margin-right: 40px;
-    margin-left: 40px;
+    margin-right: 34px;
+    margin-left: 34px;
   }
 
   @media (--viewport-lg) {
@@ -59,14 +51,13 @@
   height: 2px;
   padding: 0;
   margin: 0;
-  background-color: var(--color-light-copy);
   transition: left 1000ms var(--easing-ease-out-cubic);
 
   .dark & {
-    background-color: var(--color-dark-copy);
+    background-color: var(--color-black-rgba-60);
   }
 
   .light & {
-    background-color: var(--color-light-copy);
+    background-color: var(--color-white-rgba-60);
   }
 }
