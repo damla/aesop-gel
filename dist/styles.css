@@ -9844,6 +9844,7 @@ sans-serif;
 .TextOverFullWidthAsset-module_media__4oONG img {
     -o-object-fit: cover;
        object-fit: cover;
+    vertical-align: middle;
   }
 @media (max-width: 639px) {
 .TextOverFullWidthAsset-module_media__4oONG img {
