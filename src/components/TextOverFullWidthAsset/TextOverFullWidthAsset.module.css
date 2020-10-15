@@ -12,6 +12,7 @@
 
   img {
     object-fit: cover;
+    vertical-align: middle;
 
     @media (--viewport-sm-only) {
       height: 80vh;
