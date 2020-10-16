@@ -176,11 +176,11 @@ exports[`<Footer /> renders base component correctly 1`] = `
     <section
       className="base light item"
     >
-      <h5
+      <h1
         className="heading"
       >
         Orders & Support
-      </h5>
+      </h1>
       <div
         className="divider light"
       />
@@ -320,11 +320,11 @@ exports[`<Footer /> renders base component correctly 1`] = `
     <section
       className="base light item"
     >
-      <h5
+      <h1
         className="heading"
       >
         Services
-      </h5>
+      </h1>
       <div
         className="divider light"
       />
@@ -391,11 +391,11 @@ exports[`<Footer /> renders base component correctly 1`] = `
     <section
       className="base light item"
     >
-      <h5
+      <h1
         className="heading"
       >
         Shipping to
-      </h5>
+      </h1>
       <div
         className="divider light"
       />
@@ -408,11 +408,11 @@ exports[`<Footer /> renders base component correctly 1`] = `
     <section
       className="base light item"
     >
-      <h5
+      <h1
         className="heading"
       >
         Acknowledgment of Country
-      </h5>
+      </h1>
       <div
         className="divider light"
       />
@@ -425,11 +425,11 @@ exports[`<Footer /> renders base component correctly 1`] = `
     <section
       className="base light item"
     >
-      <h5
+      <h1
         className="heading"
       >
         Sustainability
-      </h5>
+      </h1>
       <div
         className="divider light"
       />
@@ -442,11 +442,11 @@ exports[`<Footer /> renders base component correctly 1`] = `
     <section
       className="base light item"
     >
-      <h5
+      <h1
         className="heading"
       >
         About
-      </h5>
+      </h1>
       <div
         className="divider light"
       />
@@ -535,11 +535,11 @@ exports[`<Footer /> renders base component correctly 1`] = `
     <section
       className="base light item"
     >
-      <h5
+      <h1
         className="heading"
       >
         Social Media
-      </h5>
+      </h1>
       <div
         className="divider light"
       />

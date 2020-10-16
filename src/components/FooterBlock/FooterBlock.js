@@ -34,7 +34,7 @@ const FooterBlock = ({
       isSmall={!isVisibleOnTabletAndMobile}
     >
       <section className={baseClassSet}>
-        <h5 className={headingClassSet}>{heading}</h5>
+        <h1 className={headingClassSet}>{heading}</h1>
         <div className={dividerClassSet} />
         {links?.length && (
           <ul className={listClassSet}>

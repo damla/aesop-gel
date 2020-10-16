@@ -4,7 +4,7 @@ exports[`<FooterBlock /> renders base component correctly 1`] = `
 <section
   className="base dark"
 >
-  <h5
+  <h1
     className="heading"
   />
   <div
@@ -22,7 +22,7 @@ exports[`<FooterBlock /> renders block navigation component correctly 1`] = `
 <section
   className="base dark"
 >
-  <h5
+  <h1
     className="heading"
   />
   <div
