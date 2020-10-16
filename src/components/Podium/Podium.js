@@ -42,12 +42,12 @@ const Podium = forwardRef(function PodiumRef(
   const style = backgroundColor ? { backgroundColor } : undefined;
 
   return (
-    <Transition
-      isActive={isActive}
-      isActiveOnMount={isActiveOnMount}
-      type={transition}
-    >
-      <ThemeContextProvider theme={theme}>
+    <ThemeContextProvider theme={theme}>
+      <Transition
+        isActive={isActive}
+        isActiveOnMount={isActiveOnMount}
+        type={transition}
+      >
         <section
           className={classSet}
           data-test-ref={dataTestRef}
@@ -56,8 +56,8 @@ const Podium = forwardRef(function PodiumRef(
         >
           {children}
         </section>
-      </ThemeContextProvider>
-    </Transition>
+      </Transition>
+    </ThemeContextProvider>
   );
 });
 
