@@ -23,7 +23,7 @@ exports[`<Audio /> renders base component correctly 1`] = `
     className="waveContainer"
   >
     <span
-      className="base isLoading dark loading"
+      className="base isLoading medium dark loading"
     >
       <span
         className="dot"
