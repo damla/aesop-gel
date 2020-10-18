@@ -1,42 +1,67 @@
 @import 'styles/variables/index';
 
-.fadeEnter {
-  opacity: 0;
+%transition-opacity-500ms-linear {
   transition: opacity 500ms linear;
 }
 
-.fadeEnterActive {
-  opacity: 1;
+%transition-opacity-1500ms-linear {
+  transition: opacity 1500ms linear;
 }
 
-.fadeEnterDone {
-  opacity: 1;
-  transition: opacity 500ms linear;
+%transition-transform-500ms-ease-out-opacity-500ms-linear {
+  transition:
+    transform 500ms var(--easing-ease-out-cubic),
+    opacity 500ms linear;
 }
 
-.fadeExit {
-  opacity: 1;
-  transition: opacity 500ms linear;
-}
-
-.fadeExitActive {
-  opacity: 0;
-}
-
-.fadeExitDone {
-  opacity: 0;
-  transition: opacity 500ms linear;
-}
-
-.shiftInDownEnter {
-  opacity: 0;
-  transform: translate3d(0, -20px, 0);
+%transition-transform-1500ms-ease-out-opacity-1500ms-linear {
   transition:
     transform 1500ms var(--easing-ease-out-cubic),
     opacity 1500ms linear;
 }
 
+%transition-transform-500ms-ease-out-visibility-500ms-ease-out {
+  transition:
+    transform 500ms var(--easing-ease-out-cubic),
+    visibility 500ms var(--easing-ease-out-cubic);
+}
+
+.fadeEnter {
+  opacity: 0;
+}
+
+.fadeEnterActive {
+  @extend %transition-opacity-500ms-linear;
+
+  opacity: 1;
+}
+
+.fadeEnterDone {
+  opacity: 1;
+}
+
+.fadeExit {
+  opacity: 1;
+}
+
+.fadeExitActive {
+  @extend %transition-opacity-500ms-linear;
+
+  opacity: 0;
+}
+
+.fadeExitDone {
+  opacity: 0;
+}
+
+.shiftInDownEnter {
+  opacity: 0;
+  transform: translate3d(0, -20px, 0);
+}
+
 .shiftInDownEnterActive {
+  @extend %transition-transform-1500ms-ease-out-opacity-1500ms-linear;
+
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }
@@ -44,20 +69,16 @@
 .shiftInDownEnterDone {
   opacity: 1;
   transform: translate3d(0, 0, 0);
-  transition:
-    transform 1500ms var(--easing-ease-out-cubic),
-    opacity 1500ms linear;
 }
 
 .shiftInDownExit {
   opacity: 1;
   transform: translate3d(0, 0, 0);
-  transition:
-    transform 1500ms var(--easing-ease-out-cubic),
-    opacity 1500ms linear;
 }
 
 .shiftInDownExitActive {
+  @extend %transition-transform-1500ms-ease-out-opacity-1500ms-linear;
+
   opacity: 0;
   transform: translate3d(0, -20px, 0);
 }
@@ -65,20 +86,16 @@
 .shiftInDownExitDone {
   opacity: 0;
   transform: translate3d(0, -20px, 0);
-  transition:
-    transform 1500ms var(--easing-ease-out-cubic),
-    opacity 1500ms linear;
 }
 
 .shiftInUpEnter {
   opacity: 0;
   transform: translate3d(0, 20px, 0);
-  transition:
-    transform 1500ms var(--easing-ease-out-cubic),
-    opacity 1500ms linear;
 }
 
 .shiftInUpEnterActive {
+  @extend %transition-transform-1500ms-ease-out-opacity-1500ms-linear;
+
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }
@@ -86,20 +103,16 @@
 .shiftInUpEnterDone {
   opacity: 1;
   transform: translate3d(0, 0, 0);
-  transition:
-    transform 1500ms var(--easing-ease-out-cubic),
-    opacity 1500ms linear;
 }
 
 .shiftInUpExit {
   opacity: 1;
   transform: translate3d(0, 0, 0);
-  transition:
-    transform 1500ms var(--easing-ease-out-cubic),
-    opacity 1500ms linear;
 }
 
 .shiftInUpExitActive {
+  @extend %transition-transform-1500ms-ease-out-opacity-1500ms-linear;
+
   opacity: 0;
   transform: translate3d(0, 20px, 0);
 }
@@ -107,20 +120,16 @@
 .shiftInUpExitDone {
   opacity: 0;
   transform: translate3d(0, 20px, 0);
-  transition:
-    transform 1500ms var(--easing-ease-out-cubic),
-    opacity 1500ms linear;
 }
 
 .shiftInLeftEnter {
   opacity: 0;
   transform: translate3d(20px, 0, 0);
-  transition:
-    transform 1500ms var(--easing-ease-out-cubic),
-    opacity 1000ms linear;
 }
 
 .shiftInLeftEnterActive {
+  @extend %transition-transform-1500ms-ease-out-opacity-1500ms-linear;
+
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }
@@ -128,20 +137,16 @@
 .shiftInLeftEnterDone {
   opacity: 1;
   transform: translate3d(0, 0, 0);
-  transition:
-    transform 1500ms var(--easing-ease-out-cubic),
-    opacity 1000ms linear;
 }
 
 .shiftInLeftExit {
   opacity: 1;
   transform: translate3d(0, 0, 0);
-  transition:
-    transform 1500ms var(--easing-ease-out-cubic),
-    opacity 1000ms linear;
 }
 
 .shiftInLeftExitActive {
+  @extend %transition-transform-1500ms-ease-out-opacity-1500ms-linear;
+
   opacity: 0;
   transform: translate3d(20px, 0, 0);
 }
@@ -149,130 +154,112 @@
 .shiftInLeftExitDone {
   opacity: 0;
   transform: translate3d(20px, 0, 0);
-  transition:
-    transform 1500ms var(--easing-ease-out-cubic),
-    opacity 1000ms linear;
 }
 
 .slideDownEnter {
   transform: translate3d(0, -100%, 0);
-  transition:
-    transform 500ms var(--easing-ease-out-cubic),
-    visibility 500ms var(--easing-ease-out-cubic);
   visibility: hidden;
 }
 
 .slideDownEnterActive {
+  @extend %transition-transform-500ms-ease-out-visibility-500ms-ease-out;
+
   transform: translate3d(0, 0, 0);
   visibility: visible;
 }
 
 .slideDownEnterDone {
   transform: translate3d(0, 0, 0);
-  transition:
-    transform 500ms var(--easing-ease-out-cubic),
-    visibility 500ms var(--easing-ease-out-cubic);
   visibility: visible;
 }
 
 .slideDownExit {
   transform: translate3d(0, 0, 0);
-  transition:
-    transform 500ms var(--easing-ease-out-cubic),
-    visibility 500ms var(--easing-ease-out-cubic);
   visibility: visible;
 }
 
 .slideDownExitActive {
+  @extend %transition-transform-500ms-ease-out-visibility-500ms-ease-out;
+
   transform: translate3d(0, -100%, 0);
   visibility: hidden;
 }
 
 .slideDownExitDone {
   transform: translate3d(0, -100%, 0);
-  transition:
-    transform 500ms var(--easing-ease-out-cubic),
-    visibility 500ms var(--easing-ease-out-cubic);
   visibility: hidden;
 }
 
 .slideRightEnter {
   transform: translate3d(-100%, 0, 0);
-  transition:
-    transform 500ms var(--easing-ease-out-cubic),
-    visibility 500ms var(--easing-ease-out-cubic);
   visibility: hidden;
 }
 
 .slideRightEnterActive {
+  @extend %transition-transform-500ms-ease-out-visibility-500ms-ease-out;
+
   transform: translate3d(0, 0, 0);
   visibility: visible;
 }
 
 .slideRightEnterDone {
   transform: translate3d(0, 0, 0);
-  transition:
-    transform 500ms var(--easing-ease-out-cubic),
-    visibility 500ms var(--easing-ease-out-cubic);
   visibility: visible;
 }
 
 .slideRightExit {
   transform: translate3d(0, 0, 0);
-  transition:
-    transform 500ms var(--easing-ease-out-cubic),
-    visibility 500ms var(--easing-ease-out-cubic);
   visibility: visible;
 }
 
 .slideRightExitActive {
+  @extend %transition-transform-500ms-ease-out-visibility-500ms-ease-out;
+
   transform: translate3d(-100%, 0, 0);
   visibility: hidden;
 }
 
 .slideRightExitDone {
   transform: translate3d(-100%, 0, 0);
-  transition:
-    transform 500ms var(--easing-ease-out-cubic),
-    visibility 500ms var(--easing-ease-out-cubic);
   visibility: hidden;
 }
 
 .slowFadeEnter {
   opacity: 0;
-  transition: opacity 1500ms linear;
 }
 
 .slowFadeEnterActive {
+  @extend %transition-opacity-1500ms-linear;
+
   opacity: 1;
 }
 
 .slowFadeEnterDone {
   opacity: 1;
-  transition: opacity 1500ms linear;
 }
 
 .slowFadeExit {
   opacity: 1;
-  transition: opacity 1500ms linear;
 }
 
 .slowFadeExitActive {
+  @extend %transition-opacity-1500ms-linear;
+
   opacity: 0;
 }
 
 .slowFadeExitDone {
   opacity: 0;
-  transition: opacity 1500ms linear;
 }
 
 .zoomEnter {
   opacity: 0;
   transform: scale3d(0.9, 0.9, 0.9);
-  transition: transform 500ms var(--easing-ease-out-cubic), opacity 500ms linear;
 }
 
 .zoomEnterActive {
+  @extend %transition-transform-500ms-ease-out-opacity-500ms-linear;
+
   opacity: 1;
   transform: scale3d(1, 1, 1);
 }
@@ -280,16 +267,16 @@
 .zoomEnterDone {
   opacity: 1;
   transform: scale3d(1, 1, 1);
-  transition: transform 500ms var(--easing-ease-out-cubic), opacity 500ms linear;
 }
 
 .zoomExit {
   opacity: 1;
   transform: scale3d(1, 1, 1);
-  transition: transform 500ms var(--easing-ease-out-cubic), opacity 500ms linear;
 }
 
 .zoomExitActive {
+  @extend %transition-transform-500ms-ease-out-opacity-500ms-linear;
+
   opacity: 0;
   transform: scale3d(0.9, 0.9, 0.9);
 }
@@ -297,5 +284,4 @@
 .zoomExitDone {
   opacity: 0;
   transform: scale3d(0.9, 0.9, 0.9);
-  transition: transform 500ms var(--easing-ease-out-cubic), opacity 500ms linear;
 }
