@@ -1,9 +1,14 @@
 @import 'styles/index';
 
+:root {
+  --loading-size-small: 5px;
+  --loading-size-medium: 7px;
+  --loading-size-large: 10px;
+}
+
 .base {
   display: flex;
   width: 100%;
-  height: 7px;
   align-items: center;
   justify-content: center;
   opacity: 0;
@@ -12,7 +17,15 @@
 }
 
 .small {
-  height: 7px;
+  height: var(--loading-size-small);
+}
+
+.medium {
+  height: var(--loading-size-medium);
+}
+
+.large {
+  height: var(--loading-size-large);
 }
 
 .isLoading {
@@ -22,14 +35,22 @@
 
 .dot {
   display: block;
-  width: 7px;
-  height: 7px;
   margin: 0 3px;
   border-radius: 100%;
 
   .small & {
-    width: 5px;
-    height: 5px;
+    width: var(--loading-size-small);
+    height: var(--loading-size-small);
+  }
+
+  .medium & {
+    width: var(--loading-size-medium);
+    height: var(--loading-size-medium);
+  }
+
+  .large & {
+    width: var(--loading-size-large);
+    height: var(--loading-size-large);
   }
 
   .dark & {

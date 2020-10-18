@@ -2,7 +2,7 @@
 
 exports[`<ProductCommerce /> renders base component correctly 1`] = `
 <span
-  className="base isLoading dark"
+  className="base isLoading medium dark"
 >
   <span
     className="dot"

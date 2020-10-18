@@ -43,20 +43,15 @@ const Podium = forwardRef(function PodiumRef(
 
   return (
     <ThemeContextProvider theme={theme}>
-      <Transition
-        isActive={isActive}
-        isActiveOnMount={isActiveOnMount}
-        type={transition}
-      >
-        <section
-          className={classSet}
-          data-test-ref={dataTestRef}
-          ref={ref}
-          style={style}
+      <section className={classSet} data-test-ref={dataTestRef} style={style}>
+        <Transition
+          isActive={isActive}
+          isActiveOnMount={isActiveOnMount}
+          type={transition}
         >
-          {children}
-        </section>
-      </Transition>
+          <div ref={ref}>{children}</div>
+        </Transition>
+      </section>
     </ThemeContextProvider>
   );
 });
