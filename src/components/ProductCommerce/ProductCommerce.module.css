@@ -35,11 +35,10 @@
 }
 
 .image {
-  display: flex;
-  justify-content: center;
+  text-align: center;
 
   @media (--viewport-md) {
-    justify-content: flex-end;
+    text-align: right;
   }
 
   img {
