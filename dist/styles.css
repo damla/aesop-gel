@@ -7566,18 +7566,11 @@ sans-serif;
 }
   }
 .ProductCommerce-module_image__uw1Dg {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  text-align: center;
 }
 @media (min-width: 640px) {
 .ProductCommerce-module_image__uw1Dg {
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end
+    text-align: right
 }
   }
 .ProductCommerce-module_image__uw1Dg img {
