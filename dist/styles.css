@@ -440,7 +440,6 @@ sans-serif;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  height: 7px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -453,7 +452,13 @@ sans-serif;
   transition: opacity 50ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .Loading-module_small__2H7s_ {
+  height: 5px;
+}
+.Loading-module_medium__2hEHn {
   height: 7px;
+}
+.Loading-module_large__1xf44 {
+  height: 10px;
 }
 .Loading-module_isLoading__2jmYF {
   opacity: 1;
@@ -462,14 +467,20 @@ sans-serif;
 }
 .Loading-module_dot__2jmbK {
   display: block;
-  width: 7px;
-  height: 7px;
   margin: 0 3px;
   border-radius: 100%;
 }
 .Loading-module_small__2H7s_ .Loading-module_dot__2jmbK {
     width: 5px;
     height: 5px;
+  }
+.Loading-module_medium__2hEHn .Loading-module_dot__2jmbK {
+    width: 7px;
+    height: 7px;
+  }
+.Loading-module_large__1xf44 .Loading-module_dot__2jmbK {
+    width: 10px;
+    height: 10px;
   }
 .Loading-module_dark__2DSO5 .Loading-module_dot__2jmbK {
     background: #4a4a4a;
@@ -1704,9 +1715,12 @@ sans-serif;
   opacity: 0;
 }
 .Transition-module_fadeEnterActive__1Cbg7 {
+  -webkit-transition: opacity 500ms linear;
+  transition: opacity 500ms linear;
+}
+.Transition-module_fadeEnterActive__1Cbg7 {
+
   opacity: 1;
-  -webkit-transition: opacity 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: opacity 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .Transition-module_fadeEnterDone__31gO5 {
   opacity: 1;
@@ -1715,9 +1729,12 @@ sans-serif;
   opacity: 1;
 }
 .Transition-module_fadeExitActive__1Pw74 {
+  -webkit-transition: opacity 500ms linear;
+  transition: opacity 500ms linear;
+}
+.Transition-module_fadeExitActive__1Pw74 {
+
   opacity: 0;
-  -webkit-transition: opacity 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: opacity 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .Transition-module_fadeExitDone__2j34A {
   opacity: 0;
@@ -1728,22 +1745,25 @@ sans-serif;
           transform: translate3d(0, -20px, 0);
 }
 .Transition-module_shiftInDownEnterActive__19UVg {
+  -webkit-transition:
+    opacity 1500ms linear,
+    -webkit-transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition:
+    opacity 1500ms linear,
+    -webkit-transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition:
+    transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1),
+    opacity 1500ms linear;
+  transition:
+    transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1),
+    opacity 1500ms linear,
+    -webkit-transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.Transition-module_shiftInDownEnterActive__19UVg {
+
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
-  -webkit-transition:
-    opacity 1500ms cubic-bezier(0.645, 0.045, 0.355, 1),
-    -webkit-transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition:
-    opacity 1500ms cubic-bezier(0.645, 0.045, 0.355, 1),
-    -webkit-transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition:
-    transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1),
-    opacity 1500ms cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition:
-    transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1),
-    opacity 1500ms cubic-bezier(0.645, 0.045, 0.355, 1),
-    -webkit-transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .Transition-module_shiftInDownEnterDone__2R8Fg {
   opacity: 1;
@@ -1756,22 +1776,25 @@ sans-serif;
           transform: translate3d(0, 0, 0);
 }
 .Transition-module_shiftInDownExitActive__cosm- {
+  -webkit-transition:
+    opacity 1500ms linear,
+    -webkit-transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition:
+    opacity 1500ms linear,
+    -webkit-transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition:
+    transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1),
+    opacity 1500ms linear;
+  transition:
+    transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1),
+    opacity 1500ms linear,
+    -webkit-transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.Transition-module_shiftInDownExitActive__cosm- {
+
   opacity: 0;
   -webkit-transform: translate3d(0, -20px, 0);
           transform: translate3d(0, -20px, 0);
-  -webkit-transition:
-    opacity 1500ms cubic-bezier(0.645, 0.045, 0.355, 1),
-    -webkit-transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition:
-    opacity 1500ms cubic-bezier(0.645, 0.045, 0.355, 1),
-    -webkit-transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition:
-    transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1),
-    opacity 1500ms cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition:
-    transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1),
-    opacity 1500ms cubic-bezier(0.645, 0.045, 0.355, 1),
-    -webkit-transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .Transition-module_shiftInDownExitDone__1Aj7M {
   opacity: 0;
@@ -1784,22 +1807,25 @@ sans-serif;
           transform: translate3d(0, 20px, 0);
 }
 .Transition-module_shiftInUpEnterActive__3jKcA {
+  -webkit-transition:
+    opacity 1500ms linear,
+    -webkit-transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition:
+    opacity 1500ms linear,
+    -webkit-transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition:
+    transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1),
+    opacity 1500ms linear;
+  transition:
+    transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1),
+    opacity 1500ms linear,
+    -webkit-transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.Transition-module_shiftInUpEnterActive__3jKcA {
+
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
-  -webkit-transition:
-    opacity 1500ms cubic-bezier(0.645, 0.045, 0.355, 1),
-    -webkit-transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition:
-    opacity 1500ms cubic-bezier(0.645, 0.045, 0.355, 1),
-    -webkit-transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition:
-    transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1),
-    opacity 1500ms cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition:
-    transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1),
-    opacity 1500ms cubic-bezier(0.645, 0.045, 0.355, 1),
-    -webkit-transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .Transition-module_shiftInUpEnterDone__2oiyb {
   opacity: 1;
@@ -1812,22 +1838,25 @@ sans-serif;
           transform: translate3d(0, 0, 0);
 }
 .Transition-module_shiftInUpExitActive__2sSmr {
+  -webkit-transition:
+    opacity 1500ms linear,
+    -webkit-transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition:
+    opacity 1500ms linear,
+    -webkit-transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition:
+    transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1),
+    opacity 1500ms linear;
+  transition:
+    transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1),
+    opacity 1500ms linear,
+    -webkit-transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.Transition-module_shiftInUpExitActive__2sSmr {
+
   opacity: 0;
   -webkit-transform: translate3d(0, 20px, 0);
           transform: translate3d(0, 20px, 0);
-  -webkit-transition:
-    opacity 1500ms cubic-bezier(0.645, 0.045, 0.355, 1),
-    -webkit-transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition:
-    opacity 1500ms cubic-bezier(0.645, 0.045, 0.355, 1),
-    -webkit-transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition:
-    transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1),
-    opacity 1500ms cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition:
-    transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1),
-    opacity 1500ms cubic-bezier(0.645, 0.045, 0.355, 1),
-    -webkit-transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .Transition-module_shiftInUpExitDone__Jo__g {
   opacity: 0;
@@ -1840,22 +1869,25 @@ sans-serif;
           transform: translate3d(20px, 0, 0);
 }
 .Transition-module_shiftInLeftEnterActive__1kIdQ {
+  -webkit-transition:
+    opacity 1500ms linear,
+    -webkit-transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition:
+    opacity 1500ms linear,
+    -webkit-transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition:
+    transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1),
+    opacity 1500ms linear;
+  transition:
+    transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1),
+    opacity 1500ms linear,
+    -webkit-transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.Transition-module_shiftInLeftEnterActive__1kIdQ {
+
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
-  -webkit-transition:
-    opacity 1000ms cubic-bezier(0.645, 0.045, 0.355, 1),
-    -webkit-transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition:
-    opacity 1000ms cubic-bezier(0.645, 0.045, 0.355, 1),
-    -webkit-transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition:
-    transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1),
-    opacity 1000ms cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition:
-    transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1),
-    opacity 1000ms cubic-bezier(0.645, 0.045, 0.355, 1),
-    -webkit-transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .Transition-module_shiftInLeftEnterDone__1r-kH {
   opacity: 1;
@@ -1868,22 +1900,25 @@ sans-serif;
           transform: translate3d(0, 0, 0);
 }
 .Transition-module_shiftInLeftExitActive__11bBz {
+  -webkit-transition:
+    opacity 1500ms linear,
+    -webkit-transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition:
+    opacity 1500ms linear,
+    -webkit-transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition:
+    transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1),
+    opacity 1500ms linear;
+  transition:
+    transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1),
+    opacity 1500ms linear,
+    -webkit-transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.Transition-module_shiftInLeftExitActive__11bBz {
+
   opacity: 0;
   -webkit-transform: translate3d(20px, 0, 0);
           transform: translate3d(20px, 0, 0);
-  -webkit-transition:
-    opacity 1000ms cubic-bezier(0.645, 0.045, 0.355, 1),
-    -webkit-transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition:
-    opacity 1000ms cubic-bezier(0.645, 0.045, 0.355, 1),
-    -webkit-transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition:
-    transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1),
-    opacity 1000ms cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition:
-    transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1),
-    opacity 1000ms cubic-bezier(0.645, 0.045, 0.355, 1),
-    -webkit-transform 1500ms cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .Transition-module_shiftInLeftExitDone__3ZPB6 {
   opacity: 0;
@@ -1896,8 +1931,6 @@ sans-serif;
   visibility: hidden;
 }
 .Transition-module_slideDownEnterActive__254FQ {
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
   -webkit-transition:
     visibility 500ms cubic-bezier(0.215, 0.61, 0.355, 1),
     -webkit-transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -1911,6 +1944,12 @@ sans-serif;
     transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1),
     visibility 500ms cubic-bezier(0.215, 0.61, 0.355, 1),
     -webkit-transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.Transition-module_slideDownEnterActive__254FQ {
+
+  -webkit-transform: translate3d(0, 0, 0);
+
+          transform: translate3d(0, 0, 0);
   visibility: visible;
 }
 .Transition-module_slideDownEnterDone__19JMk {
@@ -1924,8 +1963,6 @@ sans-serif;
   visibility: visible;
 }
 .Transition-module_slideDownExitActive__3jalt {
-  -webkit-transform: translate3d(0, -100%, 0);
-          transform: translate3d(0, -100%, 0);
   -webkit-transition:
     visibility 500ms cubic-bezier(0.215, 0.61, 0.355, 1),
     -webkit-transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -1939,6 +1976,12 @@ sans-serif;
     transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1),
     visibility 500ms cubic-bezier(0.215, 0.61, 0.355, 1),
     -webkit-transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.Transition-module_slideDownExitActive__3jalt {
+
+  -webkit-transform: translate3d(0, -100%, 0);
+
+          transform: translate3d(0, -100%, 0);
   visibility: hidden;
 }
 .Transition-module_slideDownExitDone__hNvIZ {
@@ -1952,8 +1995,6 @@ sans-serif;
   visibility: hidden;
 }
 .Transition-module_slideRightEnterActive__28bZo {
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
   -webkit-transition:
     visibility 500ms cubic-bezier(0.215, 0.61, 0.355, 1),
     -webkit-transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -1967,6 +2008,12 @@ sans-serif;
     transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1),
     visibility 500ms cubic-bezier(0.215, 0.61, 0.355, 1),
     -webkit-transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.Transition-module_slideRightEnterActive__28bZo {
+
+  -webkit-transform: translate3d(0, 0, 0);
+
+          transform: translate3d(0, 0, 0);
   visibility: visible;
 }
 .Transition-module_slideRightEnterDone__2V0o8 {
@@ -1980,8 +2027,6 @@ sans-serif;
   visibility: visible;
 }
 .Transition-module_slideRightExitActive__2X6Ar {
-  -webkit-transform: translate3d(-100%, 0, 0);
-          transform: translate3d(-100%, 0, 0);
   -webkit-transition:
     visibility 500ms cubic-bezier(0.215, 0.61, 0.355, 1),
     -webkit-transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -1995,6 +2040,12 @@ sans-serif;
     transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1),
     visibility 500ms cubic-bezier(0.215, 0.61, 0.355, 1),
     -webkit-transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.Transition-module_slideRightExitActive__2X6Ar {
+
+  -webkit-transform: translate3d(-100%, 0, 0);
+
+          transform: translate3d(-100%, 0, 0);
   visibility: hidden;
 }
 .Transition-module_slideRightExitDone__g9isi {
@@ -2006,9 +2057,12 @@ sans-serif;
   opacity: 0;
 }
 .Transition-module_slowFadeEnterActive__1zTnN {
+  -webkit-transition: opacity 1500ms linear;
+  transition: opacity 1500ms linear;
+}
+.Transition-module_slowFadeEnterActive__1zTnN {
+
   opacity: 1;
-  -webkit-transition: opacity 1500ms cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: opacity 1500ms cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .Transition-module_slowFadeEnterDone__16unI {
   opacity: 1;
@@ -2017,9 +2071,12 @@ sans-serif;
   opacity: 1;
 }
 .Transition-module_slowFadeExitActive__Sjbqu {
+  -webkit-transition: opacity 1500ms linear;
+  transition: opacity 1500ms linear;
+}
+.Transition-module_slowFadeExitActive__Sjbqu {
+
   opacity: 0;
-  -webkit-transition: opacity 1500ms cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: opacity 1500ms cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .Transition-module_slowFadeExitDone__3qqZV {
   opacity: 0;
@@ -2030,22 +2087,25 @@ sans-serif;
           transform: scale3d(0.9, 0.9, 0.9);
 }
 .Transition-module_zoomEnterActive__1kxPA {
+  -webkit-transition:
+    opacity 500ms linear,
+    -webkit-transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition:
+    opacity 500ms linear,
+    -webkit-transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition:
+    transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1),
+    opacity 500ms linear;
+  transition:
+    transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1),
+    opacity 500ms linear,
+    -webkit-transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.Transition-module_zoomEnterActive__1kxPA {
+
   opacity: 1;
   -webkit-transform: scale3d(1, 1, 1);
           transform: scale3d(1, 1, 1);
-  -webkit-transition:
-    opacity 500ms cubic-bezier(0.215, 0.61, 0.355, 1),
-    -webkit-transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition:
-    opacity 500ms cubic-bezier(0.215, 0.61, 0.355, 1),
-    -webkit-transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition:
-    transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1),
-    opacity 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition:
-    transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1),
-    opacity 500ms cubic-bezier(0.215, 0.61, 0.355, 1),
-    -webkit-transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .Transition-module_zoomEnterDone__3vO0c {
   opacity: 1;
@@ -2058,22 +2118,25 @@ sans-serif;
           transform: scale3d(1, 1, 1);
 }
 .Transition-module_zoomExitActive__2TC4X {
+  -webkit-transition:
+    opacity 500ms linear,
+    -webkit-transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition:
+    opacity 500ms linear,
+    -webkit-transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition:
+    transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1),
+    opacity 500ms linear;
+  transition:
+    transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1),
+    opacity 500ms linear,
+    -webkit-transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.Transition-module_zoomExitActive__2TC4X {
+
   opacity: 0;
   -webkit-transform: scale3d(0.9, 0.9, 0.9);
           transform: scale3d(0.9, 0.9, 0.9);
-  -webkit-transition:
-    opacity 500ms cubic-bezier(0.215, 0.61, 0.355, 1),
-    -webkit-transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition:
-    opacity 500ms cubic-bezier(0.215, 0.61, 0.355, 1),
-    -webkit-transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition:
-    transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1),
-    opacity 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition:
-    transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1),
-    opacity 500ms cubic-bezier(0.215, 0.61, 0.355, 1),
-    -webkit-transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .Transition-module_zoomExitDone__1Bo95 {
   opacity: 0;
