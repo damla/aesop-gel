@@ -22,54 +22,86 @@ Presented here with both `paddingTop` and `paddingBottom` set to `small`, and fa
 <Preview>
   <Story name="Base component">
     <div style={{ border: '1px solid #333', margin: '20px'}}>
-      <Podium
-        backgroundColor={knobs.text('backgroundColor', '', 'Presentation')}
-        isActive={knobs.boolean('isActive', false, 'Presentation')}
-        isActiveOnMount={knobs.boolean('isActiveOnMount', true, 'Presentation')}
-        paddingTop={knobs.select(
-          'paddingTop',
-          ['none', 'small', 'medium', 'large'],
-          'small',
-          'Presentation',
-        )}
-        paddingBottom={knobs.select(
-          'paddingBottom',
-          ['none', 'small', 'medium', 'large'],
-          'small',
-          'Presentation',
-        )}
-        paddingLeft={knobs.select(
-          'paddingLeft',
-          ['none', 'small'],
-          'small',
-          'Presentation',
-        )}
-        paddingRight={knobs.select(
-          'paddingRight',
-          ['none', 'small'],
-          'small',
-          'Presentation',
-        )}
-        verticalPadding={knobs.select(
-          'verticalPadding',
-          ['none', 'small'],
-          'small',
-          'Presentation',
-        )}
-        horizontalPadding={knobs.select(
-          'horizontalPadding',
-          ['none', 'small'],
-          'small',
-          'Presentation',
-        )}
-        theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
-        transition="fade"
-      >
-        <Carousel
-          introduction={CarouselFixture.introduction}
-          slides={CarouselFixture.slides}
-        />
-      </Podium>
+        {(() => {
+          const ref1 = useRef();
+          const isOnScreen1 = useOnScreen(ref1);
+          const ref2 = useRef();
+          const isOnScreen2 = useOnScreen(ref2);
+          const ref3 = useRef();
+          const isOnScreen3 = useOnScreen(ref3);
+          const ref4 = useRef();
+          const isOnScreen4 = useOnScreen(ref4);
+          const backgroundColor = knobs.text('backgroundColor', '', 'Presentation');
+          const theme = knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')
+          const transition = knobs.select(
+            'transition',
+            [
+              'fade',
+              'shiftInDown',
+              'shiftInLeft',
+              'shiftInUp',
+              'slideDown',
+              'slideRight',
+              'slowFade',
+              'zoom',
+            ],
+            'fade',
+            'Presentation',
+          );
+          return (
+            <div>
+              <Podium
+                backgroundColor={backgroundColor}
+                isActive={isOnScreen1}
+                ref={ref1}
+                theme={theme}
+                transition={transition}
+                className={'hellothere'}
+              >
+                <Carousel
+                  introduction={CarouselFixture.introduction}
+                  slides={CarouselFixture.slides}
+                />
+              </Podium>
+              <Podium
+                backgroundColor={backgroundColor}
+                isActive={isOnScreen2}
+                ref={ref2}
+                theme={theme}
+                transition={transition}
+              >
+                <Carousel
+                  introduction={CarouselFixture.introduction}
+                  slides={CarouselFixture.slides}
+                />
+              </Podium>
+              <Podium
+                backgroundColor={backgroundColor}
+                isActive={isOnScreen3}
+                ref={ref3}
+                theme={theme}
+                transition={transition}
+              >
+                <Carousel
+                  introduction={CarouselFixture.introduction}
+                  slides={CarouselFixture.slides}
+                />
+              </Podium>
+              <Podium
+                backgroundColor={backgroundColor}
+                isActive={isOnScreen4}
+                ref={ref4}
+                theme={theme}
+                transition={transition}
+              >
+                <Carousel
+                  introduction={CarouselFixture.introduction}
+                  slides={CarouselFixture.slides}
+                />
+              </Podium>
+            </div>
+          )
+        })()}
     </div>
   </Story>
 </Preview>
