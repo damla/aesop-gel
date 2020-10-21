@@ -6,7 +6,12 @@ const hasIntersectionObserver =
   ('IntersectionObserverEntry' in window &&
     'intersectionRatio' in window.IntersectionObserverEntry.prototype);
 
-export const useOnScreen = (ref, threshold = 0, rootMargin = '0px') => {
+export const useOnScreen = (
+  ref,
+  threshold = 0,
+  rootMargin = '0px',
+  shouldNotifyOnLeavingScreen = false,
+) => {
   const [isOnScreen, setIsOnScreen] = useState(false);
 
   useEffect(() => {
@@ -21,7 +26,10 @@ export const useOnScreen = (ref, threshold = 0, rootMargin = '0px') => {
       observer = new IntersectionObserver(
         entries => {
           entries.forEach(entry => {
-            if (entry.isIntersecting) {
+            if (
+              shouldNotifyOnLeavingScreen ||
+              (!shouldNotifyOnLeavingScreen && entry.isIntersecting)
+            ) {
               setIsOnScreen(entry.isIntersecting);
             }
           });
