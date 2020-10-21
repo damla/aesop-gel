@@ -1,5 +1,6 @@
 import useAddToCart from './useAddToCart';
 import useEscapeKeyListener from './useEscapeKeyListener';
+import useExecuteOnImpression from './useExecuteOnImpression/useExecuteOnImpression';
 import useGoogleMaps from './useGoogleMaps';
 import useHasMounted from './useHasMounted';
 import useImageTransition from './useImageTransition';
@@ -15,6 +16,7 @@ import useWindowHasResized from './useWindowHasResized';
 
 export { useAddToCart };
 export { useEscapeKeyListener };
+export { useExecuteOnImpression };
 export { useGoogleMaps };
 export { useHasMounted };
 export { useImageTransition };
@@ -30,6 +32,7 @@ export { useWindowHasResized };
 
 export default {
   useEscapeKeyListener,
+  useExecuteOnImpression,
   useHasMounted,
   useGoogleMaps,
   useOnScreen,
