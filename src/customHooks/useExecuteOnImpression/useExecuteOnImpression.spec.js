@@ -3,6 +3,7 @@ import { useExecuteOnImpression } from './useExecuteOnImpression';
 import * as hooks from '~/customHooks';
 import { configure, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+import { object } from '@storybook/addon-knobs';
 
 configure({ adapter: new Adapter() });
 
@@ -13,9 +14,9 @@ describe('useExecuteOnImpression', () => {
   const useOnScreenSpy = jest.spyOn(hooks, 'useOnScreen');
 
   // eslint-disable-next-line react/prop-types
-  const TestRig = ({ functionToCall, threshold }) => {
+  const TestRig = ({ options }) => {
     const ref = useRef(null);
-    useExecuteOnImpression(ref, threshold, functionToCall);
+    useExecuteOnImpression(ref, functionToCall, options);
 
     return <div ref={ref}>Hello word</div>;
   };
@@ -24,42 +25,45 @@ describe('useExecuteOnImpression', () => {
     jest.clearAllMocks();
   });
 
-  it('should call useOnScreen with the specified threshold', () => {
-    const threshold = 0.32;
+  it('should call useOnScreen using the passed in options', () => {
+    const options = {
+      threshold: 0.32,
+      shouldExecuteOnReEntry: false,
+    };
 
-    mount(<TestRig functionToCall={functionToCall} threshold={threshold} />);
+    mount(<TestRig options={options} />);
 
-    expect(useOnScreenSpy.mock.calls[0][1]).toBe(threshold);
+    expect(useOnScreenSpy).toHaveBeenCalledWith(
+      expect.any(Object),
+      options.threshold,
+      undefined,
+      options.shouldExecuteOnReEntry,
+    );
   });
 
-  it('should call useOnScreen with the default threshold if one is not provided', () => {
-    mount(<TestRig functionToCall={functionToCall} />);
+  it('should call useOnScreen with the default values if options are not provided', () => {
+    mount(<TestRig />);
 
-    expect(useOnScreenSpy.mock.calls[0][1]).toBe(0.2);
+    expect(useOnScreenSpy).toHaveBeenCalledWith(
+      expect.any(Object),
+      0.2,
+      undefined,
+      true,
+    );
   });
 
   it('should not call the function if the element is not on screen', () => {
     useOnScreenSpy.mockReturnValue(false);
 
-    mount(<TestRig functionToCall={functionToCall} threshold={0.5} />);
+    mount(<TestRig />);
 
     expect(functionToCall).not.toHaveBeenCalled();
   });
 
-  it('should not call the function if it is not passed in', () => {
-    // this scenario is not possible but added for coverage
+  it('should call the function  when the element is in view', () => {
     useOnScreenSpy.mockReturnValue(true);
 
-    mount(<TestRig functionToCall={undefined} threshold={0.5} />);
-
-    expect(functionToCall).not.toHaveBeenCalled();
-  });
-
-  it('should call the function only once when the element is in view', () => {
-    useOnScreenSpy.mockReturnValue(true);
-
-    const wrapper = mount(<TestRig functionToCall={functionToCall} />);
-    wrapper.setProps({ functionToCall, threshold: 0.5 }); // changing props to re-render
+    mount(<TestRig />);
 
     expect(functionToCall).toHaveBeenCalledTimes(1);
   });

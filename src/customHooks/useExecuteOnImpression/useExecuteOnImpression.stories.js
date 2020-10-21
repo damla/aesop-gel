@@ -7,7 +7,10 @@ const ComponentToMakeAnImpression = () => {
 
   // eslint-disable-next-line no-alert
   const functionToCallOnImpression = () => alert('I made an impression');
-  useExecuteOnImpression(ref, 0.5, functionToCallOnImpression);
+  useExecuteOnImpression(ref, functionToCallOnImpression, {
+    threshold: 0.5,
+    shouldExecuteOnReEntry: false,
+  });
   const styling = {
     height: '500px',
     width: '500px',
