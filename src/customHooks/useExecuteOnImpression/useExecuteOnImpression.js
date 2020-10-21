@@ -6,15 +6,15 @@ export const useExecuteOnImpression = (
   threshold = 0.2,
   functionToExecute,
 ) => {
-  const [hasTrackedImpression, setHasTrackedImpression] = useState(false);
+  const [hasExecutedFunction, setHasExecutedFunction] = useState(false);
   const isOnScreen = useOnScreen(ref, threshold);
 
   useEffect(() => {
-    if (isOnScreen && !hasTrackedImpression && functionToExecute) {
+    if (isOnScreen && !hasExecutedFunction && functionToExecute) {
       functionToExecute();
-      setHasTrackedImpression(true);
+      setHasExecutedFunction(true);
     }
-  }, [isOnScreen, hasTrackedImpression, functionToExecute]);
+  }, [isOnScreen, hasExecutedFunction, functionToExecute]);
 };
 
 export default useExecuteOnImpression;

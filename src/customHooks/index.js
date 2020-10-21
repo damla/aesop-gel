@@ -1,6 +1,6 @@
 import useAddToCart from './useAddToCart';
 import useEscapeKeyListener from './useEscapeKeyListener';
-import useExecuteOnImpression from './useExecuteOnImpression';
+import useExecuteOnImpression from './useExecuteOnImpression/useExecuteOnImpression';
 import useGoogleMaps from './useGoogleMaps';
 import useHasMounted from './useHasMounted';
 import useImageTransition from './useImageTransition';
