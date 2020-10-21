@@ -10,13 +10,13 @@ configure({ adapter: new Adapter() });
 jest.mock('~/customHooks');
 
 describe('useExecuteOnImpression', () => {
-  const functionToCall = jest.fn();
+  const callback = jest.fn();
   const useOnScreenSpy = jest.spyOn(hooks, 'useOnScreen');
 
   // eslint-disable-next-line react/prop-types
   const TestRig = ({ options }) => {
     const ref = useRef(null);
-    useExecuteOnImpression(ref, functionToCall, options);
+    useExecuteOnImpression(ref, callback, options);
 
     return <div ref={ref}>Hello word</div>;
   };
@@ -28,7 +28,7 @@ describe('useExecuteOnImpression', () => {
   it('should call useOnScreen using the passed in options', () => {
     const options = {
       threshold: 0.32,
-      shouldExecuteOnReEntry: false,
+      isExecutableOnReEntry: false,
     };
 
     mount(<TestRig options={options} />);
@@ -37,7 +37,7 @@ describe('useExecuteOnImpression', () => {
       expect.any(Object),
       options.threshold,
       undefined,
-      options.shouldExecuteOnReEntry,
+      options.isExecutableOnReEntry,
     );
   });
 
@@ -57,7 +57,7 @@ describe('useExecuteOnImpression', () => {
 
     mount(<TestRig />);
 
-    expect(functionToCall).not.toHaveBeenCalled();
+    expect(callback).not.toHaveBeenCalled();
   });
 
   it('should call the function  when the element is in view', () => {
@@ -65,6 +65,6 @@ describe('useExecuteOnImpression', () => {
 
     mount(<TestRig />);
 
-    expect(functionToCall).toHaveBeenCalledTimes(1);
+    expect(callback).toHaveBeenCalledTimes(1);
   });
 });

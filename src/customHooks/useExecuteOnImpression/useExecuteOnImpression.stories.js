@@ -6,10 +6,10 @@ const ComponentToMakeAnImpression = () => {
   const ref = useRef(null);
 
   // eslint-disable-next-line no-alert
-  const functionToCallOnImpression = () => alert('I made an impression');
-  useExecuteOnImpression(ref, functionToCallOnImpression, {
+  const callbackOnImpression = () => alert('I made an impression');
+  useExecuteOnImpression(ref, callbackOnImpression, {
     threshold: 0.5,
-    shouldExecuteOnReEntry: false,
+    isExecutableOnReEntry: false,
   });
   const styling = {
     height: '500px',
