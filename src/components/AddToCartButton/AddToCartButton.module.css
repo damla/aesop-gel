@@ -31,9 +31,8 @@
 }
 
 .label {
-  display: inline-block;
+  display: block;
   overflow: hidden;
-  max-width: min-content;
   height: 16px;
   line-height: 1;
   opacity: 1;
@@ -43,7 +42,6 @@
   span {
     display: block;
     overflow: hidden;
-    max-width: max-content;
     height: 18px;
     margin-right: auto;
     margin-left: auto;

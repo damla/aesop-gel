@@ -28,12 +28,12 @@ export default {
           url: '/',
         },
         {
-          id: '1',
+          id: '2',
           text: 'Donec non venenatis',
           url: '/',
         },
         {
-          id: '1',
+          id: '3',
           text: 'Venenatis donec non massa',
           url: '/',
         },

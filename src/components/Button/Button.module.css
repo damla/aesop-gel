@@ -7,7 +7,7 @@
   appearance: none;
   background-color: transparent;
   cursor: pointer;
-  font-family: var(--font-family-sans-serif-regular);
+  font-family: var(--font-family-sans-serif-medium);
   font-size: rem(14px);
   font-weight: var(--font-weight-normal);
   line-height: 1.4;
@@ -102,7 +102,7 @@
 
     &.alternate {
       background-color: var(--color-dark-disabled);
-      color: var(--color-grey-20);
+      color: var(--color-white);
     }
   }
 
@@ -117,7 +117,6 @@
       &.alternate {
         border-color: var(--color-dark-disabled);
         background-color: var(--color-dark-disabled);
-        color: var(--color-grey-20);
       }
     }
   }

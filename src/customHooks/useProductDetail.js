@@ -13,6 +13,7 @@ const useProductDetail = product => {
       ingredients,
       keyIngredient,
       productName,
+      image,
     }) => {
       updateProductDetail({
         description,
@@ -23,6 +24,7 @@ const useProductDetail = product => {
         ingredients,
         keyIngredient,
         productName,
+        image,
       });
     },
     [],
