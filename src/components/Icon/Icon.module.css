@@ -23,14 +23,22 @@
     fill: transparent;
     stroke-width: 3px;
     transition: fill 200ms var(--easing-ease-in-out-cubic);
+  }
 
-    .dark & {
-      stroke: var(--color-secondary);
-    }
+  &.dark .circle {
+    stroke: var(--color-secondary);
+  }
 
-    .light & {
-      stroke: var(--color-primary);
-    }
+  &.light .circle {
+    stroke: var(--color-primary);
+  }
+
+  &.dark.isActive .circle {
+    fill: var(--color-primary);
+  }
+
+  &.light.isActive .circle {
+    fill: var(--color-secondary);
   }
 
   .plus {
@@ -40,31 +48,59 @@
       fill 200ms var(--easing-ease-in-out-cubic),
       stroke 200ms var(--easing-ease-in-out-cubic),
       opacity 300ms var(--easing-ease-in-out-cubic);
+  }
 
-    .dark & {
-      fill: var(--color-secondary);
-      stroke: var(--color-secondary);
-    }
+  &.isActive .plus {
+    opacity: 0;
+  }
 
-    .light & {
-      fill: var(--color-primary);
-      stroke: var(--color-primary);
-    }
+  &.dark .plus {
+    fill: var(--color-secondary);
+    stroke: var(--color-secondary);
+  }
+
+  &.light .plus {
+    fill: var(--color-primary);
+    stroke: var(--color-primary);
+  }
+
+  &.dark.isActive .plus {
+    fill: var(--color-secondary);
+    stroke: var(--color-secondary);
+  }
+
+  &.light.isActive .plus {
+    fill: var(--color-white);
+    stroke: var(--color-white);
   }
 
   .close {
     opacity: 0;
     stroke-width: 2px;
     transition: opacity 300ms var(--easing-ease-in-out-cubic);
+  }
 
-    .dark & {
-      fill: var(--color-secondary);
-      stroke: var(--color-secondary);
-    }
+  &.isActive .close {
+    opacity: 1;
+  }
 
-    .light & {
-      fill: var(--color-primary);
-      stroke: var(--color-primary);
-    }
+  &.dark .close {
+    fill: var(--color-secondary);
+    stroke: var(--color-secondary);
+  }
+
+  &.light .close {
+    fill: var(--color-primary);
+    stroke: var(--color-primary);
+  }
+
+  &.dark.isActive .close {
+    fill: var(--color-secondary);
+    stroke: var(--color-secondary);
+  }
+
+  &.light.isActive .close {
+    fill: var(--color-white);
+    stroke: var(--color-white);
   }
 }

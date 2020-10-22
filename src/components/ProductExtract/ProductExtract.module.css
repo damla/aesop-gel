@@ -1,12 +1,22 @@
 @import 'styles/index';
 
+:root {
+  --image-width-small: 80px;
+  --image-height-small: 50px;
+  --image-width-medium: 130px;
+  --image-height-medium: 90px;
+}
+
 .base {
   width: 100%;
   padding: 0;
   margin: 0;
-  margin-top: 18px;
   list-style: none;
   visibility: hidden;
+}
+
+.hasTopMargin {
+  margin-top: 18px;
 
   @media (--viewport-md) {
     margin-top: 14px;
@@ -103,8 +113,24 @@
 
   img {
     width: auto;
-    max-width: 80px;
-    max-height: 50px;
+  }
+
+  &.small {
+    width: var(--image-width-small);
+
+    img {
+      max-width: var(--image-width-small);
+      max-height: var(--image-height-small);
+    }
+  }
+
+  &.medium {
+    width: var(--image-width-medium);
+
+    img {
+      max-width: var(--image-width-medium);
+      max-height: var(--image-height-medium);
+    }
   }
 }
 
@@ -129,5 +155,6 @@
 }
 
 .productDescription {
-  width: 70%;
+  align-self: center;
+  margin-right: 20px;
 }
