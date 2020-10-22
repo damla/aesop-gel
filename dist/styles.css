@@ -4850,6 +4850,9 @@ sans-serif;
 .FooterBlock_copy__1BNcT svg, .FooterBlock_listItem__2cWAS svg {
     vertical-align: middle;
   }
+.FooterBlock_copy__1BNcT > :last-child {
+        margin-bottom: 0;
+      }
 .FooterBlock_learnMore__19DGW {
   text-decoration: underline;
 }
