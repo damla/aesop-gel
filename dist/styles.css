@@ -3072,7 +3072,7 @@ sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 18px;
+  margin-top: 16px;
   font-family: 'Suisse Regular'
 ,
 sans-serif;
@@ -3085,7 +3085,7 @@ sans-serif;
       -ms-flex: 0 0 13px;
           flex: 0 0 13px;
   border: 1px solid #333;
-  margin: 8px 0 0 0;
+  margin: 7px 0 0 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -3093,7 +3093,7 @@ sans-serif;
   background-color: transparent;
   color: #333;
   font-size: 14px;
-  line-height: 2.14;
+  line-height: 2;
 }
 @media (max-width: 639px) {
 .Checkbox-module_checkBox__1srqJ {
@@ -3141,7 +3141,7 @@ sans-serif;
 .Checkbox-module_content__3PAQK {
   margin-left: 10px;
   font-size: 14px;
-  line-height: 2.14;
+  line-height: 2;
 }
 .Checkbox-module_content__3PAQK.Checkbox-module_dark__1059P {
     color: #333;
@@ -4829,19 +4829,30 @@ sans-serif;
   margin: 0;
   list-style: none;
 }
+.FooterBlock_copy__1BNcT,
 .FooterBlock_listItem__2cWAS {
   font-size: 14px;
   line-height: 2.15;
 }
 @media (max-width: 639px) {
+.FooterBlock_copy__1BNcT,
 .FooterBlock_listItem__2cWAS {
     font-size: 12px;
     line-height: 2.5
 }
   }
-.FooterBlock_listItem__2cWAS svg {
+@media (min-width: 1025px) {
+.FooterBlock_copy__1BNcT,
+.FooterBlock_listItem__2cWAS {
+    line-height: 2
+}
+  }
+.FooterBlock_copy__1BNcT svg, .FooterBlock_listItem__2cWAS svg {
     vertical-align: middle;
   }
+.FooterBlock_copy__1BNcT > :last-child {
+        margin-bottom: 0;
+      }
 .FooterBlock_learnMore__19DGW {
   text-decoration: underline;
 }

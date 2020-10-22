@@ -47,6 +47,7 @@
   list-style: none;
 }
 
+.copy,
 .listItem {
   font-size: rem(14px);
   line-height: 2.15;
@@ -54,8 +55,17 @@
     font-size: rem(12px);
     line-height: 2.5;
   }
+  @media (--viewport-lg) {
+    line-height: 2;
+  }
   & svg {
     vertical-align: middle;
+  }
+}
+
+.copy {
+  & > :last-child {
+    margin-bottom: 0;
   }
 }
 
