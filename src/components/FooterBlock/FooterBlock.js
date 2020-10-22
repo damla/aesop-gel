@@ -68,7 +68,7 @@ const FooterBlock = ({
 
 FooterBlock.propTypes = {
   className: PropTypes.string,
-  copy: PropTypes.string,
+  copy: PropTypes.node,
   heading: PropTypes.string,
   headingClassName: PropTypes.string,
   isVisibleOnTabletAndMobile: PropTypes.bool,
