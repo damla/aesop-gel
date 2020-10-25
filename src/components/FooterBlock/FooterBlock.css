@@ -20,7 +20,6 @@
   line-height: 2;
   @media (--viewport-sm-only) {
     font-size: rem(13px);
-    line-height: 2.3;
   }
 }
 
@@ -50,13 +49,9 @@
 .copy,
 .listItem {
   font-size: rem(14px);
-  line-height: 2.15;
+  line-height: 2;
   @media (--viewport-sm-only) {
     font-size: rem(12px);
-    line-height: 2.5;
-  }
-  @media (--viewport-lg) {
-    line-height: 2;
   }
   & svg {
     vertical-align: middle;
