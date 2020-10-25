@@ -33,8 +33,8 @@
   }
 
   @media (--viewport-lg) {
-    padding-top: var(--layout-lg-margin);
-    padding-right: var(--layout-lg-margin);
+    padding-top: var(--layout-lg-spacing);
+    padding-right: var(--layout-lg-spacing);
   }
   &:hover {
     cursor: pointer;
@@ -50,7 +50,7 @@
   }
 
   @media (--viewport-lg) {
-    padding-top: var(--layout-lg-margin);
-    padding-left: var(--layout-lg-margin);
+    padding-top: var(--layout-lg-spacing);
+    padding-left: var(--layout-lg-spacing);
   }
 }

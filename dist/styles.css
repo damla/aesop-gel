@@ -3097,15 +3097,8 @@ sans-serif;
 }
 @media (max-width: 639px) {
 .Checkbox-module_checkBox__1srqJ {
-    margin: 2px 0 0 0;
-    font-size: 12px;
-    line-height: 1.33
-}
-  }
-@media (min-width: 640px) and (max-width: 1024px) {
-.Checkbox-module_checkBox__1srqJ {
     margin: 6px 0 0 0;
-    line-height: 1.79
+    font-size: 12px
 }
   }
 .Checkbox-module_checkBox__1srqJ.Checkbox-module_dark__1059P {
@@ -3118,18 +3111,18 @@ sans-serif;
   }
 .Checkbox-module_checkBox__1srqJ:checked::before {
     position: relative;
-    top: -8px;
+    top: -7px;
     content: '\2713';
   }
 /* Glyph: ✓ (check mark) */
 @media (max-width: 639px) {
 .Checkbox-module_checkBox__1srqJ:checked::before {
-      top: -2px
+      top: -6px
   }
     }
 @media (min-width: 640px) and (max-width: 1024px) {
 .Checkbox-module_checkBox__1srqJ:checked::before {
-      top: -8px
+      top: -7px
   }
     }
 .Checkbox-module_checkBox__1srqJ:focus {
@@ -3151,13 +3144,7 @@ sans-serif;
   }
 @media (max-width: 639px) {
 .Checkbox-module_content__3PAQK {
-    font-size: 12px;
-    line-height: 1.33
-}
-  }
-@media (min-width: 640px) and (max-width: 1024px) {
-.Checkbox-module_content__3PAQK {
-    line-height: 1.79
+    font-size: 12px
 }
   }
 
@@ -4805,8 +4792,7 @@ sans-serif;
 }
 @media (max-width: 639px) {
 .FooterBlock_heading__2kMY- {
-    font-size: 13px;
-    line-height: 2.3
+    font-size: 13px
 }
   }
 .FooterBlock_divider__23KaL {
@@ -4832,19 +4818,12 @@ sans-serif;
 .FooterBlock_copy__1BNcT,
 .FooterBlock_listItem__2cWAS {
   font-size: 14px;
-  line-height: 2.15;
+  line-height: 2;
 }
 @media (max-width: 639px) {
 .FooterBlock_copy__1BNcT,
 .FooterBlock_listItem__2cWAS {
-    font-size: 12px;
-    line-height: 2.5
-}
-  }
-@media (min-width: 1025px) {
-.FooterBlock_copy__1BNcT,
-.FooterBlock_listItem__2cWAS {
-    line-height: 2
+    font-size: 12px
 }
   }
 .FooterBlock_copy__1BNcT svg, .FooterBlock_listItem__2cWAS svg {
