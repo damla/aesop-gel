@@ -51,7 +51,7 @@ const AddToCartButton = ({
     );
   }
 
-  if (!isInStock || !sku || !price) {
+  if (!isInStock || !sku) {
     return (
       <Button
         className={classSet}
@@ -63,6 +63,7 @@ const AddToCartButton = ({
         title={copy.outOfStock?.title}
       >
         {copy.outOfStock?.label}
+        {price && ` — ${price}`}
       </Button>
     );
   }

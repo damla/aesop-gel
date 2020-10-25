@@ -2,7 +2,7 @@
 
 .base {
   display: flex;
-  margin-top: 18px;
+  margin-top: 16px;
   font-family: var(--font-family-sans-serif-regular);
 }
 
@@ -12,7 +12,7 @@
   height: 13px;
   flex: 0 0 13px;
   border: 1px solid var(--color-dark-copy);
-  margin: 8px 0 0 0;
+  margin: 7px 0 0 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -20,7 +20,7 @@
   background-color: transparent;
   color: var(--color-dark-copy);
   font-size: rem(14px);
-  line-height: 2.14;
+  line-height: 2;
 
   @media (--viewport-sm-only) {
     margin: 2px 0 0 0;
@@ -66,7 +66,7 @@
 .content {
   margin-left: 10px;
   font-size: rem(14px);
-  line-height: 2.14;
+  line-height: 2;
   &.dark {
     color: var(--color-dark-copy);
   }

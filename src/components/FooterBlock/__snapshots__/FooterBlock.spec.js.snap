@@ -11,7 +11,7 @@ exports[`<FooterBlock /> renders base component correctly 1`] = `
     className="divider dark"
   />
   <div
-    className="listItem"
+    className="listItem copy"
   >
     Aesop acknowledges the Traditional Owners of the lands on which we live and work, and pays deepest respects to Elders past, present and emerging. We also acknowledge that sovereignty of these lands has never been ceded.
   </div>

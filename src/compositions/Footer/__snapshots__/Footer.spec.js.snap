@@ -400,7 +400,7 @@ exports[`<Footer /> renders base component correctly 1`] = `
         className="divider light"
       />
       <div
-        className="listItem"
+        className="listItem copy"
       >
         TODO: Shipping To Component
       </div>
@@ -417,7 +417,7 @@ exports[`<Footer /> renders base component correctly 1`] = `
         className="divider light"
       />
       <div
-        className="listItem"
+        className="listItem copy"
       >
         Aesop acknowledges the Traditional Owners of the lands on which we live and work, and pays deepest respects to Elders past, present and emerging. We also acknowledge that sovereignty of these lands has never been ceded.
       </div>
@@ -434,7 +434,7 @@ exports[`<Footer /> renders base component correctly 1`] = `
         className="divider light"
       />
       <div
-        className="listItem"
+        className="listItem copy"
       >
         Our approach to sustainability is guided by where we can have the greatest social and environmental impact.
       </div>

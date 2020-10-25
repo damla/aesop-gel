@@ -5,26 +5,28 @@ const useProductDetail = product => {
 
   const setProductDetail = useCallback(
     ({
-      description,
-      id,
-      variantOptions,
       cartDisclaimer,
       definitionList,
+      description,
+      id,
+      image,
       ingredients,
       keyIngredient,
       productName,
       upSellProduct,
+      variantOptions,
     }) => {
       updateProductDetail({
-        description,
-        id,
-        variantOptions,
         cartDisclaimer,
         definitionList,
+        description,
+        id,
+        image,
         ingredients,
         keyIngredient,
         productName,
         upSellProduct,
+        variantOptions,
       });
     },
     [],
