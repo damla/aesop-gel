@@ -11,7 +11,7 @@ import LoadingFixture from './Loading.fixture';
   <Story name="Base component">
     <Loading
       isLoading={knobs.boolean('isLoading', true, 'Presentation')}
-      small={knobs.boolean('isSmall', false, 'Presentation')}
+      size={knobs.select('size', ['small', 'medium', 'large'], 'medium', 'Presentation')}
       theme={knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation')}
     />
   </Story>

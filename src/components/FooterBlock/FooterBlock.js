@@ -23,6 +23,7 @@ const FooterBlock = ({
   theme,
 }) => {
   const baseClassSet = cx(styles.base, styles[theme], className);
+  const copyClassSet = cx(styles.listItem, styles.copy);
   const dividerClassSet = cx(styles.divider, styles[theme]);
   const headingClassSet = cx(styles.heading, headingClassName);
   const listClassSet = cx(styles.list, listClassName);
@@ -34,7 +35,7 @@ const FooterBlock = ({
       isSmall={!isVisibleOnTabletAndMobile}
     >
       <section className={baseClassSet}>
-        <h5 className={headingClassSet}>{heading}</h5>
+        <h1 className={headingClassSet}>{heading}</h1>
         <div className={dividerClassSet} />
         {links?.length && (
           <ul className={listClassSet}>
@@ -59,7 +60,7 @@ const FooterBlock = ({
             ))}
           </ul>
         )}
-        {copy && <div className={listItemClassSet}>{copy}</div>}
+        {copy && <div className={copyClassSet}>{copy}</div>}
       </section>
     </Hidden>
   );
@@ -67,7 +68,7 @@ const FooterBlock = ({
 
 FooterBlock.propTypes = {
   className: PropTypes.string,
-  copy: PropTypes.string,
+  copy: PropTypes.node,
   heading: PropTypes.string,
   headingClassName: PropTypes.string,
   isVisibleOnTabletAndMobile: PropTypes.bool,

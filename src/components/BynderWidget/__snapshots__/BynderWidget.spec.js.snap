@@ -11,7 +11,7 @@ exports[`<BynderWidget /> renders base component correctly 1`] = `
     Media Releases
   </h3>
   <span
-    className="base isLoading dark"
+    className="base isLoading medium dark"
   >
     <span
       className="dot"

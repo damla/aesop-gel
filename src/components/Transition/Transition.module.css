@@ -1,12 +1,37 @@
 @import 'styles/variables/index';
 
+%transition-opacity-500ms-linear {
+  transition: opacity 500ms linear;
+}
+
+%transition-opacity-1500ms-linear {
+  transition: opacity 1500ms linear;
+}
+
+%transition-transform-500ms-ease-out-opacity-500ms-linear {
+  transition: transform 500ms var(--easing-ease-out-cubic), opacity 500ms linear;
+}
+
+%transition-transform-1500ms-ease-out-opacity-1500ms-linear {
+  transition:
+    transform 1500ms var(--easing-ease-out-cubic),
+    opacity 1500ms linear;
+}
+
+%transition-transform-500ms-ease-out-visibility-500ms-ease-out {
+  transition:
+    transform 500ms var(--easing-ease-out-cubic),
+    visibility 500ms var(--easing-ease-out-cubic);
+}
+
 .fadeEnter {
   opacity: 0;
 }
 
 .fadeEnterActive {
+  @extend %transition-opacity-500ms-linear;
+
   opacity: 1;
-  transition: opacity 500ms var(--easing-ease-out-cubic);
 }
 
 .fadeEnterDone {
@@ -18,8 +43,9 @@
 }
 
 .fadeExitActive {
+  @extend %transition-opacity-500ms-linear;
+
   opacity: 0;
-  transition: opacity 500ms var(--easing-ease-out-cubic);
 }
 
 .fadeExitDone {
@@ -32,11 +58,10 @@
 }
 
 .shiftInDownEnterActive {
+  @extend %transition-transform-1500ms-ease-out-opacity-1500ms-linear;
+
   opacity: 1;
   transform: translate3d(0, 0, 0);
-  transition:
-    transform 1500ms var(--easing-ease-out-cubic),
-    opacity 1500ms var(--easing-ease-in-cubic);
 }
 
 .shiftInDownEnterDone {
@@ -50,11 +75,10 @@
 }
 
 .shiftInDownExitActive {
+  @extend %transition-transform-1500ms-ease-out-opacity-1500ms-linear;
+
   opacity: 0;
   transform: translate3d(0, -20px, 0);
-  transition:
-    transform 1500ms var(--easing-ease-out-cubic),
-    opacity 1500ms var(--easing-ease-in-cubic);
 }
 
 .shiftInDownExitDone {
@@ -68,11 +92,10 @@
 }
 
 .shiftInUpEnterActive {
+  @extend %transition-transform-1500ms-ease-out-opacity-1500ms-linear;
+
   opacity: 1;
   transform: translate3d(0, 0, 0);
-  transition:
-    transform 1500ms var(--easing-ease-out-cubic),
-    opacity 1500ms var(--easing-ease-in-cubic);
 }
 
 .shiftInUpEnterDone {
@@ -86,11 +109,10 @@
 }
 
 .shiftInUpExitActive {
+  @extend %transition-transform-1500ms-ease-out-opacity-1500ms-linear;
+
   opacity: 0;
   transform: translate3d(0, 20px, 0);
-  transition:
-    transform 1500ms var(--easing-ease-out-cubic),
-    opacity 1500ms var(--easing-ease-in-cubic);
 }
 
 .shiftInUpExitDone {
@@ -104,11 +126,10 @@
 }
 
 .shiftInLeftEnterActive {
+  @extend %transition-transform-1500ms-ease-out-opacity-1500ms-linear;
+
   opacity: 1;
   transform: translate3d(0, 0, 0);
-  transition:
-    transform 1500ms var(--easing-ease-out-cubic),
-    opacity 1000ms var(--easing-ease-in-cubic);
 }
 
 .shiftInLeftEnterDone {
@@ -122,11 +143,10 @@
 }
 
 .shiftInLeftExitActive {
+  @extend %transition-transform-1500ms-ease-out-opacity-1500ms-linear;
+
   opacity: 0;
   transform: translate3d(20px, 0, 0);
-  transition:
-    transform 1500ms var(--easing-ease-out-cubic),
-    opacity 1000ms var(--easing-ease-in-cubic);
 }
 
 .shiftInLeftExitDone {
@@ -140,10 +160,9 @@
 }
 
 .slideDownEnterActive {
+  @extend %transition-transform-500ms-ease-out-visibility-500ms-ease-out;
+
   transform: translate3d(0, 0, 0);
-  transition:
-    transform 500ms var(--easing-ease-out-cubic),
-    visibility 500ms var(--easing-ease-out-cubic);
   visibility: visible;
 }
 
@@ -158,10 +177,9 @@
 }
 
 .slideDownExitActive {
+  @extend %transition-transform-500ms-ease-out-visibility-500ms-ease-out;
+
   transform: translate3d(0, -100%, 0);
-  transition:
-    transform 500ms var(--easing-ease-out-cubic),
-    visibility 500ms var(--easing-ease-out-cubic);
   visibility: hidden;
 }
 
@@ -176,10 +194,9 @@
 }
 
 .slideRightEnterActive {
+  @extend %transition-transform-500ms-ease-out-visibility-500ms-ease-out;
+
   transform: translate3d(0, 0, 0);
-  transition:
-    transform 500ms var(--easing-ease-out-cubic),
-    visibility 500ms var(--easing-ease-out-cubic);
   visibility: visible;
 }
 
@@ -194,10 +211,9 @@
 }
 
 .slideRightExitActive {
+  @extend %transition-transform-500ms-ease-out-visibility-500ms-ease-out;
+
   transform: translate3d(-100%, 0, 0);
-  transition:
-    transform 500ms var(--easing-ease-out-cubic),
-    visibility 500ms var(--easing-ease-out-cubic);
   visibility: hidden;
 }
 
@@ -211,8 +227,9 @@
 }
 
 .slowFadeEnterActive {
+  @extend %transition-opacity-1500ms-linear;
+
   opacity: 1;
-  transition: opacity 1500ms var(--easing-ease-out-cubic);
 }
 
 .slowFadeEnterDone {
@@ -224,8 +241,9 @@
 }
 
 .slowFadeExitActive {
+  @extend %transition-opacity-1500ms-linear;
+
   opacity: 0;
-  transition: opacity 1500ms var(--easing-ease-out-cubic);
 }
 
 .slowFadeExitDone {
@@ -238,11 +256,10 @@
 }
 
 .zoomEnterActive {
+  @extend %transition-transform-500ms-ease-out-opacity-500ms-linear;
+
   opacity: 1;
   transform: scale3d(1, 1, 1);
-  transition:
-    transform 500ms var(--easing-ease-out-cubic),
-    opacity 500ms var(--easing-ease-out-cubic);
 }
 
 .zoomEnterDone {
@@ -256,11 +273,10 @@
 }
 
 .zoomExitActive {
+  @extend %transition-transform-500ms-ease-out-opacity-500ms-linear;
+
   opacity: 0;
   transform: scale3d(0.9, 0.9, 0.9);
-  transition:
-    transform 500ms var(--easing-ease-out-cubic),
-    opacity 500ms var(--easing-ease-out-cubic);
 }
 
 .zoomExitDone {

@@ -30,7 +30,7 @@ exports[`<ProductGridItem /> renders base component correctly 1`] = `
     className="infoVariantHolder"
   >
     <div
-      className="infoHolder"
+      className="infoHolder hasManyVariants"
     >
       <p
         className="base dark info"
