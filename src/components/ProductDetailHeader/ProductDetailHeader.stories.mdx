@@ -1,5 +1,6 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import * as knobs from '@storybook/addon-knobs';
+import GridOverlay from '~.storybook/GridOverlay.js';
 import {
   AddToCartContextProvider,
   ProductDetailContextProvider,
@@ -20,6 +21,7 @@ import SecondaryMessageFixture from '~/components/SecondaryMessage/SecondaryMess
 <Preview>
   <Story name="Base component">
     {(() => {
+      const gridOverlayActive = knobs.boolean('grid overlay active', false, 'Presentation');
       const theme = knobs.select('theme', ['dark', 'light'], ProductDetailHeaderFixture.theme, 'Presentation')
       const { productName, description, ...productRest } = ProductDetailHeaderFixture.product;
       const productDetails = {
@@ -28,24 +30,27 @@ import SecondaryMessageFixture from '~/components/SecondaryMessage/SecondaryMess
         ...productRest,
       }
       return (
-        <AddToCartContextProvider onClick={mockAddToCartButtonOnClick}>
-          <ProductDetailContextProvider product={productDetails}>
-            <VariantSelectContextProvider variants={ProductDetailHeaderFixture.product.variantOptions}>
-              <ProductDetailHeader
-                breadcrumbs={ProductDetailHeaderFixture.breadcrumbs}
-                className={ProductDetailHeaderFixture.className}
-                copy={{
-                  addToCart: AddToCartButtonFixture.copy,
-                  size: ProductDetailBodyFixture.copy.size,
-                  ingredients: ProductDetailBodyFixture.copy.ingredients,
-                  upSellProductLabel: ProductDetailBodyFixture.copy.upSellProductLabel,
-                }}
-                theme={theme}
-              />
-              <SecondaryMessage {...SecondaryMessageFixture} />
-            </VariantSelectContextProvider>
-          </ProductDetailContextProvider>
-        </AddToCartContextProvider>
+        <div>
+          <GridOverlay isActive={gridOverlayActive} />
+          <AddToCartContextProvider onClick={mockAddToCartButtonOnClick}>
+            <ProductDetailContextProvider product={productDetails}>
+              <VariantSelectContextProvider variants={ProductDetailHeaderFixture.product.variantOptions}>
+                <ProductDetailHeader
+                  breadcrumbs={ProductDetailHeaderFixture.breadcrumbs}
+                  className={ProductDetailHeaderFixture.className}
+                  copy={{
+                    addToCart: AddToCartButtonFixture.copy,
+                    size: ProductDetailBodyFixture.copy.size,
+                    ingredients: ProductDetailBodyFixture.copy.ingredients,
+                    upSellProductLabel: ProductDetailBodyFixture.copy.upSellProductLabel,
+                  }}
+                  theme={theme}
+                />
+                <SecondaryMessage {...SecondaryMessageFixture} />
+              </VariantSelectContextProvider>
+            </ProductDetailContextProvider>
+          </AddToCartContextProvider>
+        </div>
       )
     })()}
   </Story>

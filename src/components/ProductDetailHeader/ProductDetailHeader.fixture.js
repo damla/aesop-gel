@@ -52,9 +52,12 @@ export default {
         image: {
           altText: 'alt-tag-ARD33',
           sizes: {
-            large: './assets/images/Product/variant-one-large.png',
-            medium: './assets/images/Product/variant-one-medium.png',
-            small: './assets/images/Product/variant-one-small.png',
+            large:
+              'https://www.aesop.com/medias/Aesop-Kits-Gift-Kits-2020-21-The-Ardent-Nomad-Hybris-Large-1584x962px.png?context=bWFzdGVyfGltYWdlc3w0MTI1MzB8aW1hZ2UvcG5nfGltYWdlcy9oZjcvaDVlLzk1NjMwMjE3MDUyNDYucG5nfGUyYjQyMjlmMDQ0ZjdlOTRjMzAyNDczYzA2NGQ1Yzk0YWI4ZWQ0OTBkMmQzYWNjNWMxMjZjMDU1YTZjZDFhMzE',
+            medium:
+              'https://www.aesop.com/medias/Aesop-Kits-Gift-Kits-2020-21-The-Ardent-Nomad-Hybris-Large-1584x962px.png?context=bWFzdGVyfGltYWdlc3w0MTI1MzB8aW1hZ2UvcG5nfGltYWdlcy9oZjcvaDVlLzk1NjMwMjE3MDUyNDYucG5nfGUyYjQyMjlmMDQ0ZjdlOTRjMzAyNDczYzA2NGQ1Yzk0YWI4ZWQ0OTBkMmQzYWNjNWMxMjZjMDU1YTZjZDFhMzE',
+            small:
+              'https://www.aesop.com/medias/Aesop-Kits-Gift-Kits-2020-21-The-Ardent-Nomad-Hybris-Large-1584x962px.png?context=bWFzdGVyfGltYWdlc3w0MTI1MzB8aW1hZ2UvcG5nfGltYWdlcy9oZjcvaDVlLzk1NjMwMjE3MDUyNDYucG5nfGUyYjQyMjlmMDQ0ZjdlOTRjMzAyNDczYzA2NGQ1Yzk0YWI4ZWQ0OTBkMmQzYWNjNWMxMjZjMDU1YTZjZDFhMzE',
           },
         },
       },

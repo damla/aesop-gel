@@ -2,24 +2,21 @@
 
 .base {
   display: flex;
-  margin: 0 0 28px;
   font-family: var(--font-family-sans-serif-regular);
   font-size: rem(15px);
   font-weight: var(--font-weight-normal);
   line-height: 1.4;
-
-  @media (--viewport-md-only) {
-    flex-flow: row-reverse;
-  }
 
   &,
   & * {
     box-sizing: border-box;
   }
 
+  @media (--viewport-md-only) {
+    flex-flow: row-reverse;
+  }
+
   @media (--viewport-lg) {
-    max-width: 470px;
-    margin: 0 0 5px;
     transition: opacity 1300ms 300ms var(--easing-ease-out-cubic);
   }
 }
@@ -47,10 +44,6 @@
   @media (--viewport-md-only) {
     flex-direction: row;
     justify-content: space-between;
-  }
-
-  @media (--viewport-lg) {
-    max-width: 470px;
   }
 
   .productName {
