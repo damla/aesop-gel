@@ -4818,7 +4818,7 @@ sans-serif;
 .FooterBlock_copy__1BNcT,
 .FooterBlock_listItem__2cWAS {
   font-size: 14px;
-  line-height: 2;
+  line-height: 2.5;
 }
 @media (max-width: 639px) {
 .FooterBlock_copy__1BNcT,
@@ -4828,6 +4828,20 @@ sans-serif;
   }
 .FooterBlock_copy__1BNcT svg, .FooterBlock_listItem__2cWAS svg {
     vertical-align: middle;
+  }
+.FooterBlock_copy__1BNcT {
+  line-height: 1.8;
+  margin-top: 10px;
+}
+@media (min-width: 640px) {
+.FooterBlock_copy__1BNcT {
+    margin-top: 21px
+}
+  }
+@media (min-width: 1025px) {
+.FooterBlock_copy__1BNcT {
+    margin-top: 20px
+}
   }
 .FooterBlock_copy__1BNcT > :last-child {
     margin-bottom: 0;
