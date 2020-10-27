@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import {
@@ -13,7 +13,7 @@ import Icon from '~/components/Icon';
 import { isObjectPopulatedArray } from '~/utils/objects';
 import styles from './Accordion.module.css';
 
-const Accordion = ({ className, items, theme }) => {
+const Accordion = forwardRef(({ className, items, theme }, ref) => {
   const [activeNodes, setIsActiveNodes] = React.useState([]);
 
   if (!isObjectPopulatedArray(items)) {
@@ -25,39 +25,43 @@ const Accordion = ({ className, items, theme }) => {
   const checkIsActive = id => activeNodes.includes(id);
 
   return (
-    <AccessibleAccordion
-      allowMultipleExpanded={true}
-      allowZeroExpanded={true}
-      className={classSet}
-      onChange={handleOnChange}
-    >
-      {items.map(({ content, heading, id }) => (
-        <AccordionItem className={styles.item} key={id} uuid={id}>
-          <AccordionItemHeading className={cx(styles.heading, styles[theme])}>
-            <AccordionItemButton className={styles.button}>
-              <span className={styles.headingCopy}>{heading}</span>
-              <Icon
-                className={styles.icon}
-                height={16}
-                name="downArrow"
-                theme={theme}
-                width={16}
-              />
-            </AccordionItemButton>
-          </AccordionItemHeading>
-          <AccordionItemPanel className={styles.panel}>
-            <Collapse
-              isOpened={checkIsActive(id)}
-              theme={{ collapse: styles.collapse }}
-            >
-              <div className={cx(styles.content, styles[theme])}>{content}</div>
-            </Collapse>
-          </AccordionItemPanel>
-        </AccordionItem>
-      ))}
-    </AccessibleAccordion>
+    <div ref={ref}>
+      <AccessibleAccordion
+        allowMultipleExpanded={true}
+        allowZeroExpanded={true}
+        className={classSet}
+        onChange={handleOnChange}
+      >
+        {items.map(({ content, heading, id }) => (
+          <AccordionItem className={styles.item} key={id} uuid={id}>
+            <AccordionItemHeading className={cx(styles.heading, styles[theme])}>
+              <AccordionItemButton className={styles.button}>
+                <span className={styles.headingCopy}>{heading}</span>
+                <Icon
+                  className={styles.icon}
+                  height={16}
+                  name="downArrow"
+                  theme={theme}
+                  width={16}
+                />
+              </AccordionItemButton>
+            </AccordionItemHeading>
+            <AccordionItemPanel className={styles.panel}>
+              <Collapse
+                isOpened={checkIsActive(id)}
+                theme={{ collapse: styles.collapse }}
+              >
+                <div className={cx(styles.content, styles[theme])}>
+                  {content}
+                </div>
+              </Collapse>
+            </AccordionItemPanel>
+          </AccordionItem>
+        ))}
+      </AccessibleAccordion>
+    </div>
   );
-};
+});
 
 Accordion.propTypes = {
   className: PropTypes.string,
