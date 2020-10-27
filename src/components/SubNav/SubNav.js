@@ -67,20 +67,23 @@ const SubNav = forwardRef(
 );
 
 export function getLinkItems(links, theme) {
-  return links.map(({ children, id, hasTargetInNewWindow, style, url }) => ({
-    content: (
-      <Hyperlink
-        className={styles.link}
-        hasTargetInNewWindow={hasTargetInNewWindow}
-        style={style}
-        theme={theme}
-        url={url}
-      >
-        {children}
-      </Hyperlink>
-    ),
-    id,
-  }));
+  return links.map(
+    ({ children, id, hasTargetInNewWindow, style, url, onClick }) => ({
+      content: (
+        <Hyperlink
+          className={styles.link}
+          hasTargetInNewWindow={hasTargetInNewWindow}
+          onClick={onClick}
+          style={style}
+          theme={theme}
+          url={url}
+        >
+          {children}
+        </Hyperlink>
+      ),
+      id,
+    }),
+  );
 }
 
 SubNav.propTypes = {
