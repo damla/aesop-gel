@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import Heading from '~/components/Heading';
@@ -69,20 +69,22 @@ export const Column = ({ lists, theme }) =>
     );
   });
 
-const TwoColumnList = ({ className, leftColumn, rightColumn, theme }) => {
-  const classSet = cx(styles.base, styles[theme], className);
+const TwoColumnList = forwardRef(
+  ({ className, leftColumn, rightColumn, theme }, ref) => {
+    const classSet = cx(styles.base, styles[theme], className);
 
-  return (
-    <div className={classSet}>
-      <div className={styles.column}>
-        <Column lists={leftColumn} theme={theme} />
+    return (
+      <div className={classSet} ref={ref}>
+        <div className={styles.column}>
+          <Column lists={leftColumn} theme={theme} />
+        </div>
+        <div className={styles.column}>
+          <Column lists={rightColumn} theme={theme} />
+        </div>
       </div>
-      <div className={styles.column}>
-        <Column lists={rightColumn} theme={theme} />
-      </div>
-    </div>
-  );
-};
+    );
+  },
+);
 
 TwoColumnList.propTypes = {
   className: PropTypes.string,
