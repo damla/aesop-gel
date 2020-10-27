@@ -17,6 +17,7 @@
   }
 
   @media (--viewport-lg) {
+    max-width: 470px;
     transition: opacity 1300ms 300ms var(--easing-ease-out-cubic);
   }
 }
