@@ -35,6 +35,15 @@ export default {
       'Maecenas mattis, urna vel commodo vehicula, diam tellus vestibulum urna, in lobortis lacus quam et arcu. Nunc arcu neque, ullamcorper et eros vitae, scelerisque posuere quam. Nunc sagittis ultrices dignissim. Nullam dignissim nisi nec dolor blandit convallis. Suspendisse quis facilisis arcu, nec feugiat ligula. Vestibulum quis malesuada nisi, a finibus eros. Praesent et vestibulum diam. Nam tristique viverra odio, ut tincidunt diam placerat eu. Proin eu magna imperdiet vulputate ex sit amet, laoreet neque. Praesent rhoncus ex quis elit vehicula, et tincidunt nisi scelerisque. Nullam ultrices scelerisque ex at efficitur.',
     keyIngredient: 'Maecenas mattis, urna vel commodo vehicula',
     productName: 'Lorem ipsum dolor',
+    upSellProduct: {
+      image: {
+        altText: 'Product Extract',
+        small:
+          'https://www.aesop.com/medias/Aesop-Kits-Gift-Kits-2019-20-The-Reveller-with-Product-Small-781x524px.png?context=bWFzdGVyfGltYWdlc3wxMTMwMjN8aW1hZ2UvcG5nfGltYWdlcy9oZjgvaDI1LzkxNTAzNjg5NDAwNjIucG5nfDllZjNkMjBkNjZhZTI0OGRhZWZhOGJlMzA5NDM3OTg4ZGFlNjE1MWY1ZDg2ZmU4MjUwZmEwOWMwMmRkNzhmNDg',
+      },
+      name: 'The Reveller Fragrant hand and body care',
+      url: '/',
+    },
     variantOptions: [
       {
         size: '50 mL - In stock',
@@ -44,9 +53,12 @@ export default {
         image: {
           altText: 'alt-tag-ARD33',
           sizes: {
-            large: './assets/images/Product/variant-one-large.png',
-            medium: './assets/images/Product/variant-one-medium.png',
-            small: './assets/images/Product/variant-one-small.png',
+            large:
+              'https://www.aesop.com/medias/Aesop-Kits-Gift-Kits-2020-21-The-Ardent-Nomad-Hybris-Large-1584x962px.png?context=bWFzdGVyfGltYWdlc3w0MTI1MzB8aW1hZ2UvcG5nfGltYWdlcy9oZjcvaDVlLzk1NjMwMjE3MDUyNDYucG5nfGUyYjQyMjlmMDQ0ZjdlOTRjMzAyNDczYzA2NGQ1Yzk0YWI4ZWQ0OTBkMmQzYWNjNWMxMjZjMDU1YTZjZDFhMzE',
+            medium:
+              'https://www.aesop.com/medias/Aesop-Kits-Gift-Kits-2020-21-The-Ardent-Nomad-Hybris-Large-1584x962px.png?context=bWFzdGVyfGltYWdlc3w0MTI1MzB8aW1hZ2UvcG5nfGltYWdlcy9oZjcvaDVlLzk1NjMwMjE3MDUyNDYucG5nfGUyYjQyMjlmMDQ0ZjdlOTRjMzAyNDczYzA2NGQ1Yzk0YWI4ZWQ0OTBkMmQzYWNjNWMxMjZjMDU1YTZjZDFhMzE',
+            small:
+              'https://www.aesop.com/medias/Aesop-Kits-Gift-Kits-2020-21-The-Ardent-Nomad-Hybris-Large-1584x962px.png?context=bWFzdGVyfGltYWdlc3w0MTI1MzB8aW1hZ2UvcG5nfGltYWdlcy9oZjcvaDVlLzk1NjMwMjE3MDUyNDYucG5nfGUyYjQyMjlmMDQ0ZjdlOTRjMzAyNDczYzA2NGQ1Yzk0YWI4ZWQ0OTBkMmQzYWNjNWMxMjZjMDU1YTZjZDFhMzE',
           },
         },
       },

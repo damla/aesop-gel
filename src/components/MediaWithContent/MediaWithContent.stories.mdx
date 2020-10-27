@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import * as knobs from '@storybook/addon-knobs';
+import GridOverlay from '~.storybook/GridOverlay.js';
 import { boolean, select, text, radios } from '@storybook/addon-knobs';
 import DefinitionList from '~/components/DefinitionList';
 import Hyperlink from '~/components/Hyperlink';
@@ -19,11 +20,13 @@ import MediaWithContentFixture from './MediaWithContent.fixture';
 <Preview>
   <Story name="Base Component">
     {(() => {
+      const gridOverlayActive = knobs.boolean('grid overlay active', false, 'Presentation');
       const theme = knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation');
       const hasHeader = knobs.boolean('hasHeader', false, 'Implementation');
       const hasForegroundImage = knobs.boolean('hasForegroundImage', false, 'Implementation');
       return (
         <div style={{position: 'relative'}}>
+          <GridOverlay isActive={gridOverlayActive} />
           {hasHeader && (
             <>
               <nav style={{position: 'relative', height: '20px', lineHeight: '1', color: 'white', zIndex: '1000', padding:  '30px 20px', borderBottom: '1px solid white' }}>Shop&nbsp;&nbsp;&nbsp;&nbsp;Read&nbsp;&nbsp;&nbsp;&nbsp;Search&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stores</nav>
@@ -295,9 +298,7 @@ import MediaWithContentFixture from './MediaWithContent.fixture';
         const { Component, props } = options[componentName];
         return <Component {...props} theme="light" />
       })()}
-      copy={{
-        heading: MediaWithContentFixture.copy.default.heading,
-      }}
+      copy={MediaWithContentFixture.copy.default}
       hasFullWidthImage={true}
       isHero={true}
       isReverse={true}

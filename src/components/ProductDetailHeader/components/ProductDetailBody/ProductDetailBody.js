@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { HEADING, TRANSITIONS } from '~/constants';
-import { useProductDetailContext, useVariantSelectContext } from '~/contexts';
+import {
+  useProductDetailContext,
+  useThemeContext,
+  useVariantSelectContext,
+} from '~/contexts';
 import { getVariantRadioOptions } from '~/utils/product';
 import AddToCartButton from '~/components/AddToCartButton';
 import Button from '~/components/Button';
@@ -12,11 +16,13 @@ import Heading from '~/components/Heading';
 import Hidden from '~/components/Hidden';
 import Icon from '~/components/Icon';
 import Paragraph from '~/components/Paragraph';
+import ProductExtract from '~/components/ProductExtract/ProductExtract.js';
 import RadioGroup from '~/components/RadioGroup';
 import Transition from '~/components/Transition';
 import styles from './ProductDetailBody.module.css';
 
 const ProductDetailBody = ({ className, copy, theme }) => {
+  const currentTheme = useThemeContext(theme, 'dark');
   const [isFlyinPanelVisible, setIsFlyinPanelVisible] = useState(false);
   const { productDetail } = useProductDetailContext();
   const {
@@ -34,18 +40,20 @@ const ProductDetailBody = ({ className, copy, theme }) => {
     productName,
     description,
     cartDisclaimer,
+    upSellProduct,
   } = productDetail;
 
   const variantRadioOptions = getVariantRadioOptions(variants);
   const handleOnVariantChange = e => onVariantChange(e, variants);
   const handleOnIngredientsTriggerClick = () => setIsFlyinPanelVisible(true);
   const handleOnCloseClick = () => setIsFlyinPanelVisible(false);
-  const classSet = cx(styles.base, styles[theme], className);
+  const classSet = cx(styles.base, styles[currentTheme], className);
   const ingredientsTriggerClassSet = cx(styles.ingredientsTrigger, {
     [styles.isActiveButton]: isFlyinPanelVisible,
   });
   const RADIO_GROUP_NAME = 'sku';
   const RADIO_GROUP_DATA_TEST_REF = 'PRODUCT_DETAIL_VARIANT_SELECT';
+  const PRODUCT_UP_SELL = 'PRODUCT_UP_SELL';
 
   const definitionListItems = [
     ...definitionList,
@@ -58,13 +66,14 @@ const ProductDetailBody = ({ className, copy, theme }) => {
               className={ingredientsTriggerClassSet}
               isInline={true}
               onClick={handleOnIngredientsTriggerClick}
-              theme={theme}
+              theme={currentTheme}
               title={copy.ingredients.title}
             >
               <Icon
                 height={22}
+                isActive={isFlyinPanelVisible}
                 name="plusAndCloseWithCircle"
-                theme={theme}
+                theme={currentTheme}
                 width={22}
               />
             </Button>
@@ -87,7 +96,7 @@ const ProductDetailBody = ({ className, copy, theme }) => {
                 isFlush={true}
                 level={HEADING.LEVEL.ONE}
                 size={HEADING.SIZE.X_LARGE}
-                theme={theme}
+                theme={currentTheme}
               >
                 {productName}
               </Heading>
@@ -101,7 +110,7 @@ const ProductDetailBody = ({ className, copy, theme }) => {
               <Paragraph
                 className={styles.descriptionCopy}
                 isFlush={true}
-                theme={theme}
+                theme={currentTheme}
               >
                 {description}
               </Paragraph>
@@ -119,7 +128,7 @@ const ProductDetailBody = ({ className, copy, theme }) => {
               isFlush={true}
               level={HEADING.LEVEL.FOUR}
               size={HEADING.SIZE.X_X_SMALL}
-              theme={theme}
+              theme={currentTheme}
             >
               {copy?.size}
             </Heading>
@@ -134,12 +143,12 @@ const ProductDetailBody = ({ className, copy, theme }) => {
               name={RADIO_GROUP_NAME}
               onChange={handleOnVariantChange}
               options={variantRadioOptions}
-              theme={theme}
+              theme={currentTheme}
               value={selectedVariant.sku}
             />
           </Transition>
 
-          <AddToCartButton copy={copy?.addToCart} theme={theme} />
+          <AddToCartButton copy={copy?.addToCart} theme={currentTheme} />
         </div>
 
         <Hidden isLarge={true} isMedium={true} isXLarge={true}>
@@ -155,12 +164,25 @@ const ProductDetailBody = ({ className, copy, theme }) => {
               className={styles.definitionList}
               hasBottomBorder={true}
               items={definitionListItems}
-              theme={theme}
+              theme={currentTheme}
             />
           </Transition>
         </div>
 
-        <div className={styles.upSell} />
+        {upSellProduct && (
+          <div className={styles.upSell}>
+            <ProductExtract
+              dataTestRef={PRODUCT_UP_SELL}
+              hasBottomBorder={false}
+              hasTopMargin={false}
+              imageSize="medium"
+              itemNum={1}
+              product={upSellProduct}
+              theme={currentTheme}
+              works={copy.upSellProductLabel}
+            />
+          </div>
+        )}
       </div>
 
       <Hidden isLarge={true} isSmall={true} isXLarge={true}>
@@ -170,11 +192,14 @@ const ProductDetailBody = ({ className, copy, theme }) => {
               className={styles.mediumProductName}
               level={HEADING.LEVEL.ONE}
               size={HEADING.SIZE.X_LARGE}
-              theme={theme}
+              theme={currentTheme}
             >
               {productName}
             </Heading>
-            <Paragraph className={styles.mediumDescriptionCopy} theme={theme}>
+            <Paragraph
+              className={styles.mediumDescriptionCopy}
+              theme={currentTheme}
+            >
               {description}
             </Paragraph>
             <div className={styles.cartDisclaimer}>{cartDisclaimer}</div>
@@ -212,6 +237,7 @@ ProductDetailBody.propTypes = {
       label: PropTypes.string,
       title: PropTypes.string,
     }),
+    upSellProductLabel: PropTypes.string,
   }),
   theme: PropTypes.oneOf(['dark', 'light']),
 };
@@ -233,8 +259,9 @@ ProductDetailBody.defaultProps = {
       label: undefined,
       title: undefined,
     },
+    upSellProductLabel: undefined,
   },
-  theme: 'dark',
+  theme: undefined,
 };
 
 export default ProductDetailBody;

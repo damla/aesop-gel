@@ -2,24 +2,22 @@
 
 .base {
   display: flex;
-  margin: 0 0 28px;
   font-family: var(--font-family-sans-serif-regular);
   font-size: rem(15px);
   font-weight: var(--font-weight-normal);
   line-height: 1.4;
-
-  @media (--viewport-md-only) {
-    flex-flow: row-reverse;
-  }
 
   &,
   & * {
     box-sizing: border-box;
   }
 
+  @media (--viewport-md-only) {
+    flex-flow: row-reverse;
+  }
+
   @media (--viewport-lg) {
     max-width: 470px;
-    margin: 0 0 5px;
     transition: opacity 1300ms 300ms var(--easing-ease-out-cubic);
   }
 }
@@ -47,10 +45,6 @@
   @media (--viewport-md-only) {
     flex-direction: row;
     justify-content: space-between;
-  }
-
-  @media (--viewport-lg) {
-    max-width: 470px;
   }
 
   .productName {
@@ -107,6 +101,7 @@
 
   @media (--viewport-lg) {
     order: 4;
+    margin-bottom: 16px;
   }
 
   .variants {
@@ -144,58 +139,69 @@
   @media (--viewport-lg) {
     order: 3;
   }
+}
 
-  .definitionList {
-    padding-top: 18px !important;
-    margin-top: 0;
-    margin-bottom: 15px;
+.definitionList {
+  padding-top: 18px !important;
+  margin-top: 0;
+  margin-bottom: 15px;
 
-    @media (--viewport-md) {
-      padding-top: 14px !important;
-      margin-top: 38px;
-    }
+  @media (--viewport-md) {
+    padding-top: 14px !important;
+    margin-top: 38px;
+  }
 
-    @media (--viewport-md) {
-      margin-top: 24px;
-    }
+  @media (--viewport-md) {
+    margin-top: 24px;
+  }
 
-    .dark & {
-      border-top: 2px solid var(--color-grey-20);
-    }
+  .dark & {
+    border-top: 2px solid var(--color-grey-20);
+  }
 
-    .light & {
-      border-top: 2px solid var(--color-light-copy);
+  .light & {
+    border-top: 2px solid var(--color-light-copy);
+  }
+}
+
+.ingredientsTrigger {
+  position: absolute;
+  top: 14px;
+  right: 0;
+  outline: none;
+
+  .dark &:hover {
+    g {
+      :nth-child(1) {
+        fill: var(--color-secondary);
+      }
+
+      :nth-child(2) {
+        fill: var(--color-white);
+        stroke: var(--color-white);
+      }
+
+      :nth-child(3) {
+        fill: var(--color-white);
+        stroke: var(--color-white);
+      }
     }
   }
 
-  .isActiveButton {
-    :nth-child(2) {
-      opacity: 0;
-    }
+  .light &:hover {
+    g {
+      :nth-child(1) {
+        fill: var(--color-white);
+      }
 
-    :nth-child(3) {
-      opacity: 1;
-    }
-  }
+      :nth-child(2) {
+        fill: var(--color-secondary);
+        stroke: var(--color-secondary);
+      }
 
-  .ingredientsTrigger {
-    position: absolute;
-    top: 14px;
-    right: 0;
-    outline: none;
-
-    &.isActiveButton,
-    &:hover,
-    &:focus {
-      g {
-        :nth-child(1) {
-          fill: var(--color-secondary);
-        }
-
-        :nth-child(2) {
-          fill: var(--color-white);
-          stroke: var(--color-white);
-        }
+      :nth-child(3) {
+        fill: var(--color-secondary);
+        stroke: var(--color-secondary);
       }
     }
   }
