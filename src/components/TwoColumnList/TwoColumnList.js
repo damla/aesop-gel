@@ -9,7 +9,7 @@ import styles from './TwoColumnList.module.css';
 export const Column = ({ lists, theme }) =>
   lists.map(({ heading, id, items, subHeading }) => {
     const linkItems = items.map(
-      ({ id, style, text, url, openInANewWindow, type }) => {
+      ({ id, style, text, url, openInANewWindow, type, onClick }) => {
         if (!url) {
           return {
             content: text,
@@ -21,6 +21,7 @@ export const Column = ({ lists, theme }) =>
           content: (
             <Hyperlink
               className={styles.link}
+              onClick={onClick}
               openInANewWindow={openInANewWindow}
               style={style}
               theme={theme}
