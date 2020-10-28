@@ -3214,6 +3214,10 @@ sans-serif;
 .ContentHubArticle-module_base__2Wc0c {
   display: block;
 }
+.ContentHubArticle-module_base__2Wc0c h1 {
+    font-weight: normal;
+    margin: 0;
+  }
 @media (max-width: 639px) {
 .ContentHubArticle-module_base__2Wc0c {
     padding-bottom: 50px
@@ -3256,7 +3260,7 @@ sans-serif;
     font-size: 14px;
     line-height: 1.7;
   }
-.ContentHubArticle-module_title__1SnEp span {
+.ContentHubArticle-module_title__1SnEp h1 {
   font-family: 'Zapf Humanist'
 ,
 serif;
@@ -3264,14 +3268,14 @@ serif;
 /**
    * Override for Korean region translation
    */
-html[lang*='ko'] .ContentHubArticle-module_title__1SnEp span,
-  html[lang*='KO'] .ContentHubArticle-module_title__1SnEp span {
+html[lang*='ko'] .ContentHubArticle-module_title__1SnEp h1,
+  html[lang*='KO'] .ContentHubArticle-module_title__1SnEp h1 {
     font-family: 'Suisse Regular'
 ,
 sans-serif;
     font-weight: 400;
   }
-.ContentHubArticle-module_title__1SnEp span {
+.ContentHubArticle-module_title__1SnEp h1 {
 
   padding-bottom: 1.5px;
   border-bottom: 1px solid transparent;
@@ -3283,20 +3287,20 @@ sans-serif;
   transition: all 500ms cubic-bezier(0.645, 0.045, 0.355, 1)
 }
 @media (max-width: 639px) {
-  .ContentHubArticle-module_title__1SnEp span {
+  .ContentHubArticle-module_title__1SnEp h1 {
     font-size: 20px
 }
   }
 @media (min-width: 640px) and (max-width: 1024px) {
-  .ContentHubArticle-module_title__1SnEp span {
+  .ContentHubArticle-module_title__1SnEp h1 {
     font-size: 26px
 }
   }
-.ContentHubArticle-module_readMoreTitle__2prYI span {
+.ContentHubArticle-module_readMoreTitle__2prYI h1 {
   font-size: 24px;
   line-height: 1.25;
 }
-.ContentHubArticle-module_title__1SnEp:hover span {
+.ContentHubArticle-module_title__1SnEp:hover h1 {
   border-bottom: 1px solid #333;
 }
 .ContentHubArticle-module_titleActive__2QGFa {

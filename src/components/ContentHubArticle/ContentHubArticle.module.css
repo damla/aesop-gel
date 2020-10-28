@@ -3,6 +3,11 @@
 .base {
   display: block;
 
+  h1 {
+    margin: 0;
+    font-weight: normal;
+  }
+
   @media (--viewport-sm-only) {
     padding-bottom: 50px;
   }
@@ -48,7 +53,7 @@
   }
 }
 
-.title span {
+.title h1 {
   @extend %zaph-serif-typography;
 
   padding-bottom: 1.5px;
@@ -68,12 +73,12 @@
   }
 }
 
-.readMoreTitle span {
+.readMoreTitle h1 {
   font-size: rem(24px);
   line-height: 1.25;
 }
 
-.title:hover span {
+.title:hover h1 {
   border-bottom: 1px solid var(--color-secondary);
 }
 
