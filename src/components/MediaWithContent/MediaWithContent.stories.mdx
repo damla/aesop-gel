@@ -20,13 +20,14 @@ import MediaWithContentFixture from './MediaWithContent.fixture';
 <Preview>
   <Story name="Base Component">
     {(() => {
-      const gridOverlayActive = knobs.boolean('grid overlay active', false, 'Presentation');
+      const gridOverlayActive = knobs.boolean('isActive', false, 'Grid overlay');
+      const gridOverlayIntertedColours = knobs.boolean('hasInvertedColours', false, 'Grid overlay');
       const theme = knobs.select('theme', ['dark', 'light'], 'dark', 'Presentation');
       const hasHeader = knobs.boolean('hasHeader', false, 'Implementation');
       const hasForegroundImage = knobs.boolean('hasForegroundImage', false, 'Implementation');
       return (
         <div style={{position: 'relative'}}>
-          <GridOverlay isActive={gridOverlayActive} />
+          <GridOverlay isActive={gridOverlayActive} hasInvertedColours={gridOverlayIntertedColours} />
           {hasHeader && (
             <>
               <nav style={{position: 'relative', height: '20px', lineHeight: '1', color: 'white', zIndex: '1000', padding:  '30px 20px', borderBottom: '1px solid white' }}>Shop&nbsp;&nbsp;&nbsp;&nbsp;Read&nbsp;&nbsp;&nbsp;&nbsp;Search&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stores</nav>

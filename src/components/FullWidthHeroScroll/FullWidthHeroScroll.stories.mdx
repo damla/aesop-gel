@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import * as knobs from '@storybook/addon-knobs';
+import GridOverlay from '~.storybook/GridOverlay.js';
 import FullWidthHeroScroll from './FullWidthHeroScroll';
 import FullWidthHeroScrollFixture from './FullWidthHeroScroll.fixture';
 
@@ -10,6 +11,7 @@ import FullWidthHeroScrollFixture from './FullWidthHeroScroll.fixture';
 
 <Preview>
   <Story name="Full Width Hero Scroll">
+    <GridOverlay isActive={knobs.boolean('isActive', false, 'Grid overlay')} hasInvertedColours={knobs.boolean('hasInvertedColours', false, 'Grid overlay')} />
     <FullWidthHeroScroll
       backgroundColor="#000"
       backgroundImage={FullWidthHeroScrollFixture.backgroundImage}

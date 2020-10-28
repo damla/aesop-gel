@@ -51,8 +51,6 @@ const FullWidthHeroScroll = ({
     [styles.topOffset]: hasTopOffset,
   });
 
-  console.log('BackgroundElement', BackgroundElement)
-
   return (
     <section className={classSet} id={id}>
       <div className={cx(styles.scrollLockMedia)}>
