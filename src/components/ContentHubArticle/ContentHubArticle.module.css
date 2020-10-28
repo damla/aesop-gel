@@ -53,7 +53,7 @@
   }
 }
 
-.title h1 {
+.title span {
   @extend %zaph-serif-typography;
 
   padding-bottom: 1.5px;
@@ -73,12 +73,12 @@
   }
 }
 
-.readMoreTitle h1 {
+.readMoreTitle span {
   font-size: rem(24px);
   line-height: 1.25;
 }
 
-.title:hover h1 {
+.title:hover span {
   border-bottom: 1px solid var(--color-secondary);
 }
 

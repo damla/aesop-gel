@@ -111,7 +111,9 @@ const ContentHubArticle = ({
             title={longTitle}
             url={uri + '?contentful=true'} // @TODO Need to remove the query
           >
-            <h1>{longTitle}</h1>
+            <h1>
+              <span>{longTitle}</span>
+            </h1>
           </Hyperlink>
         </div>
         {readingTime && (

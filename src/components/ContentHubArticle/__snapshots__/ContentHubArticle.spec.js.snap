@@ -22,7 +22,9 @@ exports[`<ContentHubArticle /> renders base component correctly 1`] = `
       title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante."
     >
       <h1>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante.
+        <span>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante.
+        </span>
       </h1>
     </a>
   </div>

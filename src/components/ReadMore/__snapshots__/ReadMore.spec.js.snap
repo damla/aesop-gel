@@ -57,7 +57,9 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
         title="1. Senorial consectetur adipiscing elit."
       >
         <h1>
-          1. Senorial consectetur adipiscing elit.
+          <span>
+            1. Senorial consectetur adipiscing elit.
+          </span>
         </h1>
       </a>
     </div>
@@ -122,7 +124,9 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
         title="2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante."
       >
         <h1>
-          2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante.
+          <span>
+            2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante.
+          </span>
         </h1>
       </a>
     </div>
@@ -187,7 +191,9 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
         title="3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare, id dictum ante. Suspendisse et ornare mauris, id dictum ante."
       >
         <h1>
-          3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare, id dictum ante. Suspendisse et ornare mauris, id dictum ante.
+          <span>
+            3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare, id dictum ante. Suspendisse et ornare mauris, id dictum ante.
+          </span>
         </h1>
       </a>
     </div>
