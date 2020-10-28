@@ -21,15 +21,17 @@ exports[`<ContentHubArticle /> renders base component correctly 1`] = `
       target="_self"
       title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante."
     >
-      <span>
+      <h1>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et ornare mauris, id dictum ante.
-      </span>
+      </h1>
     </a>
   </div>
   <div
     className="note"
   >
-    5 minute read
+    <span>
+      5 minute read
+    </span>
   </div>
   <a
     className="base left dark image nonMobile"
