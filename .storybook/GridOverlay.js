@@ -24,8 +24,6 @@ const GridOverlay = ({ isActive = false }) => {
   );
 };
 
-
-
-GridOverlay.propTypes = {}
+GridOverlay.propTypes = {};
 
 export default GridOverlay;
