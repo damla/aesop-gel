@@ -2,15 +2,18 @@ import React, { useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { HYPERLINK_STYLE_TYPES } from '~/constants';
-import { BodyCopy, Hyperlink, Icon, Video } from '~/components';
+import { BodyCopy, Hyperlink, Icon } from '~/components';
 import FullscreenSection from './components/FullscreenSection';
+import BackgroundElement from './components/BackgroundElement';
 import styles from './FullWidthHeroScroll.module.css';
 
 const FullWidthHeroScroll = ({
+  backgroundImage,
   backgroundVideo,
   copy,
   cta,
   eyebrow,
+  imageOrVideoAsBackground,
   hasSerifFontHeading,
   hasTopOffset,
   id,
@@ -48,18 +51,15 @@ const FullWidthHeroScroll = ({
     [styles.topOffset]: hasTopOffset,
   });
 
+  console.log('BackgroundElement', BackgroundElement)
+
   return (
     <section className={classSet} id={id}>
       <div className={cx(styles.scrollLockMedia)}>
-        <Video
-          {...backgroundVideo}
-          className={styles.backgroundVideo}
-          hasAllowAudio={false}
-          hasAutoplay={true}
-          hasControls={false}
-          hasLoop={true}
-          isBackground={true}
-          isMuted={true}
+        <BackgroundElement
+          image={backgroundImage}
+          imageOrVideoAsBackground={imageOrVideoAsBackground}
+          video={backgroundVideo}
         />
       </div>
       <div className={styles.scrollingContent}>
@@ -102,6 +102,7 @@ const FullWidthHeroScroll = ({
 };
 
 FullWidthHeroScroll.propTypes = {
+  backgroundImage: PropTypes.object,
   backgroundVideo: PropTypes.object,
   copy: PropTypes.node,
   cta: PropTypes.shape({
@@ -113,6 +114,7 @@ FullWidthHeroScroll.propTypes = {
   hasTopOffset: PropTypes.bool,
   heading: PropTypes.string,
   id: PropTypes.string,
+  imageOrVideoAsBackground: PropTypes.oneOf(['image', 'video']),
   theme: PropTypes.oneOf(['dark', 'light']),
   textBlocks: PropTypes.arrayOf(
     PropTypes.shape({
@@ -124,7 +126,8 @@ FullWidthHeroScroll.propTypes = {
 };
 
 FullWidthHeroScroll.defaultProps = {
-  backgroundVideo: [],
+  backgroundVideo: undefined,
+  backgroundImage: undefined,
   copy: undefined,
   cta: undefined,
   eyebrow: undefined,
@@ -132,6 +135,7 @@ FullWidthHeroScroll.defaultProps = {
   hasTopOffset: false,
   heading: undefined,
   id: undefined,
+  imageOrVideoAsBackground: undefined,
   theme: 'light',
   textBlocks: [],
   title: undefined,

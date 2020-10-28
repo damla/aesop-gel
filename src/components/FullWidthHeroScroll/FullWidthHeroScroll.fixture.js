@@ -1,4 +1,11 @@
 export default {
+  imageOrVideoAsBackground: 'video',
+  backgroundImage: {
+    altText: 'alt image',
+    large: './assets/images/MediaWithContent/background-large.jpg',
+    medium: './assets/images/MediaWithContent/background-large.jpg',
+    small: './assets/images/MediaWithContent/background-large.jpg',
+  },
   backgroundVideo: {
     large:
       'https://player.vimeo.com/external/225136214.hd.mp4?s=a01cd8b47f35767394e48dc01af10510ef8ff4dd&profile_id=174',

@@ -12,14 +12,16 @@ import FullWidthHeroScrollFixture from './FullWidthHeroScroll.fixture';
   <Story name="Full Width Hero Scroll">
     <FullWidthHeroScroll
       backgroundColor="#000"
+      backgroundImage={FullWidthHeroScrollFixture.backgroundImage}
       backgroundVideo={FullWidthHeroScrollFixture.backgroundVideo}
       copy={FullWidthHeroScrollFixture.copy}
       cta={FullWidthHeroScrollFixture.cta}
       eyebrow={FullWidthHeroScrollFixture.eyebrow}
       hasFullWidthImage={true}
-      id={FullWidthHeroScrollFixture.id}
-      heading={FullWidthHeroScrollFixture.heading}
       hasTopOffset={knobs.boolean('hasTopOffset', false)}
+      heading={FullWidthHeroScrollFixture.heading}
+      id={FullWidthHeroScrollFixture.id}
+      imageOrVideoAsBackground={knobs.select('hasTopOffset', ['video', 'image'], FullWidthHeroScrollFixture.imageOrVideoAsBackground, 'Presentation')}
       isHero={true}
       isReverse={true}
       textBlocks={FullWidthHeroScrollFixture.textBlocks}
