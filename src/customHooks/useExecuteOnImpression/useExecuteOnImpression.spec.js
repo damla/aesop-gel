@@ -3,7 +3,6 @@ import { useExecuteOnImpression } from './useExecuteOnImpression';
 import * as hooks from '~/customHooks';
 import { configure, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import { object } from '@storybook/addon-knobs';
 
 configure({ adapter: new Adapter() });
 
