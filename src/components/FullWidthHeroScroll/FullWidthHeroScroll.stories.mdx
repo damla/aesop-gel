@@ -23,9 +23,9 @@ import FullWidthHeroScrollFixture from './FullWidthHeroScroll.fixture';
       hasTopOffset={knobs.boolean('hasTopOffset', false)}
       heading={FullWidthHeroScrollFixture.heading}
       id={FullWidthHeroScrollFixture.id}
-      imageOrVideoAsBackground={knobs.select('hasTopOffset', ['video', 'image'], FullWidthHeroScrollFixture.imageOrVideoAsBackground, 'Presentation')}
       isHero={true}
       isReverse={true}
+      mediaType={knobs.select('mediaType', ['video', 'image'], FullWidthHeroScrollFixture.mediaType, 'Presentation')}
       textBlocks={FullWidthHeroScrollFixture.textBlocks}
       theme={knobs.select('theme', ['dark', 'light'], 'light', 'Presentation')}
       title={FullWidthHeroScrollFixture.title}

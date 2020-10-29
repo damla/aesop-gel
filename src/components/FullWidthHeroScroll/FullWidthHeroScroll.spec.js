@@ -20,6 +20,7 @@ describe('<FullWidthHeroScroll />', () => {
           cta={FullWidthHeroScrollFixture.cta}
           hasSerifFontHeading={FullWidthHeroScrollFixture.hasSerifFontHeading}
           heading={FullWidthHeroScrollFixture.heading}
+          mediaType={FullWidthHeroScrollFixture.mediaType}
           textBlocks={FullWidthHeroScrollFixture.textBlocks}
           theme={FullWidthHeroScrollFixture.theme}
         />,

@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import { Image, Video } from '~/components';
 import styles from './BackgroundElement.module.css';
 
-const BackgroundElement = ({ image, video, imageOrVideoAsBackground }) => {
-  if (!imageOrVideoAsBackground) return null;
+const BackgroundElement = ({ image, mediaType, video }) => {
+  if (!mediaType) return null;
 
-  if (imageOrVideoAsBackground === 'image' && image) {
+  if (mediaType === 'image' && image) {
     return <Image {...image} className={styles.base} />;
-  } else if (imageOrVideoAsBackground === 'video' && video) {
+  } else if (mediaType === 'video' && video) {
     return (
       <Video
         {...video}
@@ -28,13 +28,13 @@ const BackgroundElement = ({ image, video, imageOrVideoAsBackground }) => {
 
 BackgroundElement.propTypes = {
   image: PropTypes.object,
-  imageOrVideoAsBackground: PropTypes.oneOf(['image', 'video']),
+  mediaType: PropTypes.oneOf(['image', 'video']),
   video: PropTypes.object,
 };
 
 BackgroundElement.defaultProps = {
   image: undefined,
-  imageOrVideoAsBackground: undefined,
+  mediaType: undefined,
   video: undefined,
 };
 

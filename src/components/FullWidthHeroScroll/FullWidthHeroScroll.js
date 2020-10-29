@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { HYPERLINK_STYLE_TYPES } from '~/constants';
 import { BodyCopy, Hyperlink, Icon } from '~/components';
-import FullscreenSection from './components/FullscreenSection';
 import BackgroundElement from './components/BackgroundElement';
+import FullscreenSection from './components/FullscreenSection';
 import styles from './FullWidthHeroScroll.module.css';
 
 const FullWidthHeroScroll = ({
@@ -13,23 +13,26 @@ const FullWidthHeroScroll = ({
   copy,
   cta,
   eyebrow,
-  imageOrVideoAsBackground,
   hasSerifFontHeading,
   hasTopOffset,
   id,
+  mediaType,
   textBlocks,
   theme,
   title,
 }) => {
   const scrollButton = useRef();
+  const offset = 120;
 
   useEffect(() => {
     const scrollButtonCurrent = scrollButton.current;
+    const scrollThreshold = 100;
 
     const fadeScrollButton = () => {
-      if (window.scrollY > 100) return;
+      if (window.scrollY > scrollThreshold) return;
 
-      scrollButtonCurrent.style.opacity = (100 - window.scrollY) / 100;
+      scrollButtonCurrent.style.opacity =
+        (scrollThreshold - window.scrollY) / scrollThreshold;
     };
 
     window.addEventListener('scroll', fadeScrollButton);
@@ -41,7 +44,7 @@ const FullWidthHeroScroll = ({
 
   const handleScrollDown = () => {
     window.scroll({
-      top: window.innerHeight - 120,
+      top: window.innerHeight - offset,
       left: 0,
       behavior: 'smooth',
     });
@@ -56,7 +59,7 @@ const FullWidthHeroScroll = ({
       <div className={cx(styles.scrollLockMedia)}>
         <BackgroundElement
           image={backgroundImage}
-          imageOrVideoAsBackground={imageOrVideoAsBackground}
+          mediaType={mediaType}
           video={backgroundVideo}
         />
       </div>
@@ -112,7 +115,7 @@ FullWidthHeroScroll.propTypes = {
   hasTopOffset: PropTypes.bool,
   heading: PropTypes.string,
   id: PropTypes.string,
-  imageOrVideoAsBackground: PropTypes.oneOf(['image', 'video']),
+  mediaType: PropTypes.oneOf(['image', 'video']),
   theme: PropTypes.oneOf(['dark', 'light']),
   textBlocks: PropTypes.arrayOf(
     PropTypes.shape({
@@ -133,7 +136,7 @@ FullWidthHeroScroll.defaultProps = {
   hasTopOffset: false,
   heading: undefined,
   id: undefined,
-  imageOrVideoAsBackground: undefined,
+  mediaType: undefined,
   theme: 'light',
   textBlocks: [],
   title: undefined,

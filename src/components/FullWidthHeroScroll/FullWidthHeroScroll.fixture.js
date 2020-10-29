@@ -1,5 +1,5 @@
 export default {
-  imageOrVideoAsBackground: 'video',
+  mediaType: 'video',
   backgroundImage: {
     altText: 'alt image',
     large: './assets/images/MediaWithContent/background-large.jpg',
