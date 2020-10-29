@@ -9,6 +9,7 @@ import styles from './FullWidthHeroScroll.module.css';
 
 const FullWidthHeroScroll = ({
   backgroundImage,
+  backgroundMediaType,
   backgroundVideo,
   copy,
   cta,
@@ -17,7 +18,6 @@ const FullWidthHeroScroll = ({
   hasTopOffset,
   heading,
   id,
-  mediaType,
   textBlocks,
   theme,
 }) => {
@@ -59,7 +59,7 @@ const FullWidthHeroScroll = ({
       <div className={cx(styles.scrollLockMedia)}>
         <BackgroundElement
           image={backgroundImage}
-          mediaType={mediaType}
+          mediaType={backgroundMediaType}
           video={backgroundVideo}
         />
       </div>
@@ -104,6 +104,7 @@ const FullWidthHeroScroll = ({
 
 FullWidthHeroScroll.propTypes = {
   backgroundImage: PropTypes.object,
+  backgroundMediaType: PropTypes.oneOf(['image', 'video']),
   backgroundVideo: PropTypes.object,
   copy: PropTypes.node,
   cta: PropTypes.shape({
@@ -115,7 +116,6 @@ FullWidthHeroScroll.propTypes = {
   hasTopOffset: PropTypes.bool,
   heading: PropTypes.string,
   id: PropTypes.string,
-  mediaType: PropTypes.oneOf(['image', 'video']),
   textBlocks: PropTypes.arrayOf(
     PropTypes.shape({
       text: PropTypes.node,
@@ -127,6 +127,7 @@ FullWidthHeroScroll.propTypes = {
 
 FullWidthHeroScroll.defaultProps = {
   backgroundVideo: undefined,
+  backgroundMediaType: undefined,
   backgroundImage: undefined,
   copy: undefined,
   cta: undefined,
@@ -135,7 +136,6 @@ FullWidthHeroScroll.defaultProps = {
   hasTopOffset: false,
   heading: undefined,
   id: undefined,
-  mediaType: undefined,
   theme: 'light',
   textBlocks: [],
 };

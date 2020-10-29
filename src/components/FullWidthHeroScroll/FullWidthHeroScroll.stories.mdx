@@ -14,6 +14,7 @@ import FullWidthHeroScrollFixture from './FullWidthHeroScroll.fixture';
     <GridOverlay isActive={knobs.boolean('isActive', false, 'Grid overlay')} hasInvertedColours={knobs.boolean('hasInvertedColours', false, 'Grid overlay')} />
     <FullWidthHeroScroll
       backgroundImage={FullWidthHeroScrollFixture.backgroundImage}
+      backgroundMediaType={knobs.select('backgroundMediaType', ['video', 'image'], FullWidthHeroScrollFixture.backgroundMediaType, 'Presentation')}
       backgroundVideo={FullWidthHeroScrollFixture.backgroundVideo}
       copy={FullWidthHeroScrollFixture.copy}
       cta={FullWidthHeroScrollFixture.cta}
@@ -22,7 +23,6 @@ import FullWidthHeroScrollFixture from './FullWidthHeroScroll.fixture';
       hasTopOffset={knobs.boolean('hasTopOffset', false, 'Presentation')}
       heading={FullWidthHeroScrollFixture.heading}
       id={FullWidthHeroScrollFixture.id}
-      mediaType={knobs.select('mediaType', ['video', 'image'], FullWidthHeroScrollFixture.mediaType, 'Presentation')}
       textBlocks={FullWidthHeroScrollFixture.textBlocks}
       theme={knobs.select('theme', ['dark', 'light'], 'light', 'Presentation')}
     />
