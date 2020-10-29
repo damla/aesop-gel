@@ -6,11 +6,14 @@ import Image from '~/components/Image';
 import Hyperlink from '~/components/Hyperlink';
 import Transition from '~/components/Transition';
 import styles from './ContentHubArticle.module.css';
+import { useExecuteOnImpression } from '~/customHooks';
 
 const ContentHubArticle = ({
   category,
   className,
   dataTestRef,
+  handleClickTracking,
+  handleImpression,
   horizontalThumbnail,
   id,
   isHorizontal, // use horizontal or vertical thumbnail
@@ -24,6 +27,17 @@ const ContentHubArticle = ({
 }) => {
   const ref = useRef(null);
   const isOnScreen = useOnScreen(ref, isHorizontal ? 0.6 : 0.4);
+
+  const options = {
+    threshold: 0.2,
+    isExecutableOnReEntry: false,
+  };
+
+  const callback = () =>
+    handleImpression ? isOnScreen && handleImpression(id) : {};
+
+  useExecuteOnImpression(ref, callback, options);
+
   const currentImage = isHorizontal ? horizontalThumbnail : verticalThumbnail;
   const classSet = cx(styles.base, className, {
     [styles.readMoreArticle]: !!isReadMore,
@@ -75,6 +89,10 @@ const ContentHubArticle = ({
     );
   };
 
+  const handleOnClick = () => {
+    handleClickTracking(id);
+  };
+
   return (
     <Transition isActive={isInFirstGroup || isOnScreen} type="fade">
       <div className={classSet} id={id} ref={ref}>
@@ -82,6 +100,7 @@ const ContentHubArticle = ({
           <Hyperlink
             className={imageClassSet}
             dataTestRef={`${dataTestRef}_READMORE_THUMBNAIL`}
+            onClick={handleOnClick}
             title={longTitle}
             url={uri + '?contentful=true'} // @TODO Need to remove the query
           >
@@ -108,6 +127,7 @@ const ContentHubArticle = ({
           <Hyperlink
             className={titleClassSet}
             dataTestRef={`${dataTestRef}_TITLE`}
+            onClick={handleOnClick}
             title={longTitle}
             url={uri + '?contentful=true'} // @TODO Need to remove the query
           >
@@ -126,6 +146,7 @@ const ContentHubArticle = ({
           <Hyperlink
             className={nonMobileImageClassSet}
             dataTestRef={`${dataTestRef}_NON_MOBILE_THUMBNAIL`}
+            onClick={handleOnClick}
             title={longTitle}
             url={uri + '?contentful=true'} // @TODO Need to remove the query
           >
@@ -148,6 +169,7 @@ const ContentHubArticle = ({
           <Hyperlink
             className={mobileImageClassSet}
             dataTestRef={`${dataTestRef}_MOBILE_THUMBNAIL`}
+            onClick={handleOnClick}
             title={longTitle}
             url={uri + '?contentful=true'} // @TODO Need to remove the query
           >
@@ -175,6 +197,8 @@ ContentHubArticle.propTypes = {
   category: PropTypes.string,
   className: PropTypes.string,
   dataTestRef: PropTypes.string.isRequired,
+  handleClickTracking: PropTypes.func,
+  handleImpression: PropTypes.func,
   horizontalThumbnail: PropTypes.object,
   id: PropTypes.string,
   isHorizontal: PropTypes.bool,
@@ -191,6 +215,8 @@ ContentHubArticle.defaultProps = {
   category: undefined,
   className: undefined,
   dataTestRef: undefined,
+  handleClickTracking: undefined,
+  handleImpression: undefined,
   horizontalThumbnail: undefined,
   id: undefined,
   isHorizontal: undefined,
