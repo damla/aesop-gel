@@ -15,11 +15,11 @@ const FullWidthHeroScroll = ({
   eyebrow,
   hasSerifFontHeading,
   hasTopOffset,
+  heading,
   id,
   mediaType,
   textBlocks,
   theme,
-  title,
 }) => {
   const scrollButton = useRef();
   const offset = 120;
@@ -70,7 +70,7 @@ const FullWidthHeroScroll = ({
               copy={copy}
               eyebrow={eyebrow}
               hasSerifFontHeading={hasSerifFontHeading}
-              heading={title}
+              heading={heading}
               isHeroArticle={true}
               theme={theme}
             />
@@ -116,14 +116,13 @@ FullWidthHeroScroll.propTypes = {
   heading: PropTypes.string,
   id: PropTypes.string,
   mediaType: PropTypes.oneOf(['image', 'video']),
-  theme: PropTypes.oneOf(['dark', 'light']),
   textBlocks: PropTypes.arrayOf(
     PropTypes.shape({
       text: PropTypes.node,
       hasSerifFont: PropTypes.bool,
     }),
   ),
-  title: PropTypes.string,
+  theme: PropTypes.oneOf(['dark', 'light']),
 };
 
 FullWidthHeroScroll.defaultProps = {
@@ -139,7 +138,6 @@ FullWidthHeroScroll.defaultProps = {
   mediaType: undefined,
   theme: 'light',
   textBlocks: [],
-  title: undefined,
 };
 
 export default FullWidthHeroScroll;

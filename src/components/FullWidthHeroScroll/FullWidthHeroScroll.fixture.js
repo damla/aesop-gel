@@ -58,5 +58,4 @@ export default {
     },
   ],
   theme: 'light',
-  title: 'Introducing Poured Candles',
 };
