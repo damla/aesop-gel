@@ -22,8 +22,12 @@
 .column {
   width: calc(100% * 1 / 12);
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.25);
   list-style: none;
+
+  .invertColour & {
+    background-color: rgba(255, 255, 255, 0.25);
+  }
 
   &:not(:last-child) {
     margin-right: 1px;
@@ -37,6 +41,10 @@
   width: 20px;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.1);
+
+  .invertColour & {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
 
   @media (width >= 640px) {
     width: 34px;

@@ -21,7 +21,8 @@ import SecondaryMessageFixture from '~/components/SecondaryMessage/SecondaryMess
 <Preview>
   <Story name="Base component">
     {(() => {
-      const gridOverlayActive = knobs.boolean('grid overlay active', false, 'Presentation');
+      const gridOverlayActive = knobs.boolean('isActive', false, 'Grid overlay');
+      const gridOverlayIntertedColours = knobs.boolean('hasInvertedColours', false, 'Grid overlay');
       const theme = knobs.select('theme', ['dark', 'light'], ProductDetailHeaderFixture.theme, 'Presentation')
       const { productName, description, ...productRest } = ProductDetailHeaderFixture.product;
       const productDetails = {
@@ -31,7 +32,7 @@ import SecondaryMessageFixture from '~/components/SecondaryMessage/SecondaryMess
       }
       return (
         <div>
-          <GridOverlay isActive={gridOverlayActive} />
+          <GridOverlay isActive={gridOverlayActive} hasInvertedColours={gridOverlayIntertedColours} />
           <AddToCartContextProvider onClick={mockAddToCartButtonOnClick}>
             <ProductDetailContextProvider product={productDetails}>
               <VariantSelectContextProvider variants={ProductDetailHeaderFixture.product.variantOptions}>
