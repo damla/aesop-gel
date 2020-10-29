@@ -1,5 +1,5 @@
 export default {
-  mediaType: 'video',
+  backgroundMediaType: 'video',
   backgroundImage: {
     altText: 'alt image',
     large: './assets/images/MediaWithContent/background-large.jpg',
@@ -58,5 +58,4 @@ export default {
     },
   ],
   theme: 'light',
-  title: 'Introducing Poured Candles',
 };

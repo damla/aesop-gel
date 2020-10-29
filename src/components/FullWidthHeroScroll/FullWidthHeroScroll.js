@@ -9,17 +9,17 @@ import styles from './FullWidthHeroScroll.module.css';
 
 const FullWidthHeroScroll = ({
   backgroundImage,
+  backgroundMediaType,
   backgroundVideo,
   copy,
   cta,
   eyebrow,
   hasSerifFontHeading,
   hasTopOffset,
+  heading,
   id,
-  mediaType,
   textBlocks,
   theme,
-  title,
 }) => {
   const scrollButton = useRef();
   const offset = 120;
@@ -59,7 +59,7 @@ const FullWidthHeroScroll = ({
       <div className={cx(styles.scrollLockMedia)}>
         <BackgroundElement
           image={backgroundImage}
-          mediaType={mediaType}
+          mediaType={backgroundMediaType}
           video={backgroundVideo}
         />
       </div>
@@ -70,7 +70,7 @@ const FullWidthHeroScroll = ({
               copy={copy}
               eyebrow={eyebrow}
               hasSerifFontHeading={hasSerifFontHeading}
-              heading={title}
+              heading={heading}
               isHeroArticle={true}
               theme={theme}
             />
@@ -104,6 +104,7 @@ const FullWidthHeroScroll = ({
 
 FullWidthHeroScroll.propTypes = {
   backgroundImage: PropTypes.object,
+  backgroundMediaType: PropTypes.oneOf(['image', 'video']),
   backgroundVideo: PropTypes.object,
   copy: PropTypes.node,
   cta: PropTypes.shape({
@@ -115,19 +116,18 @@ FullWidthHeroScroll.propTypes = {
   hasTopOffset: PropTypes.bool,
   heading: PropTypes.string,
   id: PropTypes.string,
-  mediaType: PropTypes.oneOf(['image', 'video']),
-  theme: PropTypes.oneOf(['dark', 'light']),
   textBlocks: PropTypes.arrayOf(
     PropTypes.shape({
       text: PropTypes.node,
       hasSerifFont: PropTypes.bool,
     }),
   ),
-  title: PropTypes.string,
+  theme: PropTypes.oneOf(['dark', 'light']),
 };
 
 FullWidthHeroScroll.defaultProps = {
   backgroundVideo: undefined,
+  backgroundMediaType: undefined,
   backgroundImage: undefined,
   copy: undefined,
   cta: undefined,
@@ -136,10 +136,8 @@ FullWidthHeroScroll.defaultProps = {
   hasTopOffset: false,
   heading: undefined,
   id: undefined,
-  mediaType: undefined,
   theme: 'light',
   textBlocks: [],
-  title: undefined,
 };
 
 export default FullWidthHeroScroll;
