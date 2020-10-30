@@ -5,12 +5,7 @@ import ContentHubArticle from '~/components/ContentHubArticle';
 import Transition from '~/components/Transition';
 import styles from './ReadMore.module.css';
 
-const ReadMore = ({
-  articles,
-  className,
-  handleClickTracking,
-  handleImpression,
-}) => {
+const ReadMore = ({ articles, className }) => {
   const classSet = cx(styles.base, className);
   const readMoreArticleClassSet = cx(styles.readMoreArticle);
 
@@ -22,8 +17,8 @@ const ReadMore = ({
             category={article.category}
             className={readMoreArticleClassSet}
             dataTestRef={article.id}
-            handleClickTracking={handleClickTracking}
-            handleImpression={handleImpression}
+            handleClickTracking={article.handleClickTracking}
+            handleImpression={article.handleImpression}
             horizontalThumbnail={article.horizontalThumbnail}
             id={article.id}
             isHorizontal={true}
@@ -44,15 +39,11 @@ const ReadMore = ({
 ReadMore.propTypes = {
   articles: PropTypes.array,
   className: PropTypes.string,
-  handleClickTracking: PropTypes.func,
-  handleImpression: PropTypes.func,
 };
 
 ReadMore.defaultProps = {
   articles: undefined,
   className: undefined,
-  handleClickTracking: undefined,
-  handleImpression: undefined,
 };
 
 export default ReadMore;

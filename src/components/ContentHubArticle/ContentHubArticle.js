@@ -34,7 +34,7 @@ const ContentHubArticle = ({
   };
 
   const callback = () =>
-    handleImpression ? isOnScreen && handleImpression(id) : {};
+    handleImpression ? isOnScreen && handleImpression() : {};
 
   useExecuteOnImpression(ref, callback, options);
 
@@ -89,10 +89,6 @@ const ContentHubArticle = ({
     );
   };
 
-  const handleOnClick = () => {
-    handleClickTracking(id);
-  };
-
   return (
     <Transition isActive={isInFirstGroup || isOnScreen} type="fade">
       <div className={classSet} id={id} ref={ref}>
@@ -100,7 +96,7 @@ const ContentHubArticle = ({
           <Hyperlink
             className={imageClassSet}
             dataTestRef={`${dataTestRef}_READMORE_THUMBNAIL`}
-            onClick={handleOnClick}
+            onClick={handleClickTracking}
             title={longTitle}
             url={uri + '?contentful=true'} // @TODO Need to remove the query
           >
@@ -127,7 +123,7 @@ const ContentHubArticle = ({
           <Hyperlink
             className={titleClassSet}
             dataTestRef={`${dataTestRef}_TITLE`}
-            onClick={handleOnClick}
+            onClick={handleClickTracking}
             title={longTitle}
             url={uri + '?contentful=true'} // @TODO Need to remove the query
           >
@@ -146,7 +142,7 @@ const ContentHubArticle = ({
           <Hyperlink
             className={nonMobileImageClassSet}
             dataTestRef={`${dataTestRef}_NON_MOBILE_THUMBNAIL`}
-            onClick={handleOnClick}
+            onClick={handleClickTracking}
             title={longTitle}
             url={uri + '?contentful=true'} // @TODO Need to remove the query
           >
@@ -169,7 +165,7 @@ const ContentHubArticle = ({
           <Hyperlink
             className={mobileImageClassSet}
             dataTestRef={`${dataTestRef}_MOBILE_THUMBNAIL`}
-            onClick={handleOnClick}
+            onClick={handleClickTracking}
             title={longTitle}
             url={uri + '?contentful=true'} // @TODO Need to remove the query
           >
