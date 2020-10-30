@@ -22,7 +22,6 @@ const Hyperlink = ({
   theme,
   title,
   url,
-  onClick,
 }) => {
   const isInline = checkIsInlineFromStyle(style);
   const isExternal = checkIsExternalFromStyle(style);
@@ -53,7 +52,6 @@ const Hyperlink = ({
       data-test-ref={dataTestRef}
       download={isDownload}
       href={url}
-      onClick={onClick}
       target={target}
       title={title}
     >
@@ -93,7 +91,6 @@ Hyperlink.propTypes = {
   title: PropTypes.string,
   type: PropTypes.oneOf(['Relative', 'Absolute']),
   url: PropTypes.string.isRequired,
-  onClick: PropTypes.func,
 };
 
 Hyperlink.defaultProps = {
@@ -110,7 +107,6 @@ Hyperlink.defaultProps = {
   title: undefined,
   type: undefined,
   url: undefined,
-  onClick: undefined,
 };
 
 export default Hyperlink;
