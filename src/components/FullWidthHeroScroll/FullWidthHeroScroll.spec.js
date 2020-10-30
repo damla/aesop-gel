@@ -16,6 +16,7 @@ describe('<FullWidthHeroScroll />', () => {
     const tree = renderer
       .create(
         <FullWidthHeroScroll
+          backgroundMediaType={FullWidthHeroScrollFixture.backgroundMediaType}
           backgroundVideo={FullWidthHeroScrollFixture.backgroundVideo}
           cta={FullWidthHeroScrollFixture.cta}
           hasSerifFontHeading={FullWidthHeroScrollFixture.hasSerifFontHeading}

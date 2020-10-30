@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import Heading from '~/components/Heading';
@@ -9,7 +9,7 @@ import styles from './TwoColumnList.module.css';
 export const Column = ({ lists, theme }) =>
   lists.map(({ heading, id, items, subHeading }) => {
     const linkItems = items.map(
-      ({ id, style, text, url, openInANewWindow, type }) => {
+      ({ id, style, text, url, openInANewWindow, type, onClick }) => {
         if (!url) {
           return {
             content: text,
@@ -21,6 +21,7 @@ export const Column = ({ lists, theme }) =>
           content: (
             <Hyperlink
               className={styles.link}
+              onClick={onClick}
               openInANewWindow={openInANewWindow}
               style={style}
               theme={theme}
@@ -69,20 +70,22 @@ export const Column = ({ lists, theme }) =>
     );
   });
 
-const TwoColumnList = ({ className, leftColumn, rightColumn, theme }) => {
-  const classSet = cx(styles.base, styles[theme], className);
+const TwoColumnList = forwardRef(
+  ({ className, leftColumn, rightColumn, theme }, ref) => {
+    const classSet = cx(styles.base, styles[theme], className);
 
-  return (
-    <div className={classSet}>
-      <div className={styles.column}>
-        <Column lists={leftColumn} theme={theme} />
+    return (
+      <div className={classSet} ref={ref}>
+        <div className={styles.column}>
+          <Column lists={leftColumn} theme={theme} />
+        </div>
+        <div className={styles.column}>
+          <Column lists={rightColumn} theme={theme} />
+        </div>
       </div>
-      <div className={styles.column}>
-        <Column lists={rightColumn} theme={theme} />
-      </div>
-    </div>
-  );
-};
+    );
+  },
+);
 
 TwoColumnList.propTypes = {
   className: PropTypes.string,

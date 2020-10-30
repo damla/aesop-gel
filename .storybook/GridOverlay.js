@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 import styles from './GridOverlay.module.css';
 
@@ -12,11 +13,13 @@ const generateColumns = () => {
   return columns;
 };
 
-const GridOverlay = ({ isActive = false }) => {
+const GridOverlay = ({ hasInvertedColours = false, isActive = false }) => {
   if (!isActive) return false;
 
   return (
-    <div className={styles.base}>
+    <div
+      className={cx(styles.base, { [styles.invertColour]: hasInvertedColours })}
+    >
       <div className={cx(styles.gutter, styles.left)} />
       {generateColumns()}
       <div className={cx(styles.gutter, styles.right)} />
@@ -24,6 +27,9 @@ const GridOverlay = ({ isActive = false }) => {
   );
 };
 
-GridOverlay.propTypes = {};
+GridOverlay.propTypes = {
+  hasInvertedColours: PropTypes.bool,
+  isActive: PropTypes.bool,
+};
 
 export default GridOverlay;

@@ -19,7 +19,8 @@ import TwoColumnLayout from './TwoColumnLayout';
 <Preview>
   <Story name="Base component">
     {() => {
-      const gridOverlayActive = knobs.boolean('grid overlay active', false, 'Presentation');
+      const gridOverlayActive = knobs.boolean('isActive', false, 'Grid overlay');
+      const gridOverlayIntertedColours = knobs.boolean('hasInvertedColours', false, 'Grid overlay');
       const theme = knobs.select(
         'theme',
         ['dark', 'light'],
@@ -28,7 +29,7 @@ import TwoColumnLayout from './TwoColumnLayout';
       );
       return (
         <div>
-          <GridOverlay isActive={gridOverlayActive} />
+          <GridOverlay isActive={gridOverlayActive} hasInvertedColours={gridOverlayIntertedColours} />
           <TwoColumnLayout
             childrenClassNames={{ sidebar: 'sidebar', content: 'content' }}
             content={
