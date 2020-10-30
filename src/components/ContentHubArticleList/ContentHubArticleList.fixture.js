@@ -18,6 +18,12 @@ export default {
         small: './assets/images/ContentHubArticle/horizontal_hub.jpg',
       },
       readingTime: '15 minute read',
+      handleImpression: () => {
+        console.log('impression: test_1'); // eslint-disable-line no-console
+      },
+      handleClickTracking: () => {
+        console.log('click tracking: test_1'); // eslint-disable-line no-console
+      },
     },
     {
       id: 'test_2',
@@ -38,6 +44,12 @@ export default {
         small: './assets/images/ContentHubArticle/horizontal_hub.jpg',
       },
       readingTime: '15 minute read',
+      handleImpression: () => {
+        console.log('impression: test_2'); // eslint-disable-line no-console
+      },
+      handleClickTracking: () => {
+        console.log('click tracking: test_2'); // eslint-disable-line no-console
+      },
     },
     {
       id: 'test_3',
@@ -58,6 +70,12 @@ export default {
         small: './assets/images/ContentHubArticle/horizontal_hub.jpg',
       },
       readingTime: '15 minute read',
+      handleImpression: () => {
+        console.log('impression: test_3'); // eslint-disable-line no-console
+      },
+      handleClickTracking: () => {
+        console.log('click tracking: test_3'); // eslint-disable-line no-console
+      },
     },
     {
       id: 'test_4',
@@ -78,6 +96,12 @@ export default {
         small: './assets/images/ContentHubArticle/horizontal_hub.jpg',
       },
       readingTime: '15 minute read',
+      handleImpression: () => {
+        console.log('impression: test_4'); // eslint-disable-line no-console
+      },
+      handleClickTracking: () => {
+        console.log('click tracking: test_4'); // eslint-disable-line no-console
+      },
     },
   ],
 };
