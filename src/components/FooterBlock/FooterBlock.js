@@ -43,7 +43,7 @@ const FooterBlock = ({
               <li key={link.id}>
                 <Hyperlink
                   className={listItemClassSet}
-                  dataTestRef={`DATA_TEST_REF_FOOTER_BLOCK_${link.id}`}
+                  dataTestRef="FOOTER_LINK"
                   hasTargetInNewWindow={link.openInANewWindow}
                   style={
                     link.openInANewWindow
