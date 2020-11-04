@@ -3,7 +3,7 @@
 exports[`<IconLink /> renders base component correctly 1`] = `
 <a
   className="base left dark"
-  data-test-ref="DATA_TEST_REF_ICON_LINK_Instagram"
+  data-test-ref="test-data-ref"
   href="https://about.instagram.com/"
   target="_blank"
   title="Instagram"

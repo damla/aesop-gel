@@ -17,6 +17,7 @@ describe('<IconLink />', () => {
       .create(
         <IconLink
           altText={IconLinkFixture[0].altText}
+          dataTestRef="test-data-ref"
           hasTargetInNewWindow={true}
           height={25}
           icon={IconLinkFixture[0].icon}
