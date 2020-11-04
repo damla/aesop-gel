@@ -14,11 +14,11 @@ const ReadMore = ({ articles, className }) => {
       <section className={classSet}>
         {articles.map(article => (
           <ContentHubArticle
+            articleRef={article.articleRef}
             category={article.category}
             className={readMoreArticleClassSet}
             dataTestRef={article.id}
             handleClickTracking={article.handleClickTracking}
-            handleImpression={article.handleImpression}
             horizontalThumbnail={article.horizontalThumbnail}
             id={article.id}
             isHorizontal={true}

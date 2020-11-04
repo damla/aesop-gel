@@ -50,7 +50,6 @@ const ContentHubArticleList = ({
                 category={articles[0].category}
                 dataTestRef={articles[0].id}
                 handleClickTracking={articles[0].handleClickTracking}
-                handleImpression={articles[0].handleImpression}
                 horizontalThumbnail={articles[0].horizontalThumbnail}
                 id={articles[0].id}
                 isHorizontal={Boolean(!pattern)}
@@ -69,7 +68,6 @@ const ContentHubArticleList = ({
                 category={articles[1].category}
                 dataTestRef={articles[1].id}
                 handleClickTracking={articles[1].handleClickTracking}
-                handleImpression={articles[1].handleImpression}
                 horizontalThumbnail={articles[1].horizontalThumbnail}
                 id={articles[1].id}
                 isHorizontal={Boolean(pattern)}
@@ -89,9 +87,6 @@ const ContentHubArticleList = ({
                 dataTestRef={(articles[count - 2] || articles[0]).id}
                 handleClickTracking={
                   (articles[count - 2] || articles[0]).handleClickTracking
-                }
-                handleImpression={
-                  (articles[count - 2] || articles[0]).handleImpression
                 }
                 horizontalThumbnail={
                   (articles[count - 2] || articles[0]).horizontalThumbnail
@@ -115,9 +110,6 @@ const ContentHubArticleList = ({
                 dataTestRef={(articles[count - 1] || articles[1]).id}
                 handleClickTracking={
                   (articles[count - 1] || articles[1]).handleClickTracking
-                }
-                handleImpression={
-                  (articles[count - 1] || articles[1]).handleImpression
                 }
                 horizontalThumbnail={
                   (articles[count - 1] || articles[1]).horizontalThumbnail
@@ -143,7 +135,6 @@ const ContentHubArticleList = ({
                 category={articles[0].category}
                 dataTestRef={articles[0].id}
                 handleClickTracking={articles[0].handleClickTracking}
-                handleImpression={articles[0].handleImpression}
                 horizontalThumbnail={articles[0].horizontalThumbnail}
                 id={articles[0].id}
                 isHorizontal={true}
@@ -164,9 +155,6 @@ const ContentHubArticleList = ({
                     dataTestRef={(articles[count - 3] || articles[0]).id}
                     handleClickTracking={
                       (articles[count - 3] || articles[0]).handleClickTracking
-                    }
-                    handleImpression={
-                      (articles[count - 3] || articles[0]).handleImpression
                     }
                     horizontalThumbnail={
                       (articles[count - 3] || articles[0]).horizontalThumbnail
@@ -195,7 +183,6 @@ const ContentHubArticleList = ({
                     handleClickTracking={
                       articles[count - 2].handleClickTracking
                     }
-                    handleImpression={articles[count - 2].handleImpression}
                     horizontalThumbnail={
                       articles[count - 2].horizontalThumbnail
                     }
@@ -216,7 +203,6 @@ const ContentHubArticleList = ({
                 category={articles[count - 1].category}
                 dataTestRef={articles[count - 1].id}
                 handleClickTracking={articles[count - 1].handleClickTracking}
-                handleImpression={articles[count - 1].handleImpression}
                 horizontalThumbnail={articles[count - 1].horizontalThumbnail}
                 id={articles[count - 1].id}
                 isHorizontal={true}
@@ -240,7 +226,6 @@ const ContentHubArticleList = ({
                     className={leftMiddleArticleClassSet}
                     dataTestRef={articles[0].id}
                     handleClickTracking={articles[0].handleClickTracking}
-                    handleImpression={articles[0].handleImpression}
                     horizontalThumbnail={articles[0].horizontalThumbnail}
                     id={articles[0].id}
                     isHorizontal={false}
@@ -262,9 +247,6 @@ const ContentHubArticleList = ({
                 handleClickTracking={
                   (articles[count - 3] || articles[0]).handleClickTracking
                 }
-                handleImpression={
-                  (articles[count - 3] || articles[0]).handleImpression
-                }
                 horizontalThumbnail={
                   (articles[count - 3] || articles[0]).horizontalThumbnail
                 }
@@ -285,7 +267,6 @@ const ContentHubArticleList = ({
                 category={articles[count - 2].category}
                 dataTestRef={articles[count - 2].id}
                 handleClickTracking={articles[count - 2].handleClickTracking}
-                handleImpression={articles[count - 2].handleImpression}
                 horizontalThumbnail={articles[count - 2].horizontalThumbnail}
                 id={articles[count - 2].id}
                 isHorizontal={true}
@@ -308,7 +289,6 @@ const ContentHubArticleList = ({
                     handleClickTracking={
                       articles[count - 1].handleClickTracking
                     }
-                    handleImpression={articles[count - 1].handleImpression}
                     horizontalThumbnail={
                       articles[count - 1].horizontalThumbnail
                     }

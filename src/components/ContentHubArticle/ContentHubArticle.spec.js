@@ -19,7 +19,6 @@ describe('<ContentHubArticle />', () => {
           category={ContentHubArticleFixture.category}
           dataTestRef={ContentHubArticleFixture.dataTestRef}
           handleClickTracking={ContentHubArticleFixture.handleClickTracking}
-          handleImpression={ContentHubArticleFixture.handleImpression}
           horizontalThumbnail={ContentHubArticleFixture.horizontalThumbnail}
           id={ContentHubArticleFixture.id}
           isHorizontal={true}

@@ -6,14 +6,13 @@ import Image from '~/components/Image';
 import Hyperlink from '~/components/Hyperlink';
 import Transition from '~/components/Transition';
 import styles from './ContentHubArticle.module.css';
-import { useExecuteOnImpression } from '~/customHooks';
 
 const ContentHubArticle = ({
+  articleRef,
   category,
   className,
   dataTestRef,
   handleClickTracking,
-  handleImpression,
   horizontalThumbnail,
   id,
   isHorizontal, // use horizontal or vertical thumbnail
@@ -25,19 +24,9 @@ const ContentHubArticle = ({
   uri,
   verticalThumbnail,
 }) => {
-  const ref = useRef(null);
+  const defaultRef = useRef(null);
+  const ref = articleRef || defaultRef;
   const isOnScreen = useOnScreen(ref, isHorizontal ? 0.6 : 0.4);
-
-  const options = {
-    threshold: 0.2,
-    isExecutableOnReEntry: false,
-  };
-
-  const callback = () =>
-    handleImpression ? isOnScreen && handleImpression() : {};
-
-  useExecuteOnImpression(ref, callback, options);
-
   const currentImage = isHorizontal ? horizontalThumbnail : verticalThumbnail;
   const classSet = cx(styles.base, className, {
     [styles.readMoreArticle]: !!isReadMore,
@@ -190,11 +179,11 @@ const ContentHubArticle = ({
 };
 
 ContentHubArticle.propTypes = {
+  articleRef: PropTypes.object,
   category: PropTypes.string,
   className: PropTypes.string,
   dataTestRef: PropTypes.string.isRequired,
   handleClickTracking: PropTypes.func,
-  handleImpression: PropTypes.func,
   horizontalThumbnail: PropTypes.object,
   id: PropTypes.string,
   isHorizontal: PropTypes.bool,
@@ -208,11 +197,11 @@ ContentHubArticle.propTypes = {
 };
 
 ContentHubArticle.defaultProps = {
+  articleRef: undefined,
   category: undefined,
   className: undefined,
   dataTestRef: undefined,
   handleClickTracking: undefined,
-  handleImpression: undefined,
   horizontalThumbnail: undefined,
   id: undefined,
   isHorizontal: undefined,
