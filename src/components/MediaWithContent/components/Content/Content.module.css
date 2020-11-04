@@ -56,16 +56,16 @@
 
 .innerWrapper {
   justify-content: space-between;
-  padding: 40px 20px;
+  padding: 40px var(--layout-sm-margin);
 
   @media (--viewport-md) {
     display: flex;
     flex-basis: auto;
-    padding: 90px 34px;
+    padding: 90px var(--layout-md-margin);
   }
 
   @media (--viewport-lg) {
-    width: 66.66667%;
+    width: calc(100% * 8 / 12);
     max-width: 780px;
     flex-basis: auto;
     flex-direction: column;
@@ -122,18 +122,17 @@
 
   .hasFullWidthImage.hero & {
     @media (--viewport-md) {
-      width: 100%;
-      max-width: 448px;
+      width: calc(100% * 6 / 12);
       padding-right: 0;
       padding-left: 0;
       margin-right: 40px;
-      margin-left: 33%;
+      margin-left: calc(100% * 4 / 12);
     }
 
     @media (--viewport-lg) {
-      width: 100%;
-      max-width: 595px;
-      margin-right: 15%;
+      width: calc(100% * 5 / 12);
+      max-width: 680px;
+      margin-right: calc(100% * 3 / 12);
       margin-left: auto;
     }
   }
@@ -148,7 +147,7 @@
   .hasFullWidthImage.hero.reverse & {
     @media (--viewport-lg) {
       margin-right: 0;
-      margin-left: 24.99%;
+      margin-left: calc(100% * 3 / 12);
     }
   }
 }
