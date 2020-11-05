@@ -6,18 +6,18 @@ import Image from '~/components/Image';
 const IconLink = ({
   altText,
   className,
+  dataTestRef,
   hasTargetInNewWindow,
   height,
   icon,
   iconImageClassName,
-  id,
   target,
   width,
 }) => {
   return (
     <Hyperlink
       className={className}
-      dataTestRef={`DATA_TEST_REF_ICON_LINK_${id}`}
+      dataTestRef={dataTestRef}
       hasTargetInNewWindow={hasTargetInNewWindow}
       title={altText}
       url={target}
@@ -37,11 +37,11 @@ const IconLink = ({
 IconLink.propTypes = {
   altText: PropTypes.string,
   className: PropTypes.string,
+  dataTestRef: PropTypes.string,
   hasTargetInNewWindow: PropTypes.bool,
   height: PropTypes.number,
   icon: PropTypes.object,
   iconImageClassName: PropTypes.string,
-  id: PropTypes.string,
   target: PropTypes.string,
   width: PropTypes.number,
 };
@@ -49,11 +49,11 @@ IconLink.propTypes = {
 IconLink.defaultProps = {
   altText: undefined,
   className: undefined,
+  dataTestRef: undefined,
   hasTargetInNewWindow: true,
   height: 21,
   icon: undefined,
   iconImageClassName: undefined,
-  id: undefined,
   target: undefined,
   width: 21,
 };

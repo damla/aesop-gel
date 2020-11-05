@@ -9,6 +9,7 @@ const NotificationModal = ({
   backgroundColor,
   className,
   notificationMessage,
+  ...props
 }) => {
   const footerSuccessModal = useNotificationContext();
   const { actionType, dispatch, showModal } = footerSuccessModal;
@@ -27,7 +28,7 @@ const NotificationModal = ({
   const style = backgroundColor ? { backgroundColor } : undefined;
 
   return (
-    <div className={baseClassSet} style={style}>
+    <div className={baseClassSet} style={style} {...props}>
       <span className={styles.notificationMessage}>{notificationMessage}</span>
       <button
         className={styles.closeButton}
