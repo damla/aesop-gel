@@ -18,7 +18,7 @@ export default {
         small: './assets/images/ContentHubArticle/horizontal_hub.jpg',
       },
       readingTime: '5 minute read',
-      handleClickTracking: () => {
+      onClick: () => {
         console.log('click tracking: test_1'); // eslint-disable-line no-console
       },
     },
@@ -41,7 +41,7 @@ export default {
         small: './assets/images/ContentHubArticle/horizontal_hub.jpg',
       },
       readingTime: '5 minute read',
-      handleClickTracking: () => {
+      onClick: () => {
         console.log('click tracking: test_2'); // eslint-disable-line no-console
       },
     },
@@ -64,7 +64,7 @@ export default {
         small: './assets/images/ContentHubArticle/horizontal_hub.jpg',
       },
       readingTime: '5 minute read',
-      handleClickTracking: () => {
+      onClick: () => {
         console.log('click tracking: test_3'); // eslint-disable-line no-console
       },
     },

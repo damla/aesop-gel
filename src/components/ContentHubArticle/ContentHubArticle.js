@@ -12,7 +12,6 @@ const ContentHubArticle = ({
   category,
   className,
   dataTestRef,
-  handleClickTracking,
   horizontalThumbnail,
   id,
   isHorizontal, // use horizontal or vertical thumbnail
@@ -20,6 +19,7 @@ const ContentHubArticle = ({
   isMenuItem, // if it's displayed in Read Menu Navigation
   isReadMore, // if it's displayed in ReadMore section
   longTitle,
+  onClick,
   readingTime,
   uri,
   verticalThumbnail,
@@ -85,7 +85,7 @@ const ContentHubArticle = ({
           <Hyperlink
             className={imageClassSet}
             dataTestRef={`${dataTestRef}_READMORE_THUMBNAIL`}
-            onClick={handleClickTracking}
+            onClick={onClick}
             title={longTitle}
             url={uri + '?contentful=true'} // @TODO Need to remove the query
           >
@@ -112,7 +112,7 @@ const ContentHubArticle = ({
           <Hyperlink
             className={titleClassSet}
             dataTestRef={`${dataTestRef}_TITLE`}
-            onClick={handleClickTracking}
+            onClick={onClick}
             title={longTitle}
             url={uri + '?contentful=true'} // @TODO Need to remove the query
           >
@@ -131,7 +131,7 @@ const ContentHubArticle = ({
           <Hyperlink
             className={nonMobileImageClassSet}
             dataTestRef={`${dataTestRef}_NON_MOBILE_THUMBNAIL`}
-            onClick={handleClickTracking}
+            onClick={onClick}
             title={longTitle}
             url={uri + '?contentful=true'} // @TODO Need to remove the query
           >
@@ -154,7 +154,7 @@ const ContentHubArticle = ({
           <Hyperlink
             className={mobileImageClassSet}
             dataTestRef={`${dataTestRef}_MOBILE_THUMBNAIL`}
-            onClick={handleClickTracking}
+            onClick={onClick}
             title={longTitle}
             url={uri + '?contentful=true'} // @TODO Need to remove the query
           >
@@ -183,7 +183,6 @@ ContentHubArticle.propTypes = {
   category: PropTypes.string,
   className: PropTypes.string,
   dataTestRef: PropTypes.string.isRequired,
-  handleClickTracking: PropTypes.func,
   horizontalThumbnail: PropTypes.object,
   id: PropTypes.string,
   isHorizontal: PropTypes.bool,
@@ -191,6 +190,7 @@ ContentHubArticle.propTypes = {
   isMenuItem: PropTypes.bool,
   isReadMore: PropTypes.bool,
   longTitle: PropTypes.string,
+  onClick: PropTypes.func,
   readingTime: PropTypes.string,
   uri: PropTypes.string,
   verticalThumbnail: PropTypes.object,
@@ -201,7 +201,6 @@ ContentHubArticle.defaultProps = {
   category: undefined,
   className: undefined,
   dataTestRef: undefined,
-  handleClickTracking: undefined,
   horizontalThumbnail: undefined,
   id: undefined,
   isHorizontal: undefined,
@@ -209,6 +208,7 @@ ContentHubArticle.defaultProps = {
   isMenuItem: false,
   isReadMore: false,
   longTitle: undefined,
+  onClick: undefined,
   readingTime: undefined,
   uri: undefined,
   verticalThumbnail: undefined,

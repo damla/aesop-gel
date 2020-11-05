@@ -50,13 +50,13 @@ const ContentHubArticleList = ({
                 articleRef={articles[0].articleRef}
                 category={articles[0].category}
                 dataTestRef={articles[0].id}
-                handleClickTracking={articles[0].handleClickTracking}
                 horizontalThumbnail={articles[0].horizontalThumbnail}
                 id={articles[0].id}
                 isHorizontal={Boolean(!pattern)}
                 isInFirstGroup={isFirstGroup}
                 key={articles[0].id}
                 longTitle={articles[0].longTitle}
+                onClick={articles[0].onClick}
                 readingTime={articles[0].readingTime}
                 uri={articles[0].uri}
                 verticalThumbnail={articles[0].verticalThumbnail}
@@ -69,13 +69,13 @@ const ContentHubArticleList = ({
                 articleRef={articles[1].articleRef}
                 category={articles[1].category}
                 dataTestRef={articles[1].id}
-                handleClickTracking={articles[1].handleClickTracking}
                 horizontalThumbnail={articles[1].horizontalThumbnail}
                 id={articles[1].id}
                 isHorizontal={Boolean(pattern)}
                 isInFirstGroup={isFirstGroup}
                 key={articles[1].id}
                 longTitle={articles[1].longTitle}
+                onClick={articles[1].onClick}
                 readingTime={articles[1].readingTime}
                 uri={articles[1].uri}
                 verticalThumbnail={articles[1].verticalThumbnail}
@@ -88,9 +88,6 @@ const ContentHubArticleList = ({
                 articleRef={(articles[count - 2] || articles[0]).articleRef}
                 category={(articles[count - 2] || articles[0]).category}
                 dataTestRef={(articles[count - 2] || articles[0]).id}
-                handleClickTracking={
-                  (articles[count - 2] || articles[0]).handleClickTracking
-                }
                 horizontalThumbnail={
                   (articles[count - 2] || articles[0]).horizontalThumbnail
                 }
@@ -98,6 +95,7 @@ const ContentHubArticleList = ({
                 isHorizontal={Boolean(pattern)}
                 isInFirstGroup={isFirstGroup}
                 longTitle={(articles[count - 2] || articles[0]).longTitle}
+                onClick={(articles[count - 2] || articles[0]).onClick}
                 readingTime={(articles[count - 2] || articles[0]).readingTime}
                 uri={(articles[count - 2] || articles[0]).uri}
                 verticalThumbnail={
@@ -112,9 +110,6 @@ const ContentHubArticleList = ({
                 articleRef={(articles[count - 1] || articles[1]).articleRef}
                 category={(articles[count - 1] || articles[1]).category}
                 dataTestRef={(articles[count - 1] || articles[1]).id}
-                handleClickTracking={
-                  (articles[count - 1] || articles[1]).handleClickTracking
-                }
                 horizontalThumbnail={
                   (articles[count - 1] || articles[1]).horizontalThumbnail
                 }
@@ -122,6 +117,7 @@ const ContentHubArticleList = ({
                 isHorizontal={Boolean(!pattern)}
                 isInFirstGroup={isFirstGroup}
                 longTitle={(articles[count - 1] || articles[1]).longTitle}
+                onClick={(articles[count - 1] || articles[1]).onClick}
                 readingTime={(articles[count - 1] || articles[1]).readingTime}
                 uri={(articles[count - 1] || articles[1]).uri}
                 verticalThumbnail={
@@ -139,13 +135,13 @@ const ContentHubArticleList = ({
                 articleRef={articles[0].mobileArticleRef}
                 category={articles[0].category}
                 dataTestRef={articles[0].id}
-                handleClickTracking={articles[0].handleClickTracking}
                 horizontalThumbnail={articles[0].horizontalThumbnail}
                 id={articles[0].id}
                 isHorizontal={true}
                 isInFirstGroup={isFirstGroup}
                 key={articles[0].id}
                 longTitle={articles[0].longTitle}
+                onClick={articles[0].onClick}
                 readingTime={articles[0].readingTime}
                 uri={articles[0].uri}
                 verticalThumbnail={articles[0].verticalThumbnail}
@@ -161,9 +157,6 @@ const ContentHubArticleList = ({
                     category={(articles[count - 3] || articles[0]).category}
                     className={leftMiddleArticleClassSet}
                     dataTestRef={(articles[count - 3] || articles[0]).id}
-                    handleClickTracking={
-                      (articles[count - 3] || articles[0]).handleClickTracking
-                    }
                     horizontalThumbnail={
                       (articles[count - 3] || articles[0]).horizontalThumbnail
                     }
@@ -172,6 +165,7 @@ const ContentHubArticleList = ({
                     isInFirstGroup={isFirstGroup}
                     key={(articles[count - 3] || articles[0]).id}
                     longTitle={(articles[count - 3] || articles[0]).longTitle}
+                    onClick={(articles[count - 3] || articles[0]).onClick}
                     readingTime={
                       (articles[count - 3] || articles[0]).readingTime
                     }
@@ -189,9 +183,6 @@ const ContentHubArticleList = ({
                     category={articles[count - 2].category}
                     className={rightMiddleArticleClassSet}
                     dataTestRef={articles[count - 2].id}
-                    handleClickTracking={
-                      articles[count - 2].handleClickTracking
-                    }
                     horizontalThumbnail={
                       articles[count - 2].horizontalThumbnail
                     }
@@ -200,6 +191,7 @@ const ContentHubArticleList = ({
                     isInFirstGroup={isFirstGroup}
                     key={articles[count - 2].id}
                     longTitle={articles[count - 2].longTitle}
+                    onClick={articles[count - 2].onClick}
                     readingTime={articles[count - 2].readingTime}
                     uri={articles[count - 2].uri}
                     verticalThumbnail={articles[count - 2].verticalThumbnail}
@@ -212,13 +204,13 @@ const ContentHubArticleList = ({
                 articleRef={articles[count - 1].mobileArticleRef}
                 category={articles[count - 1].category}
                 dataTestRef={articles[count - 1].id}
-                handleClickTracking={articles[count - 1].handleClickTracking}
                 horizontalThumbnail={articles[count - 1].horizontalThumbnail}
                 id={articles[count - 1].id}
                 isHorizontal={true}
                 isInFirstGroup={isFirstGroup}
                 key={articles[count - 1].id}
                 longTitle={articles[count - 1].longTitle}
+                onClick={articles[count - 1].onClick}
                 readingTime={articles[count - 1].readingTime}
                 uri={articles[count - 1].uri}
                 verticalThumbnail={articles[count - 1].verticalThumbnail}
@@ -236,13 +228,13 @@ const ContentHubArticleList = ({
                     category={articles[0].category}
                     className={leftMiddleArticleClassSet}
                     dataTestRef={articles[0].id}
-                    handleClickTracking={articles[0].handleClickTracking}
                     horizontalThumbnail={articles[0].horizontalThumbnail}
                     id={articles[0].id}
                     isHorizontal={false}
                     isInFirstGroup={isFirstGroup}
                     key={articles[0].id}
                     longTitle={articles[0].longTitle}
+                    onClick={articles[0].onClick}
                     readingTime={articles[0].readingTime}
                     uri={articles[0].uri}
                     verticalThumbnail={articles[0].verticalThumbnail}
@@ -258,9 +250,6 @@ const ContentHubArticleList = ({
                 }
                 category={(articles[count - 3] || articles[0]).category}
                 dataTestRef={(articles[count - 3] || articles[0]).id}
-                handleClickTracking={
-                  (articles[count - 3] || articles[0]).handleClickTracking
-                }
                 horizontalThumbnail={
                   (articles[count - 3] || articles[0]).horizontalThumbnail
                 }
@@ -269,6 +258,7 @@ const ContentHubArticleList = ({
                 isInFirstGroup={isFirstGroup}
                 key={(articles[count - 3] || articles[0]).id}
                 longTitle={(articles[count - 3] || articles[0]).longTitle}
+                onClick={(articles[count - 3] || articles[0]).onClick}
                 readingTime={(articles[count - 3] || articles[0]).readingTime}
                 uri={(articles[count - 3] || articles[0]).uri}
                 verticalThumbnail={
@@ -281,13 +271,13 @@ const ContentHubArticleList = ({
                 articleRef={articles[count - 2].mobileArticleRef}
                 category={articles[count - 2].category}
                 dataTestRef={articles[count - 2].id}
-                handleClickTracking={articles[count - 2].handleClickTracking}
                 horizontalThumbnail={articles[count - 2].horizontalThumbnail}
                 id={articles[count - 2].id}
                 isHorizontal={true}
                 isInFirstGroup={isFirstGroup}
                 key={articles[count - 2].id}
                 longTitle={articles[count - 2].longTitle}
+                onClick={articles[count - 2].onClick}
                 readingTime={articles[count - 2].readingTime}
                 uri={articles[count - 2].uri}
                 verticalThumbnail={articles[count - 2].verticalThumbnail}
@@ -302,9 +292,6 @@ const ContentHubArticleList = ({
                     category={articles[count - 1].category}
                     className={rightMiddleArticleClassSet}
                     dataTestRef={articles[count - 1].id}
-                    handleClickTracking={
-                      articles[count - 1].handleClickTracking
-                    }
                     horizontalThumbnail={
                       articles[count - 1].horizontalThumbnail
                     }
@@ -313,6 +300,7 @@ const ContentHubArticleList = ({
                     isInFirstGroup={isFirstGroup}
                     key={articles[count - 1].id}
                     longTitle={articles[count - 1].longTitle}
+                    onClick={articles[count - 1].onClick}
                     readingTime={articles[count - 1].readingTime}
                     uri={articles[count - 1].uri}
                     verticalThumbnail={articles[count - 1].verticalThumbnail}

@@ -18,7 +18,6 @@ const ReadMore = ({ articles, className }) => {
             category={article.category}
             className={readMoreArticleClassSet}
             dataTestRef={article.id}
-            handleClickTracking={article.handleClickTracking}
             horizontalThumbnail={article.horizontalThumbnail}
             id={article.id}
             isHorizontal={true}
@@ -26,6 +25,7 @@ const ReadMore = ({ articles, className }) => {
             isReadMore={true}
             key={article.id}
             longTitle={article.longTitle}
+            onClick={article.onClick}
             readingTime={article.readingTime}
             uri={article.uri}
             verticalThumbnail={article.verticalThumbnail}
