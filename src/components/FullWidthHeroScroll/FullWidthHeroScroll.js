@@ -2,31 +2,37 @@ import React, { useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { HYPERLINK_STYLE_TYPES } from '~/constants';
-import { BodyCopy, Hyperlink, Icon, Video } from '~/components';
+import { BodyCopy, Hyperlink, Icon } from '~/components';
+import BackgroundElement from './components/BackgroundElement';
 import FullscreenSection from './components/FullscreenSection';
 import styles from './FullWidthHeroScroll.module.css';
 
 const FullWidthHeroScroll = ({
+  backgroundImage,
+  backgroundMediaType,
   backgroundVideo,
   copy,
   cta,
   eyebrow,
   hasSerifFontHeading,
   hasTopOffset,
+  heading,
   id,
   textBlocks,
   theme,
-  title,
 }) => {
   const scrollButton = useRef();
+  const offset = 120;
 
   useEffect(() => {
     const scrollButtonCurrent = scrollButton.current;
+    const scrollThreshold = 100;
 
     const fadeScrollButton = () => {
-      if (window.scrollY > 100) return;
+      if (window.scrollY > scrollThreshold) return;
 
-      scrollButtonCurrent.style.opacity = (100 - window.scrollY) / 100;
+      scrollButtonCurrent.style.opacity =
+        (scrollThreshold - window.scrollY) / scrollThreshold;
     };
 
     window.addEventListener('scroll', fadeScrollButton);
@@ -38,7 +44,7 @@ const FullWidthHeroScroll = ({
 
   const handleScrollDown = () => {
     window.scroll({
-      top: window.innerHeight - 120,
+      top: window.innerHeight - offset,
       left: 0,
       behavior: 'smooth',
     });
@@ -51,15 +57,10 @@ const FullWidthHeroScroll = ({
   return (
     <section className={classSet} id={id}>
       <div className={cx(styles.scrollLockMedia)}>
-        <Video
-          {...backgroundVideo}
-          className={styles.backgroundVideo}
-          hasAllowAudio={false}
-          hasAutoplay={true}
-          hasControls={false}
-          hasLoop={true}
-          isBackground={true}
-          isMuted={true}
+        <BackgroundElement
+          image={backgroundImage}
+          mediaType={backgroundMediaType}
+          video={backgroundVideo}
         />
       </div>
       <div className={styles.scrollingContent}>
@@ -69,7 +70,7 @@ const FullWidthHeroScroll = ({
               copy={copy}
               eyebrow={eyebrow}
               hasSerifFontHeading={hasSerifFontHeading}
-              heading={title}
+              heading={heading}
               isHeroArticle={true}
               theme={theme}
             />
@@ -102,6 +103,8 @@ const FullWidthHeroScroll = ({
 };
 
 FullWidthHeroScroll.propTypes = {
+  backgroundImage: PropTypes.object,
+  backgroundMediaType: PropTypes.oneOf(['image', 'video']),
   backgroundVideo: PropTypes.object,
   copy: PropTypes.node,
   cta: PropTypes.shape({
@@ -113,18 +116,19 @@ FullWidthHeroScroll.propTypes = {
   hasTopOffset: PropTypes.bool,
   heading: PropTypes.string,
   id: PropTypes.string,
-  theme: PropTypes.oneOf(['dark', 'light']),
   textBlocks: PropTypes.arrayOf(
     PropTypes.shape({
       text: PropTypes.node,
       hasSerifFont: PropTypes.bool,
     }),
   ),
-  title: PropTypes.string,
+  theme: PropTypes.oneOf(['dark', 'light']),
 };
 
 FullWidthHeroScroll.defaultProps = {
-  backgroundVideo: [],
+  backgroundVideo: undefined,
+  backgroundMediaType: undefined,
+  backgroundImage: undefined,
   copy: undefined,
   cta: undefined,
   eyebrow: undefined,
@@ -134,7 +138,6 @@ FullWidthHeroScroll.defaultProps = {
   id: undefined,
   theme: 'light',
   textBlocks: [],
-  title: undefined,
 };
 
 export default FullWidthHeroScroll;

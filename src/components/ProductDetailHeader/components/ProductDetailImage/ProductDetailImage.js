@@ -1,7 +1,11 @@
 import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { useProductDetailContext, useVariantSelectContext } from '~/contexts';
+import {
+  useProductDetailContext,
+  useThemeContext,
+  useVariantSelectContext,
+} from '~/contexts';
 import { useImageTransition } from '~/customHooks';
 import Hidden from '~/components/Hidden';
 import Image from '~/components/Image';
@@ -10,6 +14,7 @@ import styles from './ProductDetailImage.module.css';
 
 const ProductDetailImage = ({ className, theme }) => {
   const imageRef = useRef();
+  const currentTheme = useThemeContext(theme, 'dark');
   const { selectedVariant } = useVariantSelectContext();
   const { productDetail } = useProductDetailContext();
   const [currentImage, isImageActive] = useImageTransition(
@@ -20,7 +25,7 @@ const ProductDetailImage = ({ className, theme }) => {
   if (!selectedVariant?.image) return null;
 
   const { cartDisclaimer } = productDetail;
-  const classSet = cx(styles.base, styles[theme], className);
+  const classSet = cx(styles.base, styles[currentTheme], className);
   const { altText, sizes } = currentImage;
 
   return (
@@ -51,7 +56,7 @@ ProductDetailImage.propTypes = {
 
 ProductDetailImage.defaultProps = {
   className: undefined,
-  theme: 'dark',
+  theme: undefined,
 };
 
 export default ProductDetailImage;

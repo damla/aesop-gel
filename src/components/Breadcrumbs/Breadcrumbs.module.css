@@ -18,9 +18,8 @@
     display: inline-block;
     padding: 0 10px;
     content: '\2022';
-    font-size: rem(20px);
+    font-size: rem(14px);
     line-height: 1;
-    transform: translateY(3px);
 
     .dark & {
       color: var(--color-dark-copy);

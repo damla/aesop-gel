@@ -13,6 +13,7 @@ const defaultValues = {
     ingredients: '',
     keyIngredient: '',
     productName: '',
+    upSellProduct: null,
   },
 };
 
@@ -40,6 +41,14 @@ ProductDetailContextProvider.propTypes = {
     ingredients: PropTypes.string,
     keyIngredient: PropTypes.string,
     productName: PropTypes.string.isRequired,
+  }),
+  upSellProduct: PropTypes.shape({
+    image: PropTypes.shape({
+      altText: PropTypes.string,
+      small: PropTypes.string,
+    }),
+    name: PropTypes.string,
+    url: PropTypes.string,
   }),
 };
 

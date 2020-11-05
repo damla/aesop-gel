@@ -2,7 +2,7 @@
 
 exports[`<DefinitionListWithProductExtract /> renders base component correctly 1`] = `
 <div
-  className="base dark slideIn item1"
+  className="base dark slideIn hasTopMargin item1"
 >
   <div
     className="flexContainer delayAnimation slideIn"
@@ -26,7 +26,7 @@ exports[`<DefinitionListWithProductExtract /> renders base component correctly 1
       </div>
     </div>
     <div
-      className="productImage delayAnimation slideIn"
+      className="productImage delayAnimation slideIn small"
     >
       <picture
         className="base picture dark"

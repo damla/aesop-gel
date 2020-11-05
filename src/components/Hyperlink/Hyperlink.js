@@ -17,6 +17,7 @@ const Hyperlink = ({
   hasTargetInNewWindow,
   isAlternate,
   isDownload,
+  onClick,
   style,
   textAlign,
   theme,
@@ -52,6 +53,7 @@ const Hyperlink = ({
       data-test-ref={dataTestRef}
       download={isDownload}
       href={url}
+      onClick={onClick}
       target={target}
       title={title}
     >
@@ -76,6 +78,7 @@ Hyperlink.propTypes = {
   id: PropTypes.string,
   isAlternate: PropTypes.bool,
   isDownload: PropTypes.bool,
+  onClick: PropTypes.func,
   style: PropTypes.oneOf([
     'External Button Link',
     'External No Icon Button Link',
@@ -101,6 +104,7 @@ Hyperlink.defaultProps = {
   id: undefined,
   isAlternate: undefined,
   isDownload: undefined,
+  onClick: undefined,
   style: 'Internal No Icon Link',
   textAlign: 'left',
   theme: 'dark',

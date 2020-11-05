@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import * as knobs from '@storybook/addon-knobs';
+import GridOverlay from '~.storybook/GridOverlay.js';
 import FullWidthHeroScroll from './FullWidthHeroScroll';
 import FullWidthHeroScrollFixture from './FullWidthHeroScroll.fixture';
 
@@ -10,21 +11,20 @@ import FullWidthHeroScrollFixture from './FullWidthHeroScroll.fixture';
 
 <Preview>
   <Story name="Full Width Hero Scroll">
+    <GridOverlay isActive={knobs.boolean('isActive', false, 'Grid overlay')} hasInvertedColours={knobs.boolean('hasInvertedColours', false, 'Grid overlay')} />
     <FullWidthHeroScroll
-      backgroundColor="#000"
+      backgroundImage={FullWidthHeroScrollFixture.backgroundImage}
+      backgroundMediaType={knobs.select('backgroundMediaType', ['video', 'image'], FullWidthHeroScrollFixture.backgroundMediaType, 'Presentation')}
       backgroundVideo={FullWidthHeroScrollFixture.backgroundVideo}
       copy={FullWidthHeroScrollFixture.copy}
       cta={FullWidthHeroScrollFixture.cta}
       eyebrow={FullWidthHeroScrollFixture.eyebrow}
-      hasFullWidthImage={true}
-      id={FullWidthHeroScrollFixture.id}
+      hasSerifFontHeading={knobs.boolean('hasSerifFontHeading', false, 'Presentation')}
+      hasTopOffset={knobs.boolean('hasTopOffset', false, 'Presentation')}
       heading={FullWidthHeroScrollFixture.heading}
-      hasTopOffset={knobs.boolean('hasTopOffset', false)}
-      isHero={true}
-      isReverse={true}
+      id={FullWidthHeroScrollFixture.id}
       textBlocks={FullWidthHeroScrollFixture.textBlocks}
       theme={knobs.select('theme', ['dark', 'light'], 'light', 'Presentation')}
-      title={FullWidthHeroScrollFixture.title}
     />
   </Story>
 </Preview>

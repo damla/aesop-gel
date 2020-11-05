@@ -1,5 +1,6 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import * as knobs from '@storybook/addon-knobs';
+import GridOverlay from '~.storybook/GridOverlay.js';
 import {
   AddToCartContextProvider,
   ProductDetailContextProvider,
@@ -22,46 +23,52 @@ import ProductDetailFixture from './ProductDetail.fixture';
 <Preview>
   <Story name="Base component">
     {(() => {
-      const theme = knobs.select('theme', ['dark', 'light'], ProductDetailHeaderFixture.theme, 'Presentation')
+      const gridOverlayActive = knobs.boolean('isActive', false, 'Grid overlay');
+      const gridOverlayIntertedColours = knobs.boolean('hasInvertedColours', false, 'Grid overlay');
+      const theme = knobs.select('theme', ['dark', 'light'], ProductDetailHeaderFixture.theme, 'Presentation');
       const { productName, description, ...productRest } = ProductDetailHeaderFixture.product;
       const productDetails = {
         productName: knobs.text('productName', productName, 'Content'),
         description: knobs.text('description', description, 'Content'),
         ...productRest,
-      }
+      };
       return (
-        <AddToCartContextProvider onClick={mockAddToCartButtonOnClick}>
-          <ProductDetailContextProvider product={productDetails}>
-            <VariantSelectContextProvider variants={ProductDetailHeaderFixture.product.variantOptions}>
-              <ProductDetail
-                __asideDetails1={{
-                  copy: {
-                    eyebrow: MediaWithContentFixture.copy.default.eyebrow,
-                    heading: MediaWithContentFixture.copy.default.heading,
-                  },
-                  definitionListItems: MediaWithContentFixture.definitionList.items,
-                  image: MediaWithContentFixture.image.default,
-                }}
-                __asideDetails2={{
-                  copy: MediaWithContentFixture.kitList.copy,
-                  image: MediaWithContentFixture.image.kit,
-                  kitListItems: MediaWithContentFixture.kitList.items,
-                }}
-                breadcrumbs={ProductDetailHeaderFixture.breadcrumbs}
-                className={ProductDetailFixture.className}
-                copy={{
-                  productHeader: {
-                    addToCart: AddToCartButtonFixture.copy,
-                    size: ProductDetailBodyFixture.copy.size,
-                    ingredients: ProductDetailBodyFixture.copy.ingredients,
-                  },
-                }}
-                quote={QuoteFixture}
-                relatedProducts={CarouselFixture}
-              />
-            </VariantSelectContextProvider>
-          </ProductDetailContextProvider>
-        </AddToCartContextProvider>
+        <div>
+          <GridOverlay isActive={gridOverlayActive} hasInvertedColours={gridOverlayIntertedColours} />
+          <AddToCartContextProvider onClick={mockAddToCartButtonOnClick}>
+            <ProductDetailContextProvider product={productDetails}>
+              <VariantSelectContextProvider variants={ProductDetailHeaderFixture.product.variantOptions}>
+                <ProductDetail
+                  __asideDetails1={{
+                    copy: {
+                      eyebrow: MediaWithContentFixture.copy.default.eyebrow,
+                      heading: MediaWithContentFixture.copy.default.heading,
+                    },
+                    definitionListItems: MediaWithContentFixture.definitionList.items,
+                    image: MediaWithContentFixture.image.default,
+                  }}
+                  __asideDetails2={{
+                    copy: MediaWithContentFixture.kitList.copy,
+                    image: MediaWithContentFixture.image.kit,
+                    kitListItems: MediaWithContentFixture.kitList.items,
+                  }}
+                  breadcrumbs={ProductDetailHeaderFixture.breadcrumbs}
+                  className={ProductDetailFixture.className}
+                  copy={{
+                    productHeader: {
+                      addToCart: AddToCartButtonFixture.copy,
+                      size: ProductDetailBodyFixture.copy.size,
+                      ingredients: ProductDetailBodyFixture.copy.ingredients,
+                      upSellProductLabel: ProductDetailBodyFixture.copy.upSellProductLabel,
+                    },
+                  }}
+                  quote={QuoteFixture}
+                  relatedProducts={CarouselFixture}
+                />
+              </VariantSelectContextProvider>
+            </ProductDetailContextProvider>
+          </AddToCartContextProvider>
+        </div>
       )
     })()}
   </Story>

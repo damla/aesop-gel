@@ -1,13 +1,16 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import { useThemeContext } from '~/contexts';
 import styles from './ComponentBoilerplate.module.css';
 
 const ComponentBoilerplate = forwardRef(function ComponentBoilerplateRef({
   children,
   className,
+  theme,
 }) {
-  const classSet = cx(styles.base, className);
+  const currentTheme = useThemeContext(theme, 'dark');
+  const classSet = cx(styles.base, styles[currentTheme], className);
 
   return <div className={classSet}>{children}</div>;
 })
@@ -15,11 +18,13 @@ const ComponentBoilerplate = forwardRef(function ComponentBoilerplateRef({
 ComponentBoilerplate.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
+  theme: PropTypes.oneOf(['dark', 'light']),
 };
 
 ComponentBoilerplate.defaultProps = {
   children: undefined,
   className: undefined,
+  theme: undefined,
 };
 
 export default ComponentBoilerplate;

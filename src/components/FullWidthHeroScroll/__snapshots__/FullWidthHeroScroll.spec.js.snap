@@ -8,7 +8,7 @@ exports[`<FullWidthHeroScroll /> renders base component correctly 1`] = `
     className="scrollLockMedia"
   >
     <div
-      className="base backgroundVideo fullWidth"
+      className="base base fullWidth"
       role="group"
     >
       <figure
@@ -90,7 +90,13 @@ exports[`<FullWidthHeroScroll /> renders base component correctly 1`] = `
         >
           <header
             className="base"
-          />
+          >
+            <h1
+              className="base xLarge light heading heading"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            </h1>
+          </header>
         </article>
         <a
           className="base blockStyle hasIcon left light"
