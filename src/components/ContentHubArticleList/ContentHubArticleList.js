@@ -47,6 +47,7 @@ const ContentHubArticleList = ({
           <div className={topLeftClassSet}>
             {count >= 3 && (
               <ContentHubArticle
+                articleRef={articles[0].articleRef}
                 category={articles[0].category}
                 dataTestRef={articles[0].id}
                 handleClickTracking={articles[0].handleClickTracking}
@@ -65,6 +66,7 @@ const ContentHubArticleList = ({
           <div className={topRightClassSet}>
             {count >= 4 && (
               <ContentHubArticle
+                articleRef={articles[1].articleRef}
                 category={articles[1].category}
                 dataTestRef={articles[1].id}
                 handleClickTracking={articles[1].handleClickTracking}
@@ -83,6 +85,7 @@ const ContentHubArticleList = ({
           <div className={bottomLeftClassSet}>
             {count >= 1 && (
               <ContentHubArticle
+                articleRef={(articles[count - 2] || articles[0]).articleRef}
                 category={(articles[count - 2] || articles[0]).category}
                 dataTestRef={(articles[count - 2] || articles[0]).id}
                 handleClickTracking={
@@ -106,6 +109,7 @@ const ContentHubArticleList = ({
           <div className={bottomRightClassSet}>
             {count >= 2 && (
               <ContentHubArticle
+                articleRef={(articles[count - 1] || articles[1]).articleRef}
                 category={(articles[count - 1] || articles[1]).category}
                 dataTestRef={(articles[count - 1] || articles[1]).id}
                 handleClickTracking={
@@ -132,6 +136,7 @@ const ContentHubArticleList = ({
           <div className={mobileSet}>
             {count >= 4 && (
               <ContentHubArticle
+                articleRef={articles[0].mobileArticleRef}
                 category={articles[0].category}
                 dataTestRef={articles[0].id}
                 handleClickTracking={articles[0].handleClickTracking}
@@ -150,6 +155,9 @@ const ContentHubArticleList = ({
               <div className={middleArticleClassSet}>
                 {count >= 3 && (
                   <ContentHubArticle
+                    articleRef={
+                      (articles[count - 3] || articles[0]).mobileArticleRef
+                    }
                     category={(articles[count - 3] || articles[0]).category}
                     className={leftMiddleArticleClassSet}
                     dataTestRef={(articles[count - 3] || articles[0]).id}
@@ -177,6 +185,7 @@ const ContentHubArticleList = ({
               <div className={middleArticleClassSet}>
                 {count >= 2 && (
                   <ContentHubArticle
+                    articleRef={articles[count - 2].mobileArticleRef}
                     category={articles[count - 2].category}
                     className={rightMiddleArticleClassSet}
                     dataTestRef={articles[count - 2].id}
@@ -200,6 +209,7 @@ const ContentHubArticleList = ({
             </div>
             {count >= 1 && (
               <ContentHubArticle
+                articleRef={articles[count - 1].mobileArticleRef}
                 category={articles[count - 1].category}
                 dataTestRef={articles[count - 1].id}
                 handleClickTracking={articles[count - 1].handleClickTracking}
@@ -222,6 +232,7 @@ const ContentHubArticleList = ({
               <div className={middleArticleClassSet}>
                 {count >= 4 && (
                   <ContentHubArticle
+                    articleRef={articles[0].mobileArticleRef}
                     category={articles[0].category}
                     className={leftMiddleArticleClassSet}
                     dataTestRef={articles[0].id}
@@ -242,6 +253,9 @@ const ContentHubArticleList = ({
             </div>
             {count >= 3 && (
               <ContentHubArticle
+                articleRef={
+                  (articles[count - 3] || articles[0]).mobileArticleRef
+                }
                 category={(articles[count - 3] || articles[0]).category}
                 dataTestRef={(articles[count - 3] || articles[0]).id}
                 handleClickTracking={
@@ -264,6 +278,7 @@ const ContentHubArticleList = ({
             )}
             {count >= 2 && (
               <ContentHubArticle
+                articleRef={articles[count - 2].mobileArticleRef}
                 category={articles[count - 2].category}
                 dataTestRef={articles[count - 2].id}
                 handleClickTracking={articles[count - 2].handleClickTracking}
@@ -283,6 +298,7 @@ const ContentHubArticleList = ({
               <div className={middleArticleClassSet}>
                 {count >= 1 && (
                   <ContentHubArticle
+                    articleRef={articles[count - 1].mobileArticleRef}
                     category={articles[count - 1].category}
                     className={rightMiddleArticleClassSet}
                     dataTestRef={articles[count - 1].id}
