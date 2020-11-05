@@ -18,7 +18,6 @@ describe('<ContentHubArticle />', () => {
         <ContentHubArticle
           category={ContentHubArticleFixture.category}
           dataTestRef={ContentHubArticleFixture.dataTestRef}
-          handleClickTracking={ContentHubArticleFixture.handleClickTracking}
           horizontalThumbnail={ContentHubArticleFixture.horizontalThumbnail}
           id={ContentHubArticleFixture.id}
           isHorizontal={true}
@@ -26,6 +25,7 @@ describe('<ContentHubArticle />', () => {
           isMenuItem={false}
           isReadMore={false}
           longTitle={ContentHubArticleFixture.longTitle}
+          onClick={ContentHubArticleFixture.onClick}
           readingTime={ContentHubArticleFixture.readingTime}
           uri={ContentHubArticleFixture.uri}
           verticalThumbnail={ContentHubArticleFixture.verticalThumbnail}

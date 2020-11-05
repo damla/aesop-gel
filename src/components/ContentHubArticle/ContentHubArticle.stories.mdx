@@ -15,12 +15,12 @@ import ContentHubArticleFixture from './ContentHubArticle.fixture';
         id={ContentHubArticleFixture.id}
         category={knobs.select('category', ['Culture', 'Product', 'The Weekly', 'Aesop Spotify'], 'Culture', 'Content')}
         dataTestRef={ContentHubArticleFixture.dataTestRef}
-        handleClickTracking={ContentHubArticleFixture.handleClickTracking}
         isHorizontal={knobs.select('isHorizontal', [true, false], true, 'Content')}
         isReadMore={knobs.select('isReadMore', [true, false], false, 'Content')}
         isMenuItem={knobs.select('isMenuItem', [true, false], false, 'Content')}
         horizontalThumbnail={ContentHubArticleFixture.horizontalThumbnail}
         longTitle={knobs.text('title', ContentHubArticleFixture.longTitle, 'Content')}
+        onClick={ContentHubArticleFixture.onClick}
         readingTime={knobs.text('readingTime', ContentHubArticleFixture.readingTime, 'Content')}
         uri={ContentHubArticleFixture.uri}
         verticalThumbnail={ContentHubArticleFixture.verticalThumbnail}
