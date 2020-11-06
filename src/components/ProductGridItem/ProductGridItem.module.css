@@ -38,15 +38,12 @@
 
 .image {
   display: flex;
+  align-items: flex-end;
   justify-content: center;
 
   @media (--viewport-md-only) {
     height: 330px;
     padding-top: 80px;
-  }
-
-  @media (--viewport-md) {
-    align-items: flex-end;
   }
 
   @media (--viewport-lg) {
