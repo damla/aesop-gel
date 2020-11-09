@@ -26,7 +26,7 @@ const ContentHubArticle = ({
 }) => {
   const defaultRef = useRef(null);
   const ref = articleRef || defaultRef;
-  const isOnScreen = useOnScreen(ref, isHorizontal ? 0.6 : 0.4);
+  const isOnScreen = useOnScreen(ref, 0.5);
   const currentImage = isHorizontal ? horizontalThumbnail : verticalThumbnail;
   const classSet = cx(styles.base, className, {
     [styles.readMoreArticle]: !!isReadMore,
