@@ -38,6 +38,7 @@
 
 .image {
   display: flex;
+  align-items: flex-end;
   justify-content: center;
 
   @media (--viewport-sm-only) {
@@ -45,9 +46,6 @@
   }
   @media (--viewport-md-only) {
     height: 300px;
-  }
-  @media (--viewport-md) {
-    align-items: flex-end;
   }
 
   @media (--viewport-lg) {
