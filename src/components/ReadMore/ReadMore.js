@@ -14,6 +14,7 @@ const ReadMore = ({ articles, className }) => {
       <section className={classSet}>
         {articles.map(article => (
           <ContentHubArticle
+            articleRef={article.articleRef}
             category={article.category}
             className={readMoreArticleClassSet}
             dataTestRef={article.id}
@@ -24,6 +25,7 @@ const ReadMore = ({ articles, className }) => {
             isReadMore={true}
             key={article.id}
             longTitle={article.longTitle}
+            onClick={article.onClick}
             readingTime={article.readingTime}
             uri={article.uri}
             verticalThumbnail={article.verticalThumbnail}

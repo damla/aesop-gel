@@ -25,6 +25,7 @@ describe('<ContentHubArticle />', () => {
           isMenuItem={false}
           isReadMore={false}
           longTitle={ContentHubArticleFixture.longTitle}
+          onClick={ContentHubArticleFixture.onClick}
           readingTime={ContentHubArticleFixture.readingTime}
           uri={ContentHubArticleFixture.uri}
           verticalThumbnail={ContentHubArticleFixture.verticalThumbnail}
