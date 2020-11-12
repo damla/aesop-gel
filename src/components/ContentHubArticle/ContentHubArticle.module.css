@@ -3,6 +3,11 @@
 .base {
   display: block;
 
+  h1 {
+    margin: 0;
+    font-weight: normal;
+  }
+
   @media (--viewport-sm-only) {
     padding-bottom: 50px;
   }
