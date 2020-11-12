@@ -8,7 +8,7 @@ exports[`<FullWidthHeroScroll /> renders base component correctly 1`] = `
     className="scrollLockMedia"
   >
     <div
-      className="base base fullWidth"
+      className="base base backgroundElement fullWidth"
       role="group"
     >
       <figure
