@@ -34,7 +34,7 @@ exports[`<FooterBlock /> renders block navigation component correctly 1`] = `
     <li>
       <a
         className="base hasIcon hasExternalIcon left dark listItem"
-        data-test-ref="DATA_TEST_REF_FOOTER_BLOCK_contact-us"
+        data-test-ref="FOOTER_LINK"
         href="https://www.aesop.com/au/r/contact-us"
         target="_blank"
         title="Contact us"
@@ -73,7 +73,7 @@ exports[`<FooterBlock /> renders block navigation component correctly 1`] = `
     <li>
       <a
         className="base hasIcon hasExternalIcon left dark listItem"
-        data-test-ref="DATA_TEST_REF_FOOTER_BLOCK_delivery-and-returns"
+        data-test-ref="FOOTER_LINK"
         href="https://www.aesop.com/au/r/shipping/"
         target="_blank"
         title="Delivery and returns"
@@ -112,7 +112,7 @@ exports[`<FooterBlock /> renders block navigation component correctly 1`] = `
     <li>
       <a
         className="base hasIcon hasExternalIcon left dark listItem"
-        data-test-ref="DATA_TEST_REF_FOOTER_BLOCK_click-and-collect"
+        data-test-ref="FOOTER_LINK"
         href="https://www.aesop.com/au/r/contact-us"
         target="_blank"
         title="Click And Collect"
@@ -151,7 +151,7 @@ exports[`<FooterBlock /> renders block navigation component correctly 1`] = `
     <li>
       <a
         className="base left dark listItem"
-        data-test-ref="DATA_TEST_REF_FOOTER_BLOCK_track-your-orders"
+        data-test-ref="FOOTER_LINK"
         href="https://www.aesop.com/au/r/shipping/"
         target="_self"
         title="Track Your Orders"

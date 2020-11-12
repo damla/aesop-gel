@@ -34,6 +34,7 @@ const Carousel = ({
   introduction,
   isCompact,
   slides,
+  slideRefs,
   theme,
 }) => {
   const slidesLength = slides.length;
@@ -159,7 +160,11 @@ const Carousel = ({
         )}
 
         {slides.map(({ url, ...slide }, index) => (
-          <div className={styles.slideWrapper} key={index}>
+          <div
+            className={styles.slideWrapper}
+            key={index}
+            ref={slideRefs[index]}
+          >
             {url ? (
               <Hyperlink
                 className={cx(styles.item, styles.link)}
@@ -243,6 +248,7 @@ Carousel.propTypes = {
       url: PropTypes.string,
     }),
   ),
+  slideRefs: PropTypes.array,
   theme: PropTypes.oneOf(['dark', 'light']),
 };
 
@@ -259,6 +265,7 @@ Carousel.defaultProps = {
   introduction: undefined,
   isCompact: false,
   slides: [],
+  slideRefs: [],
   theme: undefined,
 };
 
