@@ -6,9 +6,11 @@ import Icon from './Icon';
 
 configure({ adapter: new Adapter() });
 
-jest.mock('uuid/v4', () => {
+jest.mock('uuid', () => {
   let value = 0;
-  return () => value++;
+  return {
+    v4: () => value++,
+  };
 });
 
 describe('<Icon />', () => {

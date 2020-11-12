@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import uuidv4 from 'uuid/v4';
+import { v4 as uuidv4 } from 'uuid';
 import { useEscapeKeyListener } from '~/customHooks/useEscapeKeyListener';
 import { useOverflowHidden } from '~/customHooks/useOverflowHidden';
 import Button from '~/components/Button';
