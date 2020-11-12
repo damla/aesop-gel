@@ -94,3 +94,19 @@
     }
   }
 }
+
+@media all and (-ms-high-contrast: none) {
+  .scrollingContent {
+    margin-top: 0;
+  }
+  .scrollLockMedia {
+    position: absolute;
+    height: 100%;
+    clip: rect(auto, auto, auto, auto);
+  }
+  .backgroundElement {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+}

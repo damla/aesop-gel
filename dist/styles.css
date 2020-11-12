@@ -5138,6 +5138,21 @@ sans-serif;
 .FullWidthHeroScroll-module_light__5ALv_ .FullWidthHeroScroll-module_scrollIndicator__3URDX svg {
       fill: #fffef2;
     }
+@media all and (-ms-high-contrast: none) {
+  .FullWidthHeroScroll-module_scrollingContent__1l98_ {
+    margin-top: 0;
+  }
+  .FullWidthHeroScroll-module_scrollLockMedia__39CtU {
+    position: absolute;
+    height: 100%;
+    clip: rect(auto, auto, auto, auto);
+  }
+  .FullWidthHeroScroll-module_backgroundElement__32QT5 {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+}
 
 /* @import './key-frame.css'; */
 /* @import './font-face.css'; */
