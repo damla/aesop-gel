@@ -18,4 +18,7 @@ export default {
   },
   uri: 'https://www.aesop.com/au/r/careers',
   readingTime: '5 minute read',
+  onClick: () => {
+    console.log('click tracking: test_id'); // eslint-disable-line no-console
+  },
 };

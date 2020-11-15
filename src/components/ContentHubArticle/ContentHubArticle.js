@@ -8,6 +8,7 @@ import Transition from '~/components/Transition';
 import styles from './ContentHubArticle.module.css';
 
 const ContentHubArticle = ({
+  articleRef,
   category,
   className,
   dataTestRef,
@@ -18,12 +19,14 @@ const ContentHubArticle = ({
   isMenuItem, // if it's displayed in Read Menu Navigation
   isReadMore, // if it's displayed in ReadMore section
   longTitle,
+  onClick,
   readingTime,
   uri,
   verticalThumbnail,
 }) => {
-  const ref = useRef(null);
-  const isOnScreen = useOnScreen(ref, isHorizontal ? 0.6 : 0.4);
+  const defaultRef = useRef(null);
+  const ref = articleRef || defaultRef;
+  const isOnScreen = useOnScreen(ref, 0.5);
   const currentImage = isHorizontal ? horizontalThumbnail : verticalThumbnail;
   const classSet = cx(styles.base, className, {
     [styles.readMoreArticle]: !!isReadMore,
@@ -82,6 +85,7 @@ const ContentHubArticle = ({
           <Hyperlink
             className={imageClassSet}
             dataTestRef={`${dataTestRef}_READMORE_THUMBNAIL`}
+            onClick={onClick}
             title={longTitle}
             url={uri + '?contentful=true'} // @TODO Need to remove the query
           >
@@ -108,18 +112,26 @@ const ContentHubArticle = ({
           <Hyperlink
             className={titleClassSet}
             dataTestRef={`${dataTestRef}_TITLE`}
+            onClick={onClick}
             title={longTitle}
             url={uri + '?contentful=true'} // @TODO Need to remove the query
           >
-            <span>{longTitle}</span>
+            <h1>
+              <span>{longTitle}</span>
+            </h1>
           </Hyperlink>
         </div>
-        {readingTime && <div className={noteClassSet}>{readingTime}</div>}
+        {readingTime && (
+          <div className={noteClassSet}>
+            <span>{readingTime}</span>
+          </div>
+        )}
 
         {!isReadMore && !isMenuItem && (
           <Hyperlink
             className={nonMobileImageClassSet}
             dataTestRef={`${dataTestRef}_NON_MOBILE_THUMBNAIL`}
+            onClick={onClick}
             title={longTitle}
             url={uri + '?contentful=true'} // @TODO Need to remove the query
           >
@@ -142,6 +154,7 @@ const ContentHubArticle = ({
           <Hyperlink
             className={mobileImageClassSet}
             dataTestRef={`${dataTestRef}_MOBILE_THUMBNAIL`}
+            onClick={onClick}
             title={longTitle}
             url={uri + '?contentful=true'} // @TODO Need to remove the query
           >
@@ -166,6 +179,7 @@ const ContentHubArticle = ({
 };
 
 ContentHubArticle.propTypes = {
+  articleRef: PropTypes.object,
   category: PropTypes.string,
   className: PropTypes.string,
   dataTestRef: PropTypes.string.isRequired,
@@ -176,12 +190,14 @@ ContentHubArticle.propTypes = {
   isMenuItem: PropTypes.bool,
   isReadMore: PropTypes.bool,
   longTitle: PropTypes.string,
+  onClick: PropTypes.func,
   readingTime: PropTypes.string,
   uri: PropTypes.string,
   verticalThumbnail: PropTypes.object,
 };
 
 ContentHubArticle.defaultProps = {
+  articleRef: undefined,
   category: undefined,
   className: undefined,
   dataTestRef: undefined,
@@ -192,6 +208,7 @@ ContentHubArticle.defaultProps = {
   isMenuItem: false,
   isReadMore: false,
   longTitle: undefined,
+  onClick: undefined,
   readingTime: undefined,
   uri: undefined,
   verticalThumbnail: undefined,

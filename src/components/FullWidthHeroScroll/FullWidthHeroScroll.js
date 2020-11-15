@@ -58,6 +58,7 @@ const FullWidthHeroScroll = ({
     <section className={classSet} id={id}>
       <div className={cx(styles.scrollLockMedia)}>
         <BackgroundElement
+          className={styles.backgroundElement}
           image={backgroundImage}
           mediaType={backgroundMediaType}
           video={backgroundVideo}
