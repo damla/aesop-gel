@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { HEADING } from '~/constants';
-import { ConditionalWrapper, Heading, Hyperlink } from '~/components';
+import ConditionalWrapper from '~/components/ConditionalWrapper';
+import Heading from '~/components/Heading';
+import Hyperlink from '~/components/Hyperlink';
 import styles from './Message.module.css';
 
 const Message = ({ className, copy, heading, id, link }) => {
