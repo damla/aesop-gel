@@ -31,6 +31,7 @@ exports[`<FullWidthHeroScroll /> renders base component correctly 1`] = `
           />
           <img
             alt="How to Use Video for Tea Tree Leaf Facial Exfoliant"
+            loading="lazy"
           />
         </picture>
       </figure>
@@ -71,6 +72,7 @@ exports[`<FullWidthHeroScroll /> renders base component correctly 1`] = `
           />
           <img
             alt="How to Use Video for Tea Tree Leaf Facial Exfoliant"
+            loading="lazy"
           />
         </picture>
       </button>

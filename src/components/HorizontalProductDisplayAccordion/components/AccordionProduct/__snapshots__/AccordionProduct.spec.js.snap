@@ -30,7 +30,9 @@ exports[`<AccordionProduct /> renders base component correctly 1`] = `
         media="(min-width: 0px)"
         srcSet="https://images.ctfassets.net/u1nb1km7t5q7/3qxE1emdFuU76KIucYGnKK/f7d3255816270000ab6a2c0754579f65/Aesop_Poured_Candles_2020_Hybris_Homepage_Secondary_Accordion_03_Callipus_Background_648x1080px.gif"
       />
-      <img />
+      <img
+        loading="lazy"
+      />
     </picture>
   </div>
   <div
@@ -81,6 +83,7 @@ exports[`<AccordionProduct /> renders base component correctly 1`] = `
           />
           <img
             alt="Lorem ipsum dolor sit"
+            loading="lazy"
           />
         </picture>
       </button>
@@ -97,7 +100,9 @@ exports[`<AccordionProduct /> renders base component correctly 1`] = `
     <picture
       className="base picture dark openBackgroundImage"
     >
-      <img />
+      <img
+        loading="lazy"
+      />
     </picture>
     <div
       className="accordionExpandedContent"
@@ -122,6 +127,7 @@ exports[`<AccordionProduct /> renders base component correctly 1`] = `
           />
           <img
             alt="Lorem ipsum dolor sit"
+            loading="lazy"
           />
         </picture>
       </div>

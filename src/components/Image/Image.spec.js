@@ -44,4 +44,20 @@ describe('<Image />', () => {
 
     expect(tree).toMatchSnapshot();
   });
+
+  it('renders the picture without lazy loading', () => {
+    const tree = renderer
+      .create(
+        <Image
+          altText="Image of Milk Cleansing Campaign Aesop 2019"
+          isLazyLoaded={false}
+          large="/images/products/Hand_Reverence_Aromatique_Hand_Wash_500mL_large.png 2x"
+          medium="/images/products/Hand_Reverence_Aromatique_Hand_Wash_500mL_medium.png 2x"
+          small="/images/products/Hand_Reverence_Aromatique_Hand_Wash_500mL_small.png 2x"
+        />,
+      )
+      .toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
 });

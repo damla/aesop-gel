@@ -31,6 +31,7 @@ Array [
       />
       <img
         alt="Quisque non enim efficitur"
+        loading="lazy"
       />
     </picture>
   </div>,
@@ -68,6 +69,7 @@ Array [
       />
       <img
         alt="Quisque non enim efficitur"
+        loading="lazy"
       />
     </picture>
   </div>,
@@ -110,6 +112,7 @@ Array [
       />
       <img
         alt="Quisque non enim efficitur"
+        loading="lazy"
       />
     </picture>
   </div>,
