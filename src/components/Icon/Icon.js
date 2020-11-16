@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import uuidv4 from 'uuid/v4';
+import { v4 as uuidv4 } from 'uuid';
 import find from 'lodash/find';
 import svgs from './Icon.svgs';
 import { generateSvgBlueprint } from './Icon.utils';
