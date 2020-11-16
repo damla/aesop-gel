@@ -4,7 +4,10 @@ import isEmpty from 'lodash/isEmpty';
 import cx from 'classnames';
 import { HEADING } from '~/constants';
 import { useThemeContext } from '~/contexts';
-import { ConditionalWrapper, Heading, Hyperlink, Image } from '~/components';
+import ConditionalWrapper from '~/components/ConditionalWrapper';
+import Heading from '~/components/Heading';
+import Hyperlink from '~/components/Hyperlink';
+import Image from '~/components/Image';
 import styles from './ProductExtract.module.css';
 
 const ProductExtract = forwardRef(function ProductExtractRef(

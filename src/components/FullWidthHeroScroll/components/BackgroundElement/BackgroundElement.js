@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { Image, Video } from '~/components';
+import Image from '~/components/Image';
+import Video from '~/components/Video';
 import styles from './BackgroundElement.module.css';
 
 const BackgroundElement = ({ image, mediaType, video, className }) => {

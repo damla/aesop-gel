@@ -1,16 +1,14 @@
 import React, { useRef } from 'react';
 import { useExecuteOnImpression } from './useExecuteOnImpression';
-import * as hooks from '~/customHooks';
+import * as useOnScreenHook from '../useOnScreen';
 import { configure, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
 
-jest.mock('~/customHooks');
-
 describe('useExecuteOnImpression', () => {
   const callback = jest.fn();
-  const useOnScreenSpy = jest.spyOn(hooks, 'useOnScreen');
+  const useOnScreenSpy = jest.spyOn(useOnScreenHook, 'useOnScreen');
 
   // eslint-disable-next-line react/prop-types
   const TestRig = ({ options }) => {
