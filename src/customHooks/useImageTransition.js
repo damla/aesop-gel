@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 
 const windowIsDefined = typeof window !== 'undefined';
 
-const useImageTransition = (image, ref, duration = 600) => {
+const useImageTransition = (image, ref, duration = 600, attributes = {}) => {
   const [currentImage, setCurrentImage] = useState({});
   const [isImageActive, setIsImageActive] = useState(false);
   const timeout = useRef(null);
@@ -17,7 +17,7 @@ const useImageTransition = (image, ref, duration = 600) => {
 
     if (windowIsDefined && ref.current) {
       timeout.current = window.setTimeout(() => {
-        setCurrentImage(image);
+        setCurrentImage({ ...image, ...attributes });
 
         if (currentRef.complete) {
           handleOnImageLoad();
@@ -34,7 +34,7 @@ const useImageTransition = (image, ref, duration = 600) => {
 
       currentRef.removeEventListener('load', handleOnImageLoad);
     };
-  }, [duration, image, ref]);
+  }, [image, ref]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return [currentImage, isImageActive];
 };

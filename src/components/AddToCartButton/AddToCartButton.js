@@ -21,7 +21,13 @@ const AddToCartButton = ({
 
   if (!selectedVariant) return null;
 
-  const { isInStock, price, sku, alternateAction } = selectedVariant;
+  const {
+    alternateAction,
+    isInStock,
+    isSellable,
+    price,
+    sku,
+  } = selectedVariant;
 
   const classSet = cx(
     styles.base,
@@ -89,7 +95,9 @@ const AddToCartButton = ({
       className={classSet}
       dataTestRef={dataTestRef}
       isAlternate={true}
-      isEnabled={!isLoading && price && sku && isEnabled && !hasError}
+      isEnabled={
+        !isLoading && price && sku && isEnabled && !hasError && isSellable
+      }
       onClick={handleOnClick}
       theme={theme}
       title={cartActionLabel}

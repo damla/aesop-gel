@@ -56,7 +56,18 @@ const ProductDetailHeader = ({ breadcrumbs, className, copy, theme }) => {
 };
 
 ProductDetailHeader.propTypes = {
-  breadcrumbs: PropTypes.object,
+  breadcrumbs: PropTypes.shape({
+    className: PropTypes.string,
+    items: PropTypes.arrayOf(
+      PropTypes.shape({
+        label: PropTypes.string,
+        id: PropTypes.string,
+        url: PropTypes.string,
+        title: PropTypes.string,
+      }),
+    ),
+    theme: PropTypes.oneOf(['dark', 'light']),
+  }),
   className: PropTypes.string,
   copy: PropTypes.shape({
     addToCart: PropTypes.shape({
@@ -67,7 +78,10 @@ ProductDetailHeader.propTypes = {
         title: PropTypes.string,
       }),
     }),
-    size: PropTypes.string,
+    size: PropTypes.shape({
+      singular: PropTypes.string,
+      plural: PropTypes.string,
+    }),
     ingredients: PropTypes.shape({
       heading: PropTypes.string,
       label: PropTypes.string,
@@ -79,11 +93,18 @@ ProductDetailHeader.propTypes = {
 };
 
 ProductDetailHeader.defaultProps = {
-  breadcrumbs: undefined,
+  breadcrumbs: {
+    className: undefined,
+    items: undefined,
+    theme: 'dark',
+  },
   className: undefined,
   copy: {
     addToCart: undefined,
-    size: undefined,
+    size: {
+      singular: undefined,
+      plural: undefined,
+    },
     ingredients: undefined,
     upSellProductLabel: undefined,
   },
