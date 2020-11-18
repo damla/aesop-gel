@@ -165,9 +165,7 @@
 --color-dark-disabled: var(--color-grey-60);
 */
 .Accordion-module_base__3VTZg {
-  font-family: 'Suisse Regular'
-,
-sans-serif;
+  font-family: 'Suisse Regular', sans-serif;
 }
 .Accordion-module_item__ZGEfE {
   padding: 20px;
@@ -316,9 +314,7 @@ sans-serif;
           appearance: none;
   background-color: transparent;
   cursor: pointer;
-  font-family: 'Suisse Medium'
-,
-sans-serif;
+  font-family: 'Suisse Medium', sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.4;
@@ -598,9 +594,7 @@ sans-serif;
 .Hyperlink-module_base__uoaww {
   position: relative;
   display: inline-block;
-  font-family: 'Suisse Regular'
-,
-sans-serif;
+  font-family: 'Suisse Regular', sans-serif;
   font-size: inherit;
   font-weight: 400;
   outline: none;
@@ -630,9 +624,7 @@ sans-serif;
   padding: 19px 23px;
   border-width: 1px;
   border-style: solid;
-  font-family: 'Suisse Medium'
-,
-sans-serif;
+  font-family: 'Suisse Medium', sans-serif;
   font-size: 14px;
   line-height: 1.4;
   -webkit-transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -914,9 +906,7 @@ sans-serif;
   padding: 0;
   margin: 0;
   margin-bottom: 30px;
-  font-family: 'Suisse Regular'
-,
-sans-serif;
+  font-family: 'Suisse Regular', sans-serif;
   font-weight: 400;
   line-height: 1.2;
   -webkit-text-size-adjust: 100%;
@@ -931,18 +921,14 @@ sans-serif;
   color: #fffef2;
 }
 .Heading-module_serifFont__pIB5u {
-  font-family: 'Zapf Humanist'
-,
-serif;
+  font-family: 'Zapf Humanist', serif;
 }
 /**
    * Override for Korean region translation
    */
 html[lang*='ko'] .Heading-module_serifFont__pIB5u,
   html[lang*='KO'] .Heading-module_serifFont__pIB5u {
-    font-family: 'Suisse Regular'
-,
-sans-serif;
+    font-family: 'Suisse Regular', sans-serif;
     font-weight: 400;
   }
 .Heading-module_serifFont__pIB5u {
@@ -950,9 +936,7 @@ sans-serif;
   font-weight: 300;
 }
 .Heading-module_mediumWeightFont__3u5dB {
-  font-family: 'Suisse Medium'
-,
-sans-serif;
+  font-family: 'Suisse Medium', sans-serif;
 }
 .Heading-module_flush__229Fy {
   margin-bottom: 10px;
@@ -1052,9 +1036,7 @@ sans-serif;
   border-bottom: 2px solid #666;
   margin: 20px 10px;
   background: transparent;
-  font-family: 'Suisse Regular'
-,
-sans-serif;
+  font-family: 'Suisse Regular', sans-serif;
   -webkit-transition: border-color 400ms cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: border-color 400ms cubic-bezier(0.215, 0.61, 0.355, 1);
 }
@@ -1387,23 +1369,17 @@ sans-serif;
 }
   }
 .SectionHeading-module_SuisseTitleFont__D854J {
-  font-family: 'Suisse Regular'
-,
-sans-serif;
+  font-family: 'Suisse Regular', sans-serif;
 }
 .SectionHeading-module_ZapfTitleFont__74AFB {
-  font-family: 'Zapf Humanist'
-,
-serif;
+  font-family: 'Zapf Humanist', serif;
 }
 /**
    * Override for Korean region translation
    */
 html[lang*='ko'] .SectionHeading-module_ZapfTitleFont__74AFB,
   html[lang*='KO'] .SectionHeading-module_ZapfTitleFont__74AFB {
-    font-family: 'Suisse Regular'
-,
-sans-serif;
+    font-family: 'Suisse Regular', sans-serif;
     font-weight: 400;
   }
 
@@ -1445,9 +1421,7 @@ sans-serif;
 --color-dark-disabled: var(--color-grey-60);
 */
 .BodyCopy-module_base__1ZoAL {
-  font-family: 'Suisse Regular'
-,
-sans-serif;
+  font-family: 'Suisse Regular', sans-serif;
 }
 .BodyCopy-module_base__1ZoAL:not(:last-child) {
     margin-bottom: 16px;
@@ -1467,9 +1441,7 @@ sans-serif;
   font-size: 16px;
 }
 .BodyCopy-module_contentWrapper__2ZoEL a {
-    font-family: 'Suisse Medium'
-,
-sans-serif;
+    font-family: 'Suisse Medium', sans-serif;
     font-size: 14px;
   }
 .BodyCopy-module_copy__2K-qP,
@@ -2190,27 +2162,21 @@ sans-serif;
 }
 .Paragraph-module_base__2wcSK {
 
-  font-family: 'Suisse Regular'
-,
-sans-serif;
+  font-family: 'Suisse Regular', sans-serif;
 }
 .Paragraph-module_large__Mkm1j {
   font-size: 16px;
   line-height: 1.7;
 }
 .Paragraph-module_serifFont__30f9k {
-  font-family: 'Zapf Humanist'
-,
-serif;
+  font-family: 'Zapf Humanist', serif;
 }
 /**
    * Override for Korean region translation
    */
 html[lang*='ko'] .Paragraph-module_serifFont__30f9k,
   html[lang*='KO'] .Paragraph-module_serifFont__30f9k {
-    font-family: 'Suisse Regular'
-,
-sans-serif;
+    font-family: 'Suisse Regular', sans-serif;
     font-weight: 400;
   }
 .Paragraph-module_hero__8rK9i {
@@ -2715,9 +2681,7 @@ sans-serif;
 .Image-module_caption__2nhUA {
   margin: 0;
   color: #666;
-  font-family: 'Suisse Regular'
-,
-sans-serif;
+  font-family: 'Suisse Regular', sans-serif;
   font-size: 15px;
   line-height: 1.8;
 }
@@ -2761,9 +2725,7 @@ sans-serif;
 */
 .Slide-module_heading__2KIs0 {
   margin: 10px 0 10px 0;
-  font-family: 'Suisse Medium'
-,
-sans-serif;
+  font-family: 'Suisse Medium', sans-serif;
   font-size: 14px;
 }
 @media (--viewport-sm) {
@@ -2795,9 +2757,7 @@ a:hover .Slide-module_heading__2KIs0,
   padding: 0 20px;
 }
 .Slide-module_description__1ZOKE {
-  font-family: 'Suisse Regular'
-,
-sans-serif;
+  font-family: 'Suisse Regular', sans-serif;
   font-size: 14px;
 }
 .Slide-module_description__1ZOKE.Slide-module_dark__JMM6u {
@@ -3099,9 +3059,7 @@ sans-serif;
   display: -ms-flexbox;
   display: flex;
   margin-top: 16px;
-  font-family: 'Suisse Regular'
-,
-sans-serif;
+  font-family: 'Suisse Regular', sans-serif;
 }
 .Checkbox-module_checkBox__1srqJ {
   display: inline-block;
@@ -3239,9 +3197,7 @@ sans-serif;
   padding-bottom: 14px;
   border-bottom: 1px solid rgba(51, 51, 51, 0.2);
   margin-bottom: 9px;
-  font-family: 'Suisse Medium'
-,
-sans-serif;
+  font-family: 'Suisse Medium', sans-serif;
   font-size: 14px;
   font-weight: medium;
   letter-spacing: 0;
@@ -3261,18 +3217,14 @@ sans-serif;
     line-height: 1.7;
   }
 .ContentHubArticle-module_title__1SnEp span {
-  font-family: 'Zapf Humanist'
-,
-serif;
+  font-family: 'Zapf Humanist', serif;
 }
 /**
    * Override for Korean region translation
    */
 html[lang*='ko'] .ContentHubArticle-module_title__1SnEp span,
   html[lang*='KO'] .ContentHubArticle-module_title__1SnEp span {
-    font-family: 'Suisse Regular'
-,
-sans-serif;
+    font-family: 'Suisse Regular', sans-serif;
     font-weight: 400;
   }
 .ContentHubArticle-module_title__1SnEp span {
@@ -3329,9 +3281,7 @@ sans-serif;
 .ContentHubArticle-module_note__1a-VG {
   margin: 15px 0;
   color: #666;
-  font-family: 'Suisse Medium'
-,
-sans-serif;
+  font-family: 'Suisse Medium', sans-serif;
   font-size: 16px;
   letter-spacing: 0;
   line-height: 1.5;
@@ -3640,9 +3590,7 @@ sans-serif;
   position: relative;
   padding-top: 18px;
   margin-bottom: 2px;
-  font-family: 'Suisse Medium'
-,
-sans-serif
+  font-family: 'Suisse Medium', sans-serif
 }
 @media (min-width: 640px) {
   .DefinitionList-module_term__38vy8 {
@@ -3689,9 +3637,7 @@ sans-serif
           justify-content: space-between;
   padding-bottom: 18px;
   margin-left: 0;
-  font-family: 'Suisse Regular'
-,
-sans-serif;
+  font-family: 'Suisse Regular', sans-serif;
 }
 .DefinitionList-module_dark__2bl9J .DefinitionList-module_description__1hVLl {
   color: #666;
@@ -3958,9 +3904,7 @@ sans-serif;
   padding-bottom: 25px;
   padding-left: 0;
   margin: 0;
-  font-family: 'Suisse Medium'
-,
-sans-serif;
+  font-family: 'Suisse Medium', sans-serif;
   font-size: 14px;
   line-height: 1.7;
 }
@@ -4606,9 +4550,7 @@ video.VideoPlayer-module_background__P8E0h::-webkit-media-controls-start-playbac
     color: #fffef2;
   }
 .MediaBlock-module_headingWrapper__2czs- span {
-  font-family: 'Suisse Medium'
-,
-sans-serif;
+  font-family: 'Suisse Medium', sans-serif;
   font-weight: 400;
 }
 .MediaBlock-module_headingLink__2Z03Z span:hover {
@@ -4649,9 +4591,7 @@ sans-serif;
 }
   }
 .MediaBlock-module_caption__3tuBn {
-  font-family: 'Suisse Regular'
-,
-sans-serif;
+  font-family: 'Suisse Regular', sans-serif;
   font-size: 14px;
   line-height: 1.6;
 }
@@ -4766,9 +4706,7 @@ sans-serif;
   padding-bottom: calc(16px * 2);
   padding-left: 16px;
   background-color: #f6f5e8;
-  font-family: 'Suisse Regular'
-,
-sans-serif;
+  font-family: 'Suisse Regular', sans-serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 1.6;
@@ -4841,9 +4779,7 @@ sans-serif;
 --color-dark-disabled: var(--color-grey-60);
 */
 .FooterBlock_base__30nq0 {
-  font-family: 'Suisse Regular'
-,
-sans-serif;
+  font-family: 'Suisse Regular', sans-serif;
 }
 .FooterBlock_base__30nq0.FooterBlock_dark__145OS {
     color: #333;
@@ -4854,9 +4790,7 @@ sans-serif;
 .FooterBlock_heading__2kMY- {
   margin-top: 0;
   margin-bottom: 0;
-  font-family: 'Suisse Medium'
-,
-sans-serif;
+  font-family: 'Suisse Medium', sans-serif;
   font-size: 15px;
   line-height: 2;
 }
@@ -5192,9 +5126,7 @@ sans-serif;
 --color-dark-disabled: var(--color-grey-60);
 */
 .StoreHoursList-module_base__3dYCe {
-  font-family: 'Suisse Regular'
-,
-sans-serif;
+  font-family: 'Suisse Regular', sans-serif;
   font-size: 15px;
 }
 .StoreHoursList-module_base__3dYCe,
@@ -5224,18 +5156,14 @@ sans-serif;
     color: #e0dfd6;
   }
 .StoreHoursList-module_dayName__2GHDo {
-  font-family: 'Suisse Medium'
-,
-sans-serif;
+  font-family: 'Suisse Medium', sans-serif;
   font-size: 14px;
 }
 .StoreHoursList-module_dayName__2GHDo::after {
     content: ': ';
   }
 .StoreHoursList-module_hours__9wjVn {
-  font-family: 'Suisse Regular'
-,
-sans-serif;
+  font-family: 'Suisse Regular', sans-serif;
   font-size: 13px;
 }
 .StoreHoursList-module_dark__1Ri68 .StoreHoursList-module_alternateHours__KdRt3 {
@@ -5302,9 +5230,7 @@ sans-serif;
   display: block;
   width: 100%;
   padding: 8px 16px 8px 48px;
-  font-family: 'Suisse Regular'
-,
-sans-serif;
+  font-family: 'Suisse Regular', sans-serif;
   font-weight: 400;
 }
 @media (min-width: 640px) {
@@ -5943,9 +5869,7 @@ sans-serif;
   background: none;
   color: #333;
   cursor: pointer;
-  font-family: 'Suisse Regular'
-,
-sans-serif;
+  font-family: 'Suisse Regular', sans-serif;
 }
 .AccordionProduct-module_openBtn__27FC4:focus, .AccordionProduct-module_closeBtn__1EOQ6:focus {
     outline: 0;
@@ -5961,9 +5885,7 @@ sans-serif;
   padding: 0;
   margin-bottom: 10px;
   color: #333;
-  font-family: 'Suisse Regular'
-,
-sans-serif;
+  font-family: 'Suisse Regular', sans-serif;
   font-size: 16px;
 }
 .AccordionProduct-module_accordionOpenCopy__a-AcA.AccordionProduct-module_light__10wa6, .AccordionProduct-module_accordionClosedCopy__2Z1Hp.AccordionProduct-module_light__10wa6 {
@@ -6141,9 +6063,7 @@ sans-serif;
   padding-top: 18px;
   padding-bottom: 18px;
   margin: 0;
-  font-family: 'Suisse Medium'
-,
-sans-serif;
+  font-family: 'Suisse Medium', sans-serif;
   font-size: 15px;
   line-height: 1.4;
   opacity: 0;
@@ -6480,9 +6400,7 @@ sans-serif;
 */
 .Content-module_base__2wNf2 {
   z-index: 20;
-  font-family: 'Suisse Regular'
-,
-sans-serif;
+  font-family: 'Suisse Regular', sans-serif;
   font-size: 14px;
   line-height: 1.6;
 }
@@ -6840,9 +6758,7 @@ sans-serif;
   padding: calc(16px * 2);
   background-color: #fffef2;
   color: #252525;
-  font-family: 'Suisse Regular'
-,
-sans-serif;
+  font-family: 'Suisse Regular', sans-serif;
   font-size: 15px;
   line-height: 1.6;
   -webkit-transform: translateZ(0);
@@ -7092,9 +7008,7 @@ sans-serif;
   background-color: transparent;
   color: var(--font-color);
   cursor: pointer;
-  font-family: 'Suisse Medium'
-,
-sans-serif;
+  font-family: 'Suisse Medium', sans-serif;
   font-size: 14px;
 
   /* Web UI has global button styles with outlines */
@@ -7451,9 +7365,7 @@ sans-serif;
           justify-content: center;
   padding: 0;
   margin: -2px 0;
-  font-family: 'Suisse Regular'
-,
-sans-serif;
+  font-family: 'Suisse Regular', sans-serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 1.4;
@@ -7496,9 +7408,7 @@ sans-serif;
 }
 .RadioGroup-module_label__1Z1-P {
   cursor: pointer;
-  font-family: 'Suisse Regular'
-,
-sans-serif;
+  font-family: 'Suisse Regular', sans-serif;
   font-size: 14px;
 }
 .RadioGroup-module_labelContent__3VPl4 {
@@ -7517,9 +7427,7 @@ sans-serif;
     color: #f5f5f5;
   }
 .RadioGroup-module_singleLabel__2EXn9 {
-  font-family: 'Suisse Regular'
-,
-sans-serif;
+  font-family: 'Suisse Regular', sans-serif;
   font-size: 14px;
 }
 .RadioGroup-module_singleLabel__2EXn9.RadioGroup-module_dark__1sDrv {
@@ -7615,9 +7523,7 @@ sans-serif;
 --color-dark-disabled: var(--color-grey-60);
 */
 .ProductCommerce-module_base__3XaIQ {
-  font-family: 'Suisse Regular'
-,
-sans-serif;
+  font-family: 'Suisse Regular', sans-serif;
   font-size: 14px;
   font-weight: 400;
 }
@@ -7872,9 +7778,7 @@ sans-serif;
 .ProductExtract-module_heading__20eDh {
   margin-bottom: 2px;
   color: #333;
-  font-family: 'Suisse Medium'
-,
-sans-serif;
+  font-family: 'Suisse Medium', sans-serif;
   font-size: 14px;
 }
 .ProductExtract-module_dark__1Lgkl .ProductExtract-module_heading__20eDh {
@@ -7888,9 +7792,7 @@ sans-serif;
   padding-bottom: 18px;
   margin-left: 0;
   color: #666;
-  font-family: 'Suisse Regular'
-,
-sans-serif;
+  font-family: 'Suisse Regular', sans-serif;
 }
 .ProductExtract-module_dark__1Lgkl .ProductExtract-module_productName__3RQ8U {
   color: #666;
@@ -8198,9 +8100,7 @@ sans-serif;
   border-color: #333;
   background-color: #333;
   color: #f6f5e8;
-  font-family: 'Suisse Medium'
-,
-sans-serif;
+  font-family: 'Suisse Medium', sans-serif;
   font-size: 14px;
   -webkit-transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -8392,9 +8292,7 @@ sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-family: 'Suisse Regular'
-,
-sans-serif;
+  font-family: 'Suisse Regular', sans-serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 1.4;
@@ -8682,9 +8580,7 @@ sans-serif;
 --color-dark-disabled: var(--color-grey-60);
 */
 .ProductDetailImage-module_base__377HI {
-  font-family: 'Suisse Regular'
-,
-sans-serif;
+  font-family: 'Suisse Regular', sans-serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 1.4;
@@ -8923,18 +8819,14 @@ sans-serif;
 }
   }
 .Quote-module_blockquote__1Ap9l {
-  font-family: 'Zapf Humanist'
-,
-serif;
+  font-family: 'Zapf Humanist', serif;
 }
 /**
    * Override for Korean region translation
    */
 html[lang*='ko'] .Quote-module_blockquote__1Ap9l,
   html[lang*='KO'] .Quote-module_blockquote__1Ap9l {
-    font-family: 'Suisse Regular'
-,
-sans-serif;
+    font-family: 'Suisse Regular', sans-serif;
     font-weight: 400;
   }
 .Quote-module_blockquote__1Ap9l {
@@ -8958,9 +8850,7 @@ sans-serif;
 .Quote-module_author__3tPnl {
   display: block;
   margin: 0;
-  font-family: 'Suisse Medium'
-,
-sans-serif;
+  font-family: 'Suisse Medium', sans-serif;
   font-size: 14px;
   font-style: normal;
   font-style: initial;
@@ -9080,9 +8970,7 @@ sans-serif;
 .Message-module_base__1Nwji {
   width: 100%;
   margin: 24px 20px;
-  font-family: 'Suisse Regular'
-,
-sans-serif;
+  font-family: 'Suisse Regular', sans-serif;
   font-size: 14px;
   line-height: 1.4;
   text-align: left;
@@ -9124,9 +9012,7 @@ sans-serif;
   margin-top: 0;
   margin-bottom: 4px;
   color: #333;
-  font-family: 'Suisse Medium'
-,
-sans-serif;
+  font-family: 'Suisse Medium', sans-serif;
   font-size: 14px;
 }
 .Message-module_heading__3xX0t span {
@@ -9185,9 +9071,7 @@ sans-serif;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  font-family: 'Suisse Regular'
-,
-sans-serif;
+  font-family: 'Suisse Regular', sans-serif;
 }
 .SecondaryMessage-module_base__2yn2H,
   .SecondaryMessage-module_base__2yn2H * {
@@ -9273,9 +9157,7 @@ sans-serif;
   display: block;
   padding-top: 25px;
   margin-bottom: 15px;
-  font-family: 'Suisse Regular'
-,
-sans-serif;
+  font-family: 'Suisse Regular', sans-serif;
 }
 @media (min-width: 640px) {
 .Select-module_base__2hN67 {
@@ -9597,9 +9479,7 @@ sans-serif;
 --color-dark-disabled: var(--color-grey-60);
 */
 .StoreDetailHeader-module_base__1Ud60 {
-  font-family: 'Suisse Regular'
-,
-sans-serif;
+  font-family: 'Suisse Regular', sans-serif;
 }
 .StoreDetailHeader-module_base__1Ud60,
   .StoreDetailHeader-module_base__1Ud60 * {
@@ -9612,9 +9492,7 @@ sans-serif;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  font-family: 'Suisse Regular'
-,
-sans-serif;
+  font-family: 'Suisse Regular', sans-serif;
   font-size: 15px;
   line-height: 1.8;
 }
@@ -9635,9 +9513,7 @@ sans-serif;
   }
 .StoreDetailHeader-module_detailHeading__Ti1q2 {
   margin-bottom: 4px;
-  font-family: 'Suisse Medium'
-,
-sans-serif;
+  font-family: 'Suisse Medium', sans-serif;
 }
 .StoreDetailHeader-module_detailContent__9KI3h {
   white-space: pre-wrap;
@@ -9697,9 +9573,7 @@ sans-serif;
   margin: 20px 0;
 }
 .SubNav-module_heading__25EKa {
-  font-family: 'Suisse Regular'
-,
-sans-serif;
+  font-family: 'Suisse Regular', sans-serif;
   line-height: 1.6;
   -webkit-transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -9708,9 +9582,7 @@ sans-serif;
   margin-bottom: 20px;
 }
 .SubNav-module_link__KY05d {
-  font-family: 'Suisse Medium'
-,
-sans-serif;
+  font-family: 'Suisse Medium', sans-serif;
   font-size: 16px;
   line-height: 1.8;
   -webkit-transition: color 200ms;
@@ -9805,9 +9677,7 @@ sans-serif;
   border: none;
   background: transparent;
   color: #333;
-  font-family: 'Suisse Regular'
-,
-sans-serif;
+  font-family: 'Suisse Regular', sans-serif;
   font-size: 12px;
   line-height: 1.67;
   outline: none;
@@ -9886,9 +9756,7 @@ sans-serif;
   border-radius: 3px;
   caret-color: #fffef2;
   color: #fffef2;
-  font-family: 'Suisse Regular'
-,
-sans-serif;
+  font-family: 'Suisse Regular', sans-serif;
   font-size: 20px;
   line-height: 1.85;
 }
@@ -9939,9 +9807,7 @@ sans-serif;
   position: absolute;
   top: 2px;
   left: 10px;
-  font-family: 'Suisse Regular'
-,
-sans-serif;
+  font-family: 'Suisse Regular', sans-serif;
   font-size: 20px;
   line-height: 1.85;
   opacity: 1;
