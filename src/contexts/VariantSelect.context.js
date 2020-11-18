@@ -26,7 +26,11 @@ VariantSelectContextProvider.propTypes = {
         url: PropTypes.string,
         label: PropTypes.string,
       }),
+      cartDisclaimer: PropTypes.string,
+      hasAgeVerificationRequirement: PropTypes.bool,
+      id: PropTypes.string,
       isInStock: PropTypes.bool.isRequired,
+      isSellable: PropTypes.bool,
       image: PropTypes.shape({
         altText: PropTypes.string,
         sizes: PropTypes.shape({
@@ -38,6 +42,7 @@ VariantSelectContextProvider.propTypes = {
       price: PropTypes.string.isRequired,
       size: PropTypes.string.isRequired,
       sku: PropTypes.string.isRequired,
+      tracking: PropTypes.object,
     }),
   ),
 };
