@@ -25,6 +25,7 @@ export default {
     productName: 'Lorem ipsum dolor',
     variantOptions: [
       {
+        cartDisclaimer: 'Praesent rhoncus ex quis elit vehicula',
         size: '50 mL',
         sku: 'ARD33',
         price: '$56.45',
@@ -38,6 +39,7 @@ export default {
         },
       },
       {
+        cartDisclaimer: 'Pet tincidunt nisi scelerisque',
         size: '100 mL',
         sku: 'ARD32',
         price: '$86.97',
