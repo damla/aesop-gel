@@ -34,8 +34,8 @@ ProductDetailContextProvider.propTypes = {
     cartDisclaimer: PropTypes.string,
     definitionList: PropTypes.arrayOf(
       PropTypes.shape({
-        term: PropTypes.string,
-        description: PropTypes.string,
+        term: PropTypes.node,
+        description: PropTypes.node,
       }),
     ),
     ingredients: PropTypes.string,
