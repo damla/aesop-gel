@@ -12,7 +12,9 @@ exports[`<ProductGridItem /> renders base component correctly 1`] = `
     <picture
       className="base picture dark image"
     >
-      <img />
+      <img
+        loading="lazy"
+      />
     </picture>
   </a>
   <h5

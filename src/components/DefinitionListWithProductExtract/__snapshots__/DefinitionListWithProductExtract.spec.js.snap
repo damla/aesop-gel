@@ -33,6 +33,7 @@ exports[`<DefinitionListWithProductExtract /> renders base component correctly 1
       >
         <img
           alt="Product Extract"
+          loading="lazy"
         />
       </picture>
     </div>
