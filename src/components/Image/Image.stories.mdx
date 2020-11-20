@@ -10,6 +10,7 @@ import Image from './Image';
   <Story name="Base component">
     <Image
       altText={knobs.text('altText', 'Lorem ipsum dolor sit amet')}
+      isLazyLoaded={knobs.boolean('isLazyLoaded', true)}
       cta={{
         url: knobs.text('hyperlink.url', '/'),
       }}

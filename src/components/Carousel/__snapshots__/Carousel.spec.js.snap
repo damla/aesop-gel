@@ -212,6 +212,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                     />
                     <img
                       alt="Quisque non enim efficitur"
+                      loading="lazy"
                     />
                   </picture>
                 </div>
@@ -283,6 +284,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                     />
                     <img
                       alt="Phasellus posuere porta varius"
+                      loading="lazy"
                     />
                   </picture>
                 </div>
@@ -354,6 +356,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                     />
                     <img
                       alt="Etiam at pharetra nisl"
+                      loading="lazy"
                     />
                   </picture>
                 </div>
@@ -425,6 +428,7 @@ exports[`<Carousel /> renders base component correctly 1`] = `
                     />
                     <img
                       alt="Phasellus posuere porta varius"
+                      loading="lazy"
                     />
                   </picture>
                 </div>
@@ -577,6 +581,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                     />
                     <img
                       alt="Quisque non enim efficitur"
+                      loading="lazy"
                     />
                   </picture>
                 </div>
@@ -648,6 +653,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                     />
                     <img
                       alt="Phasellus posuere porta varius"
+                      loading="lazy"
                     />
                   </picture>
                 </div>
@@ -719,6 +725,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                     />
                     <img
                       alt="Etiam at pharetra nisl"
+                      loading="lazy"
                     />
                   </picture>
                 </div>
@@ -790,6 +797,7 @@ exports[`<Carousel /> renders component correctly if no \`introduction\` prop is
                     />
                     <img
                       alt="Phasellus posuere porta varius"
+                      loading="lazy"
                     />
                   </picture>
                 </div>
@@ -893,6 +901,7 @@ exports[`<Carousel /> renders component correctly if no \`url\` member is provid
                     />
                     <img
                       alt="Quisque non enim efficitur"
+                      loading="lazy"
                     />
                   </picture>
                 </div>

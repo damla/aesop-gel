@@ -115,6 +115,7 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
                     />
                     <img
                       alt="Vivamus sollicitudin"
+                      loading="lazy"
                     />
                   </picture>
                 </div>
@@ -169,6 +170,7 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
                     />
                     <img
                       alt="Nunc dignissim"
+                      loading="lazy"
                     />
                   </picture>
                 </div>
@@ -223,6 +225,7 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
                     />
                     <img
                       alt="Vivamus sollicitudin"
+                      loading="lazy"
                     />
                   </picture>
                 </div>
@@ -276,6 +279,7 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
                     />
                     <img
                       alt="Nunc dignissim"
+                      loading="lazy"
                     />
                   </picture>
                 </div>
@@ -329,6 +333,7 @@ exports[`<ImageCarousel /> renders base component correctly 1`] = `
                     />
                     <img
                       alt="Vivamus sollicitudin"
+                      loading="lazy"
                     />
                   </picture>
                 </div>

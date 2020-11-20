@@ -37,6 +37,7 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
           />
           <img
             alt="horizontal_hub"
+            loading="lazy"
           />
         </picture>
       </div>
@@ -106,6 +107,7 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
           />
           <img
             alt="horizontal_hub"
+            loading="lazy"
           />
         </picture>
       </div>
@@ -175,6 +177,7 @@ exports[`<ReadMore /> renders base component correctly 1`] = `
           />
           <img
             alt="horizontal_hub"
+            loading="lazy"
           />
         </picture>
       </div>

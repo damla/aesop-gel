@@ -65,6 +65,7 @@ exports[`<ContentHubArticle /> renders base component correctly 1`] = `
         />
         <img
           alt="horizontal_hub"
+          loading="lazy"
         />
       </picture>
     </div>
@@ -98,6 +99,7 @@ exports[`<ContentHubArticle /> renders base component correctly 1`] = `
         />
         <img
           alt="horizontal_hub"
+          loading="lazy"
         />
       </picture>
     </div>
