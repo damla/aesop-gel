@@ -16,7 +16,7 @@ const useImageTransition = (image, ref, duration = 600, attributes = {}) => {
     };
 
     if (windowIsDefined && ref.current) {
-      timeout.current = window.setTimeout(() => {
+      timeout.current = setTimeout(() => {
         setCurrentImage({ ...image, ...attributes });
 
         if (currentRef.complete) {
@@ -29,7 +29,7 @@ const useImageTransition = (image, ref, duration = 600, attributes = {}) => {
 
     return function cleanup() {
       if (windowIsDefined) {
-        window.clearTimeout(timeout.current);
+        clearTimeout(timeout.current);
       }
 
       currentRef.removeEventListener('load', handleOnImageLoad);
