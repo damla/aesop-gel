@@ -12,6 +12,9 @@ const ProductDetailHeader = ({ breadcrumbs, className, copy, theme }) => {
   const currentTheme = useThemeContext(theme, 'dark');
   const { productDetail } = useProductDetailContext();
   const classSet = cx(styles.base, className);
+  const imageClass = cx(styles.image, {
+    [styles.smallImage]: productDetail.imageSize === 'Small',
+  });
 
   return (
     <div className={classSet}>
@@ -35,7 +38,7 @@ const ProductDetailHeader = ({ breadcrumbs, className, copy, theme }) => {
           />
         </div>
 
-        <div className={styles.image}>
+        <div className={imageClass}>
           <Hidden isLarge={true} isMedium={true} isXLarge={true}>
             <Breadcrumbs
               className={styles.breadcrumbs}

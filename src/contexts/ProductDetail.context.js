@@ -14,6 +14,7 @@ const defaultValues = {
     keyIngredient: '',
     productName: '',
     upSellProduct: null,
+    imageSize: 'Small',
   },
 };
 
@@ -41,6 +42,7 @@ ProductDetailContextProvider.propTypes = {
     ingredients: PropTypes.string,
     keyIngredient: PropTypes.string,
     productName: PropTypes.string.isRequired,
+    imageSize: PropTypes.string,
   }),
   upSellProduct: PropTypes.shape({
     image: PropTypes.shape({

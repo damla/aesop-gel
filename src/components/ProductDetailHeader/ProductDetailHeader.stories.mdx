@@ -21,21 +21,50 @@ import SecondaryMessageFixture from '~/components/SecondaryMessage/SecondaryMess
 <Preview>
   <Story name="Base component">
     {(() => {
-      const gridOverlayActive = knobs.boolean('isActive', false, 'Grid overlay');
-      const gridOverlayIntertedColours = knobs.boolean('hasInvertedColours', false, 'Grid overlay');
-      const theme = knobs.select('theme', ['dark', 'light'], ProductDetailHeaderFixture.theme, 'Presentation')
-      const { productName, description, ...productRest } = ProductDetailHeaderFixture.product;
+      const gridOverlayActive = knobs.boolean(
+        'isActive',
+        false,
+        'Grid overlay'
+      );
+      const gridOverlayIntertedColours = knobs.boolean(
+        'hasInvertedColours',
+        false,
+        'Grid overlay'
+      );
+      const theme = knobs.select(
+        'theme',
+        ['dark', 'light'],
+        ProductDetailHeaderFixture.theme,
+        'Presentation'
+      );
+      const {
+        productName,
+        description,
+        imageSize,
+        ...productRest
+      } = ProductDetailHeaderFixture.product;
       const productDetails = {
         productName: knobs.text('productName', productName, 'Content'),
         description: knobs.text('description', description, 'Content'),
+        imageSize: knobs.select(
+          'imageSize',
+          ['Small', 'Large'],
+          imageSize,
+          'Content'
+        ),
         ...productRest,
-      }
+      };
       return (
         <div>
-          <GridOverlay isActive={gridOverlayActive} hasInvertedColours={gridOverlayIntertedColours} />
+          <GridOverlay
+            isActive={gridOverlayActive}
+            hasInvertedColours={gridOverlayIntertedColours}
+          />
           <AddToCartContextProvider onClick={mockAddToCartButtonOnClick}>
             <ProductDetailContextProvider product={productDetails}>
-              <VariantSelectContextProvider variants={ProductDetailHeaderFixture.product.variantOptions}>
+              <VariantSelectContextProvider
+                variants={ProductDetailHeaderFixture.product.variantOptions}
+              >
                 <ProductDetailHeader
                   breadcrumbs={ProductDetailHeaderFixture.breadcrumbs}
                   className={ProductDetailHeaderFixture.className}
@@ -43,7 +72,8 @@ import SecondaryMessageFixture from '~/components/SecondaryMessage/SecondaryMess
                     addToCart: AddToCartButtonFixture.copy,
                     size: ProductDetailBodyFixture.copy.size,
                     ingredients: ProductDetailBodyFixture.copy.ingredients,
-                    upSellProductLabel: ProductDetailBodyFixture.copy.upSellProductLabel,
+                    upSellProductLabel:
+                      ProductDetailBodyFixture.copy.upSellProductLabel,
                   }}
                   theme={theme}
                 />
@@ -52,7 +82,7 @@ import SecondaryMessageFixture from '~/components/SecondaryMessage/SecondaryMess
             </ProductDetailContextProvider>
           </AddToCartContextProvider>
         </div>
-      )
+      );
     })()}
   </Story>
 </Preview>

@@ -38,10 +38,6 @@
   @media (--viewport-lg) {
     flex-direction: row-reverse;
   }
-
-  @media (--viewport-lg-only) {
-    justify-content: space-around;
-  }
 }
 
 .content {
@@ -62,6 +58,16 @@
   @media (--viewport-lg) {
     width: calc(100% * 7 / 12);
     align-self: flex-end;
+  }
+}
+
+.smallImage {
+  @media (--viewport-lg) {
+    max-width: 440px;
+  }
+  @media (--viewport-lg-only) {
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
