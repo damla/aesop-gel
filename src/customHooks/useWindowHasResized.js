@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import debounce from 'lodash/debounce';
 
-const windowIsDefined = typeof window !== 'undefined';
+import { isInBrowser } from '~/utils/environment';
 
 export const useWindowHasResized = callback => {
   const [windowSize, setWindowSize] = useState({
@@ -12,19 +12,19 @@ export const useWindowHasResized = callback => {
   useEffect(() => {
     const handleResize = debounce(() => {
       setWindowSize({
-        height: windowIsDefined ? window.innerHeight : 0,
-        width: windowIsDefined ? window.innerWidth : 0,
+        height: isInBrowser() ? window.innerHeight : 0,
+        width: isInBrowser() ? window.innerWidth : 0,
       });
 
       if (callback) callback();
     }, 200);
 
-    if (windowIsDefined) {
+    if (isInBrowser()) {
       window.addEventListener('resize', handleResize);
     }
 
     return function cleanUp() {
-      if (windowIsDefined) {
+      if (isInBrowser()) {
         window.removeEventListener('resize', handleResize);
       }
     };

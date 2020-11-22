@@ -1,4 +1,5 @@
 import { BREAKPOINTS } from '~/constants';
+import { isInBrowser } from '~/utils/environment';
 
 export const IS_VIEWPORT_SMALL_ONLY = `(max-width: ${BREAKPOINTS.SMALL.MAX_WIDTH}px)`;
 export const IS_VIEWPORT_MEDIUM = `(min-width: ${BREAKPOINTS.MEDIUM.MIN_WIDTH}px)`;
@@ -61,59 +62,43 @@ export const getViewportForWidth = width => {
 };
 
 export const ascertainIsSmallOnlyViewport = () =>
-  typeof window !== 'undefined'
-    ? window.matchMedia(IS_VIEWPORT_SMALL_ONLY).matches
-    : false;
+  isInBrowser() ? window.matchMedia(IS_VIEWPORT_SMALL_ONLY).matches : false;
 
 export const ascertainIsSmallOrMediumOnlyViewport = () =>
-  typeof window !== 'undefined'
+  isInBrowser()
     ? window.matchMedia(IS_VIEWPORT_SMALL_MEDIUM_ONLY).matches
     : false;
 
 export const ascertainIsMediumViewport = () =>
-  typeof window !== 'undefined'
-    ? window.matchMedia(IS_VIEWPORT_MEDIUM).matches
-    : false;
+  isInBrowser() ? window.matchMedia(IS_VIEWPORT_MEDIUM).matches : false;
 
 export const ascertainIsMediumOnlyViewport = () =>
-  typeof window !== 'undefined'
-    ? window.matchMedia(IS_VIEWPORT_MEDIUM_ONLY).matches
-    : false;
+  isInBrowser() ? window.matchMedia(IS_VIEWPORT_MEDIUM_ONLY).matches : false;
 
 export const ascertainIsLargeViewport = () =>
-  typeof window !== 'undefined'
-    ? window.matchMedia(IS_VIEWPORT_LARGE).matches
-    : false;
+  isInBrowser() ? window.matchMedia(IS_VIEWPORT_LARGE).matches : false;
 
 export const ascertainIsLargeOnlyViewport = () =>
-  typeof window !== 'undefined'
-    ? window.matchMedia(IS_VIEWPORT_LARGE_ONLY).matches
-    : false;
+  isInBrowser() ? window.matchMedia(IS_VIEWPORT_LARGE_ONLY).matches : false;
 
 export const ascertainIsLargeOrXLargeOnlyViewport = () =>
-  typeof window !== 'undefined'
+  isInBrowser()
     ? window.matchMedia(IS_VIEWPORT_LARGE_XLARGE_ONLY).matches
     : false;
 
 export const ascertainIsXLargeViewport = () =>
-  typeof window !== 'undefined'
-    ? window.matchMedia(IS_VIEWPORT_XLARGE).matches
-    : false;
+  isInBrowser() ? window.matchMedia(IS_VIEWPORT_XLARGE).matches : false;
 
 export const ascertainIsSmallToXLargeViewport = () =>
-  typeof window !== 'undefined'
+  isInBrowser()
     ? window.matchMedia(IS_VIEWPORT_SMALL_TO_XLARGE_ONLY).matches
     : false;
 
 export const ascertainIsXLargeOnlyViewport = () =>
-  typeof window !== 'undefined'
-    ? window.matchMedia(IS_VIEWPORT_XLARGE_ONLY).matches
-    : false;
+  isInBrowser() ? window.matchMedia(IS_VIEWPORT_XLARGE_ONLY).matches : false;
 
 export const ascertainIsXXLargeViewport = () =>
-  typeof window !== 'undefined'
-    ? window.matchMedia(IS_VIEWPORT_XXLARGE).matches
-    : false;
+  isInBrowser() ? window.matchMedia(IS_VIEWPORT_XXLARGE).matches : false;
 
 export default {
   CONSTRAINT_KEYS,

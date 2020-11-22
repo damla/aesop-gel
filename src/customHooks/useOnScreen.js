@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
 
+import { isInBrowser } from '~/utils/environment';
+
 const hasIntersectionObserver =
-  'IntersectionObserver' in window ||
+  (isInBrowser() && 'IntersectionObserver' in window) ||
   'IntersectionObserverEntry' in window ||
   ('IntersectionObserverEntry' in window &&
     'intersectionRatio' in window.IntersectionObserverEntry.prototype);
