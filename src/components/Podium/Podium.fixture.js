@@ -1,5 +1,6 @@
 export default {
   className: undefined,
+  id: 'id',
   isActive: true,
   paddingTop: 'none',
   paddingBottom: 'none',
