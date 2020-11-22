@@ -1,7 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
-
-const isBrowser =
-  typeof window !== 'undefined' && typeof window.document !== 'undefined';
+import { isInBrowser } from '~/utils/environment';
 
 const useScript = ({
   src,
@@ -19,7 +17,7 @@ const useScript = ({
   count.current += 1;
 
   useEffect(() => {
-    if (!isBrowser) return;
+    if (!isInBrowser()) return;
 
     if (checkForExisting) {
       const existing = document.querySelectorAll(`script[src="${src}"]`);
