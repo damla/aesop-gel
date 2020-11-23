@@ -88,7 +88,7 @@ export const Video = forwardRef(function VideoRef(
     setIsPlaying(false);
     setHasActiveVideo(false);
 
-    window.setTimeout(() => {
+    setTimeout(() => {
       videoRef.current.currentTime = 0;
       videoRef.current.load();
       setProgress(0);

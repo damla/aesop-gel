@@ -7,6 +7,7 @@ import Hyperlink from '~/components/Hyperlink';
 import Icon from '~/components/Icon';
 import BackgroundElement from './components/BackgroundElement';
 import FullscreenSection from './components/FullscreenSection';
+import { isInBrowser } from '~/utils/environment';
 import styles from './FullWidthHeroScroll.module.css';
 
 const FullWidthHeroScroll = ({
@@ -45,11 +46,13 @@ const FullWidthHeroScroll = ({
   });
 
   const handleScrollDown = () => {
-    window.scroll({
-      top: window.innerHeight - offset,
-      left: 0,
-      behavior: 'smooth',
-    });
+    if (isInBrowser()) {
+      window.scroll({
+        top: window.innerHeight - offset,
+        left: 0,
+        behavior: 'smooth',
+      });
+    }
   };
 
   const classSet = cx(styles.base, styles[theme], {
