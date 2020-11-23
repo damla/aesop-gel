@@ -3,10 +3,11 @@ import { useEffect, useState } from 'react';
 import { isInBrowser } from '~/utils/environment';
 
 const hasIntersectionObserver =
-  (isInBrowser() && 'IntersectionObserver' in window) ||
-  'IntersectionObserverEntry' in window ||
-  ('IntersectionObserverEntry' in window &&
-    'intersectionRatio' in window.IntersectionObserverEntry.prototype);
+  isInBrowser() &&
+  ('IntersectionObserver' in window ||
+    'IntersectionObserverEntry' in window ||
+    ('IntersectionObserverEntry' in window &&
+      'intersectionRatio' in window.IntersectionObserverEntry.prototype));
 
 export const useOnScreen = (
   ref,
