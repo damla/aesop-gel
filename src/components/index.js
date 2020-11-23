@@ -1,6 +1,6 @@
 import Accordion from './Accordion';
 import AddToCartButton from './AddToCartButton';
-import Audio from './Audio';
+// import Audio from './Audio';
 import BodyCopy from './BodyCopy';
 import Breadcrumbs from './Breadcrumbs';
 import Button from './Button';
@@ -17,7 +17,7 @@ import Figure from './Figure';
 import FlyinPanel from './FlyinPanel';
 import FooterBlock from './FooterBlock';
 import FullWidthHeroScroll from './FullWidthHeroScroll';
-import GoogleMap from './GoogleMap';
+// import GoogleMap from './GoogleMap';
 import Heading from './Heading';
 import Hidden from './Hidden';
 import HorizontalProductDisplayAccordion from './HorizontalProductDisplayAccordion';
@@ -61,7 +61,7 @@ import Video from './Video';
 
 export { Accordion };
 export { AddToCartButton };
-export { Audio };
+// export { Audio };
 export { BodyCopy };
 export { Breadcrumbs };
 export { Button };
@@ -78,7 +78,7 @@ export { Figure };
 export { FlyinPanel };
 export { FooterBlock };
 export { FullWidthHeroScroll };
-export { GoogleMap };
+// export { GoogleMap };
 export { Heading };
 export { Hidden };
 export { HorizontalProductDisplayAccordion };
@@ -125,7 +125,7 @@ export { Video };
 export default {
   Accordion,
   AddToCartButton,
-  Audio,
+  // Audio,
   BodyCopy,
   Breadcrumbs,
   Button,
@@ -142,7 +142,7 @@ export default {
   FlyinPanel,
   FooterBlock,
   FullWidthHeroScroll,
-  GoogleMap,
+  // GoogleMap,
   Heading,
   Hidden,
   HorizontalProductDisplayAccordion,
