@@ -16,8 +16,6 @@ export default {
     sku: 'ARD33',
     description:
       'Nunc sagittis ultrices dignissim. Nullam dignissim nisi nec dolor blandit convallis. Suspendisse quis facilisis arcu, nec feugiat ligula.',
-    cartDisclaimer:
-      'Quisque in felis id tellus condimentum scelerisque. Aliquam quis vestibulum felis, quis porta tellus',
     definitionList: [
       {
         term: 'Lorem ipsum dolor',

@@ -156,7 +156,11 @@ const ProductDetailBody = ({ className, copy, theme }) => {
         </div>
 
         <Hidden isLarge={true} isMedium={true} isXLarge={true}>
-          <div className={styles.cartDisclaimer}>{cartDisclaimer}</div>
+          {selectedVariant?.cartDisclaimer && (
+            <div className={styles.cartDisclaimer}>
+              <span>{selectedVariant.cartDisclaimer}</span>
+            </div>
+          )}
         </Hidden>
 
         <div className={styles.details}>
@@ -206,7 +210,11 @@ const ProductDetailBody = ({ className, copy, theme }) => {
             >
               {description}
             </Paragraph>
-            <div className={styles.cartDisclaimer}>{cartDisclaimer}</div>
+            {selectedVariant?.cartDisclaimer && (
+              <div className={styles.cartDisclaimer}>
+                <span>{selectedVariant.cartDisclaimer}</span>
+              </div>
+            )}
           </header>
         </div>
       </Hidden>
