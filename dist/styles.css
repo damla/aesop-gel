@@ -8505,6 +8505,9 @@ video.VideoPlayer-module_background__P8E0h::-webkit-media-controls-start-playbac
   right: 0;
   outline: none;
 }
+dt:first-child .ProductDetailBody-module_ingredientsTrigger__1lGMd {
+    top: 0;
+  }
 .ProductDetailBody-module_dark__2ivfq .ProductDetailBody-module_ingredientsTrigger__1lGMd:hover g :nth-child(1) {
         fill: #333;
       }

@@ -170,6 +170,10 @@
   right: 0;
   outline: none;
 
+  dt:first-child & {
+    top: 0;
+  }
+
   .dark &:hover {
     g {
       :nth-child(1) {
